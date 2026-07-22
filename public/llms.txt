@@ -1,0 +1,33 @@
+# Lotus365
+
+> India's most trusted online gaming platform since 2016 — cricket, casino, live sports, instant Lotus IDs, secure payouts and 24/7 concierge support.
+
+Lotus365 offers sports betting (cricket, football, tennis, kabaddi, esports), live casino, Indian card games, and partner platforms with fast payouts and VIP rewards.
+
+## Pages
+
+- [Home](/): Overview of the Lotus365 platform, VIP program, and games.
+- [About Lotus365](/about-us): Brand story, trust, and safety.
+- [What is Lotus365](/what-is-lotus365): Platform explainer.
+- [Why Choose Lotus365](/why-choose-lotus365-book): Reasons players trust Lotus365.
+- [Is Lotus365 Safe](/is-lotus365-safe): Security and safety details.
+- [Is Lotus365 Legal](/is-lotus365-legal): Legality overview.
+- [Cricket Betting](/lotus365-cricket): Cricket markets on Lotus365.
+- [IPL Betting](/ipl-betting): IPL 2026 markets and odds.
+- [Football Betting](/football-betting): Football markets.
+- [Live Casino](/casino): Live casino games.
+- [Lotus365 Exchange](/lotus365-exchange): Betting exchange overview.
+- [Get Lotus365 ID](/lotus365-id): Instant ID creation.
+- [How to Deposit](/how-to-deposit): Deposit methods and steps.
+- [How to Withdraw](/how-to-withdraw-safely): Safe withdrawal guide.
+- [Support](/support): Help hub and contact channels.
+- [Betting Guides](/betting-guides): Strategy and how-to guides.
+- [Case Studies](/case-study): Player case studies.
+- [Blog](/blog): News and updates.
+
+## Optional
+
+- [Terms & Conditions](/terms-conditions)
+- [Privacy Policy](/privacy-policy)
+- [Responsible Gaming](/responsible-gaming)
+- [KYC Verification](/kyc-verification-policy)

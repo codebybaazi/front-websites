@@ -1,0 +1,11 @@
+# Content signals (Cloudflare / IETF draft-ietf-aipref content-signals)
+# search=yes  → allow indexing for traditional web search
+# ai-input=yes → allow use as grounding input for AI answers with citations
+# ai-train=no  → disallow use for training generative AI models
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+Sitemap: https://lotus365id.com/sitemap.xml

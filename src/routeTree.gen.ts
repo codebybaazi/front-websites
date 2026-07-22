@@ -9,38 +9,665 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ScheduleRouteImport } from './routes/schedule'
+import { Route as MatchesRouteImport } from './routes/matches'
+import { Route as Lotus365WinRouteImport } from './routes/lotus365-win'
+import { Route as Lotus365VsSkyexchangeRouteImport } from './routes/lotus365-vs-skyexchange'
+import { Route as Lotus365VsLordsExchangeRouteImport } from './routes/lotus365-vs-lords-exchange'
+import { Route as Lotus365VsFairplayRouteImport } from './routes/lotus365-vs-fairplay'
+import { Route as Lotus365VsDiamondexchRouteImport } from './routes/lotus365-vs-diamondexch'
+import { Route as Lotus365VsBetbook247RouteImport } from './routes/lotus365-vs-betbook247'
+import { Route as Lotus365VsBetbhai9RouteImport } from './routes/lotus365-vs-betbhai9'
+import { Route as Lotus365RegisterRouteImport } from './routes/lotus365-register'
+import { Route as Lotus365LoginRouteImport } from './routes/lotus365-login'
+import { Route as Lotus365CustomerCareRouteImport } from './routes/lotus365-customer-care'
+import { Route as Lotus365BlueRouteImport } from './routes/lotus365-blue'
+import { Route as Lotus365AppDownloadRouteImport } from './routes/lotus365-app-download'
+import { Route as Lotus365ApkRouteImport } from './routes/lotus365-apk'
+import { Route as IsLotus365LegalInIndiaRouteImport } from './routes/is-lotus365-legal-in-india'
+import { Route as CaseStudyRouteImport } from './routes/case-study'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as BettingGuidesRouteImport } from './routes/betting-guides'
+import { Route as AllLinksRouteImport } from './routes/all-links'
+import { Route as PageRouteImport } from './routes/$page'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as FootballScheduleMatchRouteImport } from './routes/football-schedule.$match'
+import { Route as CaseStudySlugRouteImport } from './routes/case-study.$slug'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as BettingGuidesSlugRouteImport } from './routes/betting-guides.$slug'
+import { Route as DotwellKnownOpenidConfigurationRouteImport } from './routes/[.]well-known.openid-configuration'
+import { Route as DotwellKnownOauthProtectedResourceRouteImport } from './routes/[.]well-known.oauth-protected-resource'
+import { Route as DotwellKnownOauthAuthorizationServerRouteImport } from './routes/[.]well-known.oauth-authorization-server'
+import { Route as TennisScheduleEventRoundRouteImport } from './routes/tennis-schedule.$event.$round'
+import { Route as CricketScheduleSeriesMatchRouteImport } from './routes/cricket-schedule.$series.$match'
+import { Route as BlogCategoryCategoryRouteImport } from './routes/blog.category.$category'
+import { Route as DotwellKnownMcpServerCardDotjsonRouteImport } from './routes/[.]well-known.mcp.server-card[.]json'
+import { Route as DotwellKnownAgentSkillsIndexDotjsonRouteImport } from './routes/[.]well-known.agent-skills.index[.]json'
+import { Route as DotwellKnownAgentSkillsNameSKILLDotmdRouteImport } from './routes/[.]well-known.agent-skills.$name.SKILL[.]md'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScheduleRoute = ScheduleRouteImport.update({
+  id: '/schedule',
+  path: '/schedule',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MatchesRoute = MatchesRouteImport.update({
+  id: '/matches',
+  path: '/matches',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Lotus365WinRoute = Lotus365WinRouteImport.update({
+  id: '/lotus365-win',
+  path: '/lotus365-win',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Lotus365VsSkyexchangeRoute = Lotus365VsSkyexchangeRouteImport.update({
+  id: '/lotus365-vs-skyexchange',
+  path: '/lotus365-vs-skyexchange',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Lotus365VsLordsExchangeRoute = Lotus365VsLordsExchangeRouteImport.update({
+  id: '/lotus365-vs-lords-exchange',
+  path: '/lotus365-vs-lords-exchange',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Lotus365VsFairplayRoute = Lotus365VsFairplayRouteImport.update({
+  id: '/lotus365-vs-fairplay',
+  path: '/lotus365-vs-fairplay',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Lotus365VsDiamondexchRoute = Lotus365VsDiamondexchRouteImport.update({
+  id: '/lotus365-vs-diamondexch',
+  path: '/lotus365-vs-diamondexch',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Lotus365VsBetbook247Route = Lotus365VsBetbook247RouteImport.update({
+  id: '/lotus365-vs-betbook247',
+  path: '/lotus365-vs-betbook247',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Lotus365VsBetbhai9Route = Lotus365VsBetbhai9RouteImport.update({
+  id: '/lotus365-vs-betbhai9',
+  path: '/lotus365-vs-betbhai9',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Lotus365RegisterRoute = Lotus365RegisterRouteImport.update({
+  id: '/lotus365-register',
+  path: '/lotus365-register',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Lotus365LoginRoute = Lotus365LoginRouteImport.update({
+  id: '/lotus365-login',
+  path: '/lotus365-login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Lotus365CustomerCareRoute = Lotus365CustomerCareRouteImport.update({
+  id: '/lotus365-customer-care',
+  path: '/lotus365-customer-care',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Lotus365BlueRoute = Lotus365BlueRouteImport.update({
+  id: '/lotus365-blue',
+  path: '/lotus365-blue',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Lotus365AppDownloadRoute = Lotus365AppDownloadRouteImport.update({
+  id: '/lotus365-app-download',
+  path: '/lotus365-app-download',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Lotus365ApkRoute = Lotus365ApkRouteImport.update({
+  id: '/lotus365-apk',
+  path: '/lotus365-apk',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IsLotus365LegalInIndiaRoute = IsLotus365LegalInIndiaRouteImport.update({
+  id: '/is-lotus365-legal-in-india',
+  path: '/is-lotus365-legal-in-india',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaseStudyRoute = CaseStudyRouteImport.update({
+  id: '/case-study',
+  path: '/case-study',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BettingGuidesRoute = BettingGuidesRouteImport.update({
+  id: '/betting-guides',
+  path: '/betting-guides',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AllLinksRoute = AllLinksRouteImport.update({
+  id: '/all-links',
+  path: '/all-links',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PageRoute = PageRouteImport.update({
+  id: '/$page',
+  path: '/$page',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogRoute,
+} as any)
+const FootballScheduleMatchRoute = FootballScheduleMatchRouteImport.update({
+  id: '/football-schedule/$match',
+  path: '/football-schedule/$match',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaseStudySlugRoute = CaseStudySlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => CaseStudyRoute,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
+const BettingGuidesSlugRoute = BettingGuidesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BettingGuidesRoute,
+} as any)
+const DotwellKnownOpenidConfigurationRoute =
+  DotwellKnownOpenidConfigurationRouteImport.update({
+    id: '/.well-known/openid-configuration',
+    path: '/.well-known/openid-configuration',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DotwellKnownOauthProtectedResourceRoute =
+  DotwellKnownOauthProtectedResourceRouteImport.update({
+    id: '/.well-known/oauth-protected-resource',
+    path: '/.well-known/oauth-protected-resource',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DotwellKnownOauthAuthorizationServerRoute =
+  DotwellKnownOauthAuthorizationServerRouteImport.update({
+    id: '/.well-known/oauth-authorization-server',
+    path: '/.well-known/oauth-authorization-server',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TennisScheduleEventRoundRoute =
+  TennisScheduleEventRoundRouteImport.update({
+    id: '/tennis-schedule/$event/$round',
+    path: '/tennis-schedule/$event/$round',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CricketScheduleSeriesMatchRoute =
+  CricketScheduleSeriesMatchRouteImport.update({
+    id: '/cricket-schedule/$series/$match',
+    path: '/cricket-schedule/$series/$match',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogCategoryCategoryRoute = BlogCategoryCategoryRouteImport.update({
+  id: '/category/$category',
+  path: '/category/$category',
+  getParentRoute: () => BlogRoute,
+} as any)
+const DotwellKnownMcpServerCardDotjsonRoute =
+  DotwellKnownMcpServerCardDotjsonRouteImport.update({
+    id: '/.well-known/mcp/server-card.json',
+    path: '/.well-known/mcp/server-card.json',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DotwellKnownAgentSkillsIndexDotjsonRoute =
+  DotwellKnownAgentSkillsIndexDotjsonRouteImport.update({
+    id: '/.well-known/agent-skills/index.json',
+    path: '/.well-known/agent-skills/index.json',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DotwellKnownAgentSkillsNameSKILLDotmdRoute =
+  DotwellKnownAgentSkillsNameSKILLDotmdRouteImport.update({
+    id: '/.well-known/agent-skills/$name/SKILL.md',
+    path: '/.well-known/agent-skills/$name/SKILL.md',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$page': typeof PageRoute
+  '/all-links': typeof AllLinksRoute
+  '/betting-guides': typeof BettingGuidesRouteWithChildren
+  '/blog': typeof BlogRouteWithChildren
+  '/case-study': typeof CaseStudyRouteWithChildren
+  '/is-lotus365-legal-in-india': typeof IsLotus365LegalInIndiaRoute
+  '/lotus365-apk': typeof Lotus365ApkRoute
+  '/lotus365-app-download': typeof Lotus365AppDownloadRoute
+  '/lotus365-blue': typeof Lotus365BlueRoute
+  '/lotus365-customer-care': typeof Lotus365CustomerCareRoute
+  '/lotus365-login': typeof Lotus365LoginRoute
+  '/lotus365-register': typeof Lotus365RegisterRoute
+  '/lotus365-vs-betbhai9': typeof Lotus365VsBetbhai9Route
+  '/lotus365-vs-betbook247': typeof Lotus365VsBetbook247Route
+  '/lotus365-vs-diamondexch': typeof Lotus365VsDiamondexchRoute
+  '/lotus365-vs-fairplay': typeof Lotus365VsFairplayRoute
+  '/lotus365-vs-lords-exchange': typeof Lotus365VsLordsExchangeRoute
+  '/lotus365-vs-skyexchange': typeof Lotus365VsSkyexchangeRoute
+  '/lotus365-win': typeof Lotus365WinRoute
+  '/matches': typeof MatchesRoute
+  '/schedule': typeof ScheduleRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
+  '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
+  '/.well-known/openid-configuration': typeof DotwellKnownOpenidConfigurationRoute
+  '/betting-guides/$slug': typeof BettingGuidesSlugRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/case-study/$slug': typeof CaseStudySlugRoute
+  '/football-schedule/$match': typeof FootballScheduleMatchRoute
+  '/blog/': typeof BlogIndexRoute
+  '/.well-known/agent-skills/index.json': typeof DotwellKnownAgentSkillsIndexDotjsonRoute
+  '/.well-known/mcp/server-card.json': typeof DotwellKnownMcpServerCardDotjsonRoute
+  '/blog/category/$category': typeof BlogCategoryCategoryRoute
+  '/cricket-schedule/$series/$match': typeof CricketScheduleSeriesMatchRoute
+  '/tennis-schedule/$event/$round': typeof TennisScheduleEventRoundRoute
+  '/.well-known/agent-skills/$name/SKILL.md': typeof DotwellKnownAgentSkillsNameSKILLDotmdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$page': typeof PageRoute
+  '/all-links': typeof AllLinksRoute
+  '/betting-guides': typeof BettingGuidesRouteWithChildren
+  '/case-study': typeof CaseStudyRouteWithChildren
+  '/is-lotus365-legal-in-india': typeof IsLotus365LegalInIndiaRoute
+  '/lotus365-apk': typeof Lotus365ApkRoute
+  '/lotus365-app-download': typeof Lotus365AppDownloadRoute
+  '/lotus365-blue': typeof Lotus365BlueRoute
+  '/lotus365-customer-care': typeof Lotus365CustomerCareRoute
+  '/lotus365-login': typeof Lotus365LoginRoute
+  '/lotus365-register': typeof Lotus365RegisterRoute
+  '/lotus365-vs-betbhai9': typeof Lotus365VsBetbhai9Route
+  '/lotus365-vs-betbook247': typeof Lotus365VsBetbook247Route
+  '/lotus365-vs-diamondexch': typeof Lotus365VsDiamondexchRoute
+  '/lotus365-vs-fairplay': typeof Lotus365VsFairplayRoute
+  '/lotus365-vs-lords-exchange': typeof Lotus365VsLordsExchangeRoute
+  '/lotus365-vs-skyexchange': typeof Lotus365VsSkyexchangeRoute
+  '/lotus365-win': typeof Lotus365WinRoute
+  '/matches': typeof MatchesRoute
+  '/schedule': typeof ScheduleRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
+  '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
+  '/.well-known/openid-configuration': typeof DotwellKnownOpenidConfigurationRoute
+  '/betting-guides/$slug': typeof BettingGuidesSlugRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/case-study/$slug': typeof CaseStudySlugRoute
+  '/football-schedule/$match': typeof FootballScheduleMatchRoute
+  '/blog': typeof BlogIndexRoute
+  '/.well-known/agent-skills/index.json': typeof DotwellKnownAgentSkillsIndexDotjsonRoute
+  '/.well-known/mcp/server-card.json': typeof DotwellKnownMcpServerCardDotjsonRoute
+  '/blog/category/$category': typeof BlogCategoryCategoryRoute
+  '/cricket-schedule/$series/$match': typeof CricketScheduleSeriesMatchRoute
+  '/tennis-schedule/$event/$round': typeof TennisScheduleEventRoundRoute
+  '/.well-known/agent-skills/$name/SKILL.md': typeof DotwellKnownAgentSkillsNameSKILLDotmdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$page': typeof PageRoute
+  '/all-links': typeof AllLinksRoute
+  '/betting-guides': typeof BettingGuidesRouteWithChildren
+  '/blog': typeof BlogRouteWithChildren
+  '/case-study': typeof CaseStudyRouteWithChildren
+  '/is-lotus365-legal-in-india': typeof IsLotus365LegalInIndiaRoute
+  '/lotus365-apk': typeof Lotus365ApkRoute
+  '/lotus365-app-download': typeof Lotus365AppDownloadRoute
+  '/lotus365-blue': typeof Lotus365BlueRoute
+  '/lotus365-customer-care': typeof Lotus365CustomerCareRoute
+  '/lotus365-login': typeof Lotus365LoginRoute
+  '/lotus365-register': typeof Lotus365RegisterRoute
+  '/lotus365-vs-betbhai9': typeof Lotus365VsBetbhai9Route
+  '/lotus365-vs-betbook247': typeof Lotus365VsBetbook247Route
+  '/lotus365-vs-diamondexch': typeof Lotus365VsDiamondexchRoute
+  '/lotus365-vs-fairplay': typeof Lotus365VsFairplayRoute
+  '/lotus365-vs-lords-exchange': typeof Lotus365VsLordsExchangeRoute
+  '/lotus365-vs-skyexchange': typeof Lotus365VsSkyexchangeRoute
+  '/lotus365-win': typeof Lotus365WinRoute
+  '/matches': typeof MatchesRoute
+  '/schedule': typeof ScheduleRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
+  '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
+  '/.well-known/openid-configuration': typeof DotwellKnownOpenidConfigurationRoute
+  '/betting-guides/$slug': typeof BettingGuidesSlugRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/case-study/$slug': typeof CaseStudySlugRoute
+  '/football-schedule/$match': typeof FootballScheduleMatchRoute
+  '/blog/': typeof BlogIndexRoute
+  '/.well-known/agent-skills/index.json': typeof DotwellKnownAgentSkillsIndexDotjsonRoute
+  '/.well-known/mcp/server-card.json': typeof DotwellKnownMcpServerCardDotjsonRoute
+  '/blog/category/$category': typeof BlogCategoryCategoryRoute
+  '/cricket-schedule/$series/$match': typeof CricketScheduleSeriesMatchRoute
+  '/tennis-schedule/$event/$round': typeof TennisScheduleEventRoundRoute
+  '/.well-known/agent-skills/$name/SKILL.md': typeof DotwellKnownAgentSkillsNameSKILLDotmdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/$page'
+    | '/all-links'
+    | '/betting-guides'
+    | '/blog'
+    | '/case-study'
+    | '/is-lotus365-legal-in-india'
+    | '/lotus365-apk'
+    | '/lotus365-app-download'
+    | '/lotus365-blue'
+    | '/lotus365-customer-care'
+    | '/lotus365-login'
+    | '/lotus365-register'
+    | '/lotus365-vs-betbhai9'
+    | '/lotus365-vs-betbook247'
+    | '/lotus365-vs-diamondexch'
+    | '/lotus365-vs-fairplay'
+    | '/lotus365-vs-lords-exchange'
+    | '/lotus365-vs-skyexchange'
+    | '/lotus365-win'
+    | '/matches'
+    | '/schedule'
+    | '/sitemap.xml'
+    | '/.well-known/oauth-authorization-server'
+    | '/.well-known/oauth-protected-resource'
+    | '/.well-known/openid-configuration'
+    | '/betting-guides/$slug'
+    | '/blog/$slug'
+    | '/case-study/$slug'
+    | '/football-schedule/$match'
+    | '/blog/'
+    | '/.well-known/agent-skills/index.json'
+    | '/.well-known/mcp/server-card.json'
+    | '/blog/category/$category'
+    | '/cricket-schedule/$series/$match'
+    | '/tennis-schedule/$event/$round'
+    | '/.well-known/agent-skills/$name/SKILL.md'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/$page'
+    | '/all-links'
+    | '/betting-guides'
+    | '/case-study'
+    | '/is-lotus365-legal-in-india'
+    | '/lotus365-apk'
+    | '/lotus365-app-download'
+    | '/lotus365-blue'
+    | '/lotus365-customer-care'
+    | '/lotus365-login'
+    | '/lotus365-register'
+    | '/lotus365-vs-betbhai9'
+    | '/lotus365-vs-betbook247'
+    | '/lotus365-vs-diamondexch'
+    | '/lotus365-vs-fairplay'
+    | '/lotus365-vs-lords-exchange'
+    | '/lotus365-vs-skyexchange'
+    | '/lotus365-win'
+    | '/matches'
+    | '/schedule'
+    | '/sitemap.xml'
+    | '/.well-known/oauth-authorization-server'
+    | '/.well-known/oauth-protected-resource'
+    | '/.well-known/openid-configuration'
+    | '/betting-guides/$slug'
+    | '/blog/$slug'
+    | '/case-study/$slug'
+    | '/football-schedule/$match'
+    | '/blog'
+    | '/.well-known/agent-skills/index.json'
+    | '/.well-known/mcp/server-card.json'
+    | '/blog/category/$category'
+    | '/cricket-schedule/$series/$match'
+    | '/tennis-schedule/$event/$round'
+    | '/.well-known/agent-skills/$name/SKILL.md'
+  id:
+    | '__root__'
+    | '/'
+    | '/$page'
+    | '/all-links'
+    | '/betting-guides'
+    | '/blog'
+    | '/case-study'
+    | '/is-lotus365-legal-in-india'
+    | '/lotus365-apk'
+    | '/lotus365-app-download'
+    | '/lotus365-blue'
+    | '/lotus365-customer-care'
+    | '/lotus365-login'
+    | '/lotus365-register'
+    | '/lotus365-vs-betbhai9'
+    | '/lotus365-vs-betbook247'
+    | '/lotus365-vs-diamondexch'
+    | '/lotus365-vs-fairplay'
+    | '/lotus365-vs-lords-exchange'
+    | '/lotus365-vs-skyexchange'
+    | '/lotus365-win'
+    | '/matches'
+    | '/schedule'
+    | '/sitemap.xml'
+    | '/.well-known/oauth-authorization-server'
+    | '/.well-known/oauth-protected-resource'
+    | '/.well-known/openid-configuration'
+    | '/betting-guides/$slug'
+    | '/blog/$slug'
+    | '/case-study/$slug'
+    | '/football-schedule/$match'
+    | '/blog/'
+    | '/.well-known/agent-skills/index.json'
+    | '/.well-known/mcp/server-card.json'
+    | '/blog/category/$category'
+    | '/cricket-schedule/$series/$match'
+    | '/tennis-schedule/$event/$round'
+    | '/.well-known/agent-skills/$name/SKILL.md'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PageRoute: typeof PageRoute
+  AllLinksRoute: typeof AllLinksRoute
+  BettingGuidesRoute: typeof BettingGuidesRouteWithChildren
+  BlogRoute: typeof BlogRouteWithChildren
+  CaseStudyRoute: typeof CaseStudyRouteWithChildren
+  IsLotus365LegalInIndiaRoute: typeof IsLotus365LegalInIndiaRoute
+  Lotus365ApkRoute: typeof Lotus365ApkRoute
+  Lotus365AppDownloadRoute: typeof Lotus365AppDownloadRoute
+  Lotus365BlueRoute: typeof Lotus365BlueRoute
+  Lotus365CustomerCareRoute: typeof Lotus365CustomerCareRoute
+  Lotus365LoginRoute: typeof Lotus365LoginRoute
+  Lotus365RegisterRoute: typeof Lotus365RegisterRoute
+  Lotus365VsBetbhai9Route: typeof Lotus365VsBetbhai9Route
+  Lotus365VsBetbook247Route: typeof Lotus365VsBetbook247Route
+  Lotus365VsDiamondexchRoute: typeof Lotus365VsDiamondexchRoute
+  Lotus365VsFairplayRoute: typeof Lotus365VsFairplayRoute
+  Lotus365VsLordsExchangeRoute: typeof Lotus365VsLordsExchangeRoute
+  Lotus365VsSkyexchangeRoute: typeof Lotus365VsSkyexchangeRoute
+  Lotus365WinRoute: typeof Lotus365WinRoute
+  MatchesRoute: typeof MatchesRoute
+  ScheduleRoute: typeof ScheduleRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  DotwellKnownOauthAuthorizationServerRoute: typeof DotwellKnownOauthAuthorizationServerRoute
+  DotwellKnownOauthProtectedResourceRoute: typeof DotwellKnownOauthProtectedResourceRoute
+  DotwellKnownOpenidConfigurationRoute: typeof DotwellKnownOpenidConfigurationRoute
+  FootballScheduleMatchRoute: typeof FootballScheduleMatchRoute
+  DotwellKnownAgentSkillsIndexDotjsonRoute: typeof DotwellKnownAgentSkillsIndexDotjsonRoute
+  DotwellKnownMcpServerCardDotjsonRoute: typeof DotwellKnownMcpServerCardDotjsonRoute
+  CricketScheduleSeriesMatchRoute: typeof CricketScheduleSeriesMatchRoute
+  TennisScheduleEventRoundRoute: typeof TennisScheduleEventRoundRoute
+  DotwellKnownAgentSkillsNameSKILLDotmdRoute: typeof DotwellKnownAgentSkillsNameSKILLDotmdRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/schedule': {
+      id: '/schedule'
+      path: '/schedule'
+      fullPath: '/schedule'
+      preLoaderRoute: typeof ScheduleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/matches': {
+      id: '/matches'
+      path: '/matches'
+      fullPath: '/matches'
+      preLoaderRoute: typeof MatchesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lotus365-win': {
+      id: '/lotus365-win'
+      path: '/lotus365-win'
+      fullPath: '/lotus365-win'
+      preLoaderRoute: typeof Lotus365WinRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lotus365-vs-skyexchange': {
+      id: '/lotus365-vs-skyexchange'
+      path: '/lotus365-vs-skyexchange'
+      fullPath: '/lotus365-vs-skyexchange'
+      preLoaderRoute: typeof Lotus365VsSkyexchangeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lotus365-vs-lords-exchange': {
+      id: '/lotus365-vs-lords-exchange'
+      path: '/lotus365-vs-lords-exchange'
+      fullPath: '/lotus365-vs-lords-exchange'
+      preLoaderRoute: typeof Lotus365VsLordsExchangeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lotus365-vs-fairplay': {
+      id: '/lotus365-vs-fairplay'
+      path: '/lotus365-vs-fairplay'
+      fullPath: '/lotus365-vs-fairplay'
+      preLoaderRoute: typeof Lotus365VsFairplayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lotus365-vs-diamondexch': {
+      id: '/lotus365-vs-diamondexch'
+      path: '/lotus365-vs-diamondexch'
+      fullPath: '/lotus365-vs-diamondexch'
+      preLoaderRoute: typeof Lotus365VsDiamondexchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lotus365-vs-betbook247': {
+      id: '/lotus365-vs-betbook247'
+      path: '/lotus365-vs-betbook247'
+      fullPath: '/lotus365-vs-betbook247'
+      preLoaderRoute: typeof Lotus365VsBetbook247RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lotus365-vs-betbhai9': {
+      id: '/lotus365-vs-betbhai9'
+      path: '/lotus365-vs-betbhai9'
+      fullPath: '/lotus365-vs-betbhai9'
+      preLoaderRoute: typeof Lotus365VsBetbhai9RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lotus365-register': {
+      id: '/lotus365-register'
+      path: '/lotus365-register'
+      fullPath: '/lotus365-register'
+      preLoaderRoute: typeof Lotus365RegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lotus365-login': {
+      id: '/lotus365-login'
+      path: '/lotus365-login'
+      fullPath: '/lotus365-login'
+      preLoaderRoute: typeof Lotus365LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lotus365-customer-care': {
+      id: '/lotus365-customer-care'
+      path: '/lotus365-customer-care'
+      fullPath: '/lotus365-customer-care'
+      preLoaderRoute: typeof Lotus365CustomerCareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lotus365-blue': {
+      id: '/lotus365-blue'
+      path: '/lotus365-blue'
+      fullPath: '/lotus365-blue'
+      preLoaderRoute: typeof Lotus365BlueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lotus365-app-download': {
+      id: '/lotus365-app-download'
+      path: '/lotus365-app-download'
+      fullPath: '/lotus365-app-download'
+      preLoaderRoute: typeof Lotus365AppDownloadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lotus365-apk': {
+      id: '/lotus365-apk'
+      path: '/lotus365-apk'
+      fullPath: '/lotus365-apk'
+      preLoaderRoute: typeof Lotus365ApkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/is-lotus365-legal-in-india': {
+      id: '/is-lotus365-legal-in-india'
+      path: '/is-lotus365-legal-in-india'
+      fullPath: '/is-lotus365-legal-in-india'
+      preLoaderRoute: typeof IsLotus365LegalInIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-study': {
+      id: '/case-study'
+      path: '/case-study'
+      fullPath: '/case-study'
+      preLoaderRoute: typeof CaseStudyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/betting-guides': {
+      id: '/betting-guides'
+      path: '/betting-guides'
+      fullPath: '/betting-guides'
+      preLoaderRoute: typeof BettingGuidesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/all-links': {
+      id: '/all-links'
+      path: '/all-links'
+      fullPath: '/all-links'
+      preLoaderRoute: typeof AllLinksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$page': {
+      id: '/$page'
+      path: '/$page'
+      fullPath: '/$page'
+      preLoaderRoute: typeof PageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,22 +675,183 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/football-schedule/$match': {
+      id: '/football-schedule/$match'
+      path: '/football-schedule/$match'
+      fullPath: '/football-schedule/$match'
+      preLoaderRoute: typeof FootballScheduleMatchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-study/$slug': {
+      id: '/case-study/$slug'
+      path: '/$slug'
+      fullPath: '/case-study/$slug'
+      preLoaderRoute: typeof CaseStudySlugRouteImport
+      parentRoute: typeof CaseStudyRoute
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/betting-guides/$slug': {
+      id: '/betting-guides/$slug'
+      path: '/$slug'
+      fullPath: '/betting-guides/$slug'
+      preLoaderRoute: typeof BettingGuidesSlugRouteImport
+      parentRoute: typeof BettingGuidesRoute
+    }
+    '/.well-known/openid-configuration': {
+      id: '/.well-known/openid-configuration'
+      path: '/.well-known/openid-configuration'
+      fullPath: '/.well-known/openid-configuration'
+      preLoaderRoute: typeof DotwellKnownOpenidConfigurationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/oauth-protected-resource': {
+      id: '/.well-known/oauth-protected-resource'
+      path: '/.well-known/oauth-protected-resource'
+      fullPath: '/.well-known/oauth-protected-resource'
+      preLoaderRoute: typeof DotwellKnownOauthProtectedResourceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/oauth-authorization-server': {
+      id: '/.well-known/oauth-authorization-server'
+      path: '/.well-known/oauth-authorization-server'
+      fullPath: '/.well-known/oauth-authorization-server'
+      preLoaderRoute: typeof DotwellKnownOauthAuthorizationServerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tennis-schedule/$event/$round': {
+      id: '/tennis-schedule/$event/$round'
+      path: '/tennis-schedule/$event/$round'
+      fullPath: '/tennis-schedule/$event/$round'
+      preLoaderRoute: typeof TennisScheduleEventRoundRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricket-schedule/$series/$match': {
+      id: '/cricket-schedule/$series/$match'
+      path: '/cricket-schedule/$series/$match'
+      fullPath: '/cricket-schedule/$series/$match'
+      preLoaderRoute: typeof CricketScheduleSeriesMatchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/category/$category': {
+      id: '/blog/category/$category'
+      path: '/category/$category'
+      fullPath: '/blog/category/$category'
+      preLoaderRoute: typeof BlogCategoryCategoryRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/.well-known/mcp/server-card.json': {
+      id: '/.well-known/mcp/server-card.json'
+      path: '/.well-known/mcp/server-card.json'
+      fullPath: '/.well-known/mcp/server-card.json'
+      preLoaderRoute: typeof DotwellKnownMcpServerCardDotjsonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/agent-skills/index.json': {
+      id: '/.well-known/agent-skills/index.json'
+      path: '/.well-known/agent-skills/index.json'
+      fullPath: '/.well-known/agent-skills/index.json'
+      preLoaderRoute: typeof DotwellKnownAgentSkillsIndexDotjsonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/agent-skills/$name/SKILL.md': {
+      id: '/.well-known/agent-skills/$name/SKILL.md'
+      path: '/.well-known/agent-skills/$name/SKILL.md'
+      fullPath: '/.well-known/agent-skills/$name/SKILL.md'
+      preLoaderRoute: typeof DotwellKnownAgentSkillsNameSKILLDotmdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
+interface BettingGuidesRouteChildren {
+  BettingGuidesSlugRoute: typeof BettingGuidesSlugRoute
+}
+
+const BettingGuidesRouteChildren: BettingGuidesRouteChildren = {
+  BettingGuidesSlugRoute: BettingGuidesSlugRoute,
+}
+
+const BettingGuidesRouteWithChildren = BettingGuidesRoute._addFileChildren(
+  BettingGuidesRouteChildren,
+)
+
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  BlogCategoryCategoryRoute: typeof BlogCategoryCategoryRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  BlogCategoryCategoryRoute: BlogCategoryCategoryRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
+
+interface CaseStudyRouteChildren {
+  CaseStudySlugRoute: typeof CaseStudySlugRoute
+}
+
+const CaseStudyRouteChildren: CaseStudyRouteChildren = {
+  CaseStudySlugRoute: CaseStudySlugRoute,
+}
+
+const CaseStudyRouteWithChildren = CaseStudyRoute._addFileChildren(
+  CaseStudyRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PageRoute: PageRoute,
+  AllLinksRoute: AllLinksRoute,
+  BettingGuidesRoute: BettingGuidesRouteWithChildren,
+  BlogRoute: BlogRouteWithChildren,
+  CaseStudyRoute: CaseStudyRouteWithChildren,
+  IsLotus365LegalInIndiaRoute: IsLotus365LegalInIndiaRoute,
+  Lotus365ApkRoute: Lotus365ApkRoute,
+  Lotus365AppDownloadRoute: Lotus365AppDownloadRoute,
+  Lotus365BlueRoute: Lotus365BlueRoute,
+  Lotus365CustomerCareRoute: Lotus365CustomerCareRoute,
+  Lotus365LoginRoute: Lotus365LoginRoute,
+  Lotus365RegisterRoute: Lotus365RegisterRoute,
+  Lotus365VsBetbhai9Route: Lotus365VsBetbhai9Route,
+  Lotus365VsBetbook247Route: Lotus365VsBetbook247Route,
+  Lotus365VsDiamondexchRoute: Lotus365VsDiamondexchRoute,
+  Lotus365VsFairplayRoute: Lotus365VsFairplayRoute,
+  Lotus365VsLordsExchangeRoute: Lotus365VsLordsExchangeRoute,
+  Lotus365VsSkyexchangeRoute: Lotus365VsSkyexchangeRoute,
+  Lotus365WinRoute: Lotus365WinRoute,
+  MatchesRoute: MatchesRoute,
+  ScheduleRoute: ScheduleRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  DotwellKnownOauthAuthorizationServerRoute:
+    DotwellKnownOauthAuthorizationServerRoute,
+  DotwellKnownOauthProtectedResourceRoute:
+    DotwellKnownOauthProtectedResourceRoute,
+  DotwellKnownOpenidConfigurationRoute: DotwellKnownOpenidConfigurationRoute,
+  FootballScheduleMatchRoute: FootballScheduleMatchRoute,
+  DotwellKnownAgentSkillsIndexDotjsonRoute:
+    DotwellKnownAgentSkillsIndexDotjsonRoute,
+  DotwellKnownMcpServerCardDotjsonRoute: DotwellKnownMcpServerCardDotjsonRoute,
+  CricketScheduleSeriesMatchRoute: CricketScheduleSeriesMatchRoute,
+  TennisScheduleEventRoundRoute: TennisScheduleEventRoundRoute,
+  DotwellKnownAgentSkillsNameSKILLDotmdRoute:
+    DotwellKnownAgentSkillsNameSKILLDotmdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

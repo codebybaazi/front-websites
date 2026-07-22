@@ -1,7 +1,9 @@
 import "./lib/error-capture";
 
+import { NodeHtmlMarkdown } from "node-html-markdown";
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
+
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -44,18 +46,72 @@ function isH3SwallowedErrorBody(body: string): boolean {
   }
 }
 
+// RFC 8288 Link header — advertises sitemap, API catalog, agent skills index
+// and LLM guide on every HTML response for crawlers, agents and AI clients.
+const LINK_HEADER = [
+  '</sitemap.xml>; rel="sitemap"; type="application/xml"',
+  '</.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json"',
+  '</.well-known/agent-skills.json>; rel="service-desc"; type="application/json"; title="Agent Skills"',
+  '</llms.txt>; rel="describedby"; type="text/plain"; title="LLM Guide"',
+].join(", ");
+
+function withLinkHeader(response: Response): Response {
+  if (response.headers.has("Link")) return response;
+  const headers = new Headers(response.headers);
+  headers.set("Link", LINK_HEADER);
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
+function wantsMarkdown(request: Request): boolean {
+  const accept = request.headers.get("accept") ?? "";
+  return accept.toLowerCase().includes("text/markdown");
+}
+
+async function toMarkdownResponse(response: Response): Promise<Response> {
+  const contentType = response.headers.get("content-type") ?? "";
+  if (!contentType.includes("text/html")) return response;
+  try {
+    const html = await response.clone().text();
+    const markdown = new NodeHtmlMarkdown({
+      ignore: ["script", "style", "noscript", "svg", "link", "meta"],
+      keepDataImages: false,
+      useLinkReferenceDefinitions: false,
+    }).translate(html);
+    const cleaned = markdown.replace(/\n{3,}/g, "\n\n").trim();
+    const headers = new Headers(response.headers);
+    headers.set("content-type", "text/markdown; charset=utf-8");
+    headers.set("x-markdown-tokens", String(Math.ceil(cleaned.length / 4)));
+    headers.delete("content-length");
+    return new Response(cleaned, { status: response.status, statusText: response.statusText, headers });
+  } catch {
+    return response;
+  }
+}
+
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
-      return await normalizeCatastrophicSsrResponse(response);
+      const normalized = await normalizeCatastrophicSsrResponse(response);
+      const linked = withLinkHeader(normalized);
+      return wantsMarkdown(request) ? await toMarkdownResponse(linked) : linked;
     } catch (error) {
       console.error(error);
       return new Response(renderErrorPage(), {
         status: 500,
-        headers: { "content-type": "text/html; charset=utf-8" },
+        headers: {
+          "content-type": "text/html; charset=utf-8",
+          Link: LINK_HEADER,
+        },
       });
     }
   },
 };
+
+

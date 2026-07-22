@@ -1,0 +1,24 @@
+{
+  "linkset": [
+    {
+      "anchor": "/",
+      "service-desc": [
+        {
+          "href": "/sitemap.xml",
+          "type": "application/xml",
+          "title": "Lotus365 sitemap"
+        },
+        {
+          "href": "/llms.txt",
+          "type": "text/plain",
+          "title": "Lotus365 LLM guide"
+        },
+        {
+          "href": "/.well-known/agent-skills.json",
+          "type": "application/json",
+          "title": "Lotus365 agent skills index"
+        }
+      ]
+    }
+  ]
+}

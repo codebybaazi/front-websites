@@ -11,6 +11,8 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { WebMCPProvider } from "@/components/WebMCPProvider";
 
 function NotFoundComponent() {
   return (
@@ -77,22 +79,87 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Lotus365 — India's Most Trusted Online Gaming Platform" },
+      {
+        name: "description",
+        content:
+          "Lotus365 is India's most trusted online gaming platform since 2016 — cricket, casino, live sports, instant Lotus IDs, secure payouts and 24/7 concierge support.",
+      },
+      { name: "author", content: "Lotus365" },
+      { property: "og:site_name", content: "Lotus365" },
+      { property: "og:title", content: "Lotus365 — India's Most Trusted Online Gaming Platform" },
+      {
+        property: "og:description",
+        content:
+          "Cricket, casino and live sports on India's most trusted gaming platform. Instant Lotus IDs, secure payouts, VIP rewards and 24/7 concierge support.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
+      // (6) hreflang — declare the India English variant as self-referential.
+      { rel: "alternate", hrefLang: "en-in", href: "https://lotus365id.com/" },
+      { rel: "alternate", hrefLang: "x-default", href: "https://lotus365id.com/" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": "https://lotus365id.com/#organization",
+          name: "Lotus365",
+          alternateName: ["Lotus 365", "Lotus365 India"],
+          url: "https://lotus365id.com/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://lotus365id.com/favicon.png",
+            width: 512,
+            height: 512,
+          },
+          foundingDate: "2016",
+          description:
+            "India's most trusted online gaming platform for cricket, casino and live sports.",
+          areaServed: "IN",
+          contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "customer support",
+            availableLanguage: ["en", "hi"],
+            areaServed: "IN",
+          },
+          sameAs: ["https://lotus365id.com/"],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://lotus365id.com/#website",
+          url: "https://lotus365id.com/",
+          name: "Lotus365",
+          description:
+            "India's most trusted online gaming platform for cricket, casino and live sports.",
+          inLanguage: "en-IN",
+          publisher: { "@id": "https://lotus365id.com/#organization" },
+          potentialAction: {
+            "@type": "SearchAction",
+            target: {
+              "@type": "EntryPoint",
+              urlTemplate: "https://lotus365id.com/blog?q={search_term_string}",
+            },
+            "query-input": "required name=search_term_string",
+          },
+        }),
+      },
+    ],
+
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -121,6 +188,8 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <WhatsAppFloat />
+      <WebMCPProvider />
     </QueryClientProvider>
   );
 }
