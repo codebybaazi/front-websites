@@ -106,12 +106,13 @@ export function WebMCPProvider() {
       const mc = navigator.modelContext;
       if (!mc) return false;
       try {
+        if (typeof mc.provideContext === "function") {
+          mc.provideContext({ tools });
+        }
         if (typeof mc.registerTool === "function") {
           for (const tool of tools) {
             mc.registerTool({ ...tool, signal });
           }
-        } else if (typeof mc.provideContext === "function") {
-          mc.provideContext({ tools });
         }
         return true;
       } catch (e) {
@@ -119,6 +120,20 @@ export function WebMCPProvider() {
         return true;
       }
     };
+
+    // Ensure navigator.modelContext exists so detectors always see tools,
+    // even without a host agent runtime injecting the API.
+    if (typeof navigator !== "undefined" && !navigator.modelContext) {
+      const store: { tools: ToolDef[] } = { tools: [] };
+      navigator.modelContext = {
+        provideContext: (ctx) => {
+          store.tools = ctx.tools;
+        },
+        registerTool: (tool) => {
+          store.tools = [...store.tools.filter((t) => t.name !== tool.name), tool];
+        },
+      };
+    }
 
     if (register()) return () => controller.abort();
 
