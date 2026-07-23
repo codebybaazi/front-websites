@@ -74,21 +74,14 @@ const tools: WebMcpTool[] = [
 
 function register() {
   const mc = (navigator as Navigator).modelContext;
-  if (!mc) return () => {};
+  if (!mc || typeof mc.registerTool !== "function") return () => {};
   const controller = new AbortController();
   try {
-    // Per WebMCP: always call provideContext with the full tool set.
-    if (typeof mc.provideContext === "function") {
-      void mc.provideContext({ tools });
-    }
-    // Also register individually when the browser exposes registerTool.
-    if (typeof mc.registerTool === "function") {
-      for (const tool of tools) {
-        void mc.registerTool({ ...tool, signal: controller.signal });
-      }
+    for (const tool of tools) {
+      void mc.registerTool({ ...tool, signal: controller.signal });
     }
   } catch (err) {
-    console.warn("WebMCP registration failed", err);
+    console.warn("WebMCP registerTool failed", err);
   }
   return () => controller.abort();
 }
