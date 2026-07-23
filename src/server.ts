@@ -100,15 +100,17 @@ export default {
       const markdownRequested = wantsMarkdown(request);
       // The SSR entry only serves HTML; rewrite Accept so it renders the page,
       // then convert to markdown on the way out.
-      const upstreamRequest = markdownRequested
-        ? new Request(request, {
-            headers: (() => {
-              const h = new Headers(request.headers);
-              h.set("accept", "text/html,application/xhtml+xml");
-              return h;
-            })(),
-          })
-        : request;
+      let upstreamRequest = request;
+      if (markdownRequested) {
+        const h = new Headers(request.headers);
+        h.set("accept", "text/html,application/xhtml+xml");
+        upstreamRequest = new Request(request.url, {
+          method: request.method,
+          headers: h,
+          body: request.method === "GET" || request.method === "HEAD" ? undefined : await request.arrayBuffer(),
+          redirect: request.redirect,
+        });
+      }
       const response = await handler.fetch(upstreamRequest, env, ctx);
       const normalized = await normalizeCatastrophicSsrResponse(response);
       const linked = withLinkHeader(normalized);
