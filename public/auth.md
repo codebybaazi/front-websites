@@ -1,7 +1,11 @@
-# Lotus365 Agent Authentication
+# auth.md — Lotus365 Agent Authentication
 
-This document describes how AI agents and third-party clients register and
-authenticate with Lotus365.
+This is the Lotus365 `auth.md` document. It describes how AI agents and
+third-party clients register, authenticate, and obtain credentials to act
+against this service.
+
+- Audience: AI agents, autonomous services, and third-party OAuth clients.
+- Service: Lotus365 (https://lotus365id.com)
 
 ## Discovery
 
@@ -25,9 +29,9 @@ Dynamic Client Registration (RFC 7591) is supported. Include your
 
 ## Supported identity types
 
-- `human` — end-user login via authorization code + PKCE
-- `agent` — autonomous AI agents acting on a user's behalf
-- `service` — server-to-server clients via `client_credentials`
+- `identity_assertion` — ID-JAG assertions (`urn:ietf:params:oauth:token-type:id-jag`)
+- `verified_email` — email-verified agents
+- `anonymous` — ephemeral anonymous clients (PKCE public clients)
 
 ## Supported credential types
 
