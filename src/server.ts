@@ -97,23 +97,28 @@ function htmlToMarkdown(html: string): string {
   s = s.replace(/<img[^>]*src=["']([^"']+)["'][^>]*\/?>/gi, (_m, src) => `![](${src})`);
   // Lists.
   s = s.replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, (_m, t) => `- ${stripTags(t).trim()}\n`);
-  // Paragraphs & breaks.
-  s = s.replace(/<\/(p|div|section|article|header|footer|main|nav|ul|ol)>/gi, "\n\n");
+  // Block-level separators (open + close) so adjacent inline text doesn't concatenate.
+  s = s.replace(/<(p|div|section|article|header|footer|main|nav|aside|ul|ol|tr|table)[^>]*>/gi, "\n\n");
+  s = s.replace(/<\/(p|div|section|article|header|footer|main|nav|aside|ul|ol|tr|table)>/gi, "\n\n");
   s = s.replace(/<br\s*\/?>/gi, "\n");
+  // Table cells → spaces.
+  s = s.replace(/<\/(td|th)>/gi, " ");
   // Bold/italic/code.
   s = s.replace(/<(strong|b)[^>]*>([\s\S]*?)<\/\1>/gi, (_m, _t, c) => `**${stripTags(c)}**`);
   s = s.replace(/<(em|i)[^>]*>([\s\S]*?)<\/\1>/gi, (_m, _t, c) => `*${stripTags(c)}*`);
   s = s.replace(/<code[^>]*>([\s\S]*?)<\/code>/gi, (_m, c) => `\`${stripTags(c)}\``);
   // Drop remaining tags.
   s = stripTags(s);
-  // Decode a few common entities.
+  // Decode named + numeric entities.
   s = s
     .replace(/&nbsp;/g, " ")
     .replace(/&amp;/g, "&")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'");
+    .replace(/&apos;/g, "'")
+    .replace(/&#x([0-9a-fA-F]+);/g, (_m, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_m, d) => String.fromCodePoint(parseInt(d, 10)));
   // Collapse whitespace.
   s = s.replace(/[ \t]+\n/g, "\n").replace(/\n{3,}/g, "\n\n").replace(/[ \t]{2,}/g, " ").trim();
   return s;
