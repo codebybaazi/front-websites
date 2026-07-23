@@ -68,7 +68,7 @@ const LINK_HEADER = [
   '</sitemap.xml>; rel="sitemap"; type="application/xml"',
   '</llms.txt>; rel="describedby"; type="text/markdown"',
   '</.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json"',
-  '</.well-known/agent-skills.json>; rel="service-desc"; type="application/json"',
+  '</.well-known/agent-skills/index.json>; rel="service-desc"; type="application/json"',
 ].join(", ");
 
 function withDiscoveryHeaders(response: Response): Response {
