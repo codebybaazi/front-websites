@@ -97,10 +97,24 @@ export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
       const handler = await getServerEntry();
-      const response = await handler.fetch(request, env, ctx);
+      const markdownRequested = wantsMarkdown(request);
+      // The SSR entry only serves HTML; rewrite Accept so it renders the page,
+      // then convert to markdown on the way out.
+      let upstreamRequest = request;
+      if (markdownRequested) {
+        const h = new Headers(request.headers);
+        h.set("accept", "text/html,application/xhtml+xml");
+        upstreamRequest = new Request(request.url, {
+          method: request.method,
+          headers: h,
+          body: request.method === "GET" || request.method === "HEAD" ? undefined : await request.arrayBuffer(),
+          redirect: request.redirect,
+        });
+      }
+      const response = await handler.fetch(upstreamRequest, env, ctx);
       const normalized = await normalizeCatastrophicSsrResponse(response);
       const linked = withLinkHeader(normalized);
-      return wantsMarkdown(request) ? await toMarkdownResponse(linked) : linked;
+      return markdownRequested ? await toMarkdownResponse(linked) : linked;
     } catch (error) {
       console.error(error);
       return new Response(renderErrorPage(), {
