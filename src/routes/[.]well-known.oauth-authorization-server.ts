@@ -16,9 +16,16 @@ const config = {
   code_challenge_methods_supported: ["S256", "plain"],
   service_documentation: "https://mahadevbookss.com/.well-known/agents.json",
   agent_auth: {
+    skill: "agent-registration",
     register_uri: "https://mahadevbookss.com/oauth/register",
     auth_metadata_uri: "https://mahadevbookss.com/auth.md",
-    identity_types_supported: ["human", "agent", "service_account"],
+    identity_types_supported: [
+      "human",
+      "agent",
+      "service_account",
+      "identity_assertion",
+      "anonymous",
+    ],
     credential_types_supported: [
       "client_secret",
       "private_key_jwt",
@@ -26,6 +33,17 @@ const config = {
       "mtls",
       "api_key",
     ],
+    identity_assertion: {
+      assertion_types_supported: [
+        "urn:ietf:params:oauth:token-type:id-jag",
+        "verified_email",
+      ],
+      credential_types_supported: ["client_secret", "private_key_jwt", "dpop"],
+    },
+    anonymous: {
+      credential_types_supported: ["dpop", "api_key"],
+    },
+    events_supported: ["registration", "revocation", "claim"],
     claim_uri: "https://mahadevbookss.com/oauth/claim",
     revocation_uri: "https://mahadevbookss.com/oauth/revoke",
     introspection_uri: "https://mahadevbookss.com/oauth/introspect",

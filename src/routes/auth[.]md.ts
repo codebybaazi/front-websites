@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 
 const ISSUER = 'https://mahadevbookss.com'
 
-const body = `# Mahadev Book — Agent Authentication
+const body = `# auth.md — Mahadev Book Agent Authentication
 
 This document describes how AI agents, LLM clients, and automated tools register and authenticate with Mahadev Book to call site tools, MCP endpoints, and public APIs.
 
