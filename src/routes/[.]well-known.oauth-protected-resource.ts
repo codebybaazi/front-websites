@@ -1,11 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { getOrigin } from "@/lib/request-origin";
 
 // RFC 9728 OAuth 2.0 Protected Resource Metadata.
 export const Route = createFileRoute("/.well-known/oauth-protected-resource")({
   server: {
     handlers: {
       GET: async ({ request }) => {
-        const origin = new URL(request.url).origin;
+        const origin = getOrigin(request);
         const body = {
           resource: origin,
           resource_name: "sprintersbloom",
