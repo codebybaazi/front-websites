@@ -41,7 +41,7 @@ export const Route = createFileRoute("/.well-known/oauth-authorization-server")(
           request_parameter_supported: false,
           request_uri_parameter_supported: false,
           agent_auth: {
-            skill: "auth.md",
+            skill: `${siteUrl}/auth.md`,
             register_uri: `${siteUrl}/oauth/register`,
             supported_identity_types: ["human", "agent", "service"],
             supported_credential_types: [

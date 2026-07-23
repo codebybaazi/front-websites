@@ -14,7 +14,7 @@ export const Route = createFileRoute("/.well-known/oauth-protected-resource")({
           resource_documentation: `${siteUrl}/`,
           resource_signing_alg_values_supported: ["RS256"],
           agent_auth: {
-            skill: "auth.md",
+            skill: `${siteUrl}/auth.md`,
             documentation_uri: `${siteUrl}/auth.md`,
             register_uri: `${siteUrl}/oauth/register`,
             claim_uri: `${siteUrl}/oauth/claim`,
