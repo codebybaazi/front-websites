@@ -208,28 +208,35 @@ const tools: ToolDef[] = [
 
 export function WebMCPProvider() {
   useEffect(() => {
-    const mc = (navigator as any)?.modelContext;
-    if (!mc) return;
-    const controller = new AbortController();
-    const { signal } = controller;
-
-    try {
-      if (typeof mc.registerTool === "function") {
-        for (const t of tools) {
-          try {
-            mc.registerTool({ ...t, signal });
-          } catch (e) {
-            console.warn(`WebMCP registerTool failed for ${t.name}`, e);
+    const register = () => {
+      const mc = (navigator as any)?.modelContext;
+      if (!mc) return false;
+      try {
+        if (typeof mc.provideContext === "function") {
+          mc.provideContext({ tools });
+        }
+        if (typeof mc.registerTool === "function") {
+          for (const t of tools) {
+            try { mc.registerTool(t); } catch (e) { console.warn(`WebMCP registerTool failed for ${t.name}`, e); }
           }
         }
-      } else if (typeof mc.provideContext === "function") {
-        mc.provideContext({ tools });
+        (window as any).__webmcp_tools = tools;
+        window.dispatchEvent(new CustomEvent("webmcp:ready", { detail: { tools: tools.map((t) => t.name) } }));
+        return true;
+      } catch (e) {
+        console.warn("WebMCP registration failed", e);
+        return false;
       }
-    } catch (e) {
-      console.warn("WebMCP registration failed", e);
-    }
+    };
 
-    return () => controller.abort();
+    if (!register()) {
+      // Poll briefly in case navigator.modelContext is injected after load
+      let tries = 0;
+      const id = window.setInterval(() => {
+        if (register() || ++tries > 20) window.clearInterval(id);
+      }, 250);
+      return () => window.clearInterval(id);
+    }
   }, []);
   return null;
 }
