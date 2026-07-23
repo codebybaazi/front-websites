@@ -31,12 +31,12 @@ const discoveryIndex = {
   $schema: "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
   skills: [
     {
-      name: "sprinters-discovery",
+      name: "sprintersbloom-discovery",
       type: "skill-md",
       description:
-        "Discover Sprinters Online Gaming pages, support channels, and responsible-gaming resources.",
+        "Discovery guide for the sprintersbloom web app: enumerates public routes, describes the site's purpose, and tells agents how to navigate, cite, and link to canonical pages on this domain.",
       url: "/.well-known/agent-skills/sprinters-discovery/SKILL.md",
-      digest: "sha256:65adbd567f9900e2d1104f3141fb9623f6407f1e2b8a1d6398446811b004b655",
+      digest: "sha256:0fa5cec6f630efff13e08fdf06126f29c2e7ddfb0943047528a2134f87c5fc2a",
     },
   ],
 };
