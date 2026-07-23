@@ -22,13 +22,14 @@ const tools: WebMcpTool[] = [
   {
     name: "navigate",
     description:
-      "Navigate the current sprintersbloom tab to a same-origin path on this site (e.g. '/').",
+      "Navigate the current browser tab of the sprintersbloom web app to a same-origin route (for example '/' for the home page). Triggers a full client navigation on this site; does not open new tabs, external URLs, or cross-origin destinations.",
     inputSchema: {
       type: "object",
       properties: {
         path: {
           type: "string",
-          description: "Same-origin path starting with '/'.",
+          description:
+            "Absolute same-origin path beginning with '/'. Query strings and hash fragments are allowed (e.g. '/?ref=agent#section'). External URLs or protocol-relative paths are rejected.",
         },
       },
       required: ["path"],
@@ -44,8 +45,12 @@ const tools: WebMcpTool[] = [
   {
     name: "get_page_summary",
     description:
-      "Return the current page's title, URL, meta description, and top headings so an agent can understand what the user is viewing.",
-    inputSchema: { type: "object", properties: {} },
+      "Read a lightweight snapshot of the page the user is currently viewing in the sprintersbloom web app: canonical URL, document title, meta description, and up to 20 H1/H2 headings in document order. Use before other tools to ground the agent in the current context.",
+    inputSchema: {
+      type: "object",
+      properties: {},
+      additionalProperties: false,
+    },
     execute: () => ({
       url: window.location.href,
       title: document.title,
@@ -61,8 +66,12 @@ const tools: WebMcpTool[] = [
   {
     name: "list_links",
     description:
-      "List same-origin navigation links visible on the current page so an agent can discover where to go next.",
-    inputSchema: { type: "object", properties: {} },
+      "Enumerate up to 50 same-origin anchor links visible on the current page (visible link text and href). Use this to discover which routes on the sprintersbloom site the agent can hand to the 'navigate' tool next. External links are omitted.",
+    inputSchema: {
+      type: "object",
+      properties: {},
+      additionalProperties: false,
+    },
     execute: () => ({
       links: Array.from(document.querySelectorAll<HTMLAnchorElement>("a[href]"))
         .map((a) => ({ text: a.textContent?.trim() ?? "", href: a.getAttribute("href") ?? "" }))
@@ -71,6 +80,7 @@ const tools: WebMcpTool[] = [
     }),
   },
 ];
+
 
 function register() {
   const mc = (navigator as Navigator).modelContext;
