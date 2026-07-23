@@ -50,12 +50,19 @@ export const Route = createFileRoute("/.well-known/oauth-authorization-server")(
               "none",
               "pkce",
             ],
+            credential_types_supported: [
+              "client_secret_basic",
+              "client_secret_post",
+              "none",
+              "pkce",
+            ],
             identity_types_supported: [
               "identity_assertion",
               "anonymous",
             ],
             identity_assertion: {
               assertion_types_supported: [
+                "id-jag",
                 "urn:ietf:params:oauth:token-type:id-jag",
                 "verified_email",
               ],
