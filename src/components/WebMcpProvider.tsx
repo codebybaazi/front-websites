@@ -22,7 +22,7 @@ const tools: WebMcpTool[] = [
   {
     name: "navigate",
     description:
-      "Navigate the current SprintersHub tab to a path on this site (e.g. '/', '/contact-us', '/blog').",
+      "Navigate the current sprintersbloom tab to a same-origin path on this site (e.g. '/').",
     inputSchema: {
       type: "object",
       properties: {
@@ -42,34 +42,6 @@ const tools: WebMcpTool[] = [
     },
   },
   {
-    name: "open_whatsapp",
-    description:
-      "Open a WhatsApp chat with SprintersHub support to request a new betting ID or help.",
-    inputSchema: {
-      type: "object",
-      properties: {
-        message: {
-          type: "string",
-          description: "Optional prefilled message for the WhatsApp chat.",
-        },
-      },
-    },
-    execute: ({ message }) => {
-      const btn = document.querySelector<HTMLAnchorElement>(
-        'a[href*="wa.me"], a[href*="whatsapp.com"]',
-      );
-      if (btn) {
-        const url = new URL(btn.href);
-        if (typeof message === "string" && message.trim()) {
-          url.searchParams.set("text", message);
-        }
-        window.open(url.toString(), "_blank", "noopener");
-        return { ok: true, url: url.toString() };
-      }
-      return { ok: false, error: "WhatsApp link not found on page" };
-    },
-  },
-  {
     name: "get_page_summary",
     description:
       "Return the current page's title, URL, meta description, and top headings so an agent can understand what the user is viewing.",
@@ -86,26 +58,48 @@ const tools: WebMcpTool[] = [
         .map((h) => ({ level: h.tagName.toLowerCase(), text: h.textContent?.trim() ?? "" })),
     }),
   },
+  {
+    name: "list_links",
+    description:
+      "List same-origin navigation links visible on the current page so an agent can discover where to go next.",
+    inputSchema: { type: "object", properties: {} },
+    execute: () => ({
+      links: Array.from(document.querySelectorAll<HTMLAnchorElement>("a[href]"))
+        .map((a) => ({ text: a.textContent?.trim() ?? "", href: a.getAttribute("href") ?? "" }))
+        .filter((l) => l.href.startsWith("/") || l.href.startsWith(window.location.origin))
+        .slice(0, 50),
+    }),
+  },
 ];
 
-export function WebMcpProvider() {
-  useEffect(() => {
-    const mc = (navigator as Navigator).modelContext;
-    if (!mc) return;
-    const controller = new AbortController();
-    try {
-      if (typeof mc.registerTool === "function") {
-        for (const tool of tools) {
-          void mc.registerTool({ ...tool, signal: controller.signal });
-        }
-      } else if (typeof mc.provideContext === "function") {
-        void mc.provideContext({ tools });
-      }
-    } catch (err) {
-      console.warn("WebMCP registration failed", err);
+function register() {
+  const mc = (navigator as Navigator).modelContext;
+  if (!mc) return () => {};
+  const controller = new AbortController();
+  try {
+    // Per WebMCP: always call provideContext with the full tool set.
+    if (typeof mc.provideContext === "function") {
+      void mc.provideContext({ tools });
     }
-    return () => controller.abort();
-  }, []);
-  return null;
+    // Also register individually when the browser exposes registerTool.
+    if (typeof mc.registerTool === "function") {
+      for (const tool of tools) {
+        void mc.registerTool({ ...tool, signal: controller.signal });
+      }
+    }
+  } catch (err) {
+    console.warn("WebMCP registration failed", err);
+  }
+  return () => controller.abort();
 }
 
+// Register as early as possible on the client so agents don't time out
+// waiting for navigator.modelContext.provideContext to be called.
+if (typeof window !== "undefined" && (navigator as Navigator).modelContext) {
+  register();
+}
+
+export function WebMcpProvider() {
+  useEffect(() => register(), []);
+  return null;
+}
