@@ -86,10 +86,18 @@ function register() {
   return () => controller.abort();
 }
 
-// Register as early as possible on the client so agents don't time out
-// waiting for navigator.modelContext.provideContext to be called.
-if (typeof window !== "undefined" && (navigator as Navigator).modelContext) {
-  register();
+// Register as early as possible on the client. Poll briefly in case the
+// browser injects navigator.modelContext after script load.
+if (typeof window !== "undefined") {
+  let attempts = 0;
+  const tryRegister = () => {
+    if ((navigator as Navigator).modelContext?.registerTool) {
+      register();
+      return;
+    }
+    if (attempts++ < 40) setTimeout(tryRegister, 250);
+  };
+  tryRegister();
 }
 
 export function WebMcpProvider() {
