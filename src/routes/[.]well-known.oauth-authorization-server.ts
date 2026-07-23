@@ -40,6 +40,19 @@ export const Route = createFileRoute("/.well-known/oauth-authorization-server")(
           ui_locales_supported: ["en-IN", "en"],
           request_parameter_supported: false,
           request_uri_parameter_supported: false,
+          agent_auth: {
+            register_uri: `${siteUrl}/oauth/register`,
+            supported_identity_types: ["human", "agent", "service"],
+            supported_credential_types: [
+              "client_secret_basic",
+              "client_secret_post",
+              "none",
+              "pkce",
+            ],
+            claim_uri: `${siteUrl}/oauth/claim`,
+            revocation_uri: `${siteUrl}/oauth/revoke`,
+            documentation_uri: `${siteUrl}/auth.md`,
+          },
         };
         return new Response(JSON.stringify(body, null, 2), {
           headers: {
