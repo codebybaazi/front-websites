@@ -21,7 +21,7 @@ export const Route = createFileRoute("/.well-known/oauth-authorization-server")(
           token_endpoint_auth_methods_supported: ["none"],
           service_documentation: `${origin}/contact-us`,
           agent_auth: {
-            skill: "authMd",
+            skill: `${origin}/auth.md`,
             register_uri: `${origin}/contact-us`,
             documentation_uri: `${origin}/auth.md`,
             identity_types_supported: ["identity_assertion", "anonymous"],
