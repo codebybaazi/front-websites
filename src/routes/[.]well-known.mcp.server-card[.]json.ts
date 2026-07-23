@@ -1,11 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { getOrigin } from "@/lib/request-origin";
 
 // MCP Server Card (SEP-1649) — advertises the site's MCP surface for agents.
 export const Route = createFileRoute("/.well-known/mcp/server-card.json")({
   server: {
     handlers: {
       GET: async ({ request }) => {
-        const origin = new URL(request.url).origin;
+        const origin = getOrigin(request);
         const body = {
           $schema:
             "https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/main/schema/server-card.schema.json",
