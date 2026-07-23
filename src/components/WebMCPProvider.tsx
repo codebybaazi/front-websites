@@ -208,18 +208,23 @@ const tools: ToolDef[] = [
   },
 ];
 
-function registerWebMCP() {
+function registerWebMCP(signal?: AbortSignal) {
   if (typeof window === "undefined") return false;
   const w = window as any;
   w.__webmcp_tools = tools;
   const mc = (navigator as any)?.modelContext;
   if (!mc) return false;
   try {
-    if (typeof mc.provideContext === "function") mc.provideContext({ tools });
+    // Per WebMCP spec: registerTool(tool, { signal }) per tool
     if (typeof mc.registerTool === "function") {
       for (const t of tools) {
-        try { mc.registerTool(t); } catch { /* noop */ }
+        try { mc.registerTool(t, signal ? { signal } : undefined); }
+        catch (e) { console.warn(`WebMCP registerTool failed: ${t.name}`, e); }
       }
+    }
+    // Fallback for earlier draft that used provideContext
+    if (typeof mc.provideContext === "function") {
+      try { mc.provideContext({ tools }); } catch { /* noop */ }
     }
     window.dispatchEvent(new CustomEvent("webmcp:ready", { detail: { tools: tools.map((t) => t.name) } }));
     return true;
@@ -248,12 +253,15 @@ if (typeof window !== "undefined") {
 
 export function WebMCPProvider() {
   useEffect(() => {
-    if (registerWebMCP()) return;
-    let tries = 0;
-    const id = window.setInterval(() => {
-      if (registerWebMCP() || ++tries > 40) window.clearInterval(id);
-    }, 200);
-    return () => window.clearInterval(id);
+    const ac = new AbortController();
+    if (!registerWebMCP(ac.signal)) {
+      let tries = 0;
+      const id = window.setInterval(() => {
+        if (registerWebMCP(ac.signal) || ++tries > 40) window.clearInterval(id);
+      }, 200);
+      return () => { window.clearInterval(id); ac.abort(); };
+    }
+    return () => ac.abort();
   }, []);
   return null;
 }
