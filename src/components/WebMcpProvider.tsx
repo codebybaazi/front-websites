@@ -84,14 +84,19 @@ const tools: WebMcpTool[] = [
 
 function register() {
   const mc = (navigator as Navigator).modelContext;
-  if (!mc || typeof mc.registerTool !== "function") return () => {};
+  if (!mc) return () => {};
   const controller = new AbortController();
   try {
-    for (const tool of tools) {
-      void mc.registerTool({ ...tool, signal: controller.signal });
+    if (typeof mc.provideContext === "function") {
+      void mc.provideContext({ tools });
+    }
+    if (typeof mc.registerTool === "function") {
+      for (const tool of tools) {
+        void mc.registerTool({ ...tool, signal: controller.signal });
+      }
     }
   } catch (err) {
-    console.warn("WebMCP registerTool failed", err);
+    console.warn("WebMCP registration failed", err);
   }
   return () => controller.abort();
 }
@@ -101,7 +106,8 @@ function register() {
 if (typeof window !== "undefined") {
   let attempts = 0;
   const tryRegister = () => {
-    if ((navigator as Navigator).modelContext?.registerTool) {
+    const mc = (navigator as Navigator).modelContext;
+    if (mc && (mc.registerTool || mc.provideContext)) {
       register();
       return;
     }
