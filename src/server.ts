@@ -79,12 +79,76 @@ function withDiscoveryHeaders(response: Response): Response {
   return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
 }
 
+// Minimal HTML→Markdown converter for agent requests (Accept: text/markdown).
+// Runs at the origin so scanners see Content-Type: text/markdown directly,
+// independent of any edge transformation.
+function htmlToMarkdown(html: string): string {
+  // Isolate <body> if present.
+  const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+  let s = bodyMatch ? bodyMatch[1] : html;
+  // Strip non-content blocks.
+  s = s.replace(/<(script|style|noscript|template|svg)[\s\S]*?<\/\1>/gi, "");
+  // Headings.
+  s = s.replace(/<h([1-6])[^>]*>([\s\S]*?)<\/h\1>/gi, (_m, l, t) => `\n\n${"#".repeat(Number(l))} ${stripTags(t)}\n\n`);
+  // Links.
+  s = s.replace(/<a[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi, (_m, href, t) => `[${stripTags(t)}](${href})`);
+  // Images.
+  s = s.replace(/<img[^>]*alt=["']([^"']*)["'][^>]*src=["']([^"']+)["'][^>]*\/?>/gi, (_m, alt, src) => `![${alt}](${src})`);
+  s = s.replace(/<img[^>]*src=["']([^"']+)["'][^>]*\/?>/gi, (_m, src) => `![](${src})`);
+  // Lists.
+  s = s.replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, (_m, t) => `- ${stripTags(t).trim()}\n`);
+  // Paragraphs & breaks.
+  s = s.replace(/<\/(p|div|section|article|header|footer|main|nav|ul|ol)>/gi, "\n\n");
+  s = s.replace(/<br\s*\/?>/gi, "\n");
+  // Bold/italic/code.
+  s = s.replace(/<(strong|b)[^>]*>([\s\S]*?)<\/\1>/gi, (_m, _t, c) => `**${stripTags(c)}**`);
+  s = s.replace(/<(em|i)[^>]*>([\s\S]*?)<\/\1>/gi, (_m, _t, c) => `*${stripTags(c)}*`);
+  s = s.replace(/<code[^>]*>([\s\S]*?)<\/code>/gi, (_m, c) => `\`${stripTags(c)}\``);
+  // Drop remaining tags.
+  s = stripTags(s);
+  // Decode a few common entities.
+  s = s
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'");
+  // Collapse whitespace.
+  s = s.replace(/[ \t]+\n/g, "\n").replace(/\n{3,}/g, "\n\n").replace(/[ \t]{2,}/g, " ").trim();
+  return s;
+}
+
+function stripTags(s: string): string {
+  return s.replace(/<[^>]+>/g, "");
+}
+
+function countTokens(s: string): number {
+  // Rough approximation: ~4 chars per token.
+  return Math.max(1, Math.ceil(s.length / 4));
+}
+
+async function maybeConvertToMarkdown(originalAccept: string, response: Response): Promise<Response> {
+  if (!/text\/markdown/i.test(originalAccept)) return response;
+  const contentType = response.headers.get("content-type") ?? "";
+  if (!contentType.includes("text/html")) return response;
+  const html = await response.clone().text();
+  const md = htmlToMarkdown(html);
+  const headers = new Headers(response.headers);
+  headers.set("content-type", "text/markdown; charset=utf-8");
+  headers.set("x-markdown-tokens", String(countTokens(md)));
+  headers.delete("content-length");
+  return new Response(md, { status: response.status, statusText: response.statusText, headers });
+}
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    const originalAccept = request.headers.get("accept") ?? "";
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(normalizeMarkdownAccept(request), env, ctx);
-      return withDiscoveryHeaders(await normalizeCatastrophicSsrResponse(response));
+      const normalized = withDiscoveryHeaders(await normalizeCatastrophicSsrResponse(response));
+      return await maybeConvertToMarkdown(originalAccept, normalized);
     } catch (error) {
       console.error(error);
       return new Response(renderErrorPage(), {
