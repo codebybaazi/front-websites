@@ -19,6 +19,7 @@ import { Route as MahadevBookVsLotus365RouteImport } from './routes/mahadev-book
 import { Route as MahadevBettingAppRouteImport } from './routes/mahadev-betting-app'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AuthDotmdRouteImport } from './routes/auth[.]md'
 import { Route as AllLinksRouteImport } from './routes/all-links'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as SplatRouteImport } from './routes/$'
@@ -81,6 +82,11 @@ const LoginRoute = LoginRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthDotmdRoute = AuthDotmdRouteImport.update({
+  id: '/auth.md',
+  path: '/auth.md',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AllLinksRoute = AllLinksRouteImport.update({
@@ -154,6 +160,7 @@ export interface FileRoutesByFullPath {
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/all-links': typeof AllLinksRoute
+  '/auth.md': typeof AuthDotmdRoute
   '/contact': typeof ContactRoute
   '/login': typeof LoginRoute
   '/mahadev-betting-app': typeof MahadevBettingAppRoute
@@ -178,6 +185,7 @@ export interface FileRoutesByTo {
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/all-links': typeof AllLinksRoute
+  '/auth.md': typeof AuthDotmdRoute
   '/contact': typeof ContactRoute
   '/login': typeof LoginRoute
   '/mahadev-betting-app': typeof MahadevBettingAppRoute
@@ -203,6 +211,7 @@ export interface FileRoutesById {
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/all-links': typeof AllLinksRoute
+  '/auth.md': typeof AuthDotmdRoute
   '/contact': typeof ContactRoute
   '/login': typeof LoginRoute
   '/mahadev-betting-app': typeof MahadevBettingAppRoute
@@ -229,6 +238,7 @@ export interface FileRouteTypes {
     | '/$'
     | '/about'
     | '/all-links'
+    | '/auth.md'
     | '/contact'
     | '/login'
     | '/mahadev-betting-app'
@@ -253,6 +263,7 @@ export interface FileRouteTypes {
     | '/$'
     | '/about'
     | '/all-links'
+    | '/auth.md'
     | '/contact'
     | '/login'
     | '/mahadev-betting-app'
@@ -277,6 +288,7 @@ export interface FileRouteTypes {
     | '/$'
     | '/about'
     | '/all-links'
+    | '/auth.md'
     | '/contact'
     | '/login'
     | '/mahadev-betting-app'
@@ -302,6 +314,7 @@ export interface RootRouteChildren {
   SplatRoute: typeof SplatRoute
   AboutRoute: typeof AboutRoute
   AllLinksRoute: typeof AllLinksRoute
+  AuthDotmdRoute: typeof AuthDotmdRoute
   ContactRoute: typeof ContactRoute
   LoginRoute: typeof LoginRoute
   MahadevBettingAppRoute: typeof MahadevBettingAppRoute
@@ -392,6 +405,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth.md': {
+      id: '/auth.md'
+      path: '/auth.md'
+      fullPath: '/auth.md'
+      preLoaderRoute: typeof AuthDotmdRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/all-links': {
@@ -486,6 +506,7 @@ const rootRouteChildren: RootRouteChildren = {
   SplatRoute: SplatRoute,
   AboutRoute: AboutRoute,
   AllLinksRoute: AllLinksRoute,
+  AuthDotmdRoute: AuthDotmdRoute,
   ContactRoute: ContactRoute,
   LoginRoute: LoginRoute,
   MahadevBettingAppRoute: MahadevBettingAppRoute,
