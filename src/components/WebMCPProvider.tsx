@@ -23,7 +23,7 @@ const tools: ToolDef[] = [
   {
     name: "get_new_betting_id",
     description:
-      "Request a new verified Mahadev Book online cricket betting ID. Opens the 24x7 WhatsApp onboarding chat with a prefilled message including the user's name, sport preference, and referral code.",
+      "Start the onboarding flow to obtain a new verified Mahadev Book online betting ID (cricket, football, tennis, or casino). Opens the official 24x7 WhatsApp support chat in a new tab with a prefilled message containing the user's name, chosen sport, and optional referral code so an agent can create and deliver the ID. Use when the user wants to sign up, register, create an account, or get a fresh betting/gaming ID.",
     inputSchema: {
       type: "object",
       properties: {
@@ -40,7 +40,8 @@ const tools: ToolDef[] = [
   },
   {
     name: "login_help",
-    description: "Get help logging into an existing Mahadev Book ID or recovering a forgotten password via WhatsApp support.",
+    description:
+      "Assist an existing Mahadev Book user who cannot log in, has forgotten their password, lost access to their account, or needs their user ID recovered. Opens 24x7 WhatsApp support with a prefilled message that includes the provided user ID (if any) so support can verify identity and restore access. Use for login problems, password reset, account recovery, or 'can't sign in' scenarios.",
     inputSchema: {
       type: "object",
       properties: {
@@ -55,7 +56,8 @@ const tools: ToolDef[] = [
   },
   {
     name: "contact_support",
-    description: "Open Mahadev Book 24x7 customer support on WhatsApp with an optional prefilled message.",
+    description:
+      "Open Mahadev Book's 24x7 customer support on WhatsApp with a prefilled message tagged by topic (deposit, withdrawal, id, predictions, or other). Use for any general help, complaints, payment questions, deposit/withdrawal issues, KYC queries, or when the user asks to talk to a human agent.",
     inputSchema: {
       type: "object",
       properties: {
@@ -72,7 +74,7 @@ const tools: ToolDef[] = [
   {
     name: "navigate",
     description:
-      "Navigate to a page on mahadevbookss.com. Allowed paths: /, /services, /predictions, /matches, /schedule, /blog, /contact, /login, /mahadev-book-vs-lotus-365.",
+      "Navigate the current browser tab to a specific page on mahadevbookss.com. Use this to take the user to a section of the site. Allowed paths: '/' (home), '/services' (deposit/withdrawal/support), '/predictions' (today's cricket predictions), '/matches' (live & upcoming matches), '/schedule' (fixture calendar), '/blog' (guides & articles), '/contact' (support form), '/login' (existing user sign-in), and '/mahadev-book-vs-lotus-365' (competitor comparison). Any other path is rejected.",
     inputSchema: {
       type: "object",
       properties: {
@@ -90,7 +92,7 @@ const tools: ToolDef[] = [
   },
   {
     name: "get_predictions",
-    description: "Retrieve today's cricket match predictions with win probabilities, curated by Mahadev Book analysts.",
+    description: "Fetch today's cricket match predictions from Mahadev Book as markdown, including matchups, win probabilities, expert picks, and confidence notes curated by in-house analysts. Optionally specify an ISO date (YYYY-MM-DD) for a different day; defaults to today. Read-only, safe to call repeatedly.",
     inputSchema: {
       type: "object",
       properties: {
@@ -105,7 +107,7 @@ const tools: ToolDef[] = [
   },
   {
     name: "get_matches",
-    description: "List currently live and upcoming cricket matches with venue, teams, and start time.",
+    description: "List currently live and upcoming cricket matches tracked by Mahadev Book, including teams, tournament, venue, start time (IST), and status. Filter by status ('live', 'upcoming', or 'all'). Returns markdown suitable for display or summarization. Read-only.",
     inputSchema: {
       type: "object",
       properties: {
@@ -120,7 +122,7 @@ const tools: ToolDef[] = [
   },
   {
     name: "get_schedule",
-    description: "Retrieve the upcoming cricket match schedule across leagues and international fixtures.",
+    description: "Retrieve the upcoming cricket fixture calendar across IPL, international, and domestic leagues as markdown. Optional ISO 'from' and 'to' dates narrow the window. Use when the user asks 'what matches are coming up', 'when is X playing', or wants a schedule overview. Read-only.",
     inputSchema: {
       type: "object",
       properties: {
@@ -136,7 +138,7 @@ const tools: ToolDef[] = [
   },
   {
     name: "get_services",
-    description: "Describe deposit, withdrawal, live-line, and 24x7 support services offered by Mahadev Book.",
+    description: "Return a description of the services Mahadev Book offers to ID holders: instant deposits, fast withdrawals, live betting lines, dedicated account managers, and 24x7 WhatsApp support. Use when the user asks what Mahadev Book does, what features are included, or how deposits/withdrawals work. Read-only.",
     inputSchema: { type: "object", properties: {} },
     annotations: { title: "Get services", readOnlyHint: true, idempotentHint: true },
     execute: async () => {
@@ -146,7 +148,7 @@ const tools: ToolDef[] = [
   },
   {
     name: "get_blog_posts",
-    description: "List Mahadev Book blog posts, betting guides, and analysis articles.",
+    description: "List Mahadev Book blog posts as markdown, including betting guides, tutorials, match analysis, and news. Use for research, content discovery, or when the user asks to read articles or learn about betting strategy. Read-only.",
     inputSchema: {
       type: "object",
       properties: {
@@ -161,7 +163,7 @@ const tools: ToolDef[] = [
   },
   {
     name: "compare_providers",
-    description: "Compare Mahadev Book with other betting ID providers such as Lotus 365 and Skyexchange 247.",
+    description: "Fetch a head-to-head comparison of Mahadev Book against another Indian betting ID provider (Lotus 365 or Skyexchange 247), covering trust, payout speed, market coverage, support quality, and pricing. Use when the user is evaluating providers or asks 'which is better'. Read-only.",
     inputSchema: {
       type: "object",
       properties: {
@@ -177,7 +179,7 @@ const tools: ToolDef[] = [
   },
   {
     name: "search_site",
-    description: "Search Mahadev Book blog and pages by keyword.",
+    description: "Search Mahadev Book's blog and content pages by keyword and navigate the current tab to the blog listing filtered by the query. Use when the user wants to find articles or topics on the site.",
     inputSchema: {
       type: "object",
       properties: { query: { type: "string", description: "Search query keywords." } },
@@ -191,7 +193,7 @@ const tools: ToolDef[] = [
   },
   {
     name: "get_page_markdown",
-    description: "Fetch any page of mahadevbookss.com as clean markdown for AI consumption.",
+    description: "Fetch any page of mahadevbookss.com as clean, LLM-friendly markdown (scripts/styles stripped, main content extracted). Provide a relative path starting with '/'. Use this as a general-purpose reader when no more specific tool applies. Read-only and idempotent.",
     inputSchema: {
       type: "object",
       properties: { path: { type: "string", description: "Relative path beginning with /." } },
