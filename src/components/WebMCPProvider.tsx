@@ -208,37 +208,52 @@ const tools: ToolDef[] = [
   },
 ];
 
+function registerWebMCP() {
+  if (typeof window === "undefined") return false;
+  const w = window as any;
+  w.__webmcp_tools = tools;
+  const mc = (navigator as any)?.modelContext;
+  if (!mc) return false;
+  try {
+    if (typeof mc.provideContext === "function") mc.provideContext({ tools });
+    if (typeof mc.registerTool === "function") {
+      for (const t of tools) {
+        try { mc.registerTool(t); } catch { /* noop */ }
+      }
+    }
+    window.dispatchEvent(new CustomEvent("webmcp:ready", { detail: { tools: tools.map((t) => t.name) } }));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+// Register synchronously at module evaluation (client only), so tools are
+// available as early as possible — before React mounts.
+if (typeof window !== "undefined") {
+  registerWebMCP();
+  // Intercept late injection of navigator.modelContext
+  try {
+    const nav = navigator as any;
+    if (!nav.modelContext) {
+      let stored: any;
+      Object.defineProperty(nav, "modelContext", {
+        configurable: true,
+        get() { return stored; },
+        set(v) { stored = v; try { registerWebMCP(); } catch { /* noop */ } },
+      });
+    }
+  } catch { /* noop */ }
+}
+
 export function WebMCPProvider() {
   useEffect(() => {
-    const register = () => {
-      const mc = (navigator as any)?.modelContext;
-      if (!mc) return false;
-      try {
-        if (typeof mc.provideContext === "function") {
-          mc.provideContext({ tools });
-        }
-        if (typeof mc.registerTool === "function") {
-          for (const t of tools) {
-            try { mc.registerTool(t); } catch (e) { console.warn(`WebMCP registerTool failed for ${t.name}`, e); }
-          }
-        }
-        (window as any).__webmcp_tools = tools;
-        window.dispatchEvent(new CustomEvent("webmcp:ready", { detail: { tools: tools.map((t) => t.name) } }));
-        return true;
-      } catch (e) {
-        console.warn("WebMCP registration failed", e);
-        return false;
-      }
-    };
-
-    if (!register()) {
-      // Poll briefly in case navigator.modelContext is injected after load
-      let tries = 0;
-      const id = window.setInterval(() => {
-        if (register() || ++tries > 20) window.clearInterval(id);
-      }, 250);
-      return () => window.clearInterval(id);
-    }
+    if (registerWebMCP()) return;
+    let tries = 0;
+    const id = window.setInterval(() => {
+      if (registerWebMCP() || ++tries > 40) window.clearInterval(id);
+    }, 200);
+    return () => window.clearInterval(id);
   }, []);
   return null;
 }
