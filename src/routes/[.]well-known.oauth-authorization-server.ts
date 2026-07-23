@@ -41,6 +41,7 @@ export const Route = createFileRoute("/.well-known/oauth-authorization-server")(
           request_parameter_supported: false,
           request_uri_parameter_supported: false,
           agent_auth: {
+            skill: "auth.md",
             register_uri: `${siteUrl}/oauth/register`,
             supported_identity_types: ["human", "agent", "service"],
             supported_credential_types: [
@@ -49,6 +50,44 @@ export const Route = createFileRoute("/.well-known/oauth-authorization-server")(
               "none",
               "pkce",
             ],
+            identity_types_supported: [
+              "identity_assertion",
+              "anonymous",
+            ],
+            identity_assertion: {
+              assertion_types_supported: [
+                "urn:ietf:params:oauth:token-type:id-jag",
+                "verified_email",
+              ],
+              credential_types_supported: [
+                "client_secret_basic",
+                "client_secret_post",
+                "none",
+                "pkce",
+              ],
+            },
+            anonymous: {
+              credential_types_supported: ["none", "pkce"],
+            },
+            registration_methods_supported: [
+              {
+                method: "dynamic_client_registration",
+                register_uri: `${siteUrl}/oauth/register`,
+                identity_types_supported: [
+                  "identity_assertion",
+                  "anonymous",
+                ],
+                credential_types_supported: [
+                  "client_secret_basic",
+                  "client_secret_post",
+                  "none",
+                  "pkce",
+                ],
+                claim_uri: `${siteUrl}/oauth/claim`,
+                revocation_uri: `${siteUrl}/oauth/revoke`,
+              },
+            ],
+            events_supported: ["revocation"],
             claim_uri: `${siteUrl}/oauth/claim`,
             revocation_uri: `${siteUrl}/oauth/revoke`,
             documentation_uri: `${siteUrl}/auth.md`,
