@@ -1,11 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { getOrigin } from "@/lib/request-origin";
 
 // /auth.md — agent registration instructions (Markdown).
 export const Route = createFileRoute("/auth.md")({
   server: {
     handlers: {
       GET: async ({ request }) => {
-        const origin = new URL(request.url).origin;
+        const origin = getOrigin(request);
         const body = `# auth.md — sprintersbloom Agent Authentication
 
 Audience: AI agents, autonomous clients, and MCP-style tools that need to
