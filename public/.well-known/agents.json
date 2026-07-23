@@ -1,0 +1,44 @@
+{
+  "$schema": "https://agentskills.org/schemas/agent-skills-index.json",
+  "name": "Mahadev Book",
+  "description": "Verified online betting ID provider in India. Skills describe the information and actions AI agents can retrieve from this site.",
+  "url": "https://mahadevbookid.com/",
+  "contact": "https://mahadevbookid.com/contact",
+  "skills": [
+    {
+      "id": "get-new-id",
+      "name": "Request a new Mahadev Book betting ID",
+      "description": "Guide a user through requesting a new verified Mahadev Book ID via WhatsApp support.",
+      "endpoint": "https://mahadevbookid.com/",
+      "method": "GET"
+    },
+    {
+      "id": "login-help",
+      "name": "Login and ID recovery assistance",
+      "description": "Answer questions about logging into an existing Mahadev Book ID and recovering credentials.",
+      "endpoint": "https://mahadevbookid.com/login",
+      "method": "GET"
+    },
+    {
+      "id": "services-overview",
+      "name": "List available services",
+      "description": "Describe deposit, withdrawal, and 24x7 support services offered.",
+      "endpoint": "https://mahadevbookid.com/services",
+      "method": "GET"
+    },
+    {
+      "id": "compare-providers",
+      "name": "Compare Mahadev Book with other providers",
+      "description": "Comparisons against Lotus 365 and Skyexchange 247.",
+      "endpoint": "https://mahadevbookid.com/mahadev-book-vs-lotus-365",
+      "method": "GET"
+    },
+    {
+      "id": "contact-support",
+      "name": "Contact customer support",
+      "description": "Reach 24x7 support via WhatsApp or the contact page.",
+      "endpoint": "https://mahadevbookid.com/contact",
+      "method": "GET"
+    }
+  ]
+}

@@ -11,6 +11,10 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { WebMCPProvider } from "@/components/WebMCPProvider";
 
 function NotFoundComponent() {
   return (
@@ -77,21 +81,58 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
+      { name: "theme-color", content: "#0b0b0f" },
+      { name: "author", content: "Mahadev Book" },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Mahadev Book" },
+      { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
+      { rel: "shortcut icon", href: "/favicon.ico" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Cinzel:wght@400;700&family=Montserrat:wght@600;700&display=swap" },
+      // RFC 8288 Link relations for machine-readable discovery
+      { rel: "sitemap", type: "application/xml", href: "/sitemap.xml" },
+      { rel: "api-catalog", href: "/.well-known/api-catalog" },
+      { rel: "service-desc", type: "application/json", href: "/.well-known/agents.json" },
+      { rel: "alternate", type: "text/plain", href: "/llms.txt", title: "LLM discovery manifest" },
+    ],
+    scripts: [
       {
-        rel: "stylesheet",
-        href: appCss,
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Mahadev Book",
+          url: "https://mahadevbookss.com/",
+          slogan: "Verified online betting IDs in India",
+          sameAs: [],
+          contactPoint: [
+            {
+              "@type": "ContactPoint",
+              contactType: "customer support",
+              availableLanguage: ["en", "hi"],
+              areaServed: "IN",
+            },
+          ],
+        }),
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Mahadev Book",
+          url: "https://mahadevbookss.com/",
+          inLanguage: "en-IN",
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -119,8 +160,15 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="min-h-screen bg-background text-foreground flex flex-col">
+        <SiteHeader />
+        <main className="flex-1">
+          <Outlet />
+        </main>
+        <SiteFooter />
+        <FloatingWhatsApp />
+        <WebMCPProvider />
+      </div>
     </QueryClientProvider>
   );
 }

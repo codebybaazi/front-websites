@@ -9,38 +9,412 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ScheduleRouteImport } from './routes/schedule'
+import { Route as PredictionsRouteImport } from './routes/predictions'
+import { Route as MatchesRouteImport } from './routes/matches'
+import { Route as MahadevBookVsSkyexchange247RouteImport } from './routes/mahadev-book-vs-skyexchange-247'
+import { Route as MahadevBookVsLotus365RouteImport } from './routes/mahadev-book-vs-lotus-365'
+import { Route as MahadevBettingAppRouteImport } from './routes/mahadev-betting-app'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AllLinksRouteImport } from './routes/all-links'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as SplatRouteImport } from './routes/$'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as MatchSlugRouteImport } from './routes/match.$slug'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as DotwellKnownOpenidConfigurationRouteImport } from './routes/[.]well-known.openid-configuration'
+import { Route as DotwellKnownOauthProtectedResourceRouteImport } from './routes/[.]well-known.oauth-protected-resource'
+import { Route as DotwellKnownOauthAuthorizationServerRouteImport } from './routes/[.]well-known.oauth-authorization-server'
+import { Route as DotwellKnownMcpServerCardDotjsonRouteImport } from './routes/[.]well-known.mcp.server-card[.]json'
+import { Route as DotwellKnownAgentSkillsIndexDotjsonRouteImport } from './routes/[.]well-known.agent-skills.index[.]json'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScheduleRoute = ScheduleRouteImport.update({
+  id: '/schedule',
+  path: '/schedule',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PredictionsRoute = PredictionsRouteImport.update({
+  id: '/predictions',
+  path: '/predictions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MatchesRoute = MatchesRouteImport.update({
+  id: '/matches',
+  path: '/matches',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MahadevBookVsSkyexchange247Route =
+  MahadevBookVsSkyexchange247RouteImport.update({
+    id: '/mahadev-book-vs-skyexchange-247',
+    path: '/mahadev-book-vs-skyexchange-247',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const MahadevBookVsLotus365Route = MahadevBookVsLotus365RouteImport.update({
+  id: '/mahadev-book-vs-lotus-365',
+  path: '/mahadev-book-vs-lotus-365',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MahadevBettingAppRoute = MahadevBettingAppRouteImport.update({
+  id: '/mahadev-betting-app',
+  path: '/mahadev-betting-app',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AllLinksRoute = AllLinksRouteImport.update({
+  id: '/all-links',
+  path: '/all-links',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SplatRoute = SplatRouteImport.update({
+  id: '/$',
+  path: '/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MatchSlugRoute = MatchSlugRouteImport.update({
+  id: '/match/$slug',
+  path: '/match/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DotwellKnownOpenidConfigurationRoute =
+  DotwellKnownOpenidConfigurationRouteImport.update({
+    id: '/.well-known/openid-configuration',
+    path: '/.well-known/openid-configuration',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DotwellKnownOauthProtectedResourceRoute =
+  DotwellKnownOauthProtectedResourceRouteImport.update({
+    id: '/.well-known/oauth-protected-resource',
+    path: '/.well-known/oauth-protected-resource',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DotwellKnownOauthAuthorizationServerRoute =
+  DotwellKnownOauthAuthorizationServerRouteImport.update({
+    id: '/.well-known/oauth-authorization-server',
+    path: '/.well-known/oauth-authorization-server',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DotwellKnownMcpServerCardDotjsonRoute =
+  DotwellKnownMcpServerCardDotjsonRouteImport.update({
+    id: '/.well-known/mcp/server-card.json',
+    path: '/.well-known/mcp/server-card.json',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DotwellKnownAgentSkillsIndexDotjsonRoute =
+  DotwellKnownAgentSkillsIndexDotjsonRouteImport.update({
+    id: '/.well-known/agent-skills/index.json',
+    path: '/.well-known/agent-skills/index.json',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
+  '/about': typeof AboutRoute
+  '/all-links': typeof AllLinksRoute
+  '/contact': typeof ContactRoute
+  '/login': typeof LoginRoute
+  '/mahadev-betting-app': typeof MahadevBettingAppRoute
+  '/mahadev-book-vs-lotus-365': typeof MahadevBookVsLotus365Route
+  '/mahadev-book-vs-skyexchange-247': typeof MahadevBookVsSkyexchange247Route
+  '/matches': typeof MatchesRoute
+  '/predictions': typeof PredictionsRoute
+  '/schedule': typeof ScheduleRoute
+  '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
+  '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
+  '/.well-known/openid-configuration': typeof DotwellKnownOpenidConfigurationRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/match/$slug': typeof MatchSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/.well-known/agent-skills/index.json': typeof DotwellKnownAgentSkillsIndexDotjsonRoute
+  '/.well-known/mcp/server-card.json': typeof DotwellKnownMcpServerCardDotjsonRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
+  '/about': typeof AboutRoute
+  '/all-links': typeof AllLinksRoute
+  '/contact': typeof ContactRoute
+  '/login': typeof LoginRoute
+  '/mahadev-betting-app': typeof MahadevBettingAppRoute
+  '/mahadev-book-vs-lotus-365': typeof MahadevBookVsLotus365Route
+  '/mahadev-book-vs-skyexchange-247': typeof MahadevBookVsSkyexchange247Route
+  '/matches': typeof MatchesRoute
+  '/predictions': typeof PredictionsRoute
+  '/schedule': typeof ScheduleRoute
+  '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
+  '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
+  '/.well-known/openid-configuration': typeof DotwellKnownOpenidConfigurationRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/match/$slug': typeof MatchSlugRoute
+  '/blog': typeof BlogIndexRoute
+  '/.well-known/agent-skills/index.json': typeof DotwellKnownAgentSkillsIndexDotjsonRoute
+  '/.well-known/mcp/server-card.json': typeof DotwellKnownMcpServerCardDotjsonRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
+  '/about': typeof AboutRoute
+  '/all-links': typeof AllLinksRoute
+  '/contact': typeof ContactRoute
+  '/login': typeof LoginRoute
+  '/mahadev-betting-app': typeof MahadevBettingAppRoute
+  '/mahadev-book-vs-lotus-365': typeof MahadevBookVsLotus365Route
+  '/mahadev-book-vs-skyexchange-247': typeof MahadevBookVsSkyexchange247Route
+  '/matches': typeof MatchesRoute
+  '/predictions': typeof PredictionsRoute
+  '/schedule': typeof ScheduleRoute
+  '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
+  '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
+  '/.well-known/openid-configuration': typeof DotwellKnownOpenidConfigurationRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/match/$slug': typeof MatchSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/.well-known/agent-skills/index.json': typeof DotwellKnownAgentSkillsIndexDotjsonRoute
+  '/.well-known/mcp/server-card.json': typeof DotwellKnownMcpServerCardDotjsonRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/$'
+    | '/about'
+    | '/all-links'
+    | '/contact'
+    | '/login'
+    | '/mahadev-betting-app'
+    | '/mahadev-book-vs-lotus-365'
+    | '/mahadev-book-vs-skyexchange-247'
+    | '/matches'
+    | '/predictions'
+    | '/schedule'
+    | '/services'
+    | '/sitemap.xml'
+    | '/.well-known/oauth-authorization-server'
+    | '/.well-known/oauth-protected-resource'
+    | '/.well-known/openid-configuration'
+    | '/blog/$slug'
+    | '/match/$slug'
+    | '/blog/'
+    | '/.well-known/agent-skills/index.json'
+    | '/.well-known/mcp/server-card.json'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/$'
+    | '/about'
+    | '/all-links'
+    | '/contact'
+    | '/login'
+    | '/mahadev-betting-app'
+    | '/mahadev-book-vs-lotus-365'
+    | '/mahadev-book-vs-skyexchange-247'
+    | '/matches'
+    | '/predictions'
+    | '/schedule'
+    | '/services'
+    | '/sitemap.xml'
+    | '/.well-known/oauth-authorization-server'
+    | '/.well-known/oauth-protected-resource'
+    | '/.well-known/openid-configuration'
+    | '/blog/$slug'
+    | '/match/$slug'
+    | '/blog'
+    | '/.well-known/agent-skills/index.json'
+    | '/.well-known/mcp/server-card.json'
+  id:
+    | '__root__'
+    | '/'
+    | '/$'
+    | '/about'
+    | '/all-links'
+    | '/contact'
+    | '/login'
+    | '/mahadev-betting-app'
+    | '/mahadev-book-vs-lotus-365'
+    | '/mahadev-book-vs-skyexchange-247'
+    | '/matches'
+    | '/predictions'
+    | '/schedule'
+    | '/services'
+    | '/sitemap.xml'
+    | '/.well-known/oauth-authorization-server'
+    | '/.well-known/oauth-protected-resource'
+    | '/.well-known/openid-configuration'
+    | '/blog/$slug'
+    | '/match/$slug'
+    | '/blog/'
+    | '/.well-known/agent-skills/index.json'
+    | '/.well-known/mcp/server-card.json'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SplatRoute: typeof SplatRoute
+  AboutRoute: typeof AboutRoute
+  AllLinksRoute: typeof AllLinksRoute
+  ContactRoute: typeof ContactRoute
+  LoginRoute: typeof LoginRoute
+  MahadevBettingAppRoute: typeof MahadevBettingAppRoute
+  MahadevBookVsLotus365Route: typeof MahadevBookVsLotus365Route
+  MahadevBookVsSkyexchange247Route: typeof MahadevBookVsSkyexchange247Route
+  MatchesRoute: typeof MatchesRoute
+  PredictionsRoute: typeof PredictionsRoute
+  ScheduleRoute: typeof ScheduleRoute
+  ServicesRoute: typeof ServicesRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  DotwellKnownOauthAuthorizationServerRoute: typeof DotwellKnownOauthAuthorizationServerRoute
+  DotwellKnownOauthProtectedResourceRoute: typeof DotwellKnownOauthProtectedResourceRoute
+  DotwellKnownOpenidConfigurationRoute: typeof DotwellKnownOpenidConfigurationRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  MatchSlugRoute: typeof MatchSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  DotwellKnownAgentSkillsIndexDotjsonRoute: typeof DotwellKnownAgentSkillsIndexDotjsonRoute
+  DotwellKnownMcpServerCardDotjsonRoute: typeof DotwellKnownMcpServerCardDotjsonRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/schedule': {
+      id: '/schedule'
+      path: '/schedule'
+      fullPath: '/schedule'
+      preLoaderRoute: typeof ScheduleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/predictions': {
+      id: '/predictions'
+      path: '/predictions'
+      fullPath: '/predictions'
+      preLoaderRoute: typeof PredictionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/matches': {
+      id: '/matches'
+      path: '/matches'
+      fullPath: '/matches'
+      preLoaderRoute: typeof MatchesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mahadev-book-vs-skyexchange-247': {
+      id: '/mahadev-book-vs-skyexchange-247'
+      path: '/mahadev-book-vs-skyexchange-247'
+      fullPath: '/mahadev-book-vs-skyexchange-247'
+      preLoaderRoute: typeof MahadevBookVsSkyexchange247RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mahadev-book-vs-lotus-365': {
+      id: '/mahadev-book-vs-lotus-365'
+      path: '/mahadev-book-vs-lotus-365'
+      fullPath: '/mahadev-book-vs-lotus-365'
+      preLoaderRoute: typeof MahadevBookVsLotus365RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mahadev-betting-app': {
+      id: '/mahadev-betting-app'
+      path: '/mahadev-betting-app'
+      fullPath: '/mahadev-betting-app'
+      preLoaderRoute: typeof MahadevBettingAppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/all-links': {
+      id: '/all-links'
+      path: '/all-links'
+      fullPath: '/all-links'
+      preLoaderRoute: typeof AllLinksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$': {
+      id: '/$'
+      path: '/$'
+      fullPath: '/$'
+      preLoaderRoute: typeof SplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,22 +422,92 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/match/$slug': {
+      id: '/match/$slug'
+      path: '/match/$slug'
+      fullPath: '/match/$slug'
+      preLoaderRoute: typeof MatchSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/openid-configuration': {
+      id: '/.well-known/openid-configuration'
+      path: '/.well-known/openid-configuration'
+      fullPath: '/.well-known/openid-configuration'
+      preLoaderRoute: typeof DotwellKnownOpenidConfigurationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/oauth-protected-resource': {
+      id: '/.well-known/oauth-protected-resource'
+      path: '/.well-known/oauth-protected-resource'
+      fullPath: '/.well-known/oauth-protected-resource'
+      preLoaderRoute: typeof DotwellKnownOauthProtectedResourceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/oauth-authorization-server': {
+      id: '/.well-known/oauth-authorization-server'
+      path: '/.well-known/oauth-authorization-server'
+      fullPath: '/.well-known/oauth-authorization-server'
+      preLoaderRoute: typeof DotwellKnownOauthAuthorizationServerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/mcp/server-card.json': {
+      id: '/.well-known/mcp/server-card.json'
+      path: '/.well-known/mcp/server-card.json'
+      fullPath: '/.well-known/mcp/server-card.json'
+      preLoaderRoute: typeof DotwellKnownMcpServerCardDotjsonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/agent-skills/index.json': {
+      id: '/.well-known/agent-skills/index.json'
+      path: '/.well-known/agent-skills/index.json'
+      fullPath: '/.well-known/agent-skills/index.json'
+      preLoaderRoute: typeof DotwellKnownAgentSkillsIndexDotjsonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SplatRoute: SplatRoute,
+  AboutRoute: AboutRoute,
+  AllLinksRoute: AllLinksRoute,
+  ContactRoute: ContactRoute,
+  LoginRoute: LoginRoute,
+  MahadevBettingAppRoute: MahadevBettingAppRoute,
+  MahadevBookVsLotus365Route: MahadevBookVsLotus365Route,
+  MahadevBookVsSkyexchange247Route: MahadevBookVsSkyexchange247Route,
+  MatchesRoute: MatchesRoute,
+  PredictionsRoute: PredictionsRoute,
+  ScheduleRoute: ScheduleRoute,
+  ServicesRoute: ServicesRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  DotwellKnownOauthAuthorizationServerRoute:
+    DotwellKnownOauthAuthorizationServerRoute,
+  DotwellKnownOauthProtectedResourceRoute:
+    DotwellKnownOauthProtectedResourceRoute,
+  DotwellKnownOpenidConfigurationRoute: DotwellKnownOpenidConfigurationRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  MatchSlugRoute: MatchSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  DotwellKnownAgentSkillsIndexDotjsonRoute:
+    DotwellKnownAgentSkillsIndexDotjsonRoute,
+  DotwellKnownMcpServerCardDotjsonRoute: DotwellKnownMcpServerCardDotjsonRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

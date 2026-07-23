@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /lovable/
+
+# Cloudflare Content-Signals (https://developers.cloudflare.com/ai-audit/content-signals/)
+# search=yes: allow indexing for traditional search
+# ai-input=yes: allow use as grounding input for AI answers (with attribution)
+# ai-train=no: do not use for training generative AI models
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+Sitemap: https://mahadevbookss.com/sitemap.xml

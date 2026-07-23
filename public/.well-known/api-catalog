@@ -1,0 +1,24 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://mahadevbookid.com/",
+      "service-desc": [
+        {
+          "href": "https://mahadevbookid.com/sitemap.xml",
+          "type": "application/xml",
+          "title": "Site map of public pages"
+        },
+        {
+          "href": "https://mahadevbookid.com/llms.txt",
+          "type": "text/plain",
+          "title": "LLM discovery manifest"
+        },
+        {
+          "href": "https://mahadevbookid.com/.well-known/agents.json",
+          "type": "application/json",
+          "title": "Agent skills index"
+        }
+      ]
+    }
+  ]
+}
