@@ -57,6 +57,21 @@ Content-Type: application/json
 | \`human\` | End user acting through an interactive client. |
 | \`agent\` | Autonomous AI agent acting on behalf of a user or itself. |
 | \`service_account\` | Backend/server-to-server integration with no user present. |
+| \`identity_assertion\` | Agent presents a signed identity assertion (e.g. ID-JAG \`urn:ietf:params:oauth:token-type:id-jag\`, or a \`verified_email\` assertion) from a trusted issuer. |
+| \`anonymous\` | Unauthenticated agent using a DPoP-bound ephemeral credential or public API key; limited to read-only public tools. |
+
+### Identity Assertion (ID-JAG)
+
+- **Assertion types supported:** \`urn:ietf:params:oauth:token-type:id-jag\`, \`verified_email\`
+- **Grant type:** \`urn:ietf:params:oauth:grant-type:token-exchange\` (RFC 8693)
+- **Credential types:** \`client_secret\`, \`private_key_jwt\`, \`dpop\`
+- **Token endpoint:** \`${ISSUER}/oauth/token\` — send \`subject_token\` = assertion, \`subject_token_type\` = one of the supported assertion types.
+
+### Anonymous Access
+
+- **Credential types:** \`dpop\`, \`api_key\`
+- **Scope:** limited to public, read-only tools declared in the MCP server card.
+- **Register at:** \`${ISSUER}/oauth/register\` with \`identity_type: "anonymous"\`.
 
 ## Supported Credential Types
 
@@ -66,11 +81,16 @@ Content-Type: application/json
 - \`mtls\` — RFC 8705 mutual TLS client authentication.
 - \`api_key\` — long-lived key for service accounts, sent as \`Authorization: Bearer <key>\`.
 
+## Events
+
+Registration, revocation, and claim events are advertised in the \`agent_auth.events_supported\` field of the Authorization Server metadata. Subscribe via the MCP server card's \`events\` channel.
+
 ## Grants & Flows
 
 - \`authorization_code\` (PKCE S256 required for public clients)
 - \`refresh_token\`
 - \`client_credentials\` (service accounts and agents)
+- \`urn:ietf:params:oauth:grant-type:token-exchange\` (identity_assertion / ID-JAG)
 
 ## Scopes
 
