@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "sprinters-discovery",
+      "type": "skill-md",
+      "description": "Discover Sprinters Online Gaming pages, support channels, and responsible-gaming resources.",
+      "url": "/.well-known/agent-skills/sprinters-discovery/SKILL.md",
+      "digest": "sha256:65adbd567f9900e2d1104f3141fb9623f6407f1e2b8a1d6398446811b004b655"
+    }
+  ]
+}
