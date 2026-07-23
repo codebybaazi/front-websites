@@ -19,6 +19,23 @@ const config = {
     skill: "agent-registration",
     register_uri: "https://mahadevbookss.com/oauth/register",
     auth_metadata_uri: "https://mahadevbookss.com/auth.md",
+    registration_methods: [
+      {
+        type: "dynamic_client_registration",
+        protocol: "RFC7591",
+        register_uri: "https://mahadevbookss.com/oauth/register",
+        token_endpoint: "https://mahadevbookss.com/oauth/token",
+        grant_types_supported: ["authorization_code", "client_credentials", "refresh_token"],
+        token_endpoint_auth_methods_supported: [
+          "client_secret_basic",
+          "client_secret_post",
+          "private_key_jwt",
+          "none",
+        ],
+        credential_types_supported: ["client_secret", "private_key_jwt", "dpop"],
+        scopes_supported: ["openid", "profile", "email", "offline_access"],
+      },
+    ],
     identity_types_supported: [
       "human",
       "agent",
