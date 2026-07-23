@@ -1,0 +1,39 @@
+{
+  "$schema": "https://agents.md/schemas/agent-skills.json",
+  "name": "Sprinters Online Gaming",
+  "description": "Guided-access platform for Indian players to reach premium sports betting and live casino services through a single verified ID.",
+  "homepage": "https://sprintersbokk.com/",
+  "index": "https://sprintersbokk.com/llms.txt",
+  "skills": [
+    {
+      "id": "get-betting-id",
+      "name": "Get a verified betting ID",
+      "description": "Message Sprinters on WhatsApp, verify with OTP, deposit via UPI and receive a verified ID within minutes.",
+      "url": "https://sprintersbokk.com/"
+    },
+    {
+      "id": "cricket-markets",
+      "name": "Browse cricket betting markets",
+      "description": "IPL, T20 World Cup, ODI, bilaterals, session runs and fancy markets.",
+      "url": "https://sprintersbokk.com/cricket-betting"
+    },
+    {
+      "id": "live-casino",
+      "name": "Play live casino games",
+      "description": "Live Roulette, Blackjack, Baccarat, Andar Bahar, Teen Patti, Aviator and 1000+ slots.",
+      "url": "https://sprintersbokk.com/casino"
+    },
+    {
+      "id": "daily-predictions",
+      "name": "Read daily cricket predictions",
+      "description": "Match previews, betting tips and fancy odds updated daily.",
+      "url": "https://sprintersbokk.com/predictions"
+    },
+    {
+      "id": "contact-support",
+      "name": "Contact 24/7 support",
+      "description": "Real human support on WhatsApp and Telegram in Hindi and English.",
+      "url": "https://sprintersbokk.com/contact"
+    }
+  ]
+}

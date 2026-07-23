@@ -1,0 +1,25 @@
+{
+  "@context": "https://www.rfc-editor.org/rfc/rfc9727",
+  "linkset": [
+    {
+      "anchor": "https://sprintersbokk.com/",
+      "service-desc": [
+        {
+          "href": "https://sprintersbokk.com/llms.txt",
+          "type": "text/markdown",
+          "title": "Sprinters LLM-friendly site index"
+        },
+        {
+          "href": "https://sprintersbokk.com/sitemap.xml",
+          "type": "application/xml",
+          "title": "Sitemap"
+        },
+        {
+          "href": "https://sprintersbokk.com/.well-known/agent-skills.json",
+          "type": "application/json",
+          "title": "Agent Skills index"
+        }
+      ]
+    }
+  ]
+}

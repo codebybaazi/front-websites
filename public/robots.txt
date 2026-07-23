@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Cloudflare Content-Signals (https://www.cloudflare.com/content-signals-policy/)
+# Signals to crawlers how this site's content may be used.
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+Sitemap: https://sprintersbokk.com/sitemap.xml

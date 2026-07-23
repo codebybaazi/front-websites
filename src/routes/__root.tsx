@@ -11,6 +11,9 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { abs } from "@/lib/site-url";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { WebMcpProvider } from "@/components/WebMcpProvider";
 
 function NotFoundComponent() {
   return (
@@ -77,23 +80,64 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "sprintersbloom" },
-      { name: "description", content: "sprintersbloom" },
-      { name: "author", content: "sprintersbloom" },
-      { property: "og:title", content: "sprintersbloom" },
-      { property: "og:description", content: "sprintersbloom" },
+      { title: "Sprinters Online Gaming — India's Trusted Online Betting ID" },
+      {
+        name: "description",
+        content:
+          "India's trusted online betting ID for cricket, football, tennis and live casino. Instant UPI deposits and 24-hour withdrawals with 24/7 support.",
+      },
+
+      { name: "author", content: "Sprinters Online Gaming" },
+      { property: "og:site_name", content: "Sprinters Online Gaming" },
+      { property: "og:title", content: "Sprinters Online Gaming — India's Trusted Online Betting ID" },
+      {
+        property: "og:description",
+        content:
+          "One verified Sprinters online ID unlocks Laser247, Tiger Exchange, Cricbet99, 11xplay and more — sharp odds, instant deposits, 24-hour payouts.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              name: "Sprinters Online Gaming",
+              url: abs("/"),
+              logo: abs("/favicon.png"),
+              description:
+                "India's trusted online betting ID provider — cricket, football, tennis, kabaddi and live casino.",
+            },
+            {
+              "@type": "WebSite",
+              name: "Sprinters Online Gaming",
+              url: abs("/"),
+              potentialAction: {
+                "@type": "SearchAction",
+                target: abs("/blog?q={search_term_string}"),
+                "query-input": "required name=search_term_string",
+              },
+            },
+
+          ],
+        }),
+      },
     ],
   }),
+
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
@@ -121,6 +165,8 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <FloatingWhatsApp />
+      <WebMcpProvider />
     </QueryClientProvider>
   );
 }

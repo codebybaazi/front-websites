@@ -1,0 +1,642 @@
+export type CricketSeriesMatch = {
+  label: string;
+  home: string;
+  away: string;
+  date: string;
+  venue: string;
+};
+
+export type CricketSeries = {
+  slug: string;
+  name: string;
+  short: string;
+  format: string;
+  window: string;
+  startIso: string;
+  teams: string[];
+  summary: string;
+  matches?: CricketSeriesMatch[];
+};
+
+export const cricketSeries2026: CricketSeries[] = [
+  {
+    slug: "india-tour-of-england-2026",
+    name: "India tour of England 2026",
+    short: "IND tour of ENG 2026",
+    format: "5 T20Is, 3 ODIs",
+    window: "Jun – Jul 2026",
+    startIso: "2026-07-01",
+    teams: ["India", "England"],
+    summary:
+      "India's white-ball tour of England — five T20Is followed by three ODIs across Chester-le-Street, Manchester, Nottingham, Bristol, Southampton, Birmingham, Cardiff and Lord's.",
+    matches: [
+      { label: "1st T20I", home: "India", away: "England", date: "Wed, 01 Jul 2026", venue: "Riverside Ground, Chester-le-Street" },
+      { label: "2nd T20I", home: "India", away: "England", date: "Sat, 04 Jul 2026", venue: "Emirates Old Trafford, Manchester" },
+      { label: "3rd T20I", home: "England", away: "India", date: "Tue, 07 Jul 2026", venue: "Trent Bridge, Nottingham" },
+      { label: "4th T20I", home: "India", away: "England", date: "Thu, 09 Jul 2026", venue: "County Ground, Bristol" },
+      { label: "5th T20I", home: "England", away: "India", date: "Sat, 11 Jul 2026", venue: "The Rose Bowl, Southampton" },
+      { label: "1st ODI", home: "England", away: "India", date: "Tue, 14 Jul 2026", venue: "Edgbaston, Birmingham" },
+      { label: "2nd ODI", home: "England", away: "India", date: "Thu, 16 Jul 2026", venue: "Sophia Gardens, Cardiff" },
+      { label: "3rd ODI", home: "England", away: "India", date: "Sun, 19 Jul 2026", venue: "Lord's, London" },
+    ],
+  },
+  {
+    slug: "bangladesh-tour-of-zimbabwe-2026",
+    name: "Bangladesh tour of Zimbabwe 2026",
+    short: "BAN tour of ZIM 2026",
+    format: "1 Test, 3 ODIs, 3 T20Is",
+    window: "Jun – Jul 2026",
+    startIso: "2026-06-28",
+    teams: ["Zimbabwe", "Bangladesh"],
+    summary:
+      "Bangladesh and Zimbabwe meet in a one-off Test at Harare, followed by three ODIs in Harare and three T20Is at Queens Sports Club, Bulawayo.",
+    matches: [
+      { label: "One-off Test", home: "Bangladesh", away: "Zimbabwe", date: "Sun, 28 Jun 2026 - Thu, 02 Jul 2026", venue: "Harare Sports Club, Harare" },
+      { label: "1st ODI", home: "Zimbabwe", away: "Bangladesh", date: "Mon, 06 Jul 2026", venue: "Harare Sports Club, Harare" },
+      { label: "2nd ODI", home: "Zimbabwe", away: "Bangladesh", date: "Thu, 09 Jul 2026", venue: "Harare Sports Club, Harare" },
+      { label: "3rd ODI", home: "Zimbabwe", away: "Bangladesh", date: "Sat, 11 Jul 2026", venue: "Harare Sports Club, Harare" },
+      { label: "1st T20I", home: "Zimbabwe", away: "Bangladesh", date: "Wed, 15 Jul 2026", venue: "Queens Sports Club, Bulawayo" },
+      { label: "2nd T20I", home: "Zimbabwe", away: "Bangladesh", date: "Fri, 17 Jul 2026", venue: "Queens Sports Club, Bulawayo" },
+      { label: "3rd T20I", home: "Zimbabwe", away: "Bangladesh", date: "Sun, 19 Jul 2026", venue: "Queens Sports Club, Bulawayo" },
+    ],
+  },
+
+  {
+    slug: "new-zealand-tour-of-west-indies-2026",
+    name: "New Zealand tour of West Indies 2026",
+    short: "NZ tour of WI 2026",
+    format: "5 ODIs",
+    window: "Jul 2026",
+    startIso: "2026-07-12",
+    teams: ["West Indies", "New Zealand"],
+    summary:
+      "New Zealand and West Indies play a five-match ODI series in Guyana and Barbados.",
+    matches: [
+      { label: "1st ODI", home: "New Zealand", away: "West Indies", date: "Sun, 12 Jul 2026", venue: "Providence Stadium, Guyana" },
+      { label: "2nd ODI", home: "West Indies", away: "New Zealand", date: "Tue, 14 Jul 2026", venue: "Providence Stadium, Guyana" },
+      { label: "3rd ODI", home: "West Indies", away: "New Zealand", date: "Fri, 17 Jul 2026", venue: "Providence Stadium, Guyana" },
+      { label: "4th ODI", home: "West Indies", away: "New Zealand", date: "Mon, 20 Jul 2026", venue: "Kensington Oval, Bridgetown, Barbados" },
+      { label: "5th ODI", home: "West Indies", away: "New Zealand", date: "Wed, 22 Jul 2026", venue: "Kensington Oval, Bridgetown, Barbados" },
+    ],
+  },
+  {
+    slug: "icc-mens-t20-world-cup-europe-sub-regional-qualifier-b-2026",
+    name: "ICC Men's T20 World Cup Europe Sub-Regional Qualifier B 2026",
+    short: "T20 WC Europe Qualifier B",
+    format: "T20I Qualifier",
+    window: "Jul 2026",
+    startIso: "2026-07-08",
+    teams: ["Denmark", "Norway", "Belgium", "Romania", "Turkey", "Hungary", "Gibraltar", "Serbia", "Estonia"],
+    summary:
+      "European associate nations compete for a route into the ICC Men's T20 World Cup — matches at Svanholm Park, Brondby and Koge Cricket Club, Koge.",
+    matches: [
+      { label: "1st Match", home: "Denmark", away: "Estonia", date: "Wed, 08 Jul 2026", venue: "Svanholm Park, Brondby" },
+      { label: "2nd Match", home: "Gibraltar", away: "Belgium", date: "Wed, 08 Jul 2026", venue: "Koge Cricket Club, Koge" },
+      { label: "3rd Match", home: "Hungary", away: "Norway", date: "Wed, 08 Jul 2026", venue: "Svanholm Park, Brondby" },
+      { label: "4th Match", home: "Serbia", away: "Romania", date: "Wed, 08 Jul 2026", venue: "Koge Cricket Club, Koge" },
+      { label: "5th Match", home: "Denmark", away: "Turkey", date: "Thu, 09 Jul 2026", venue: "Koge Cricket Club, Koge" },
+      { label: "6th Match", home: "Estonia", away: "Norway", date: "Thu, 09 Jul 2026", venue: "Koge Cricket Club, Koge" },
+      { label: "7th Match", home: "Gibraltar", away: "Romania", date: "Fri, 10 Jul 2026", venue: "Svanholm Park, Brondby" },
+      { label: "8th Match", home: "Hungary", away: "Estonia", date: "Fri, 10 Jul 2026", venue: "Koge Cricket Club, Koge" },
+      { label: "9th Match", home: "Belgium", away: "Serbia", date: "Fri, 10 Jul 2026", venue: "Svanholm Park, Brondby" },
+      { label: "10th Match", home: "Turkey", away: "Norway", date: "Fri, 10 Jul 2026", venue: "Koge Cricket Club, Koge" },
+      { label: "12th Match", home: "Belgium", away: "Romania", date: "Sun, 12 Jul 2026", venue: "Koge Cricket Club, Koge" },
+      { label: "11th Match", home: "Denmark", away: "Norway", date: "Sun, 12 Jul 2026", venue: "Svanholm Park, Brondby" },
+      { label: "13th Match", home: "Hungary", away: "Turkey", date: "Sun, 12 Jul 2026", venue: "Svanholm Park, Brondby" },
+      { label: "14th Match", home: "Serbia", away: "Gibraltar", date: "Sun, 12 Jul 2026", venue: "Koge Cricket Club, Koge" },
+      { label: "15th Match", home: "Denmark", away: "Hungary", date: "Mon, 13 Jul 2026", venue: "Svanholm Park, Brondby" },
+      { label: "16th Match", home: "Estonia", away: "Turkey", date: "Mon, 13 Jul 2026", venue: "Svanholm Park, Brondby" },
+      { label: "1st Semi-Final", home: "TBC", away: "TBC", date: "Tue, 14 Jul 2026", venue: "Svanholm Park, Brondby" },
+      { label: "2nd Semi-Final", home: "TBC", away: "TBC", date: "Tue, 14 Jul 2026", venue: "Koge Cricket Club, Koge" },
+      { label: "3/4 Place Play off", home: "TBC", away: "TBC", date: "Tue, 14 Jul 2026", venue: "Svanholm Park, Brondby" },
+      { label: "Final", home: "TBC", away: "TBC", date: "Tue, 14 Jul 2026", venue: "Koge Cricket Club, Koge" },
+    ],
+  },
+  {
+    slug: "india-women-tour-of-england-2026",
+    name: "India Women tour of England 2026",
+    short: "INDW tour of ENGW 2026",
+    format: "One-off Test, 3 ODIs, 5 T20Is",
+    window: "May – Jul 2026",
+    startIso: "2026-05-24",
+    teams: ["India Women", "England Women"],
+    summary:
+      "Multi-format women's tour featuring T20Is, ODIs and a one-off Test at Lord's across English county grounds.",
+    matches: [
+      { label: "One-off Test", home: "England W", away: "India W", date: "Wed, 08 Jul 2026", venue: "Lord's, London" },
+      { label: "1st T20I", home: "England W", away: "India W", date: "Sun, 24 May 2026", venue: "County Ground, Bristol" },
+      { label: "1st ODI", home: "England W", away: "India W", date: "Sat, 27 Jun 2026", venue: "County Ground, Chelmsford" },
+    ],
+  },
+  {
+    slug: "west-indies-women-tour-of-ireland-2026",
+    name: "West Indies Women tour of Ireland 2026",
+    short: "WIW tour of IREW 2026",
+    format: "3 ODIs, 3 T20Is",
+    window: "Jul 2026",
+    startIso: "2026-07-09",
+    teams: ["Ireland Women", "West Indies Women"],
+    summary:
+      "West Indies Women visit Ireland for ODIs and T20Is at Malahide and Clontarf.",
+    matches: [
+      { label: "1st ODI", home: "Ireland W", away: "West Indies W", date: "Thu, 09 Jul 2026", venue: "Malahide, Dublin" },
+      { label: "2nd ODI", home: "Ireland W", away: "West Indies W", date: "Sat, 11 Jul 2026", venue: "Malahide, Dublin" },
+      { label: "3rd ODI", home: "Ireland W", away: "West Indies W", date: "Tue, 14 Jul 2026", venue: "Clontarf, Dublin" },
+    ],
+  },
+  {
+    slug: "switzerland-women-tour-of-germany-2026",
+    name: "Switzerland Women tour of Germany 2026",
+    short: "SUIW tour of GERW 2026",
+    format: "5 T20Is",
+    window: "Jul 2026",
+    startIso: "2026-07-09",
+    teams: ["Germany Women", "Switzerland Women"],
+    summary:
+      "A five-match T20I series between Germany Women and Switzerland Women at Bayer Uerdingen Cricket Ground, Krefeld.",
+    matches: [
+      { label: "1st T20I", home: "Germany W", away: "Switzerland W", date: "Thu, 09 Jul 2026", venue: "Bayer Uerdingen CG, Krefeld" },
+      { label: "5th T20I", home: "Germany W", away: "Switzerland W", date: "Sat, 11 Jul 2026", venue: "Bayer Uerdingen CG, Krefeld" },
+    ],
+  },
+  {
+    slug: "india-u19-tour-of-sri-lanka-2026",
+    name: "India U19 tour of Sri Lanka 2026",
+    short: "IND U19 tour of SL 2026",
+    format: "2 Youth Tests, 3 Youth ODIs",
+    window: "Jul 2026",
+    startIso: "2026-07-03",
+    teams: ["Sri Lanka U19", "India U19"],
+    summary:
+      "India's Under-19 squad tours Sri Lanka for a multi-format youth series across Colombo and Kandy.",
+    matches: [
+      { label: "1st Unofficial Test", home: "Sri Lanka U19", away: "India U19", date: "Fri, 03 Jul 2026", venue: "Colombo, Sri Lanka" },
+      { label: "2nd Unofficial Test", home: "Sri Lanka U19", away: "India U19", date: "Fri, 10 Jul 2026", venue: "Kandy, Sri Lanka" },
+    ],
+  },
+  {
+    slug: "pakistan-tour-of-west-indies-2026",
+    name: "Pakistan tour of West Indies 2026",
+    short: "PAK tour of WI 2026",
+    format: "2 Tests",
+    window: "Jul – Aug 2026",
+    startIso: "2026-07-18",
+    teams: ["West Indies", "Pakistan"],
+    summary:
+      "Pakistan tour the Caribbean for a warm-up fixture followed by two Tests in Trinidad.",
+    matches: [
+      { label: "4 -Day Warm-up match", home: "West Indies Select XI", away: "Pakistan", date: "Sat, 18 Jul 2026 - Wed, 22 Jul 2026", venue: "Brian Lara Stadium, Tarouba, Trinidad" },
+      { label: "1st Test", home: "West Indies", away: "Pakistan", date: "Sat, 25 Jul 2026 - Thu, 30 Jul 2026", venue: "Brian Lara Stadium, Tarouba, Trinidad" },
+      { label: "2nd Test", home: "West Indies", away: "Pakistan", date: "Sun, 02 Aug 2026 - Fri, 07 Aug 2026", venue: "Queen's Park Oval, Port of Spain, Trinidad" },
+    ],
+  },
+  {
+    slug: "the-hundred-mens-2026",
+    name: "The Hundred Men's Competition 2026",
+    short: "The Hundred Men's 2026",
+    format: "100-ball T20 League",
+    window: "Jul – Aug 2026",
+    startIso: "2026-07-20",
+    teams: [
+      "London Spirit",
+      "Oval Invincibles",
+      "Trent Rockets",
+      "Northern Superchargers",
+      "Manchester Originals",
+      "Birmingham Phoenix",
+      "Welsh Fire",
+      "Southern Brave",
+    ],
+    summary:
+      "England's flagship 100-ball city-based franchise league returns for its 2026 season with 8 teams across marquee venues.",
+    matches: [
+      { label: "Opening Match", home: "Oval Invincibles", away: "London Spirit", date: "Mon, 20 Jul 2026", venue: "The Oval, London" },
+      { label: "Final", home: "TBC", away: "TBC", date: "Sat, 15 Aug 2026", venue: "Lord's, London" },
+    ],
+  },
+  {
+    slug: "india-tour-of-zimbabwe-2026",
+    name: "India tour of Zimbabwe 2026",
+    short: "IND tour of ZIM 2026",
+    format: "3 T20Is",
+    window: "Jul 2026",
+    startIso: "2026-07-23",
+    teams: ["Zimbabwe", "India"],
+    summary:
+      "A short three-match T20I series between Zimbabwe and India at Harare Sports Club.",
+    matches: [
+      { label: "1st T20I", home: "Zimbabwe", away: "India", date: "Thu, 23 Jul 2026", venue: "Harare Sports Club, Harare" },
+      { label: "2nd T20I", home: "Zimbabwe", away: "India", date: "Sat, 25 Jul 2026", venue: "Harare Sports Club, Harare" },
+      { label: "3rd T20I", home: "Zimbabwe", away: "India", date: "Sun, 26 Jul 2026", venue: "Harare Sports Club, Harare" },
+    ],
+  },
+  {
+    slug: "afghanistan-tour-of-ireland-2026",
+    name: "Afghanistan tour of Ireland 2026",
+    short: "AFG tour of IRE 2026",
+    format: "5 ODIs",
+    window: "Aug 2026",
+    startIso: "2026-08-05",
+    teams: ["Ireland", "Afghanistan"],
+    summary:
+      "Afghanistan travel to Ireland for a five-match ODI series at Bready and Belfast.",
+    matches: [
+      { label: "1st ODI", home: "Ireland", away: "Afghanistan", date: "Wed, 05 Aug 2026", venue: "Bready Cricket Club, Bready, Northern Ireland" },
+      { label: "2nd ODI", home: "Ireland", away: "Afghanistan", date: "Fri, 07 Aug 2026", venue: "Bready Cricket Club, Bready, Northern Ireland" },
+      { label: "3rd ODI", home: "Ireland", away: "Afghanistan", date: "Mon, 10 Aug 2026", venue: "Civil Service Cricket Club, Belfast" },
+      { label: "4th ODI", home: "Ireland", away: "Afghanistan", date: "Wed, 12 Aug 2026", venue: "Civil Service Cricket Club, Belfast" },
+      { label: "5th ODI", home: "Ireland", away: "Afghanistan", date: "Fri, 14 Aug 2026", venue: "Civil Service Cricket Club, Belfast" },
+    ],
+  },
+  {
+    slug: "bangladesh-tour-of-australia-2026",
+    name: "Bangladesh tour of Australia 2026",
+    short: "BAN tour of AUS 2026",
+    format: "2 Tests",
+    window: "Aug 2026",
+    startIso: "2026-08-13",
+    teams: ["Australia", "Bangladesh"],
+    summary:
+      "Bangladesh visit Australia for two Tests in Darwin and Mackay.",
+    matches: [
+      { label: "1st Test", home: "Australia", away: "Bangladesh", date: "Thu, 13 Aug 2026 - Mon, 17 Aug 2026", venue: "Marrara Cricket Ground, Darwin" },
+      { label: "2nd Test", home: "Australia", away: "Bangladesh", date: "Sat, 22 Aug 2026 - Wed, 26 Aug 2026", venue: "Great Barrier Reef Arena, Mackay" },
+    ],
+  },
+  {
+    slug: "india-tour-of-sri-lanka-2026",
+    name: "India tour of Sri Lanka 2026",
+    short: "IND tour of SL 2026",
+    format: "2 Tests",
+    window: "Aug 2026",
+    startIso: "2026-08-15",
+    teams: ["Sri Lanka", "India"],
+    summary:
+      "India tour Sri Lanka for two Tests in Galle and Colombo.",
+    matches: [
+      { label: "1st Test", home: "Sri Lanka", away: "India", date: "Sat, 15 Aug 2026 - Wed, 19 Aug 2026", venue: "Galle International Stadium, Galle" },
+      { label: "2nd Test", home: "Sri Lanka", away: "India", date: "Sun, 23 Aug 2026 - Thu, 27 Aug 2026", venue: "Sinhalese Sports Club, Colombo" },
+    ],
+  },
+  {
+    slug: "pakistan-tour-of-england-2026",
+    name: "Pakistan tour of England 2026",
+    short: "PAK tour of ENG 2026",
+    format: "3 Tests",
+    window: "Aug – Sep 2026",
+    startIso: "2026-08-18",
+    teams: ["England", "Pakistan"],
+    summary:
+      "Pakistan tour England for a three-Test series at Headingley, Lord's and Edgbaston.",
+    matches: [
+      { label: "1st Test", home: "England", away: "Pakistan", date: "Wed, 19 Aug 2026 - Sun, 23 Aug 2026", venue: "Headingley, Leeds" },
+      { label: "2nd Test", home: "England", away: "Pakistan", date: "Thu, 27 Aug 2026 - Mon, 31 Aug 2026", venue: "Lord's, London" },
+      { label: "3rd Test", home: "England", away: "Pakistan", date: "Wed, 09 Sep 2026 - Sun, 13 Sep 2026", venue: "Edgbaston, Birmingham" },
+    ],
+  },
+  {
+    slug: "sri-lanka-tour-of-england-2026",
+    name: "Sri Lanka tour of England 2026",
+    short: "SL tour of ENG 2026",
+    format: "3 T20Is, 3 ODIs",
+    window: "Sep 2026",
+    startIso: "2026-09-15",
+    teams: ["England", "Sri Lanka"],
+    summary:
+      "Sri Lanka wrap up England's home summer with three T20Is followed by three ODIs across Southampton, Cardiff, Manchester, Chester-le-Street, Leeds and London.",
+    matches: [
+      { label: "1st T20I", home: "England", away: "Sri Lanka", date: "Tue, 15 Sep 2026", venue: "The Rose Bowl, Southampton" },
+      { label: "2nd T20I", home: "England", away: "Sri Lanka", date: "Thu, 17 Sep 2026", venue: "Sophia Gardens, Cardiff" },
+      { label: "3rd T20I", home: "England", away: "Sri Lanka", date: "Sat, 19 Sep 2026", venue: "Emirates Old Trafford, Manchester" },
+      { label: "1st ODI", home: "England", away: "Sri Lanka", date: "Tue, 22 Sep 2026", venue: "Riverside Ground, Chester-le-Street" },
+      { label: "2nd ODI", home: "England", away: "Sri Lanka", date: "Thu, 24 Sep 2026", venue: "Headingley, Leeds" },
+      { label: "3rd ODI", home: "England", away: "Sri Lanka", date: "Sun, 27 Sep 2026", venue: "Kennington Oval, London" },
+    ],
+  },
+  {
+    slug: "australia-tour-of-zimbabwe-2026",
+    name: "Australia tour of Zimbabwe 2026",
+    short: "AUS tour of ZIM 2026",
+    format: "3 ODIs",
+    window: "Sep 2026",
+    startIso: "2026-09-15",
+    teams: ["Zimbabwe", "Australia"],
+    summary:
+      "Australia head to Harare for a three-match ODI series against Zimbabwe.",
+    matches: [
+      { label: "1st ODI", home: "Zimbabwe", away: "Australia", date: "Tue, 15 Sep 2026", venue: "Harare Sports Club, Harare" },
+      { label: "2nd ODI", home: "Zimbabwe", away: "Australia", date: "Fri, 18 Sep 2026", venue: "Harare Sports Club, Harare" },
+      { label: "3rd ODI", home: "Zimbabwe", away: "Australia", date: "Sun, 20 Sep 2026", venue: "Harare Sports Club, Harare" },
+    ],
+  },
+  {
+    slug: "asian-games-2026",
+    name: "Asian Games 2026 — Cricket",
+    short: "Asian Games 2026",
+    format: "T20I Tournament",
+    window: "Sep – Oct 2026",
+    startIso: "2026-09-18",
+    teams: ["India", "Pakistan", "Sri Lanka", "Bangladesh", "Afghanistan", "Nepal", "Hong Kong", "UAE"],
+    summary:
+      "Cricket returns to the Asian Games in 2026 — a T20I tournament featuring the continent's top nations.",
+    matches: [
+      { label: "Opening Match", home: "TBC", away: "TBC", date: "Fri, 18 Sep 2026", venue: "Asian Games Venue" },
+      { label: "Final", home: "TBC", away: "TBC", date: "Sat, 03 Oct 2026", venue: "Asian Games Venue" },
+    ],
+  },
+  {
+    slug: "australia-tour-of-south-africa-2026",
+    name: "Australia tour of South Africa 2026",
+    short: "AUS tour of SA 2026",
+    format: "3 ODIs, 3 Tests",
+    window: "Sep – Oct 2026",
+    startIso: "2026-09-24",
+    teams: ["South Africa", "Australia"],
+    summary:
+      "Australia's tour of South Africa starts with three ODIs before a three-Test series in Durban, Gqeberha and Cape Town.",
+    matches: [
+      { label: "1st ODI", home: "South Africa", away: "Australia", date: "Thu, 24 Sep 2026", venue: "Kingsmead, Durban" },
+      { label: "2nd ODI", home: "South Africa", away: "Australia", date: "Sun, 27 Sep 2026", venue: "The Wanderers Stadium, Johannesburg" },
+      { label: "3rd ODI", home: "South Africa", away: "Australia", date: "Wed, 30 Sep 2026", venue: "Senwes Park, Potchefstroom" },
+      { label: "1st Test", home: "South Africa", away: "Australia", date: "Fri, 09 Oct 2026 - Tue, 13 Oct 2026", venue: "Kingsmead, Durban" },
+      { label: "2nd Test", home: "South Africa", away: "Australia", date: "Sun, 18 Oct 2026 - Thu, 22 Oct 2026", venue: "St George's Park, Gqeberha" },
+      { label: "3rd Test", home: "South Africa", away: "Australia", date: "Tue, 27 Oct 2026 - Sat, 31 Oct 2026", venue: "Newlands, Cape Town" },
+    ],
+  },
+  {
+    slug: "west-indies-tour-of-india-2026",
+    name: "West Indies tour of India 2026",
+    short: "WI tour of IND 2026",
+    format: "3 ODIs, 5 T20Is",
+    window: "Sep – Oct 2026",
+    startIso: "2026-09-27",
+    teams: ["India", "West Indies"],
+    summary:
+      "West Indies visit India for three ODIs and five T20Is across Thiruvananthapuram, Guwahati, Mullanpur, Lucknow, Ranchi, Indore, Hyderabad and Bengaluru.",
+    matches: [
+      { label: "1st ODI", home: "India", away: "West Indies", date: "Sun, 27 Sep 2026", venue: "Greenfield International Stadium, Thiruvananthapuram" },
+      { label: "2nd ODI", home: "India", away: "West Indies", date: "Wed, 30 Sep 2026", venue: "Barsapara Cricket Stadium, Guwahati" },
+      { label: "3rd ODI", home: "India", away: "West Indies", date: "Sat, 03 Oct 2026", venue: "Maharaja Yadavindra Singh International Cricket Stadium, Mullanpur, New Chandigarh" },
+      { label: "1st T20I", home: "India", away: "West Indies", date: "Tue, 06 Oct 2026", venue: "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow" },
+      { label: "2nd T20I", home: "India", away: "West Indies", date: "Fri, 09 Oct 2026", venue: "JSCA International Stadium Complex, Ranchi" },
+      { label: "3rd T20I", home: "India", away: "West Indies", date: "Sun, 11 Oct 2026", venue: "Holkar Stadium, Indore" },
+      { label: "4th T20I", home: "India", away: "West Indies", date: "Wed, 14 Oct 2026", venue: "Rajiv Gandhi International Stadium, Hyderabad" },
+      { label: "5th T20I", home: "India", away: "West Indies", date: "Sat, 17 Oct 2026", venue: "M.Chinnaswamy Stadium, Bengaluru" },
+    ],
+  },
+  {
+    slug: "india-tour-of-new-zealand-2026",
+    name: "India tour of New Zealand 2026",
+    short: "IND tour of NZ 2026",
+    format: "5 T20Is, 5 ODIs, 2 Tests",
+    window: "Oct – Nov 2026",
+    startIso: "2026-10-22",
+    teams: ["New Zealand", "India"],
+    summary:
+      "India's full multi-format tour of New Zealand features five T20Is, five ODIs and two Tests across Christchurch, Wellington, Auckland, Hamilton, Mount Maunganui and Wellington.",
+    matches: [
+      { label: "1st T20I", home: "New Zealand", away: "India", date: "Thu, 22 Oct 2026", venue: "Hagley Oval, Christchurch" },
+      { label: "2nd T20I", home: "New Zealand", away: "India", date: "Sat, 24 Oct 2026", venue: "Hagley Oval, Christchurch" },
+      { label: "3rd T20I", home: "New Zealand", away: "India", date: "Tue, 27 Oct 2026", venue: "Sky Stadium, Wellington" },
+      { label: "4th T20I", home: "New Zealand", away: "India", date: "Fri, 30 Oct 2026", venue: "Eden Park, Auckland" },
+      { label: "5th T20I", home: "New Zealand", away: "India", date: "Sun, 01 Nov 2026", venue: "Seddon Park, Hamilton" },
+      { label: "1st ODI", home: "New Zealand", away: "India", date: "Wed, 04 Nov 2026", venue: "Eden Park, Auckland" },
+      { label: "2nd ODI", home: "New Zealand", away: "India", date: "Sat, 07 Nov 2026", venue: "Sky Stadium, Wellington" },
+      { label: "3rd ODI", home: "New Zealand", away: "India", date: "Tue, 10 Nov 2026", venue: "Seddon Park, Hamilton" },
+      { label: "4th ODI", home: "New Zealand", away: "India", date: "Fri, 13 Nov 2026", venue: "Bay Oval, Mount Maunganui" },
+      { label: "5th ODI", home: "New Zealand", away: "India", date: "Sun, 15 Nov 2026", venue: "Bay Oval, Mount Maunganui" },
+      { label: "1st Test", home: "New Zealand", away: "India", date: "Thu, 19 Nov 2026 - Mon, 23 Nov 2026", venue: "Basin Reserve, Wellington" },
+      { label: "2nd Test", home: "New Zealand", away: "India", date: "Fri, 27 Nov 2026 - Tue, 01 Dec 2026", venue: "Hagley Oval, Christchurch" },
+    ],
+  },
+  {
+    slug: "england-tour-of-australia-2026",
+    name: "England tour of Australia 2026 (White-ball)",
+    short: "ENG WB tour of AUS 2026",
+    format: "3 ODIs, 5 T20Is",
+    window: "Nov – Dec 2026",
+    startIso: "2026-11-12",
+    teams: ["Australia", "England"],
+    summary:
+      "England's white-ball tour of Australia features three ODIs and five T20Is across Perth, Adelaide, Hobart, Melbourne, Queensland, Brisbane, Sydney and Canberra.",
+    matches: [
+      { label: "1st ODI", home: "Australia", away: "England", date: "Thu, 12 Nov 2026", venue: "Perth Stadium, Perth" },
+      { label: "2nd ODI", home: "Australia", away: "England", date: "Sun, 15 Nov 2026", venue: "Adelaide Oval, Adelaide" },
+      { label: "3rd ODI", home: "Australia", away: "England", date: "Wed, 18 Nov 2026", venue: "Bellerive Oval, Hobart" },
+      { label: "1st T20I", home: "Australia", away: "England", date: "Sat, 21 Nov 2026", venue: "Melbourne Cricket Ground, Melbourne" },
+      { label: "2nd T20I", home: "Australia", away: "England", date: "Tue, 24 Nov 2026", venue: "Carrara Oval, Queensland" },
+      { label: "3rd T20I", home: "Australia", away: "England", date: "Fri, 27 Nov 2026", venue: "The Gabba, Brisbane" },
+      { label: "4th T20I", home: "Australia", away: "England", date: "Sun, 29 Nov 2026", venue: "Sydney Cricket Ground, Sydney" },
+      { label: "5th T20I", home: "Australia", away: "England", date: "Wed, 02 Dec 2026", venue: "Manuka Oval, Canberra" },
+    ],
+  },
+  {
+    slug: "ashes-2026-27",
+    name: "The Ashes 2026-27",
+    short: "The Ashes 2026-27",
+    format: "5-Test Series",
+    window: "Nov 2026 – Jan 2027",
+    startIso: "2026-11-21",
+    teams: ["Australia", "England"],
+    summary:
+      "England travel Down Under for a five-Test Ashes series across Perth, Brisbane, Adelaide, Melbourne and Sydney.",
+    matches: [
+      { label: "1st Test", home: "Australia", away: "England", date: "Sat, 21 Nov 2026", venue: "Perth Stadium" },
+      { label: "2nd Test (D/N)", home: "Australia", away: "England", date: "Thu, 04 Dec 2026", venue: "The Gabba, Brisbane" },
+      { label: "3rd Test", home: "Australia", away: "England", date: "Thu, 17 Dec 2026", venue: "Adelaide Oval" },
+      { label: "4th Test (Boxing Day)", home: "Australia", away: "England", date: "Sat, 26 Dec 2026", venue: "MCG, Melbourne" },
+      { label: "5th Test", home: "Australia", away: "England", date: "Mon, 04 Jan 2027", venue: "SCG, Sydney" },
+    ],
+  },
+  {
+    slug: "bangladesh-tour-of-south-africa-2026",
+    name: "Bangladesh tour of South Africa 2026",
+    short: "BAN tour of SA 2026",
+    format: "2 Tests, 3 ODIs, 3 T20Is",
+    window: "Nov – Dec 2026",
+    startIso: "2026-11-15",
+    teams: ["South Africa", "Bangladesh"],
+    summary:
+      "Bangladesh's full multi-format tour of South Africa includes two Tests, three ODIs and three T20Is across Johannesburg, Centurion, East London, Gqeberha, Cape Town, Kimberley and Benoni.",
+    matches: [
+      { label: "1st Test", home: "South Africa", away: "Bangladesh", date: "Sun, 15 Nov 2026 - Thu, 19 Nov 2026", venue: "The Wanderers Stadium, Johannesburg" },
+      { label: "2nd Test", home: "South Africa", away: "Bangladesh", date: "Mon, 23 Nov 2026 - Fri, 27 Nov 2026", venue: "SuperSport Park, Centurion" },
+      { label: "1st ODI", home: "South Africa", away: "Bangladesh", date: "Tue, 01 Dec 2026", venue: "Buffalo Park, East London" },
+      { label: "2nd ODI", home: "South Africa", away: "Bangladesh", date: "Fri, 04 Dec 2026", venue: "St George's Park, Gqeberha" },
+      { label: "3rd ODI", home: "South Africa", away: "Bangladesh", date: "Mon, 07 Dec 2026", venue: "Newlands, Cape Town" },
+      { label: "1st T20I", home: "South Africa", away: "Bangladesh", date: "Thu, 10 Dec 2026", venue: "Diamond Oval, Kimberley" },
+      { label: "2nd T20I", home: "South Africa", away: "Bangladesh", date: "Sat, 12 Dec 2026", venue: "Willowmoore Park, Benoni" },
+      { label: "3rd T20I", home: "South Africa", away: "Bangladesh", date: "Sun, 13 Dec 2026", venue: "SuperSport Park, Centurion" },
+    ],
+  },
+  {
+    slug: "new-zealand-tour-of-australia-2026-27",
+    name: "New Zealand tour of Australia 2026-27",
+    short: "NZ tour of AUS 2026-27",
+    format: "4 Tests",
+    window: "Dec 2026 – Jan 2027",
+    startIso: "2026-12-09",
+    teams: ["Australia", "New Zealand"],
+    summary:
+      "The trans-Tasman rivals meet in a four-Test series across Perth, Adelaide, Melbourne and Sydney.",
+    matches: [
+      { label: "1st Test", home: "Australia", away: "New Zealand", date: "Wed, 09 Dec 2026 - Sun, 13 Dec 2026", venue: "Perth Stadium, Perth" },
+      { label: "2nd Test", home: "Australia", away: "New Zealand", date: "Thu, 17 Dec 2026 - Tue, 22 Dec 2026", venue: "Adelaide Oval, Adelaide" },
+      { label: "3rd Test", home: "Australia", away: "New Zealand", date: "Sat, 26 Dec 2026 - Wed, 30 Dec 2026", venue: "Melbourne Cricket Ground, Melbourne" },
+      { label: "4th Test", home: "Australia", away: "New Zealand", date: "Mon, 04 Jan 2027 - Fri, 08 Jan 2027", venue: "Sydney Cricket Ground, Sydney" },
+    ],
+  },
+  {
+    slug: "sri-lanka-tour-of-india-2026",
+    name: "Sri Lanka tour of India 2026",
+    short: "SL tour of IND 2026",
+    format: "3 ODIs, 3 T20Is",
+    window: "Dec 2026",
+    startIso: "2026-12-13",
+    teams: ["India", "Sri Lanka"],
+    summary:
+      "Sri Lanka round out the year with three ODIs and three T20Is in India across Delhi, Bengaluru, Ahmedabad, Rajkot, Cuttack and Pune.",
+    matches: [
+      { label: "1st ODI", home: "India", away: "Sri Lanka", date: "Sun, 13 Dec 2026", venue: "Arun Jaitley Stadium, Delhi" },
+      { label: "2nd ODI", home: "India", away: "Sri Lanka", date: "Wed, 16 Dec 2026", venue: "M.Chinnaswamy Stadium, Bengaluru" },
+      { label: "3rd ODI", home: "India", away: "Sri Lanka", date: "Sat, 19 Dec 2026", venue: "Narendra Modi Stadium, Ahmedabad" },
+      { label: "1st T20I", home: "India", away: "Sri Lanka", date: "Tue, 22 Dec 2026", venue: "Niranjan Shah Stadium, Khandheri, Rajkot" },
+      { label: "2nd T20I", home: "India", away: "Sri Lanka", date: "Thu, 24 Dec 2026", venue: "Barabati Stadium, Cuttack" },
+      { label: "3rd T20I", home: "India", away: "Sri Lanka", date: "Sun, 27 Dec 2026", venue: "Maharashtra Cricket Association Stadium, Pune" },
+    ],
+  },
+  {
+    slug: "england-tour-of-south-africa-2026-27",
+    name: "England tour of South Africa 2026-27",
+    short: "ENG tour of SA 2026-27",
+    format: "3 Tests, 3 ODIs",
+    window: "Dec 2026 – Jan 2027",
+    startIso: "2026-12-17",
+    teams: ["South Africa", "England"],
+    summary:
+      "England tour South Africa for three Tests followed by three ODIs in Johannesburg, Centurion, Cape Town, Paarl and Bloemfontein.",
+    matches: [
+      { label: "1st Test", home: "South Africa", away: "England", date: "Thu, 17 Dec 2026 - Mon, 21 Dec 2026", venue: "The Wanderers Stadium, Johannesburg" },
+      { label: "2nd Test", home: "South Africa", away: "England", date: "Sat, 26 Dec 2026 - Wed, 30 Dec 2026", venue: "SuperSport Park, Centurion" },
+      { label: "3rd Test", home: "South Africa", away: "England", date: "Sun, 03 Jan 2027 - Thu, 07 Jan 2027", venue: "Newlands, Cape Town" },
+      { label: "1st ODI", home: "South Africa", away: "England", date: "Sun, 10 Jan 2027", venue: "Boland Park, Paarl" },
+      { label: "2nd ODI", home: "South Africa", away: "England", date: "Wed, 13 Jan 2027", venue: "Mangaung Oval, Bloemfontein" },
+      { label: "3rd ODI", home: "South Africa", away: "England", date: "Fri, 15 Jan 2027", venue: "Mangaung Oval, Bloemfontein" },
+    ],
+  },
+  {
+    slug: "zimbabwe-tour-of-india-2027",
+    name: "Zimbabwe tour of India 2027",
+    short: "ZIM tour of IND 2027",
+    format: "3 ODIs",
+    window: "Jan 2027",
+    startIso: "2027-01-03",
+    teams: ["India", "Zimbabwe"],
+    summary:
+      "Zimbabwe open the new year in India for a three-match ODI series in Kolkata, Hyderabad and Mumbai.",
+    matches: [
+      { label: "1st ODI", home: "India", away: "Zimbabwe", date: "Sun, 03 Jan 2027", venue: "Eden Gardens, Kolkata" },
+      { label: "2nd ODI", home: "India", away: "Zimbabwe", date: "Wed, 06 Jan 2027", venue: "Rajiv Gandhi International Stadium, Hyderabad" },
+      { label: "3rd ODI", home: "India", away: "Zimbabwe", date: "Sat, 09 Jan 2027", venue: "Wankhede Stadium, Mumbai" },
+    ],
+  },
+  {
+    slug: "sri-lanka-tour-new-zealand-2027",
+    name: "Sri Lanka tour New Zealand 2027",
+    short: "SL tour of NZ 2027",
+    format: "3 ODIs, 3 T20Is, 2 Tests",
+    window: "Jan – Feb 2027",
+    startIso: "2027-01-16",
+    teams: ["New Zealand", "Sri Lanka"],
+    summary:
+      "Sri Lanka tour New Zealand for three ODIs, three T20Is and two Tests across Napier, Wellington, Dunedin, Christchurch, Nelson, Mount Maunganui and Hamilton.",
+    matches: [
+      { label: "1st ODI", home: "New Zealand", away: "Sri Lanka", date: "Sat, 16 Jan 2027", venue: "McLean Park, Napier" },
+      { label: "2nd ODI", home: "New Zealand", away: "Sri Lanka", date: "Tue, 19 Jan 2027", venue: "Sky Stadium, Wellington" },
+      { label: "3rd ODI", home: "New Zealand", away: "Sri Lanka", date: "Fri, 22 Jan 2027", venue: "University Oval, Dunedin" },
+      { label: "1st T20I", home: "New Zealand", away: "Sri Lanka", date: "Tue, 26 Jan 2027", venue: "Hagley Oval, Christchurch" },
+      { label: "2nd T20I", home: "New Zealand", away: "Sri Lanka", date: "Fri, 29 Jan 2027", venue: "Saxton Oval, Nelson" },
+      { label: "3rd T20I", home: "New Zealand", away: "Sri Lanka", date: "Sun, 31 Jan 2027", venue: "Saxton Oval, Nelson" },
+      { label: "1st Test", home: "New Zealand", away: "Sri Lanka", date: "Thu, 04 Feb 2027 - Mon, 08 Feb 2027", venue: "Bay Oval, Mount Maunganui" },
+      { label: "2nd Test", home: "New Zealand", away: "Sri Lanka", date: "Fri, 12 Feb 2027 - Tue, 16 Feb 2027", venue: "Seddon Park, Hamilton" },
+    ],
+  },
+  {
+    slug: "australia-tour-of-india-2027",
+    name: "Australia tour of India 2027",
+    short: "AUS tour of IND 2027",
+    format: "5 Tests",
+    window: "Jan – Mar 2027",
+    startIso: "2027-01-21",
+    teams: ["India", "Australia"],
+    summary:
+      "Australia tour India for a five-Test Border-Gavaskar Trophy series across Nagpur, Chennai, Guwahati, Ranchi and Ahmedabad.",
+    matches: [
+      { label: "1st Test", home: "India", away: "Australia", date: "Thu, 21 Jan 2027 - Mon, 25 Jan 2027", venue: "Vidarbha Cricket Association Stadium, Nagpur" },
+      { label: "2nd Test", home: "India", away: "Australia", date: "Fri, 29 Jan 2027 - Tue, 02 Feb 2027", venue: "MA Chidambaram Stadium, Chennai" },
+      { label: "3rd Test", home: "India", away: "Australia", date: "Thu, 11 Feb 2027 - Mon, 15 Feb 2027", venue: "Barsapara Cricket Stadium, Guwahati" },
+      { label: "4th Test", home: "India", away: "Australia", date: "Fri, 19 Feb 2027 - Tue, 23 Feb 2027", venue: "JSCA International Stadium Complex, Ranchi" },
+      { label: "5th Test", home: "India", away: "Australia", date: "Sat, 27 Feb 2027 - Wed, 03 Mar 2027", venue: "Narendra Modi Stadium, Ahmedabad" },
+    ],
+  },
+  {
+    slug: "australia-vs-england-150th-anniversary-one-off-test-match-2027",
+    name: "Australia vs England 150th Anniversary One-off Test Match 2027",
+    short: "AUS vs ENG 150th Test 2027",
+    format: "One-off Test",
+    window: "Mar 2027",
+    startIso: "2027-03-11",
+    teams: ["Australia", "England"],
+    summary:
+      "Australia and England mark 150 years of Test cricket with a one-off Test at the Melbourne Cricket Ground.",
+    matches: [
+      { label: "One-off Test", home: "Australia", away: "England", date: "Thu, 11 Mar 2027 - Mon, 15 Mar 2027", venue: "Melbourne Cricket Ground, Melbourne" },
+    ],
+  },
+  {
+    slug: "indian-premier-league-2027",
+    name: "Indian Premier League 2027",
+    short: "IPL 2027",
+    format: "T20 Franchise League",
+    window: "Mar – May 2027",
+    startIso: "2027-03-09",
+    teams: [
+      "Mumbai Indians",
+      "Chennai Super Kings",
+      "Royal Challengers Bengaluru",
+      "Kolkata Knight Riders",
+      "Delhi Capitals",
+      "Sunrisers Hyderabad",
+      "Rajasthan Royals",
+      "Punjab Kings",
+      "Gujarat Titans",
+      "Lucknow Super Giants",
+    ],
+    summary:
+      "IPL 2027 — the world's biggest T20 franchise league returns with 10 teams and marquee venues across India.",
+    matches: [
+      { label: "Opening Match", home: "TBC", away: "TBC", date: "Tue, 09 Mar 2027", venue: "Narendra Modi Stadium, Ahmedabad" },
+      { label: "Final", home: "TBC", away: "TBC", date: "Fri, 14 May 2027", venue: "Eden Gardens, Kolkata" },
+    ],
+  },
+  {
+    slug: "icc-cricket-world-cup-2027-qualifiers",
+    name: "ICC Cricket World Cup 2027 Qualifiers",
+    short: "CWC 2027 Qualifiers",
+    format: "ODI Qualifier",
+    window: "Feb – Mar 2027",
+    startIso: "2027-02-01",
+    teams: ["Zimbabwe", "Namibia", "Scotland", "Nepal", "USA", "Netherlands", "Ireland", "UAE"],
+    summary:
+      "Associate nations play qualifying ODIs for the ICC Cricket World Cup 2027 hosted by South Africa, Zimbabwe and Namibia.",
+    matches: [
+      { label: "Qualifier 1", home: "Scotland", away: "Nepal", date: "Mon, 01 Feb 2027", venue: "Harare Sports Club" },
+      { label: "Qualifier 2", home: "Ireland", away: "USA", date: "Wed, 03 Feb 2027", venue: "Queens Sports Club, Bulawayo" },
+      { label: "Super Six", home: "TBC", away: "TBC", date: "Sat, 20 Feb 2027", venue: "Queens Sports Club, Bulawayo" },
+      { label: "Final", home: "TBC", away: "TBC", date: "Sun, 07 Mar 2027", venue: "Harare Sports Club" },
+    ],
+  },
+];
+
+export const getCricketSeries = (slug: string) =>
+  cricketSeries2026.find((s) => s.slug === slug);

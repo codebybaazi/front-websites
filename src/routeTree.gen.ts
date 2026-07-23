@@ -9,38 +9,909 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ThankYouRouteImport } from './routes/thank-you'
+import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
+import { Route as TennisBettingRouteImport } from './routes/tennis-betting'
+import { Route as SprintersVsSkyexchange247RouteImport } from './routes/sprinters-vs-skyexchange247'
+import { Route as SprintersVsLotus365RouteImport } from './routes/sprinters-vs-lotus365'
+import { Route as SprintersLoginRouteImport } from './routes/sprinters-login'
+import { Route as SprintersClubRouteImport } from './routes/sprinters-club'
+import { Route as SportsIdRouteImport } from './routes/sports-id'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ResponsibleGamblingRouteImport } from './routes/responsible-gambling'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as PredictionsRouteImport } from './routes/predictions'
+import { Route as PlatformsRouteImport } from './routes/platforms'
+import { Route as MatchesRouteImport } from './routes/matches'
+import { Route as Laser247RouteImport } from './routes/laser247'
+import { Route as IndianCardGamesRouteImport } from './routes/indian-card-games'
+import { Route as HorseRaceBettingRouteImport } from './routes/horse-race-betting'
+import { Route as FootballBettingRouteImport } from './routes/football-betting'
+import { Route as DisclaimerRouteImport } from './routes/disclaimer'
+import { Route as CricketBettingAppRouteImport } from './routes/cricket-betting-app'
+import { Route as CricketBettingRouteImport } from './routes/cricket-betting'
+import { Route as Cricbet99RouteImport } from './routes/cricbet99'
+import { Route as ContactUsRouteImport } from './routes/contact-us'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CasinoRouteImport } from './routes/casino'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as AuthDotmdRouteImport } from './routes/auth[.]md'
+import { Route as AllLinksRouteImport } from './routes/all-links'
+import { Route as AboutUsRouteImport } from './routes/about-us'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as R11xplayRouteImport } from './routes/11xplay'
+import { Route as SplatRouteImport } from './routes/$'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ScheduleIndexRouteImport } from './routes/schedule.index'
+import { Route as CricketScheduleIndexRouteImport } from './routes/cricket-schedule.index'
+import { Route as TennisScheduleSlugRouteImport } from './routes/tennis-schedule.$slug'
+import { Route as ScheduleSlugRouteImport } from './routes/schedule.$slug'
+import { Route as PostSlugRouteImport } from './routes/post.$slug'
+import { Route as MatchIdRouteImport } from './routes/match.$id'
+import { Route as CricketScheduleSlugRouteImport } from './routes/cricket-schedule.$slug'
+import { Route as DotwellKnownOauthProtectedResourceRouteImport } from './routes/[.]well-known.oauth-protected-resource'
+import { Route as DotwellKnownOauthAuthorizationServerRouteImport } from './routes/[.]well-known.oauth-authorization-server'
+import { Route as DotwellKnownJwksDotjsonRouteImport } from './routes/[.]well-known.jwks[.]json'
+import { Route as TennisScheduleSlugIndexRouteImport } from './routes/tennis-schedule.$slug.index'
+import { Route as CricketScheduleSlugIndexRouteImport } from './routes/cricket-schedule.$slug.index'
+import { Route as TennisScheduleSlugRoundRouteImport } from './routes/tennis-schedule.$slug.$round'
+import { Route as CricketScheduleSlugMatchRouteImport } from './routes/cricket-schedule.$slug.$match'
+import { Route as DotwellKnownMcpServerCardDotjsonRouteImport } from './routes/[.]well-known.mcp.server-card[.]json'
+import { Route as DotwellKnownAgentSkillsIndexDotjsonRouteImport } from './routes/[.]well-known.agent-skills.index[.]json'
 
+const ThankYouRoute = ThankYouRouteImport.update({
+  id: '/thank-you',
+  path: '/thank-you',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
+  id: '/terms-and-conditions',
+  path: '/terms-and-conditions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TennisBettingRoute = TennisBettingRouteImport.update({
+  id: '/tennis-betting',
+  path: '/tennis-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SprintersVsSkyexchange247Route =
+  SprintersVsSkyexchange247RouteImport.update({
+    id: '/sprinters-vs-skyexchange247',
+    path: '/sprinters-vs-skyexchange247',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SprintersVsLotus365Route = SprintersVsLotus365RouteImport.update({
+  id: '/sprinters-vs-lotus365',
+  path: '/sprinters-vs-lotus365',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SprintersLoginRoute = SprintersLoginRouteImport.update({
+  id: '/sprinters-login',
+  path: '/sprinters-login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SprintersClubRoute = SprintersClubRouteImport.update({
+  id: '/sprinters-club',
+  path: '/sprinters-club',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SportsIdRoute = SportsIdRouteImport.update({
+  id: '/sports-id',
+  path: '/sports-id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResponsibleGamblingRoute = ResponsibleGamblingRouteImport.update({
+  id: '/responsible-gambling',
+  path: '/responsible-gambling',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PredictionsRoute = PredictionsRouteImport.update({
+  id: '/predictions',
+  path: '/predictions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlatformsRoute = PlatformsRouteImport.update({
+  id: '/platforms',
+  path: '/platforms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MatchesRoute = MatchesRouteImport.update({
+  id: '/matches',
+  path: '/matches',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Laser247Route = Laser247RouteImport.update({
+  id: '/laser247',
+  path: '/laser247',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndianCardGamesRoute = IndianCardGamesRouteImport.update({
+  id: '/indian-card-games',
+  path: '/indian-card-games',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HorseRaceBettingRoute = HorseRaceBettingRouteImport.update({
+  id: '/horse-race-betting',
+  path: '/horse-race-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FootballBettingRoute = FootballBettingRouteImport.update({
+  id: '/football-betting',
+  path: '/football-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DisclaimerRoute = DisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CricketBettingAppRoute = CricketBettingAppRouteImport.update({
+  id: '/cricket-betting-app',
+  path: '/cricket-betting-app',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CricketBettingRoute = CricketBettingRouteImport.update({
+  id: '/cricket-betting',
+  path: '/cricket-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Cricbet99Route = Cricbet99RouteImport.update({
+  id: '/cricbet99',
+  path: '/cricbet99',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactUsRoute = ContactUsRouteImport.update({
+  id: '/contact-us',
+  path: '/contact-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CasinoRoute = CasinoRouteImport.update({
+  id: '/casino',
+  path: '/casino',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthDotmdRoute = AuthDotmdRouteImport.update({
+  id: '/auth.md',
+  path: '/auth.md',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AllLinksRoute = AllLinksRouteImport.update({
+  id: '/all-links',
+  path: '/all-links',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutUsRoute = AboutUsRouteImport.update({
+  id: '/about-us',
+  path: '/about-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const R11xplayRoute = R11xplayRouteImport.update({
+  id: '/11xplay',
+  path: '/11xplay',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SplatRoute = SplatRouteImport.update({
+  id: '/$',
+  path: '/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ScheduleIndexRoute = ScheduleIndexRouteImport.update({
+  id: '/schedule/',
+  path: '/schedule/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CricketScheduleIndexRoute = CricketScheduleIndexRouteImport.update({
+  id: '/cricket-schedule/',
+  path: '/cricket-schedule/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TennisScheduleSlugRoute = TennisScheduleSlugRouteImport.update({
+  id: '/tennis-schedule/$slug',
+  path: '/tennis-schedule/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScheduleSlugRoute = ScheduleSlugRouteImport.update({
+  id: '/schedule/$slug',
+  path: '/schedule/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PostSlugRoute = PostSlugRouteImport.update({
+  id: '/post/$slug',
+  path: '/post/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MatchIdRoute = MatchIdRouteImport.update({
+  id: '/match/$id',
+  path: '/match/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CricketScheduleSlugRoute = CricketScheduleSlugRouteImport.update({
+  id: '/cricket-schedule/$slug',
+  path: '/cricket-schedule/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DotwellKnownOauthProtectedResourceRoute =
+  DotwellKnownOauthProtectedResourceRouteImport.update({
+    id: '/.well-known/oauth-protected-resource',
+    path: '/.well-known/oauth-protected-resource',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DotwellKnownOauthAuthorizationServerRoute =
+  DotwellKnownOauthAuthorizationServerRouteImport.update({
+    id: '/.well-known/oauth-authorization-server',
+    path: '/.well-known/oauth-authorization-server',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DotwellKnownJwksDotjsonRoute = DotwellKnownJwksDotjsonRouteImport.update({
+  id: '/.well-known/jwks.json',
+  path: '/.well-known/jwks.json',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TennisScheduleSlugIndexRoute = TennisScheduleSlugIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => TennisScheduleSlugRoute,
+} as any)
+const CricketScheduleSlugIndexRoute =
+  CricketScheduleSlugIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => CricketScheduleSlugRoute,
+  } as any)
+const TennisScheduleSlugRoundRoute = TennisScheduleSlugRoundRouteImport.update({
+  id: '/$round',
+  path: '/$round',
+  getParentRoute: () => TennisScheduleSlugRoute,
+} as any)
+const CricketScheduleSlugMatchRoute =
+  CricketScheduleSlugMatchRouteImport.update({
+    id: '/$match',
+    path: '/$match',
+    getParentRoute: () => CricketScheduleSlugRoute,
+  } as any)
+const DotwellKnownMcpServerCardDotjsonRoute =
+  DotwellKnownMcpServerCardDotjsonRouteImport.update({
+    id: '/.well-known/mcp/server-card.json',
+    path: '/.well-known/mcp/server-card.json',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DotwellKnownAgentSkillsIndexDotjsonRoute =
+  DotwellKnownAgentSkillsIndexDotjsonRouteImport.update({
+    id: '/.well-known/agent-skills/index.json',
+    path: '/.well-known/agent-skills/index.json',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
+  '/11xplay': typeof R11xplayRoute
+  '/about': typeof AboutRoute
+  '/about-us': typeof AboutUsRoute
+  '/all-links': typeof AllLinksRoute
+  '/auth.md': typeof AuthDotmdRoute
+  '/blog': typeof BlogRoute
+  '/casino': typeof CasinoRoute
+  '/contact': typeof ContactRoute
+  '/contact-us': typeof ContactUsRoute
+  '/cricbet99': typeof Cricbet99Route
+  '/cricket-betting': typeof CricketBettingRoute
+  '/cricket-betting-app': typeof CricketBettingAppRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/football-betting': typeof FootballBettingRoute
+  '/horse-race-betting': typeof HorseRaceBettingRoute
+  '/indian-card-games': typeof IndianCardGamesRoute
+  '/laser247': typeof Laser247Route
+  '/matches': typeof MatchesRoute
+  '/platforms': typeof PlatformsRoute
+  '/predictions': typeof PredictionsRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/responsible-gambling': typeof ResponsibleGamblingRoute
+  '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sports-id': typeof SportsIdRoute
+  '/sprinters-club': typeof SprintersClubRoute
+  '/sprinters-login': typeof SprintersLoginRoute
+  '/sprinters-vs-lotus365': typeof SprintersVsLotus365Route
+  '/sprinters-vs-skyexchange247': typeof SprintersVsSkyexchange247Route
+  '/tennis-betting': typeof TennisBettingRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/thank-you': typeof ThankYouRoute
+  '/.well-known/jwks.json': typeof DotwellKnownJwksDotjsonRoute
+  '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
+  '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
+  '/cricket-schedule/$slug': typeof CricketScheduleSlugRouteWithChildren
+  '/match/$id': typeof MatchIdRoute
+  '/post/$slug': typeof PostSlugRoute
+  '/schedule/$slug': typeof ScheduleSlugRoute
+  '/tennis-schedule/$slug': typeof TennisScheduleSlugRouteWithChildren
+  '/cricket-schedule/': typeof CricketScheduleIndexRoute
+  '/schedule/': typeof ScheduleIndexRoute
+  '/.well-known/agent-skills/index.json': typeof DotwellKnownAgentSkillsIndexDotjsonRoute
+  '/.well-known/mcp/server-card.json': typeof DotwellKnownMcpServerCardDotjsonRoute
+  '/cricket-schedule/$slug/$match': typeof CricketScheduleSlugMatchRoute
+  '/tennis-schedule/$slug/$round': typeof TennisScheduleSlugRoundRoute
+  '/cricket-schedule/$slug/': typeof CricketScheduleSlugIndexRoute
+  '/tennis-schedule/$slug/': typeof TennisScheduleSlugIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
+  '/11xplay': typeof R11xplayRoute
+  '/about': typeof AboutRoute
+  '/about-us': typeof AboutUsRoute
+  '/all-links': typeof AllLinksRoute
+  '/auth.md': typeof AuthDotmdRoute
+  '/blog': typeof BlogRoute
+  '/casino': typeof CasinoRoute
+  '/contact': typeof ContactRoute
+  '/contact-us': typeof ContactUsRoute
+  '/cricbet99': typeof Cricbet99Route
+  '/cricket-betting': typeof CricketBettingRoute
+  '/cricket-betting-app': typeof CricketBettingAppRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/football-betting': typeof FootballBettingRoute
+  '/horse-race-betting': typeof HorseRaceBettingRoute
+  '/indian-card-games': typeof IndianCardGamesRoute
+  '/laser247': typeof Laser247Route
+  '/matches': typeof MatchesRoute
+  '/platforms': typeof PlatformsRoute
+  '/predictions': typeof PredictionsRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/responsible-gambling': typeof ResponsibleGamblingRoute
+  '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sports-id': typeof SportsIdRoute
+  '/sprinters-club': typeof SprintersClubRoute
+  '/sprinters-login': typeof SprintersLoginRoute
+  '/sprinters-vs-lotus365': typeof SprintersVsLotus365Route
+  '/sprinters-vs-skyexchange247': typeof SprintersVsSkyexchange247Route
+  '/tennis-betting': typeof TennisBettingRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/thank-you': typeof ThankYouRoute
+  '/.well-known/jwks.json': typeof DotwellKnownJwksDotjsonRoute
+  '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
+  '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
+  '/match/$id': typeof MatchIdRoute
+  '/post/$slug': typeof PostSlugRoute
+  '/schedule/$slug': typeof ScheduleSlugRoute
+  '/cricket-schedule': typeof CricketScheduleIndexRoute
+  '/schedule': typeof ScheduleIndexRoute
+  '/.well-known/agent-skills/index.json': typeof DotwellKnownAgentSkillsIndexDotjsonRoute
+  '/.well-known/mcp/server-card.json': typeof DotwellKnownMcpServerCardDotjsonRoute
+  '/cricket-schedule/$slug/$match': typeof CricketScheduleSlugMatchRoute
+  '/tennis-schedule/$slug/$round': typeof TennisScheduleSlugRoundRoute
+  '/cricket-schedule/$slug': typeof CricketScheduleSlugIndexRoute
+  '/tennis-schedule/$slug': typeof TennisScheduleSlugIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
+  '/11xplay': typeof R11xplayRoute
+  '/about': typeof AboutRoute
+  '/about-us': typeof AboutUsRoute
+  '/all-links': typeof AllLinksRoute
+  '/auth.md': typeof AuthDotmdRoute
+  '/blog': typeof BlogRoute
+  '/casino': typeof CasinoRoute
+  '/contact': typeof ContactRoute
+  '/contact-us': typeof ContactUsRoute
+  '/cricbet99': typeof Cricbet99Route
+  '/cricket-betting': typeof CricketBettingRoute
+  '/cricket-betting-app': typeof CricketBettingAppRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/football-betting': typeof FootballBettingRoute
+  '/horse-race-betting': typeof HorseRaceBettingRoute
+  '/indian-card-games': typeof IndianCardGamesRoute
+  '/laser247': typeof Laser247Route
+  '/matches': typeof MatchesRoute
+  '/platforms': typeof PlatformsRoute
+  '/predictions': typeof PredictionsRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/responsible-gambling': typeof ResponsibleGamblingRoute
+  '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sports-id': typeof SportsIdRoute
+  '/sprinters-club': typeof SprintersClubRoute
+  '/sprinters-login': typeof SprintersLoginRoute
+  '/sprinters-vs-lotus365': typeof SprintersVsLotus365Route
+  '/sprinters-vs-skyexchange247': typeof SprintersVsSkyexchange247Route
+  '/tennis-betting': typeof TennisBettingRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/thank-you': typeof ThankYouRoute
+  '/.well-known/jwks.json': typeof DotwellKnownJwksDotjsonRoute
+  '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
+  '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
+  '/cricket-schedule/$slug': typeof CricketScheduleSlugRouteWithChildren
+  '/match/$id': typeof MatchIdRoute
+  '/post/$slug': typeof PostSlugRoute
+  '/schedule/$slug': typeof ScheduleSlugRoute
+  '/tennis-schedule/$slug': typeof TennisScheduleSlugRouteWithChildren
+  '/cricket-schedule/': typeof CricketScheduleIndexRoute
+  '/schedule/': typeof ScheduleIndexRoute
+  '/.well-known/agent-skills/index.json': typeof DotwellKnownAgentSkillsIndexDotjsonRoute
+  '/.well-known/mcp/server-card.json': typeof DotwellKnownMcpServerCardDotjsonRoute
+  '/cricket-schedule/$slug/$match': typeof CricketScheduleSlugMatchRoute
+  '/tennis-schedule/$slug/$round': typeof TennisScheduleSlugRoundRoute
+  '/cricket-schedule/$slug/': typeof CricketScheduleSlugIndexRoute
+  '/tennis-schedule/$slug/': typeof TennisScheduleSlugIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/$'
+    | '/11xplay'
+    | '/about'
+    | '/about-us'
+    | '/all-links'
+    | '/auth.md'
+    | '/blog'
+    | '/casino'
+    | '/contact'
+    | '/contact-us'
+    | '/cricbet99'
+    | '/cricket-betting'
+    | '/cricket-betting-app'
+    | '/disclaimer'
+    | '/football-betting'
+    | '/horse-race-betting'
+    | '/indian-card-games'
+    | '/laser247'
+    | '/matches'
+    | '/platforms'
+    | '/predictions'
+    | '/privacy-policy'
+    | '/responsible-gambling'
+    | '/services'
+    | '/sitemap.xml'
+    | '/sports-id'
+    | '/sprinters-club'
+    | '/sprinters-login'
+    | '/sprinters-vs-lotus365'
+    | '/sprinters-vs-skyexchange247'
+    | '/tennis-betting'
+    | '/terms-and-conditions'
+    | '/thank-you'
+    | '/.well-known/jwks.json'
+    | '/.well-known/oauth-authorization-server'
+    | '/.well-known/oauth-protected-resource'
+    | '/cricket-schedule/$slug'
+    | '/match/$id'
+    | '/post/$slug'
+    | '/schedule/$slug'
+    | '/tennis-schedule/$slug'
+    | '/cricket-schedule/'
+    | '/schedule/'
+    | '/.well-known/agent-skills/index.json'
+    | '/.well-known/mcp/server-card.json'
+    | '/cricket-schedule/$slug/$match'
+    | '/tennis-schedule/$slug/$round'
+    | '/cricket-schedule/$slug/'
+    | '/tennis-schedule/$slug/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/$'
+    | '/11xplay'
+    | '/about'
+    | '/about-us'
+    | '/all-links'
+    | '/auth.md'
+    | '/blog'
+    | '/casino'
+    | '/contact'
+    | '/contact-us'
+    | '/cricbet99'
+    | '/cricket-betting'
+    | '/cricket-betting-app'
+    | '/disclaimer'
+    | '/football-betting'
+    | '/horse-race-betting'
+    | '/indian-card-games'
+    | '/laser247'
+    | '/matches'
+    | '/platforms'
+    | '/predictions'
+    | '/privacy-policy'
+    | '/responsible-gambling'
+    | '/services'
+    | '/sitemap.xml'
+    | '/sports-id'
+    | '/sprinters-club'
+    | '/sprinters-login'
+    | '/sprinters-vs-lotus365'
+    | '/sprinters-vs-skyexchange247'
+    | '/tennis-betting'
+    | '/terms-and-conditions'
+    | '/thank-you'
+    | '/.well-known/jwks.json'
+    | '/.well-known/oauth-authorization-server'
+    | '/.well-known/oauth-protected-resource'
+    | '/match/$id'
+    | '/post/$slug'
+    | '/schedule/$slug'
+    | '/cricket-schedule'
+    | '/schedule'
+    | '/.well-known/agent-skills/index.json'
+    | '/.well-known/mcp/server-card.json'
+    | '/cricket-schedule/$slug/$match'
+    | '/tennis-schedule/$slug/$round'
+    | '/cricket-schedule/$slug'
+    | '/tennis-schedule/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/$'
+    | '/11xplay'
+    | '/about'
+    | '/about-us'
+    | '/all-links'
+    | '/auth.md'
+    | '/blog'
+    | '/casino'
+    | '/contact'
+    | '/contact-us'
+    | '/cricbet99'
+    | '/cricket-betting'
+    | '/cricket-betting-app'
+    | '/disclaimer'
+    | '/football-betting'
+    | '/horse-race-betting'
+    | '/indian-card-games'
+    | '/laser247'
+    | '/matches'
+    | '/platforms'
+    | '/predictions'
+    | '/privacy-policy'
+    | '/responsible-gambling'
+    | '/services'
+    | '/sitemap.xml'
+    | '/sports-id'
+    | '/sprinters-club'
+    | '/sprinters-login'
+    | '/sprinters-vs-lotus365'
+    | '/sprinters-vs-skyexchange247'
+    | '/tennis-betting'
+    | '/terms-and-conditions'
+    | '/thank-you'
+    | '/.well-known/jwks.json'
+    | '/.well-known/oauth-authorization-server'
+    | '/.well-known/oauth-protected-resource'
+    | '/cricket-schedule/$slug'
+    | '/match/$id'
+    | '/post/$slug'
+    | '/schedule/$slug'
+    | '/tennis-schedule/$slug'
+    | '/cricket-schedule/'
+    | '/schedule/'
+    | '/.well-known/agent-skills/index.json'
+    | '/.well-known/mcp/server-card.json'
+    | '/cricket-schedule/$slug/$match'
+    | '/tennis-schedule/$slug/$round'
+    | '/cricket-schedule/$slug/'
+    | '/tennis-schedule/$slug/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SplatRoute: typeof SplatRoute
+  R11xplayRoute: typeof R11xplayRoute
+  AboutRoute: typeof AboutRoute
+  AboutUsRoute: typeof AboutUsRoute
+  AllLinksRoute: typeof AllLinksRoute
+  AuthDotmdRoute: typeof AuthDotmdRoute
+  BlogRoute: typeof BlogRoute
+  CasinoRoute: typeof CasinoRoute
+  ContactRoute: typeof ContactRoute
+  ContactUsRoute: typeof ContactUsRoute
+  Cricbet99Route: typeof Cricbet99Route
+  CricketBettingRoute: typeof CricketBettingRoute
+  CricketBettingAppRoute: typeof CricketBettingAppRoute
+  DisclaimerRoute: typeof DisclaimerRoute
+  FootballBettingRoute: typeof FootballBettingRoute
+  HorseRaceBettingRoute: typeof HorseRaceBettingRoute
+  IndianCardGamesRoute: typeof IndianCardGamesRoute
+  Laser247Route: typeof Laser247Route
+  MatchesRoute: typeof MatchesRoute
+  PlatformsRoute: typeof PlatformsRoute
+  PredictionsRoute: typeof PredictionsRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  ResponsibleGamblingRoute: typeof ResponsibleGamblingRoute
+  ServicesRoute: typeof ServicesRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SportsIdRoute: typeof SportsIdRoute
+  SprintersClubRoute: typeof SprintersClubRoute
+  SprintersLoginRoute: typeof SprintersLoginRoute
+  SprintersVsLotus365Route: typeof SprintersVsLotus365Route
+  SprintersVsSkyexchange247Route: typeof SprintersVsSkyexchange247Route
+  TennisBettingRoute: typeof TennisBettingRoute
+  TermsAndConditionsRoute: typeof TermsAndConditionsRoute
+  ThankYouRoute: typeof ThankYouRoute
+  DotwellKnownJwksDotjsonRoute: typeof DotwellKnownJwksDotjsonRoute
+  DotwellKnownOauthAuthorizationServerRoute: typeof DotwellKnownOauthAuthorizationServerRoute
+  DotwellKnownOauthProtectedResourceRoute: typeof DotwellKnownOauthProtectedResourceRoute
+  CricketScheduleSlugRoute: typeof CricketScheduleSlugRouteWithChildren
+  MatchIdRoute: typeof MatchIdRoute
+  PostSlugRoute: typeof PostSlugRoute
+  ScheduleSlugRoute: typeof ScheduleSlugRoute
+  TennisScheduleSlugRoute: typeof TennisScheduleSlugRouteWithChildren
+  CricketScheduleIndexRoute: typeof CricketScheduleIndexRoute
+  ScheduleIndexRoute: typeof ScheduleIndexRoute
+  DotwellKnownAgentSkillsIndexDotjsonRoute: typeof DotwellKnownAgentSkillsIndexDotjsonRoute
+  DotwellKnownMcpServerCardDotjsonRoute: typeof DotwellKnownMcpServerCardDotjsonRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/thank-you': {
+      id: '/thank-you'
+      path: '/thank-you'
+      fullPath: '/thank-you'
+      preLoaderRoute: typeof ThankYouRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-and-conditions': {
+      id: '/terms-and-conditions'
+      path: '/terms-and-conditions'
+      fullPath: '/terms-and-conditions'
+      preLoaderRoute: typeof TermsAndConditionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tennis-betting': {
+      id: '/tennis-betting'
+      path: '/tennis-betting'
+      fullPath: '/tennis-betting'
+      preLoaderRoute: typeof TennisBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sprinters-vs-skyexchange247': {
+      id: '/sprinters-vs-skyexchange247'
+      path: '/sprinters-vs-skyexchange247'
+      fullPath: '/sprinters-vs-skyexchange247'
+      preLoaderRoute: typeof SprintersVsSkyexchange247RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sprinters-vs-lotus365': {
+      id: '/sprinters-vs-lotus365'
+      path: '/sprinters-vs-lotus365'
+      fullPath: '/sprinters-vs-lotus365'
+      preLoaderRoute: typeof SprintersVsLotus365RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sprinters-login': {
+      id: '/sprinters-login'
+      path: '/sprinters-login'
+      fullPath: '/sprinters-login'
+      preLoaderRoute: typeof SprintersLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sprinters-club': {
+      id: '/sprinters-club'
+      path: '/sprinters-club'
+      fullPath: '/sprinters-club'
+      preLoaderRoute: typeof SprintersClubRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sports-id': {
+      id: '/sports-id'
+      path: '/sports-id'
+      fullPath: '/sports-id'
+      preLoaderRoute: typeof SportsIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/responsible-gambling': {
+      id: '/responsible-gambling'
+      path: '/responsible-gambling'
+      fullPath: '/responsible-gambling'
+      preLoaderRoute: typeof ResponsibleGamblingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/predictions': {
+      id: '/predictions'
+      path: '/predictions'
+      fullPath: '/predictions'
+      preLoaderRoute: typeof PredictionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/platforms': {
+      id: '/platforms'
+      path: '/platforms'
+      fullPath: '/platforms'
+      preLoaderRoute: typeof PlatformsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/matches': {
+      id: '/matches'
+      path: '/matches'
+      fullPath: '/matches'
+      preLoaderRoute: typeof MatchesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/laser247': {
+      id: '/laser247'
+      path: '/laser247'
+      fullPath: '/laser247'
+      preLoaderRoute: typeof Laser247RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/indian-card-games': {
+      id: '/indian-card-games'
+      path: '/indian-card-games'
+      fullPath: '/indian-card-games'
+      preLoaderRoute: typeof IndianCardGamesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/horse-race-betting': {
+      id: '/horse-race-betting'
+      path: '/horse-race-betting'
+      fullPath: '/horse-race-betting'
+      preLoaderRoute: typeof HorseRaceBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/football-betting': {
+      id: '/football-betting'
+      path: '/football-betting'
+      fullPath: '/football-betting'
+      preLoaderRoute: typeof FootballBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/disclaimer': {
+      id: '/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/disclaimer'
+      preLoaderRoute: typeof DisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricket-betting-app': {
+      id: '/cricket-betting-app'
+      path: '/cricket-betting-app'
+      fullPath: '/cricket-betting-app'
+      preLoaderRoute: typeof CricketBettingAppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricket-betting': {
+      id: '/cricket-betting'
+      path: '/cricket-betting'
+      fullPath: '/cricket-betting'
+      preLoaderRoute: typeof CricketBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricbet99': {
+      id: '/cricbet99'
+      path: '/cricbet99'
+      fullPath: '/cricbet99'
+      preLoaderRoute: typeof Cricbet99RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact-us': {
+      id: '/contact-us'
+      path: '/contact-us'
+      fullPath: '/contact-us'
+      preLoaderRoute: typeof ContactUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/casino': {
+      id: '/casino'
+      path: '/casino'
+      fullPath: '/casino'
+      preLoaderRoute: typeof CasinoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth.md': {
+      id: '/auth.md'
+      path: '/auth.md'
+      fullPath: '/auth.md'
+      preLoaderRoute: typeof AuthDotmdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/all-links': {
+      id: '/all-links'
+      path: '/all-links'
+      fullPath: '/all-links'
+      preLoaderRoute: typeof AllLinksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about-us': {
+      id: '/about-us'
+      path: '/about-us'
+      fullPath: '/about-us'
+      preLoaderRoute: typeof AboutUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/11xplay': {
+      id: '/11xplay'
+      path: '/11xplay'
+      fullPath: '/11xplay'
+      preLoaderRoute: typeof R11xplayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$': {
+      id: '/$'
+      path: '/$'
+      fullPath: '/$'
+      preLoaderRoute: typeof SplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +919,197 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/schedule/': {
+      id: '/schedule/'
+      path: '/schedule'
+      fullPath: '/schedule/'
+      preLoaderRoute: typeof ScheduleIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricket-schedule/': {
+      id: '/cricket-schedule/'
+      path: '/cricket-schedule'
+      fullPath: '/cricket-schedule/'
+      preLoaderRoute: typeof CricketScheduleIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tennis-schedule/$slug': {
+      id: '/tennis-schedule/$slug'
+      path: '/tennis-schedule/$slug'
+      fullPath: '/tennis-schedule/$slug'
+      preLoaderRoute: typeof TennisScheduleSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/schedule/$slug': {
+      id: '/schedule/$slug'
+      path: '/schedule/$slug'
+      fullPath: '/schedule/$slug'
+      preLoaderRoute: typeof ScheduleSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/post/$slug': {
+      id: '/post/$slug'
+      path: '/post/$slug'
+      fullPath: '/post/$slug'
+      preLoaderRoute: typeof PostSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/match/$id': {
+      id: '/match/$id'
+      path: '/match/$id'
+      fullPath: '/match/$id'
+      preLoaderRoute: typeof MatchIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricket-schedule/$slug': {
+      id: '/cricket-schedule/$slug'
+      path: '/cricket-schedule/$slug'
+      fullPath: '/cricket-schedule/$slug'
+      preLoaderRoute: typeof CricketScheduleSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/oauth-protected-resource': {
+      id: '/.well-known/oauth-protected-resource'
+      path: '/.well-known/oauth-protected-resource'
+      fullPath: '/.well-known/oauth-protected-resource'
+      preLoaderRoute: typeof DotwellKnownOauthProtectedResourceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/oauth-authorization-server': {
+      id: '/.well-known/oauth-authorization-server'
+      path: '/.well-known/oauth-authorization-server'
+      fullPath: '/.well-known/oauth-authorization-server'
+      preLoaderRoute: typeof DotwellKnownOauthAuthorizationServerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/jwks.json': {
+      id: '/.well-known/jwks.json'
+      path: '/.well-known/jwks.json'
+      fullPath: '/.well-known/jwks.json'
+      preLoaderRoute: typeof DotwellKnownJwksDotjsonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tennis-schedule/$slug/': {
+      id: '/tennis-schedule/$slug/'
+      path: '/'
+      fullPath: '/tennis-schedule/$slug/'
+      preLoaderRoute: typeof TennisScheduleSlugIndexRouteImport
+      parentRoute: typeof TennisScheduleSlugRoute
+    }
+    '/cricket-schedule/$slug/': {
+      id: '/cricket-schedule/$slug/'
+      path: '/'
+      fullPath: '/cricket-schedule/$slug/'
+      preLoaderRoute: typeof CricketScheduleSlugIndexRouteImport
+      parentRoute: typeof CricketScheduleSlugRoute
+    }
+    '/tennis-schedule/$slug/$round': {
+      id: '/tennis-schedule/$slug/$round'
+      path: '/$round'
+      fullPath: '/tennis-schedule/$slug/$round'
+      preLoaderRoute: typeof TennisScheduleSlugRoundRouteImport
+      parentRoute: typeof TennisScheduleSlugRoute
+    }
+    '/cricket-schedule/$slug/$match': {
+      id: '/cricket-schedule/$slug/$match'
+      path: '/$match'
+      fullPath: '/cricket-schedule/$slug/$match'
+      preLoaderRoute: typeof CricketScheduleSlugMatchRouteImport
+      parentRoute: typeof CricketScheduleSlugRoute
+    }
+    '/.well-known/mcp/server-card.json': {
+      id: '/.well-known/mcp/server-card.json'
+      path: '/.well-known/mcp/server-card.json'
+      fullPath: '/.well-known/mcp/server-card.json'
+      preLoaderRoute: typeof DotwellKnownMcpServerCardDotjsonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/agent-skills/index.json': {
+      id: '/.well-known/agent-skills/index.json'
+      path: '/.well-known/agent-skills/index.json'
+      fullPath: '/.well-known/agent-skills/index.json'
+      preLoaderRoute: typeof DotwellKnownAgentSkillsIndexDotjsonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
+interface CricketScheduleSlugRouteChildren {
+  CricketScheduleSlugMatchRoute: typeof CricketScheduleSlugMatchRoute
+  CricketScheduleSlugIndexRoute: typeof CricketScheduleSlugIndexRoute
+}
+
+const CricketScheduleSlugRouteChildren: CricketScheduleSlugRouteChildren = {
+  CricketScheduleSlugMatchRoute: CricketScheduleSlugMatchRoute,
+  CricketScheduleSlugIndexRoute: CricketScheduleSlugIndexRoute,
+}
+
+const CricketScheduleSlugRouteWithChildren =
+  CricketScheduleSlugRoute._addFileChildren(CricketScheduleSlugRouteChildren)
+
+interface TennisScheduleSlugRouteChildren {
+  TennisScheduleSlugRoundRoute: typeof TennisScheduleSlugRoundRoute
+  TennisScheduleSlugIndexRoute: typeof TennisScheduleSlugIndexRoute
+}
+
+const TennisScheduleSlugRouteChildren: TennisScheduleSlugRouteChildren = {
+  TennisScheduleSlugRoundRoute: TennisScheduleSlugRoundRoute,
+  TennisScheduleSlugIndexRoute: TennisScheduleSlugIndexRoute,
+}
+
+const TennisScheduleSlugRouteWithChildren =
+  TennisScheduleSlugRoute._addFileChildren(TennisScheduleSlugRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SplatRoute: SplatRoute,
+  R11xplayRoute: R11xplayRoute,
+  AboutRoute: AboutRoute,
+  AboutUsRoute: AboutUsRoute,
+  AllLinksRoute: AllLinksRoute,
+  AuthDotmdRoute: AuthDotmdRoute,
+  BlogRoute: BlogRoute,
+  CasinoRoute: CasinoRoute,
+  ContactRoute: ContactRoute,
+  ContactUsRoute: ContactUsRoute,
+  Cricbet99Route: Cricbet99Route,
+  CricketBettingRoute: CricketBettingRoute,
+  CricketBettingAppRoute: CricketBettingAppRoute,
+  DisclaimerRoute: DisclaimerRoute,
+  FootballBettingRoute: FootballBettingRoute,
+  HorseRaceBettingRoute: HorseRaceBettingRoute,
+  IndianCardGamesRoute: IndianCardGamesRoute,
+  Laser247Route: Laser247Route,
+  MatchesRoute: MatchesRoute,
+  PlatformsRoute: PlatformsRoute,
+  PredictionsRoute: PredictionsRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  ResponsibleGamblingRoute: ResponsibleGamblingRoute,
+  ServicesRoute: ServicesRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SportsIdRoute: SportsIdRoute,
+  SprintersClubRoute: SprintersClubRoute,
+  SprintersLoginRoute: SprintersLoginRoute,
+  SprintersVsLotus365Route: SprintersVsLotus365Route,
+  SprintersVsSkyexchange247Route: SprintersVsSkyexchange247Route,
+  TennisBettingRoute: TennisBettingRoute,
+  TermsAndConditionsRoute: TermsAndConditionsRoute,
+  ThankYouRoute: ThankYouRoute,
+  DotwellKnownJwksDotjsonRoute: DotwellKnownJwksDotjsonRoute,
+  DotwellKnownOauthAuthorizationServerRoute:
+    DotwellKnownOauthAuthorizationServerRoute,
+  DotwellKnownOauthProtectedResourceRoute:
+    DotwellKnownOauthProtectedResourceRoute,
+  CricketScheduleSlugRoute: CricketScheduleSlugRouteWithChildren,
+  MatchIdRoute: MatchIdRoute,
+  PostSlugRoute: PostSlugRoute,
+  ScheduleSlugRoute: ScheduleSlugRoute,
+  TennisScheduleSlugRoute: TennisScheduleSlugRouteWithChildren,
+  CricketScheduleIndexRoute: CricketScheduleIndexRoute,
+  ScheduleIndexRoute: ScheduleIndexRoute,
+  DotwellKnownAgentSkillsIndexDotjsonRoute:
+    DotwellKnownAgentSkillsIndexDotjsonRoute,
+  DotwellKnownMcpServerCardDotjsonRoute: DotwellKnownMcpServerCardDotjsonRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

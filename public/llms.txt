@@ -1,0 +1,32 @@
+# Sprinters Online Gaming
+
+> India's trusted online betting ID provider — cricket, football, tennis, kabaddi and live casino with 24/7 support and 24-hour withdrawals.
+
+Sprinters is a guided-access platform that helps Indian players reach premium sports betting and live casino services through a single verified ID, with real human support on WhatsApp and Telegram.
+
+## Pages
+
+- [Home](/): Overview of Sprinters, sports coverage, and how to get an ID.
+- [About](/about): Our story, mission, and what sets Sprinters apart.
+- [Services](/services): Sports betting, live casino, and platform services.
+- [Platforms](/platforms): Supported exchanges — Laser247, Tiger Exchange, Cricbet99, 11xplay and more.
+- [Contact](/contact): Reach our 24/7 support team.
+- [Blog](/blog): News, guides and match previews.
+- [Predictions](/predictions): Daily cricket match predictions, betting tips and fancy odds.
+
+## Sports & Markets
+
+- [Cricket Betting](/cricket-betting): IPL, T20 World Cup, international series, session and Fancy Bets.
+- [Football Betting](/football-betting): EPL, La Liga, UCL and ISL markets.
+- [Tennis Betting](/tennis-betting): ATP, WTA and Grand Slam markets.
+- [Horse Race Betting](/horse-race-betting): Indian and international race cards.
+- [Casino](/casino): Live dealer tables — Blackjack, Roulette, Baccarat.
+- [Indian Card Games](/indian-card-games): Teen Patti, Andar Bahar, Rummy.
+- [Sports ID](/sports-id): Multi-sport betting ID overview.
+
+## Optional
+
+- [Privacy Policy](/privacy-policy)
+- [Terms and Conditions](/terms-and-conditions)
+- [Responsible Gambling](/responsible-gambling)
+- [Disclaimer](/disclaimer)
