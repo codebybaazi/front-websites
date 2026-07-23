@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { getOrigin } from "@/lib/request-origin";
 
 // RFC 8414 OAuth 2.0 Authorization Server Metadata.
 // The site has no first-party protected APIs; this document advertises that
@@ -8,7 +9,7 @@ export const Route = createFileRoute("/.well-known/oauth-authorization-server")(
   server: {
     handlers: {
       GET: async ({ request }) => {
-        const origin = new URL(request.url).origin;
+        const origin = getOrigin(request);
         const body = {
           issuer: origin,
           authorization_endpoint: `${origin}/contact-us`,
