@@ -15,6 +15,22 @@ const config = {
   token_endpoint_auth_methods_supported: ["client_secret_basic", "client_secret_post", "none"],
   code_challenge_methods_supported: ["S256", "plain"],
   service_documentation: "https://mahadevbookss.com/.well-known/agents.json",
+  agent_auth: {
+    register_uri: "https://mahadevbookss.com/oauth/register",
+    auth_metadata_uri: "https://mahadevbookss.com/auth.md",
+    identity_types_supported: ["human", "agent", "service_account"],
+    credential_types_supported: [
+      "client_secret",
+      "private_key_jwt",
+      "dpop",
+      "mtls",
+      "api_key",
+    ],
+    claim_uri: "https://mahadevbookss.com/oauth/claim",
+    revocation_uri: "https://mahadevbookss.com/oauth/revoke",
+    introspection_uri: "https://mahadevbookss.com/oauth/introspect",
+    documentation_uri: "https://mahadevbookss.com/auth.md",
+  },
 }
 
 export const Route = createFileRoute('/.well-known/oauth-authorization-server')({
