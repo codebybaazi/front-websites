@@ -9,463 +9,127 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as AboutRouteImport } from './routes/about'
-import { Route as AccountBlockedRouteImport } from './routes/account-blocked'
-import { Route as AllLinksRouteImport } from './routes/all-links'
-import { Route as BasketballRouteImport } from './routes/basketball'
-import { Route as BecomeAgentRouteImport } from './routes/become-agent'
-import { Route as BettingGuidesRouteImport } from './routes/betting-guides'
-import { Route as BigWinStoriesRouteImport } from './routes/big-win-stories'
-import { Route as BonusRouteImport } from './routes/bonus'
-import { Route as BonusIssuesRouteImport } from './routes/bonus-issues'
-import { Route as CaseStudiesRouteImport } from './routes/case-studies'
-import { Route as CasinoRouteImport } from './routes/casino'
-import { Route as ChampionsTrophyBettingRouteImport } from './routes/champions-trophy-betting'
-import { Route as CommunityGuidelinesRouteImport } from './routes/community-guidelines'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as Cricbet99AppRouteImport } from './routes/cricbet99-app'
-import { Route as Cricbet99IdRouteImport } from './routes/cricbet99-id'
-import { Route as Cricbet99Vs11xplayRouteImport } from './routes/cricbet99-vs-11xplay'
-import { Route as Cricbet99VsFairdealRouteImport } from './routes/cricbet99-vs-fairdeal'
-import { Route as Cricbet99VsGold365RouteImport } from './routes/cricbet99-vs-gold365'
-import { Route as Cricbet99VsLaser247RouteImport } from './routes/cricbet99-vs-laser247'
-import { Route as Cricbet99VsLotus365RouteImport } from './routes/cricbet99-vs-lotus365'
-import { Route as Cricbet99VsReddybookRouteImport } from './routes/cricbet99-vs-reddybook'
-import { Route as Cricbet99VsSkyexchange247RouteImport } from './routes/cricbet99-vs-skyexchange247'
-import { Route as CricketRouteImport } from './routes/cricket'
-import { Route as DemoIdRouteImport } from './routes/demo-id'
-import { Route as DepositIssuesRouteImport } from './routes/deposit-issues'
-import { Route as DisclaimerRouteImport } from './routes/disclaimer'
-import { Route as EsportsRouteImport } from './routes/esports'
-import { Route as ExchangeRouteImport } from './routes/exchange'
-import { Route as FaqRouteImport } from './routes/faq'
-import { Route as FootballRouteImport } from './routes/football'
-import { Route as HighOddsBettingStrategyRouteImport } from './routes/high-odds-betting-strategy'
-import { Route as HorseRacingRouteImport } from './routes/horse-racing'
-import { Route as HowItWorksRouteImport } from './routes/how-it-works'
-import { Route as HowToDepositRouteImport } from './routes/how-to-deposit'
-import { Route as HowToWithdrawRouteImport } from './routes/how-to-withdraw'
-import { Route as IndianCardGamesRouteImport } from './routes/indian-card-games'
-import { Route as Ipl2026CalendarRouteImport } from './routes/ipl-2026-calendar'
-import { Route as IplBettingRouteImport } from './routes/ipl-betting'
-import { Route as IsCricbet99LegalRouteImport } from './routes/is-cricbet99-legal'
-import { Route as IsCricbet99RealRouteImport } from './routes/is-cricbet99-real'
-import { Route as IsCricbet99SafeRouteImport } from './routes/is-cricbet99-safe'
-import { Route as KabaddiRouteImport } from './routes/kabaddi'
-import { Route as KycPolicyRouteImport } from './routes/kyc-policy'
-import { Route as LoginRouteImport } from './routes/login'
-import { Route as LoginIssuesRouteImport } from './routes/login-issues'
-import { Route as MatchesRouteImport } from './routes/matches'
-import { Route as OnlineBettingRouteImport } from './routes/online-betting'
-import { Route as PlatformsRouteImport } from './routes/platforms'
-import { Route as PoliciesRouteImport } from './routes/policies'
-import { Route as PredictionsRouteImport } from './routes/predictions'
-import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
-import { Route as ReferralCodeRouteImport } from './routes/referral-code'
-import { Route as RefundPolicyRouteImport } from './routes/refund-policy'
-import { Route as RegisterRouteImport } from './routes/register'
-import { Route as ResponsibleGamingRouteImport } from './routes/responsible-gaming'
-import { Route as ReviewsRouteImport } from './routes/reviews'
-import { Route as RulesRouteImport } from './routes/rules'
-import { Route as ScheduleRouteImport } from './routes/schedule'
-import { Route as SecurityRouteImport } from './routes/security'
-import { Route as ServicesRouteImport } from './routes/services'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as SportsBettingRouteImport } from './routes/sports-betting'
-import { Route as SportsIdRouteImport } from './routes/sports-id'
-import { Route as SupportRouteImport } from './routes/support'
-import { Route as T20WorldCupBettingRouteImport } from './routes/t20-world-cup-betting'
-import { Route as TelegramChannelRouteImport } from './routes/telegram-channel'
-import { Route as TennisRouteImport } from './routes/tennis'
-import { Route as TermsRouteImport } from './routes/terms'
-import { Route as TodaysBestOddsRouteImport } from './routes/todays-best-odds'
-import { Route as TransactionLimitsRouteImport } from './routes/transaction-limits'
-import { Route as TrustedBettingAgentRouteImport } from './routes/trusted-betting-agent'
-import { Route as TrustedBettingIdProviderRouteImport } from './routes/trusted-betting-id-provider'
-import { Route as WhatIsCricbet99RouteImport } from './routes/what-is-cricbet99'
-import { Route as WhatsappNumberRouteImport } from './routes/whatsapp-number'
-import { Route as WhatsappSupportRouteImport } from './routes/whatsapp-support'
-import { Route as WhyChooseCricbet99RouteImport } from './routes/why-choose-cricbet99'
-import { Route as WithdrawalDelayRouteImport } from './routes/withdrawal-delay'
 import { Route as Wpl2026BettingRouteImport } from './routes/wpl-2026-betting'
-import { Route as BettingGuidesHowBookmakersMakeMoneyRouteImport } from './routes/betting-guides.how-bookmakers-make-money'
-import { Route as BettingGuidesHowToBetOnSessionBettingRouteImport } from './routes/betting-guides.how-to-bet-on-session-betting'
-import { Route as BettingGuidesHowToBetOnTossMarketRouteImport } from './routes/betting-guides.how-to-bet-on-toss-market'
-import { Route as BettingGuidesHowToPlaceACricketBetRouteImport } from './routes/betting-guides.how-to-place-a-cricket-bet'
-import { Route as BettingGuidesHowToPlaceALiveBetRouteImport } from './routes/betting-guides.how-to-place-a-live-bet'
-import { Route as BettingGuidesHowToSetBettingLimitsRouteImport } from './routes/betting-guides.how-to-set-betting-limits'
+import { Route as WithdrawalDelayRouteImport } from './routes/withdrawal-delay'
+import { Route as WhyChooseCricbet99RouteImport } from './routes/why-choose-cricbet99'
+import { Route as WhatsappSupportRouteImport } from './routes/whatsapp-support'
+import { Route as WhatsappNumberRouteImport } from './routes/whatsapp-number'
+import { Route as WhatIsCricbet99RouteImport } from './routes/what-is-cricbet99'
+import { Route as TrustedBettingIdProviderRouteImport } from './routes/trusted-betting-id-provider'
+import { Route as TrustedBettingAgentRouteImport } from './routes/trusted-betting-agent'
+import { Route as TransactionLimitsRouteImport } from './routes/transaction-limits'
+import { Route as TodaysBestOddsRouteImport } from './routes/todays-best-odds'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as TennisRouteImport } from './routes/tennis'
+import { Route as TelegramChannelRouteImport } from './routes/telegram-channel'
+import { Route as T20WorldCupBettingRouteImport } from './routes/t20-world-cup-betting'
+import { Route as SupportRouteImport } from './routes/support'
+import { Route as SportsIdRouteImport } from './routes/sports-id'
+import { Route as SportsBettingRouteImport } from './routes/sports-betting'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as SecurityRouteImport } from './routes/security'
+import { Route as ScheduleRouteImport } from './routes/schedule'
+import { Route as RulesRouteImport } from './routes/rules'
+import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as ResponsibleGamingRouteImport } from './routes/responsible-gaming'
+import { Route as RegisterRouteImport } from './routes/register'
+import { Route as RefundPolicyRouteImport } from './routes/refund-policy'
+import { Route as ReferralCodeRouteImport } from './routes/referral-code'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as PredictionsRouteImport } from './routes/predictions'
+import { Route as PoliciesRouteImport } from './routes/policies'
+import { Route as PlatformsRouteImport } from './routes/platforms'
+import { Route as OnlineBettingRouteImport } from './routes/online-betting'
+import { Route as MatchesRouteImport } from './routes/matches'
+import { Route as LoginIssuesRouteImport } from './routes/login-issues'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as KycPolicyRouteImport } from './routes/kyc-policy'
+import { Route as KabaddiRouteImport } from './routes/kabaddi'
+import { Route as IsCricbet99SafeRouteImport } from './routes/is-cricbet99-safe'
+import { Route as IsCricbet99RealRouteImport } from './routes/is-cricbet99-real'
+import { Route as IsCricbet99LegalRouteImport } from './routes/is-cricbet99-legal'
+import { Route as IplBettingRouteImport } from './routes/ipl-betting'
+import { Route as Ipl2026CalendarRouteImport } from './routes/ipl-2026-calendar'
+import { Route as IndianCardGamesRouteImport } from './routes/indian-card-games'
+import { Route as HowToWithdrawRouteImport } from './routes/how-to-withdraw'
+import { Route as HowToDepositRouteImport } from './routes/how-to-deposit'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as HorseRacingRouteImport } from './routes/horse-racing'
+import { Route as HighOddsBettingStrategyRouteImport } from './routes/high-odds-betting-strategy'
+import { Route as FootballRouteImport } from './routes/football'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as ExchangeRouteImport } from './routes/exchange'
+import { Route as EsportsRouteImport } from './routes/esports'
+import { Route as DisclaimerRouteImport } from './routes/disclaimer'
+import { Route as DepositIssuesRouteImport } from './routes/deposit-issues'
+import { Route as DemoIdRouteImport } from './routes/demo-id'
+import { Route as CricketRouteImport } from './routes/cricket'
+import { Route as Cricbet99VsSkyexchange247RouteImport } from './routes/cricbet99-vs-skyexchange247'
+import { Route as Cricbet99VsReddybookRouteImport } from './routes/cricbet99-vs-reddybook'
+import { Route as Cricbet99VsLotus365RouteImport } from './routes/cricbet99-vs-lotus365'
+import { Route as Cricbet99VsLaser247RouteImport } from './routes/cricbet99-vs-laser247'
+import { Route as Cricbet99VsGold365RouteImport } from './routes/cricbet99-vs-gold365'
+import { Route as Cricbet99VsFairdealRouteImport } from './routes/cricbet99-vs-fairdeal'
+import { Route as Cricbet99Vs11xplayRouteImport } from './routes/cricbet99-vs-11xplay'
+import { Route as Cricbet99IdRouteImport } from './routes/cricbet99-id'
+import { Route as Cricbet99AppRouteImport } from './routes/cricbet99-app'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CommunityGuidelinesRouteImport } from './routes/community-guidelines'
+import { Route as ChampionsTrophyBettingRouteImport } from './routes/champions-trophy-betting'
+import { Route as CasinoRouteImport } from './routes/casino'
+import { Route as CaseStudiesRouteImport } from './routes/case-studies'
+import { Route as BonusIssuesRouteImport } from './routes/bonus-issues'
+import { Route as BonusRouteImport } from './routes/bonus'
+import { Route as BigWinStoriesRouteImport } from './routes/big-win-stories'
+import { Route as BettingGuidesRouteImport } from './routes/betting-guides'
+import { Route as BecomeAgentRouteImport } from './routes/become-agent'
+import { Route as BasketballRouteImport } from './routes/basketball'
+import { Route as AllLinksRouteImport } from './routes/all-links'
+import { Route as AccountBlockedRouteImport } from './routes/account-blocked'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
-import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
-import { Route as CaseStudiesIpl5000To25000ProfitRouteImport } from './routes/case-studies.ipl-5000-to-25000-profit'
-import { Route as CaseStudiesLiveBetting3xReturnsRouteImport } from './routes/case-studies.live-betting-3x-returns'
-import { Route as CaseStudiesSmallBudgetBettingStrategyRouteImport } from './routes/case-studies.small-budget-betting-strategy'
 import { Route as CaseStudiesTossMarket10MinuteProfitRouteImport } from './routes/case-studies.toss-market-10-minute-profit'
+import { Route as CaseStudiesSmallBudgetBettingStrategyRouteImport } from './routes/case-studies.small-budget-betting-strategy'
+import { Route as CaseStudiesLiveBetting3xReturnsRouteImport } from './routes/case-studies.live-betting-3x-returns'
+import { Route as CaseStudiesIpl5000To25000ProfitRouteImport } from './routes/case-studies.ipl-5000-to-25000-profit'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as BettingGuidesHowToSetBettingLimitsRouteImport } from './routes/betting-guides.how-to-set-betting-limits'
+import { Route as BettingGuidesHowToPlaceALiveBetRouteImport } from './routes/betting-guides.how-to-place-a-live-bet'
+import { Route as BettingGuidesHowToPlaceACricketBetRouteImport } from './routes/betting-guides.how-to-place-a-cricket-bet'
+import { Route as BettingGuidesHowToBetOnTossMarketRouteImport } from './routes/betting-guides.how-to-bet-on-toss-market'
+import { Route as BettingGuidesHowToBetOnSessionBettingRouteImport } from './routes/betting-guides.how-to-bet-on-session-betting'
+import { Route as BettingGuidesHowBookmakersMakeMoneyRouteImport } from './routes/betting-guides.how-bookmakers-make-money'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const Wpl2026BettingRoute = Wpl2026BettingRouteImport.update({
+  id: '/wpl-2026-betting',
+  path: '/wpl-2026-betting',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
+const WithdrawalDelayRoute = WithdrawalDelayRouteImport.update({
+  id: '/withdrawal-delay',
+  path: '/withdrawal-delay',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AccountBlockedRoute = AccountBlockedRouteImport.update({
-  id: '/account-blocked',
-  path: '/account-blocked',
+const WhyChooseCricbet99Route = WhyChooseCricbet99RouteImport.update({
+  id: '/why-choose-cricbet99',
+  path: '/why-choose-cricbet99',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AllLinksRoute = AllLinksRouteImport.update({
-  id: '/all-links',
-  path: '/all-links',
+const WhatsappSupportRoute = WhatsappSupportRouteImport.update({
+  id: '/whatsapp-support',
+  path: '/whatsapp-support',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BasketballRoute = BasketballRouteImport.update({
-  id: '/basketball',
-  path: '/basketball',
+const WhatsappNumberRoute = WhatsappNumberRouteImport.update({
+  id: '/whatsapp-number',
+  path: '/whatsapp-number',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BecomeAgentRoute = BecomeAgentRouteImport.update({
-  id: '/become-agent',
-  path: '/become-agent',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BettingGuidesRoute = BettingGuidesRouteImport.update({
-  id: '/betting-guides',
-  path: '/betting-guides',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BigWinStoriesRoute = BigWinStoriesRouteImport.update({
-  id: '/big-win-stories',
-  path: '/big-win-stories',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BonusRoute = BonusRouteImport.update({
-  id: '/bonus',
-  path: '/bonus',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BonusIssuesRoute = BonusIssuesRouteImport.update({
-  id: '/bonus-issues',
-  path: '/bonus-issues',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CaseStudiesRoute = CaseStudiesRouteImport.update({
-  id: '/case-studies',
-  path: '/case-studies',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CasinoRoute = CasinoRouteImport.update({
-  id: '/casino',
-  path: '/casino',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ChampionsTrophyBettingRoute = ChampionsTrophyBettingRouteImport.update({
-  id: '/champions-trophy-betting',
-  path: '/champions-trophy-betting',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CommunityGuidelinesRoute = CommunityGuidelinesRouteImport.update({
-  id: '/community-guidelines',
-  path: '/community-guidelines',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Cricbet99AppRoute = Cricbet99AppRouteImport.update({
-  id: '/cricbet99-app',
-  path: '/cricbet99-app',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Cricbet99IdRoute = Cricbet99IdRouteImport.update({
-  id: '/cricbet99-id',
-  path: '/cricbet99-id',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Cricbet99Vs11xplayRoute = Cricbet99Vs11xplayRouteImport.update({
-  id: '/cricbet99-vs-11xplay',
-  path: '/cricbet99-vs-11xplay',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Cricbet99VsFairdealRoute = Cricbet99VsFairdealRouteImport.update({
-  id: '/cricbet99-vs-fairdeal',
-  path: '/cricbet99-vs-fairdeal',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Cricbet99VsGold365Route = Cricbet99VsGold365RouteImport.update({
-  id: '/cricbet99-vs-gold365',
-  path: '/cricbet99-vs-gold365',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Cricbet99VsLaser247Route = Cricbet99VsLaser247RouteImport.update({
-  id: '/cricbet99-vs-laser247',
-  path: '/cricbet99-vs-laser247',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Cricbet99VsLotus365Route = Cricbet99VsLotus365RouteImport.update({
-  id: '/cricbet99-vs-lotus365',
-  path: '/cricbet99-vs-lotus365',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Cricbet99VsReddybookRoute = Cricbet99VsReddybookRouteImport.update({
-  id: '/cricbet99-vs-reddybook',
-  path: '/cricbet99-vs-reddybook',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Cricbet99VsSkyexchange247Route =
-  Cricbet99VsSkyexchange247RouteImport.update({
-    id: '/cricbet99-vs-skyexchange247',
-    path: '/cricbet99-vs-skyexchange247',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const CricketRoute = CricketRouteImport.update({
-  id: '/cricket',
-  path: '/cricket',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemoIdRoute = DemoIdRouteImport.update({
-  id: '/demo-id',
-  path: '/demo-id',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DepositIssuesRoute = DepositIssuesRouteImport.update({
-  id: '/deposit-issues',
-  path: '/deposit-issues',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DisclaimerRoute = DisclaimerRouteImport.update({
-  id: '/disclaimer',
-  path: '/disclaimer',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EsportsRoute = EsportsRouteImport.update({
-  id: '/esports',
-  path: '/esports',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ExchangeRoute = ExchangeRouteImport.update({
-  id: '/exchange',
-  path: '/exchange',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FaqRoute = FaqRouteImport.update({
-  id: '/faq',
-  path: '/faq',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FootballRoute = FootballRouteImport.update({
-  id: '/football',
-  path: '/football',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HighOddsBettingStrategyRoute = HighOddsBettingStrategyRouteImport.update({
-  id: '/high-odds-betting-strategy',
-  path: '/high-odds-betting-strategy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HorseRacingRoute = HorseRacingRouteImport.update({
-  id: '/horse-racing',
-  path: '/horse-racing',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HowItWorksRoute = HowItWorksRouteImport.update({
-  id: '/how-it-works',
-  path: '/how-it-works',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HowToDepositRoute = HowToDepositRouteImport.update({
-  id: '/how-to-deposit',
-  path: '/how-to-deposit',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HowToWithdrawRoute = HowToWithdrawRouteImport.update({
-  id: '/how-to-withdraw',
-  path: '/how-to-withdraw',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IndianCardGamesRoute = IndianCardGamesRouteImport.update({
-  id: '/indian-card-games',
-  path: '/indian-card-games',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Ipl2026CalendarRoute = Ipl2026CalendarRouteImport.update({
-  id: '/ipl-2026-calendar',
-  path: '/ipl-2026-calendar',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IplBettingRoute = IplBettingRouteImport.update({
-  id: '/ipl-betting',
-  path: '/ipl-betting',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IsCricbet99LegalRoute = IsCricbet99LegalRouteImport.update({
-  id: '/is-cricbet99-legal',
-  path: '/is-cricbet99-legal',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IsCricbet99RealRoute = IsCricbet99RealRouteImport.update({
-  id: '/is-cricbet99-real',
-  path: '/is-cricbet99-real',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IsCricbet99SafeRoute = IsCricbet99SafeRouteImport.update({
-  id: '/is-cricbet99-safe',
-  path: '/is-cricbet99-safe',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const KabaddiRoute = KabaddiRouteImport.update({
-  id: '/kabaddi',
-  path: '/kabaddi',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const KycPolicyRoute = KycPolicyRouteImport.update({
-  id: '/kyc-policy',
-  path: '/kyc-policy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LoginRoute = LoginRouteImport.update({
-  id: '/login',
-  path: '/login',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LoginIssuesRoute = LoginIssuesRouteImport.update({
-  id: '/login-issues',
-  path: '/login-issues',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MatchesRoute = MatchesRouteImport.update({
-  id: '/matches',
-  path: '/matches',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OnlineBettingRoute = OnlineBettingRouteImport.update({
-  id: '/online-betting',
-  path: '/online-betting',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PlatformsRoute = PlatformsRouteImport.update({
-  id: '/platforms',
-  path: '/platforms',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PoliciesRoute = PoliciesRouteImport.update({
-  id: '/policies',
-  path: '/policies',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PredictionsRoute = PredictionsRouteImport.update({
-  id: '/predictions',
-  path: '/predictions',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
-  id: '/privacy-policy',
-  path: '/privacy-policy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ReferralCodeRoute = ReferralCodeRouteImport.update({
-  id: '/referral-code',
-  path: '/referral-code',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RefundPolicyRoute = RefundPolicyRouteImport.update({
-  id: '/refund-policy',
-  path: '/refund-policy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RegisterRoute = RegisterRouteImport.update({
-  id: '/register',
-  path: '/register',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ResponsibleGamingRoute = ResponsibleGamingRouteImport.update({
-  id: '/responsible-gaming',
-  path: '/responsible-gaming',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ReviewsRoute = ReviewsRouteImport.update({
-  id: '/reviews',
-  path: '/reviews',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RulesRoute = RulesRouteImport.update({
-  id: '/rules',
-  path: '/rules',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ScheduleRoute = ScheduleRouteImport.update({
-  id: '/schedule',
-  path: '/schedule',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SecurityRoute = SecurityRouteImport.update({
-  id: '/security',
-  path: '/security',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SportsBettingRoute = SportsBettingRouteImport.update({
-  id: '/sports-betting',
-  path: '/sports-betting',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SportsIdRoute = SportsIdRouteImport.update({
-  id: '/sports-id',
-  path: '/sports-id',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SupportRoute = SupportRouteImport.update({
-  id: '/support',
-  path: '/support',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const T20WorldCupBettingRoute = T20WorldCupBettingRouteImport.update({
-  id: '/t20-world-cup-betting',
-  path: '/t20-world-cup-betting',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TelegramChannelRoute = TelegramChannelRouteImport.update({
-  id: '/telegram-channel',
-  path: '/telegram-channel',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TennisRoute = TennisRouteImport.update({
-  id: '/tennis',
-  path: '/tennis',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TermsRoute = TermsRouteImport.update({
-  id: '/terms',
-  path: '/terms',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TodaysBestOddsRoute = TodaysBestOddsRouteImport.update({
-  id: '/todays-best-odds',
-  path: '/todays-best-odds',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TransactionLimitsRoute = TransactionLimitsRouteImport.update({
-  id: '/transaction-limits',
-  path: '/transaction-limits',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TrustedBettingAgentRoute = TrustedBettingAgentRouteImport.update({
-  id: '/trusted-betting-agent',
-  path: '/trusted-betting-agent',
+const WhatIsCricbet99Route = WhatIsCricbet99RouteImport.update({
+  id: '/what-is-cricbet99',
+  path: '/what-is-cricbet99',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TrustedBettingIdProviderRoute =
@@ -474,92 +138,381 @@ const TrustedBettingIdProviderRoute =
     path: '/trusted-betting-id-provider',
     getParentRoute: () => rootRouteImport,
   } as any)
-const WhatIsCricbet99Route = WhatIsCricbet99RouteImport.update({
-  id: '/what-is-cricbet99',
-  path: '/what-is-cricbet99',
+const TrustedBettingAgentRoute = TrustedBettingAgentRouteImport.update({
+  id: '/trusted-betting-agent',
+  path: '/trusted-betting-agent',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WhatsappNumberRoute = WhatsappNumberRouteImport.update({
-  id: '/whatsapp-number',
-  path: '/whatsapp-number',
+const TransactionLimitsRoute = TransactionLimitsRouteImport.update({
+  id: '/transaction-limits',
+  path: '/transaction-limits',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WhatsappSupportRoute = WhatsappSupportRouteImport.update({
-  id: '/whatsapp-support',
-  path: '/whatsapp-support',
+const TodaysBestOddsRoute = TodaysBestOddsRouteImport.update({
+  id: '/todays-best-odds',
+  path: '/todays-best-odds',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WhyChooseCricbet99Route = WhyChooseCricbet99RouteImport.update({
-  id: '/why-choose-cricbet99',
-  path: '/why-choose-cricbet99',
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WithdrawalDelayRoute = WithdrawalDelayRouteImport.update({
-  id: '/withdrawal-delay',
-  path: '/withdrawal-delay',
+const TennisRoute = TennisRouteImport.update({
+  id: '/tennis',
+  path: '/tennis',
   getParentRoute: () => rootRouteImport,
 } as any)
-const Wpl2026BettingRoute = Wpl2026BettingRouteImport.update({
-  id: '/wpl-2026-betting',
-  path: '/wpl-2026-betting',
+const TelegramChannelRoute = TelegramChannelRouteImport.update({
+  id: '/telegram-channel',
+  path: '/telegram-channel',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BettingGuidesHowBookmakersMakeMoneyRoute =
-  BettingGuidesHowBookmakersMakeMoneyRouteImport.update({
-    id: '/how-bookmakers-make-money',
-    path: '/how-bookmakers-make-money',
-    getParentRoute: () => BettingGuidesRoute,
+const T20WorldCupBettingRoute = T20WorldCupBettingRouteImport.update({
+  id: '/t20-world-cup-betting',
+  path: '/t20-world-cup-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SupportRoute = SupportRouteImport.update({
+  id: '/support',
+  path: '/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SportsIdRoute = SportsIdRouteImport.update({
+  id: '/sports-id',
+  path: '/sports-id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SportsBettingRoute = SportsBettingRouteImport.update({
+  id: '/sports-betting',
+  path: '/sports-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SecurityRoute = SecurityRouteImport.update({
+  id: '/security',
+  path: '/security',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScheduleRoute = ScheduleRouteImport.update({
+  id: '/schedule',
+  path: '/schedule',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RulesRoute = RulesRouteImport.update({
+  id: '/rules',
+  path: '/rules',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResponsibleGamingRoute = ResponsibleGamingRouteImport.update({
+  id: '/responsible-gaming',
+  path: '/responsible-gaming',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegisterRoute = RegisterRouteImport.update({
+  id: '/register',
+  path: '/register',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RefundPolicyRoute = RefundPolicyRouteImport.update({
+  id: '/refund-policy',
+  path: '/refund-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReferralCodeRoute = ReferralCodeRouteImport.update({
+  id: '/referral-code',
+  path: '/referral-code',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PredictionsRoute = PredictionsRouteImport.update({
+  id: '/predictions',
+  path: '/predictions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliciesRoute = PoliciesRouteImport.update({
+  id: '/policies',
+  path: '/policies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlatformsRoute = PlatformsRouteImport.update({
+  id: '/platforms',
+  path: '/platforms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OnlineBettingRoute = OnlineBettingRouteImport.update({
+  id: '/online-betting',
+  path: '/online-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MatchesRoute = MatchesRouteImport.update({
+  id: '/matches',
+  path: '/matches',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginIssuesRoute = LoginIssuesRouteImport.update({
+  id: '/login-issues',
+  path: '/login-issues',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KycPolicyRoute = KycPolicyRouteImport.update({
+  id: '/kyc-policy',
+  path: '/kyc-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KabaddiRoute = KabaddiRouteImport.update({
+  id: '/kabaddi',
+  path: '/kabaddi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IsCricbet99SafeRoute = IsCricbet99SafeRouteImport.update({
+  id: '/is-cricbet99-safe',
+  path: '/is-cricbet99-safe',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IsCricbet99RealRoute = IsCricbet99RealRouteImport.update({
+  id: '/is-cricbet99-real',
+  path: '/is-cricbet99-real',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IsCricbet99LegalRoute = IsCricbet99LegalRouteImport.update({
+  id: '/is-cricbet99-legal',
+  path: '/is-cricbet99-legal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IplBettingRoute = IplBettingRouteImport.update({
+  id: '/ipl-betting',
+  path: '/ipl-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Ipl2026CalendarRoute = Ipl2026CalendarRouteImport.update({
+  id: '/ipl-2026-calendar',
+  path: '/ipl-2026-calendar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndianCardGamesRoute = IndianCardGamesRouteImport.update({
+  id: '/indian-card-games',
+  path: '/indian-card-games',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowToWithdrawRoute = HowToWithdrawRouteImport.update({
+  id: '/how-to-withdraw',
+  path: '/how-to-withdraw',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowToDepositRoute = HowToDepositRouteImport.update({
+  id: '/how-to-deposit',
+  path: '/how-to-deposit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HorseRacingRoute = HorseRacingRouteImport.update({
+  id: '/horse-racing',
+  path: '/horse-racing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HighOddsBettingStrategyRoute = HighOddsBettingStrategyRouteImport.update({
+  id: '/high-odds-betting-strategy',
+  path: '/high-odds-betting-strategy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FootballRoute = FootballRouteImport.update({
+  id: '/football',
+  path: '/football',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExchangeRoute = ExchangeRouteImport.update({
+  id: '/exchange',
+  path: '/exchange',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsportsRoute = EsportsRouteImport.update({
+  id: '/esports',
+  path: '/esports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DisclaimerRoute = DisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DepositIssuesRoute = DepositIssuesRouteImport.update({
+  id: '/deposit-issues',
+  path: '/deposit-issues',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemoIdRoute = DemoIdRouteImport.update({
+  id: '/demo-id',
+  path: '/demo-id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CricketRoute = CricketRouteImport.update({
+  id: '/cricket',
+  path: '/cricket',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Cricbet99VsSkyexchange247Route =
+  Cricbet99VsSkyexchange247RouteImport.update({
+    id: '/cricbet99-vs-skyexchange247',
+    path: '/cricbet99-vs-skyexchange247',
+    getParentRoute: () => rootRouteImport,
   } as any)
-const BettingGuidesHowToBetOnSessionBettingRoute =
-  BettingGuidesHowToBetOnSessionBettingRouteImport.update({
-    id: '/how-to-bet-on-session-betting',
-    path: '/how-to-bet-on-session-betting',
-    getParentRoute: () => BettingGuidesRoute,
-  } as any)
-const BettingGuidesHowToBetOnTossMarketRoute =
-  BettingGuidesHowToBetOnTossMarketRouteImport.update({
-    id: '/how-to-bet-on-toss-market',
-    path: '/how-to-bet-on-toss-market',
-    getParentRoute: () => BettingGuidesRoute,
-  } as any)
-const BettingGuidesHowToPlaceACricketBetRoute =
-  BettingGuidesHowToPlaceACricketBetRouteImport.update({
-    id: '/how-to-place-a-cricket-bet',
-    path: '/how-to-place-a-cricket-bet',
-    getParentRoute: () => BettingGuidesRoute,
-  } as any)
-const BettingGuidesHowToPlaceALiveBetRoute =
-  BettingGuidesHowToPlaceALiveBetRouteImport.update({
-    id: '/how-to-place-a-live-bet',
-    path: '/how-to-place-a-live-bet',
-    getParentRoute: () => BettingGuidesRoute,
-  } as any)
-const BettingGuidesHowToSetBettingLimitsRoute =
-  BettingGuidesHowToSetBettingLimitsRouteImport.update({
-    id: '/how-to-set-betting-limits',
-    path: '/how-to-set-betting-limits',
-    getParentRoute: () => BettingGuidesRoute,
-  } as any)
+const Cricbet99VsReddybookRoute = Cricbet99VsReddybookRouteImport.update({
+  id: '/cricbet99-vs-reddybook',
+  path: '/cricbet99-vs-reddybook',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Cricbet99VsLotus365Route = Cricbet99VsLotus365RouteImport.update({
+  id: '/cricbet99-vs-lotus365',
+  path: '/cricbet99-vs-lotus365',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Cricbet99VsLaser247Route = Cricbet99VsLaser247RouteImport.update({
+  id: '/cricbet99-vs-laser247',
+  path: '/cricbet99-vs-laser247',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Cricbet99VsGold365Route = Cricbet99VsGold365RouteImport.update({
+  id: '/cricbet99-vs-gold365',
+  path: '/cricbet99-vs-gold365',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Cricbet99VsFairdealRoute = Cricbet99VsFairdealRouteImport.update({
+  id: '/cricbet99-vs-fairdeal',
+  path: '/cricbet99-vs-fairdeal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Cricbet99Vs11xplayRoute = Cricbet99Vs11xplayRouteImport.update({
+  id: '/cricbet99-vs-11xplay',
+  path: '/cricbet99-vs-11xplay',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Cricbet99IdRoute = Cricbet99IdRouteImport.update({
+  id: '/cricbet99-id',
+  path: '/cricbet99-id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Cricbet99AppRoute = Cricbet99AppRouteImport.update({
+  id: '/cricbet99-app',
+  path: '/cricbet99-app',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CommunityGuidelinesRoute = CommunityGuidelinesRouteImport.update({
+  id: '/community-guidelines',
+  path: '/community-guidelines',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChampionsTrophyBettingRoute = ChampionsTrophyBettingRouteImport.update({
+  id: '/champions-trophy-betting',
+  path: '/champions-trophy-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CasinoRoute = CasinoRouteImport.update({
+  id: '/casino',
+  path: '/casino',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaseStudiesRoute = CaseStudiesRouteImport.update({
+  id: '/case-studies',
+  path: '/case-studies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BonusIssuesRoute = BonusIssuesRouteImport.update({
+  id: '/bonus-issues',
+  path: '/bonus-issues',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BonusRoute = BonusRouteImport.update({
+  id: '/bonus',
+  path: '/bonus',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BigWinStoriesRoute = BigWinStoriesRouteImport.update({
+  id: '/big-win-stories',
+  path: '/big-win-stories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BettingGuidesRoute = BettingGuidesRouteImport.update({
+  id: '/betting-guides',
+  path: '/betting-guides',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BecomeAgentRoute = BecomeAgentRouteImport.update({
+  id: '/become-agent',
+  path: '/become-agent',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BasketballRoute = BasketballRouteImport.update({
+  id: '/basketball',
+  path: '/basketball',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AllLinksRoute = AllLinksRouteImport.update({
+  id: '/all-links',
+  path: '/all-links',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccountBlockedRoute = AccountBlockedRouteImport.update({
+  id: '/account-blocked',
+  path: '/account-blocked',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: '/blog/$slug',
-  path: '/blog/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CaseStudiesIpl5000To25000ProfitRoute =
-  CaseStudiesIpl5000To25000ProfitRouteImport.update({
-    id: '/ipl-5000-to-25000-profit',
-    path: '/ipl-5000-to-25000-profit',
-    getParentRoute: () => CaseStudiesRoute,
-  } as any)
-const CaseStudiesLiveBetting3xReturnsRoute =
-  CaseStudiesLiveBetting3xReturnsRouteImport.update({
-    id: '/live-betting-3x-returns',
-    path: '/live-betting-3x-returns',
+const CaseStudiesTossMarket10MinuteProfitRoute =
+  CaseStudiesTossMarket10MinuteProfitRouteImport.update({
+    id: '/toss-market-10-minute-profit',
+    path: '/toss-market-10-minute-profit',
     getParentRoute: () => CaseStudiesRoute,
   } as any)
 const CaseStudiesSmallBudgetBettingStrategyRoute =
@@ -568,11 +521,58 @@ const CaseStudiesSmallBudgetBettingStrategyRoute =
     path: '/small-budget-betting-strategy',
     getParentRoute: () => CaseStudiesRoute,
   } as any)
-const CaseStudiesTossMarket10MinuteProfitRoute =
-  CaseStudiesTossMarket10MinuteProfitRouteImport.update({
-    id: '/toss-market-10-minute-profit',
-    path: '/toss-market-10-minute-profit',
+const CaseStudiesLiveBetting3xReturnsRoute =
+  CaseStudiesLiveBetting3xReturnsRouteImport.update({
+    id: '/live-betting-3x-returns',
+    path: '/live-betting-3x-returns',
     getParentRoute: () => CaseStudiesRoute,
+  } as any)
+const CaseStudiesIpl5000To25000ProfitRoute =
+  CaseStudiesIpl5000To25000ProfitRouteImport.update({
+    id: '/ipl-5000-to-25000-profit',
+    path: '/ipl-5000-to-25000-profit',
+    getParentRoute: () => CaseStudiesRoute,
+  } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BettingGuidesHowToSetBettingLimitsRoute =
+  BettingGuidesHowToSetBettingLimitsRouteImport.update({
+    id: '/how-to-set-betting-limits',
+    path: '/how-to-set-betting-limits',
+    getParentRoute: () => BettingGuidesRoute,
+  } as any)
+const BettingGuidesHowToPlaceALiveBetRoute =
+  BettingGuidesHowToPlaceALiveBetRouteImport.update({
+    id: '/how-to-place-a-live-bet',
+    path: '/how-to-place-a-live-bet',
+    getParentRoute: () => BettingGuidesRoute,
+  } as any)
+const BettingGuidesHowToPlaceACricketBetRoute =
+  BettingGuidesHowToPlaceACricketBetRouteImport.update({
+    id: '/how-to-place-a-cricket-bet',
+    path: '/how-to-place-a-cricket-bet',
+    getParentRoute: () => BettingGuidesRoute,
+  } as any)
+const BettingGuidesHowToBetOnTossMarketRoute =
+  BettingGuidesHowToBetOnTossMarketRouteImport.update({
+    id: '/how-to-bet-on-toss-market',
+    path: '/how-to-bet-on-toss-market',
+    getParentRoute: () => BettingGuidesRoute,
+  } as any)
+const BettingGuidesHowToBetOnSessionBettingRoute =
+  BettingGuidesHowToBetOnSessionBettingRouteImport.update({
+    id: '/how-to-bet-on-session-betting',
+    path: '/how-to-bet-on-session-betting',
+    getParentRoute: () => BettingGuidesRoute,
+  } as any)
+const BettingGuidesHowBookmakersMakeMoneyRoute =
+  BettingGuidesHowBookmakersMakeMoneyRouteImport.update({
+    id: '/how-bookmakers-make-money',
+    path: '/how-bookmakers-make-money',
+    getParentRoute: () => BettingGuidesRoute,
   } as any)
 
 export interface FileRoutesByFullPath {
@@ -1230,550 +1230,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/account-blocked': {
-      id: '/account-blocked'
-      path: '/account-blocked'
-      fullPath: '/account-blocked'
-      preLoaderRoute: typeof AccountBlockedRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/all-links': {
-      id: '/all-links'
-      path: '/all-links'
-      fullPath: '/all-links'
-      preLoaderRoute: typeof AllLinksRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/basketball': {
-      id: '/basketball'
-      path: '/basketball'
-      fullPath: '/basketball'
-      preLoaderRoute: typeof BasketballRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/become-agent': {
-      id: '/become-agent'
-      path: '/become-agent'
-      fullPath: '/become-agent'
-      preLoaderRoute: typeof BecomeAgentRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/betting-guides': {
-      id: '/betting-guides'
-      path: '/betting-guides'
-      fullPath: '/betting-guides'
-      preLoaderRoute: typeof BettingGuidesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/big-win-stories': {
-      id: '/big-win-stories'
-      path: '/big-win-stories'
-      fullPath: '/big-win-stories'
-      preLoaderRoute: typeof BigWinStoriesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/bonus': {
-      id: '/bonus'
-      path: '/bonus'
-      fullPath: '/bonus'
-      preLoaderRoute: typeof BonusRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/bonus-issues': {
-      id: '/bonus-issues'
-      path: '/bonus-issues'
-      fullPath: '/bonus-issues'
-      preLoaderRoute: typeof BonusIssuesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/case-studies': {
-      id: '/case-studies'
-      path: '/case-studies'
-      fullPath: '/case-studies'
-      preLoaderRoute: typeof CaseStudiesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/casino': {
-      id: '/casino'
-      path: '/casino'
-      fullPath: '/casino'
-      preLoaderRoute: typeof CasinoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/champions-trophy-betting': {
-      id: '/champions-trophy-betting'
-      path: '/champions-trophy-betting'
-      fullPath: '/champions-trophy-betting'
-      preLoaderRoute: typeof ChampionsTrophyBettingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/community-guidelines': {
-      id: '/community-guidelines'
-      path: '/community-guidelines'
-      fullPath: '/community-guidelines'
-      preLoaderRoute: typeof CommunityGuidelinesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cricbet99-app': {
-      id: '/cricbet99-app'
-      path: '/cricbet99-app'
-      fullPath: '/cricbet99-app'
-      preLoaderRoute: typeof Cricbet99AppRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cricbet99-id': {
-      id: '/cricbet99-id'
-      path: '/cricbet99-id'
-      fullPath: '/cricbet99-id'
-      preLoaderRoute: typeof Cricbet99IdRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cricbet99-vs-11xplay': {
-      id: '/cricbet99-vs-11xplay'
-      path: '/cricbet99-vs-11xplay'
-      fullPath: '/cricbet99-vs-11xplay'
-      preLoaderRoute: typeof Cricbet99Vs11xplayRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cricbet99-vs-fairdeal': {
-      id: '/cricbet99-vs-fairdeal'
-      path: '/cricbet99-vs-fairdeal'
-      fullPath: '/cricbet99-vs-fairdeal'
-      preLoaderRoute: typeof Cricbet99VsFairdealRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cricbet99-vs-gold365': {
-      id: '/cricbet99-vs-gold365'
-      path: '/cricbet99-vs-gold365'
-      fullPath: '/cricbet99-vs-gold365'
-      preLoaderRoute: typeof Cricbet99VsGold365RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cricbet99-vs-laser247': {
-      id: '/cricbet99-vs-laser247'
-      path: '/cricbet99-vs-laser247'
-      fullPath: '/cricbet99-vs-laser247'
-      preLoaderRoute: typeof Cricbet99VsLaser247RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cricbet99-vs-lotus365': {
-      id: '/cricbet99-vs-lotus365'
-      path: '/cricbet99-vs-lotus365'
-      fullPath: '/cricbet99-vs-lotus365'
-      preLoaderRoute: typeof Cricbet99VsLotus365RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cricbet99-vs-reddybook': {
-      id: '/cricbet99-vs-reddybook'
-      path: '/cricbet99-vs-reddybook'
-      fullPath: '/cricbet99-vs-reddybook'
-      preLoaderRoute: typeof Cricbet99VsReddybookRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cricbet99-vs-skyexchange247': {
-      id: '/cricbet99-vs-skyexchange247'
-      path: '/cricbet99-vs-skyexchange247'
-      fullPath: '/cricbet99-vs-skyexchange247'
-      preLoaderRoute: typeof Cricbet99VsSkyexchange247RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cricket': {
-      id: '/cricket'
-      path: '/cricket'
-      fullPath: '/cricket'
-      preLoaderRoute: typeof CricketRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demo-id': {
-      id: '/demo-id'
-      path: '/demo-id'
-      fullPath: '/demo-id'
-      preLoaderRoute: typeof DemoIdRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/deposit-issues': {
-      id: '/deposit-issues'
-      path: '/deposit-issues'
-      fullPath: '/deposit-issues'
-      preLoaderRoute: typeof DepositIssuesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/disclaimer': {
-      id: '/disclaimer'
-      path: '/disclaimer'
-      fullPath: '/disclaimer'
-      preLoaderRoute: typeof DisclaimerRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/esports': {
-      id: '/esports'
-      path: '/esports'
-      fullPath: '/esports'
-      preLoaderRoute: typeof EsportsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/exchange': {
-      id: '/exchange'
-      path: '/exchange'
-      fullPath: '/exchange'
-      preLoaderRoute: typeof ExchangeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/faq': {
-      id: '/faq'
-      path: '/faq'
-      fullPath: '/faq'
-      preLoaderRoute: typeof FaqRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/football': {
-      id: '/football'
-      path: '/football'
-      fullPath: '/football'
-      preLoaderRoute: typeof FootballRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/high-odds-betting-strategy': {
-      id: '/high-odds-betting-strategy'
-      path: '/high-odds-betting-strategy'
-      fullPath: '/high-odds-betting-strategy'
-      preLoaderRoute: typeof HighOddsBettingStrategyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/horse-racing': {
-      id: '/horse-racing'
-      path: '/horse-racing'
-      fullPath: '/horse-racing'
-      preLoaderRoute: typeof HorseRacingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/how-it-works': {
-      id: '/how-it-works'
-      path: '/how-it-works'
-      fullPath: '/how-it-works'
-      preLoaderRoute: typeof HowItWorksRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/how-to-deposit': {
-      id: '/how-to-deposit'
-      path: '/how-to-deposit'
-      fullPath: '/how-to-deposit'
-      preLoaderRoute: typeof HowToDepositRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/how-to-withdraw': {
-      id: '/how-to-withdraw'
-      path: '/how-to-withdraw'
-      fullPath: '/how-to-withdraw'
-      preLoaderRoute: typeof HowToWithdrawRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/indian-card-games': {
-      id: '/indian-card-games'
-      path: '/indian-card-games'
-      fullPath: '/indian-card-games'
-      preLoaderRoute: typeof IndianCardGamesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ipl-2026-calendar': {
-      id: '/ipl-2026-calendar'
-      path: '/ipl-2026-calendar'
-      fullPath: '/ipl-2026-calendar'
-      preLoaderRoute: typeof Ipl2026CalendarRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ipl-betting': {
-      id: '/ipl-betting'
-      path: '/ipl-betting'
-      fullPath: '/ipl-betting'
-      preLoaderRoute: typeof IplBettingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/is-cricbet99-legal': {
-      id: '/is-cricbet99-legal'
-      path: '/is-cricbet99-legal'
-      fullPath: '/is-cricbet99-legal'
-      preLoaderRoute: typeof IsCricbet99LegalRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/is-cricbet99-real': {
-      id: '/is-cricbet99-real'
-      path: '/is-cricbet99-real'
-      fullPath: '/is-cricbet99-real'
-      preLoaderRoute: typeof IsCricbet99RealRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/is-cricbet99-safe': {
-      id: '/is-cricbet99-safe'
-      path: '/is-cricbet99-safe'
-      fullPath: '/is-cricbet99-safe'
-      preLoaderRoute: typeof IsCricbet99SafeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/kabaddi': {
-      id: '/kabaddi'
-      path: '/kabaddi'
-      fullPath: '/kabaddi'
-      preLoaderRoute: typeof KabaddiRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/kyc-policy': {
-      id: '/kyc-policy'
-      path: '/kyc-policy'
-      fullPath: '/kyc-policy'
-      preLoaderRoute: typeof KycPolicyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/login': {
-      id: '/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof LoginRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/login-issues': {
-      id: '/login-issues'
-      path: '/login-issues'
-      fullPath: '/login-issues'
-      preLoaderRoute: typeof LoginIssuesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/matches': {
-      id: '/matches'
-      path: '/matches'
-      fullPath: '/matches'
-      preLoaderRoute: typeof MatchesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/online-betting': {
-      id: '/online-betting'
-      path: '/online-betting'
-      fullPath: '/online-betting'
-      preLoaderRoute: typeof OnlineBettingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/platforms': {
-      id: '/platforms'
-      path: '/platforms'
-      fullPath: '/platforms'
-      preLoaderRoute: typeof PlatformsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/policies': {
-      id: '/policies'
-      path: '/policies'
-      fullPath: '/policies'
-      preLoaderRoute: typeof PoliciesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/predictions': {
-      id: '/predictions'
-      path: '/predictions'
-      fullPath: '/predictions'
-      preLoaderRoute: typeof PredictionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy-policy': {
-      id: '/privacy-policy'
-      path: '/privacy-policy'
-      fullPath: '/privacy-policy'
-      preLoaderRoute: typeof PrivacyPolicyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/referral-code': {
-      id: '/referral-code'
-      path: '/referral-code'
-      fullPath: '/referral-code'
-      preLoaderRoute: typeof ReferralCodeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/refund-policy': {
-      id: '/refund-policy'
-      path: '/refund-policy'
-      fullPath: '/refund-policy'
-      preLoaderRoute: typeof RefundPolicyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/register': {
-      id: '/register'
-      path: '/register'
-      fullPath: '/register'
-      preLoaderRoute: typeof RegisterRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/responsible-gaming': {
-      id: '/responsible-gaming'
-      path: '/responsible-gaming'
-      fullPath: '/responsible-gaming'
-      preLoaderRoute: typeof ResponsibleGamingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/reviews': {
-      id: '/reviews'
-      path: '/reviews'
-      fullPath: '/reviews'
-      preLoaderRoute: typeof ReviewsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/rules': {
-      id: '/rules'
-      path: '/rules'
-      fullPath: '/rules'
-      preLoaderRoute: typeof RulesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/schedule': {
-      id: '/schedule'
-      path: '/schedule'
-      fullPath: '/schedule'
-      preLoaderRoute: typeof ScheduleRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/security': {
-      id: '/security'
-      path: '/security'
-      fullPath: '/security'
-      preLoaderRoute: typeof SecurityRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sports-betting': {
-      id: '/sports-betting'
-      path: '/sports-betting'
-      fullPath: '/sports-betting'
-      preLoaderRoute: typeof SportsBettingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sports-id': {
-      id: '/sports-id'
-      path: '/sports-id'
-      fullPath: '/sports-id'
-      preLoaderRoute: typeof SportsIdRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/support': {
-      id: '/support'
-      path: '/support'
-      fullPath: '/support'
-      preLoaderRoute: typeof SupportRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/t20-world-cup-betting': {
-      id: '/t20-world-cup-betting'
-      path: '/t20-world-cup-betting'
-      fullPath: '/t20-world-cup-betting'
-      preLoaderRoute: typeof T20WorldCupBettingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/telegram-channel': {
-      id: '/telegram-channel'
-      path: '/telegram-channel'
-      fullPath: '/telegram-channel'
-      preLoaderRoute: typeof TelegramChannelRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tennis': {
-      id: '/tennis'
-      path: '/tennis'
-      fullPath: '/tennis'
-      preLoaderRoute: typeof TennisRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/terms': {
-      id: '/terms'
-      path: '/terms'
-      fullPath: '/terms'
-      preLoaderRoute: typeof TermsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/todays-best-odds': {
-      id: '/todays-best-odds'
-      path: '/todays-best-odds'
-      fullPath: '/todays-best-odds'
-      preLoaderRoute: typeof TodaysBestOddsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/transaction-limits': {
-      id: '/transaction-limits'
-      path: '/transaction-limits'
-      fullPath: '/transaction-limits'
-      preLoaderRoute: typeof TransactionLimitsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/trusted-betting-agent': {
-      id: '/trusted-betting-agent'
-      path: '/trusted-betting-agent'
-      fullPath: '/trusted-betting-agent'
-      preLoaderRoute: typeof TrustedBettingAgentRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/trusted-betting-id-provider': {
-      id: '/trusted-betting-id-provider'
-      path: '/trusted-betting-id-provider'
-      fullPath: '/trusted-betting-id-provider'
-      preLoaderRoute: typeof TrustedBettingIdProviderRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/what-is-cricbet99': {
-      id: '/what-is-cricbet99'
-      path: '/what-is-cricbet99'
-      fullPath: '/what-is-cricbet99'
-      preLoaderRoute: typeof WhatIsCricbet99RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/whatsapp-number': {
-      id: '/whatsapp-number'
-      path: '/whatsapp-number'
-      fullPath: '/whatsapp-number'
-      preLoaderRoute: typeof WhatsappNumberRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/whatsapp-support': {
-      id: '/whatsapp-support'
-      path: '/whatsapp-support'
-      fullPath: '/whatsapp-support'
-      preLoaderRoute: typeof WhatsappSupportRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/why-choose-cricbet99': {
-      id: '/why-choose-cricbet99'
-      path: '/why-choose-cricbet99'
-      fullPath: '/why-choose-cricbet99'
-      preLoaderRoute: typeof WhyChooseCricbet99RouteImport
+    '/wpl-2026-betting': {
+      id: '/wpl-2026-betting'
+      path: '/wpl-2026-betting'
+      fullPath: '/wpl-2026-betting'
+      preLoaderRoute: typeof Wpl2026BettingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/withdrawal-delay': {
@@ -1783,54 +1244,551 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WithdrawalDelayRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/wpl-2026-betting': {
-      id: '/wpl-2026-betting'
-      path: '/wpl-2026-betting'
-      fullPath: '/wpl-2026-betting'
-      preLoaderRoute: typeof Wpl2026BettingRouteImport
+    '/why-choose-cricbet99': {
+      id: '/why-choose-cricbet99'
+      path: '/why-choose-cricbet99'
+      fullPath: '/why-choose-cricbet99'
+      preLoaderRoute: typeof WhyChooseCricbet99RouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/betting-guides/how-bookmakers-make-money': {
-      id: '/betting-guides/how-bookmakers-make-money'
-      path: '/how-bookmakers-make-money'
-      fullPath: '/betting-guides/how-bookmakers-make-money'
-      preLoaderRoute: typeof BettingGuidesHowBookmakersMakeMoneyRouteImport
-      parentRoute: typeof BettingGuidesRoute
+    '/whatsapp-support': {
+      id: '/whatsapp-support'
+      path: '/whatsapp-support'
+      fullPath: '/whatsapp-support'
+      preLoaderRoute: typeof WhatsappSupportRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/betting-guides/how-to-bet-on-session-betting': {
-      id: '/betting-guides/how-to-bet-on-session-betting'
-      path: '/how-to-bet-on-session-betting'
-      fullPath: '/betting-guides/how-to-bet-on-session-betting'
-      preLoaderRoute: typeof BettingGuidesHowToBetOnSessionBettingRouteImport
-      parentRoute: typeof BettingGuidesRoute
+    '/whatsapp-number': {
+      id: '/whatsapp-number'
+      path: '/whatsapp-number'
+      fullPath: '/whatsapp-number'
+      preLoaderRoute: typeof WhatsappNumberRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/betting-guides/how-to-bet-on-toss-market': {
-      id: '/betting-guides/how-to-bet-on-toss-market'
-      path: '/how-to-bet-on-toss-market'
-      fullPath: '/betting-guides/how-to-bet-on-toss-market'
-      preLoaderRoute: typeof BettingGuidesHowToBetOnTossMarketRouteImport
-      parentRoute: typeof BettingGuidesRoute
+    '/what-is-cricbet99': {
+      id: '/what-is-cricbet99'
+      path: '/what-is-cricbet99'
+      fullPath: '/what-is-cricbet99'
+      preLoaderRoute: typeof WhatIsCricbet99RouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/betting-guides/how-to-place-a-cricket-bet': {
-      id: '/betting-guides/how-to-place-a-cricket-bet'
-      path: '/how-to-place-a-cricket-bet'
-      fullPath: '/betting-guides/how-to-place-a-cricket-bet'
-      preLoaderRoute: typeof BettingGuidesHowToPlaceACricketBetRouteImport
-      parentRoute: typeof BettingGuidesRoute
+    '/trusted-betting-id-provider': {
+      id: '/trusted-betting-id-provider'
+      path: '/trusted-betting-id-provider'
+      fullPath: '/trusted-betting-id-provider'
+      preLoaderRoute: typeof TrustedBettingIdProviderRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/betting-guides/how-to-place-a-live-bet': {
-      id: '/betting-guides/how-to-place-a-live-bet'
-      path: '/how-to-place-a-live-bet'
-      fullPath: '/betting-guides/how-to-place-a-live-bet'
-      preLoaderRoute: typeof BettingGuidesHowToPlaceALiveBetRouteImport
-      parentRoute: typeof BettingGuidesRoute
+    '/trusted-betting-agent': {
+      id: '/trusted-betting-agent'
+      path: '/trusted-betting-agent'
+      fullPath: '/trusted-betting-agent'
+      preLoaderRoute: typeof TrustedBettingAgentRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/betting-guides/how-to-set-betting-limits': {
-      id: '/betting-guides/how-to-set-betting-limits'
-      path: '/how-to-set-betting-limits'
-      fullPath: '/betting-guides/how-to-set-betting-limits'
-      preLoaderRoute: typeof BettingGuidesHowToSetBettingLimitsRouteImport
-      parentRoute: typeof BettingGuidesRoute
+    '/transaction-limits': {
+      id: '/transaction-limits'
+      path: '/transaction-limits'
+      fullPath: '/transaction-limits'
+      preLoaderRoute: typeof TransactionLimitsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/todays-best-odds': {
+      id: '/todays-best-odds'
+      path: '/todays-best-odds'
+      fullPath: '/todays-best-odds'
+      preLoaderRoute: typeof TodaysBestOddsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tennis': {
+      id: '/tennis'
+      path: '/tennis'
+      fullPath: '/tennis'
+      preLoaderRoute: typeof TennisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/telegram-channel': {
+      id: '/telegram-channel'
+      path: '/telegram-channel'
+      fullPath: '/telegram-channel'
+      preLoaderRoute: typeof TelegramChannelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/t20-world-cup-betting': {
+      id: '/t20-world-cup-betting'
+      path: '/t20-world-cup-betting'
+      fullPath: '/t20-world-cup-betting'
+      preLoaderRoute: typeof T20WorldCupBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/support': {
+      id: '/support'
+      path: '/support'
+      fullPath: '/support'
+      preLoaderRoute: typeof SupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sports-id': {
+      id: '/sports-id'
+      path: '/sports-id'
+      fullPath: '/sports-id'
+      preLoaderRoute: typeof SportsIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sports-betting': {
+      id: '/sports-betting'
+      path: '/sports-betting'
+      fullPath: '/sports-betting'
+      preLoaderRoute: typeof SportsBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/security': {
+      id: '/security'
+      path: '/security'
+      fullPath: '/security'
+      preLoaderRoute: typeof SecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/schedule': {
+      id: '/schedule'
+      path: '/schedule'
+      fullPath: '/schedule'
+      preLoaderRoute: typeof ScheduleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rules': {
+      id: '/rules'
+      path: '/rules'
+      fullPath: '/rules'
+      preLoaderRoute: typeof RulesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/responsible-gaming': {
+      id: '/responsible-gaming'
+      path: '/responsible-gaming'
+      fullPath: '/responsible-gaming'
+      preLoaderRoute: typeof ResponsibleGamingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/register': {
+      id: '/register'
+      path: '/register'
+      fullPath: '/register'
+      preLoaderRoute: typeof RegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/refund-policy': {
+      id: '/refund-policy'
+      path: '/refund-policy'
+      fullPath: '/refund-policy'
+      preLoaderRoute: typeof RefundPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/referral-code': {
+      id: '/referral-code'
+      path: '/referral-code'
+      fullPath: '/referral-code'
+      preLoaderRoute: typeof ReferralCodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/predictions': {
+      id: '/predictions'
+      path: '/predictions'
+      fullPath: '/predictions'
+      preLoaderRoute: typeof PredictionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/policies': {
+      id: '/policies'
+      path: '/policies'
+      fullPath: '/policies'
+      preLoaderRoute: typeof PoliciesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/platforms': {
+      id: '/platforms'
+      path: '/platforms'
+      fullPath: '/platforms'
+      preLoaderRoute: typeof PlatformsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/online-betting': {
+      id: '/online-betting'
+      path: '/online-betting'
+      fullPath: '/online-betting'
+      preLoaderRoute: typeof OnlineBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/matches': {
+      id: '/matches'
+      path: '/matches'
+      fullPath: '/matches'
+      preLoaderRoute: typeof MatchesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login-issues': {
+      id: '/login-issues'
+      path: '/login-issues'
+      fullPath: '/login-issues'
+      preLoaderRoute: typeof LoginIssuesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kyc-policy': {
+      id: '/kyc-policy'
+      path: '/kyc-policy'
+      fullPath: '/kyc-policy'
+      preLoaderRoute: typeof KycPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kabaddi': {
+      id: '/kabaddi'
+      path: '/kabaddi'
+      fullPath: '/kabaddi'
+      preLoaderRoute: typeof KabaddiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/is-cricbet99-safe': {
+      id: '/is-cricbet99-safe'
+      path: '/is-cricbet99-safe'
+      fullPath: '/is-cricbet99-safe'
+      preLoaderRoute: typeof IsCricbet99SafeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/is-cricbet99-real': {
+      id: '/is-cricbet99-real'
+      path: '/is-cricbet99-real'
+      fullPath: '/is-cricbet99-real'
+      preLoaderRoute: typeof IsCricbet99RealRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/is-cricbet99-legal': {
+      id: '/is-cricbet99-legal'
+      path: '/is-cricbet99-legal'
+      fullPath: '/is-cricbet99-legal'
+      preLoaderRoute: typeof IsCricbet99LegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ipl-betting': {
+      id: '/ipl-betting'
+      path: '/ipl-betting'
+      fullPath: '/ipl-betting'
+      preLoaderRoute: typeof IplBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ipl-2026-calendar': {
+      id: '/ipl-2026-calendar'
+      path: '/ipl-2026-calendar'
+      fullPath: '/ipl-2026-calendar'
+      preLoaderRoute: typeof Ipl2026CalendarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/indian-card-games': {
+      id: '/indian-card-games'
+      path: '/indian-card-games'
+      fullPath: '/indian-card-games'
+      preLoaderRoute: typeof IndianCardGamesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-to-withdraw': {
+      id: '/how-to-withdraw'
+      path: '/how-to-withdraw'
+      fullPath: '/how-to-withdraw'
+      preLoaderRoute: typeof HowToWithdrawRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-to-deposit': {
+      id: '/how-to-deposit'
+      path: '/how-to-deposit'
+      fullPath: '/how-to-deposit'
+      preLoaderRoute: typeof HowToDepositRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/horse-racing': {
+      id: '/horse-racing'
+      path: '/horse-racing'
+      fullPath: '/horse-racing'
+      preLoaderRoute: typeof HorseRacingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/high-odds-betting-strategy': {
+      id: '/high-odds-betting-strategy'
+      path: '/high-odds-betting-strategy'
+      fullPath: '/high-odds-betting-strategy'
+      preLoaderRoute: typeof HighOddsBettingStrategyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/football': {
+      id: '/football'
+      path: '/football'
+      fullPath: '/football'
+      preLoaderRoute: typeof FootballRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/exchange': {
+      id: '/exchange'
+      path: '/exchange'
+      fullPath: '/exchange'
+      preLoaderRoute: typeof ExchangeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/esports': {
+      id: '/esports'
+      path: '/esports'
+      fullPath: '/esports'
+      preLoaderRoute: typeof EsportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/disclaimer': {
+      id: '/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/disclaimer'
+      preLoaderRoute: typeof DisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/deposit-issues': {
+      id: '/deposit-issues'
+      path: '/deposit-issues'
+      fullPath: '/deposit-issues'
+      preLoaderRoute: typeof DepositIssuesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demo-id': {
+      id: '/demo-id'
+      path: '/demo-id'
+      fullPath: '/demo-id'
+      preLoaderRoute: typeof DemoIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricket': {
+      id: '/cricket'
+      path: '/cricket'
+      fullPath: '/cricket'
+      preLoaderRoute: typeof CricketRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricbet99-vs-skyexchange247': {
+      id: '/cricbet99-vs-skyexchange247'
+      path: '/cricbet99-vs-skyexchange247'
+      fullPath: '/cricbet99-vs-skyexchange247'
+      preLoaderRoute: typeof Cricbet99VsSkyexchange247RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricbet99-vs-reddybook': {
+      id: '/cricbet99-vs-reddybook'
+      path: '/cricbet99-vs-reddybook'
+      fullPath: '/cricbet99-vs-reddybook'
+      preLoaderRoute: typeof Cricbet99VsReddybookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricbet99-vs-lotus365': {
+      id: '/cricbet99-vs-lotus365'
+      path: '/cricbet99-vs-lotus365'
+      fullPath: '/cricbet99-vs-lotus365'
+      preLoaderRoute: typeof Cricbet99VsLotus365RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricbet99-vs-laser247': {
+      id: '/cricbet99-vs-laser247'
+      path: '/cricbet99-vs-laser247'
+      fullPath: '/cricbet99-vs-laser247'
+      preLoaderRoute: typeof Cricbet99VsLaser247RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricbet99-vs-gold365': {
+      id: '/cricbet99-vs-gold365'
+      path: '/cricbet99-vs-gold365'
+      fullPath: '/cricbet99-vs-gold365'
+      preLoaderRoute: typeof Cricbet99VsGold365RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricbet99-vs-fairdeal': {
+      id: '/cricbet99-vs-fairdeal'
+      path: '/cricbet99-vs-fairdeal'
+      fullPath: '/cricbet99-vs-fairdeal'
+      preLoaderRoute: typeof Cricbet99VsFairdealRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricbet99-vs-11xplay': {
+      id: '/cricbet99-vs-11xplay'
+      path: '/cricbet99-vs-11xplay'
+      fullPath: '/cricbet99-vs-11xplay'
+      preLoaderRoute: typeof Cricbet99Vs11xplayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricbet99-id': {
+      id: '/cricbet99-id'
+      path: '/cricbet99-id'
+      fullPath: '/cricbet99-id'
+      preLoaderRoute: typeof Cricbet99IdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricbet99-app': {
+      id: '/cricbet99-app'
+      path: '/cricbet99-app'
+      fullPath: '/cricbet99-app'
+      preLoaderRoute: typeof Cricbet99AppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/community-guidelines': {
+      id: '/community-guidelines'
+      path: '/community-guidelines'
+      fullPath: '/community-guidelines'
+      preLoaderRoute: typeof CommunityGuidelinesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/champions-trophy-betting': {
+      id: '/champions-trophy-betting'
+      path: '/champions-trophy-betting'
+      fullPath: '/champions-trophy-betting'
+      preLoaderRoute: typeof ChampionsTrophyBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/casino': {
+      id: '/casino'
+      path: '/casino'
+      fullPath: '/casino'
+      preLoaderRoute: typeof CasinoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-studies': {
+      id: '/case-studies'
+      path: '/case-studies'
+      fullPath: '/case-studies'
+      preLoaderRoute: typeof CaseStudiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bonus-issues': {
+      id: '/bonus-issues'
+      path: '/bonus-issues'
+      fullPath: '/bonus-issues'
+      preLoaderRoute: typeof BonusIssuesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bonus': {
+      id: '/bonus'
+      path: '/bonus'
+      fullPath: '/bonus'
+      preLoaderRoute: typeof BonusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/big-win-stories': {
+      id: '/big-win-stories'
+      path: '/big-win-stories'
+      fullPath: '/big-win-stories'
+      preLoaderRoute: typeof BigWinStoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/betting-guides': {
+      id: '/betting-guides'
+      path: '/betting-guides'
+      fullPath: '/betting-guides'
+      preLoaderRoute: typeof BettingGuidesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/become-agent': {
+      id: '/become-agent'
+      path: '/become-agent'
+      fullPath: '/become-agent'
+      preLoaderRoute: typeof BecomeAgentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/basketball': {
+      id: '/basketball'
+      path: '/basketball'
+      fullPath: '/basketball'
+      preLoaderRoute: typeof BasketballRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/all-links': {
+      id: '/all-links'
+      path: '/all-links'
+      fullPath: '/all-links'
+      preLoaderRoute: typeof AllLinksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/account-blocked': {
+      id: '/account-blocked'
+      path: '/account-blocked'
+      fullPath: '/account-blocked'
+      preLoaderRoute: typeof AccountBlockedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/blog/': {
       id: '/blog/'
@@ -1839,25 +1797,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog/$slug': {
-      id: '/blog/$slug'
-      path: '/blog/$slug'
-      fullPath: '/blog/$slug'
-      preLoaderRoute: typeof BlogSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/case-studies/ipl-5000-to-25000-profit': {
-      id: '/case-studies/ipl-5000-to-25000-profit'
-      path: '/ipl-5000-to-25000-profit'
-      fullPath: '/case-studies/ipl-5000-to-25000-profit'
-      preLoaderRoute: typeof CaseStudiesIpl5000To25000ProfitRouteImport
-      parentRoute: typeof CaseStudiesRoute
-    }
-    '/case-studies/live-betting-3x-returns': {
-      id: '/case-studies/live-betting-3x-returns'
-      path: '/live-betting-3x-returns'
-      fullPath: '/case-studies/live-betting-3x-returns'
-      preLoaderRoute: typeof CaseStudiesLiveBetting3xReturnsRouteImport
+    '/case-studies/toss-market-10-minute-profit': {
+      id: '/case-studies/toss-market-10-minute-profit'
+      path: '/toss-market-10-minute-profit'
+      fullPath: '/case-studies/toss-market-10-minute-profit'
+      preLoaderRoute: typeof CaseStudiesTossMarket10MinuteProfitRouteImport
       parentRoute: typeof CaseStudiesRoute
     }
     '/case-studies/small-budget-betting-strategy': {
@@ -1867,12 +1811,68 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CaseStudiesSmallBudgetBettingStrategyRouteImport
       parentRoute: typeof CaseStudiesRoute
     }
-    '/case-studies/toss-market-10-minute-profit': {
-      id: '/case-studies/toss-market-10-minute-profit'
-      path: '/toss-market-10-minute-profit'
-      fullPath: '/case-studies/toss-market-10-minute-profit'
-      preLoaderRoute: typeof CaseStudiesTossMarket10MinuteProfitRouteImport
+    '/case-studies/live-betting-3x-returns': {
+      id: '/case-studies/live-betting-3x-returns'
+      path: '/live-betting-3x-returns'
+      fullPath: '/case-studies/live-betting-3x-returns'
+      preLoaderRoute: typeof CaseStudiesLiveBetting3xReturnsRouteImport
       parentRoute: typeof CaseStudiesRoute
+    }
+    '/case-studies/ipl-5000-to-25000-profit': {
+      id: '/case-studies/ipl-5000-to-25000-profit'
+      path: '/ipl-5000-to-25000-profit'
+      fullPath: '/case-studies/ipl-5000-to-25000-profit'
+      preLoaderRoute: typeof CaseStudiesIpl5000To25000ProfitRouteImport
+      parentRoute: typeof CaseStudiesRoute
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/betting-guides/how-to-set-betting-limits': {
+      id: '/betting-guides/how-to-set-betting-limits'
+      path: '/how-to-set-betting-limits'
+      fullPath: '/betting-guides/how-to-set-betting-limits'
+      preLoaderRoute: typeof BettingGuidesHowToSetBettingLimitsRouteImport
+      parentRoute: typeof BettingGuidesRoute
+    }
+    '/betting-guides/how-to-place-a-live-bet': {
+      id: '/betting-guides/how-to-place-a-live-bet'
+      path: '/how-to-place-a-live-bet'
+      fullPath: '/betting-guides/how-to-place-a-live-bet'
+      preLoaderRoute: typeof BettingGuidesHowToPlaceALiveBetRouteImport
+      parentRoute: typeof BettingGuidesRoute
+    }
+    '/betting-guides/how-to-place-a-cricket-bet': {
+      id: '/betting-guides/how-to-place-a-cricket-bet'
+      path: '/how-to-place-a-cricket-bet'
+      fullPath: '/betting-guides/how-to-place-a-cricket-bet'
+      preLoaderRoute: typeof BettingGuidesHowToPlaceACricketBetRouteImport
+      parentRoute: typeof BettingGuidesRoute
+    }
+    '/betting-guides/how-to-bet-on-toss-market': {
+      id: '/betting-guides/how-to-bet-on-toss-market'
+      path: '/how-to-bet-on-toss-market'
+      fullPath: '/betting-guides/how-to-bet-on-toss-market'
+      preLoaderRoute: typeof BettingGuidesHowToBetOnTossMarketRouteImport
+      parentRoute: typeof BettingGuidesRoute
+    }
+    '/betting-guides/how-to-bet-on-session-betting': {
+      id: '/betting-guides/how-to-bet-on-session-betting'
+      path: '/how-to-bet-on-session-betting'
+      fullPath: '/betting-guides/how-to-bet-on-session-betting'
+      preLoaderRoute: typeof BettingGuidesHowToBetOnSessionBettingRouteImport
+      parentRoute: typeof BettingGuidesRoute
+    }
+    '/betting-guides/how-bookmakers-make-money': {
+      id: '/betting-guides/how-bookmakers-make-money'
+      path: '/how-bookmakers-make-money'
+      fullPath: '/betting-guides/how-bookmakers-make-money'
+      preLoaderRoute: typeof BettingGuidesHowBookmakersMakeMoneyRouteImport
+      parentRoute: typeof BettingGuidesRoute
     }
   }
 }

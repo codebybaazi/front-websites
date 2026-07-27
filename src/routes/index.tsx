@@ -1262,7 +1262,7 @@ function Index() {
             </Link>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
             {[...blogPosts]
               .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
               .slice(0, 6)
@@ -1271,15 +1271,17 @@ function Index() {
                   key={post.slug}
                   to="/blog/$slug"
                   params={{ slug: post.slug }}
-                  className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-primary/20 bg-card/60 backdrop-blur transition-all hover:-translate-y-1 hover:border-primary/60 hover:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.8)]"
+                  className="group relative flex h-full flex-col overflow-hidden rounded-2xl p-[1px] transition-all duration-500 hover:-translate-y-1.5"
+                  style={{ background: "linear-gradient(140deg, color-mix(in oklab, var(--primary) 55%, transparent), color-mix(in oklab, var(--accent) 25%, transparent) 45%, color-mix(in oklab, var(--primary) 10%, transparent))" }}
                 >
-                  <div className="relative aspect-[16/10] overflow-hidden bg-background/60">
+                 <div className="relative flex h-full flex-col overflow-hidden rounded-[15px] bg-[hsl(var(--background))]">
+                  <div className="relative aspect-[16/10] overflow-hidden">
                     {post.hero ? (
                       <img
                         src={post.hero}
                         alt={post.title}
                         loading="lazy"
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                     ) : (
                       <div
@@ -1287,32 +1289,39 @@ function Index() {
                         style={{ background: "var(--gradient-hero)" }}
                       />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
                     <span
-                      className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary-foreground shadow-lg"
+                      className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[10px] font-black uppercase tracking-widest text-primary-foreground shadow-[0_8px_24px_-8px_rgba(0,0,0,0.9)]"
                       style={{ background: "var(--gradient-gold)" }}
                     >
                       {post.tag}
                     </span>
                   </div>
-                  <div className="flex flex-1 flex-col p-6">
-                    <div className="text-[11px] font-semibold uppercase tracking-widest text-foreground/55">
+                  <div className="relative flex flex-1 flex-col p-6">
+                    <div className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-primary/90">
+                      <span className="h-px w-6 bg-gradient-to-r from-primary to-transparent" />
                       {new Date(post.date).toLocaleDateString("en-IN", {
                         day: "2-digit",
                         month: "short",
                         year: "numeric",
                       })}
                     </div>
-                    <h3 className="mt-2 text-lg font-bold leading-snug text-foreground transition-colors group-hover:text-primary">
+                    <h3 className="mt-3 text-lg font-black leading-snug text-foreground transition-colors group-hover:text-primary">
                       {post.title}
                     </h3>
-                    <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-foreground/70">
+                    <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-foreground/65">
                       {post.excerpt}
                     </p>
-                    <div className="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary">
-                      Read article <ChevronRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                    <div className="mt-6 flex items-center justify-between border-t border-primary/15 pt-4">
+                      <span className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.2em] bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>
+                        Read article
+                      </span>
+                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full text-primary-foreground transition-transform group-hover:translate-x-1 group-hover:scale-110" style={{ background: "var(--gradient-gold)" }}>
+                        <ChevronRight className="h-4 w-4" />
+                      </span>
                     </div>
                   </div>
+                 </div>
                 </Link>
               ))}
           </div>
