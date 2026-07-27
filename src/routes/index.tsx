@@ -1551,7 +1551,10 @@ function IndexInner() {
       {/* FAQ */}
       <FaqSection />
 
-      <CTABand heading="Ready to place your first bet on Cricbet99?" sub="Message us on WhatsApp and your Cricbet99 ID will be live in under 5 minutes — with a 100% welcome bonus up to ₹10,000." />
+      <CTABand
+        heading="Your winning session starts on Cricbet99."
+        sub="Skip the sign-up forms. Message us on WhatsApp, verify in one tap, and go live with a loaded Cricbet99 ID — welcome bonus already in your wallet."
+      />
     </SiteLayout>
   );
 }
