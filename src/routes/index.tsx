@@ -17,8 +17,6 @@ import {
   Star,
   Lock,
   Gift,
-  Smartphone,
-  Apple,
   ClipboardCheck,
   KeyRound,
   TrendingUp,
