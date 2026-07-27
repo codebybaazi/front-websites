@@ -71,7 +71,6 @@ import { Route as Cricbet99VsLotus365RouteImport } from './routes/cricbet99-vs-l
 import { Route as Cricbet99VsLaser247RouteImport } from './routes/cricbet99-vs-laser247'
 import { Route as Cricbet99VsGold365RouteImport } from './routes/cricbet99-vs-gold365'
 import { Route as Cricbet99VsFairdealRouteImport } from './routes/cricbet99-vs-fairdeal'
-import { Route as Cricbet99Vs11xplayRouteImport } from './routes/cricbet99-vs-11xplay'
 import { Route as Cricbet99IdRouteImport } from './routes/cricbet99-id'
 import { Route as Cricbet99AppRouteImport } from './routes/cricbet99-app'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -415,11 +414,6 @@ const Cricbet99VsFairdealRoute = Cricbet99VsFairdealRouteImport.update({
   path: '/cricbet99-vs-fairdeal',
   getParentRoute: () => rootRouteImport,
 } as any)
-const Cricbet99Vs11xplayRoute = Cricbet99Vs11xplayRouteImport.update({
-  id: '/cricbet99-vs-11xplay',
-  path: '/cricbet99-vs-11xplay',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const Cricbet99IdRoute = Cricbet99IdRouteImport.update({
   id: '/cricbet99-id',
   path: '/cricbet99-id',
@@ -599,7 +593,6 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/cricbet99-app': typeof Cricbet99AppRoute
   '/cricbet99-id': typeof Cricbet99IdRoute
-  '/cricbet99-vs-11xplay': typeof Cricbet99Vs11xplayRoute
   '/cricbet99-vs-fairdeal': typeof Cricbet99VsFairdealRoute
   '/cricbet99-vs-gold365': typeof Cricbet99VsGold365Route
   '/cricbet99-vs-laser247': typeof Cricbet99VsLaser247Route
@@ -694,7 +687,6 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/cricbet99-app': typeof Cricbet99AppRoute
   '/cricbet99-id': typeof Cricbet99IdRoute
-  '/cricbet99-vs-11xplay': typeof Cricbet99Vs11xplayRoute
   '/cricbet99-vs-fairdeal': typeof Cricbet99VsFairdealRoute
   '/cricbet99-vs-gold365': typeof Cricbet99VsGold365Route
   '/cricbet99-vs-laser247': typeof Cricbet99VsLaser247Route
@@ -790,7 +782,6 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/cricbet99-app': typeof Cricbet99AppRoute
   '/cricbet99-id': typeof Cricbet99IdRoute
-  '/cricbet99-vs-11xplay': typeof Cricbet99Vs11xplayRoute
   '/cricbet99-vs-fairdeal': typeof Cricbet99VsFairdealRoute
   '/cricbet99-vs-gold365': typeof Cricbet99VsGold365Route
   '/cricbet99-vs-laser247': typeof Cricbet99VsLaser247Route
@@ -887,7 +878,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/cricbet99-app'
     | '/cricbet99-id'
-    | '/cricbet99-vs-11xplay'
     | '/cricbet99-vs-fairdeal'
     | '/cricbet99-vs-gold365'
     | '/cricbet99-vs-laser247'
@@ -982,7 +972,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/cricbet99-app'
     | '/cricbet99-id'
-    | '/cricbet99-vs-11xplay'
     | '/cricbet99-vs-fairdeal'
     | '/cricbet99-vs-gold365'
     | '/cricbet99-vs-laser247'
@@ -1077,7 +1066,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/cricbet99-app'
     | '/cricbet99-id'
-    | '/cricbet99-vs-11xplay'
     | '/cricbet99-vs-fairdeal'
     | '/cricbet99-vs-gold365'
     | '/cricbet99-vs-laser247'
@@ -1173,7 +1161,6 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   Cricbet99AppRoute: typeof Cricbet99AppRoute
   Cricbet99IdRoute: typeof Cricbet99IdRoute
-  Cricbet99Vs11xplayRoute: typeof Cricbet99Vs11xplayRoute
   Cricbet99VsFairdealRoute: typeof Cricbet99VsFairdealRoute
   Cricbet99VsGold365Route: typeof Cricbet99VsGold365Route
   Cricbet99VsLaser247Route: typeof Cricbet99VsLaser247Route
@@ -1676,13 +1663,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Cricbet99VsFairdealRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/cricbet99-vs-11xplay': {
-      id: '/cricbet99-vs-11xplay'
-      path: '/cricbet99-vs-11xplay'
-      fullPath: '/cricbet99-vs-11xplay'
-      preLoaderRoute: typeof Cricbet99Vs11xplayRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/cricbet99-id': {
       id: '/cricbet99-id'
       path: '/cricbet99-id'
@@ -1972,7 +1952,6 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   Cricbet99AppRoute: Cricbet99AppRoute,
   Cricbet99IdRoute: Cricbet99IdRoute,
-  Cricbet99Vs11xplayRoute: Cricbet99Vs11xplayRoute,
   Cricbet99VsFairdealRoute: Cricbet99VsFairdealRoute,
   Cricbet99VsGold365Route: Cricbet99VsGold365Route,
   Cricbet99VsLaser247Route: Cricbet99VsLaser247Route,
