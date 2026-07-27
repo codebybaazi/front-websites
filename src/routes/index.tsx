@@ -17,8 +17,6 @@ import {
   Star,
   Lock,
   Gift,
-  Smartphone,
-  Apple,
   ClipboardCheck,
   KeyRound,
   TrendingUp,
@@ -29,6 +27,7 @@ import {
 } from "lucide-react";
 import { SiteLayout, WA, CTABand } from "@/components/site-layout";
 import { LiveDashboard } from "@/components/live-dashboard";
+import { blogPosts } from "@/data/blog-posts";
 import logo from "@/assets/logo.png";
 import heroBanner from "@/assets/hero-banner.jpg";
 import launchAviator from "@/assets/launch/aviator.jpg";
@@ -1239,44 +1238,83 @@ function Index() {
         </div>
       </section>
 
-      {/* APP DOWNLOAD */}
+      {/* RECENT POSTS */}
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-10 rounded-3xl border border-primary/25 bg-card/60 p-8 backdrop-blur md:grid-cols-[1.2fr_1fr] md:p-12">
-            <div>
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+            <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
-                Cricbet99 App
+                <Flame className="h-3.5 w-3.5" /> Cricbet99 Journal
               </div>
               <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl">
-                Download the app for
-                <span className="ml-2 bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Android & iOS.</span>
+                Recent
+                <span className="ml-2 bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>posts & analysis.</span>
               </h2>
               <p className="mt-4 text-foreground/75">
-                Get the official Cricbet99 app straight from our website — never the Play Store, so you always download the safe, verified build. Lightweight, fast and packed with live streaming, one-tap deposits and one-tap cash-out.
+                Sharp match previews, IPL storylines, betting strategy and platform guides — refreshed by our editorial desk every week.
               </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <a href={WA} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-background/60 px-5 py-3 text-sm font-bold transition-transform hover:scale-105">
-                  <Smartphone className="h-4 w-4" /> Download for Android
-                </a>
-                <a href={WA} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-background/60 px-5 py-3 text-sm font-bold transition-transform hover:scale-105">
-                  <Apple className="h-4 w-4" /> Download for iOS
-                </a>
-              </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { icon: Smartphone, title: "Android", specs: ["100 MB free space", "2 GB RAM", "Android 6.0+", "⭐ 4.8 / 5"] },
-                { icon: Apple, title: "iOS", specs: ["120 MB free space", "2 GB RAM", "iOS 12.0+", "⭐ 4.7 / 5"] },
-              ].map((d) => (
-                <div key={d.title} className="flex h-full flex-col rounded-2xl border border-primary/20 bg-background/60 p-7">
-                  <d.icon className="h-6 w-6 text-primary" />
-                  <div className="mt-3 font-bold">{d.title}</div>
-                  <ul className="mt-2 space-y-1 text-xs text-foreground/70">
-                    {d.specs.map((s) => <li key={s}>• {s}</li>)}
-                  </ul>
-                </div>
+            <Link
+              to="/blog"
+              className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-background/60 px-5 py-2.5 text-sm font-bold text-foreground transition-transform hover:scale-105"
+            >
+              View all posts <ChevronRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[...blogPosts]
+              .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+              .slice(0, 6)
+              .map((post) => (
+                <Link
+                  key={post.slug}
+                  to="/blog/$slug"
+                  params={{ slug: post.slug }}
+                  className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-primary/20 bg-card/60 backdrop-blur transition-all hover:-translate-y-1 hover:border-primary/60 hover:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.8)]"
+                >
+                  <div className="relative aspect-[16/10] overflow-hidden bg-background/60">
+                    {post.hero ? (
+                      <img
+                        src={post.hero}
+                        alt={post.title}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div
+                        className="h-full w-full"
+                        style={{ background: "var(--gradient-hero)" }}
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+                    <span
+                      className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary-foreground shadow-lg"
+                      style={{ background: "var(--gradient-gold)" }}
+                    >
+                      {post.tag}
+                    </span>
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <div className="text-[11px] font-semibold uppercase tracking-widest text-foreground/55">
+                      {new Date(post.date).toLocaleDateString("en-IN", {
+                        day: "2-digit",
+                        month: "short",
+                        year: "numeric",
+                      })}
+                    </div>
+                    <h3 className="mt-2 text-lg font-bold leading-snug text-foreground transition-colors group-hover:text-primary">
+                      {post.title}
+                    </h3>
+                    <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-foreground/70">
+                      {post.excerpt}
+                    </p>
+                    <div className="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary">
+                      Read article <ChevronRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                    </div>
+                  </div>
+                </Link>
               ))}
-            </div>
           </div>
         </div>
       </section>
