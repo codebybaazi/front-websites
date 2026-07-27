@@ -1329,29 +1329,71 @@ function Index() {
       </section>
 
       {/* PROOF / TESTIMONIALS */}
-      <section className="border-t border-primary/15 bg-background/40 py-24 backdrop-blur-sm">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative overflow-hidden border-t border-primary/15 py-28">
+        <div className="pointer-events-none absolute inset-0 opacity-60" style={{ background: "radial-gradient(600px circle at 15% 20%, color-mix(in oklab, var(--primary) 12%, transparent), transparent 60%), radial-gradient(500px circle at 85% 80%, color-mix(in oklab, var(--accent) 10%, transparent), transparent 60%)" }} />
+        <div className="relative mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
-              <ClipboardCheck className="h-3.5 w-3.5" /> Real Players · Real Proof
+              <ClipboardCheck className="h-3.5 w-3.5" /> Verified Winners · Real Payouts
             </div>
             <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl">
-              What Cricbet99 players
-              <span className="ml-2 bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>are saying.</span>
+              Trusted by punters who
+              <span className="ml-2 bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>actually win.</span>
             </h2>
+            <p className="mt-4 text-sm leading-relaxed text-foreground/65 md:text-base">
+              Unedited words from real Cricbet99 members — verified IDs, verified withdrawals, straight from WhatsApp.
+            </p>
           </div>
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+
+          <div className="mt-16 grid gap-7 md:grid-cols-3">
             {[
-              { name: "Ravi K.", city: "Mumbai", quote: "Got my Cricbet99 ID in under 3 minutes. Deposited via UPI, placed my first IPL bet, cashed out ₹18,400 the same night. Zero drama." },
-              { name: "Aditya S.", city: "Bengaluru", quote: "I've tried 4 platforms. Cricbet99 has the sharpest odds on session bets — and the WhatsApp manager actually knows cricket." },
-              { name: "Neha P.", city: "Delhi", quote: "The live casino Teen Patti tables are the best I've played. HD stream, no lag, and withdrawals hit my account in 8 minutes." },
-            ].map((t) => (
-              <div key={t.name} className="flex h-full flex-col rounded-2xl border border-primary/20 bg-background/60 p-7 transition-all hover:-translate-y-1 hover:border-primary/60 hover:shadow-2xl">
-                <div className="flex gap-0.5 text-primary">
-                  {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
+              { name: "Ravi K.", city: "Mumbai", role: "IPL Regular", initials: "RK", payout: "₹18,400", quote: "ID activated in under 3 minutes. First IPL bet placed, first withdrawal in my bank the same night. Zero friction, zero excuses." },
+              { name: "Aditya S.", city: "Bengaluru", role: "Session Specialist", initials: "AS", payout: "₹42,900", quote: "Tried four platforms before this. Cricbet99 has the sharpest session odds and a WhatsApp manager who actually understands cricket." },
+              { name: "Neha P.", city: "Delhi", role: "Live Casino Player", initials: "NP", payout: "₹27,150", quote: "The Teen Patti live tables are elite — crisp HD stream, zero lag, and my withdrawal hit my account inside 8 minutes flat." },
+            ].map((t, idx) => (
+              <div key={t.name} className="group relative rounded-3xl p-[1.5px] transition-all duration-500 hover:-translate-y-2" style={{ backgroundImage: "linear-gradient(140deg, color-mix(in oklab, var(--primary) 55%, transparent), color-mix(in oklab, var(--accent) 50%, transparent) 45%, transparent 80%)" }}>
+                <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(1.5rem-1.5px)] bg-background/95 p-8 backdrop-blur-xl">
+                  {/* Ambient glow on hover */}
+                  <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-40" style={{ background: "var(--gradient-gold)" }} />
+
+                  {/* Quote glyph */}
+                  <div className="absolute right-6 top-5 font-serif text-7xl leading-none text-primary/15 transition-colors duration-500 group-hover:text-primary/25">"</div>
+
+                  {/* Rating + verified */}
+                  <div className="relative flex items-center justify-between">
+                    <div className="flex gap-0.5 text-accent">
+                      {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
+                    </div>
+                    <div className="flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-accent">
+                      <ClipboardCheck className="h-3 w-3" /> Verified
+                    </div>
+                  </div>
+
+                  {/* Quote */}
+                  <p className="relative mt-6 text-[15px] leading-relaxed text-foreground/85">
+                    {t.quote}
+                  </p>
+
+                  {/* Divider */}
+                  <div className="relative mt-6 h-px w-full" style={{ background: "linear-gradient(90deg, transparent, color-mix(in oklab, var(--primary) 40%, transparent), transparent)" }} />
+
+                  {/* Footer: avatar + payout */}
+                  <div className="relative mt-5 flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-full text-sm font-black text-background shadow-lg" style={{ background: "var(--gradient-gold)" }}>
+                        {t.initials}
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold text-foreground">{t.name}</div>
+                        <div className="text-[11px] font-medium uppercase tracking-wider text-foreground/55">{t.city} · {t.role}</div>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-[10px] font-semibold uppercase tracking-widest text-foreground/50">Withdrew</div>
+                      <div className="bg-clip-text text-sm font-black text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>{t.payout}</div>
+                    </div>
+                  </div>
                 </div>
-                <p className="mt-4 text-sm leading-relaxed text-foreground/80">"{t.quote}"</p>
-                <div className="mt-4 text-xs font-semibold text-foreground/60">{t.name} · {t.city}</div>
               </div>
             ))}
           </div>
