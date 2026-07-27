@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { Flame, ChevronRight, Radio, CalendarClock, Trophy, Zap, TrendingUp } from "lucide-react";
 import { WA } from "@/components/site-layout";
+import { Link } from "@tanstack/react-router";
+import { matches as curatedMatches } from "@/data/matches";
 
 type LiveRunner = { name: string; back?: number; lay?: number };
 type LiveEvent = {
@@ -554,7 +556,116 @@ export function LiveDashboard() {
             Odds refresh automatically every 30 seconds
           </div>
         )}
+        <SeoMatchIndex />
       </div>
     </section>
+  );
+}
+
+// Server-rendered, keyword-rich index of curated fixtures so crawlers can
+// discover every match page even though the live table above is client-only.
+function SeoMatchIndex() {
+  const bySport = new Map<string, typeof curatedMatches>();
+  for (const m of curatedMatches) {
+    if (!bySport.has(m.sport)) bySport.set(m.sport, [] as any);
+    (bySport.get(m.sport) as any).push(m);
+  }
+  const itemList = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Cricbet99 Live & Upcoming Betting Matches",
+    itemListElement: curatedMatches.map((m, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `/matches/${m.slug}`,
+      name: `${m.homeTeam} vs ${m.awayTeam} — ${m.tournament} betting odds`,
+    })),
+  };
+  return (
+    <div className="mt-16 rounded-3xl border border-primary/20 bg-black/30 p-8 md:p-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }}
+      />
+      <div className="mb-6 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+        <div>
+          <div className="text-[11px] font-black uppercase tracking-widest text-accent">
+            Popular betting markets
+          </div>
+          <h3 className="mt-1 text-2xl font-black md:text-3xl">
+            Live & upcoming matches to bet on today
+          </h3>
+        </div>
+        <p className="max-w-md text-sm text-foreground/60">
+          Every fixture below is a dedicated page with live odds, session rates and market
+          highlights — indexed for search, shareable on WhatsApp.
+        </p>
+      </div>
+
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {Array.from(bySport.entries()).map(([sport, list]) => (
+          <div key={sport}>
+            <div className="mb-3 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-primary">
+              <span>{SPORT_META[sport]?.icon ?? "🎯"}</span>
+              {sport} betting
+            </div>
+            <ul className="space-y-2">
+              {list.map((m) => (
+                <li key={m.slug}>
+                  <Link
+                    to="/matches/$slug"
+                    params={{ slug: m.slug }}
+                    className="group flex items-start justify-between gap-3 rounded-xl border border-white/5 bg-white/[0.02] px-3 py-2.5 transition-colors hover:border-accent/40 hover:bg-accent/5"
+                    title={`${m.homeTeam} vs ${m.awayTeam} betting odds — ${m.tournament}`}
+                  >
+                    <div className="min-w-0">
+                      <div className="truncate text-sm font-bold text-foreground group-hover:text-accent">
+                        {m.homeTeam} vs {m.awayTeam}
+                      </div>
+                      <div className="truncate text-[11px] uppercase tracking-widest text-foreground/50">
+                        {m.tournament}
+                      </div>
+                    </div>
+                    <span
+                      className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-black uppercase tracking-widest ${
+                        m.status === "live"
+                          ? "bg-accent/20 text-accent"
+                          : "bg-primary/15 text-primary"
+                      }`}
+                    >
+                      {m.status}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-8 border-t border-white/5 pt-6">
+        <div className="mb-2 text-[11px] font-black uppercase tracking-widest text-foreground/50">
+          Trending betting keywords
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {Array.from(new Set(curatedMatches.flatMap((m) => m.keywords))).map((k) => (
+            <span
+              key={k}
+              className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[11px] text-foreground/60"
+            >
+              {k}
+            </span>
+          ))}
+        </div>
+        <div className="mt-6 text-center">
+          <Link
+            to="/matches"
+            className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-5 py-2.5 text-xs font-black uppercase tracking-widest text-primary transition-colors hover:bg-primary/20"
+          >
+            Browse all matches <ChevronRight className="h-3.5 w-3.5" />
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }
