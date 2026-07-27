@@ -24,6 +24,9 @@ import {
   Target,
   Award,
   CheckCircle2,
+  Smartphone,
+  HelpCircle,
+  Plus,
 } from "lucide-react";
 import { SiteLayout, WA, CTABand } from "@/components/site-layout";
 import { LiveDashboard } from "@/components/live-dashboard";
