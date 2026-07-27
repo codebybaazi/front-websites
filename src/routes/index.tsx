@@ -67,28 +67,34 @@ const popularCasino = [
 
 const faqs = [
   {
-    q: "Is Cricbet99 safe and legal to use in India?",
-    a: "Yes. Cricbet99 has operated as a trusted online cricket ID platform since 2020, with bank-grade SSL encryption, verified agents, and full KYC. Online skill-based betting is permitted in most Indian states — check your local laws before playing.",
+    q: "Is Cricbet99 safe and legal to play in India?",
+    a: "Absolutely. Cricbet99 has been India's most trusted online cricket ID since 2020 — protected by bank-grade SSL encryption, verified WhatsApp agents, and full KYC compliance. Skill-based online gaming is permitted in most Indian states; always check your local regulations before you play.",
+    icon: "ShieldCheck",
   },
   {
-    q: "How fast can I get my Cricbet99 ID?",
-    a: "Your Cricbet99 ID is created and delivered on WhatsApp within 2–5 minutes of your first message. There are no long sign-up forms — just a quick chat with a verified account manager.",
+    q: "How quickly will I receive my Cricbet99 ID?",
+    a: "Lightning fast — your Cricbet99 ID lands on WhatsApp within 2 to 5 minutes of your first message. No paperwork, no waiting, no forms. Just one quick chat with a verified account manager and you're live.",
+    icon: "Zap",
   },
   {
-    q: "What payment methods can I use for deposits and withdrawals?",
-    a: "You can deposit and withdraw via UPI, Google Pay, PhonePe, Paytm, IMPS, NEFT and net banking. Deposits reflect in seconds and withdrawals are processed 24/7 — usually within minutes.",
+    q: "Which payment methods are supported?",
+    a: "Everything Indian players prefer — UPI, Google Pay, PhonePe, Paytm, IMPS, NEFT and net banking. Deposits reflect instantly, and withdrawals run 24/7, typically clearing your bank in a matter of minutes.",
+    icon: "Wallet",
   },
   {
-    q: "Which sports and games are available on Cricbet99?",
-    a: "One Cricbet99 ID covers IPL, T20 World Cup, ODI, PSL, football (EPL, La Liga, UCL), tennis (Grand Slams, ATP, WTA), kabaddi (PKL), horse racing, basketball, esports and live casino games like Teen Patti, Andar Bahar, Roulette and Blackjack.",
+    q: "What sports and games can I bet on?",
+    a: "One Cricbet99 ID unlocks it all — IPL, T20 World Cup, ODI and PSL cricket, football (EPL, La Liga, UCL), tennis (Grand Slams, ATP, WTA), kabaddi (PKL), horse racing, basketball, esports, plus live casino favourites like Teen Patti, Andar Bahar, Roulette and Blackjack.",
+    icon: "Trophy",
   },
   {
-    q: "Do I get a welcome bonus?",
-    a: "Yes. New players receive a 100% welcome bonus up to ₹10,000 on their first deposit, plus recurring reload, cashback and referral rewards. All terms are transparent and shared on WhatsApp before you deposit.",
+    q: "Is there a welcome bonus for new members?",
+    a: "Yes — a 100% welcome bonus up to ₹10,000 on your very first deposit, plus ongoing reload bonuses, cashback and referral rewards. Every term is transparent and shared on WhatsApp before you deposit a single rupee.",
+    icon: "Gift",
   },
   {
-    q: "Is there a Cricbet99 mobile app?",
-    a: "Yes — the Cricbet99 app is available for Android (APK) and iOS. It's downloaded directly from our official site, not the Play Store, and requires just 100 MB of space with Android 6.0+ or iOS 12+.",
+    q: "Do you offer a Cricbet99 mobile app?",
+    a: "Yes — a lightweight, high-performance app for Android (APK) and iOS, downloaded directly from our official site rather than the Play Store. Just 100 MB of storage, compatible with Android 6.0+ and iOS 12+.",
+    icon: "Smartphone",
   },
 ];
 
