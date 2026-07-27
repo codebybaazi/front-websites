@@ -32,6 +32,7 @@ import {
 import { SiteLayout, WA, CTABand } from "@/components/site-layout";
 import { LiveDashboard } from "@/components/live-dashboard";
 import { blogPosts } from "@/data/blog-posts";
+import { getRequestOrigin } from "@/lib/origin.functions";
 import logo from "@/assets/logo.png";
 import heroBanner from "@/assets/hero-banner.jpg";
 import launchAviator from "@/assets/launch/aviator.jpg";
@@ -113,7 +114,11 @@ const faqLd = {
 };
 
 export const Route = createFileRoute("/")({
-  head: () => ({
+  loader: async () => ({ origin: await getRequestOrigin() }),
+  head: ({ loaderData }) => {
+    const origin = loaderData?.origin ?? "";
+    const image = `${origin}${heroBanner}`;
+    return {
     meta: [
       { title: "Cricbet99 — India's #1 Online Cricket ID Since 2020" },
       {
@@ -129,15 +134,21 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
+      { property: "og:image", content: image },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Cricbet99 — India's #1 online cricket ID" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Cricbet99 — India's #1 Online Cricket ID" },
       { name: "twitter:description", content: "IPL, T20, football, tennis, kabaddi & live casino. Instant UPI payouts, 24/7 WhatsApp support." },
+      { name: "twitter:image", content: image },
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(faqLd) },
     ],
-  }),
+    };
+  },
   component: Index,
 });
 
