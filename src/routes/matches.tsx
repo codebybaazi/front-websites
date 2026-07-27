@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
+import { matches, matchesBySport, type MatchFixture } from "@/data/matches";
+import { ChevronRight, Radio } from "lucide-react";
 
 export const Route = createFileRoute("/matches")({
   head: () => ({
@@ -52,6 +55,39 @@ function MatchesPage() {
         title={<>Every live match, one <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Cricbet99 ID.</span></>}
         subtitle="A single verified Cricbet99 ID gives you real-time access to every major cricket, football and tennis fixture — with exchange-grade odds, session markets and instant UPI payouts."
       />
+
+      {/* Featured fixtures — deep links for SEO */}
+      <section className="mx-auto max-w-7xl px-6 py-8">
+        <h2 className="text-2xl font-black md:text-3xl">Featured live &amp; upcoming fixtures</h2>
+        <p className="mt-2 text-sm text-foreground/70">Tap any fixture for live odds, markets and a one-click WhatsApp ID.</p>
+        <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {matches.map((m: MatchFixture) => (
+            <Link
+              key={m.slug}
+              to="/matches/$slug"
+              params={{ slug: m.slug }}
+              className="group rounded-2xl border border-primary/20 bg-background/60 p-5 transition-colors hover:border-primary/60"
+            >
+              <div className="flex items-center justify-between text-xs font-bold uppercase tracking-widest">
+                <span className="text-primary">{m.tournament}</span>
+                {m.status === "live" && (
+                  <span className="inline-flex items-center gap-1 rounded-full bg-primary/15 px-2 py-0.5 text-[10px] text-primary">
+                    <Radio className="h-3 w-3" /> LIVE
+                  </span>
+                )}
+              </div>
+              <div className="mt-3 text-lg font-bold group-hover:text-primary">
+                {m.homeTeam} vs {m.awayTeam}
+              </div>
+              <div className="mt-1 text-xs text-foreground/60">{m.venue}, {m.city}</div>
+              <div className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-primary">
+                Live odds &amp; markets <ChevronRight className="h-3 w-3" />
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <section className="mx-auto max-w-7xl px-6 py-8 space-y-10">
         {groups.map((g) => (
           <div key={g.tag}>
@@ -71,3 +107,6 @@ function MatchesPage() {
     </SiteLayout>
   );
 }
+
+// silence unused import warning if bundler is strict
+void matchesBySport;
