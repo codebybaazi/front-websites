@@ -117,7 +117,7 @@ function MatchPage() {
       <section className="mx-auto max-w-7xl px-6 pb-8">
         <h2 className="text-2xl font-black md:text-3xl">Live betting markets for {m.homeTeam} vs {m.awayTeam}</h2>
         <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {m.marketHighlights.map((market) => (
+          {m.marketHighlights.map((market: string) => (
             <div key={market} className="rounded-2xl border border-primary/20 bg-background/60 p-5">
               <Target className="h-5 w-5 text-primary" />
               <div className="mt-3 text-base font-bold">{market}</div>
