@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MessageCircle, Phone, Mail, ShieldCheck, Zap, Gift, ArrowRight } from "lucide-react";
+import { MessageCircle, Phone, Mail, ShieldCheck, Zap, Gift, ArrowRight, Facebook, Instagram, Twitter, Youtube, Send, Linkedin } from "lucide-react";
 import type { ReactNode } from "react";
 import logo from "@/assets/logo.png";
 
@@ -72,6 +72,33 @@ export function SiteFooter() {
             India's premium cricket ID platform. Live in-play odds, instant UPI
             payouts and 24/7 human support — all from one verified account.
           </p>
+          <div className="mt-5">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-primary">Follow Us</h4>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {[
+                { Icon: Facebook, label: "Facebook", href: "https://facebook.com/cricbet99" },
+                { Icon: Instagram, label: "Instagram", href: "https://instagram.com/cricbet99" },
+                { Icon: Twitter, label: "X (Twitter)", href: "https://twitter.com/cricbet99" },
+                { Icon: Youtube, label: "YouTube", href: "https://youtube.com/@cricbet99" },
+                { Icon: Send, label: "Telegram", href: "https://t.me/cricbet99" },
+                { Icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/company/cricbet99" },
+              ].map(({ Icon, label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="grid h-9 w-9 place-items-center rounded-full border border-primary/25 bg-background/60 text-foreground/80 transition-all hover:scale-110 hover:border-primary hover:text-primary-foreground"
+                  style={{ backgroundImage: "none" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.background = "var(--gradient-gold)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.background = "")}
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
         <div>
           <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Sports</h4>
