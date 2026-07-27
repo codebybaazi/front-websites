@@ -6,10 +6,11 @@ export const Route = createFileRoute("/cricbet99-vs-gold365")({
   head: () => ({
     meta: [
       { title: "Cricbet99 vs Gold365 — Cricbet99" },
-      { name: "description", content: "Cricbet99 vs Gold365 on Cricbet99: Cricbet99 vs Gold365 on markets, bonuses and support. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
+      { name: "description", content: "Compare Cricbet99 vs gold365: features, odds, payouts and support. 24/7 WhatsApp help and instant UPI payouts on India's sharpest cricket ID." },
       { property: "og:title", content: "Cricbet99 vs Gold365 — Cricbet99" },
-      { property: "og:description", content: "Cricbet99 vs Gold365 on Cricbet99: Cricbet99 vs Gold365 on markets, bonuses and support. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:type", content: "article" },
+      { property: "og:description", content: "Compare Cricbet99 vs gold365: features, odds, payouts and support. 24/7 WhatsApp help and instant UPI payouts on India's sharpest cricket ID." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/cricbet99-vs-gold365" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/cricbet99-vs-gold365" }],

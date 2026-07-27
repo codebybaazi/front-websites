@@ -6,10 +6,11 @@ export const Route = createFileRoute("/cricbet99-vs-11xplay")({
   head: () => ({
     meta: [
       { title: "Cricbet99 vs 11xplay — Cricbet99" },
-      { name: "description", content: "Cricbet99 vs 11xplay on Cricbet99: a side-by-side comparison of features, odds and payouts. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
+      { name: "description", content: "Compare Cricbet99 vs 11xplay: features, odds, payouts and support. 24/7 WhatsApp help and instant UPI payouts on India's sharpest cricket ID." },
       { property: "og:title", content: "Cricbet99 vs 11xplay — Cricbet99" },
-      { property: "og:description", content: "Cricbet99 vs 11xplay on Cricbet99: a side-by-side comparison of features, odds and payouts. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:type", content: "article" },
+      { property: "og:description", content: "Compare Cricbet99 vs 11xplay: features, odds, payouts and support. 24/7 WhatsApp help and instant UPI payouts on India's sharpest cricket ID." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/cricbet99-vs-11xplay" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/cricbet99-vs-11xplay" }],
