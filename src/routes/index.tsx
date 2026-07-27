@@ -253,6 +253,144 @@ const steps = [
 ];
 
 function Index() {
+  return <IndexInner />;
+}
+
+function FaqSection() {
+  const [open, setOpen] = useState<number | null>(0);
+  const IconMap = { ShieldCheck, Zap, Wallet, Trophy, Gift, Smartphone } as const;
+  return (
+    <section className="relative overflow-hidden py-28">
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(700px circle at 50% 0%, color-mix(in oklab, var(--primary) 10%, transparent), transparent 55%), radial-gradient(500px circle at 90% 100%, color-mix(in oklab, var(--accent) 8%, transparent), transparent 60%)",
+        }}
+      />
+      <div className="relative mx-auto max-w-3xl px-6">
+        <div className="text-center">
+          <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
+            <HelpCircle className="h-3.5 w-3.5" /> Support · 24/7 on WhatsApp
+          </div>
+          <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl">
+            Everything about
+            <span className="ml-2 bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>
+              your Cricbet99 ID.
+            </span>
+          </h2>
+          <p className="mt-4 text-sm leading-relaxed text-foreground/65 md:text-base">
+            Clear, honest answers on safety, payouts, bonuses and everything in between — no fine print, no sales pitch.
+          </p>
+        </div>
+
+        <div
+          className="mt-14 rounded-3xl p-[1.5px]"
+          style={{
+            backgroundImage:
+              "linear-gradient(160deg, color-mix(in oklab, var(--primary) 50%, transparent), color-mix(in oklab, var(--accent) 40%, transparent) 45%, color-mix(in oklab, var(--primary) 30%, transparent))",
+          }}
+        >
+          <div className="rounded-[calc(1.5rem-1.5px)] bg-background/95 backdrop-blur-xl">
+            {faqs.map((f, i) => {
+              const Icon = IconMap[f.icon as keyof typeof IconMap] ?? HelpCircle;
+              const isOpen = open === i;
+              return (
+                <div
+                  key={f.q}
+                  className={`relative ${i !== 0 ? "border-t border-primary/10" : ""}`}
+                >
+                  <button
+                    type="button"
+                    onClick={() => setOpen(isOpen ? null : i)}
+                    aria-expanded={isOpen}
+                    className="group flex w-full items-center gap-5 px-6 py-6 text-left transition-colors hover:bg-primary/5 md:px-8"
+                  >
+                    <div
+                      className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border transition-all duration-300 ${
+                        isOpen
+                          ? "border-accent/60 text-background shadow-lg"
+                          : "border-primary/25 bg-primary/5 text-primary group-hover:border-primary/50"
+                      }`}
+                      style={isOpen ? { background: "var(--gradient-gold)" } : undefined}
+                    >
+                      <Icon className="h-5 w-5" />
+                    </div>
+
+                    <div className="min-w-0 flex-1">
+                      <div className="text-[10px] font-bold uppercase tracking-[0.22em] text-foreground/40">
+                        Question {String(i + 1).padStart(2, "0")}
+                      </div>
+                      <h3 className="mt-1 text-base font-bold leading-snug text-foreground md:text-[17px]">
+                        {f.q}
+                      </h3>
+                    </div>
+
+                    <span
+                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
+                        isOpen
+                          ? "rotate-45 border-accent/60 bg-accent/15 text-accent"
+                          : "border-primary/30 bg-background text-primary group-hover:border-primary/60"
+                      }`}
+                    >
+                      <Plus className="h-4 w-4" />
+                    </span>
+                  </button>
+
+                  <div
+                    className={`grid overflow-hidden transition-all duration-500 ease-out ${
+                      isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                    }`}
+                  >
+                    <div className="min-h-0">
+                      <div className="flex gap-4 px-6 pb-7 pl-[4.75rem] pr-8 md:px-8 md:pl-[5.25rem]">
+                        <div
+                          className="w-0.5 shrink-0 rounded-full"
+                          style={{ background: "var(--gradient-gold)" }}
+                        />
+                        <p className="text-sm leading-relaxed text-foreground/75 md:text-[15px]">
+                          {f.a}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="mt-10 flex flex-col items-center gap-4 rounded-2xl border border-primary/20 bg-background/60 p-6 text-center backdrop-blur-sm md:flex-row md:justify-between md:text-left">
+          <div className="flex items-center gap-4">
+            <div
+              className="flex h-11 w-11 items-center justify-center rounded-full text-background shadow-lg"
+              style={{ background: "var(--gradient-gold)" }}
+            >
+              <MessageCircle className="h-5 w-5" />
+            </div>
+            <div>
+              <div className="text-sm font-bold text-foreground">Still have questions?</div>
+              <div className="text-xs text-foreground/60">
+                Chat with a verified account manager — average reply time under 60 seconds.
+              </div>
+            </div>
+          </div>
+          <a
+            href={`https://wa.me/${WA}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold text-background shadow-lg transition-transform hover:scale-[1.03]"
+            style={{ background: "var(--gradient-gold)" }}
+          >
+            <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function IndexInner() {
   return (
     <SiteLayout>
       {/* HERO BANNER */}
