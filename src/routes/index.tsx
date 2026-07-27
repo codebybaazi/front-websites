@@ -29,6 +29,7 @@ import {
 } from "lucide-react";
 import { SiteLayout, WA, CTABand } from "@/components/site-layout";
 import { LiveDashboard } from "@/components/live-dashboard";
+import { blogPosts } from "@/data/blog-posts";
 import logo from "@/assets/logo.png";
 import heroBanner from "@/assets/hero-banner.jpg";
 import launchAviator from "@/assets/launch/aviator.jpg";
