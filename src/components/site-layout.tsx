@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MessageCircle, Phone, Mail } from "lucide-react";
+import { MessageCircle, Phone, Mail, ShieldCheck, Zap, Gift, ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
 import logo from "@/assets/logo.png";
 
@@ -187,18 +187,94 @@ export function CTABand({ heading, sub }: { heading: string; sub: string }) {
   return (
     <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:py-20">
       <div
-        className="rounded-3xl border border-primary/30 p-6 text-center sm:p-10 md:p-16"
-        style={{ background: "var(--gradient-hero)", boxShadow: "var(--shadow-card)" }}
+        className="relative overflow-hidden rounded-[2rem] p-[1.5px]"
+        style={{ background: "var(--gradient-gold)", boxShadow: "var(--shadow-card)" }}
       >
-        <h2 className="text-2xl font-black sm:text-3xl md:text-4xl">{heading}</h2>
-        <p className="mx-auto mt-3 max-w-xl text-sm text-foreground/80 sm:mt-4 sm:text-base">{sub}</p>
-        <a
-          href={WA}
-          className="mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-bold text-primary-foreground shadow-2xl transition-transform hover:scale-[1.03] sm:mt-8 sm:px-8 sm:py-4 sm:text-base"
-          style={{ background: "var(--gradient-gold)" }}
+        {/* Ambient glows */}
+        <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-primary/30 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-accent/20 blur-3xl" />
+
+        <div
+          className="relative rounded-[calc(2rem-1.5px)] px-6 py-10 sm:px-10 sm:py-14 md:px-16 md:py-20"
+          style={{ background: "var(--gradient-hero)" }}
         >
-          <MessageCircle className="h-5 w-5" /> Get Your ID on WhatsApp
-        </a>
+          <div className="grid items-center gap-10 md:grid-cols-[1.3fr_1fr]">
+            {/* Left: copy + CTA */}
+            <div className="text-center md:text-left">
+              <span
+                className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/40 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary backdrop-blur"
+              >
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-70" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+                </span>
+                Live onboarding · Open 24×7
+              </span>
+
+              <h2 className="mt-5 text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
+                {heading.split("Cricbet99")[0]}
+                <span
+                  className="bg-clip-text text-transparent"
+                  style={{ backgroundImage: "var(--gradient-gold)" }}
+                >
+                  Cricbet99
+                </span>
+                {heading.includes("Cricbet99") ? heading.split("Cricbet99")[1] : ""}
+              </h2>
+
+              <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-foreground/80 sm:text-base md:mx-0">
+                {sub}
+              </p>
+
+              <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center md:justify-start">
+                <a
+                  href={WA}
+                  className="group inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-bold text-primary-foreground shadow-2xl transition-transform hover:scale-[1.04] sm:text-base"
+                  style={{ background: "var(--gradient-gold)" }}
+                >
+                  <MessageCircle className="h-5 w-5" />
+                  Claim Your ID on WhatsApp
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
+                <a
+                  href="tel:+919999999999"
+                  className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/40 px-6 py-4 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:border-primary hover:bg-background/60"
+                >
+                  <Phone className="h-4 w-4 text-primary" /> Call an Expert
+                </a>
+              </div>
+
+              <p className="mt-5 text-xs text-foreground/60">
+                ⚡ ID activated in under 5 minutes · 🔒 100% private &amp; secure · 💸 Instant deposits &amp; withdrawals
+              </p>
+            </div>
+
+            {/* Right: perks */}
+            <div className="grid gap-3">
+              {[
+                { icon: Gift, title: "₹10,000 Welcome Bonus", desc: "100% match on your first deposit — credited instantly." },
+                { icon: Zap, title: "5-Minute Activation", desc: "Live agents onboard you the moment you message." },
+                { icon: ShieldCheck, title: "Bank-Grade Privacy", desc: "Your details stay encrypted end-to-end. Always." },
+              ].map(({ icon: Icon, title, desc }) => (
+                <div
+                  key={title}
+                  className="flex items-start gap-4 rounded-2xl border border-primary/20 bg-background/40 p-4 backdrop-blur transition-colors hover:border-primary/50"
+                >
+                  <div
+                    className="grid h-11 w-11 shrink-0 place-items-center rounded-xl text-primary-foreground"
+                    style={{ background: "var(--gradient-gold)" }}
+                  >
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-foreground">{title}</div>
+                    <div className="mt-0.5 text-xs text-foreground/70">{desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
