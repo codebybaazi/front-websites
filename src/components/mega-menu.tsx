@@ -213,12 +213,26 @@ const MENUS: MenuDef[] = [
 
 function MenuItem({ m, isOpen, setOpen }: { m: MenuDef; isOpen: boolean; setOpen: React.Dispatch<React.SetStateAction<MenuKey | null>> }) {
   const ref = useRef<HTMLDivElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const cancelClose = () => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+  };
+  const scheduleClose = () => {
+    cancelClose();
+    closeTimer.current = setTimeout(() => {
+      setOpen((cur) => (cur === m.key ? null : cur));
+    }, 180);
+  };
+  useEffect(() => () => cancelClose(), []);
   return (
     <div
       ref={ref}
       className="relative"
-      onMouseEnter={() => setOpen(m.key)}
-      onMouseLeave={() => setOpen((cur) => (cur === m.key ? null : cur))}
+      onMouseEnter={() => { cancelClose(); setOpen(m.key); }}
+      onMouseLeave={scheduleClose}
     >
       <button
         type="button"
@@ -231,12 +245,20 @@ function MenuItem({ m, isOpen, setOpen }: { m: MenuDef; isOpen: boolean; setOpen
         {m.label}
         <ChevronDown className={`h-3 w-3 transition-transform ${isOpen ? "rotate-180" : ""}`} />
       </button>
-      {isOpen && <Panel menu={m} onNavigate={() => setOpen(null)} anchorRef={ref} />}
+      {isOpen && (
+        <Panel
+          menu={m}
+          onNavigate={() => { cancelClose(); setOpen(null); }}
+          anchorRef={ref}
+          onPanelEnter={cancelClose}
+          onPanelLeave={scheduleClose}
+        />
+      )}
     </div>
   );
 }
 
-function Panel({ menu, onNavigate, anchorRef }: { menu: MenuDef; onNavigate: () => void; anchorRef: React.RefObject<HTMLDivElement | null> }) {
+function Panel({ menu, onNavigate, anchorRef, onPanelEnter, onPanelLeave }: { menu: MenuDef; onNavigate: () => void; anchorRef: React.RefObject<HTMLDivElement | null>; onPanelEnter: () => void; onPanelLeave: () => void }) {
 
   const Icon = menu.icon;
   const cols = Math.min(menu.groups.length, 3);
@@ -261,6 +283,8 @@ function Panel({ menu, onNavigate, anchorRef }: { menu: MenuDef; onNavigate: () 
     <div
       className="fixed z-[100] -translate-x-1/2 pt-2"
       style={{ left: pos.left, top: pos.top, width: `min(${width}px, 92vw)` }}
+      onMouseEnter={onPanelEnter}
+      onMouseLeave={onPanelLeave}
     >
 
     <div
