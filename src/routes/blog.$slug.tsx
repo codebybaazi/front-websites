@@ -1,0 +1,121 @@
+import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { SiteLayout, CTABand } from "@/components/site-layout";
+import { blogPosts, getPostBySlug } from "@/data/blog-posts";
+import defaultHero from "@/assets/stadium.webp";
+
+export const Route = createFileRoute("/blog/$slug")({
+  loader: ({ params }) => {
+    const post = getPostBySlug(params.slug);
+    if (!post) throw notFound();
+    return { post };
+  },
+  head: ({ loaderData, params }) => {
+    const post = loaderData?.post;
+    if (!post) {
+      return {
+        meta: [
+          { title: "Post not found — Cricbet99 Blog" },
+          { name: "description", content: "This Cricbet99 blog post could not be found." },
+        ],
+      };
+    }
+    return {
+      meta: [
+        { title: `${post.title} | Cricbet99 Blog` },
+        { name: "description", content: post.excerpt },
+        { property: "og:title", content: post.title },
+        { property: "og:description", content: post.excerpt },
+        { property: "og:type", content: "article" },
+        { property: "og:url", content: `/blog/${params.slug}` },
+        ...(post.hero ? [{ property: "og:image", content: post.hero }, { name: "twitter:image", content: post.hero }] : []),
+        { name: "twitter:card", content: "summary_large_image" },
+      ],
+      links: [{ rel: "canonical", href: `/blog/${params.slug}` }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: post.title,
+            description: post.excerpt,
+            datePublished: post.date,
+            author: { "@type": "Organization", name: "Cricbet99" },
+            ...(post.hero ? { image: post.hero } : {}),
+            mainEntityOfPage: `/blog/${params.slug}`,
+          }),
+        },
+      ],
+    };
+  },
+  notFoundComponent: () => (
+    <SiteLayout>
+      <div className="mx-auto max-w-3xl px-6 py-24 text-center">
+        <h1 className="text-3xl font-bold">Post not found</h1>
+        <p className="mt-4 text-foreground/70">The blog post you're looking for isn't here. Head back to the blog to browse the latest.</p>
+        <Link to="/blog" className="mt-6 inline-block rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground">Back to blog</Link>
+      </div>
+    </SiteLayout>
+  ),
+  errorComponent: ({ reset }) => (
+    <SiteLayout>
+      <div className="mx-auto max-w-3xl px-6 py-24 text-center">
+        <h1 className="text-3xl font-bold">Something went wrong</h1>
+        <button onClick={reset} className="mt-6 inline-block rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground">Try again</button>
+      </div>
+    </SiteLayout>
+  ),
+  component: PostPage,
+});
+
+function PostPage() {
+  const { post } = Route.useLoaderData();
+  const related = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
+
+  return (
+    <SiteLayout>
+      <article className="mx-auto max-w-3xl px-6 pt-16 pb-8">
+        <div className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest">
+          <span className="inline-flex rounded-full bg-accent/20 px-3 py-1 text-accent-foreground">{post.tag}</span>
+          <span className="text-foreground/50">{new Date(post.date).toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}</span>
+        </div>
+        <h1 className="mt-4 text-4xl font-black leading-tight md:text-5xl">{post.title}</h1>
+        <p className="mt-4 text-lg text-foreground/70">{post.excerpt}</p>
+        <img src={post.hero ?? defaultHero} alt={post.title} className="mt-8 aspect-[16/9] w-full rounded-2xl object-cover shadow-[var(--shadow-gold)]" />
+
+        <div className="mt-10 space-y-8">
+          {post.sections.map((s: { heading: string; body: string }) => (
+            <section key={s.heading}>
+              <h2 className="text-2xl font-bold text-primary">{s.heading}</h2>
+              <p className="mt-3 text-foreground/80 leading-relaxed">{s.body}</p>
+            </section>
+          ))}
+        </div>
+      </article>
+
+      <section className="mx-auto max-w-7xl px-6 pb-16">
+        <h3 className="text-sm font-bold uppercase tracking-widest text-foreground/60">More from the blog</h3>
+        <div className="mt-4 grid gap-6 md:grid-cols-3">
+          {related.map((p) => (
+            <Link
+              key={p.slug}
+              to="/blog/$slug"
+              params={{ slug: p.slug }}
+              className="group overflow-hidden rounded-2xl border border-primary/20 bg-background/60 hover:border-primary/50"
+            >
+              <div className="aspect-[16/9] w-full overflow-hidden">
+                <img src={p.hero ?? defaultHero} alt={p.title} loading="lazy" className="h-full w-full object-cover transition group-hover:scale-105" />
+              </div>
+              <div className="p-6">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-accent-foreground">{p.tag}</span>
+                <h4 className="mt-2 font-bold leading-snug">{p.title}</h4>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <CTABand heading="Read up, then bet smart." sub="Get your Cricbet99 ID on WhatsApp and put what you've learned into play." />
+    </SiteLayout>
+  );
+}

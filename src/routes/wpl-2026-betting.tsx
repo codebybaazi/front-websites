@@ -1,0 +1,26 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { LongFormPage, buildFaqJsonLd } from "@/components/long-form-page";
+import content from "@/data/pages/wpl-2026-betting.json";
+
+export const Route = createFileRoute("/wpl-2026-betting")({
+  head: () => ({
+    meta: [
+      { title: "WPL 2026 Betting — Cricbet99" },
+      { name: "description", content: "WPL 2026 Betting on Cricbet99: Women's Premier League 2026 odds, teams and markets. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
+      { property: "og:title", content: "WPL 2026 Betting — Cricbet99" },
+      { property: "og:description", content: "WPL 2026 Betting on Cricbet99: Women's Premier League 2026 odds, teams and markets. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
+      { property: "og:type", content: "article" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/wpl-2026-betting" }],
+    scripts: content.faqs && content.faqs.length ? [{
+      type: "application/ld+json",
+      children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+    }] : [],
+  }),
+  component: Page_wpl_2026_betting,
+});
+
+function Page_wpl_2026_betting() {
+  return <LongFormPage content={content} />;
+}

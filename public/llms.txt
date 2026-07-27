@@ -1,0 +1,37 @@
+# Cricbet99
+
+> India's trusted online cricket ID platform since 2010 — cricket, football, tennis, kabaddi and live casino with instant UPI payouts and 24/7 WhatsApp support.
+
+Cricbet99 helps Indian players access agent-assisted online cricket betting and gaming with a single verified ID. Deposits and withdrawals are handled over WhatsApp via UPI, IMPS, NEFT and bank transfer. 18+ only.
+
+## Pages
+
+- [Home](/): One verified ID for cricket, football, tennis and live casino.
+- [Cricket & IPL](/cricket): Live IPL, T20, ODI and Test markets with Fancy Bets and session odds.
+- [Football](/football): Global football markets across leagues and cups.
+- [Tennis](/tennis): ATP, WTA and Grand Slam betting markets.
+- [Horse Racing](/horse-racing): Indian and international horse racing odds.
+- [Live Casino](/casino): Teen Patti, Andar Bahar, Roulette, Baccarat and Blackjack.
+- [Indian Card Games](/indian-card-games): Teen Patti, Rummy, Andar Bahar and more.
+- [Matches](/matches): Live and upcoming match cards.
+- [Predictions](/predictions): Match previews and expert picks.
+- [Schedule](/schedule): Upcoming fixtures across sports.
+- [Sports ID](/sports-id): One verified ID for every sport we cover.
+- [Cricbet99 App](/cricbet99-app): Mobile app install guide.
+- [Platforms](/platforms): Supported partner platforms.
+- [Services](/services): What Cricbet99 offers players and agents.
+- [How It Works](/how-it-works): Sign up, deposit, play and withdraw in minutes.
+- [Cricbet99 vs Lotus 365](/cricbet99-vs-lotus365): Feature and payout comparison.
+- [Cricbet99 vs SkyExchange 247](/cricbet99-vs-skyexchange247): Feature and payout comparison.
+- [Blog](/blog): Guides, previews and betting tips.
+- [FAQ](/faq): Answers about IDs, deposits, withdrawals and security.
+- [About](/about): Our story, mission and team.
+- [Contact](/contact): Reach the 24/7 WhatsApp support team.
+- [All Links](/all-links): Directory of every page on the site.
+
+## Optional
+
+- [Responsible Gaming](/responsible-gaming)
+- [Privacy Policy](/privacy-policy)
+- [Terms & Conditions](/terms)
+- [Disclaimer](/disclaimer)

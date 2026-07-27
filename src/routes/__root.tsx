@@ -77,21 +77,48 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Cricbet99 — India's Trusted Online Cricket ID" },
+      {
+        name: "description",
+        content:
+          "Get your verified Cricbet99 ID for cricket, football, tennis and live casino with instant UPI payouts and 24/7 WhatsApp support.",
+      },
+      { name: "author", content: "Cricbet99" },
+      { property: "og:site_name", content: "Cricbet99" },
+      { property: "og:title", content: "Cricbet99 — India's Trusted Cricket ID" },
+      {
+        property: "og:description",
+        content:
+          "One verified ID for cricket, football, tennis, kabaddi and live casino. Instant payouts, 24/7 support.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Cricbet99",
+          url: "/",
+          description:
+            "India's trusted online cricket ID platform since 2020 — cricket, football, tennis and live casino with instant UPI payouts and 24/7 WhatsApp support.",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Cricbet99",
+          url: "/",
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
