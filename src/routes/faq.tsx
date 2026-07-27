@@ -9,8 +9,10 @@ export const Route = createFileRoute("/faq")({
       { property: "og:title", content: "Cricbet99 FAQ" },
       { property: "og:description", content: "Common questions about Cricbet99 IDs, deposits, withdrawals and support." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/faq" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/faq" }],
     scripts: [
       {
         type: "application/ld+json",

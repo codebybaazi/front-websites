@@ -5,10 +5,11 @@ export const Route = createFileRoute("/cricbet99-vs-lotus365")({
   head: () => ({
     meta: [
       { title: "Cricbet99 vs Lotus 365 — Honest 2026 Comparison" },
-      { name: "description", content: "Cricbet99 vs Lotus 365 compared side-by-side: onboarding speed, cricket odds, casino depth, UPI payout time, support quality and account safety. Pick the right betting ID for you." },
+      { name: "description", content: "Compare Cricbet99 vs lotus365: features, odds, payouts and support. 24/7 WhatsApp help and instant UPI payouts on India's sharpest cricket ID." },
       { property: "og:title", content: "Cricbet99 vs Lotus 365 — 2026 Comparison" },
-      { property: "og:description", content: "A no-hype comparison of Cricbet99 and Lotus 365 across the features Indian bettors actually care about." },
+      { property: "og:description", content: "Compare Cricbet99 vs lotus365: features, odds, payouts and support. 24/7 WhatsApp help and instant UPI payouts on India's sharpest cricket ID." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/cricbet99-vs-lotus365" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),

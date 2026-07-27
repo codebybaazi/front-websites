@@ -10,8 +10,10 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About Cricbet99" },
       { property: "og:description", content: "India's most trusted cricket ID platform — one verified account for cricket, casino and more." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/about" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/about" }],
   }),
   component: About,
 });

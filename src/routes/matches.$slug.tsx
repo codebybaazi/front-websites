@@ -15,7 +15,8 @@ export const Route = createFileRoute("/matches/$slug")({
     }
     const m = loaderData.match;
     const title = `${m.homeTeam} vs ${m.awayTeam} Live Odds & Betting — ${m.tournament} | Cricbet99`;
-    const desc = `Live ${m.sport.toLowerCase()} odds for ${m.homeTeam} vs ${m.awayTeam} — ${m.tournament} at ${m.venue}, ${m.city}. In-play markets: ${m.marketHighlights.join(", ")}. Get your Cricbet99 ID on WhatsApp.`;
+    const descFull = `Live ${m.sport.toLowerCase()} odds for ${m.homeTeam} vs ${m.awayTeam} at ${m.venue}, ${m.city}. In-play markets on Cricbet99.`;
+    const desc = descFull.length > 160 ? descFull.slice(0, 157) + "..." : descFull;
     const path = `/matches/${m.slug}`;
     return {
       meta: [
@@ -24,7 +25,7 @@ export const Route = createFileRoute("/matches/$slug")({
         { name: "keywords", content: m.keywords.join(", ") },
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
-        { property: "og:type", content: "article" },
+        { property: "og:type", content: "website" },
         { property: "og:url", content: path },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: title },

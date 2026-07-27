@@ -5,10 +5,11 @@ export const Route = createFileRoute("/cricbet99-vs-skyexchange247")({
   head: () => ({
     meta: [
       { title: "Cricbet99 vs SkyExchange 247 — 2026 Honest Comparison" },
-      { name: "description", content: "Compare Cricbet99 and SkyExchange 247 on signup, cricket exchange odds, casino, UPI payout speed, support and safety. Find the best Indian betting ID for 2026." },
+      { name: "description", content: "Compare Cricbet99 vs skyexchange247: features, odds, payouts and support. 24/7 WhatsApp help and instant UPI payouts on India's sharpest cricket ID." },
       { property: "og:title", content: "Cricbet99 vs SkyExchange 247 — 2026" },
-      { property: "og:description", content: "Side-by-side comparison of Cricbet99 and SkyExchange 247 for Indian cricket bettors." },
+      { property: "og:description", content: "Compare Cricbet99 vs skyexchange247: features, odds, payouts and support. 24/7 WhatsApp help and instant UPI payouts on India's sharpest cricket ID." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/cricbet99-vs-skyexchange247" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
