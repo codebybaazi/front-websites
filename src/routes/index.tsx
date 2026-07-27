@@ -24,6 +24,9 @@ import {
   Target,
   Award,
   CheckCircle2,
+  Smartphone,
+  HelpCircle,
+  Plus,
 } from "lucide-react";
 import { SiteLayout, WA, CTABand } from "@/components/site-layout";
 import { LiveDashboard } from "@/components/live-dashboard";
@@ -67,28 +70,34 @@ const popularCasino = [
 
 const faqs = [
   {
-    q: "Is Cricbet99 safe and legal to use in India?",
-    a: "Yes. Cricbet99 has operated as a trusted online cricket ID platform since 2020, with bank-grade SSL encryption, verified agents, and full KYC. Online skill-based betting is permitted in most Indian states — check your local laws before playing.",
+    q: "Is Cricbet99 safe and legal to play in India?",
+    a: "Absolutely. Cricbet99 has been India's most trusted online cricket ID since 2020 — protected by bank-grade SSL encryption, verified WhatsApp agents, and full KYC compliance. Skill-based online gaming is permitted in most Indian states; always check your local regulations before you play.",
+    icon: "ShieldCheck",
   },
   {
-    q: "How fast can I get my Cricbet99 ID?",
-    a: "Your Cricbet99 ID is created and delivered on WhatsApp within 2–5 minutes of your first message. There are no long sign-up forms — just a quick chat with a verified account manager.",
+    q: "How quickly will I receive my Cricbet99 ID?",
+    a: "Lightning fast — your Cricbet99 ID lands on WhatsApp within 2 to 5 minutes of your first message. No paperwork, no waiting, no forms. Just one quick chat with a verified account manager and you're live.",
+    icon: "Zap",
   },
   {
-    q: "What payment methods can I use for deposits and withdrawals?",
-    a: "You can deposit and withdraw via UPI, Google Pay, PhonePe, Paytm, IMPS, NEFT and net banking. Deposits reflect in seconds and withdrawals are processed 24/7 — usually within minutes.",
+    q: "Which payment methods are supported?",
+    a: "Everything Indian players prefer — UPI, Google Pay, PhonePe, Paytm, IMPS, NEFT and net banking. Deposits reflect instantly, and withdrawals run 24/7, typically clearing your bank in a matter of minutes.",
+    icon: "Wallet",
   },
   {
-    q: "Which sports and games are available on Cricbet99?",
-    a: "One Cricbet99 ID covers IPL, T20 World Cup, ODI, PSL, football (EPL, La Liga, UCL), tennis (Grand Slams, ATP, WTA), kabaddi (PKL), horse racing, basketball, esports and live casino games like Teen Patti, Andar Bahar, Roulette and Blackjack.",
+    q: "What sports and games can I bet on?",
+    a: "One Cricbet99 ID unlocks it all — IPL, T20 World Cup, ODI and PSL cricket, football (EPL, La Liga, UCL), tennis (Grand Slams, ATP, WTA), kabaddi (PKL), horse racing, basketball, esports, plus live casino favourites like Teen Patti, Andar Bahar, Roulette and Blackjack.",
+    icon: "Trophy",
   },
   {
-    q: "Do I get a welcome bonus?",
-    a: "Yes. New players receive a 100% welcome bonus up to ₹10,000 on their first deposit, plus recurring reload, cashback and referral rewards. All terms are transparent and shared on WhatsApp before you deposit.",
+    q: "Is there a welcome bonus for new members?",
+    a: "Yes — a 100% welcome bonus up to ₹10,000 on your very first deposit, plus ongoing reload bonuses, cashback and referral rewards. Every term is transparent and shared on WhatsApp before you deposit a single rupee.",
+    icon: "Gift",
   },
   {
-    q: "Is there a Cricbet99 mobile app?",
-    a: "Yes — the Cricbet99 app is available for Android (APK) and iOS. It's downloaded directly from our official site, not the Play Store, and requires just 100 MB of space with Android 6.0+ or iOS 12+.",
+    q: "Do you offer a Cricbet99 mobile app?",
+    a: "Yes — a lightweight, high-performance app for Android (APK) and iOS, downloaded directly from our official site rather than the Play Store. Just 100 MB of storage, compatible with Android 6.0+ and iOS 12+.",
+    icon: "Smartphone",
   },
 ];
 
@@ -1401,27 +1410,68 @@ function Index() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24">
-        <div className="mx-auto max-w-4xl px-6">
-          <div className="text-center">
+      <section className="relative overflow-hidden py-28">
+        <div className="pointer-events-none absolute inset-0 opacity-70" style={{ background: "radial-gradient(700px circle at 50% 0%, color-mix(in oklab, var(--primary) 10%, transparent), transparent 55%)" }} />
+        <div className="relative mx-auto max-w-5xl px-6">
+          <div className="mx-auto max-w-2xl text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
-              FAQ
+              <HelpCircle className="h-3.5 w-3.5" /> Answers · Not Excuses
             </div>
             <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl">
               Everything about
               <span className="ml-2 bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>your Cricbet99 ID.</span>
             </h2>
+            <p className="mt-4 text-sm leading-relaxed text-foreground/65 md:text-base">
+              Straight answers on safety, payouts, bonuses and everything else — no fine print, no sales pitch.
+            </p>
           </div>
-          <div className="mt-10 space-y-3">
-            {faqs.map((f) => (
-              <details key={f.q} className="group rounded-2xl border border-primary/25 bg-background/50 p-5 open:bg-background/70">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-foreground">
-                  {f.q}
-                  <ChevronRight className="h-4 w-4 shrink-0 transition-transform group-open:rotate-90" />
-                </summary>
-                <p className="mt-3 text-sm leading-relaxed text-foreground/75">{f.a}</p>
-              </details>
-            ))}
+
+          <div className="mt-14 grid gap-4 md:grid-cols-2">
+            {faqs.map((f, i) => {
+              const IconMap = { ShieldCheck, Zap, Wallet, Trophy, Gift, Smartphone } as const;
+              const Icon = IconMap[f.icon as keyof typeof IconMap] ?? HelpCircle;
+              return (
+                <details
+                  key={f.q}
+                  className="group relative rounded-2xl p-[1.5px] transition-all duration-500 hover:-translate-y-1"
+                  style={{ backgroundImage: "linear-gradient(140deg, color-mix(in oklab, var(--primary) 45%, transparent), color-mix(in oklab, var(--accent) 40%, transparent) 55%, transparent 90%)" }}
+                >
+                  <div className="relative h-full overflow-hidden rounded-[calc(1rem-1.5px)] bg-background/95 p-6 backdrop-blur-xl">
+                    <div className="pointer-events-none absolute -right-14 -top-14 h-32 w-32 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-30 group-open:opacity-30" style={{ background: "var(--gradient-gold)" }} />
+
+                    <summary className="relative flex cursor-pointer list-none items-start justify-between gap-4 [&::-webkit-details-marker]:hidden">
+                      <div className="flex items-start gap-4">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 text-primary transition-all duration-300 group-open:border-accent/50 group-open:text-accent" style={{ boxShadow: "inset 0 1px 0 color-mix(in oklab, var(--primary) 20%, transparent)" }}>
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        <div className="pt-1.5">
+                          <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-foreground/40">Q · {String(i + 1).padStart(2, "0")}</div>
+                          <h3 className="mt-1 text-[15px] font-bold leading-snug text-foreground">{f.q}</h3>
+                        </div>
+                      </div>
+                      <span className="mt-1.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-background text-primary transition-all duration-300 group-open:rotate-45 group-open:border-accent/60 group-open:text-accent">
+                        <Plus className="h-4 w-4" />
+                      </span>
+                    </summary>
+
+                    <div className="relative mt-5 grid grid-cols-[auto_1fr] gap-4 border-t border-primary/15 pt-4">
+                      <div className="mt-1 h-full w-0.5 rounded-full" style={{ background: "var(--gradient-gold)" }} />
+                      <p className="text-sm leading-relaxed text-foreground/75">{f.a}</p>
+                    </div>
+                  </div>
+                </details>
+              );
+            })}
+          </div>
+
+          <div className="mt-12 flex flex-col items-center gap-3 rounded-2xl border border-primary/25 bg-background/50 p-6 text-center backdrop-blur-sm md:flex-row md:justify-between md:text-left">
+            <div>
+              <div className="text-sm font-bold text-foreground">Still have questions?</div>
+              <div className="text-xs text-foreground/60">Chat with a verified account manager on WhatsApp — replies within 60 seconds.</div>
+            </div>
+            <a href={`https://wa.me/${WA}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold text-background shadow-lg transition-transform hover:scale-105" style={{ background: "var(--gradient-gold)" }}>
+              <MessageCircle className="h-4 w-4" /> Ask on WhatsApp
+            </a>
           </div>
         </div>
       </section>
