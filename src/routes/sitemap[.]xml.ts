@@ -43,7 +43,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           "/why-choose-cricbet99", "/ipl-2026-calendar", "/high-odds-betting-strategy",
           "/become-agent", "/is-cricbet99-real", "/what-is-cricbet99",
           "/is-cricbet99-safe", "/is-cricbet99-legal", "/community-guidelines",
-          "/trusted-betting-agent",
+          "/trusted-betting-agent", "/cricbet99-vs-mahavir-book", "/cricbet99-vs-diamond-exchange",
         ];
         const entries: SitemapEntry[] = [
           ...staticPaths.map((p) => ({ path: p, changefreq: "monthly" as const, priority: p === "/" ? "1.0" : "0.6" })),
