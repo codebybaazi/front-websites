@@ -134,6 +134,8 @@ const MENUS: MenuDef[] = [
         { label: "vs SkyExchange 247", to: "/cricbet99-vs-skyexchange247" },
         { label: "vs 11xPlay", to: "/cricbet99-vs-11xplay" },
         { label: "vs Reddy Book", to: "/cricbet99-vs-reddybook" },
+        { label: "vs Mahavir Book", to: "/cricbet99-vs-mahavir-book" },
+        { label: "vs Diamond Exch", to: "/cricbet99-vs-diamond-exchange" },
       ]},
       { title: "More Rivals", items: [
         { label: "vs Laser 247", to: "/cricbet99-vs-laser247" },
