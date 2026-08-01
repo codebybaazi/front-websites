@@ -1,0 +1,215 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
+import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
+import { CheckCircle2, XCircle, Trophy, Zap, ShieldCheck, Wallet, MessageCircle, Star } from "lucide-react";
+
+export const Route = createFileRoute("/cricbet99-vs-diamond-exchange")({
+  head: () => ({
+    meta: [
+      { title: "Cricbet99 vs Diamond Exchange (2026): Best Betting ID Review" },
+      { name: "description", content: "Side-by-side comparison: Cricbet99 vs Diamond Exchange. We test exchange liquidity, back/lay odds, UPI withdrawal times and live casino depth for 2026." },
+      { name: "keywords", content: "cricbet99 vs diamond exchange, diamond exchange id, best betting exchange india, diamond exchange review, cricbet99 exchange id, live cricket betting id" },
+      { property: "og:title", content: "Cricbet99 vs Diamond Exchange (2026) — Honest Exchange Comparison" },
+      { property: "og:description", content: "Which exchange ID offers better liquidity and faster payouts? Full 2026 review of Cricbet99 vs Diamond Exchange for Indian players." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/cricbet99-vs-diamond-exchange" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/cricbet99-vs-diamond-exchange" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "/" },
+            { "@type": "ListItem", position: 2, name: "Compare", item: "/compare" },
+            { "@type": "ListItem", position: 3, name: "Cricbet99 vs Diamond Exchange", item: "/cricbet99-vs-diamond-exchange" },
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            { "@type": "Question", name: "Is Cricbet99 better than Diamond Exchange?",
+              acceptedAnswer: { "@type": "Answer", text: "Cricbet99 is the superior all-rounder in 2026, offering faster 5-minute payouts and better mobile app stability than Diamond Exchange." } },
+            { "@type": "Question", name: "Which exchange has better cricket liquidity?",
+              acceptedAnswer: { "@type": "Answer", text: "Cricbet99 provides deeper liquidity on IPL and ICC events, ensuring larger bets are matched instantly compared to Diamond Exchange's thinner books." } },
+          ],
+        }),
+      },
+    ],
+  }),
+  component: Compare,
+});
+
+const rows = [
+  { k: "Exchange Liquidity", a: "High - Instant Matching", b: "Medium - Delayed on Side Markets" },
+  { k: "Payout Window", a: "24/7 (5-15 mins)", b: "Daytime only (1-2 hours)" },
+  { k: "App Performance", a: "Ultra-Fast Android/iOS", b: "Web-Wrapped APK" },
+  { k: "Human Support", a: "Direct WhatsApp Line", b: "Chatbot + Agent" },
+  { k: "IPL Specials", a: "Zero Commission Days", b: "Standard 2% Commission" },
+];
+
+const scorecard = [
+  { label: "Market Liquidity", icon: Trophy, cric: 9.8, other: 8.5 },
+  { label: "Withdrawal Speed", icon: Zap, cric: 9.9, other: 8.1 },
+  { label: "Account Privacy", icon: ShieldCheck, cric: 9.7, other: 8.4 },
+  { label: "Bonus Value", icon: Wallet, cric: 9.5, other: 8.0 },
+];
+
+const cricPros = [
+  "Massive liquidity for high-stakes bettors",
+  "Lightning-fast UPI settlements",
+  "Dedicated local Indian support team",
+  "Intuitive mobile betting experience",
+];
+const cricCons = ["Strict one-account policy per user"];
+
+const otherPros = [
+  "Clean exchange interface",
+  "Solid range of international sports",
+  "Long-term market presence",
+];
+const otherCons = [
+  "Limited withdrawal windows",
+  "Support response lag during peak hours",
+  "Mobile app can be sluggish",
+];
+
+const faqs = [
+  { q: "Can I use Diamond Exchange on mobile?", a: "Yes, but users often report that the Cricbet99 app is much more responsive for live betting." },
+  { q: "Which ID is safer for large deposits?", a: "Cricbet99's encrypted wallet system and 24/7 agent verification make it the safer choice for high-volume players." },
+];
+
+function Compare() {
+  return (
+    <SiteLayout>
+      <PageHero
+        eyebrow="Market Comparison"
+        title={<>Cricbet99 vs Diamond Exchange — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>The Liquidity Test.</span></>}
+        subtitle="Comparing the two most popular exchange IDs in India. We break down the liquidity, commission rates, and payout efficiency for 2026."
+      />
+
+      <section className="mx-auto max-w-5xl px-6 pt-10">
+        <div className="rounded-2xl border border-primary/25 bg-[oklch(0.11_0.02_260/0.6)] p-6 shadow-[0_20px_50px_-25px_rgba(0,0,0,0.8)]">
+          <h2 className="text-2xl font-black text-foreground">Expert Verdict</h2>
+          <p className="mt-3 text-foreground/75">
+            Diamond Exchange is a veteran, but Cricbet99 is the modern powerhouse. For players who demand instant liquidity and minute-level payouts, Cricbet99 is the undisputed champion in 2026.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 py-10">
+        <h2 className="text-xl font-black text-foreground sm:text-2xl">Key Performance Indicators</h2>
+        <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          {scorecard.map((s) => {
+            const Icon = s.icon;
+            return (
+              <div key={s.label} className="rounded-xl border border-primary/20 bg-background/60 p-4">
+                <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
+                  <Icon className="h-4 w-4 text-primary" />
+                  {s.label}
+                </div>
+                <div className="mt-3 space-y-2">
+                  <ScoreBar name="Cricbet99" value={s.cric} tone="gold" />
+                  <ScoreBar name="Diamond Exchange" value={s.other} tone="muted" />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 pb-8">
+        <div className="overflow-x-auto rounded-2xl border border-primary/20">
+          <table className="w-full min-w-[640px] text-left text-sm">
+            <thead className="bg-primary/10 text-xs uppercase tracking-widest text-primary">
+              <tr>
+                <th className="px-5 py-4">Feature</th>
+                <th className="px-5 py-4">Cricbet99</th>
+                <th className="px-5 py-4">Diamond Exchange</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-primary/10">
+              {rows.map((r) => (
+                <tr key={r.k} className="bg-background/60">
+                  <td className="px-5 py-4 font-semibold">{r.k}</td>
+                  <td className="px-5 py-4 text-primary">{r.a}</td>
+                  <td className="px-5 py-4 text-foreground/70">{r.b}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 py-6">
+        <div className="grid gap-4 md:grid-cols-2">
+          <ProsCons title="Why Cricbet99?" pros={cricPros} cons={cricCons} tone="gold" />
+          <ProsCons title="Why Diamond Exchange?" pros={otherPros} cons={otherCons} tone="muted" />
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 py-10">
+        <h2 className="text-xl font-black text-foreground sm:text-2xl">Bettor FAQ</h2>
+        <div className="mt-5 space-y-3">
+          {faqs.map((f) => (
+            <details key={f.q} className="group rounded-xl border border-primary/20 bg-background/60 p-4 open:border-primary/40">
+              <summary className="cursor-pointer list-none text-sm font-bold text-foreground">
+                <span className="flex items-center justify-between gap-3">
+                  {f.q}
+                  <span className="text-primary transition-transform group-open:rotate-45">+</span>
+                </span>
+              </summary>
+              <p className="mt-3 text-sm leading-relaxed text-foreground/75">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <CTABand heading="Get Your Diamond-Grade ID" sub="Join Cricbet99 for the best exchange liquidity in India." />
+    </SiteLayout>
+  );
+}
+
+function ScoreBar({ name, value, tone }: { name: string; value: number; tone: "gold" | "muted" }) {
+  const pct = (value / 10) * 100;
+  return (
+    <div>
+      <div className="mb-1 flex items-center justify-between text-[10px] uppercase tracking-tighter font-bold">
+        <span className={tone === "gold" ? "text-primary" : "text-foreground/70"}>{name}</span>
+        <span>{value}</span>
+      </div>
+      <div className="h-1.5 w-full rounded-full bg-primary/10 overflow-hidden">
+        <div className="h-full rounded-full" style={{ width: `${pct}%`, background: tone === "gold" ? "var(--gradient-gold)" : "rgba(255,255,255,0.2)" }} />
+      </div>
+    </div>
+  );
+}
+
+function ProsCons({ title, pros, cons, tone }: { title: string; pros: string[]; cons: string[]; tone: "gold" | "muted" }) {
+  return (
+    <div className={`rounded-2xl border p-5 ${tone === "gold" ? "border-primary/30 bg-primary/5" : "border-white/10 bg-white/5"}`}>
+      <h3 className={`text-lg font-black ${tone === "gold" ? "text-primary" : "text-foreground"}`}>{title}</h3>
+      <div className="mt-4 space-y-3">
+        {pros.map(p => (
+          <div key={p} className="flex gap-2 text-sm text-foreground/90">
+            <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
+            <span>{p}</span>
+          </div>
+        ))}
+        {cons.map(c => (
+          <div key={c} className="flex gap-2 text-sm text-foreground/50">
+            <XCircle className="h-4 w-4 shrink-0 opacity-40" />
+            <span>{c}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
