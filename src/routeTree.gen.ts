@@ -67,6 +67,7 @@ import { Route as DemoIdRouteImport } from './routes/demo-id'
 import { Route as CricketRouteImport } from './routes/cricket'
 import { Route as Cricbet99VsSkyexchange247RouteImport } from './routes/cricbet99-vs-skyexchange247'
 import { Route as Cricbet99VsReddybookRouteImport } from './routes/cricbet99-vs-reddybook'
+import { Route as Cricbet99VsMahavirBookRouteImport } from './routes/cricbet99-vs-mahavir-book'
 import { Route as Cricbet99VsLotus365RouteImport } from './routes/cricbet99-vs-lotus365'
 import { Route as Cricbet99VsLaser247RouteImport } from './routes/cricbet99-vs-laser247'
 import { Route as Cricbet99VsGold365RouteImport } from './routes/cricbet99-vs-gold365'
@@ -395,6 +396,11 @@ const Cricbet99VsReddybookRoute = Cricbet99VsReddybookRouteImport.update({
   path: '/cricbet99-vs-reddybook',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Cricbet99VsMahavirBookRoute = Cricbet99VsMahavirBookRouteImport.update({
+  id: '/cricbet99-vs-mahavir-book',
+  path: '/cricbet99-vs-mahavir-book',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const Cricbet99VsLotus365Route = Cricbet99VsLotus365RouteImport.update({
   id: '/cricbet99-vs-lotus365',
   path: '/cricbet99-vs-lotus365',
@@ -604,6 +610,7 @@ export interface FileRoutesByFullPath {
   '/cricbet99-vs-gold365': typeof Cricbet99VsGold365Route
   '/cricbet99-vs-laser247': typeof Cricbet99VsLaser247Route
   '/cricbet99-vs-lotus365': typeof Cricbet99VsLotus365Route
+  '/cricbet99-vs-mahavir-book': typeof Cricbet99VsMahavirBookRoute
   '/cricbet99-vs-reddybook': typeof Cricbet99VsReddybookRoute
   '/cricbet99-vs-skyexchange247': typeof Cricbet99VsSkyexchange247Route
   '/cricket': typeof CricketRoute
@@ -699,6 +706,7 @@ export interface FileRoutesByTo {
   '/cricbet99-vs-gold365': typeof Cricbet99VsGold365Route
   '/cricbet99-vs-laser247': typeof Cricbet99VsLaser247Route
   '/cricbet99-vs-lotus365': typeof Cricbet99VsLotus365Route
+  '/cricbet99-vs-mahavir-book': typeof Cricbet99VsMahavirBookRoute
   '/cricbet99-vs-reddybook': typeof Cricbet99VsReddybookRoute
   '/cricbet99-vs-skyexchange247': typeof Cricbet99VsSkyexchange247Route
   '/cricket': typeof CricketRoute
@@ -795,6 +803,7 @@ export interface FileRoutesById {
   '/cricbet99-vs-gold365': typeof Cricbet99VsGold365Route
   '/cricbet99-vs-laser247': typeof Cricbet99VsLaser247Route
   '/cricbet99-vs-lotus365': typeof Cricbet99VsLotus365Route
+  '/cricbet99-vs-mahavir-book': typeof Cricbet99VsMahavirBookRoute
   '/cricbet99-vs-reddybook': typeof Cricbet99VsReddybookRoute
   '/cricbet99-vs-skyexchange247': typeof Cricbet99VsSkyexchange247Route
   '/cricket': typeof CricketRoute
@@ -892,6 +901,7 @@ export interface FileRouteTypes {
     | '/cricbet99-vs-gold365'
     | '/cricbet99-vs-laser247'
     | '/cricbet99-vs-lotus365'
+    | '/cricbet99-vs-mahavir-book'
     | '/cricbet99-vs-reddybook'
     | '/cricbet99-vs-skyexchange247'
     | '/cricket'
@@ -987,6 +997,7 @@ export interface FileRouteTypes {
     | '/cricbet99-vs-gold365'
     | '/cricbet99-vs-laser247'
     | '/cricbet99-vs-lotus365'
+    | '/cricbet99-vs-mahavir-book'
     | '/cricbet99-vs-reddybook'
     | '/cricbet99-vs-skyexchange247'
     | '/cricket'
@@ -1082,6 +1093,7 @@ export interface FileRouteTypes {
     | '/cricbet99-vs-gold365'
     | '/cricbet99-vs-laser247'
     | '/cricbet99-vs-lotus365'
+    | '/cricbet99-vs-mahavir-book'
     | '/cricbet99-vs-reddybook'
     | '/cricbet99-vs-skyexchange247'
     | '/cricket'
@@ -1178,6 +1190,7 @@ export interface RootRouteChildren {
   Cricbet99VsGold365Route: typeof Cricbet99VsGold365Route
   Cricbet99VsLaser247Route: typeof Cricbet99VsLaser247Route
   Cricbet99VsLotus365Route: typeof Cricbet99VsLotus365Route
+  Cricbet99VsMahavirBookRoute: typeof Cricbet99VsMahavirBookRoute
   Cricbet99VsReddybookRoute: typeof Cricbet99VsReddybookRoute
   Cricbet99VsSkyexchange247Route: typeof Cricbet99VsSkyexchange247Route
   CricketRoute: typeof CricketRoute
@@ -1648,6 +1661,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Cricbet99VsReddybookRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cricbet99-vs-mahavir-book': {
+      id: '/cricbet99-vs-mahavir-book'
+      path: '/cricbet99-vs-mahavir-book'
+      fullPath: '/cricbet99-vs-mahavir-book'
+      preLoaderRoute: typeof Cricbet99VsMahavirBookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/cricbet99-vs-lotus365': {
       id: '/cricbet99-vs-lotus365'
       path: '/cricbet99-vs-lotus365'
@@ -1977,6 +1997,7 @@ const rootRouteChildren: RootRouteChildren = {
   Cricbet99VsGold365Route: Cricbet99VsGold365Route,
   Cricbet99VsLaser247Route: Cricbet99VsLaser247Route,
   Cricbet99VsLotus365Route: Cricbet99VsLotus365Route,
+  Cricbet99VsMahavirBookRoute: Cricbet99VsMahavirBookRoute,
   Cricbet99VsReddybookRoute: Cricbet99VsReddybookRoute,
   Cricbet99VsSkyexchange247Route: Cricbet99VsSkyexchange247Route,
   CricketRoute: CricketRoute,
