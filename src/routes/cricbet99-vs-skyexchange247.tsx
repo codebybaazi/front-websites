@@ -251,6 +251,8 @@ function Compare() {
             { to: "/cricbet99-vs-laser247", label: "vs Laser 247" },
             { to: "/cricbet99-vs-gold365", label: "vs Gold 365" },
             { to: "/cricbet99-vs-fairdeal", label: "vs Fairdeal" },
+            { to: "/cricbet99-vs-mahavir-book", label: "vs Mahavir Book" },
+            { to: "/cricbet99-vs-diamond-exchange", label: "vs Diamond Exch" },
           ].map((l) => (
             <Link key={l.to} to={l.to} className="rounded-full border border-primary/25 bg-primary/5 px-4 py-2 text-xs font-semibold text-primary transition-colors hover:bg-primary/15">
               Cricbet99 {l.label}
