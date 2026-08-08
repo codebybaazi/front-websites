@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { LongFormPage, buildFaqJsonLd } from "@/components/long-form-page";
+import { LongFormPage, buildFaqJsonLd, buildBreadcrumbJsonLd } from "@/components/long-form-page";
 import content from "@/data/pages/withdrawal-delay.json";
 
 export const Route = createFileRoute("/withdrawal-delay")({
@@ -13,10 +13,16 @@ export const Route = createFileRoute("/withdrawal-delay")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/withdrawal-delay" }],
-    scripts: content.faqs && content.faqs.length ? [{
-      type: "application/ld+json",
-      children: JSON.stringify(buildFaqJsonLd(content.faqs)),
-    }] : [],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/withdrawal-delay", "Cricbet99 Withdrawal Delay | Tracking Your Payouts")),
+      },
+      ...(content.faqs && content.faqs.length ? [{
+        type: "application/ld+json",
+        children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+      }] : [])
+    ],
   }),
   component: Page_withdrawal_delay,
 });

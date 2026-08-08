@@ -22,15 +22,15 @@ export const Route = createFileRoute("/refund-policy")({
       ],
       links: [{ rel: "canonical", href: canonical }],
       scripts: [
-        ...(content.faqs && content.faqs.length ? [{
-          type: "application/ld+json",
-          children: JSON.stringify(buildFaqJsonLd(content.faqs)),
-        }] : []),
-        {
-          type: "application/ld+json",
-          children: JSON.stringify(buildBreadcrumbJsonLd("/refund-policy", "Refund Policy")),
-        }
-      ],
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],", "Refund & Cancellation Policy — Official Cricbet99 Banking")),
+      },
+      ...(content.faqs && content.faqs.length ? [{
+        type: "application/ld+json",
+        children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+      }] : [])
+    ],
     };
   },
   component: RefundPolicyPage,

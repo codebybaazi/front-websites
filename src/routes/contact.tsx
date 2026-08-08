@@ -24,7 +24,14 @@ export const Route = createFileRoute("/contact")({
       scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],", "Contact Cricbet99 Official — 24/7 WhatsApp Human Support")),
+        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],
+        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],", "Contact Cricbet99 Official — 24/7 WhatsApp Human Support")),", "Contact Cricbet99 Official — 24/7 WhatsApp Human Support")),
+      },
+      ...(content.faqs && content.faqs.length ? [{
+        type: "application/ld+json",
+        children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+      }] : [])
+    ],", "Contact Cricbet99 Official — 24/7 WhatsApp Human Support")),
       },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",

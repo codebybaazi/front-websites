@@ -24,7 +24,14 @@ export const Route = createFileRoute("/is-cricbet99-safe")({
       scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],", "Is Cricbet99 Safe? Official Security & Trust Verification 2026")),
+        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],
+        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],", "Is Cricbet99 Safe? Official Security & Trust Verification 2026")),", "Is Cricbet99 Safe? Official Security & Trust Verification 2026")),
+      },
+      ...(content.faqs && content.faqs.length ? [{
+        type: "application/ld+json",
+        children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+      }] : [])
+    ],", "Is Cricbet99 Safe? Official Security & Trust Verification 2026")),
       },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",

@@ -22,11 +22,15 @@ export const Route = createFileRoute("/disclaimer")({
       ],
       links: [{ rel: "canonical", href: canonical }],
       scripts: [
-        {
-          type: "application/ld+json",
-          children: JSON.stringify(buildBreadcrumbJsonLd("/disclaimer", "Disclaimer")),
-        }
-      ],
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],", "Important Disclaimer Platform Information")),
+      },
+      ...(content.faqs && content.faqs.length ? [{
+        type: "application/ld+json",
+        children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+      }] : [])
+    ],
     };
   },
   component: DisclaimerPage,

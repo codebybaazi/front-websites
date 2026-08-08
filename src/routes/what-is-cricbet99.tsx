@@ -24,7 +24,14 @@ export const Route = createFileRoute("/what-is-cricbet99")({
       scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],", "What is Cricbet99? Official Guide & Platform Overview 2026")),
+        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],
+        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],", "What is Cricbet99? Official Guide & Platform Overview 2026")),", "What is Cricbet99? Official Guide & Platform Overview 2026")),
+      },
+      ...(content.faqs && content.faqs.length ? [{
+        type: "application/ld+json",
+        children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+      }] : [])
+    ],", "What is Cricbet99? Official Guide & Platform Overview 2026")),
       },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",

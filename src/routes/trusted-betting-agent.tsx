@@ -22,15 +22,15 @@ export const Route = createFileRoute("/trusted-betting-agent")({
       ],
       links: [{ rel: "canonical", href: canonical }],
       scripts: [
-        ...(content.faqs && content.faqs.length ? [{
-          type: "application/ld+json",
-          children: JSON.stringify(buildFaqJsonLd(content.faqs)),
-        }] : []),
-        {
-          type: "application/ld+json",
-          children: JSON.stringify(buildBreadcrumbJsonLd("/trusted-betting-agent", "Trusted Agent")),
-        }
-      ],
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],", "Official Trusted Cricbet99 Betting Agent — 24/7 WhatsApp Service")),
+      },
+      ...(content.faqs && content.faqs.length ? [{
+        type: "application/ld+json",
+        children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+      }] : [])
+    ],
     };
   },
   component: TrustedAgentPage,

@@ -24,7 +24,14 @@ export const Route = createFileRoute("/is-cricbet99-real")({
       scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],", "Is Cricbet99 Real or Fake? 100% Legitimacy & Trust Verification")),
+        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],
+        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],", "Is Cricbet99 Real or Fake? 100% Legitimacy & Trust Verification")),", "Is Cricbet99 Real or Fake? 100% Legitimacy & Trust Verification")),
+      },
+      ...(content.faqs && content.faqs.length ? [{
+        type: "application/ld+json",
+        children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+      }] : [])
+    ],", "Is Cricbet99 Real or Fake? 100% Legitimacy & Trust Verification")),
       },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",

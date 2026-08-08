@@ -14,14 +14,14 @@ export const Route = createFileRoute("/betting-guides/how-to-place-a-cricket-bet
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/betting-guides/how-to-place-a-cricket-bet" }],
     scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/betting-guides/how-to-place-a-cricket-bet", "How to Place a Cricket Bet on Cricbet99 | 2026 Tutorial")),
+      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),
-      }] : []),
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/betting-guides/how-to-place-a-cricket-bet", "How to Place a Cricket Bet")),
-      }
+      }] : [])
     ],
   }),
   component: Page_betting_guides_how_to_place_a_cricket_bet,
