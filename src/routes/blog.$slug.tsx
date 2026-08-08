@@ -127,7 +127,7 @@ function PostPage() {
               Insights & <span className="text-white text-stroke-primary">FAQ</span>
             </h2>
             <Accordion type="single" collapsible className="w-full space-y-4">
-              {post.faqs.map((faq, idx) => (
+              {post.faqs.map((faq: { q: string; a: string }, idx: number) => (
                 <AccordionItem 
                   key={idx} 
                   value={`item-${idx}`}
