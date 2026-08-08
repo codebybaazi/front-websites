@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { LongFormPage, buildFaqJsonLd } from "@/components/long-form-page";
+import { LongFormPage, buildFaqJsonLd, buildBreadcrumbJsonLd } from "@/components/long-form-page";
 import content from "@/data/pages/case-studies__toss-market-10-minute-profit.json";
 
 export const Route = createFileRoute("/case-studies/toss-market-10-minute-profit")({
@@ -13,10 +13,16 @@ export const Route = createFileRoute("/case-studies/toss-market-10-minute-profit
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/case-studies/toss-market-10-minute-profit" }],
-    scripts: content.faqs && content.faqs.length ? [{
-      type: "application/ld+json",
-      children: JSON.stringify(buildFaqJsonLd(content.faqs)),
-    }] : [],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/case-studies/toss-market-10-minute-profit", "10-Minute Profit Case Study | Toss Market Strategy")),
+      },
+      ...(content.faqs && content.faqs.length ? [{
+        type: "application/ld+json",
+        children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+      }] : [])
+    ],
   }),
   component: Page_case_studies_toss_market_10_minute_profit,
 });

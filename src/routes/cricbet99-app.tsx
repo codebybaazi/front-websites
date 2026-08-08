@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
+import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
 
 export const Route = createFileRoute("/cricbet99-app")({
   head: () => ({
@@ -13,6 +14,12 @@ export const Route = createFileRoute("/cricbet99-app")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/cricbet99-app" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/cricbet99-app", "Cricbet99 App")),
+      },
+    ],
   }),
   component: AppPage,
 });

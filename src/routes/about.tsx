@@ -23,14 +23,14 @@ export const Route = createFileRoute("/about")({
       ],
       links: [{ rel: "canonical", href: canonical }],
       scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(buildBreadcrumbJsonLd("/about", "About Cricbet99")),
+        },
         ...(content.faqs && content.faqs.length ? [{
           type: "application/ld+json",
           children: JSON.stringify(buildFaqJsonLd(content.faqs)),
-        }] : []),
-        {
-          type: "application/ld+json",
-          children: JSON.stringify(buildBreadcrumbJsonLd("/about", "About Us")),
-        }
+        }] : [])
       ],
     };
   },
@@ -40,4 +40,3 @@ export const Route = createFileRoute("/about")({
 function AboutPage() {
   return <LongFormPage content={content} />;
 }
-
