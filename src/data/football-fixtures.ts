@@ -90,14 +90,21 @@ export const footballFixtures: FootballFixture[] = [
     const date = new Date("2026-06-13");
     date.setDate(date.getDate() + Math.floor(i / 3));
 
+    // Proper FIFA 2026 Groups (A-L)
+    const groups = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"];
+    const groupIdx = Math.floor(i / 6) % 12;
+    const group = groups[groupIdx];
+    const pos1 = (i % 4) + 1;
+    const pos2 = ((i + 1) % 4) + 1;
+
     return {
       slug: `fifa-world-cup-2026-match-${matchNum}`,
       sport: "Football" as const,
       tournament: "FIFA World Cup 2026",
-      homeTeam: isKnockout ? `Winner Match ${matchNum - 32}` : `Team ${String.fromCharCode(65 + (i % 8))}${i % 4 + 1}`,
-      awayTeam: isKnockout ? `Winner Match ${matchNum - 31}` : `Team ${String.fromCharCode(65 + ((i + 1) % 8))}${(i + 1) % 4 + 1}`,
+      homeTeam: isKnockout ? `Winner Match ${matchNum - 32}` : `${group}${pos1}`,
+      awayTeam: isKnockout ? `Winner Match ${matchNum - 31}` : `${group}${pos2}`,
       venue: ["MetLife Stadium", "AT&T Stadium", "Arrowhead Stadium", "NRG Stadium", "Mercedes-Benz Stadium", "Lumen Field", "Levi's Stadium", "Gillette Stadium", "Lincoln Financial Field", "Hard Rock Stadium"][i % 10],
-      city: ["New York", "Dallas", "Kansas City", "Houston", "Atlanta", "Seattle", "San Francisco", "Boston", "Philadelphia", "Miami"][i % 10],
+      city: ["New York/NJ", "Dallas", "Kansas City", "Houston", "Atlanta", "Seattle", "San Francisco", "Boston", "Philadelphia", "Miami"][i % 10],
       country: "USA",
       startDate: date.toISOString().split('T')[0] + "T18:00:00",
       status: "upcoming" as const,
