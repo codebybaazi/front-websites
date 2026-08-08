@@ -1,26 +1,42 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { LongFormPage, buildFaqJsonLd } from "@/components/long-form-page";
+import { LongFormPage, buildFaqJsonLd, buildBreadcrumbJsonLd } from "@/components/long-form-page";
 import content from "@/data/pages/rules.json";
+import { getRequestOrigin } from "@/lib/origin.functions";
 
 export const Route = createFileRoute("/rules")({
-  head: () => ({
-    meta: [
-      { title: "Cricbet99 Rules & Regulations — Cricbet99" },
-      { name: "description", content: "Cricbet99 Rules & Regulations on Cricbet99: fair play rules, market settlement and account conduct. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:title", content: "Cricbet99 Rules & Regulations — Cricbet99" },
-      { property: "og:description", content: "Cricbet99 Rules & Regulations on Cricbet99: fair play rules, market settlement and account conduct. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:type", content: "article" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/rules" }],
-    scripts: content.faqs && content.faqs.length ? [{
-      type: "application/ld+json",
-      children: JSON.stringify(buildFaqJsonLd(content.faqs)),
-    }] : [],
+  loader: async () => ({
+    origin: await getRequestOrigin(),
   }),
-  component: Page_rules,
+  head: ({ loaderData }) => {
+    const origin = loaderData?.origin ?? "";
+    const canonical = `${origin}/rules`;
+    return {
+      meta: [
+        { title: "Official Rules & Regulations — Official Cricbet99 Rulebook" },
+        { name: "description", content: "Read the official Cricbet99 Rules & Regulations. Transparent market settlement, fair play standards, and professional gaming rules for all sports and casino." },
+        { name: "keywords", content: "cricbet99 rules, betting regulations, market settlement rules, cricket betting laws, fair play standards betting" },
+        { property: "og:title", content: "Cricbet99 Rules & Regulations — The Official Rulebook" },
+        { property: "og:description", content: "How we settle bets, handle abandoned matches, and ensure platform integrity for 1.2 Lakh+ users." },
+        { property: "og:url", content: canonical },
+        { property: "og:type", content: "article" },
+      ],
+      links: [{ rel: "canonical", href: canonical }],
+      scripts: [
+        ...(content.faqs && content.faqs.length ? [{
+          type: "application/ld+json",
+          children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+        }] : []),
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(buildBreadcrumbJsonLd("/rules", "Rules & Regulations")),
+        }
+      ],
+    };
+  },
+  component: RulesPage,
 });
 
-function Page_rules() {
+function RulesPage() {
   return <LongFormPage content={content} />;
 }
+

@@ -1,26 +1,42 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { LongFormPage, buildFaqJsonLd } from "@/components/long-form-page";
+import { LongFormPage, buildFaqJsonLd, buildBreadcrumbJsonLd } from "@/components/long-form-page";
 import content from "@/data/pages/community-guidelines.json";
+import { getRequestOrigin } from "@/lib/origin.functions";
 
 export const Route = createFileRoute("/community-guidelines")({
-  head: () => ({
-    meta: [
-      { title: "Cricbet99 Community Guidelines — Cricbet99" },
-      { name: "description", content: "Cricbet99 Community Guidelines on Cricbet99: rules of conduct that keep our community safe and fair. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:title", content: "Cricbet99 Community Guidelines — Cricbet99" },
-      { property: "og:description", content: "Cricbet99 Community Guidelines on Cricbet99: rules of conduct that keep our community safe and fair. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:type", content: "article" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/community-guidelines" }],
-    scripts: content.faqs && content.faqs.length ? [{
-      type: "application/ld+json",
-      children: JSON.stringify(buildFaqJsonLd(content.faqs)),
-    }] : [],
+  loader: async () => ({
+    origin: await getRequestOrigin(),
   }),
-  component: Page_community_guidelines,
+  head: ({ loaderData }) => {
+    const origin = loaderData?.origin ?? "";
+    const canonical = `${origin}/community-guidelines`;
+    return {
+      meta: [
+        { title: "Community Guidelines — Join the Elite Cricbet99 Network" },
+        { name: "description", content: "Official Cricbet99 Community Guidelines. Our rules of conduct ensure a safe, respectful, and professional environment for India's premier bettors." },
+        { name: "keywords", content: "cricbet99 community guidelines, betting conduct rules, safe betting environment, cricbet99 member rules, elite betting network" },
+        { property: "og:title", content: "Cricbet99 Community Guidelines — Professional Betting Standards" },
+        { property: "og:description", content: "Respect, integrity, and fair play. Learn the principles that make us India's most trusted betting community." },
+        { property: "og:url", content: canonical },
+        { property: "og:type", content: "article" },
+      ],
+      links: [{ rel: "canonical", href: canonical }],
+      scripts: [
+        ...(content.faqs && content.faqs.length ? [{
+          type: "application/ld+json",
+          children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+        }] : []),
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(buildBreadcrumbJsonLd("/community-guidelines", "Community Guidelines")),
+        }
+      ],
+    };
+  },
+  component: CommunityGuidelinesPage,
 });
 
-function Page_community_guidelines() {
+function CommunityGuidelinesPage() {
   return <LongFormPage content={content} />;
 }
+
