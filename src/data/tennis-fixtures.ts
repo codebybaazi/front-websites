@@ -1181,6 +1181,7 @@ export const tennisFixtures: TennisFixture[] = [
     city: "Jeddah",
     country: "Saudi Arabia",
     startDate: "2026-12-08T18:00:00+03:00",
+    endDate: "2026-12-13",
     status: "upcoming",
     stage: "U21 Finals",
     category: "Next Gen Finals",
