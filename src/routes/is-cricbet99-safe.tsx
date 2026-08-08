@@ -10,6 +10,7 @@ export const Route = createFileRoute("/is-cricbet99-safe")({
       { property: "og:title", content: "Is Cricbet99 Safe? — Cricbet99" },
       { property: "og:description", content: "Is Cricbet99 Safe? on Cricbet99: how Cricbet99 protects your money, data and identity. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
       { property: "og:type", content: "article" },
+      { property: "og:url", content: "/is-cricbet99-safe" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/is-cricbet99-safe" }],
