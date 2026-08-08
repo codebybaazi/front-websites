@@ -94,6 +94,9 @@ export function LongFormPage({ content, extra }: { content: PageContent; extra?:
           <Link to="/casino" className="text-sm font-bold text-primary hover:underline">Live Casino</Link>
           <Link to="/cricbet99-app" className="text-sm font-bold text-primary hover:underline">Download App</Link>
           <Link to="/how-it-works" className="text-sm font-bold text-primary hover:underline">How It Works</Link>
+          <Link to="/login" className="text-sm font-bold text-primary hover:underline">Official Login</Link>
+          <Link to="/register" className="text-sm font-bold text-primary hover:underline">Create ID</Link>
+          <Link to="/all-links" className="text-sm font-bold text-primary hover:underline">Site Map</Link>
         </div>
       </section>
 
