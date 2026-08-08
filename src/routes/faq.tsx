@@ -53,6 +53,7 @@ function FAQ() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Support"
         title={<>Frequently asked <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>questions.</span></>}
         subtitle="Answers to the questions Cricbet99 players ask us every day — from registration and deposits to withdrawals, security and responsible gaming."
