@@ -137,6 +137,7 @@ function AllLinks() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Directory"
         title={<>Explore All <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Cricbet99</span> Links.</>}
         subtitle="The definitive guide to every corner of the Cricbet99 ecosystem. From live matches and betting strategies to safety reviews and premium casino games."
