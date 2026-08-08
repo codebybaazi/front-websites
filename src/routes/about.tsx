@@ -23,15 +23,15 @@ export const Route = createFileRoute("/about")({
       ],
       links: [{ rel: "canonical", href: canonical }],
       scripts: [
-        ...(content.faqs && content.faqs.length ? [{
-          type: "application/ld+json",
-          children: JSON.stringify(buildFaqJsonLd(content.faqs)),
-        }] : []),
-        {
-          type: "application/ld+json",
-          children: JSON.stringify(buildBreadcrumbJsonLd("/about", "About Us")),
-        }
-      ],
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],", "About Cricbet99 — India's Trusted Official Betting ID Platform")),
+      },
+      ...(content.faqs && content.faqs.length ? [{
+        type: "application/ld+json",
+        children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+      }] : [])
+    ],
     };
   },
   component: AboutPage,

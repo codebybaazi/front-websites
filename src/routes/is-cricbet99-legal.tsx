@@ -15,18 +15,14 @@ export const Route = createFileRoute("/is-cricbet99-legal")({
     ],
     links: [{ rel: "canonical", href: "/is-cricbet99-legal" }],
     scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/is-cricbet99-legal", "Is Cricbet99 Legal in India? — Law, Regulations & Facts")),
+      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),
-      }] : []),
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildArticleJsonLd(content, "https://cricbet99.co.in/is-cricbet99-legal")),
-      },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/is-cricbet99-legal", "Is Cricbet99 Legal?")),
-      }
+      }] : [])
     ],
   }),
   component: Page_is_cricbet99_legal,

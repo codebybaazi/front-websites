@@ -22,15 +22,15 @@ export const Route = createFileRoute("/is-cricbet99-safe")({
       ],
       links: [{ rel: "canonical", href: canonical }],
       scripts: [
-        ...(content.faqs && content.faqs.length ? [{
-          type: "application/ld+json",
-          children: JSON.stringify(buildFaqJsonLd(content.faqs)),
-        }] : []),
-        {
-          type: "application/ld+json",
-          children: JSON.stringify(buildBreadcrumbJsonLd("/is-cricbet99-safe", "Is it Safe?")),
-        }
-      ],
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],", "Is Cricbet99 Safe? Official Security & Trust Verification 2026")),
+      },
+      ...(content.faqs && content.faqs.length ? [{
+        type: "application/ld+json",
+        children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+      }] : [])
+    ],
     };
   },
   component: SafetyPage,

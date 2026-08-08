@@ -13,10 +13,16 @@ export const Route = createFileRoute("/reviews")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/reviews" }],
-    scripts: content.faqs && content.faqs.length ? [{
-      type: "application/ld+json",
-      children: JSON.stringify(buildFaqJsonLd, buildBreadcrumbJsonLd(content.faqs)),
-    }] : [],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/reviews", "Cricbet99 Reviews")),
+      },
+      ...(content.faqs && content.faqs.length ? [{
+        type: "application/ld+json",
+        children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+      }] : [])
+    ],
   }),
   component: Page_reviews,
 });
