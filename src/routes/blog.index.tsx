@@ -19,8 +19,22 @@ export const Route = createFileRoute("/blog/")({
       { property: "og:url", content: "/blog" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/blog" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/blog" }],
     scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          "name": "Cricbet99 Official Blog",
+          "description": "Latest cricket betting tips, IPL 2026 previews, and sports trading guides.",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Cricbet99",
+            "logo": { "@type": "ImageObject", "url": "https://cricbet99.co.in/favicon.png" }
+          }
+        })
+      },
       {
         type: "application/ld+json",
         children: JSON.stringify({
