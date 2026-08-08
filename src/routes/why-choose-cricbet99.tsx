@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { LongFormPage, buildFaqJsonLd } from "@/components/long-form-page";
+import { LongFormPage, buildFaqJsonLd, buildBreadcrumbJsonLd } from "@/components/long-form-page";
 import content from "@/data/pages/why-choose-cricbet99.json";
 
 export const Route = createFileRoute("/why-choose-cricbet99")({
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/why-choose-cricbet99")({
     links: [{ rel: "canonical", href: "/why-choose-cricbet99" }],
     scripts: content.faqs && content.faqs.length ? [{
       type: "application/ld+json",
-      children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+      children: JSON.stringify(buildFaqJsonLd, buildBreadcrumbJsonLd(content.faqs)),
     }] : [],
   }),
   component: Page_why_choose_cricbet99,
