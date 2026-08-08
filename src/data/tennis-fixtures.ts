@@ -870,6 +870,7 @@ export const tennisFixtures: TennisFixture[] = [
     city: "Montreal",
     country: "Canada",
     startDate: "2026-08-02T11:00:00-04:00",
+    endDate: "2026-08-13",
     status: "upcoming",
     stage: "Masters 1000",
     category: "Masters 1000",
