@@ -11,7 +11,7 @@ export const Route = createFileRoute("/casino")({
   }),
   head: ({ loaderData }) => {
     const origin = loaderData?.origin ?? "";
-    const canonical = `${origin}/casino`;
+    const canonical = `https://cricbet99.co.in/casino`;
     return {
       meta: [
         { title: "Cricbet99 Live Casino — Teen Patti, Andar Bahar & 500+ Games" },

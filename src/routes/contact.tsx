@@ -9,7 +9,7 @@ export const Route = createFileRoute("/contact")({
   }),
   head: ({ loaderData }) => {
     const origin = loaderData?.origin ?? "";
-    const canonical = `${origin}/contact`;
+    const canonical = `https://cricbet99.co.in/contact`;
     return {
       meta: [
         { title: "Contact Cricbet99 Official — 24/7 WhatsApp Human Support" },

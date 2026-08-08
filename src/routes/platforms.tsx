@@ -10,7 +10,7 @@ export const Route = createFileRoute("/platforms")({
   }),
   head: ({ loaderData }) => {
     const origin = loaderData?.origin ?? "";
-    const canonical = `${origin}/platforms`;
+    const canonical = `https://cricbet99.co.in/platforms`;
     return {
       meta: [
         { title: "Cricbet99 Platforms — Official Betting App & Web Exchange" },
