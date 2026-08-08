@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { LongFormPage, buildFaqJsonLd } from "@/components/long-form-page";
+import { LongFormPage, buildFaqJsonLd, buildBreadcrumbJsonLd } from "@/components/long-form-page";
 import content from "@/data/pages/betting-guides__how-to-place-a-cricket-bet.json";
 
 export const Route = createFileRoute("/betting-guides/how-to-place-a-cricket-bet")({
@@ -13,10 +13,16 @@ export const Route = createFileRoute("/betting-guides/how-to-place-a-cricket-bet
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/betting-guides/how-to-place-a-cricket-bet" }],
-    scripts: content.faqs && content.faqs.length ? [{
-      type: "application/ld+json",
-      children: JSON.stringify(buildFaqJsonLd(content.faqs)),
-    }] : [],
+    scripts: [
+      ...(content.faqs && content.faqs.length ? [{
+        type: "application/ld+json",
+        children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+      }] : []),
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/betting-guides/how-to-place-a-cricket-bet", "How to Place a Cricket Bet")),
+      }
+    ],
   }),
   component: Page_betting_guides_how_to_place_a_cricket_bet,
 });

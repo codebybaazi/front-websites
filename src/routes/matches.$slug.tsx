@@ -26,12 +26,12 @@ export const Route = createFileRoute("/matches/$slug")({
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: path },
+        { property: "og:url", content: `https://cricbet99.co.in${path}` },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: desc },
       ],
-      links: [{ rel: "canonical", href: path }],
+      links: [{ rel: "canonical", href: `https://cricbet99.co.in${path}` }],
       scripts: [
         {
           type: "application/ld+json",

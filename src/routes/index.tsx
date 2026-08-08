@@ -147,9 +147,25 @@ export const Route = createFileRoute("/")({
       { name: "twitter:description", content: "IPL, T20, football, tennis, kabaddi & live casino. Instant UPI payouts, 24/7 WhatsApp support." },
       { name: "twitter:image", content: image },
     ],
-    links: [{ rel: "canonical", href: origin || "/" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/" }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(faqLd) },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Cricbet99",
+          "url": "https://cricbet99.co.in/",
+          "logo": "https://cricbet99.co.in/favicon.png",
+          "description": "India's trusted online cricket ID platform since 2020.",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "url": "https://cricbet99.co.in/whatsapp-support"
+          }
+        }),
+      },
     ],
     };
   },

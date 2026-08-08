@@ -30,7 +30,7 @@ export const Route = createFileRoute("/blog/$slug")({
         ...(post.hero ? [{ property: "og:image", content: post.hero }, { name: "twitter:image", content: post.hero }] : []),
         { name: "twitter:card", content: "summary_large_image" },
       ],
-      links: [{ rel: "canonical", href: `/blog/${params.slug}` }],
+      links: [{ rel: "canonical", href: `https://cricbet99.co.in/blog/${params.slug}` }],
       scripts: [
         {
           type: "application/ld+json",
