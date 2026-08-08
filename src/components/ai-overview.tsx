@@ -1,4 +1,4 @@
-import { Sparkles, CheckCircle2 } from "lucide-react";
+import { Sparkles, CheckCircle2, Zap, ShieldCheck, Target } from "lucide-react";
 
 interface AiOverviewProps {
   summary: string;
@@ -7,49 +7,103 @@ interface AiOverviewProps {
 
 export function AiOverview({ summary, highlights }: AiOverviewProps) {
   return (
-    <section className="w-full py-8 sm:py-12">
-      <div className="relative overflow-hidden border-y border-primary/30 bg-[oklch(0.12_0.02_260)] p-1 shadow-2xl">
-        <div className="bg-gradient-to-b from-[oklch(0.15_0.03_260)] to-[oklch(0.1_0.02_260)] p-6 sm:p-12">
-          <div className="mx-auto max-w-7xl">
-            {/* Header */}
-            <div className="flex items-center gap-3">
-              <div className="grid h-10 w-10 place-items-center rounded-xl bg-accent/20 ring-1 ring-accent/40">
+    <section className="relative w-full py-20 overflow-hidden bg-[oklch(0.08_0.01_260)]">
+      {/* Dynamic Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }} />
+        <div 
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, var(--primary) 1px, transparent 0)`,
+            backgroundSize: '40px 40px'
+          }}
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-6">
+        <div className="grid lg:grid-cols-[1fr_1.5fr] gap-12 items-center">
+          
+          {/* Left: Branding & Status */}
+          <div className="space-y-8">
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-gradient-to-r from-primary/10 to-transparent border border-primary/20 backdrop-blur-md">
+              <div className="relative">
                 <Sparkles className="h-5 w-5 text-accent animate-pulse" />
+                <div className="absolute inset-0 blur-sm bg-accent/40 animate-pulse" />
               </div>
-              <div>
-                <div className="text-[10px] font-black uppercase tracking-[0.2em] text-primary">Intelligence</div>
-                <h2 className="text-xl font-black text-foreground sm:text-2xl">AI Page Overview</h2>
-              </div>
+              <span className="text-xs font-black uppercase tracking-[0.25em] text-primary">Intelligence Hub</span>
             </div>
 
-            <div className="mt-8 grid gap-8 lg:grid-cols-[1.2fr_1fr]">
-              {/* Summary */}
-              <div>
-                <div className="text-[10px] font-black uppercase tracking-widest text-primary/60">Executive Summary</div>
-                <p className="mt-3 text-sm leading-relaxed text-foreground/80 sm:text-base">
-                  {summary}
+            <div>
+              <h2 className="text-4xl md:text-5xl font-black tracking-tight text-foreground leading-[1.1]">
+                Verified 
+                <span className="block bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] animate-gradient">
+                  Platform Insights
+                </span>
+              </h2>
+              <p className="mt-6 text-lg text-foreground/60 leading-relaxed font-medium">
+                Real-time analysis of services, trust signals, and performance metrics for the 2026 season.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-4">
+              {[
+                { icon: ShieldCheck, label: "Encrypted" },
+                { icon: Zap, label: "Verified" },
+                { icon: Target, label: "Live" }
+              ].map((badge) => (
+                <div key={badge.label} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-foreground/5 border border-foreground/10 text-[10px] font-bold uppercase tracking-wider text-foreground/50">
+                  <badge.icon className="h-3 w-3 text-accent" />
+                  {badge.label}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right: Content Cards */}
+          <div className="grid sm:grid-cols-2 gap-6">
+            {/* Summary Card */}
+            <div className="group relative sm:col-span-2 overflow-hidden rounded-[2.5rem] border border-primary/20 bg-gradient-to-br from-primary/5 to-background p-8 transition-all hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5">
+              <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                <Sparkles className="h-24 w-24" />
+              </div>
+              <div className="relative">
+                <div className="text-[10px] font-black uppercase tracking-[0.2em] text-accent mb-4">Executive Brief</div>
+                <p className="text-lg md:text-xl font-medium leading-relaxed text-foreground/90 italic">
+                  "{summary}"
                 </p>
               </div>
+            </div>
 
-              {/* Highlights */}
-              <div className="rounded-2xl border border-primary/20 bg-background/40 p-5 backdrop-blur-sm">
-                <div className="text-[10px] font-black uppercase tracking-widest text-accent">Key Highlights</div>
-                <ul className="mt-4 space-y-3">
-                  {highlights.map((h, i) => (
-                    <li key={i} className="flex items-start gap-3 text-xs text-foreground/75 sm:text-sm">
-                      <CheckCircle2 className="h-4 w-4 shrink-0 text-accent" />
-                      <span>{h}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Highlights Grid */}
+            <div className="sm:col-span-2 grid sm:grid-cols-2 gap-4">
+              {highlights.map((h, i) => (
+                <div key={i} className="flex items-start gap-4 p-5 rounded-3xl border border-foreground/5 bg-foreground/[0.02] backdrop-blur-sm hover:bg-foreground/[0.04] transition-colors">
+                  <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/20 ring-1 ring-accent/30">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-accent" />
+                  </div>
+                  <span className="text-sm font-semibold text-foreground/80 leading-snug">{h}</span>
+                </div>
+              ))}
             </div>
-            
-            {/* Footer badge */}
-            <div className="mt-8 flex items-center gap-2 border-t border-primary/10 pt-6">
-              <div className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-              <span className="text-[10px] font-bold uppercase tracking-widest text-foreground/40">Verified by Cricbet99 AI · 2026 Edition</span>
+          </div>
+        </div>
+
+        {/* Footer info */}
+        <div className="mt-16 pt-8 border-t border-foreground/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="flex -space-x-2">
+              {[1, 2, 3].map((n) => (
+                <div key={n} className="h-6 w-6 rounded-full border-2 border-background bg-foreground/10" />
+              ))}
             </div>
+            <span className="text-[11px] font-bold text-foreground/40 uppercase tracking-widest">
+              Join 124,000+ Verified Members
+            </span>
+          </div>
+          <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.3em] text-accent">
+            <div className="h-1.5 w-1.5 rounded-full bg-accent animate-ping" />
+            Live System Status: Optimal
           </div>
         </div>
       </div>
