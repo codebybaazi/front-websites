@@ -27,6 +27,7 @@ function Disclaimer() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Disclaimer"
         title={<>Please read <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>before you bet.</span></>}
         subtitle="Cricbet99 is designed for adults who understand the risks and treat betting as entertainment. This page explains the key things you should know before using our platform."
