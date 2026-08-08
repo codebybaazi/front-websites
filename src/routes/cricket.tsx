@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
-import { Trophy, Radio, Target, Flag, Users } from "lucide-react";
+import { Trophy, Radio, Target, Flag, Users, ChevronRight } from "lucide-react";
 import { AiOverview } from "@/components/ai-overview";
-import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
+import { buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/components/long-form-page";
 
 export const Route = createFileRoute("/cricket")({
   head: () => ({
