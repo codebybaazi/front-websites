@@ -1,48 +1,77 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
+import { Smartphone, ShieldCheck, Zap, Laptop, Monitor, Globe } from "lucide-react";
+import { AiOverview } from "@/components/ai-overview";
+import { getRequestOrigin } from "@/lib/origin.functions";
 
 export const Route = createFileRoute("/platforms")({
-  head: () => ({
-    meta: [
-      { title: "Cricbet99 Platforms — Curated Exchanges for Indian Players" },
-      { name: "description", content: "One Cricbet99 ID gives you access to a curated set of premium betting exchanges and casino platforms trusted by Indian players." },
-      { property: "og:title", content: "Cricbet99 Platforms" },
-      { property: "og:description", content: "A curated network of premium exchanges accessible with a single Cricbet99 login." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
+  loader: async () => ({
+    origin: await getRequestOrigin(),
   }),
+  head: ({ loaderData }) => {
+    const origin = loaderData?.origin ?? "";
+    const canonical = `${origin}/platforms`;
+    return {
+      meta: [
+        { title: "Cricbet99 Platforms — Official Betting App & Web Exchange" },
+        { name: "description", content: "Explore the Cricbet99 ecosystem. Our platforms include high-speed betting exchanges, mobile-first casino apps, and secure web portals for 24/7 sports action." },
+        { name: "keywords", content: "cricbet99 app, cricbet99 desktop, cricbet99 exchange, betting platforms india, cricbet99 ios app" },
+        { property: "og:title", content: "Cricbet99 Ecosystem — Seamless Play on Any Device" },
+        { property: "og:description", content: "One verified Cricbet99 ID, multiple ways to play. Discover our suite of premium betting and casino platforms." },
+        { property: "og:url", content: canonical },
+      ],
+      links: [{ rel: "canonical", href: canonical }],
+    };
+  },
   component: Platforms,
 });
 
 const platforms = [
-  { name: "Exchange sports", desc: "Peer-to-peer style back/lay markets on cricket, football and tennis with sharp odds and deep liquidity." },
-  { name: "Sportsbook", desc: "Traditional fixed-odds sports betting with pre-match and in-play markets across every major sport." },
-  { name: "Live casino", desc: "HD-streamed live dealer tables covering Teen Patti, Andar Bahar, Roulette, Baccarat, Blackjack and Dragon Tiger." },
-  { name: "Slots & instant games", desc: "A curated slots library plus crash, mine and dice-style instant games from leading providers." },
-  { name: "Virtual sports", desc: "24/7 virtual cricket, football and horse racing with rapid-fire results and betting markets." },
-  { name: "Fancy bet markets", desc: "Session bets, over-by-over runs, player performance and fall-of-wicket markets — the pulse of Indian cricket betting." },
+  { icon: Smartphone, name: "Mobile App (Android/iOS)", desc: "A lightweight, high-performance app optimized for live IPL and casino gameplay even on low-bandwidth networks." },
+  { icon: Laptop, name: "Desktop Web Portal", desc: "For the power user. Multi-screen support and advanced chart tracking for deep-market exchange betting." },
+  { icon: ShieldCheck, name: "Secured Betting Exchange", desc: "Direct peer-to-peer markets with the sharpest odds in India, protected by bank-grade encryption protocols." },
+  { icon: Zap, name: "Live Casino Lobby", desc: "A dedicated HD streaming platform for real-dealer card games, slots, and instant-win multipliers." },
+  { icon: Monitor, name: "Virtual Sports Arena", desc: "24/7 virtual cricket, football, and racing with RNG-certified results and instant market settlements." },
+  { icon: Globe, name: "Global Sportsbook", desc: "Access to international markets across 30+ sports, from English Premier League to NBA, all with one login." },
 ];
 
 function Platforms() {
   return (
     <SiteLayout>
       <PageHero
-        eyebrow="Platforms"
-        title={<>One Cricbet99 ID, a curated network of <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>premium platforms.</span></>}
-        subtitle="Instead of juggling half a dozen logins, Cricbet99 gives you access to a curated network of the most trusted sports exchanges, sportsbooks and casino products used by Indian players — all through one verified account."
+        eyebrow="The Infrastructure of Winning"
+        title={<>Unified Access. <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Universal Play.</span></>}
+        subtitle="Cricbet99 isn't just one site—it's a comprehensive ecosystem designed to deliver a seamless betting experience across any device you own."
       />
-      <section className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+      <AiOverview 
+        summary="Cricbet99 leverages a multi-platform strategy, ensuring that users have access to high-liquidity exchanges and low-latency casino streams regardless of whether they are on mobile, tablet, or desktop."
+        highlights={[
+          "Synchronized wallet across all platform variants",
+          "Low-data usage mode for mobile app users",
+          "High-security SSL-encrypted login portals",
+          "24/7 technical stability and uptime guarantee"
+        ]}
+      />
+
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {platforms.map((p) => (
-            <div key={p.name} className="rounded-2xl border border-primary/20 bg-background/60 p-7">
-              <h3 className="text-lg font-bold">{p.name}</h3>
-              <p className="mt-2 text-sm text-foreground/70">{p.desc}</p>
+            <div key={p.name} className="group rounded-3xl border border-primary/20 bg-background/60 p-8 transition-all hover:border-primary/40">
+              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-transform group-hover:scale-110">
+                <p.icon className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-bold">{p.name}</h3>
+              <p className="mt-3 text-[15px] leading-relaxed text-foreground/70">{p.desc}</p>
             </div>
           ))}
         </div>
       </section>
-      <CTABand heading="One ID. Every platform." sub="Get your Cricbet99 login on WhatsApp and explore the full network today." />
+
+      <CTABand 
+        heading="Find Your Perfect Platform." 
+        sub="Get your Cricbet99 login today and experience the most stable betting environment in India. Our support team is available 24/7 to help you set up on any device." 
+      />
     </SiteLayout>
   );
 }
