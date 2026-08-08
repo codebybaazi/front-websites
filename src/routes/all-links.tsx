@@ -19,58 +19,103 @@ export const Route = createFileRoute("/all-links")({
 
 const groups: { title: string; items: { l: string; to: string }[] }[] = [
   {
-    title: "Sports",
+    title: "Major Sports",
     items: [
       { l: "Cricket & IPL", to: "/cricket" },
       { l: "Football", to: "/football" },
       { l: "Tennis", to: "/tennis" },
+      { l: "Kabaddi", to: "/kabaddi" },
+      { l: "Basketball", to: "/basketball" },
+      { l: "E-Sports", to: "/esports" },
       { l: "Horse Racing", to: "/horse-racing" },
+    ],
+  },
+  {
+    title: "Casino & Games",
+    items: [
       { l: "Live Casino", to: "/casino" },
       { l: "Indian Card Games", to: "/indian-card-games" },
+      { l: "Exchange", to: "/exchange" },
+      { l: "Demo ID", to: "/demo-id" },
     ],
   },
   {
-    title: "Live & Fixtures",
+    title: "Market Insights",
     items: [
-      { l: "All Matches Index", to: "/matches" },
+      { l: "Live Matches Hub", to: "/matches" },
+      { l: "Today's Best Odds", to: "/todays-best-odds" },
       { l: "Match Predictions", to: "/predictions" },
-      { l: "2026 Match Schedule", to: "/schedule" },
+      { l: "2026 Schedule", to: "/schedule" },
+      { l: "IPL 2026 Calendar", to: "/ipl-2026-calendar" },
     ],
   },
   {
-    title: "Platform",
+    title: "Betting Guides",
     items: [
-      { l: "Sports ID", to: "/sports-id" },
-      { l: "Services", to: "/services" },
-      { l: "Platforms", to: "/platforms" },
-      { l: "How It Works", to: "/how-it-works" },
-      { l: "Cricbet99 App", to: "/cricbet99-app" },
-      { l: "Login", to: "/login" },
+      { l: "How to Place a Cricket Bet", to: "/betting-guides/how-to-place-a-cricket-bet" },
+      { l: "How to Place a Live Bet", to: "/betting-guides/how-to-place-a-live-bet" },
+      { l: "How to Bet on Toss Market", to: "/betting-guides/how-to-bet-on-toss-market" },
+      { l: "Session Betting Guide", to: "/betting-guides/how-to-bet-on-session-betting" },
+      { l: "High Odds Strategy", to: "/high-odds-betting-strategy" },
+      { l: "How Bookmakers Make Money", to: "/betting-guides/how-bookmakers-make-money" },
     ],
   },
   {
-    title: "Compare",
+    title: "User Education",
     items: [
-      { l: "Cricbet99 vs Lotus 365", to: "/cricbet99-vs-lotus365" },
-      { l: "Cricbet99 vs SkyExchange 247", to: "/cricbet99-vs-skyexchange247" },
+      { l: "How to Deposit", to: "/how-to-deposit" },
+      { l: "How to Withdraw", to: "/how-to-withdraw" },
+      { l: "KYC Policy", to: "/kyc-policy" },
+      { l: "Security Review", to: "/security" },
+      { l: "Transaction Limits", to: "/transaction-limits" },
     ],
   },
   {
-    title: "Company",
+    title: "Case Studies",
     items: [
-      { l: "About Us", to: "/about" },
-      { l: "Blog", to: "/blog" },
-      { l: "FAQ", to: "/faq" },
-      { l: "Contact", to: "/contact" },
+      { l: "IPL: ₹5K to ₹25K Strategy", to: "/case-studies/ipl-5000-to-25000-profit" },
+      { l: "Small Budget Growth", to: "/case-studies/small-budget-betting-strategy" },
+      { l: "10-Minute Toss Profit", to: "/case-studies/toss-market-10-minute-profit" },
+      { l: "Live Betting 3x Returns", to: "/case-studies/live-betting-3x-returns" },
     ],
   },
   {
-    title: "Legal & Safety",
+    title: "Comparisons",
     items: [
-      { l: "Responsible Gaming", to: "/responsible-gaming" },
-      { l: "Privacy Policy", to: "/privacy-policy" },
+      { l: "vs Lotus 365", to: "/cricbet99-vs-lotus365" },
+      { l: "vs SkyExchange 247", to: "/cricbet99-vs-skyexchange247" },
+      { l: "vs 11xPlay", to: "/cricbet99-vs-11xplay" },
+      { l: "vs Reddy Book", to: "/cricbet99-vs-reddybook" },
+      { l: "vs Laser247", to: "/cricbet99-vs-laser247" },
+      { l: "vs Gold365", to: "/cricbet99-vs-gold365" },
+      { l: "vs Fairdeal", to: "/cricbet99-vs-fairdeal" },
+      { l: "vs Mahavir Book", to: "/cricbet99-vs-mahavir-book" },
+      { l: "vs Diamond Exchange", to: "/cricbet99-vs-diamond-exchange" },
+    ],
+  },
+  {
+    title: "Support & Help",
+    items: [
+      { l: "WhatsApp Support", to: "/whatsapp-support" },
+      { l: "Contact Us", to: "/contact" },
+      { l: "FAQ Hub", to: "/faq" },
+      { l: "Login Issues", to: "/login-issues" },
+      { l: "Deposit Issues", to: "/deposit-issues" },
+      { l: "Withdrawal Delays", to: "/withdrawal-delay" },
+      { l: "Bonus Issues", to: "/bonus-issues" },
+    ],
+  },
+  {
+    title: "About & Legal",
+    items: [
+      { l: "About Cricbet99", to: "/about" },
+      { l: "Is Cricbet99 Safe?", to: "/is-cricbet99-safe" },
+      { l: "Is Cricbet99 Legal?", to: "/is-cricbet99-legal" },
       { l: "Terms & Conditions", to: "/terms" },
+      { l: "Privacy Policy", to: "/privacy-policy" },
+      { l: "Responsible Gaming", to: "/responsible-gaming" },
       { l: "Disclaimer", to: "/disclaimer" },
+      { l: "Refund Policy", to: "/refund-policy" },
     ],
   },
 ];
@@ -79,19 +124,21 @@ function AllLinks() {
   return (
     <SiteLayout>
       <PageHero
-        eyebrow="Sitemap"
-        title={<>All <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Cricbet99</span> links, one page.</>}
-        subtitle="The full Cricbet99 site directory — sports, casino, live fixtures, comparisons, guides, account help and legal pages, organised for fast access."
+        eyebrow="Directory"
+        title={<>Explore All <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Cricbet99</span> Links.</>}
+        subtitle="The definitive guide to every corner of the Cricbet99 ecosystem. From live matches and betting strategies to safety reviews and premium casino games."
       />
       <section className="mx-auto max-w-7xl px-6 py-12">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {groups.map((g) => (
-            <div key={g.title} className="rounded-2xl border border-primary/20 bg-background/60 p-7">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-primary">{g.title}</h2>
-              <ul className="mt-4 space-y-2 text-sm">
+            <div key={g.title} className="rounded-2xl border border-primary/10 bg-background/40 p-6 backdrop-blur-sm transition-colors hover:border-primary/30">
+              <h2 className="text-xs font-black uppercase tracking-widest text-primary/80">{g.title}</h2>
+              <ul className="mt-5 space-y-3">
                 {g.items.map((i) => (
                   <li key={i.to}>
-                    <Link to={i.to} className="text-foreground/85 hover:text-primary">{i.l}</Link>
+                    <Link to={i.to as any} className="text-sm text-foreground/70 transition-colors hover:text-primary">
+                      {i.l}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -99,6 +146,10 @@ function AllLinks() {
           ))}
         </div>
       </section>
+      <CTABand 
+        heading="Couldn't find what you need?" 
+        sub="Our 24/7 WhatsApp support team is ready to help you with ID creation, deposits, or any queries you have." 
+      />
     </SiteLayout>
   );
 }
