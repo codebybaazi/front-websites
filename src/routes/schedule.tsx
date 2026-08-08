@@ -172,7 +172,16 @@ function Schedule() {
                                 <td className="p-4 text-sm text-foreground/60 whitespace-nowrap">
                                   {match.endDate ? (
                                     <>
-                                      {format(new Date(match.startDate), 'd')} – {format(new Date(match.endDate), 'd MMM yyyy')}
+                                      {(() => {
+                                        const start = new Date(match.startDate);
+                                        const end = new Date(match.endDate);
+                                        const sameMonth = start.getMonth() === end.getMonth() && start.getFullYear() === end.getFullYear();
+                                        return (
+                                          <>
+                                            {format(start, sameMonth ? 'd' : 'd MMM')} – {format(end, 'd MMM yyyy')}
+                                          </>
+                                        );
+                                      })()}
                                     </>
                                   ) : (
                                     format(new Date(match.startDate), 'dd MMM yyyy')
