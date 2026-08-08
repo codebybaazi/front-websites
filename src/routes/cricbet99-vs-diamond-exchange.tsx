@@ -23,9 +23,9 @@ export const Route = createFileRoute("/cricbet99-vs-diamond-exchange")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "/" },
-            { "@type": "ListItem", position: 2, name: "Compare", item: "/compare" },
-            { "@type": "ListItem", position: 3, name: "Comparison: Diamond Exchange", item: "/cricbet99-vs-diamond-exchange" },
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://cricbet99.co.in/" },
+            { "@type": "ListItem", position: 2, name: "Compare", item: "https://cricbet99.co.in/all-links" },
+            { "@type": "ListItem", position: 3, name: "Comparison: Diamond Exchange", item: "https://cricbet99.co.in/cricbet99-vs-diamond-exchange" },
           ],
         }),
       },
