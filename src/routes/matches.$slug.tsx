@@ -31,7 +31,7 @@ export const Route = createFileRoute("/matches/$slug")({
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: desc },
       ],
-      links: [{ rel: "canonical", href: path }],
+      links: [{ rel: "canonical", href: `https://cricbet99.co.in${path}` }],
       scripts: [
         {
           type: "application/ld+json",
