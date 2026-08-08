@@ -11,8 +11,8 @@ const LOAD_STEP = 15;
 export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 Blog — Cricket Previews, Betting Guides & News" },
-      { name: "description", content: "Cricbet99 blog: IPL and World Cup previews, fancy bet guides, session trading strategy, casino tips and responsible gaming resources." },
+      { title: "Cricbet99 Blog | IPL Betting Tips, Cricket News & Guides" },
+      { name: "description", content: "Read the latest IPL 2026 betting tips, match previews, and expert cricket analysis on the official Cricbet99 blog. Your guide to winning sports trading." },
       { property: "og:title", content: "Cricbet99 Blog" },
       { property: "og:description", content: "Cricket previews, betting guides and responsible gaming content." },
       { property: "og:type", content: "website" },

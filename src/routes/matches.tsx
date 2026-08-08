@@ -7,8 +7,8 @@ import { ChevronRight, Radio } from "lucide-react";
 export const Route = createFileRoute("/matches")({
   head: () => ({
     meta: [
-      { title: "All Live Matches Index 2026 — Cricbet99 In-Play Betting" },
-      { name: "description", content: "Browse every live and upcoming cricket, football and tennis match on Cricbet99. Real-time odds, in-play markets and instant WhatsApp betting IDs — updated 24/7." },
+      { title: "Live Cricket Matches & IPL 2026 Schedule | Cricbet99 Odds" },
+      { name: "description", content: "Track all live cricket, football, and tennis matches on Cricbet99. Get real-time IPL 2026 schedule, in-play odds, and instant WhatsApp betting IDs." },
       { property: "og:title", content: "All Matches Index — Cricbet99" },
       { property: "og:description", content: "The full live and upcoming match index on Cricbet99 — cricket, football, tennis and more." },
       { property: "og:type", content: "website" },

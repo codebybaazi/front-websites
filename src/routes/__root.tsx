@@ -77,11 +77,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Cricbet99 — India's Trusted Online Cricket ID" },
+      { title: "Cricbet99 — India's #1 Trusted Online Cricket ID Platform" },
       {
         name: "description",
         content:
-          "Get your verified Cricbet99 ID for cricket, football, tennis and live casino with instant UPI payouts and 24/7 WhatsApp support.",
+          "Official Cricbet99 ID provider. Get instant access to IPL 2026 betting, live casino, and sports markets with 24/7 WhatsApp support and rapid UPI withdrawals.",
       },
       { name: "author", content: "Cricbet99" },
       { property: "og:site_name", content: "Cricbet99" },
