@@ -110,7 +110,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Cricbet99",
-          url: "/",
+          url: "https://cricbet99.co.in/",
           description:
             "India's trusted online cricket ID platform since 2020 — cricket, football, tennis and live casino with instant UPI payouts and 24/7 WhatsApp support.",
         }),
@@ -121,7 +121,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "Cricbet99",
-          url: "/",
+          url: "https://cricbet99.co.in/",
         }),
       },
     ],
