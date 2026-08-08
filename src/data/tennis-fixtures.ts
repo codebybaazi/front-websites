@@ -60,7 +60,7 @@ export const tennisFixtures: TennisFixture[] = [
     venue: "ASB Tennis Centre",
     city: "Auckland",
     country: "New Zealand",
-    startDate: "2026-01-02T11:00:00+13:00",
+    startDate: "2026-01-02T12:00:00+13:00",
     status: "upcoming",
     stage: "Main Draw",
     category: "ATP 250",
