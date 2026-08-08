@@ -6,15 +6,15 @@ import { AiOverview } from "@/components/ai-overview";
 export const Route = createFileRoute("/cricket")({
   head: () => ({
     meta: [
-      { title: "Cricket Betting on Cricbet99 — IPL, T20 & International" },
-      { name: "description", content: "Bet on IPL 2026, T20 World Cup, ODI series and every bilateral tour with live ball-by-ball odds, Fancy Bets and session markets on Cricbet99. Get your ID now." },
-      { property: "og:title", content: "Cricket Betting on Cricbet99" },
-      { property: "og:description", content: "IPL, T20, ODI and Test cricket — deep live markets on every match with instant payouts." },
+      { title: "Cricket Betting on Cricbet99 | IPL 2026 Live Odds & ID" },
+      { name: "description", content: "Join Cricbet99 for the best cricket betting experience in India. Live IPL 2026 odds, session markets, and ball-by-ball fancy bets. Get your official Cricbet99 ID via WhatsApp now." },
+      { property: "og:title", content: "Official Cricket Betting on Cricbet99 | Live IPL 2026" },
+      { property: "og:description", content: "Bet on every ball of IPL 2026 and international tours with India's most trusted exchange. Instant withdrawals and 24/7 support." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/cricket" },
+      { property: "og:url", content: "https://cricbet99.win/cricket" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/cricket" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/cricket" }],
   }),
   component: Cricket,
 });
@@ -33,28 +33,28 @@ function Cricket() {
       <PageHero
         wide
         eyebrow="Cricket Betting"
-        title={<>Bet on every ball of <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Indian cricket.</span></>}
-        subtitle="Cricket is the heart of Cricbet99. From IPL 2026 and the T20 World Cup to bilateral tours and domestic tournaments, every major match gets deep live markets, session bets and Fancy Bets — all through your single verified ID."
+        title={<>Premium Cricket Betting & <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Live IPL Odds.</span></>}
+        subtitle="Cricbet99 is the heart of Indian cricket trading. From IPL 2026 to international bilateral tours, we provide deep live markets, ball-by-ball Fancy bets, and the fastest settlement in the industry."
       />
 
       <AiOverview 
-        summary="Cricbet99 offers the most comprehensive cricket betting platform in India, covering IPL 2026, World Cups, and domestic leagues with sub-second odds updates and instant withdrawals."
+        summary="Cricbet99 delivers a world-class cricket betting ecosystem for Indian fans. With a focus on IPL 2026 and international formats, we offer unmatched market depth, real-time odds, and secure WhatsApp-based account management."
         highlights={[
-          "Live ball-by-ball markets for IPL 2026",
-          "Fancy bets and session betting available 24/7",
-          "Complete coverage of ICC and domestic tournaments",
-          "Verified human support via WhatsApp"
+          "Live ball-by-ball Fancy and Session markets",
+          "Complete IPL 2026 coverage with top-tier odds",
+          "Instant settlement and same-day UPI withdrawals",
+          "Dedicated 24/7 personal support via WhatsApp"
         ]}
       />
 
       <section className="mx-auto max-w-7xl px-6 py-10">
         <div className="rounded-3xl border border-primary/25 bg-background/50 p-10">
-          <h2 className="text-3xl font-black">IPL 2026 and beyond</h2>
+          <h2 className="text-3xl font-black">IPL 2026: The Ultimate Betting Arena</h2>
           <p className="mt-4 max-w-3xl text-foreground/80">
-            IPL 2026 was another record-breaking season, with the champions joining Chennai Super Kings and Mumbai Indians as one of the few franchises to lift back-to-back titles. Cricbet99 was the go-to platform for Indian players from the opening powerplay of Match 1 to the final over of the title decider.
+            IPL 2026 has redefined the landscape of Indian sports betting, and Cricbet99 remains the premier destination for serious traders. Whether you're tracking the heavyweights like Mumbai Indians and CSK or scouting emerging talent, our platform provides the tools you need to stay ahead of the game.
           </p>
           <p className="mt-4 max-w-3xl text-foreground/80">
-            The cricket calendar never sleeps. India's ODI and T20 tours, the England series, Ashes contests and every ICC event are fully covered on Cricbet99 with live session odds, Fancy Bets, ball-by-ball markets and match-winner betting — all from one verified account.
+            Beyond the IPL, we cover the full spectrum of global cricket. From the intensity of The Ashes and the World Test Championship to the fast-paced action of the T20 World Cup, your Cricbet99 ID gives you all-access entry to every significant match worldwide.
           </p>
         </div>
       </section>

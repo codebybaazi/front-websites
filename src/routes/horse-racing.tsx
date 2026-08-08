@@ -4,13 +4,15 @@ import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 export const Route = createFileRoute("/horse-racing")({
   head: () => ({
     meta: [
-      { title: "Horse Racing Betting on Cricbet99 — UK, Indian & International" },
-      { name: "description", content: "Bet on horse racing from Ascot, Epsom, Meydan and the Indian turf circuit with win, place and each-way markets on Cricbet99." },
-      { property: "og:title", content: "Horse Racing Betting on Cricbet99" },
-      { property: "og:description", content: "UK, Dubai and Indian racing with live win, place and each-way markets." },
+      { title: "Horse Racing Betting on Cricbet99 | Live Turf & International Odds" },
+      { name: "description", content: "Place your bets on global horse racing with Cricbet99. From Royal Ascot to Indian turf clubs, get the best win, place, and each-way odds today." },
+      { property: "og:title", content: "Premier Horse Racing Betting | Cricbet99" },
+      { property: "og:description", content: "The ultimate destination for horse racing enthusiasts. Live odds, expert markets, and instant payouts on all major meets." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://cricbet99.win/horse-racing" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/horse-racing" }],
   }),
   component: HorseRacing,
 });
@@ -30,8 +32,8 @@ function HorseRacing() {
       <PageHero
         wide
         eyebrow="Horse Racing"
-        title={<>Every furlong, every finish — bet racing on <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Cricbet99.</span></>}
-        subtitle="From Royal Ascot and the Epsom Derby to Dubai's Meydan and every Indian turf club, Cricbet99 delivers live win, place and each-way markets on the biggest race meetings in the world."
+        title={<>Elite Horse Racing & <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Live Turf Markets.</span></>}
+        subtitle="From the legendary Royal Ascot to the competitive Indian racing circuit, Cricbet99 offers sophisticated betting options for every racing connoisseur, including win, place, and exotic markets."
       />
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

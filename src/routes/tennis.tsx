@@ -4,15 +4,15 @@ import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 export const Route = createFileRoute("/tennis")({
   head: () => ({
     meta: [
-      { title: "Tennis Betting on Cricbet99 — ATP, WTA & Grand Slams" },
-      { name: "description", content: "Wimbledon, Roland Garros, US Open, Australian Open plus every ATP and WTA event — bet live sets, games and match winners on Cricbet99. Instant ID activation." },
-      { property: "og:title", content: "Tennis Betting on Cricbet99" },
-      { property: "og:description", content: "Grand Slams, ATP and WTA with live set and game markets." },
+      { title: "Tennis Betting on Cricbet99 | Live ATP, WTA & Slam Odds" },
+      { name: "description", content: "Master tennis betting with Cricbet99. Live odds for Wimbledon, ATP Tour, and WTA events. Secure your tennis betting ID today for instant access to global courts." },
+      { property: "og:title", content: "Tennis Betting Excellence on Cricbet99" },
+      { property: "og:description", content: "Bet on every set, game, and match across the global tennis circuit. High-limit markets and professional support." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/tennis" },
+      { property: "og:url", content: "https://cricbet99.win/tennis" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/tennis" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/tennis" }],
   }),
   component: Tennis,
 });
@@ -32,8 +32,8 @@ function Tennis() {
       <PageHero
         wide
         eyebrow="Tennis"
-        title={<>All four majors, every ATP and WTA event — on <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Cricbet99.</span></>}
-        subtitle="From baseline rallies to tie-break drama, tennis on Cricbet99 delivers live set and game markets, tournament outrights and player props across the ATP and WTA calendar."
+        title={<>Professional Tennis Betting & <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Live Court Action.</span></>}
+        subtitle="Experience sub-second odds updates on every serve. Cricbet99 brings you the complete tennis calendar, from Grand Slam finals to high-intensity ATP 1000 tournaments."
       />
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
