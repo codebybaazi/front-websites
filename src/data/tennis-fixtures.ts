@@ -505,6 +505,42 @@ export const tennisFixtures: TennisFixture[] = [
     keywords: ["rome masters tennis odds"]
   },
   {
+    slug: "geneva-open-2026",
+    sport: "Tennis",
+    tournament: "Gonet Geneva Open",
+    player1: "Learner Tien",
+    player2: "TBD",
+    venue: "Tennis Club de Genève",
+    city: "Geneva",
+    country: "Switzerland",
+    startDate: "2026-05-16T11:00:00+02:00",
+    status: "upcoming",
+    stage: "Main Draw",
+    category: "ATP 250",
+    surface: "Clay",
+    tour: "ATP",
+    marketHighlights: ["Match Winner"],
+    keywords: ["geneva open 2026 betting", "tien geneva odds"]
+  },
+  {
+    slug: "hamburg-open-2026",
+    sport: "Tennis",
+    tournament: "Bitpanda Hamburg Open",
+    player1: "Ignacio Buse",
+    player2: "TBD",
+    venue: "Am Rothenbaum",
+    city: "Hamburg",
+    country: "Germany",
+    startDate: "2026-05-16T11:00:00+02:00",
+    status: "upcoming",
+    stage: "Main Draw",
+    category: "ATP 500",
+    surface: "Clay",
+    tour: "ATP",
+    marketHighlights: ["Match Winner"],
+    keywords: ["hamburg open 2026 betting", "buse hamburg odds"]
+  },
+  {
     slug: "roland-garros-2026",
     sport: "Tennis",
     tournament: "Roland Garros",
@@ -520,7 +556,14 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Clay",
     tour: "Combined",
     marketHighlights: ["Match Winner", "Total Games"],
-    keywords: ["roland garros 2026 odds", "zverev paris betting"]
+    keywords: ["roland garros 2026 odds", "zverev paris betting", "clay court betting india", "french open predictions"],
+    prediction: {
+      winner: "Alexander Zverev",
+      score: "3-1",
+      points: "Over 34.5 Games",
+      confidence: 78,
+      analysis: "Zverev's height and slide technique on clay give him a massive advantage in five-set battles at Roland Garros."
+    }
   },
   {
     slug: "wimbledon-2026",
