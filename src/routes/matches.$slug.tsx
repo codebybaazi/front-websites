@@ -10,8 +10,8 @@ export const Route = createFileRoute("/matches/$slug")({
     return { match };
   },
   head: ({ loaderData }) => {
-    if (!loaderData) {
-      return { meta: [{ title: "Match not found — Cricbet99" }, { name: "robots", content: "noindex" }] };
+    if (!loaderData?.match) {
+      return { meta: [{ title: "Match Fixture Not Found — Cricbet99" }, { name: "robots", content: "noindex" }] };
     }
     const m = loaderData.match;
     const title = `${m.homeTeam} vs ${m.awayTeam} Live Odds & Betting — ${m.tournament} | Cricbet99`;
