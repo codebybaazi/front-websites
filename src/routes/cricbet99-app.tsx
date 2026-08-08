@@ -4,15 +4,15 @@ import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 export const Route = createFileRoute("/cricbet99-app")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 Betting App 2026 — Download APK for Android" },
-      { name: "description", content: "Download the official Cricbet99 betting app for Android. Lightweight APK, live cricket odds, instant UPI deposits and minute-fast withdrawals. Safe install guide." },
-      { property: "og:title", content: "Cricbet99 Betting App — Android APK" },
-      { property: "og:description", content: "The official Cricbet99 Android app: fast odds, secure logins and instant UPI payouts." },
+      { title: "Cricbet99 App Download 2026 | Official Android APK" },
+      { name: "description", content: "Download the official Cricbet99 Android app for the fastest betting experience in India. Lightweight APK, real-time odds, and secure UPI transactions." },
+      { property: "og:title", content: "Official Cricbet99 App | Premium Android APK" },
+      { property: "og:description", content: "Elevate your game with the Cricbet99 mobile app. Fast, secure, and built for professional Indian traders." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/cricbet99-app" },
+      { property: "og:url", content: "https://cricbet99.win/cricbet99-app" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/cricbet99-app" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/cricbet99-app" }],
   }),
   component: AppPage,
 });
@@ -39,8 +39,8 @@ function AppPage() {
       <PageHero
         wide
         eyebrow="Cricbet99 App"
-        title={<>The official <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Cricbet99</span> app for Android.</>}
-        subtitle="Install the official Cricbet99 APK for lightning-fast in-play cricket odds, one-tap UPI deposits and instant withdrawals — engineered for Indian networks and Indian bettors."
+        title={<>Official Cricbet99 <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Android App.</span></>}
+        subtitle="Take the arena with you. The official Cricbet99 app delivers a high-performance betting experience with sub-second odds updates, biometric security, and streamlined UPI withdrawals — optimized for 5G connectivity."
       />
       <section className="mx-auto max-w-7xl px-6 py-12">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

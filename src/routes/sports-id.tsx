@@ -5,13 +5,15 @@ import { ShieldCheck, Zap, Wallet, Headset } from "lucide-react";
 export const Route = createFileRoute("/sports-id")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 Sports ID — One Login for Cricket, Football, Tennis & Casino" },
-      { name: "description", content: "Get your official Cricbet99 Sports ID on WhatsApp — one verified login for cricket, football, tennis, horse racing and live casino with instant UPI payouts." },
-      { property: "og:title", content: "Cricbet99 Sports ID" },
-      { property: "og:description", content: "One verified ID for every sport and casino table Cricbet99 offers." },
+      { title: "Get Your Official Cricbet99 Sports ID | Verified & Secure" },
+      { name: "description", content: "Secure your official Cricbet99 Sports ID today. One verified login for cricket, football, tennis, and live casino. Instant UPI activation via WhatsApp." },
+      { property: "og:title", content: "Cricbet99 Sports ID | The Only ID You Need" },
+      { property: "og:description", content: "Experience seamless multi-sport betting with a single verified Cricbet99 ID. Fast deposits, instant withdrawals, and 24/7 support." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://cricbet99.win/sports-id" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/sports-id" }],
   }),
   component: SportsID,
 });
@@ -29,8 +31,8 @@ function SportsID() {
       <PageHero
         wide
         eyebrow="Sports ID"
-        title={<>One Cricbet99 ID, <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>every sport,</span> every market.</>}
-        subtitle="Your Cricbet99 Sports ID is a single verified login that unlocks live cricket, football, tennis, horse racing, kabaddi and the full live casino — all with the same wallet, one support team and instant UPI payouts."
+        title={<>Premium Cricbet99 ID: <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Universal Access.</span></>}
+        subtitle="Your Cricbet99 Sports ID is a master key to the world of professional trading. One verified account grants you instant access to cricket, football, tennis, and our elite live casino — all managed through a single secure wallet."
       />
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
