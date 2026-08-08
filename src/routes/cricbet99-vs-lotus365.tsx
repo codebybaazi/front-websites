@@ -6,11 +6,11 @@ import { CheckCircle2, XCircle, Trophy, Zap, ShieldCheck, Wallet, MessageCircle,
 export const Route = createFileRoute("/cricbet99-vs-lotus365")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 vs Lotus 365 (2026): Odds, Payouts & Verdict" },
-      { name: "description", content: "Cricbet99 vs Lotus 365 compared on IPL odds, UPI payout speed, casino depth, bonuses and 24/7 support — pick the right cricket ID for India in 2026." },
+      { title: "Comparison: Lotus 365 (2026): Odds, Payouts & Verdict" },
+      { name: "description", content: "Comparison: Lotus 365 compared on IPL odds, UPI payout speed, casino depth, bonuses and 24/7 support — pick the right cricket ID for India in 2026." },
       { name: "keywords", content: "cricbet99 vs lotus365, lotus365 vs cricbet99, best cricket betting id india, cricbet99 review, lotus365 review, ipl betting id, upi withdrawal betting site, online cricket id 2026" },
-      { property: "og:title", content: "Cricbet99 vs Lotus 365 (2026) — Honest Side-by-Side" },
-      { property: "og:description", content: "Which ID pays faster, offers sharper IPL odds and better support? Full 2026 comparison of Cricbet99 vs Lotus 365 for Indian bettors." },
+      { property: "og:title", content: "Comparison: Lotus 365 (2026) — Honest Side-by-Side" },
+      { property: "og:description", content: "Which ID pays faster, offers sharper IPL odds and better support? Full 2026 comparison of Comparison: Lotus 365 for Indian bettors." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/cricbet99-vs-lotus365" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/cricbet99-vs-lotus365")({
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "/" },
             { "@type": "ListItem", position: 2, name: "Compare", item: "/compare" },
-            { "@type": "ListItem", position: 3, name: "Cricbet99 vs Lotus 365", item: "/cricbet99-vs-lotus365" },
+            { "@type": "ListItem", position: 3, name: "Comparison: Lotus 365", item: "/cricbet99-vs-lotus365" },
           ],
         }),
       },
@@ -51,8 +51,8 @@ export const Route = createFileRoute("/cricbet99-vs-lotus365")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "Cricbet99 vs Lotus 365 — Honest 2026 Comparison",
-          description: "Which ID pays faster, offers sharper IPL odds and better support? Full 2026 comparison of Cricbet99 vs Lotus 365 for Indian bettors.",
+          headline: "Comparison: Lotus 365 — Honest 2026 Comparison",
+          description: "Which ID pays faster, offers sharper IPL odds and better support? Full 2026 comparison of Comparison: Lotus 365 for Indian bettors.",
           author: { "@type": "Organization", name: "Cricbet99" },
           publisher: { "@type": "Organization", name: "Cricbet99" },
           datePublished: "2026-01-15",
@@ -119,8 +119,8 @@ function Compare() {
       <PageHero
         wide
         eyebrow="Comparison"
-        title={<>Cricbet99 vs Lotus 365 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>which betting ID actually wins?</span></>}
-        subtitle="A no-fluff 2026 breakdown of Cricbet99 vs Lotus 365 on IPL odds, UPI payout speed, casino depth, bonuses and support — so you know exactly which cricket ID fits your play."
+        title={<>Comparison: Lotus 365 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>which betting ID actually wins?</span></>}
+        subtitle="A no-fluff 2026 breakdown of Comparison: Lotus 365 on IPL odds, UPI payout speed, casino depth, bonuses and support — so you know exactly which cricket ID fits your play."
       />
 
       {/* TL;DR verdict card */}
@@ -200,7 +200,7 @@ function Compare() {
       {/* Long-form sections for keyword coverage */}
       <section className="mx-auto max-w-5xl space-y-8 px-6 py-8">
         <Article
-          h="IPL &amp; cricket odds: Cricbet99 vs Lotus 365"
+          h="IPL &amp; cricket odds: Comparison: Lotus 365"
           body="Cricbet99 runs exchange-grade IPL odds — you get sharper session lines, fancy markets, and lambi rates that update in real time. Lotus 365 uses a more traditional bookmaker feed, which means slightly wider margins and thinner in-play depth during peak IPL windows. For serious cricket bettors line-shopping through the 2026 IPL season, Cricbet99's markets tend to price out better on volume."
         />
         <Article
@@ -227,7 +227,7 @@ function Compare() {
 
       {/* FAQ */}
       <section className="mx-auto max-w-5xl px-6 py-10">
-        <h2 className="text-xl font-black text-foreground sm:text-2xl">Cricbet99 vs Lotus 365 — FAQ</h2>
+        <h2 className="text-xl font-black text-foreground sm:text-2xl">Comparison: Lotus 365 — FAQ</h2>
         <div className="mt-5 space-y-3">
           {faqs.map((f) => (
             <details key={f.q} className="group rounded-xl border border-primary/20 bg-background/60 p-4 open:border-primary/40">

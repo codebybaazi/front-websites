@@ -6,11 +6,11 @@ import { CheckCircle2, XCircle, Trophy, Zap, ShieldCheck, Wallet, MessageCircle,
 export const Route = createFileRoute("/cricbet99-vs-diamond-exchange")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 vs Diamond Exchange (2026): Best Betting ID Review" },
-      { name: "description", content: "Side-by-side comparison: Cricbet99 vs Diamond Exchange. We test exchange liquidity, back/lay odds, UPI withdrawal times and live casino depth for 2026." },
+      { title: "Comparison: Diamond Exchange (2026): Best Betting ID Review" },
+      { name: "description", content: "Side-by-side comparison: Comparison: Diamond Exchange. We test exchange liquidity, back/lay odds, UPI withdrawal times and live casino depth for 2026." },
       { name: "keywords", content: "cricbet99 vs diamond exchange, diamond exchange id, best betting exchange india, diamond exchange review, cricbet99 exchange id, live cricket betting id" },
-      { property: "og:title", content: "Cricbet99 vs Diamond Exchange (2026) — Honest Exchange Comparison" },
-      { property: "og:description", content: "Which exchange ID offers better liquidity and faster payouts? Full 2026 review of Cricbet99 vs Diamond Exchange for Indian players." },
+      { property: "og:title", content: "Comparison: Diamond Exchange (2026) — Honest Exchange Comparison" },
+      { property: "og:description", content: "Which exchange ID offers better liquidity and faster payouts? Full 2026 review of Comparison: Diamond Exchange for Indian players." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/cricbet99-vs-diamond-exchange" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/cricbet99-vs-diamond-exchange")({
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "/" },
             { "@type": "ListItem", position: 2, name: "Compare", item: "/compare" },
-            { "@type": "ListItem", position: 3, name: "Cricbet99 vs Diamond Exchange", item: "/cricbet99-vs-diamond-exchange" },
+            { "@type": "ListItem", position: 3, name: "Comparison: Diamond Exchange", item: "/cricbet99-vs-diamond-exchange" },
           ],
         }),
       },
@@ -47,8 +47,8 @@ export const Route = createFileRoute("/cricbet99-vs-diamond-exchange")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "Cricbet99 vs Diamond Exchange (2026): Best Betting ID Review",
-          description: "Side-by-side comparison: Cricbet99 vs Diamond Exchange. We test exchange liquidity, back/lay odds, UPI withdrawal times and live casino depth for 2026.",
+          headline: "Comparison: Diamond Exchange (2026): Best Betting ID Review",
+          description: "Side-by-side comparison: Comparison: Diamond Exchange. We test exchange liquidity, back/lay odds, UPI withdrawal times and live casino depth for 2026.",
           author: { "@type": "Organization", name: "Cricbet99" },
           publisher: { "@type": "Organization", name: "Cricbet99" },
           datePublished: "2026-07-31",
@@ -105,7 +105,7 @@ function Compare() {
       <PageHero
         wide
         eyebrow="Market Comparison"
-        title={<>Cricbet99 vs Diamond Exchange — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>The Liquidity Test.</span></>}
+        title={<>Comparison: Diamond Exchange — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>The Liquidity Test.</span></>}
         subtitle="Comparing the two most popular exchange IDs in India. We break down the liquidity, commission rates, and payout efficiency for 2026."
       />
 
@@ -164,7 +164,7 @@ function Compare() {
 
       <section className="mx-auto max-w-5xl px-6 py-6">
         <div className="grid gap-4 md:grid-cols-2">
-          <ProsCons title="Why Cricbet99?" pros={cricPros} cons={cricCons} tone="gold" />
+          <ProsCons title="Why Choose Us?" pros={cricPros} cons={cricCons} tone="gold" />
           <ProsCons title="Why Diamond Exchange?" pros={otherPros} cons={otherCons} tone="muted" />
         </div>
       </section>

@@ -6,11 +6,11 @@ import { CheckCircle2, XCircle, Trophy, Zap, ShieldCheck, Wallet, MessageCircle,
 export const Route = createFileRoute("/cricbet99-vs-skyexchange247")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 vs SkyExchange 247 (2026): Odds, Payouts, Verdict" },
-      { name: "description", content: "Cricbet99 vs SkyExchange 247 compared on exchange odds, UPI payout speed, casino depth, bonuses and 24/7 support — pick the right cricket ID for India in 2026." },
+      { title: "Comparison: SkyExchange 247 (2026): Odds, Payouts, Verdict" },
+      { name: "description", content: "Comparison: SkyExchange 247 compared on exchange odds, UPI payout speed, casino depth, bonuses and 24/7 support — pick the right cricket ID for India in 2026." },
       { name: "keywords", content: "cricbet99 vs skyexchange247, skyexchange 247 vs cricbet99, best exchange betting id india, cricket exchange id, sky exchange review, cricbet99 review, ipl exchange id, upi withdrawal betting" },
-      { property: "og:title", content: "Cricbet99 vs SkyExchange 247 (2026) — Honest Side-by-Side" },
-      { property: "og:description", content: "Which cricket exchange pays faster, prices sharper and supports better? Full 2026 comparison of Cricbet99 vs SkyExchange 247 for Indian bettors." },
+      { property: "og:title", content: "Comparison: SkyExchange 247 (2026) — Honest Side-by-Side" },
+      { property: "og:description", content: "Which cricket exchange pays faster, prices sharper and supports better? Full 2026 comparison of Comparison: SkyExchange 247 for Indian bettors." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/cricbet99-vs-skyexchange247" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/cricbet99-vs-skyexchange247")({
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "/" },
             { "@type": "ListItem", position: 2, name: "Compare", item: "/compare" },
-            { "@type": "ListItem", position: 3, name: "Cricbet99 vs SkyExchange 247", item: "/cricbet99-vs-skyexchange247" },
+            { "@type": "ListItem", position: 3, name: "Comparison: SkyExchange 247", item: "/cricbet99-vs-skyexchange247" },
           ],
         }),
       },
@@ -51,8 +51,8 @@ export const Route = createFileRoute("/cricbet99-vs-skyexchange247")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "Cricbet99 vs SkyExchange 247 — Honest 2026 Comparison",
-          description: "Which cricket exchange pays faster, prices sharper and supports better? Full 2026 comparison of Cricbet99 vs SkyExchange 247 for Indian bettors.",
+          headline: "Comparison: SkyExchange 247 — Honest 2026 Comparison",
+          description: "Which cricket exchange pays faster, prices sharper and supports better? Full 2026 comparison of Comparison: SkyExchange 247 for Indian bettors.",
           author: { "@type": "Organization", name: "Cricbet99" },
           publisher: { "@type": "Organization", name: "Cricbet99" },
           datePublished: "2026-01-15",
@@ -119,8 +119,8 @@ function Compare() {
       <PageHero
         wide
         eyebrow="Comparison"
-        title={<>Cricbet99 vs SkyExchange 247 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>compared honestly.</span></>}
-        subtitle="A no-fluff 2026 breakdown of Cricbet99 vs SkyExchange 247 on exchange depth, UPI payout speed, casino floor, bonuses and support — so you pick the right cricket exchange ID for your play."
+        title={<>Comparison: SkyExchange 247 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>compared honestly.</span></>}
+        subtitle="A no-fluff 2026 breakdown of Comparison: SkyExchange 247 on exchange depth, UPI payout speed, casino floor, bonuses and support — so you pick the right cricket exchange ID for your play."
       />
 
       {/* TL;DR verdict */}
@@ -198,7 +198,7 @@ function Compare() {
       {/* Long-form content */}
       <section className="mx-auto max-w-5xl space-y-8 px-6 py-8">
         <Article
-          h="Cricket exchange depth: Cricbet99 vs SkyExchange 247"
+          h="Cricket exchange depth: Comparison: SkyExchange 247"
           body="Both IDs run a proper back/lay exchange with fancy markets on IPL, T20 leagues and international cricket. Cricbet99 adds sharper session lines and deeper lambi rates on smaller series where SkyExchange 247's book thins out. On marquee IPL games, prices are close — but on side markets, Cricbet99 typically holds tighter spreads."
         />
         <Article
@@ -225,7 +225,7 @@ function Compare() {
 
       {/* FAQ */}
       <section className="mx-auto max-w-5xl px-6 py-10">
-        <h2 className="text-xl font-black text-foreground sm:text-2xl">Cricbet99 vs SkyExchange 247 — FAQ</h2>
+        <h2 className="text-xl font-black text-foreground sm:text-2xl">Comparison: SkyExchange 247 — FAQ</h2>
         <div className="mt-5 space-y-3">
           {faqs.map((f) => (
             <details key={f.q} className="group rounded-xl border border-primary/20 bg-background/60 p-4 open:border-primary/40">

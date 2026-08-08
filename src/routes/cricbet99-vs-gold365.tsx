@@ -6,11 +6,11 @@ import { CheckCircle2, XCircle, Trophy, Zap, ShieldCheck, Wallet, MessageCircle,
 export const Route = createFileRoute("/cricbet99-vs-gold365")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 vs Gold365 (2026): Odds, Payouts & Verdict" },
-      { name: "description", content: "Compare Cricbet99 vs Gold365 on IPL odds, withdrawal speed, bonuses and 24/7 support. Find the best betting ID in India for 2026 with instant UPI payouts." },
+      { title: "Comparison: Gold365 (2026): Odds, Payouts & Verdict" },
+      { name: "description", content: "Compare Comparison: Gold365 on IPL odds, withdrawal speed, bonuses and 24/7 support. Find the best betting ID in India for 2026 with instant UPI payouts." },
       { name: "keywords", content: "cricbet99 vs gold365, gold365 login, cricbet99 id, online betting id india 2026, ipl betting, gold365 vs cricbet99, upi withdrawal betting id" },
-      { property: "og:title", content: "Cricbet99 vs Gold365 (2026) — Side-by-Side Comparison" },
-      { property: "og:description", content: "Which ID offers faster payouts and sharper odds? Full 2026 comparison of Cricbet99 vs Gold365 for serious Indian bettors." },
+      { property: "og:title", content: "Comparison: Gold365 (2026) — Side-by-Side Comparison" },
+      { property: "og:description", content: "Which ID offers faster payouts and sharper odds? Full 2026 comparison of Comparison: Gold365 for serious Indian bettors." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/cricbet99-vs-gold365" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/cricbet99-vs-gold365")({
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "/" },
             { "@type": "ListItem", position: 2, name: "Compare", item: "/compare" },
-            { "@type": "ListItem", position: 3, name: "Cricbet99 vs Gold365", item: "/cricbet99-vs-gold365" },
+            { "@type": "ListItem", position: 3, name: "Comparison: Gold365", item: "/cricbet99-vs-gold365" },
           ],
         }),
       },
@@ -49,7 +49,7 @@ export const Route = createFileRoute("/cricbet99-vs-gold365")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "Cricbet99 vs Gold365 — Full 2026 Comparison Guide",
+          headline: "Comparison: Gold365 — Full 2026 Comparison Guide",
           description: "Which betting ID offers faster payouts and sharper odds? Detailed side-by-side comparison of Cricbet99 and Gold365 for Indian players.",
           author: { "@type": "Organization", name: "Cricbet99" },
           publisher: { "@type": "Organization", name: "Cricbet99" },
@@ -114,8 +114,8 @@ function Compare() {
       <PageHero
         wide
         eyebrow="Comparison Guide"
-        title={<>Cricbet99 vs Gold365 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>The Definitive 2026 Verdict</span></>}
-        subtitle="Compare Cricbet99 vs Gold365 on the metrics that matter most: payout speed, IPL odds, and support. See why serious Indian bettors prefer Cricbet99 for the 2026 season."
+        title={<>Comparison: Gold365 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>The Definitive 2026 Verdict</span></>}
+        subtitle="Compare Comparison: Gold365 on the metrics that matter most: payout speed, IPL odds, and support. See why serious Indian bettors prefer Cricbet99 for the 2026 season."
       />
 
       {/* Verdict Section */}
