@@ -39,6 +39,7 @@ function Services() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Beyond the Bet"
         title={<>A Full Spectrum of <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Premium Services.</span></>}
         subtitle="Cricbet99 isn't just a platform—it's a service-first ecosystem. We handle the technical and financial details so you can focus entirely on the game."

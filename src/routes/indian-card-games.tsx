@@ -40,6 +40,7 @@ function IndianCardGames() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="The Heart of Indian Gaming"
         title={<>Classic Indian Games, <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Modern Experience.</span></>}
         subtitle="Cricbet99 brings the authentic feel of the club to your home. With real Hindi-speaking dealers and HD-streamed card games like Teen Patti and Andar Bahar, we offer the most culturally resonant casino platform for Indian players."

@@ -39,6 +39,7 @@ function SafetyReport() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Security & Trust"
         title={<>Your Safety is Our <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Primary Asset.</span></>}
         subtitle="In an industry where trust is everything, Cricbet99 leads with transparency. We've built a multi-layered security framework to ensure that every bet you place is safe, fair, and protected."

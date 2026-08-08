@@ -31,6 +31,7 @@ function Cricket() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Cricket Betting"
         title={<>Bet on every ball of <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Indian cricket.</span></>}
         subtitle="Cricket is the heart of Cricbet99. From IPL 2026 and the T20 World Cup to bilateral tours and domestic tournaments, every major match gets deep live markets, session bets and Fancy Bets — all through your single verified ID."
