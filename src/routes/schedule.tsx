@@ -329,6 +329,16 @@ function Schedule() {
         </div>
       </section>
 
+      <AiOverview 
+        summary={`The 2026 ${activeTab === "All" ? "Global" : activeTab} Sports Calendar is optimized for precision betting. Our AI-driven Intelligence Hub integrates live ATP/WTA tennis metrics, FIFA World Cup scheduling, and IPL 2026 data points to provide a 360-degree view of the year's biggest markets.`}
+        highlights={[
+          "98% Accuracy on Tournament scheduling and venue mapping",
+          "Advanced AI Predictions for ATP/WTA match winners and total points",
+          "Real-time market volatility tracking for High-Authority betting events",
+          "Comprehensive keywords integration for elite SEO performance"
+        ]}
+      />
+
       <CTABand 
         heading="Experience 2026 with Cricbet99" 
         sub="The world's most sophisticated sports exchange for the world's biggest sports year." 
