@@ -5,14 +5,14 @@ import content from "@/data/pages/deposit-issues.json";
 export const Route = createFileRoute("/deposit-issues")({
   head: () => ({
     meta: [
-      { title: "Fix Cricbet99 Deposit Issues — Cricbet99" },
-      { name: "description", content: "Fix Cricbet99 Deposit Issues on Cricbet99: stuck deposits, pending UPI and failed bank transfers. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:title", content: "Fix Cricbet99 Deposit Issues — Cricbet99" },
-      { property: "og:description", content: "Fix Cricbet99 Deposit Issues on Cricbet99: stuck deposits, pending UPI and failed bank transfers. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
+      { title: "Fix Cricbet99 Deposit Issues | Instant Balance Updates" },
+      { name: "description", content: "Resolve pending UPI deposits or bank transfer delays on Cricbet99. Get your trading wallet updated in under 60 seconds via official WhatsApp support." },
+      { property: "og:title", content: "Deposit Not Reflecting? | Official Cricbet99 Resolution Guide" },
+      { property: "og:description", content: "Track your stuck payments and verify your UTR for instant account credit. Reliable 24/7 human assistance for all Cricbet99 financial queries." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/deposit-issues" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/deposit-issues" }],
     scripts: content.faqs && content.faqs.length ? [{
       type: "application/ld+json",
       children: JSON.stringify(buildFaqJsonLd(content.faqs)),

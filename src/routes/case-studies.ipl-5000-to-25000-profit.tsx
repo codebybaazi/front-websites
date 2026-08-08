@@ -5,14 +5,14 @@ import content from "@/data/pages/case-studies__ipl-5000-to-25000-profit.json";
 export const Route = createFileRoute("/case-studies/ipl-5000-to-25000-profit")({
   head: () => ({
     meta: [
-      { title: "IPL Case Study: ₹5,000 to ₹25,000 — Cricbet99" },
-      { name: "description", content: "IPL Case Study: ₹5,000 to ₹25,000 on Cricbet99: how a Cricbet99 member turned ₹5,000 into ₹25,000 over IPL. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:title", content: "IPL Case Study: ₹5,000 to ₹25,000 — Cricbet99" },
-      { property: "og:description", content: "IPL Case Study: ₹5,000 to ₹25,000 on Cricbet99: how a Cricbet99 member turned ₹5,000 into ₹25,000 over IPL. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
+      { title: "IPL Trading Case Study: ₹5K to ₹25K Bankroll Growth" },
+      { name: "description", content: "How one Cricbet99 member achieved a 400% ROI during the IPL season using disciplined session trading and bankroll management. Real results, real data." },
+      { property: "og:title", content: "Small Bankroll to Big Wins: An IPL Case Study on Cricbet99" },
+      { property: "og:description", content: "Step-by-step breakdown of an IPL trading strategy that turned a ₹5,000 starting balance into ₹25,000 profit. Learn the discipline of professional trading." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/case-studies/ipl-5000-to-25000-profit" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/case-studies/ipl-5000-to-25000-profit" }],
     scripts: content.faqs && content.faqs.length ? [{
       type: "application/ld+json",
       children: JSON.stringify(buildFaqJsonLd(content.faqs)),

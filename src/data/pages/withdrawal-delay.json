@@ -1,56 +1,56 @@
 {
-  "eyebrow": "Help & Support",
+  "eyebrow": "Help",
   "title": "Cricbet99 Withdrawal Delay",
-  "subtitle": "Cricbet99 Withdrawal Delay — understand and fix delayed withdrawals from your ID. Trusted by 1 lakh+ Indian players since 2020, with 24/7 WhatsApp support and instant UPI payouts.",
+  "subtitle": "Understanding and resolving withdrawal times. Learn how we process payouts in under 24 hours and how to speed up your request.",
   "intro": [
-    "Running into a problem is frustrating — but every issue on Cricbet99 has a quick, human-verified fix. This page walks you through understand and fix delayed withdrawals from your ID step by step.",
-    "Every part of the Cricbet99 experience — from ID setup to your first withdrawal — is handled by a real human on WhatsApp. There is no faceless system, no complicated dashboard and no waiting on email tickets that go nowhere. If you can send a WhatsApp message, you can play on Cricbet99.",
-    "We've built Cricbet99 around three principles: sharp odds, fast payouts and honest support. That's why players across every Indian state trust us with their cricket, casino and multi-sport action — and why the platform has grown steadily since 2020 with almost zero marketing spend."
+    "Cricbet99 is famous for its fast payouts. While most withdrawals hit your bank in under 30 minutes, occasionally there can be a delay. This guide explains why delays happen and how our 24/7 support team ensures your money reaches you safely.",
+    "We process thousands of withdrawals daily through regulated Indian banking channels. If a withdrawal is 'Pending', it's usually due to a banking holiday, a network lag, or a routine KYC verification to protect your funds.",
+    "Transparency is our priority. If your payout is delayed, you can always get a real-time status update from your account manager on WhatsApp. We don't use automated bots to handle your money; real humans ensure every rupee is settled."
   ],
   "features": [
     {
-      "title": "Diagnosed in 60 seconds",
-      "desc": "Our support team runs a quick check on your account and pinpoints the exact issue."
+      "title": "24-Hour Guarantee",
+      "desc": "Our commitment to ensuring every verified withdrawal is settled within one day, regardless of the amount."
     },
     {
-      "title": "Fixed on the same call",
-      "desc": "Most issues are resolved in a single WhatsApp session — no waiting, no tickets."
+      "title": "Bank Settlement Times",
+      "desc": "Understanding the difference between platform approval and bank-side processing times."
     },
     {
-      "title": "Full transaction trace",
-      "desc": "We show you exactly where a stuck deposit or withdrawal is right now."
+      "title": "KYC Verification",
+      "desc": "How a quick one-time identity check can speed up all your future withdrawal requests."
     },
     {
-      "title": "Free ID recovery",
-      "desc": "Lost your password, phone or email? We recover your Cricbet99 ID at no cost."
+      "title": "Correct Detail Entry",
+      "desc": "A checklist to ensure your UPI ID or bank account details are entered correctly to avoid failed transfers."
     },
     {
-      "title": "Security-first fixes",
-      "desc": "Every unblock or reset goes through KYC re-confirmation to keep your funds safe."
+      "title": "Peak Hour Processing",
+      "desc": "How we manage high withdrawal volumes during major events like the IPL to maintain speed."
     },
     {
-      "title": "24/7 human support",
-      "desc": "Our team is online round the clock, every day of the year — including match days."
+      "title": "Direct Support Access",
+      "desc": "One-click access to a payout specialist on WhatsApp who can trace your transaction in real-time."
     }
   ],
   "faqs": [
     {
-      "q": "Why is my issue happening?",
-      "a": "Most account issues fall into a small set of causes — expired KYC, an in-flight bank settlement, a suspended promo, or a typo in payee details. Our team pinpoints the exact one in one WhatsApp session."
+      "q": "What is the average withdrawal time?",
+      "a": "Most members receive their funds within 30 to 60 minutes. During high-traffic periods, it may take up to 24 hours."
     },
     {
-      "q": "How long does the fix take?",
-      "a": "Around 90% of issues are resolved on the same call within a few minutes. Bank-side delays may take a few hours, but you'll be kept updated."
+      "q": "Are there any withdrawal fees?",
+      "a": "Cricbet99 charges zero fees for withdrawals. You receive 100% of the amount you request."
     },
     {
-      "q": "Will I lose any funds?",
-      "a": "No. Every rupee in your Cricbet99 ID is tracked and reconciled. Even during an issue, your balance is fully protected."
+      "q": "Can I cancel a withdrawal?",
+      "a": "If the withdrawal is still in 'Pending' status, you can message support to cancel it and return the funds to your trading wallet."
     },
     {
-      "q": "How do I reach support quickly?",
-      "a": "Message our official WhatsApp number. Live chat and email are available too, but WhatsApp is fastest."
+      "q": "Why was my withdrawal rejected?",
+      "a": "The most common reasons are incorrect bank details or unmet turnover requirements for specific bonuses. Support will provide the exact reason."
     }
   ],
-  "ctaHeading": "Ready to explore Cricbet99 Withdrawal Delay?",
-  "ctaSub": "Message our team on WhatsApp — we'll set you up in under 2 minutes."
+  "ctaHeading": "Waiting for a payout?",
+  "ctaSub": "Message our withdrawal team on WhatsApp for an immediate status update on your funds."
 }

@@ -4,15 +4,15 @@ import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 FAQ — Answers About IDs, Deposits & Payouts" },
-      { name: "description", content: "Everything you need to know about Cricbet99: how to register, deposit and withdraw, supported games, legality, security and responsible gaming." },
-      { property: "og:title", content: "Cricbet99 FAQ" },
-      { property: "og:description", content: "Common questions about Cricbet99 IDs, deposits, withdrawals and support." },
+      { title: "Official Cricbet99 FAQ | Answers on IDs, Deposits & Payouts" },
+      { name: "description", content: "Everything you need to know about India's most trusted cricket ID provider. Learn about account activation, instant UPI withdrawals, and 2026 security protocols." },
+      { property: "og:title", content: "Cricbet99 Support Hub: Frequently Asked Questions" },
+      { property: "og:description", content: "Expert answers to common questions about Cricbet99 IDs, deposit methods, and India's fastest payout system. Start trading safely today." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/faq" },
+      { property: "og:url", content: "https://cricbet99.win/faq" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/faq" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/faq" }],
     scripts: [
       {
         type: "application/ld+json",

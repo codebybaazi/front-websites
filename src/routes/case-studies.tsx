@@ -5,14 +5,14 @@ import content from "@/data/pages/case-studies.json";
 export const Route = createFileRoute("/case-studies")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 Case Studies — Cricbet99" },
-      { name: "description", content: "Cricbet99 Case Studies on Cricbet99: real member case studies — strategies, budgets and outcomes. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:title", content: "Cricbet99 Case Studies — Cricbet99" },
-      { property: "og:description", content: "Cricbet99 Case Studies on Cricbet99: real member case studies — strategies, budgets and outcomes. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
+      { title: "Cricbet99 Case Studies | Real Member Success Stories" },
+      { name: "description", content: "Discover real-world trading results from the Cricbet99 community. Learn the disciplined strategies and budget management habits of successful Indian bettors." },
+      { property: "og:title", content: "Cricbet99 Case Studies: How Our Members Trade & Win" },
+      { property: "og:description", content: "Detailed breakdowns of IPL 2026 strategies, small budget growth stories, and high-velocity toss market profits from real Cricbet99 IDs." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/case-studies" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/case-studies" }],
     scripts: content.faqs && content.faqs.length ? [{
       type: "application/ld+json",
       children: JSON.stringify(buildFaqJsonLd(content.faqs)),

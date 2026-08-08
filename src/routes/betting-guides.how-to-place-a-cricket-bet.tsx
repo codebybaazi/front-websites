@@ -5,14 +5,14 @@ import content from "@/data/pages/betting-guides__how-to-place-a-cricket-bet.jso
 export const Route = createFileRoute("/betting-guides/how-to-place-a-cricket-bet")({
   head: () => ({
     meta: [
-      { title: "How to Place a Cricket Bet — Cricbet99" },
-      { name: "description", content: "How to Place a Cricket Bet on Cricbet99: a beginner-friendly guide to placing your first cricket bet. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:title", content: "How to Place a Cricket Bet — Cricbet99" },
-      { property: "og:description", content: "How to Place a Cricket Bet on Cricbet99: a beginner-friendly guide to placing your first cricket bet. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
+      { title: "How to Place a Cricket Bet on Cricbet99 | 2026 Tutorial" },
+      { name: "description", content: "A beginner's guide to placing your first cricket bet on Cricbet99. Learn how to read odds, use the bet slip, and trade on IPL 2026 matches with a verified ID." },
+      { property: "og:title", content: "Cricket Betting 101: How to Place Your First Bet on Cricbet99" },
+      { property: "og:description", content: "Step-by-step tutorial on navigating the Cricbet99 cricket exchange, understanding back/lay odds, and executing your first trade safely." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/betting-guides/how-to-place-a-cricket-bet" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/betting-guides/how-to-place-a-cricket-bet" }],
     scripts: content.faqs && content.faqs.length ? [{
       type: "application/ld+json",
       children: JSON.stringify(buildFaqJsonLd(content.faqs)),
