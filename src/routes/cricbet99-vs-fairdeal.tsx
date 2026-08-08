@@ -112,6 +112,7 @@ function Compare() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Comparison Guide"
         title={<>Cricbet99 vs Fairdeal — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>The Definitive 2026 Verdict</span></>}
         subtitle="Compare Cricbet99 vs Fairdeal on payout speed, IPL odds, and reliability. Find out why modern Indian bettors are leaving legacy IDs behind."

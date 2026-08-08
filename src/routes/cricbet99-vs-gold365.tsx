@@ -112,6 +112,7 @@ function Compare() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Comparison Guide"
         title={<>Cricbet99 vs Gold365 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>The Definitive 2026 Verdict</span></>}
         subtitle="Compare Cricbet99 vs Gold365 on the metrics that matter most: payout speed, IPL odds, and support. See why serious Indian bettors prefer Cricbet99 for the 2026 season."

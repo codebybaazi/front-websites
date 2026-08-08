@@ -117,6 +117,7 @@ function Compare() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Comparison"
         title={<>Cricbet99 vs Lotus 365 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>which betting ID actually wins?</span></>}
         subtitle="A no-fluff 2026 breakdown of Cricbet99 vs Lotus 365 on IPL odds, UPI payout speed, casino depth, bonuses and support — so you know exactly which cricket ID fits your play."

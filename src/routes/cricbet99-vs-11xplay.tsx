@@ -117,6 +117,7 @@ function Compare() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Comparison"
         title={<>Cricbet99 vs 11xPlay — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>compared honestly.</span></>}
         subtitle="A no-fluff 2026 breakdown of Cricbet99 vs 11xPlay on cricket market depth, UPI payout speed, casino floor, bonuses and support — so you pick the right cricket ID for your play."

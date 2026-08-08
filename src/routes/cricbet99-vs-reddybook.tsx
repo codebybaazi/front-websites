@@ -113,6 +113,7 @@ function Compare() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Comparison Guide"
         title={<>Cricbet99 vs Reddy Book — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>The Definitive 2026 Verdict</span></>}
         subtitle="We break down Cricbet99 vs Reddy Book on the metrics that matter: payout speed, IPL odds, and reliability. Find out why serious Indian bettors are switching IDs this year."
