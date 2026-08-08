@@ -4,13 +4,15 @@ import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 export const Route = createFileRoute("/how-it-works")({
   head: () => ({
     meta: [
-      { title: "How Cricbet99 Works — Get Your ID on WhatsApp" },
-      { name: "description", content: "Set up your Cricbet99 ID in six easy WhatsApp steps: contact support, verify OTP, deposit via UPI, receive credentials and start betting instantly." },
-      { property: "og:title", content: "How Cricbet99 Works" },
-      { property: "og:description", content: "A support-assisted, WhatsApp-first way to get your betting ID in minutes." },
+      { title: "How to Start on Cricbet99 | 5-Minute ID Activation" },
+      { name: "description", content: "Learn how to get your official Cricbet99 ID in minutes. Our step-by-step guide covers WhatsApp activation, OTP verification, and instant UPI deposits." },
+      { property: "og:title", content: "Start Your Cricbet99 Journey | Step-by-Step Guide" },
+      { property: "og:description", content: "Joining Cricbet99 is simple and secure. Follow our guided process to activate your premium sports ID on WhatsApp today." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://cricbet99.win/how-it-works" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/how-it-works" }],
   }),
   component: HowItWorks,
 });
@@ -36,8 +38,8 @@ function HowItWorks() {
       <PageHero
         wide
         eyebrow="How It Works"
-        title={<>From WhatsApp message to first bet in <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>under 5 minutes.</span></>}
-        subtitle="Cricbet99 uses a support-assisted access model. Instead of a self-service signup, a real agent guides you through every step — from OTP verification to your first deposit — so getting started is simple, safe and human."
+        title={<>Professional Onboarding in <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>5 Minutes.</span></>}
+        subtitle="Cricbet99 streamlines your entry into professional sports trading. Through our human-led WhatsApp activation process, we ensure your ID is secure, verified, and ready for action without complex forms or delays."
       />
 
       <section className="mx-auto max-w-7xl px-6 py-12">
