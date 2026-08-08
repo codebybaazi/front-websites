@@ -5,14 +5,14 @@ import content from "@/data/pages/become-agent.json";
 export const Route = createFileRoute("/become-agent")({
   head: () => ({
     meta: [
-      { title: "Become a Cricbet99 Agent — Cricbet99" },
-      { name: "description", content: "Become a Cricbet99 Agent on Cricbet99: join our agent program and earn recurring commission. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:title", content: "Become a Cricbet99 Agent — Cricbet99" },
-      { property: "og:description", content: "Become a Cricbet99 Agent on Cricbet99: join our agent program and earn recurring commission. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
+      { title: "Become a Cricbet99 Agent | Earn High Commissions" },
+      { name: "description", content: "Join the professional Cricbet99 agent program. Manage your own network and earn industry-leading recurring commissions with our secure partnership model." },
+      { property: "og:title", content: "Partner with Cricbet99 | Official Agent Program" },
+      { property: "og:description", content: "Unlock new revenue streams as an official Cricbet99 agent. Full support, real-time reporting, and instant commission settlements." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/become-agent" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/become-agent" }],
     scripts: content.faqs && content.faqs.length ? [{
       type: "application/ld+json",
       children: JSON.stringify(buildFaqJsonLd(content.faqs)),

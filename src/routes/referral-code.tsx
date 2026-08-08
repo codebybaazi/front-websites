@@ -5,14 +5,14 @@ import content from "@/data/pages/referral-code.json";
 export const Route = createFileRoute("/referral-code")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 Referral Code — Cricbet99" },
-      { name: "description", content: "Cricbet99 Referral Code on Cricbet99: earn commission for every friend you refer to Cricbet99. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:title", content: "Cricbet99 Referral Code — Cricbet99" },
-      { property: "og:description", content: "Cricbet99 Referral Code on Cricbet99: earn commission for every friend you refer to Cricbet99. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
+      { title: "Cricbet99 Referral Program | Invite Friends & Earn" },
+      { name: "description", content: "Share your Cricbet99 referral code and earn lifetime commissions. Invite your friends to India's most trusted sports betting exchange today." },
+      { property: "og:title", content: "Refer & Earn with Cricbet99 | Lifetime Rewards" },
+      { property: "og:description", content: "Earn rewards for every friend who joins the Cricbet99 community. Transparent tracking and instant payouts on all referral earnings." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/referral-code" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/referral-code" }],
     scripts: content.faqs && content.faqs.length ? [{
       type: "application/ld+json",
       children: JSON.stringify(buildFaqJsonLd(content.faqs)),
