@@ -137,7 +137,7 @@ export const Route = createFileRoute("/")({
         content: "One verified ID for cricket, football, tennis, kabaddi and live casino. Instant UPI payouts, sharpest odds, 24/7 WhatsApp support.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: origin || "/" },
+      { property: "og:url", content: "https://cricbet99.co.in/" },
       { property: "og:image", content: image },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
