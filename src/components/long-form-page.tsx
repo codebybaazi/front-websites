@@ -1,6 +1,7 @@
 import { SiteLayout, PageHero, CTABand, WA } from "./site-layout";
 import { CheckCircle2, MessageCircle, ChevronRight } from "lucide-react";
 import { AiOverview } from "./ai-overview";
+import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
 export interface PageContent {
@@ -84,6 +85,17 @@ export function LongFormPage({ content, extra }: { content: PageContent; extra?:
       ))}
 
       {extra}
+
+      <section className="mx-auto max-w-4xl px-4 py-8 border-t border-primary/10 sm:px-6">
+        <h2 className="text-xl font-black md:text-2xl">Quick Links</h2>
+        <div className="mt-4 flex flex-wrap gap-x-6 gap-y-3">
+          <Link to="/" className="text-sm font-bold text-primary hover:underline">Cricbet99 Home</Link>
+          <Link to="/cricket" className="text-sm font-bold text-primary hover:underline">Cricket Betting</Link>
+          <Link to="/casino" className="text-sm font-bold text-primary hover:underline">Live Casino</Link>
+          <Link to="/cricbet99-app" className="text-sm font-bold text-primary hover:underline">Download App</Link>
+          <Link to="/how-it-works" className="text-sm font-bold text-primary hover:underline">How It Works</Link>
+        </div>
+      </section>
 
       {faqs && faqs.length > 0 && (
         <section className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-12">

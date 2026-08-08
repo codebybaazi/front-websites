@@ -265,7 +265,7 @@ export function LiveDashboard() {
           </div>
           <div className="space-y-4">
             <p className="text-foreground/70 md:text-lg">
-              Real-time exchange odds across cricket, tennis, soccer and more, refreshed live every 30 seconds.
+              Real-time exchange odds across <Link to="/cricket" className="font-bold text-primary hover:underline">cricket</Link>, <Link to="/tennis" className="font-bold text-primary hover:underline">tennis</Link>, <Link to="/football" className="font-bold text-primary hover:underline">soccer</Link> and more, refreshed live every 30 seconds.
             </p>
             <div className="flex flex-wrap gap-3">
               <div
