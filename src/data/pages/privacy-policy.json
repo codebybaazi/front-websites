@@ -1,0 +1,56 @@
+{
+  "eyebrow": "Privacy",
+  "title": "Cricbet99 Privacy Policy",
+  "subtitle": "How we collect, use, and protect your information to ensure a safe and secure betting environment.",
+  "intro": [
+    "At Cricbet99, your privacy is our top priority. We follow strict data-handling practices to ensure that your personal and financial details are always protected. This policy outlines how we handle the information you provide when using our official platform and WhatsApp support channels.",
+    "We only collect the minimum amount of data required to provide you with a secure gaming experience, verify your identity, and process your financial transactions reliably.",
+    "By using Cricbet99, you consent to the data practices described in this document. We review our privacy protocols regularly to stay aligned with global security standards and local Indian regulations."
+  ],
+  "features": [
+    {
+      "title": "Zero Data Sales",
+      "desc": "We never sell or share your personal information with third-party advertisers or marketing firms."
+    },
+    {
+      "title": "Bank-Grade Encryption",
+      "desc": "All communication and transaction data is protected by 256-bit SSL encryption protocols."
+    },
+    {
+      "title": "Minimal Data Collection",
+      "desc": "We only request information essential for account security and legal compliance."
+    },
+    {
+      "title": "Verified Access Only",
+      "desc": "Your data is only accessible to authorized support personnel through secure internal systems."
+    },
+    {
+      "title": "Transparent Processing",
+      "desc": "You can request a full summary of the data we hold on your account at any time."
+    },
+    {
+      "title": "OTP-Secured Logins",
+      "desc": "Every critical account change is verified via mobile OTP to prevent unauthorized access."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What information do you collect?",
+      "a": "We collect your name, mobile number for OTP verification, transaction references for deposits/withdrawals, and support communication logs."
+    },
+    {
+      "q": "How is my payment data stored?",
+      "a": "Payment details are processed through secure, regulated banking rails and are never stored in plain text on our servers."
+    },
+    {
+      "q": "Can I delete my data?",
+      "a": "Yes. You can request account closure and data deletion by contacting our official WhatsApp support team."
+    },
+    {
+      "q": "Do you use cookies?",
+      "a": "We use essential cookies to maintain your login session and improve platform performance. We do not use tracking cookies for ads."
+    }
+  ],
+  "ctaHeading": "Questions about your privacy?",
+  "ctaSub": "Our support team is available 24/7 on WhatsApp to clarify any concerns you have regarding data security."
+}

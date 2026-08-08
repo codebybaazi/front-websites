@@ -1,0 +1,56 @@
+{
+  "eyebrow": "Gaming",
+  "title": "Responsible Gaming",
+  "subtitle": "Tools and resources to help you stay in control and enjoy betting as a safe form of entertainment.",
+  "intro": [
+    "At Cricbet99, we want every player to have a positive experience. Gaming should be fun, social, and strictly managed as a form of entertainment—never as a way to make money.",
+    "We provide all our members with the tools they need to manage their participation, including deposit limits, session timers, and easy self-exclusion options.",
+    "If betting ever stops being fun or starts affecting your daily life, we are here to support you. Our human-led support team is trained to assist players who need help regaining control."
+  ],
+  "features": [
+    {
+      "title": "Custom Deposit Limits",
+      "desc": "Set daily, weekly, or monthly caps on your deposits to ensure you only spend what you can afford."
+    },
+    {
+      "title": "Self-Exclusion Tools",
+      "desc": "Request a temporary or permanent break from the platform at any time via WhatsApp support."
+    },
+    {
+      "title": "Session Time Alerts",
+      "desc": "Receive notifications to track how long you've been active, helping you maintain a healthy balance."
+    },
+    {
+      "title": "Zero Borrowing Policy",
+      "desc": "We actively discourage betting with borrowed funds and offer bankroll management advice."
+    },
+    {
+      "title": "Age Verification",
+      "desc": "Strict 18+ protocols ensure that our platform remains a safe environment for adults only."
+    },
+    {
+      "title": "Professional Resources",
+      "desc": "Direct links to international gaming support organizations for confidential, expert assistance."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How do I set a deposit limit?",
+      "a": "Simply message your account manager on WhatsApp. They will apply the limit to your ID instantly."
+    },
+    {
+      "q": "What is self-exclusion?",
+      "a": "It's a feature that allows you to block your own access to the platform for a set period to take a healthy break."
+    },
+    {
+      "q": "Is betting an investment?",
+      "a": "No. Betting is a form of paid entertainment with inherent risks. Never treat it as a source of reliable income."
+    },
+    {
+      "q": "How can I help a friend?",
+      "a": "If you are concerned about a friend's betting habits, encourage them to use our self-exclusion tools or contact support."
+    }
+  ],
+  "ctaHeading": "Need a break?",
+  "ctaSub": "If you need help managing your play, message us on WhatsApp. We are here to help you play safely."
+}
