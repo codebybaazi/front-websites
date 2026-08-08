@@ -11,6 +11,8 @@ export interface FootballFixture {
   status: "live" | "upcoming";
   stage: string;
   category: "Group Stage" | "Round of 32" | "Round of 16" | "Quarter-finals" | "Semi-finals" | "Final";
+  marketHighlights: string[];
+  keywords: string[];
 }
 
 export const footballFixtures: FootballFixture[] = [
@@ -27,7 +29,9 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-06-11T18:00:00",
     status: "upcoming",
     stage: "Group A",
-    category: "Group Stage"
+    category: "Group Stage",
+    marketHighlights: ["Match odds", "Opening Goal"],
+    keywords: ["mexico vs a2 odds", "world cup opener betting"]
   },
   {
     slug: "wc2026-m2",
@@ -41,7 +45,9 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-06-11T20:00:00",
     status: "upcoming",
     stage: "Group A",
-    category: "Group Stage"
+    category: "Group Stage",
+    marketHighlights: ["Match odds", "Total Goals"],
+    keywords: ["a3 vs a4 betting"]
   },
   {
     slug: "wc2026-m3",
@@ -55,7 +61,9 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-06-12T17:00:00",
     status: "upcoming",
     stage: "Group B",
-    category: "Group Stage"
+    category: "Group Stage",
+    marketHighlights: ["Match odds", "Home victory"],
+    keywords: ["canada vs b2 odds"]
   },
   {
     slug: "wc2026-m4",
@@ -69,7 +77,9 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-06-12T19:00:00",
     status: "upcoming",
     stage: "Group D",
-    category: "Group Stage"
+    category: "Group Stage",
+    marketHighlights: ["Match odds", "Both teams to score"],
+    keywords: ["usa vs d2 betting"]
   },
   {
     slug: "wc2026-m5",
@@ -83,7 +93,9 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-06-13T15:00:00",
     status: "upcoming",
     stage: "Group B",
-    category: "Group Stage"
+    category: "Group Stage",
+    marketHighlights: ["Match odds"],
+    keywords: ["b3 vs b4 world cup"]
   },
   {
     slug: "wc2026-m6",
@@ -97,7 +109,9 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-06-13T18:00:00",
     status: "upcoming",
     stage: "Group C",
-    category: "Group Stage"
+    category: "Group Stage",
+    marketHighlights: ["Match odds", "Over 2.5 goals"],
+    keywords: ["c1 vs c2 betting"]
   },
   {
     slug: "wc2026-m7",
@@ -111,7 +125,9 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-06-13T21:00:00",
     status: "upcoming",
     stage: "Group C",
-    category: "Group Stage"
+    category: "Group Stage",
+    marketHighlights: ["Match odds"],
+    keywords: ["c3 vs c4 odds"]
   },
   {
     slug: "wc2026-m8",
@@ -125,7 +141,9 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-06-14T15:00:00",
     status: "upcoming",
     stage: "Group D",
-    category: "Group Stage"
+    category: "Group Stage",
+    marketHighlights: ["Match odds"],
+    keywords: ["d1 vs d3 betting"]
   },
   {
     slug: "wc2026-m9",
@@ -139,7 +157,9 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-06-14T18:00:00",
     status: "upcoming",
     stage: "Group E",
-    category: "Group Stage"
+    category: "Group Stage",
+    marketHighlights: ["Match odds"],
+    keywords: ["e1 vs e2 world cup"]
   },
   {
     slug: "wc2026-m10",
@@ -153,7 +173,9 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-06-14T21:00:00",
     status: "upcoming",
     stage: "Group E",
-    category: "Group Stage"
+    category: "Group Stage",
+    marketHighlights: ["Match odds"],
+    keywords: ["e3 vs e4 odds"]
   },
 
   // --- QUARTER FINALS ---
@@ -169,7 +191,9 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-07-09T18:00:00",
     status: "upcoming",
     stage: "Quarter-final 1",
-    category: "Quarter-finals"
+    category: "Quarter-finals",
+    marketHighlights: ["To Qualify", "Extra Time probability"],
+    keywords: ["qf1 betting", "world cup quarter final odds"]
   },
   {
     slug: "wc2026-france-vs-morocco",
@@ -183,7 +207,9 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-07-09T21:00:00",
     status: "upcoming",
     stage: "Quarter-final 2",
-    category: "Quarter-finals"
+    category: "Quarter-finals",
+    marketHighlights: ["Match odds", "France handicap"],
+    keywords: ["france vs morocco odds", "morocco betting prediction"]
   },
   {
     slug: "wc2026-qf3",
@@ -197,7 +223,9 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-07-10T18:00:00",
     status: "upcoming",
     stage: "Quarter-final 3",
-    category: "Quarter-finals"
+    category: "Quarter-finals",
+    marketHighlights: ["To Qualify"],
+    keywords: ["qf3 betting odds"]
   },
   {
     slug: "wc2026-qf4",
@@ -211,7 +239,9 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-07-10T21:00:00",
     status: "upcoming",
     stage: "Quarter-final 4",
-    category: "Quarter-finals"
+    category: "Quarter-finals",
+    marketHighlights: ["To Qualify"],
+    keywords: ["qf4 betting odds"]
   },
 
   // --- SEMI FINALS ---
@@ -227,7 +257,9 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-07-14T20:00:00",
     status: "upcoming",
     stage: "Semi-final 1",
-    category: "Semi-finals"
+    category: "Semi-finals",
+    marketHighlights: ["To reach final", "Penalties market"],
+    keywords: ["semi final 1 odds", "world cup semi final betting"]
   },
   {
     slug: "wc2026-semi-2",
@@ -241,7 +273,9 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-07-15T20:00:00",
     status: "upcoming",
     stage: "Semi-final 2",
-    category: "Semi-finals"
+    category: "Semi-finals",
+    marketHighlights: ["To reach final"],
+    keywords: ["semi final 2 betting"]
   },
 
   // --- THIRD PLACE ---
@@ -257,7 +291,9 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-07-18T16:00:00",
     status: "upcoming",
     stage: "Third Place Play-off",
-    category: "Final"
+    category: "Final",
+    marketHighlights: ["Match odds", "Total cards"],
+    keywords: ["third place match odds"]
   },
 
   // --- FINAL ---
@@ -273,6 +309,8 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-07-19T15:00:00",
     status: "upcoming",
     stage: "Final",
-    category: "Final"
+    category: "Final",
+    marketHighlights: ["Champion", "Golden Boot", "Man of the match"],
+    keywords: ["world cup final 2026 betting", "final match odds"]
   }
 ];
