@@ -7,9 +7,10 @@ interface AiOverviewProps {
 
 export function AiOverview({ summary, highlights }: AiOverviewProps) {
   return (
-    <section className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-12">
-      <div className="relative overflow-hidden rounded-3xl border border-primary/30 bg-[oklch(0.12_0.02_260)] p-1 shadow-2xl">
-        <div className="rounded-[calc(1.5rem-4.5px)] bg-gradient-to-b from-[oklch(0.15_0.03_260)] to-[oklch(0.1_0.02_260)] p-6 sm:p-8">
+    <section className="w-full py-8 sm:py-12">
+      <div className="relative overflow-hidden border-y border-primary/30 bg-[oklch(0.12_0.02_260)] p-1 shadow-2xl">
+        <div className="bg-gradient-to-b from-[oklch(0.15_0.03_260)] to-[oklch(0.1_0.02_260)] p-6 sm:p-12">
+          <div className="mx-auto max-w-7xl">
           {/* Header */}
           <div className="flex items-center gap-3">
             <div className="grid h-10 w-10 place-items-center rounded-xl bg-accent/20 ring-1 ring-accent/40">
