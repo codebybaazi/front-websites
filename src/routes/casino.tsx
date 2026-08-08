@@ -24,6 +24,16 @@ export const Route = createFileRoute("/casino")({
         { name: "twitter:card", content: "summary_large_image" },
       ],
       links: [{ rel: "canonical", href: canonical }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(buildBreadcrumbJsonLd("/casino", "Live Casino")),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(buildFaqJsonLd(casinoFaqs)),
+        },
+      ],
     };
   },
   component: Casino,
