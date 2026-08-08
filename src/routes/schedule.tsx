@@ -169,7 +169,15 @@ function Schedule() {
                             .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
                             .map((match) => (
                               <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors">
-                                <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'dd MMM yyyy')}</td>
+                                <td className="p-4 text-sm text-foreground/60 whitespace-nowrap">
+                                  {match.endDate ? (
+                                    <>
+                                      {format(new Date(match.startDate), 'd')} – {format(new Date(match.endDate), 'd MMM yyyy')}
+                                    </>
+                                  ) : (
+                                    format(new Date(match.startDate), 'dd MMM yyyy')
+                                  )}
+                                </td>
                                 <td className="p-4">
                                   <div className="text-sm font-bold text-foreground">{match.tournament}</div>
                                   <div className="text-[10px] uppercase text-primary font-bold opacity-70 tracking-widest">{match.category}</div>
