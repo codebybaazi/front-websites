@@ -40,11 +40,32 @@ export const Route = createFileRoute("/blog/$slug")({
             headline: post.title,
             description: post.excerpt,
             datePublished: post.date,
-            author: { "@type": "Organization", name: "Cricbet99" },
+            dateModified: post.date,
+            author: { "@type": "Organization", name: "Cricbet99", url: "https://cricbet99.com" },
+            publisher: {
+              "@type": "Organization",
+              name: "Cricbet99",
+              logo: { "@type": "ImageObject", url: "https://cricbet99.com/favicon.png" }
+            },
             ...(post.hero ? { image: post.hero } : {}),
-            mainEntityOfPage: `/blog/${params.slug}`,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://cricbet99.com/blog/${params.slug}`
+            },
           }),
         },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cricbet99.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://cricbet99.com/blog" },
+              { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://cricbet99.com/blog/${params.slug}` }
+            ]
+          }),
+        }
       ],
     };
   },
