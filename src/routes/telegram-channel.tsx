@@ -5,14 +5,14 @@ import content from "@/data/pages/telegram-channel.json";
 export const Route = createFileRoute("/telegram-channel")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 Telegram Channel — Cricbet99" },
-      { name: "description", content: "Cricbet99 Telegram Channel on Cricbet99: join our Telegram for tips, odds and match previews. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:title", content: "Cricbet99 Telegram Channel — Cricbet99" },
-      { property: "og:description", content: "Cricbet99 Telegram Channel on Cricbet99: join our Telegram for tips, odds and match previews. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
+      { title: "Official Cricbet99 Telegram | Live Tips & Odds" },
+      { name: "description", content: "Join the official Cricbet99 Telegram channel for real-time match previews, expert betting tips, and exclusive odds updates for IPL 2026." },
+      { property: "og:title", content: "Cricbet99 Telegram Hub | Expert Insights" },
+      { property: "og:description", content: "Get the latest insights delivered directly to your phone. Join our growing Telegram community for professional betting analysis." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/telegram-channel" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/telegram-channel" }],
     scripts: content.faqs && content.faqs.length ? [{
       type: "application/ld+json",
       children: JSON.stringify(buildFaqJsonLd(content.faqs)),

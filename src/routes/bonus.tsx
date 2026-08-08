@@ -5,14 +5,14 @@ import content from "@/data/pages/bonus.json";
 export const Route = createFileRoute("/bonus")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 Bonuses & Promotions — Cricbet99" },
-      { name: "description", content: "Cricbet99 Bonuses & Promotions on Cricbet99: exclusive welcome, reload and loyalty bonuses. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:title", content: "Cricbet99 Bonuses & Promotions — Cricbet99" },
-      { property: "og:description", content: "Cricbet99 Bonuses & Promotions on Cricbet99: exclusive welcome, reload and loyalty bonuses. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
+      { title: "Cricbet99 Bonuses & Promotions 2026 | New User Offers" },
+      { name: "description", content: "Explore the latest Cricbet99 bonuses and promotions. Welcome offers, reload bonuses, and VIP loyalty rewards for Indian cricket and casino players." },
+      { property: "og:title", content: "Cricbet99 Promotions | Boost Your Betting Bankroll" },
+      { property: "og:description", content: "Get more value with every deposit. From welcome bonuses to weekly cashbacks, discover how Cricbet99 rewards its community." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/bonus" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/bonus" }],
     scripts: content.faqs && content.faqs.length ? [{
       type: "application/ld+json",
       children: JSON.stringify(buildFaqJsonLd(content.faqs)),
