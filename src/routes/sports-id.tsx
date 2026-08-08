@@ -10,10 +10,10 @@ export const Route = createFileRoute("/sports-id")({
       { property: "og:title", content: "Cricbet99 Sports ID | The Only ID You Need" },
       { property: "og:description", content: "Experience seamless multi-sport betting with a single verified Cricbet99 ID. Fast deposits, instant withdrawals, and 24/7 support." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://cricbet99.win/sports-id" },
+      { property: "og:url", content: "https://cricbet99.co.in/sports-id" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://cricbet99.win/sports-id" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/sports-id" }],
   }),
   component: SportsID,
 });

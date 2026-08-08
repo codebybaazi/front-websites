@@ -9,10 +9,10 @@ export const Route = createFileRoute("/tennis")({
       { property: "og:title", content: "Tennis Betting Excellence on Cricbet99" },
       { property: "og:description", content: "Bet on every set, game, and match across the global tennis circuit. High-limit markets and professional support." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://cricbet99.win/tennis" },
+      { property: "og:url", content: "https://cricbet99.co.in/tennis" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://cricbet99.win/tennis" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/tennis" }],
   }),
   component: Tennis,
 });

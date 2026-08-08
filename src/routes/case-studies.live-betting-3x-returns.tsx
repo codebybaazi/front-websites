@@ -12,7 +12,7 @@ export const Route = createFileRoute("/case-studies/live-betting-3x-returns")({
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://cricbet99.win/case-studies/live-betting-3x-returns" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/case-studies/live-betting-3x-returns" }],
     scripts: content.faqs && content.faqs.length ? [{
       type: "application/ld+json",
       children: JSON.stringify(buildFaqJsonLd(content.faqs)),

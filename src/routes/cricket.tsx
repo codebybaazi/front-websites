@@ -11,10 +11,10 @@ export const Route = createFileRoute("/cricket")({
       { property: "og:title", content: "Official Cricket Betting on Cricbet99 | Live IPL 2026" },
       { property: "og:description", content: "Bet on every ball of IPL 2026 and international tours with India's most trusted exchange. Instant withdrawals and 24/7 support." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://cricbet99.win/cricket" },
+      { property: "og:url", content: "https://cricbet99.co.in/cricket" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://cricbet99.win/cricket" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/cricket" }],
   }),
   component: Cricket,
 });

@@ -12,7 +12,7 @@ export const Route = createFileRoute("/betting-guides/how-to-bet-on-session-bett
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://cricbet99.win/betting-guides/how-to-bet-on-session-betting" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/betting-guides/how-to-bet-on-session-betting" }],
     scripts: content.faqs && content.faqs.length ? [{
       type: "application/ld+json",
       children: JSON.stringify(buildFaqJsonLd(content.faqs)),

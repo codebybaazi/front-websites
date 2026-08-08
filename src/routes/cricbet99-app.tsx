@@ -9,10 +9,10 @@ export const Route = createFileRoute("/cricbet99-app")({
       { property: "og:title", content: "Official Cricbet99 App | Premium Android APK" },
       { property: "og:description", content: "Elevate your game with the Cricbet99 mobile app. Fast, secure, and built for professional Indian traders." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://cricbet99.win/cricbet99-app" },
+      { property: "og:url", content: "https://cricbet99.co.in/cricbet99-app" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://cricbet99.win/cricbet99-app" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/cricbet99-app" }],
   }),
   component: AppPage,
 });
