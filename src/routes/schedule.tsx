@@ -97,7 +97,42 @@ function Schedule() {
               </div>
               
               <div className="space-y-4">
-                {filteredEvents.length > 0 ? (
+                {activeTab === "Football" ? (
+                  <div className="overflow-x-auto rounded-2xl border border-primary/10 bg-background/40">
+                    <table className="w-full text-left border-collapse">
+                      <thead>
+                        <tr className="border-b border-primary/10 bg-primary/5">
+                          <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Stage</th>
+                          <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Match</th>
+                          <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Date & Kickoff</th>
+                          <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Venue</th>
+                          <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Details</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {matches
+                          .filter(m => m.sport === "Football")
+                          .map((match) => (
+                            <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors">
+                              <td className="p-4 text-sm font-medium text-foreground/80">{match.tournament.split(' ').pop() === '2026' ? 'Group Stage' : 'League'}</td>
+                              <td className="p-4 font-bold text-foreground">{match.homeTeam} vs {match.awayTeam}</td>
+                              <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'MMM dd, HH:mm')}</td>
+                              <td className="p-4 text-sm text-foreground/60">{match.venue}, {match.city}</td>
+                              <td className="p-4">
+                                <Link 
+                                  to="/matches/$slug"
+                                  params={{ slug: match.slug }}
+                                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                >
+                                  View <ArrowRight className="w-3 h-3" />
+                                </Link>
+                              </td>
+                            </tr>
+                          ))}
+                      </tbody>
+                    </table>
+                  </div>
+                ) : (
                   filteredEvents.map((event, i) => (
                     <div 
                       key={i}
@@ -129,7 +164,8 @@ function Schedule() {
                       </div>
                     </div>
                   ))
-                ) : (
+                )}
+                {filteredEvents.length === 0 && activeTab !== "Football" && (
                   <div className="text-center py-12 border border-dashed border-primary/20 rounded-2xl bg-primary/5">
                     <p className="text-foreground/60">No major {activeTab} events listed for this selection yet.</p>
                   </div>
