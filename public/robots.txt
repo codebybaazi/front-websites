@@ -1,2 +1,8 @@
 User-agent: *
 Allow: /
+
+# Sitemap Location
+Sitemap: https://cricbet99.co.in/sitemap.xml
+
+# Crawl-delay for aggressive bots
+Crawl-delay: 10

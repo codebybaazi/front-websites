@@ -22,7 +22,6 @@ export const Route = createFileRoute("/sitemap.xml")({
           "/blog", "/how-it-works", "/faq", "/contact", "/responsible-gaming",
           "/privacy-policy", "/terms", "/disclaimer", "/all-links", "/cricbet99-app",
           "/cricbet99-vs-lotus365", "/cricbet99-vs-skyexchange247", "/login",
-          // Generated content pages
           "/bonus", "/cricbet99-vs-11xplay", "/cricbet99-vs-laser247", "/cricbet99-vs-gold365",
           "/basketball", "/cricbet99-vs-reddybook", "/login-issues", "/deposit-issues",
           "/account-blocked", "/bonus-issues", "/withdrawal-delay", "/rules", "/refund-policy",
@@ -46,12 +45,16 @@ export const Route = createFileRoute("/sitemap.xml")({
           "/trusted-betting-agent", "/cricbet99-vs-mahavir-book", "/cricbet99-vs-diamond-exchange",
         ];
         const entries: SitemapEntry[] = [
-          ...staticPaths.map((p) => ({ path: p, changefreq: "monthly" as const, priority: p === "/" ? "1.0" : "0.6" })),
-          ...blogPosts.map((p) => ({ path: `/blog/${p.slug}`, changefreq: "monthly" as const, priority: "0.5" })),
+          ...staticPaths.map((p) => ({
+            path: p,
+            changefreq: (p === "/" ? "daily" : "weekly") as SitemapEntry["changefreq"],
+            priority: p === "/" ? "1.0" : (p.split("/").length > 2 ? "0.6" : "0.8")
+          })),
+          ...blogPosts.map((p) => ({ path: `/blog/${p.slug}`, changefreq: "weekly" as const, priority: "0.7" })),
           ...matches.map((m) => ({
             path: `/matches/${m.slug}`,
-            changefreq: (m.status === "live" ? "hourly" : "daily") as SitemapEntry["changefreq"],
-            priority: "0.8",
+            changefreq: (m.status === "live" ? "always" : "hourly") as SitemapEntry["changefreq"],
+            priority: "0.9",
           })),
         ];
 
