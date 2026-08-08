@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
+import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
 
 export const Route = createFileRoute("/predictions")({
   head: () => ({
@@ -13,6 +14,12 @@ export const Route = createFileRoute("/predictions")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/predictions" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/predictions", "Match Predictions 2026 — Expert Cricket & Football Tips")),
+      },
+    ],
   }),
   component: Predictions,
 });

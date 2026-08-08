@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { matches, matchesBySport, type MatchFixture } from "@/data/matches";
 import { ChevronRight, Radio } from "lucide-react";
+import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
 
 export const Route = createFileRoute("/matches")({
   head: () => ({
@@ -16,6 +17,12 @@ export const Route = createFileRoute("/matches")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/matches" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/matches", "All Matches")),
+      },
+    ],
   }),
   component: MatchesPage,
 });

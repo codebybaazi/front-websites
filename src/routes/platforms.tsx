@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
+import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
 import { Smartphone, ShieldCheck, Zap, Laptop, Monitor, Globe } from "lucide-react";
 import { AiOverview } from "@/components/ai-overview";
 import { getRequestOrigin } from "@/lib/origin.functions";
@@ -21,6 +22,12 @@ export const Route = createFileRoute("/platforms")({
         { property: "og:url", content: canonical },
       ],
       links: [{ rel: "canonical", href: canonical }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/platforms`;", "Cricbet99 Platforms — Official Betting App & Web Exchange")),
+      },
+    ],
     };
   },
   component: Platforms,

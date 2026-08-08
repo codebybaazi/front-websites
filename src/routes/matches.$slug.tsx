@@ -56,6 +56,18 @@ export const Route = createFileRoute("/matches/$slug")({
             superEvent: { "@type": "SportsEvent", name: m.tournament },
           }),
         },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cricbet99.co.in/" },
+              { "@type": "ListItem", "position": 2, "name": "Matches", "item": "https://cricbet99.co.in/matches" },
+              { "@type": "ListItem", "position": 3, "name": `${m.homeTeam} vs ${m.awayTeam}`, "item": `https://cricbet99.co.in/matches/${m.slug}` }
+            ]
+          }),
+        },
       ],
     };
   },
