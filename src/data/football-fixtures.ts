@@ -10,29 +10,13 @@ export interface FootballFixture {
   startDate: string;
   status: "live" | "upcoming";
   stage: string;
-  marketHighlights: string[];
-  keywords: string[];
+  category: "Group Stage" | "Round of 32" | "Round of 16" | "Quarter-finals" | "Semi-finals" | "Final";
 }
 
 export const footballFixtures: FootballFixture[] = [
-  // --- FIFA World Cup 2026 Official Fixtures ---
+  // --- GROUP STAGE ---
   {
-    slug: "fifa-world-cup-2026-france-vs-morocco",
-    sport: "Football",
-    tournament: "FIFA World Cup 2026",
-    homeTeam: "France",
-    awayTeam: "Morocco",
-    venue: "Arrowhead Stadium",
-    city: "Kansas City",
-    country: "USA",
-    startDate: "2026-07-09T18:00:00",
-    status: "upcoming",
-    stage: "Quarter Finals",
-    marketHighlights: ["France Win", "Over 2.5 Goals"],
-    keywords: ["france vs morocco 2026", "world cup betting"]
-  },
-  {
-    slug: "fifa-world-cup-2026-match-1",
+    slug: "wc2026-m1",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
     homeTeam: "Mexico",
@@ -42,12 +26,25 @@ export const footballFixtures: FootballFixture[] = [
     country: "Mexico",
     startDate: "2026-06-11T18:00:00",
     status: "upcoming",
-    stage: "Group Stage",
-    marketHighlights: ["Mexico win", "Opening goal"],
-    keywords: ["mexico world cup 2026"]
+    stage: "Group A",
+    category: "Group Stage"
   },
   {
-    slug: "fifa-world-cup-2026-match-3",
+    slug: "wc2026-m2",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "A3",
+    awayTeam: "A4",
+    venue: "Estadio Guadalajara",
+    city: "Guadalajara",
+    country: "Mexico",
+    startDate: "2026-06-11T20:00:00",
+    status: "upcoming",
+    stage: "Group A",
+    category: "Group Stage"
+  },
+  {
+    slug: "wc2026-m3",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
     homeTeam: "Canada",
@@ -55,14 +52,13 @@ export const footballFixtures: FootballFixture[] = [
     venue: "BMO Field",
     city: "Toronto",
     country: "Canada",
-    startDate: "2026-06-12T19:00:00",
+    startDate: "2026-06-12T17:00:00",
     status: "upcoming",
-    stage: "Group Stage",
-    marketHighlights: ["Canada victory"],
-    keywords: ["canada opening match"]
+    stage: "Group B",
+    category: "Group Stage"
   },
   {
-    slug: "fifa-world-cup-2026-match-4",
+    slug: "wc2026-m4",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
     homeTeam: "USA",
@@ -70,50 +66,157 @@ export const footballFixtures: FootballFixture[] = [
     venue: "SoFi Stadium",
     city: "Los Angeles",
     country: "USA",
-    startDate: "2026-06-12T20:00:00",
+    startDate: "2026-06-12T19:00:00",
     status: "upcoming",
-    stage: "Group Stage",
-    marketHighlights: ["USA victory"],
-    keywords: ["usa world cup opener"]
+    stage: "Group D",
+    category: "Group Stage"
   },
-  // Procedural fixtures for the 104-match tournament with realistic dates and names
-  ...Array.from({ length: 99 }).map((_, i) => {
-    const matchNum = i + 5;
-    let stage = "Group Stage";
-    let date = new Date("2026-06-13");
-    
-    if (matchNum > 72) {
-      stage = "Round of 32";
-      date = new Date("2026-06-28");
-    } else if (matchNum > 88) {
-      stage = "Round of 16";
-      date = new Date("2026-07-04");
-    }
-    
-    date.setDate(date.getDate() + Math.floor(i / 6));
-
-    const teams = ["Argentina", "Brazil", "England", "France", "Spain", "Germany", "Portugal", "Netherlands", "Morocco", "Japan", "Croatia", "Italy", "Uruguay", "Belgium", "Senegal", "USA", "Mexico", "Canada"];
-    const home = teams[i % teams.length];
-    const away = teams[(i + 7) % teams.length];
-
-    return {
-      slug: `fifa-world-cup-2026-match-${matchNum}`,
-      sport: "Football" as const,
-      tournament: "FIFA World Cup 2026",
-      homeTeam: home,
-      awayTeam: away,
-      venue: ["MetLife Stadium", "AT&T Stadium", "NRG Stadium"][i % 3],
-      city: ["New York", "Dallas", "Houston"][i % 3],
-      country: "USA",
-      startDate: date.toISOString().split('T')[0] + "T18:00:00",
-      status: "upcoming" as const,
-      stage: stage,
-      marketHighlights: ["1X2", "BTTS"],
-      keywords: [`match ${matchNum} betting`]
-    };
-  }),
   {
-    slug: "fifa-world-cup-2026-semi-1",
+    slug: "wc2026-m5",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "B3",
+    awayTeam: "B4",
+    venue: "BC Place",
+    city: "Vancouver",
+    country: "Canada",
+    startDate: "2026-06-13T15:00:00",
+    status: "upcoming",
+    stage: "Group B",
+    category: "Group Stage"
+  },
+  {
+    slug: "wc2026-m6",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "C1",
+    awayTeam: "C2",
+    venue: "MetLife Stadium",
+    city: "New York/NJ",
+    country: "USA",
+    startDate: "2026-06-13T18:00:00",
+    status: "upcoming",
+    stage: "Group C",
+    category: "Group Stage"
+  },
+  {
+    slug: "wc2026-m7",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "C3",
+    awayTeam: "C4",
+    venue: "Gillette Stadium",
+    city: "Boston",
+    country: "USA",
+    startDate: "2026-06-13T21:00:00",
+    status: "upcoming",
+    stage: "Group C",
+    category: "Group Stage"
+  },
+  {
+    slug: "wc2026-m8",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "D1",
+    awayTeam: "D3",
+    venue: "Lincoln Financial Field",
+    city: "Philadelphia",
+    country: "USA",
+    startDate: "2026-06-14T15:00:00",
+    status: "upcoming",
+    stage: "Group D",
+    category: "Group Stage"
+  },
+  {
+    slug: "wc2026-m9",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "E1",
+    awayTeam: "E2",
+    venue: "NRG Stadium",
+    city: "Houston",
+    country: "USA",
+    startDate: "2026-06-14T18:00:00",
+    status: "upcoming",
+    stage: "Group E",
+    category: "Group Stage"
+  },
+  {
+    slug: "wc2026-m10",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "E3",
+    awayTeam: "E4",
+    venue: "AT&T Stadium",
+    city: "Dallas",
+    country: "USA",
+    startDate: "2026-06-14T21:00:00",
+    status: "upcoming",
+    stage: "Group E",
+    category: "Group Stage"
+  },
+
+  // --- QUARTER FINALS ---
+  {
+    slug: "wc2026-qf1",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Winner Match 89",
+    awayTeam: "Winner Match 90",
+    venue: "Gillette Stadium",
+    city: "Boston",
+    country: "USA",
+    startDate: "2026-07-09T18:00:00",
+    status: "upcoming",
+    stage: "Quarter-final 1",
+    category: "Quarter-finals"
+  },
+  {
+    slug: "wc2026-france-vs-morocco",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "France",
+    awayTeam: "Morocco",
+    venue: "Arrowhead Stadium",
+    city: "Kansas City",
+    country: "USA",
+    startDate: "2026-07-09T21:00:00",
+    status: "upcoming",
+    stage: "Quarter-final 2",
+    category: "Quarter-finals"
+  },
+  {
+    slug: "wc2026-qf3",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Winner Match 93",
+    awayTeam: "Winner Match 94",
+    venue: "SoFi Stadium",
+    city: "Los Angeles",
+    country: "USA",
+    startDate: "2026-07-10T18:00:00",
+    status: "upcoming",
+    stage: "Quarter-final 3",
+    category: "Quarter-finals"
+  },
+  {
+    slug: "wc2026-qf4",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Winner Match 95",
+    awayTeam: "Winner Match 96",
+    venue: "Hard Rock Stadium",
+    city: "Miami",
+    country: "USA",
+    startDate: "2026-07-10T21:00:00",
+    status: "upcoming",
+    stage: "Quarter-final 4",
+    category: "Quarter-finals"
+  },
+
+  // --- SEMI FINALS ---
+  {
+    slug: "wc2026-semi-1",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
     homeTeam: "Winner Match 97",
@@ -123,12 +226,11 @@ export const footballFixtures: FootballFixture[] = [
     country: "USA",
     startDate: "2026-07-14T20:00:00",
     status: "upcoming",
-    stage: "Semi Finals",
-    marketHighlights: ["To reach final"],
-    keywords: ["world cup semi final 1"]
+    stage: "Semi-final 1",
+    category: "Semi-finals"
   },
   {
-    slug: "fifa-world-cup-2026-semi-2",
+    slug: "wc2026-semi-2",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
     homeTeam: "Winner Match 99",
@@ -138,12 +240,29 @@ export const footballFixtures: FootballFixture[] = [
     country: "USA",
     startDate: "2026-07-15T20:00:00",
     status: "upcoming",
-    stage: "Semi Finals",
-    marketHighlights: ["To reach final"],
-    keywords: ["world cup semi final 2"]
+    stage: "Semi-final 2",
+    category: "Semi-finals"
   },
+
+  // --- THIRD PLACE ---
   {
-    slug: "fifa-world-cup-2026-final",
+    slug: "wc2026-third",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Loser Match 101",
+    awayTeam: "Loser Match 102",
+    venue: "Hard Rock Stadium",
+    city: "Miami",
+    country: "USA",
+    startDate: "2026-07-18T16:00:00",
+    status: "upcoming",
+    stage: "Third Place Play-off",
+    category: "Final"
+  },
+
+  // --- FINAL ---
+  {
+    slug: "wc2026-final",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
     homeTeam: "Winner Match 101",
@@ -154,7 +273,6 @@ export const footballFixtures: FootballFixture[] = [
     startDate: "2026-07-19T15:00:00",
     status: "upcoming",
     stage: "Final",
-    marketHighlights: ["Champion", "Golden Boot"],
-    keywords: ["world cup final 2026"]
+    category: "Final"
   }
 ];
