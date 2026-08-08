@@ -409,11 +409,11 @@ export function MegaMenuHeader() {
           <div aria-hidden className="hidden h-10 w-px bg-gradient-to-b from-transparent via-primary/30 to-transparent lg:block" />
 
           {/* Desktop nav — pill container */}
-          <nav className="relative hidden flex-1 items-center justify-start gap-0.5 lg:flex">
+          <nav className="relative hidden flex-1 items-center justify-start gap-1 lg:flex">
             <Link
               to="/"
-              className="rounded-lg px-3 py-2 text-[13px] font-semibold text-foreground/85 transition-all hover:bg-primary/10 hover:text-primary"
-              activeProps={{ className: "!text-accent bg-primary/10" }}
+              className="rounded-full px-3 py-1.5 text-[13px] font-bold text-foreground/85 transition-all hover:bg-primary/10 hover:text-primary"
+              activeProps={{ className: "!text-accent bg-primary/10 shadow-[inset_0_0_0_1px_rgba(180,140,40,0.2)]" }}
               activeOptions={{ exact: true }}
             >
               Home
@@ -582,7 +582,7 @@ export function MegaMenuHeader() {
                               <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.18em] text-accent">
                                 {g.title}
                               </div>
-                              <ul className="grid grid-cols-1 gap-0.5">
+                              <ul className="grid grid-cols-2 gap-x-2 gap-y-1">
                                 {g.items.map((it) => (
                                   <li key={it.to}>
                                     <Link
