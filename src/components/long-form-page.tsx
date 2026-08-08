@@ -45,7 +45,7 @@ export function LongFormPage({ content, extra }: { content: PageContent; extra?:
 
       <section className="mx-auto max-w-4xl px-4 py-6 space-y-4 text-foreground/80 leading-relaxed sm:px-6 sm:py-8 sm:space-y-5">
         {intro.map((p, i) => (
-          <p key={i} className="text-base sm:text-lg">{p}</p>
+          <p key={i} className="text-base sm:text-lg" dangerouslySetInnerHTML={{ __html: p }} />
         ))}
         <a
           href={WA}
@@ -78,7 +78,7 @@ export function LongFormPage({ content, extra }: { content: PageContent; extra?:
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black">{s.heading}</h2>
           <div className="mt-4 space-y-4 text-sm text-foreground/80 leading-relaxed sm:text-base">
             {s.body.map((p, i) => (
-              <p key={i}>{p}</p>
+              <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
             ))}
           </div>
         </section>
@@ -87,16 +87,18 @@ export function LongFormPage({ content, extra }: { content: PageContent; extra?:
       {extra}
 
       <section className="mx-auto max-w-4xl px-4 py-8 border-t border-primary/10 sm:px-6">
-        <h2 className="text-xl font-black md:text-2xl">Quick Links</h2>
+        <h2 className="text-xl font-black md:text-2xl">Quick Links & Resources</h2>
         <div className="mt-4 flex flex-wrap gap-x-6 gap-y-3">
-          <Link to="/" className="text-sm font-bold text-primary hover:underline">Cricbet99 Home</Link>
-          <Link to="/cricket" className="text-sm font-bold text-primary hover:underline">Cricket Betting</Link>
-          <Link to="/casino" className="text-sm font-bold text-primary hover:underline">Live Casino</Link>
-          <Link to="/cricbet99-app" className="text-sm font-bold text-primary hover:underline">Download App</Link>
+          <Link to="/" className="text-sm font-bold text-primary hover:underline">Cricbet99 Official Home</Link>
+          <Link to="/cricket" className="text-sm font-bold text-primary hover:underline">Live Cricket Odds</Link>
+          <Link to="/ipl-betting" className="text-sm font-bold text-primary hover:underline">IPL 2026 Betting</Link>
+          <Link to="/casino" className="text-sm font-bold text-primary hover:underline">Live Casino Games</Link>
+          <Link to="/cricbet99-app" className="text-sm font-bold text-primary hover:underline">Cricbet99 APK Download</Link>
           <Link to="/how-it-works" className="text-sm font-bold text-primary hover:underline">How It Works</Link>
-          <Link to="/login" className="text-sm font-bold text-primary hover:underline">Official Login</Link>
-          <Link to="/register" className="text-sm font-bold text-primary hover:underline">Create ID</Link>
-          <Link to="/all-links" className="text-sm font-bold text-primary hover:underline">Site Map</Link>
+          <Link to="/login" className="text-sm font-bold text-primary hover:underline">Cricbet99 Login Access</Link>
+          <Link to="/register" className="text-sm font-bold text-primary hover:underline">Create Official ID</Link>
+          <Link to="/whatsapp-number" className="text-sm font-bold text-primary hover:underline">Official WhatsApp Support</Link>
+          <Link to="/all-links" className="text-sm font-bold text-primary hover:underline">Sitemap & Directory</Link>
         </div>
       </section>
 
