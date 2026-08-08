@@ -78,28 +78,28 @@ const faqs = [
     icon: "ShieldCheck",
   },
   {
-    q: "How quickly will I receive my Cricbet99 ID?",
-    a: "Lightning fast — your Cricbet99 ID lands on WhatsApp within 2 to 5 minutes of your first message. No paperwork, no waiting, no forms. Just one quick chat with a verified account manager and you're live.",
+    q: "How do I get my official Cricbet99 ID?",
+    a: "It's faster than bowling an over. Simply message our team on WhatsApp, and a real human manager will verify your details and activate your ID in under 2 minutes. No complicated forms or robotic systems—just direct, personalized service.",
     icon: "Zap",
   },
   {
-    q: "Which payment methods are supported?",
-    a: "Everything Indian players prefer — UPI, Google Pay, PhonePe, Paytm, IMPS, NEFT and net banking. Deposits reflect instantly, and withdrawals run 24/7, typically clearing your bank in a matter of minutes.",
+    q: "What are the deposit and withdrawal limits?",
+    a: "We believe in making the game accessible for everyone. You can start with as little as ₹100 via UPI. Withdrawals are just as flexible—request your winnings on WhatsApp any time of the day, and they'll hit your bank account via UPI in minutes.",
     icon: "Wallet",
   },
   {
-    q: "What sports and games can I bet on?",
-    a: "One Cricbet99 ID unlocks it all — IPL, T20 World Cup, ODI and PSL cricket, football (EPL, La Liga, UCL), tennis (Grand Slams, ATP, WTA), kabaddi (PKL), horse racing, basketball, esports, plus live casino favourites like Teen Patti, Andar Bahar, Roulette and Blackjack.",
+    q: "Can I bet on IPL 2026 and other sports?",
+    a: "One ID gives you the keys to the kingdom. Bet on every ball of IPL 2026, international cricket, football leagues like EPL and UCL, Pro Kabaddi, horse racing, and even high-stakes live casino games like Teen Patti and Roulette.",
     icon: "Trophy",
   },
   {
-    q: "Is there a welcome bonus for new members?",
-    a: "Yes — a 100% welcome bonus up to ₹10,000 on your very first deposit, plus ongoing reload bonuses, cashback and referral rewards. Every term is transparent and shared on WhatsApp before you deposit a single rupee.",
+    q: "Is there a bonus for new players?",
+    a: "Yes! New members can claim a 100% welcome bonus up to ₹10,000 on their first deposit. We also offer regular cashback, reload bonuses, and referral rewards to our loyal community members. All terms are explained clearly by your manager on WhatsApp.",
     icon: "Gift",
   },
   {
     q: "Do you offer a Cricbet99 mobile app?",
-    a: "Yes — a lightweight, high-performance app for Android (APK) and iOS, downloaded directly from our official site rather than the Play Store. Just 100 MB of storage, compatible with Android 6.0+ and iOS 12+.",
+    a: "Yes! Our high-performance Android APK is optimized for low-latency betting. It's lightweight, secure, and lets you access your account with biometric login, so you never miss a match movement.",
     icon: "Smartphone",
   },
 ];
