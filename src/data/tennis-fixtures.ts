@@ -908,6 +908,7 @@ export const tennisFixtures: TennisFixture[] = [
     city: "Winston-Salem",
     country: "USA",
     startDate: "2026-08-23T14:00:00-04:00",
+    endDate: "2026-08-29",
     status: "upcoming",
     stage: "Main Draw",
     category: "ATP 250",
