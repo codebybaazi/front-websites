@@ -1561,22 +1561,70 @@ export const footballFixtures: FootballFixture[] = [
   },
 
 
-  // --- QUARTER FINALS (PLACEHOLDERS) ---
+  // --- QUARTER FINALS ---
   {
     slug: "wc2026-qf-1",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "Quarter-finalist 1",
-    awayTeam: "Quarter-finalist 2",
+    homeTeam: "France",
+    awayTeam: "Morocco",
     venue: "Gillette Stadium",
     city: "Boston",
     country: "USA",
-    startDate: "2026-07-09T18:00:00",
+    startDate: "2026-07-09T15:00:00",
     status: "upcoming",
-    stage: "Quarter-finals",
+    stage: "Quarter-final",
     category: "Quarter-finals",
     marketHighlights: ["To qualify"],
-    keywords: ["world cup quarter finals betting"]
+    keywords: ["france vs morocco quarter final"]
+  },
+  {
+    slug: "wc2026-qf-2",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Spain",
+    awayTeam: "Belgium",
+    venue: "SoFi Stadium",
+    city: "Los Angeles",
+    country: "USA",
+    startDate: "2026-07-10T21:00:00",
+    status: "upcoming",
+    stage: "Quarter-final",
+    category: "Quarter-finals",
+    marketHighlights: ["To qualify"],
+    keywords: ["spain vs belgium quarter final"]
+  },
+  {
+    slug: "wc2026-qf-3",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Norway",
+    awayTeam: "England",
+    venue: "Hard Rock Stadium",
+    city: "Miami",
+    country: "USA",
+    startDate: "2026-07-11T15:00:00",
+    status: "upcoming",
+    stage: "Quarter-final",
+    category: "Quarter-finals",
+    marketHighlights: ["To qualify"],
+    keywords: ["norway vs england quarter final"]
+  },
+  {
+    slug: "wc2026-qf-4",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Argentina",
+    awayTeam: "Switzerland",
+    venue: "Arrowhead Stadium",
+    city: "Kansas City",
+    country: "USA",
+    startDate: "2026-07-11T21:00:00",
+    status: "upcoming",
+    stage: "Quarter-final",
+    category: "Quarter-finals",
+    marketHighlights: ["To qualify"],
+    keywords: ["argentina vs switzerland quarter final"]
   },
 
   // --- SEMI FINALS ---
