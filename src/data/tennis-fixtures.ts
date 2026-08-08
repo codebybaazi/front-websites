@@ -1119,6 +1119,31 @@ export const tennisFixtures: TennisFixture[] = [
     marketHighlights: ["Match Winner"],
     keywords: ["atp finals turin 2026 odds"]
   },
+  {
+    slug: "stockholm-open-2026",
+    sport: "Tennis",
+    tournament: "Bybit Stockholm Open",
+    player1: "Casper Ruud",
+    player2: "TBD",
+    venue: "Kungliga Tennishallen",
+    city: "Stockholm",
+    country: "Sweden",
+    startDate: "2026-11-06T12:00:00+01:00",
+    status: "upcoming",
+    stage: "Main Draw",
+    category: "ATP 250",
+    surface: "Indoor Hard",
+    tour: "ATP",
+    marketHighlights: ["Match Winner", "Total Games"],
+    keywords: ["stockholm open 2026 odds", "casper ruud stockholm betting", "tennis predictions indoor hard"],
+    prediction: {
+      winner: "Casper Ruud",
+      score: "2-0",
+      points: "Over 21.5 Games",
+      confidence: 78,
+      analysis: "Ruud's consistency in late-season indoor events makes him a strong favorite in Stockholm, where he traditionally performs well."
+    }
+  },
 
   // --- WTA 2026 ---
   {
