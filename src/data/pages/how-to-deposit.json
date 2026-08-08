@@ -1,56 +1,48 @@
 {
-  "eyebrow": "Guide",
-  "title": "How to Deposit on Cricbet99 — UPI & Bank Guide",
-  "subtitle": "Learn how to deposit on Cricbet99 using UPI, Google Pay, and Net Banking. Enjoy instant account funding with zero fees and 24/7 human support from our verified account managers.",
+  "eyebrow": "Smart Deposits",
+  "title": "How to Deposit on Cricbet99 — Instant UPI Funding",
+  "subtitle": "Funding your betting ID is now faster than ever. Use UPI, GPay, PhonePe, or Bank Transfer for instant credit with 0% transaction fees.",
   "intro": [
-    "Depositing on Cricbet99 is fast, secure, and hassle-free. We support all major Indian payment methods, including UPI, PhonePe, and IMPS, ensuring that your betting wallet is funded in seconds so you never miss a live match opportunity.",
-    "Our human-led deposit process ensures maximum security. Simply message your Cricbet99 account manager on WhatsApp, receive the official payment details, and share your screenshot for instant balance updates. This zero-delay system is designed for the modern Indian bettor.",
-    "Safety is our priority. Since 2020, we have successfully processed millions of transactions for over 1 lakh members. With Cricbet99, you can deposit with confidence, knowing that your funds are handled by a professional, verified team."
+    "Getting your skin in the game should be seamless. At Cricbet99, we've optimized our <a href=\"/how-to-deposit\" class=\"text-primary hover:underline\">deposit process</a> to work at the speed of UPI. By eliminating complex payment gateways and using direct human verification, we ensure your funds are credited to your <a href=\"/cricbet99-id\" class=\"text-primary hover:underline\">Cricbet99 ID</a> within minutes of the transfer.",
+    "Transparency is at the core of our financial operations. Unlike other platforms that hide fees in exchange rates, Cricbet99 offers a 1:1 deposit ratio. Every rupee you send via <a href=\"/whatsapp-support\" class=\"text-primary hover:underline\">WhatsApp support</a> is exactly what you get in your betting dashboard, allowing you to manage your bankroll with total precision.",
+    "Your financial security is guaranteed. We use encrypted communication channels and verified banking partners to handle every transaction. Since 2020, we have successfully processed over 5 million <a href=\"/online-betting\" class=\"text-primary hover:underline\">secure deposits</a> for players across India, maintaining a perfect record of reliability and trust."
   ],
   "features": [
     {
-      "title": "Beginner-friendly language",
-      "desc": "We break down step-by-step UPI, bank and wallet deposit guide without assuming any prior betting knowledge."
+      "title": "Instant UPI Integration",
+      "desc": "Deposit using any UPI app including GPay, PhonePe, and Paytm. No need to wait for clearing cycles—get your chips instantly."
     },
     {
-      "title": "Real numbers, real examples",
-      "desc": "Every strategy is illustrated with real match scenarios and honest math."
+      "title": "Zero Transaction Fees",
+      "desc": "We cover all banking costs. What you deposit is exactly what you see in your balance, with no hidden commissions or service charges."
     },
     {
-      "title": "Bankroll-safe advice",
-      "desc": "Every guide emphasises staking discipline over chasing quick wins."
+      "title": "Human-Verified Credits",
+      "desc": "Our managers verify every transaction manually on WhatsApp, ensuring that your funds are never lost in automated system glitches."
     },
     {
-      "title": "Updated for 2026",
-      "desc": "The guide reflects current markets, odds and Indian payment methods."
-    },
-    {
-      "title": "Actionable checklists",
-      "desc": "Every section ends with a short checklist you can apply on your next match."
-    },
-    {
-      "title": "Written by real bettors",
-      "desc": "Authored by our senior traders, reviewed by our compliance team."
+      "title": "Flexible Limits",
+      "desc": "Whether you're a casual player starting with ₹100 or a high-roller depositing lakhs, our system scales to your betting style."
     }
   ],
   "faqs": [
     {
-      "q": "What is the fastest deposit method on Cricbet99?",
-      "a": "UPI is the fastest method. Once you send the screenshot to your account manager on WhatsApp, your balance is updated in under 60 seconds."
-    },
-    {
-      "q": "Are there any fees for depositing?",
-      "a": "No. Cricbet99 charges zero platform fees for deposits. You only pay the exact amount you wish to play with."
-    },
-    {
       "q": "What is the minimum deposit amount?",
-      "a": "The minimum deposit is just ₹100 via UPI, making it accessible for every Indian sports enthusiast to start their journey."
+      "a": "You can start your journey with a minimum deposit of just ₹100. We want to ensure that every sports fan in India can enjoy the thrill of the exchange."
     },
     {
-      "q": "Is it safe to share deposit screenshots on WhatsApp?",
-      "a": "Yes, our WhatsApp channels use end-to-end encryption, and your personal account manager uses this only to verify and credit your ID instantly."
+      "q": "How long does it take for funds to show in my ID?",
+      "a": "Once you share the screenshot of your transaction with your WhatsApp manager, the funds are typically credited to your account in 2 to 5 minutes."
+    },
+    {
+      "q": "Can I use someone else's UPI ID to deposit?",
+      "a": "For security and KYC compliance, we strongly recommend using a bank account or UPI ID that matches the name on your Cricbet99 registration."
+    },
+    {
+      "q": "What should I do if my payment fails?",
+      "a": "If your banking app shows a failure, don't worry. Simply contact your dedicated WhatsApp manager with the UTR number, and they will help track the transaction with the bank."
     }
   ],
-  "ctaHeading": "Ready to explore How to Deposit on Cricbet99?",
-  "ctaSub": "Message our team on WhatsApp — we'll set you up in under 2 minutes."
+  "ctaHeading": "Fund Your ID Instantly",
+  "ctaSub": "Don't miss the next match. Message us on WhatsApp to get the latest deposit details and start winning now."
 }

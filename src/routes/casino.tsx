@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
-import { Gamepad2, Sparkles, Dices, Crown, ShieldCheck, Zap } from "lucide-react";
+import { Gamepad2, Sparkles, Dices, Crown, ShieldCheck, Zap, ChevronRight } from "lucide-react";
 import { AiOverview } from "@/components/ai-overview";
 import { getRequestOrigin } from "@/lib/origin.functions";
+import { buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/components/long-form-page";
 
 export const Route = createFileRoute("/casino")({
   loader: async () => ({
@@ -23,6 +24,16 @@ export const Route = createFileRoute("/casino")({
         { name: "twitter:card", content: "summary_large_image" },
       ],
       links: [{ rel: "canonical", href: canonical }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(buildBreadcrumbJsonLd("/casino", "Live Casino")),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(buildFaqJsonLd(casinoFaqs)),
+        },
+      ],
     };
   },
   component: Casino,
@@ -35,6 +46,13 @@ const tables = [
   { icon: Gamepad2, title: "Premium Baccarat", desc: "The high-roller classic. Bet on Player, Banker, or Tie with professional dealers. Low house edge and rapid-fire rounds for maximum action." },
   { icon: ShieldCheck, title: "Live Blackjack", desc: "Multiple tables and seats available 24/7. Beat the dealer in HD quality with smooth controls and real-time interaction with other players." },
   { icon: Zap, title: "Dragon Tiger", desc: "Fast-paced, high-intensity two-card duel. The simplest live casino game with the quickest payouts on the Cricbet99 platform." },
+];
+
+const casinoFaqs = [
+  { q: "Is Teen Patti live or automated?", a: "Every Teen Patti table on Cricbet99 features real human dealers streamed in HD. You can see the cards being shuffled and dealt in real-time, ensuring a 100% fair and transparent game." },
+  { q: "What is the minimum bet for Live Casino?", a: "Minimum bets vary by table. Some slot games start as low as ₹10, while live dealer tables for Teen Patti and Andar Bahar typically start at ₹100." },
+  { q: "Can I play casino games on the Cricbet99 app?", a: "Yes, our mobile app is fully optimized for live casino. You can enjoy HD streaming and smooth betting controls even on slower 4G connections." },
+  { q: "Are live casino winnings settled instantly?", a: "Yes. As soon as a round ends, your winnings are instantly credited to your Cricbet99 balance, allowing you to move between tables or request a withdrawal immediately." },
 ];
 
 function Casino() {
@@ -96,6 +114,21 @@ function Casino() {
               <p className="text-sm text-foreground/60">Use your Cricbet99 cricket ID to access all casino tables. No need for multiple accounts or balances.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-6 py-16">
+        <h2 className="text-3xl font-black md:text-4xl">Casino FAQs</h2>
+        <div className="mt-10 space-y-4">
+          {casinoFaqs.map((f, i) => (
+            <details key={i} className="group rounded-2xl border border-primary/20 bg-background/60 p-6 open:bg-background/80">
+              <summary className="flex cursor-pointer list-none items-center justify-between font-bold text-foreground">
+                {f.q}
+                <ChevronRight className="h-5 w-5 transition-transform group-open:rotate-90" />
+              </summary>
+              <p className="mt-4 text-sm text-foreground/70 leading-relaxed">{f.a}</p>
+            </details>
+          ))}
         </div>
       </section>
 
