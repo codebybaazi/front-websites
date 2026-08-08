@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
+import { blogPosts } from "@/data/blog-posts";
 
 export const Route = createFileRoute("/all-links")({
   head: () => ({
@@ -106,9 +107,21 @@ const groups: { title: string; items: { l: string; to: string }[] }[] = [
     ],
   },
   {
-    title: "About & Legal",
+    title: "Company & Blog",
     items: [
       { l: "About Cricbet99", to: "/about" },
+      { l: "Latest News & Blog", to: "/blog" },
+      { l: "FAQ Hub", to: "/faq" },
+      { l: "Contact Us", to: "/contact" },
+      ...blogPosts.slice(0, 10).map(post => ({
+        l: `Blog: ${post.title}`,
+        to: `/blog/${post.slug}`
+      }))
+    ],
+  },
+  {
+    title: "Legal & Safety",
+    items: [
       { l: "Is Cricbet99 Safe?", to: "/is-cricbet99-safe" },
       { l: "Is Cricbet99 Legal?", to: "/is-cricbet99-legal" },
       { l: "Terms & Conditions", to: "/terms" },
