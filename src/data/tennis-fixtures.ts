@@ -343,6 +343,7 @@ export const tennisFixtures: TennisFixture[] = [
     city: "Indian Wells",
     country: "USA",
     startDate: "2026-03-01T11:00:00-08:00",
+    endDate: "2026-03-15",
     status: "upcoming",
     stage: "Masters 1000",
     category: "Masters 1000",
