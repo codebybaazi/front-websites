@@ -4,15 +4,15 @@ import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 export const Route = createFileRoute("/football")({
   head: () => ({
     meta: [
-      { title: "Football Betting on Cricbet99 — EPL, La Liga & UEFA" },
-      { name: "description", content: "Bet on Premier League, La Liga, Bundesliga, Serie A, UEFA Champions League, ISL and FIFA fixtures with deep in-play football markets on Cricbet99." },
-      { property: "og:title", content: "Football Betting on Cricbet99" },
-      { property: "og:description", content: "Every top league covered with match winner, BTTS, handicaps and in-play markets." },
+      { title: "Live Football Betting on Cricbet99 | Premier League & ISL Odds" },
+      { name: "description", content: "Bet on the Premier League, La Liga, Champions League, and ISL with Cricbet99. High-value football odds, in-play markets, and instant withdrawals for Indian fans." },
+      { property: "og:title", content: "Premium Football Betting on Cricbet99" },
+      { property: "og:description", content: "Experience the thrill of football betting with live markets on every major league. Fast payouts and 24/7 WhatsApp support." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/football" },
+      { property: "og:url", content: "https://cricbet99.win/football" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/football" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/football" }],
   }),
   component: Football,
 });
@@ -32,8 +32,8 @@ function Football() {
       <PageHero
         wide
         eyebrow="Football"
-        title={<>Every league, every kick-off, one <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Cricbet99 ID.</span></>}
-        subtitle="From the Premier League to the ISL, Cricbet99 covers every major football competition with live in-play markets, competitive odds and fast settlement — so you never miss a moment of the action."
+        title={<>Elite Football Betting & <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Global Leagues.</span></>}
+        subtitle="From the high-stakes drama of the UEFA Champions League to the rising local passion of the ISL, Cricbet99 provides a premium football betting environment with real-time analytics and superior odds."
       />
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
