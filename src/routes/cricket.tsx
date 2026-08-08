@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { Trophy, Radio, Target, Flag, Users } from "lucide-react";
+import { AiOverview } from "@/components/ai-overview";
 
 export const Route = createFileRoute("/cricket")({
   head: () => ({
@@ -33,6 +34,16 @@ function Cricket() {
         eyebrow="Cricket Betting"
         title={<>Bet on every ball of <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Indian cricket.</span></>}
         subtitle="Cricket is the heart of Cricbet99. From IPL 2026 and the T20 World Cup to bilateral tours and domestic tournaments, every major match gets deep live markets, session bets and Fancy Bets — all through your single verified ID."
+      />
+
+      <AiOverview 
+        summary="Cricbet99 offers the most comprehensive cricket betting platform in India, covering IPL 2026, World Cups, and domestic leagues with sub-second odds updates and instant withdrawals."
+        highlights={[
+          "Live ball-by-ball markets for IPL 2026",
+          "Fancy bets and session betting available 24/7",
+          "Complete coverage of ICC and domestic tournaments",
+          "Verified human support via WhatsApp"
+        ]}
       />
 
       <section className="mx-auto max-w-7xl px-6 py-10">

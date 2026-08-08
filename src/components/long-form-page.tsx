@@ -1,5 +1,6 @@
 import { SiteLayout, PageHero, CTABand, WA } from "./site-layout";
 import { CheckCircle2, MessageCircle, ChevronRight } from "lucide-react";
+import { AiOverview } from "./ai-overview";
 import type { ReactNode } from "react";
 
 export interface PageContent {
@@ -34,6 +35,11 @@ export function LongFormPage({ content, extra }: { content: PageContent; extra?:
           )
         }
         subtitle={subtitle}
+      />
+
+      <AiOverview 
+        summary={subtitle}
+        highlights={features.slice(0, 4).map(f => f.desc)}
       />
 
       <section className="mx-auto max-w-4xl px-4 py-6 space-y-4 text-foreground/80 leading-relaxed sm:px-6 sm:py-8 sm:space-y-5">
