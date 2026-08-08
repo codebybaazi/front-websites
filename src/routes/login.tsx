@@ -29,6 +29,7 @@ function LoginPage() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Login"
         title={<>Log in to your <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Cricbet99 ID.</span></>}
         subtitle="For safety, Cricbet99 login URLs are issued personally by our team. Message us on WhatsApp to get your official login link, reset your password or recover a locked account — no wait times."

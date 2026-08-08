@@ -28,6 +28,7 @@ function PrivacyPolicy() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Privacy"
         title={<>Your data, <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>your control.</span></>}
         subtitle="We collect only what's necessary to run your Cricbet99 account, protect your logins and process your payments — and we never sell your personal information to third parties."

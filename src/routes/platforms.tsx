@@ -39,6 +39,7 @@ function Platforms() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="The Infrastructure of Winning"
         title={<>Unified Access. <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Universal Play.</span></>}
         subtitle="Cricbet99 isn't just one site—it's a comprehensive ecosystem designed to deliver a seamless betting experience across any device you own."

@@ -28,6 +28,7 @@ function ResponsibleGaming() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Responsible Gaming"
         title={<>Bet for fun. <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Bet responsibly.</span></>}
         subtitle="Cricbet99 is built for entertainment. We take player wellbeing seriously and give every user the tools — deposit limits, session timers, self-exclusion and support access — to keep their play safe and enjoyable."

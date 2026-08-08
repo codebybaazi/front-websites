@@ -85,6 +85,7 @@ function MatchPage() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow={`${m.sport} · ${m.tournament}`}
         title={
           <>

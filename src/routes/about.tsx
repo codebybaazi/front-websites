@@ -31,6 +31,7 @@ function About() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="About Us"
         title={<>India's most trusted <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>cricket ID platform.</span></>}
         subtitle="Cricbet99 is a user-access platform that helps Indian players reach premium sports betting and gaming services through a single verified ID. Instead of navigating complicated apps alone, our members get guided setup, direct WhatsApp assistance and ongoing help with every transaction."

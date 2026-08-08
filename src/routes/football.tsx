@@ -30,6 +30,7 @@ function Football() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Football"
         title={<>Every league, every kick-off, one <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Cricbet99 ID.</span></>}
         subtitle="From the Premier League to the ISL, Cricbet99 covers every major football competition with live in-play markets, competitive odds and fast settlement — so you never miss a moment of the action."

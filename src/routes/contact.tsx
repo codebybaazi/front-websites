@@ -29,6 +29,7 @@ function Contact() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Contact"
         title={<>Contact Cricbet99 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>24/7 WhatsApp Support</span></>}
         subtitle="Whether you need help setting up your Cricbet99 ID, clarifying a deposit, chasing a withdrawal or understanding a market — our support team is available 24/7. WhatsApp is the fastest way to reach us."

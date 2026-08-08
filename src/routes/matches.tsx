@@ -53,6 +53,7 @@ function MatchesPage() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="All Matches"
         title={<>Every live match, one <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Cricbet99 ID.</span></>}
         subtitle="A single verified Cricbet99 ID gives you real-time access to every major cricket, football and tennis fixture — with exchange-grade odds, session markets and instant UPI payouts."

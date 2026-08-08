@@ -103,6 +103,7 @@ function Compare() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Expert Comparison"
         title={<>Cricbet99 vs Mahavir Book — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Battle for Payouts.</span></>}
         subtitle="A detailed analysis of two Indian betting giants. We compare the lightning-fast Cricbet99 engine against the traditional Mahavir Book experience."

@@ -29,6 +29,7 @@ function Terms() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Terms & Conditions"
         title={<>Clear rules, <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>fair play.</span></>}
         subtitle="These terms govern how your Cricbet99 account works — from eligibility and payments to fair play and dispute resolution. By using Cricbet99, you agree to the terms outlined on this page."

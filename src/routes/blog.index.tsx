@@ -49,6 +49,7 @@ function Blog() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Blog"
         title={<>Cricket, betting and everything <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Cricbet99.</span></>}
         subtitle="Match previews, IPL and World Cup breakdowns, market guides and responsible gaming resources — the Cricbet99 blog is where our traders share what they're watching, tracking and analysing every week."

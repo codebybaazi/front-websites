@@ -28,6 +28,7 @@ function HorseRacing() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Horse Racing"
         title={<>Every furlong, every finish — bet racing on <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Cricbet99.</span></>}
         subtitle="From Royal Ascot and the Epsom Derby to Dubai's Meydan and every Indian turf club, Cricbet99 delivers live win, place and each-way markets on the biggest race meetings in the world."

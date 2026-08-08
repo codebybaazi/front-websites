@@ -112,6 +112,7 @@ function Compare() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Comparison Guide"
         title={<>Cricbet99 vs Laser247 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Ultimate 2026 Analysis</span></>}
         subtitle="We compare Cricbet99 vs Laser247 on the metrics that define your betting experience. From withdrawal speed to IPL market depth, see why Cricbet99 is India's leading choice for 2026."

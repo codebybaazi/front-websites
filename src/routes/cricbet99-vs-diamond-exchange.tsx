@@ -103,6 +103,7 @@ function Compare() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Market Comparison"
         title={<>Cricbet99 vs Diamond Exchange — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>The Liquidity Test.</span></>}
         subtitle="Comparing the two most popular exchange IDs in India. We break down the liquidity, commission rates, and payout efficiency for 2026."

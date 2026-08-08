@@ -30,6 +30,7 @@ function Tennis() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Tennis"
         title={<>All four majors, every ATP and WTA event — on <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Cricbet99.</span></>}
         subtitle="From baseline rallies to tie-break drama, tennis on Cricbet99 delivers live set and game markets, tournament outrights and player props across the ATP and WTA calendar."

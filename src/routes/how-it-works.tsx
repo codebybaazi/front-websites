@@ -34,6 +34,7 @@ function HowItWorks() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="How It Works"
         title={<>From WhatsApp message to first bet in <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>under 5 minutes.</span></>}
         subtitle="Cricbet99 uses a support-assisted access model. Instead of a self-service signup, a real agent guides you through every step — from OTP verification to your first deposit — so getting started is simple, safe and human."

@@ -41,6 +41,7 @@ function Casino() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Intelligence & Entertainment"
         title={<>Premium Live Casino. <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Zero Latency.</span> 24/7.</>}
         subtitle="Cricbet99 redefines the online casino experience for Indian players. Combining bank-grade security with HD-streamed live tables, we offer the most immersive way to play Teen Patti, Andar Bahar, and 500+ slot titles with one verified ID."
