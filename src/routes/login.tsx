@@ -56,7 +56,7 @@ function LoginPage() {
       />
       <section className="mx-auto max-w-4xl px-6 py-8">
         <div className="rounded-3xl border border-primary/25 bg-background/60 p-8 md:p-12 text-center shadow-2xl">
-          <h2 className="text-3xl font-black">Secure Login URL via WhatsApp</h2>
+          <h2 className="text-3xl font-black">Official Cricbet99 Login Access via WhatsApp</h2>
           <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
             Our support team provides the verified Cricbet99 login URL, your unique username, and password help directly on WhatsApp to protect you from phishing and fake sites.
           </p>
