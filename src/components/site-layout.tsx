@@ -10,6 +10,7 @@ import { MegaMenuHeader } from "./mega-menu";
 
 export const WA = "https://wa.me/919999999999";
 
+
 export const navLinks = [
   { label: "Home", to: "/" },
   { label: "Cricket", to: "/cricket" },

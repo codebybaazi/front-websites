@@ -395,7 +395,7 @@ function FaqSection() {
             </div>
           </div>
           <a
-            href={`https://wa.me/${WA}`}
+            href={WA}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex shrink-0 items-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold text-background shadow-lg transition-transform hover:scale-[1.03]"
