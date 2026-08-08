@@ -73,6 +73,12 @@ function AppPage() {
           <Link to="/about" className="text-sm font-bold text-primary hover:underline">About Us</Link>
           <span className="text-foreground/20">|</span>
           <Link to="/faq" className="text-sm font-bold text-primary hover:underline">Cricbet99 FAQ</Link>
+          <span className="text-foreground/20">|</span>
+          <Link to="/trusted-betting-id-provider" className="text-sm font-bold text-primary hover:underline">Trusted Provider</Link>
+          <span className="text-foreground/20">|</span>
+          <Link to="/whatsapp-number" className="text-sm font-bold text-primary hover:underline">Official WhatsApp</Link>
+          <span className="text-foreground/20">|</span>
+          <Link to="/ipl-betting" className="text-sm font-bold text-primary hover:underline">IPL 2026 Betting</Link>
         </div>
       </section>
       <CTABand heading="Get the Cricbet99 APK on WhatsApp." sub="Our team sends the verified install link and helps you set it up in under 5 minutes." />

@@ -159,7 +159,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         "heading": "Cricbet99 Take",
-        "body": "Here's what our analysts are watching next: how team management responds, whether senior players step up in the coming fixtures, and how odds shift once the lineup is confirmed. Members using Cricbet99 sports IDs get early access to preview notes, live in-play markets, and 24×7 support on WhatsApp — so you're never late to a moment that could swing your book."
+        "body": "Here's what our analysts are watching next: how team management responds, whether senior players step up in the coming fixtures, and how odds shift once the lineup is confirmed. Members using [Cricbet99 sports IDs](/sports-id) get early access to preview notes, [live in-play markets](/exchange), and 24×7 support on WhatsApp — so you're never late to a moment that could swing your book. Review our [Responsible Gaming](/responsible-gaming) policy to stay in control."
       }
     ]
   },
@@ -181,7 +181,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         "heading": "Cricbet99 Take",
-        "body": "Here's what our analysts are watching next: how team management responds, whether senior players step up in the coming fixtures, and how odds shift once the lineup is confirmed. Members using Cricbet99 sports IDs get early access to preview notes, live in-play markets, and 24×7 support on WhatsApp — so you're never late to a moment that could swing your book."
+        "body": "Here's what our analysts are watching next: how team management responds, whether senior players step up in the coming fixtures, and how odds shift once the lineup is confirmed. Members using [Cricbet99 sports IDs](/sports-id) get early access to preview notes, [live in-play markets](/exchange), and 24×7 support on WhatsApp — so you're never late to a moment that could swing your book. Review our [Responsible Gaming](/responsible-gaming) policy to stay in control."
       }
     ]
   },
@@ -203,7 +203,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         "heading": "Cricbet99 Take",
-        "body": "Here's what our analysts are watching next: how team management responds, whether senior players step up in the coming fixtures, and how odds shift once the lineup is confirmed. Members using Cricbet99 sports IDs get early access to preview notes, live in-play markets, and 24×7 support on WhatsApp — so you're never late to a moment that could swing your book."
+        "body": "Here's what our analysts are watching next: how team management responds, whether senior players step up in the coming fixtures, and how odds shift once the lineup is confirmed. Members using [Cricbet99 sports IDs](/sports-id) get early access to preview notes, [live in-play markets](/exchange), and 24×7 support on WhatsApp — so you're never late to a moment that could swing your book. Review our [Responsible Gaming](/responsible-gaming) policy to stay in control."
       }
     ]
   },
@@ -225,7 +225,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         "heading": "Cricbet99 Take",
-        "body": "Here's what our analysts are watching next: how team management responds, whether senior players step up in the coming fixtures, and how odds shift once the lineup is confirmed. Members using Cricbet99 sports IDs get early access to preview notes, live in-play markets, and 24×7 support on WhatsApp — so you're never late to a moment that could swing your book."
+        "body": "Here's what our analysts are watching next: how team management responds, whether senior players step up in the coming fixtures, and how odds shift once the lineup is confirmed. Members using [Cricbet99 sports IDs](/sports-id) get early access to preview notes, [live in-play markets](/exchange), and 24×7 support on WhatsApp — so you're never late to a moment that could swing your book. Review our [Responsible Gaming](/responsible-gaming) policy to stay in control."
       }
     ]
   },
@@ -247,7 +247,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         "heading": "Cricbet99 Take",
-        "body": "Here's what our analysts are watching next: how team management responds, whether senior players step up in the coming fixtures, and how odds shift once the lineup is confirmed. Members using Cricbet99 sports IDs get early access to preview notes, live in-play markets, and 24×7 support on WhatsApp — so you're never late to a moment that could swing your book."
+        "body": "Here's what our analysts are watching next: how team management responds, whether senior players step up in the coming fixtures, and how odds shift once the lineup is confirmed. Members using [Cricbet99 sports IDs](/sports-id) get early access to preview notes, [live in-play markets](/exchange), and 24×7 support on WhatsApp — so you're never late to a moment that could swing your book. Review our [Responsible Gaming](/responsible-gaming) policy to stay in control."
       }
     ]
   },
