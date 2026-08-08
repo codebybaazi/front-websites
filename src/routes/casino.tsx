@@ -43,17 +43,17 @@ function Casino() {
       <PageHero
         wide
         eyebrow="Intelligence & Entertainment"
-        title={<>Premium Live Casino. <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Zero Latency.</span> 24/7.</>}
-        subtitle="Cricbet99 redefines the online casino experience for Indian players. Combining bank-grade security with HD-streamed live tables, we offer the most immersive way to play Teen Patti, Andar Bahar, and 500+ slot titles with one verified ID."
+        title={<>Premium Live Casino. <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Zero Latency.</span> 24/7 Action.</>}
+        subtitle="Cricbet99 redefines the online casino experience for the modern Indian player. By combining bank-grade encryption with crystal-clear HD-streamed live tables, we offer the most immersive way to play Teen Patti, Andar Bahar, and 500+ premium slots with one verified ID."
       />
       
       <AiOverview 
-        summary="Cricbet99's Casino ecosystem is built on transparency and speed. With real human dealers, HD-quality broadcasting, and instant UPI-powered withdrawals, it is the premier choice for Indian casino enthusiasts."
+        summary="Cricbet99's Casino ecosystem is built on a foundation of transparency and speed. With professional human dealers, low-latency HD broadcasting, and instant UPI-powered withdrawals, it is the premier choice for serious Indian casino enthusiasts."
         highlights={[
-          "HD-Quality streams with zero buffering",
-          "Real professional dealers speaking Hindi/English",
-          "Instant round-by-round settlement systems",
-          "Dedicated 24/7 WhatsApp support for casino players"
+          "HD-Quality live streams with sub-second latency",
+          "Professional dealers providing a real casino atmosphere",
+          "Instant round-by-round settlement for all card games",
+          "24/7 dedicated WhatsApp support for VIP casino members"
         ]}
       />
 
