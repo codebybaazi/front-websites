@@ -73,33 +73,33 @@ const popularCasino = [
 
 const faqs = [
   {
-    q: "Is Cricbet99 safe and legal to play in India?",
-    a: "Absolutely. Cricbet99 has been India's most trusted online cricket ID since 2020 — protected by bank-grade SSL encryption, verified WhatsApp agents, and full KYC compliance. Skill-based online gaming is permitted in most Indian states; always check your local regulations before you play.",
+    q: "Is Cricbet99 safe and legal in India?",
+    a: "Cricbet99 is India's most trusted exchange, using 256-bit encryption and human-verified agents since 2020. Skill-based gaming is legal in most states; please check your local regulations before playing.",
     icon: "ShieldCheck",
   },
   {
     q: "How do I get my official Cricbet99 ID?",
-    a: "It's faster than bowling an over. Simply message our team on WhatsApp, and a real human manager will verify your details and activate your ID in under 2 minutes. No complicated forms or robotic systems—just direct, personalized service.",
+    a: "It's simple: message us on WhatsApp, and a real human manager will activate your official ID in under 2 minutes. No forms, no bots, just instant access.",
     icon: "Zap",
   },
   {
-    q: "What are the deposit and withdrawal limits?",
-    a: "We believe in making the game accessible for everyone. You can start with as little as ₹100 via UPI. Withdrawals are just as flexible—request your winnings on WhatsApp any time of the day, and they'll hit your bank account via UPI in minutes.",
+    q: "What is the minimum deposit for new users?",
+    a: "You can start your winning journey with as little as ₹100 via UPI. We believe in making professional betting accessible to every Indian fan.",
     icon: "Wallet",
   },
   {
     q: "Can I bet on IPL 2026 and other sports?",
-    a: "One ID gives you the keys to the kingdom. Bet on every ball of IPL 2026, international cricket, football leagues like EPL and UCL, Pro Kabaddi, horse racing, and even high-stakes live casino games like Teen Patti and Roulette.",
+    a: "Yes! One verified ID unlocks every match of IPL 2026, international cricket, football, tennis, and our premium 24/7 live casino suite.",
     icon: "Trophy",
   },
   {
-    q: "Is there a bonus for new players?",
-    a: "Yes! New members can claim a 100% welcome bonus up to ₹10,000 on their first deposit. We also offer regular cashback, reload bonuses, and referral rewards to our loyal community members. All terms are explained clearly by your manager on WhatsApp.",
+    q: "How fast are UPI withdrawals processed?",
+    a: "We lead the industry with lightning-fast payouts. Request your withdrawal on WhatsApp any time, and funds typically hit your bank account in minutes.",
     icon: "Gift",
   },
   {
     q: "Do you offer a Cricbet99 mobile app?",
-    a: "Yes! Our high-performance Android APK is optimized for low-latency betting. It's lightweight, secure, and lets you access your account with biometric login, so you never miss a match movement.",
+    a: "Yes, we have a high-performance Android APK optimized for low-latency live betting. You can also play directly in your mobile browser with zero lag.",
     icon: "Smartphone",
   },
 ];
