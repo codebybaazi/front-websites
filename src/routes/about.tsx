@@ -23,22 +23,15 @@ export const Route = createFileRoute("/about")({
       ],
       links: [{ rel: "canonical", href: canonical }],
       scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],
-        children: JSON.stringify(buildBreadcrumbJsonLd("      links: [{ rel: "canonical", href: canonical }],", "About Cricbet99 — India's Trusted Official Betting ID Platform")),", "About Cricbet99 — India's Trusted Official Betting ID Platform")),
-      },
-      ...(content.faqs && content.faqs.length ? [{
-        type: "application/ld+json",
-        children: JSON.stringify(buildFaqJsonLd(content.faqs)),
-      }] : [])
-    ],", "About Cricbet99 — India's Trusted Official Betting ID Platform")),
-      },
-      ...(content.faqs && content.faqs.length ? [{
-        type: "application/ld+json",
-        children: JSON.stringify(buildFaqJsonLd(content.faqs)),
-      }] : [])
-    ],
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(buildBreadcrumbJsonLd("/about", "About Cricbet99")),
+        },
+        ...(content.faqs && content.faqs.length ? [{
+          type: "application/ld+json",
+          children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+        }] : [])
+      ],
     };
   },
   component: AboutPage,
@@ -47,4 +40,3 @@ export const Route = createFileRoute("/about")({
 function AboutPage() {
   return <LongFormPage content={content} />;
 }
-
