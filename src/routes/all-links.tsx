@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SiteLayout, PageHero } from "@/components/site-layout";
+import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 
 export const Route = createFileRoute("/all-links")({
   head: () => ({
