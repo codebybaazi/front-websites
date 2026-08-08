@@ -1632,17 +1632,33 @@ export const footballFixtures: FootballFixture[] = [
     slug: "wc2026-sf-1",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "Semi-finalist 1",
-    awayTeam: "Semi-finalist 2",
+    homeTeam: "France",
+    awayTeam: "Spain",
     venue: "AT&T Stadium",
     city: "Dallas",
     country: "USA",
-    startDate: "2026-07-14T20:00:00",
+    startDate: "2026-07-14T15:00:00",
     status: "upcoming",
-    stage: "Semi-finals",
+    stage: "Semi-final",
     category: "Semi-finals",
     marketHighlights: ["To reach final"],
-    keywords: ["world cup semi final odds"]
+    keywords: ["france vs spain semi final odds"]
+  },
+  {
+    slug: "wc2026-sf-2",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "England",
+    awayTeam: "Argentina",
+    venue: "Mercedes-Benz Stadium",
+    city: "Atlanta",
+    country: "USA",
+    startDate: "2026-07-15T15:00:00",
+    status: "upcoming",
+    stage: "Semi-final",
+    category: "Semi-finals",
+    marketHighlights: ["To reach final"],
+    keywords: ["england vs argentina semi final odds"]
   },
 
   // --- THIRD PLACE ---
