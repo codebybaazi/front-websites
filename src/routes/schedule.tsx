@@ -36,6 +36,7 @@ function Schedule() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="2026 Schedule"
         title={<>Every big sports event of <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>2026, mapped.</span></>}
         subtitle="Plan your season. From IPL 2026 to the FIFA World Cup and the ICC T20 World Cup, here's the master 2026 sports calendar with live betting markets on Cricbet99."

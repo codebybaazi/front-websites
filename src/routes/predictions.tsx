@@ -30,6 +30,7 @@ function Predictions() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Match Predictions"
         title={<>Data-driven picks, <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>not guesswork.</span></>}
         subtitle="Cricbet99 publishes daily match predictions for IPL, international cricket, top football leagues and Grand Slam tennis — grounded in form, venue, pitch and market data."
