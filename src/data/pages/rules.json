@@ -1,56 +1,56 @@
 {
-  "eyebrow": "Policy",
-  "title": "Cricbet99 Rules & Regulations",
-  "subtitle": "Cricbet99 Rules & Regulations — fair play rules, market settlement and account conduct. Trusted by 1 lakh+ Indian players since 2020, with 24/7 WhatsApp support and instant UPI payouts.",
+  "eyebrow": "Rules",
+  "title": "Rules & Regulations",
+  "subtitle": "The official rulebook for market settlement, account operation, and fair play standards at Cricbet99.",
   "intro": [
-    "This page sets out our position on fair play rules, market settlement and account conduct in plain English, so every Cricbet99 member knows exactly what to expect.",
-    "Every part of the Cricbet99 experience — from ID setup to your first withdrawal — is handled by a real human on WhatsApp. There is no faceless system, no complicated dashboard and no waiting on email tickets that go nowhere. If you can send a WhatsApp message, you can play on Cricbet99.",
-    "We've built Cricbet99 around three principles: sharp odds, fast payouts and honest support. That's why players across every Indian state trust us with their cricket, casino and multi-sport action — and why the platform has grown steadily since 2020 with almost zero marketing spend."
+    "To ensure every bet is settled fairly, Cricbet99 operates under a strict set of Rules & Regulations. These rules are based on international sports settlement standards and are applied consistently to all members.",
+    "We believe in human accountability. Every rule listed here is enforced by real experts to ensure that technology errors or unusual match events are handled with common sense and integrity.",
+    "Whether you are betting on a T20 match, a Grand Slam final, or a live casino table, these regulations provide the foundation for a transparent gaming experience."
   ],
   "features": [
     {
-      "title": "Written in plain English",
-      "desc": "No dense legal jargon — every clause is explained in language every player understands."
+      "title": "Official Settlement Basis",
+      "desc": "All bets are settled using official match data from recognized governing bodies (e.g., ICC, FIFA)."
     },
     {
-      "title": "Aligned with global standards",
-      "desc": "Our policies borrow from the UK, Malta and Curaçao regulatory frameworks."
+      "title": "Live Betting Latency",
+      "desc": "We use high-speed feeds, but a standard delay applies to live markets to ensure fair pricing for all users."
     },
     {
-      "title": "Privacy-first by default",
-      "desc": "Your personal data is encrypted, never sold and only used to run your account."
+      "title": "Void Bet Protocols",
+      "desc": "Clear rules for matches impacted by rain, abandonment, or venue changes are published and followed."
     },
     {
-      "title": "Transparent settlement",
-      "desc": "Every market is settled against a public, verifiable source — no room for disputes."
+      "title": "Pricing Error Clause",
+      "desc": "In the rare case of a 'palpable error' (obvious wrong price), we reserve the right to settle at the correct market rate."
     },
     {
-      "title": "Fair-play guarantee",
-      "desc": "Suspicious activity is reviewed by humans, not just an algorithm, before any action."
+      "title": "Dispute Resolution Path",
+      "desc": "A transparent process to contest any settlement within 7 days via our senior audit team on WhatsApp."
     },
     {
-      "title": "Clear appeal process",
-      "desc": "You can appeal any decision to our compliance team within 30 days."
+      "title": "Casino Fairness Audit",
+      "desc": "All live dealer games are streamed from certified studios to guarantee RNG integrity and fairness."
     }
   ],
   "faqs": [
     {
-      "q": "Is this policy legally binding?",
-      "a": "Yes. By opening a Cricbet99 ID you accept our policies, which are written to be fair, clear and enforceable under applicable Indian law."
+      "q": "What happens in a Tie/Dead Heat?",
+      "a": "In markets where a draw is not offered, standard dead-heat rules apply, splitting the stake across winning outcomes."
     },
     {
-      "q": "When was it last updated?",
-      "a": "We review every policy at least once a year, and immediately after any material change in law or operating practice."
+      "q": "When are winnings credited?",
+      "a": "Most markets settle within 5-15 minutes of the match concluding. Complex multi-day events may take longer."
     },
     {
-      "q": "Can I appeal a decision?",
-      "a": "Yes. Every decision can be appealed to our compliance team within 30 days by writing to support."
+      "q": "Can I cancel a bet?",
+      "a": "Once a bet is confirmed, it cannot be canceled. Please double-check your stake and odds before confirming."
     },
     {
-      "q": "Where can I read all policies?",
-      "a": "All policies are linked from the footer of every Cricbet99 page and can also be requested via WhatsApp."
+      "q": "Where are the specific sport rules?",
+      "a": "We maintain detailed rulebooks for over 30 sports, which can be requested from your account manager on WhatsApp."
     }
   ],
-  "ctaHeading": "Ready to explore Cricbet99 Rules & Regulations?",
-  "ctaSub": "Message our team on WhatsApp — we'll set you up in under 2 minutes."
+  "ctaHeading": "Play by the rules, win big.",
+  "ctaSub": "If you need a detailed rulebook for a specific sport or market, message our 24/7 team on WhatsApp."
 }
