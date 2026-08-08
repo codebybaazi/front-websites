@@ -699,6 +699,7 @@ export const tennisFixtures: TennisFixture[] = [
     city: "Mallorca",
     country: "Spain",
     startDate: "2026-06-20T12:00:00+02:00",
+    endDate: "2026-06-27",
     status: "upcoming",
     stage: "Main Draw",
     category: "ATP 250",
