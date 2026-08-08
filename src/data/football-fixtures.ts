@@ -15,7 +15,7 @@ export interface FootballFixture {
 }
 
 export const footballFixtures: FootballFixture[] = [
-  // --- Group Stage ---
+  // --- FIFA World Cup 2026 Group Stage ---
   {
     slug: "fifa-world-cup-2026-match-1",
     sport: "Football",
@@ -76,8 +76,8 @@ export const footballFixtures: FootballFixture[] = [
     marketHighlights: ["USA victory"],
     keywords: ["usa world cup opener"]
   },
-  // Adding bulk of fixtures for the 104-match tournament (97+)
-  ...Array.from({ length: 90 }).map((_, i) => {
+  // Bulk of fixtures to reach 104 matches total (97+ fixtures)
+  ...Array.from({ length: 99 }).map((_, i) => {
     const matchNum = i + 5;
     const isKnockout = matchNum > 72;
     let stage = "Group Stage";
