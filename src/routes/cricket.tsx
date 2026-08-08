@@ -39,6 +39,13 @@ const markets = [
   { icon: Users, title: "Women's cricket", desc: "WPL, ICC Women's events and women's T20 internationals — match winners, top performers and team totals across every format." },
 ];
 
+const cricketFaqs = [
+  { q: "Can I bet on IPL 2026 ball-by-ball?", a: "Yes. Cricbet99 offers live session and fancy markets where you can trade on every ball, including runs in the next over, wicket fall, and individual player performance." },
+  { q: "Is session betting available for international cricket?", a: "Absolutely. We provide deep session markets for all Test matches, ODIs, and T20 Internationals involving India and other major cricketing nations." },
+  { q: "How fast are cricket match settlements?", a: "Matches are settled within minutes of completion. Live fancy bets and session markets are often settled as soon as the specific over or event concludes." },
+  { q: "Do you offer the sharpest IPL odds?", a: "Cricbet99 is known for providing the most competitive liquidity and odds in the Indian market, ensuring you get the maximum value for your IPL 2026 trades." },
+];
+
 function Cricket() {
   return (
     <SiteLayout>
@@ -82,6 +89,21 @@ function Cricket() {
               <h3 className="text-lg font-bold">{m.title}</h3>
               <p className="mt-2 text-sm text-foreground/70">{m.desc}</p>
             </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-6 py-16 border-t border-primary/10">
+        <h2 className="text-3xl font-black md:text-4xl">Cricket Betting FAQs</h2>
+        <div className="mt-10 space-y-4">
+          {cricketFaqs.map((f, i) => (
+            <details key={i} className="group rounded-2xl border border-primary/20 bg-background/60 p-6 open:bg-background/80">
+              <summary className="flex cursor-pointer list-none items-center justify-between font-bold text-foreground">
+                {f.q}
+                <ChevronRight className="h-5 w-5 transition-transform group-open:rotate-90" />
+              </summary>
+              <p className="mt-4 text-sm text-foreground/70 leading-relaxed">{f.a}</p>
+            </details>
           ))}
         </div>
       </section>
