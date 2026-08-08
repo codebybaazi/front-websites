@@ -4,7 +4,7 @@ import { blogPosts } from "@/data/blog-posts";
 import { matches } from "@/data/matches";
 
 // TODO: replace with your project URL once a project name or custom domain is set.
-const BASE_URL = "";
+const BASE_URL = "https://cricbet99.co.in";
 
 interface SitemapEntry {
   path: string;
