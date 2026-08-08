@@ -8,6 +8,7 @@ export interface TennisFixture {
   city: string;
   country: string;
   startDate: string;
+  endDate?: string;
   status: "live" | "upcoming";
   stage: string;
   category: string;
