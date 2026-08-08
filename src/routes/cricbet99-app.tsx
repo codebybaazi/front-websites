@@ -63,6 +63,18 @@ function AppPage() {
           ))}
         </ol>
       </section>
+      <section className="mx-auto max-w-4xl px-6 py-12 border-t border-primary/10">
+        <h2 className="text-2xl font-black">Learn more about Cricbet99</h2>
+        <div className="mt-6 flex flex-wrap gap-4">
+          <Link to="/how-it-works" className="text-sm font-bold text-primary hover:underline">How It Works</Link>
+          <span className="text-foreground/20">|</span>
+          <Link to="/is-cricbet99-legal" className="text-sm font-bold text-primary hover:underline">Is Cricbet99 Legal?</Link>
+          <span className="text-foreground/20">|</span>
+          <Link to="/about" className="text-sm font-bold text-primary hover:underline">About Us</Link>
+          <span className="text-foreground/20">|</span>
+          <Link to="/faq" className="text-sm font-bold text-primary hover:underline">Cricbet99 FAQ</Link>
+        </div>
+      </section>
       <CTABand heading="Get the Cricbet99 APK on WhatsApp." sub="Our team sends the verified install link and helps you set it up in under 5 minutes." />
     </SiteLayout>
   );
