@@ -156,7 +156,8 @@ function Schedule() {
                         <thead>
                           <tr className="border-b border-primary/10 bg-primary/5">
                             <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Tournament</th>
-                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Match</th>
+                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Tour/Surface</th>
+                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Defending Champ/Match</th>
                             <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Date & Time</th>
                             <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Venue</th>
                             <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Details</th>
@@ -169,10 +170,23 @@ function Schedule() {
                               <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors">
                                 <td className="p-4">
                                   <div className="text-sm font-bold text-foreground">{match.tournament}</div>
-                                  <div className="text-[10px] uppercase text-primary font-bold opacity-70 tracking-widest">{match.stage}</div>
+                                  <div className="text-[10px] uppercase text-primary font-bold opacity-70 tracking-widest">{match.category}</div>
                                 </td>
-                                <td className="p-4 font-bold text-foreground">{match.player1} vs {match.player2}</td>
-                                <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'eee, dd MMM yyyy · HH:mm')}</td>
+                                <td className="p-4">
+                                  <div className="flex flex-col gap-1">
+                                    <span className="text-[10px] px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 w-fit font-bold">
+                                      {match.tour}
+                                    </span>
+                                    <span className="text-[10px] px-2 py-0.5 rounded bg-background/60 text-foreground/60 border border-primary/10 w-fit">
+                                      {match.surface}
+                                    </span>
+                                  </div>
+                                </td>
+                                <td className="p-4">
+                                  <div className="text-sm font-bold text-foreground">{match.player1}</div>
+                                  <div className="text-[10px] text-foreground/40 italic">Prev: {match.player1}</div>
+                                </td>
+                                <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'dd MMM yyyy')}</td>
                                 <td className="p-4 text-sm text-foreground/60">{match.venue}, {match.city}</td>
                                 <td className="p-4">
                                   <Link 
