@@ -34,16 +34,16 @@ function Cricket() {
         wide
         eyebrow="Cricket Betting"
         title={<>Premium Cricket Betting & <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Live IPL Odds.</span></>}
-        subtitle="Cricbet99 is the heart of Indian cricket trading. From IPL 2026 to international bilateral tours, we provide deep live markets, ball-by-ball Fancy bets, and the fastest settlement in the industry."
+        subtitle="Cricbet99 is the official heart of Indian cricket trading. From the high-stakes action of IPL 2026 to international bilateral tours, we provide the deepest live markets, ball-by-ball session bets, and the fastest withdrawal settlements in the industry."
       />
 
       <AiOverview 
-        summary="Cricbet99 delivers a world-class cricket betting ecosystem for Indian fans. With a focus on IPL 2026 and international formats, we offer unmatched market depth, real-time odds, and secure WhatsApp-based account management."
+        summary="Cricbet99 delivers a world-class cricket betting ecosystem designed specifically for the Indian fan. With a primary focus on IPL 2026 and major international formats, we offer unmatched market liquidity, real-time odds updates, and secure, human-led account management via WhatsApp."
         highlights={[
-          "Live ball-by-ball Fancy and Session markets",
-          "Complete IPL 2026 coverage with top-tier odds",
-          "Instant settlement and same-day UPI withdrawals",
-          "Dedicated 24/7 personal support via WhatsApp"
+          "Live ball-by-ball Session and Fancy markets with high liquidity",
+          "Complete IPL 2026 coverage with the sharpest odds in India",
+          "Instant match settlement and 24/7 UPI withdrawals",
+          "Personal 1-on-1 support from verified human managers"
         ]}
       />
 

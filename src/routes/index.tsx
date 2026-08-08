@@ -299,7 +299,7 @@ function FaqSection() {
             </span>
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-foreground/65 md:text-base">
-            Clear, honest answers on safety, payouts, bonuses and everything in between — no fine print, no sales pitch.
+            Get clear, honest answers on account safety, fast payouts, welcome bonuses, and everything in between — no fine print, no automated responses, just direct support.
           </p>
         </div>
 
