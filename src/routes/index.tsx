@@ -124,13 +124,13 @@ export const Route = createFileRoute("/")({
     const image = `${origin}${heroBanner}`;
     return {
     meta: [
-      { title: "Cricbet99 — India's #1 Online Cricket ID Since 2020" },
+      { title: "Cricbet99 — India's #1 Online Cricket ID | IPL 2026 Betting" },
       {
         name: "description",
         content:
-          "Get your Cricbet99 ID in 5 minutes on WhatsApp. Bet on IPL, football, and casino with instant UPI payouts and 24/7 support. India's most trusted ID provider.",
+          "Get your official Cricbet99 ID in 5 minutes on WhatsApp. India's most trusted exchange for IPL 2026, live casino, and sports betting with instant UPI payouts.",
       },
-      { name: "keywords", content: "Cricbet99, cricbet99 id, online cricket id India, IPL 2026 betting, T20 World Cup betting, live cricket betting, betting id whatsapp, online casino India, teen patti, andar bahar" },
+      { name: "keywords", content: "Cricbet99, cricbet99 id, online cricket id, ipl betting id, cricbet99 official app, live cricket betting india, cricket betting whatsapp number, cricbet99 login" },
       { property: "og:title", content: "Cricbet99 — India's #1 Online Cricket ID Since 2020" },
       {
         property: "og:description",

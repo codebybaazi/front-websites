@@ -6,8 +6,8 @@ import { AiOverview } from "@/components/ai-overview";
 export const Route = createFileRoute("/cricket")({
   head: () => ({
     meta: [
-      { title: "Cricket Betting on Cricbet99 | IPL 2026 Live Odds & ID" },
-      { name: "description", content: "Join Cricbet99 for the best cricket betting experience in India. Live IPL 2026 odds, session markets, and ball-by-ball fancy bets. Get your official Cricbet99 ID via WhatsApp now." },
+      { title: "IPL 2026 Betting & Live Cricket Odds | Cricbet99 Official" },
+      { name: "description", content: "Experience premium IPL 2026 betting on Cricbet99. Get live cricket odds, session markets, and ball-by-ball fancy bets with India's most trusted sports ID." },
       { property: "og:title", content: "Official Cricket Betting on Cricbet99 | Live IPL 2026" },
       { property: "og:description", content: "Bet on every ball of IPL 2026 and international tours with India's most trusted exchange. Instant withdrawals and 24/7 support." },
       { property: "og:type", content: "website" },
