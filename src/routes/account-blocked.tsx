@@ -5,14 +5,14 @@ import content from "@/data/pages/account-blocked.json";
 export const Route = createFileRoute("/account-blocked")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 Account Blocked? — Cricbet99" },
-      { name: "description", content: "Cricbet99 Account Blocked? on Cricbet99: unblock your account and restore full access quickly. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:title", content: "Cricbet99 Account Blocked? — Cricbet99" },
-      { property: "og:description", content: "Cricbet99 Account Blocked? on Cricbet99: unblock your account and restore full access quickly. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
+      { title: "Cricbet99 Account Restricted? | Restore Access Now" },
+      { name: "description", content: "Is your Cricbet99 ID blocked or restricted? Learn why security blocks happen and how to unblock your account instantly via official WhatsApp verification." },
+      { property: "og:title", content: "Account Recovery Guide: Unblocking Your Cricbet99 ID" },
+      { property: "og:description", content: "Secure account restoration for Cricbet99 members. Update your KYC and restore your balance with India's most secure cricket betting platform." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/account-blocked" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/account-blocked" }],
     scripts: content.faqs && content.faqs.length ? [{
       type: "application/ld+json",
       children: JSON.stringify(buildFaqJsonLd(content.faqs)),
