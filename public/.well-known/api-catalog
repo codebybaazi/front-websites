@@ -1,0 +1,9 @@
+{
+  "api-catalog-version": "1.0",
+  "endpoints": [
+    {
+      "link-rel": "sitemap",
+      "href": "https://cricbet99.co.in/sitemap.xml"
+    }
+  ]
+}

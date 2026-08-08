@@ -1,6 +1,10 @@
 User-agent: *
 Allow: /
 
+# Enhanced Content-Signals (RFC 9727 & RFC 8288 support)
+# Content-Signals: sitemap="https://cricbet99.co.in/sitemap.xml"
+# Content-Signals: api-catalog="https://cricbet99.co.in/.well-known/api-catalog"
+
 # Sitemap Location
 Sitemap: https://cricbet99.co.in/sitemap.xml
 
