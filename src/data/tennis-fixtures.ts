@@ -1292,6 +1292,7 @@ export const tennisFixtures: TennisFixture[] = [
     city: "Madrid",
     country: "Spain",
     startDate: "2026-04-20T11:00:00+02:00",
+    endDate: "2026-05-04",
     status: "upcoming",
     stage: "WTA 1000",
     category: "WTA 1000",
