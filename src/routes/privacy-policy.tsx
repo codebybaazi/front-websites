@@ -1,46 +1,38 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteLayout, PageHero } from "@/components/site-layout";
+import { LongFormPage, buildBreadcrumbJsonLd } from "@/components/long-form-page";
+import content from "@/data/pages/privacy-policy.json";
+import { getRequestOrigin } from "@/lib/origin.functions";
 
 export const Route = createFileRoute("/privacy-policy")({
-  head: () => ({
-    meta: [
-      { title: "Privacy Policy — Cricbet99" },
-      { name: "description", content: "How Cricbet99 collects, uses and protects your personal information, including OTP verification, payment data and communication preferences." },
-      { property: "og:title", content: "Cricbet99 Privacy Policy" },
-      { property: "og:description", content: "How Cricbet99 collects, uses and protects your personal data." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
+  loader: async () => ({
+    origin: await getRequestOrigin(),
   }),
-  component: PrivacyPolicy,
+  head: ({ loaderData }) => {
+    const origin = loaderData?.origin ?? "";
+    const canonical = `${origin}/privacy-policy`;
+    return {
+      meta: [
+        { title: "Privacy Policy — Official Cricbet99 Data Protection & Security" },
+        { name: "description", content: "Read the official Cricbet99 Privacy Policy. Learn how we protect your personal information, banking details, and WhatsApp communication with bank-grade encryption." },
+        { name: "keywords", content: "cricbet99 privacy policy, data security betting, secure cricket id, betting privacy india, encrypted withdrawals" },
+        { property: "og:title", content: "Cricbet99 Privacy Policy — Your Data is Secure" },
+        { property: "og:description", content: "We use 256-bit encryption and human-led security to keep your account data private. Zero data sharing with third parties." },
+        { property: "og:url", content: canonical },
+        { property: "og:type", content: "website" },
+      ],
+      links: [{ rel: "canonical", href: canonical }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(buildBreadcrumbJsonLd("/privacy-policy", "Privacy Policy")),
+        }
+      ],
+    };
+  },
+  component: PrivacyPolicyPage,
 });
 
-const sections = [
-  { title: "What we collect", body: "We collect the minimum information needed to create and secure your Cricbet99 account: your name, mobile number, OTP verification data, deposit/withdrawal transaction references and communication logs from our WhatsApp and email support channels." },
-  { title: "How we use your data", body: "Your data is used only to set up your account, process deposits and withdrawals, respond to your support queries and secure your login. We do not sell your data to third parties for advertising or marketing purposes." },
-  { title: "Who we share data with", body: "We share limited data with our payment processing partners strictly for the purpose of settling deposits and withdrawals, and with regulatory or law enforcement authorities when legally required. Nothing else is shared without your explicit consent." },
-  { title: "Data security", body: "All communication with Cricbet99 support and account systems is protected with industry-standard encryption. Your credentials are stored securely and access is restricted to authorised support personnel only." },
-  { title: "Your rights", body: "You may request a copy of your data, correction of inaccurate information or deletion of your account at any time by contacting our support team on WhatsApp or email." },
-  { title: "Contact us about privacy", body: "For any privacy-related questions or requests, reach out to our support team via WhatsApp or email — we respond to privacy queries within 48 hours." },
-];
-
-function PrivacyPolicy() {
-  return (
-    <SiteLayout>
-      <PageHero
-        wide
-        eyebrow="Privacy"
-        title={<>Your data, <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>your control.</span></>}
-        subtitle="We collect only what's necessary to run your Cricbet99 account, protect your logins and process your payments — and we never sell your personal information to third parties."
-      />
-      <section className="mx-auto max-w-4xl px-6 py-16 space-y-6">
-        {sections.map((s) => (
-          <div key={s.title} className="rounded-2xl border border-primary/20 bg-background/60 p-7">
-            <h2 className="text-xl font-bold">{s.title}</h2>
-            <p className="mt-3 text-foreground/75">{s.body}</p>
-          </div>
-        ))}
-      </section>
-    </SiteLayout>
-  );
+function PrivacyPolicyPage() {
+  return <LongFormPage content={content} />;
 }
+

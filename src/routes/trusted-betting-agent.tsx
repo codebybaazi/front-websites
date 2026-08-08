@@ -1,26 +1,42 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { LongFormPage, buildFaqJsonLd } from "@/components/long-form-page";
+import { LongFormPage, buildFaqJsonLd, buildBreadcrumbJsonLd } from "@/components/long-form-page";
 import content from "@/data/pages/trusted-betting-agent.json";
+import { getRequestOrigin } from "@/lib/origin.functions";
 
 export const Route = createFileRoute("/trusted-betting-agent")({
-  head: () => ({
-    meta: [
-      { title: "Trusted Cricbet99 Betting Agent — Cricbet99" },
-      { name: "description", content: "Trusted Cricbet99 Betting Agent on Cricbet99: dedicated human agents who guide every bet you place. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:title", content: "Trusted Cricbet99 Betting Agent — Cricbet99" },
-      { property: "og:description", content: "Trusted Cricbet99 Betting Agent on Cricbet99: dedicated human agents who guide every bet you place. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:type", content: "article" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/trusted-betting-agent" }],
-    scripts: content.faqs && content.faqs.length ? [{
-      type: "application/ld+json",
-      children: JSON.stringify(buildFaqJsonLd(content.faqs)),
-    }] : [],
+  loader: async () => ({
+    origin: await getRequestOrigin(),
   }),
-  component: Page_trusted_betting_agent,
+  head: ({ loaderData }) => {
+    const origin = loaderData?.origin ?? "";
+    const canonical = `${origin}/trusted-betting-agent`;
+    return {
+      meta: [
+        { title: "Official Trusted Cricbet99 Betting Agent — 24/7 WhatsApp Service" },
+        { name: "description", content: "Connect with a verified Cricbet99 betting agent. Get expert guidance on markets, instant ID activation, and secure withdrawal assistance from India's most reliable team." },
+        { name: "keywords", content: "trusted cricbet99 agent, official cricket id agent, whatsapp betting agent india, verified bookie agent, cricbet99 support number" },
+        { property: "og:title", content: "Trusted Cricbet99 Agents — Professional Human Support" },
+        { property: "og:description", content: "Skip the bots. Get a real, verified agent to manage your Cricbet99 ID and help you with every bet." },
+        { property: "og:url", content: canonical },
+        { property: "og:type", content: "article" },
+      ],
+      links: [{ rel: "canonical", href: canonical }],
+      scripts: [
+        ...(content.faqs && content.faqs.length ? [{
+          type: "application/ld+json",
+          children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+        }] : []),
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(buildBreadcrumbJsonLd("/trusted-betting-agent", "Trusted Agent")),
+        }
+      ],
+    };
+  },
+  component: TrustedAgentPage,
 });
 
-function Page_trusted_betting_agent() {
+function TrustedAgentPage() {
   return <LongFormPage content={content} />;
 }
+

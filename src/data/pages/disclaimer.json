@@ -1,0 +1,56 @@
+{
+  "eyebrow": "Safety",
+  "title": "Disclaimer",
+  "subtitle": "Important information regarding financial risk, jurisdictional legality, and the entertainment-only nature of our platform.",
+  "intro": [
+    "Cricbet99 provides access to sports betting and gaming markets for entertainment purposes only. It is critical that every user understands the risks involved in online participation.",
+    "This disclaimer outlines the boundaries of our services and your responsibilities as a player. We aim to be fully transparent so you can make informed decisions about your gaming activity.",
+    "By using Cricbet99, you acknowledge that you have read and understood these points regarding financial risk and legal compliance."
+  ],
+  "features": [
+    {
+      "title": "Financial Risk Acknowledgment",
+      "desc": "All betting involves the risk of loss. Cricbet99 does not guarantee winnings or returns on any stake."
+    },
+    {
+      "title": "Entertainment-Only Purpose",
+      "desc": "Our platform is designed for fun and social gaming. It should never be used as a primary income source."
+    },
+    {
+      "title": "Jurisdictional Compliance",
+      "desc": "It is your responsibility to ensure that online betting is legal in your specific Indian state or territory."
+    },
+    {
+      "title": "Accuracy of Information",
+      "desc": "While we strive for 100% accuracy, Cricbet99 is not liable for errors in third-party scores or schedules."
+    },
+    {
+      "title": "Individual Responsibility",
+      "desc": "Players are solely responsible for the security of their ID credentials and the bets they choose to place."
+    },
+    {
+      "title": "Third-Party Trademarks",
+      "desc": "Sports team logos and names are used for identification only and do not imply official partnership."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is betting legal in my state?",
+      "a": "Laws vary by state (e.g., Sikkim vs. Telangana). You must verify local regulations before creating an ID."
+    },
+    {
+      "q": "What if a match is abandoned?",
+      "a": "Bets are settled according to our official rules, which usually involve voiding the bet or following DLS results."
+    },
+    {
+      "q": "Can I lose more than I deposit?",
+      "a": "No. You can only stake funds already available in your verified ID balance."
+    },
+    {
+      "q": "Is Cricbet99 responsible for losses?",
+      "a": "No. All financial outcomes are the result of the player's own decisions and the inherent randomness of gaming."
+    }
+  ],
+  "ctaHeading": "Play smart, play safe.",
+  "ctaSub": "If you have questions about our policies, our WhatsApp support team is ready to provide clear answers 24/7."
+}

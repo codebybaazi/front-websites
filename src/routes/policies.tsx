@@ -1,26 +1,42 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { LongFormPage, buildFaqJsonLd } from "@/components/long-form-page";
+import { LongFormPage, buildFaqJsonLd, buildBreadcrumbJsonLd } from "@/components/long-form-page";
 import content from "@/data/pages/policies.json";
+import { getRequestOrigin } from "@/lib/origin.functions";
 
 export const Route = createFileRoute("/policies")({
-  head: () => ({
-    meta: [
-      { title: "Cricbet99 Policies — Cricbet99" },
-      { name: "description", content: "Cricbet99 Policies on Cricbet99: all our policies — privacy, KYC, refunds and responsible gaming — in one place. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:title", content: "Cricbet99 Policies — Cricbet99" },
-      { property: "og:description", content: "Cricbet99 Policies on Cricbet99: all our policies — privacy, KYC, refunds and responsible gaming — in one place. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:type", content: "article" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/policies" }],
-    scripts: content.faqs && content.faqs.length ? [{
-      type: "application/ld+json",
-      children: JSON.stringify(buildFaqJsonLd(content.faqs)),
-    }] : [],
+  loader: async () => ({
+    origin: await getRequestOrigin(),
   }),
-  component: Page_policies,
+  head: ({ loaderData }) => {
+    const origin = loaderData?.origin ?? "";
+    const canonical = `${origin}/policies`;
+    return {
+      meta: [
+        { title: "Cricbet99 Official Policies — Privacy, KYC & Fairness" },
+        { name: "description", content: "Complete directory of Cricbet99 policies. Learn about our data protection standards, KYC requirements, and commitment to fair play and transparent betting." },
+        { name: "keywords", content: "cricbet99 policies, betting platform rules, kyc requirements india, fair play betting, secure gaming directory" },
+        { property: "og:title", content: "Cricbet99 Policy Hub — Transparency You Can Trust" },
+        { property: "og:description", content: "Explore our comprehensive policies designed to protect every Cricbet99 member and ensure a professional gaming environment." },
+        { property: "og:url", content: canonical },
+        { property: "og:type", content: "article" },
+      ],
+      links: [{ rel: "canonical", href: canonical }],
+      scripts: [
+        ...(content.faqs && content.faqs.length ? [{
+          type: "application/ld+json",
+          children: JSON.stringify(buildFaqJsonLd(content.faqs)),
+        }] : []),
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(buildBreadcrumbJsonLd("/policies", "Policies")),
+        }
+      ],
+    };
+  },
+  component: PolicyHubPage,
 });
 
-function Page_policies() {
+function PolicyHubPage() {
   return <LongFormPage content={content} />;
 }
+
