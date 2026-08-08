@@ -124,7 +124,7 @@ export const Route = createFileRoute("/")({
     const image = `${origin}${heroBanner}`;
     return {
     meta: [
-      { title: "Cricbet99 — India's #1 Online Cricket ID | IPL 2026 Betting" },
+      { title: "Cricbet99 — Best Online Cricket ID 2026 | Verified Cricbet99 Official" },
       {
         name: "description",
         content:

@@ -5,7 +5,7 @@ import content from "@/data/pages/register.json";
 export const Route = createFileRoute("/register")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 Signup — Create Verified Betting ID Online" },
+      { title: "Cricbet99 Signup — India's Trusted Betting ID Registration" },
       { name: "description", content: "Create your verified Cricbet99 ID in under 2 minutes. Get official signup access via WhatsApp for instant UPI deposits and withdrawals. Join 1 Lakh+ trusted players." },
       { name: "keywords", content: "cricbet99 signup, cricbet99 register, create cricbet99 id, cricbet99 new account, cricbet99 official signup, online betting id registration, get cricbet99 whatsapp id" },
       { property: "og:title", content: "Cricbet99 Signup — Official Registration & ID Creation" },
