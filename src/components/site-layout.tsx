@@ -134,7 +134,7 @@ export function SiteFooter() {
             <li><Link to="/disclaimer" className="hover:text-primary">Disclaimer</Link></li>
             <li className="flex items-center gap-2 pt-2"><MessageCircle className="h-4 w-4 text-accent" /> WhatsApp 24/7</li>
             <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-accent" /> +91 99999 99999</li>
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-accent" /> support@cricbet99.com</li>
+            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-accent" /> support@cricbet99.co.in</li>
           </ul>
         </div>
       </div>

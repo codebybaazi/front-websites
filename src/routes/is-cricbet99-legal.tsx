@@ -21,7 +21,7 @@ export const Route = createFileRoute("/is-cricbet99-legal")({
       }] : []),
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildArticleJsonLd(content, "https://cricbet99.com/is-cricbet99-legal")),
+        children: JSON.stringify(buildArticleJsonLd(content, "https://cricbet99.co.in/is-cricbet99-legal")),
       },
       {
         type: "application/ld+json",

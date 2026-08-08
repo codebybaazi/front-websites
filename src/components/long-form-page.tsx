@@ -130,14 +130,14 @@ export function buildArticleJsonLd(content: PageContent, url: string) {
     author: {
       "@type": "Organization",
       "name": "Cricbet99",
-      "url": "https://cricbet99.com"
+      "url": "https://cricbet99.co.in"
     },
     publisher: {
       "@type": "Organization",
       "name": "Cricbet99",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://cricbet99.com/favicon.png"
+        "url": "https://cricbet99.co.in/favicon.png"
       }
     },
     mainEntityOfPage: {
@@ -154,7 +154,7 @@ export function buildBreadcrumbJsonLd(path: string, title: string) {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://cricbet99.com/"
+      "item": "https://cricbet99.co.in/"
     }
   ];
 
@@ -164,20 +164,20 @@ export function buildBreadcrumbJsonLd(path: string, title: string) {
       "@type": "ListItem",
       "position": 2,
       "name": parentName,
-      "item": `https://cricbet99.com/${parts[0]}`
+      "item": `https://cricbet99.co.in/${parts[0]}`
     });
     items.push({
       "@type": "ListItem",
       "position": 3,
       "name": title,
-      "item": `https://cricbet99.com${path}`
+      "item": `https://cricbet99.co.in${path}`
     });
   } else {
     items.push({
       "@type": "ListItem",
       "position": 2,
       "name": title,
-      "item": `https://cricbet99.com${path}`
+      "item": `https://cricbet99.co.in${path}`
     });
   }
 
