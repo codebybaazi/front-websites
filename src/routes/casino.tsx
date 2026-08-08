@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
-import { Gamepad2, Sparkles, Dices, Crown, ShieldCheck, Zap } from "lucide-react";
+import { Gamepad2, Sparkles, Dices, Crown, ShieldCheck, Zap, ChevronRight } from "lucide-react";
 import { AiOverview } from "@/components/ai-overview";
 import { getRequestOrigin } from "@/lib/origin.functions";
+import { buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/components/long-form-page";
 
 export const Route = createFileRoute("/casino")({
   loader: async () => ({

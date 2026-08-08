@@ -38,6 +38,13 @@ const leagues = [
   { name: "FIFA internationals", desc: "World Cup qualifiers, UEFA Nations League and friendlies with tournament and match-level markets." },
 ];
 
+const footballFaqs = [
+  { q: "Can I bet live on ISL matches?", a: "Yes, Cricbet99 provides comprehensive live betting markets for every Indian Super League fixture, including match winner, next goal, and total corners." },
+  { q: "Which international football leagues are available?", a: "We cover all major leagues including the English Premier League, La Liga, Bundesliga, Serie A, and the UEFA Champions League with hundreds of markets per match." },
+  { q: "Do you offer Asian Handicap betting for football?", a: "Yes, our platform includes Asian Handicap, European Handicap, and Goal Line markets for professional traders looking for specialized football betting options." },
+  { q: "What is the minimum stake for football betting?", a: "You can start placing football bets with as little as ₹100. Our platform is designed to be accessible for both casual fans and high-stakes traders." },
+];
+
 function Football() {
   return (
     <SiteLayout>
@@ -57,6 +64,22 @@ function Football() {
           ))}
         </div>
       </section>
+
+      <section className="mx-auto max-w-4xl px-6 py-16 border-t border-primary/10">
+        <h2 className="text-3xl font-black md:text-4xl">Football Betting FAQs</h2>
+        <div className="mt-10 space-y-4">
+          {footballFaqs.map((f, i) => (
+            <details key={i} className="group rounded-2xl border border-primary/20 bg-background/60 p-6 open:bg-background/80">
+              <summary className="flex cursor-pointer list-none items-center justify-between font-bold text-foreground">
+                {f.q}
+                <ChevronRight className="h-5 w-5 transition-transform group-open:rotate-90" />
+              </summary>
+              <p className="mt-4 text-sm text-foreground/70 leading-relaxed">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
       <CTABand heading="Kick off with a Cricbet99 ID." sub="Live football odds, deep markets and instant payouts — all on WhatsApp." />
     </SiteLayout>
   );
