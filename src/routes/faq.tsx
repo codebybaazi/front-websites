@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export const Route = createFileRoute("/faq")({
   head: () => ({
@@ -71,14 +72,22 @@ function FAQ() {
       />
       <section className="mx-auto max-w-4xl px-6 py-12">
         <div className="space-y-4">
-          {faqs.map((f) => (
-            <details key={f.q} className="group rounded-2xl border border-primary/20 bg-background/60 p-6 open:border-primary/60">
-              <summary className="cursor-pointer list-none text-lg font-bold text-foreground marker:hidden">
-                {f.q}
-              </summary>
-              <p className="mt-3 text-foreground/75">{f.a}</p>
-            </details>
-          ))}
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {faqs.map((f, idx) => (
+              <AccordionItem 
+                key={idx} 
+                value={`item-${idx}`}
+                className="rounded-2xl border border-primary/10 bg-black/40 px-6 transition-all hover:border-primary/30 data-[state=open]:border-primary/50 data-[state=open]:bg-black/60"
+              >
+                <AccordionTrigger className="text-left font-bold text-foreground/90 hover:text-primary hover:no-underline py-5">
+                  {f.q}
+                </AccordionTrigger>
+                <AccordionContent className="pb-5 text-foreground/70 leading-relaxed border-t border-white/5 mt-2 pt-4">
+                  {f.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
       <CTABand heading="Still have questions?" sub="Our WhatsApp team is online 24/7 — send us a message and we'll get right back." />

@@ -1,5 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteLayout, CTABand } from "@/components/site-layout";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { blogPosts, getPostBySlug } from "@/data/blog-posts";
 import defaultHero from "@/assets/stadium.webp";
 
@@ -52,6 +53,13 @@ export const Route = createFileRoute("/blog/$slug")({
               "@type": "WebPage",
               "@id": `https://cricbet99.co.in/blog/${params.slug}`
             },
+            ...(post.faqs ? {
+              mainEntity: post.faqs.map(f => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: { "@type": "Answer", text: f.a }
+              }))
+            } : {})
           }),
         },
         {
@@ -112,6 +120,30 @@ function PostPage() {
             </section>
           ))}
         </div>
+
+        {post.faqs && post.faqs.length > 0 && (
+          <div className="mt-16 rounded-3xl border border-primary/20 bg-background/40 p-8 backdrop-blur-sm">
+            <h2 className="mb-8 text-3xl font-black italic tracking-tighter text-primary uppercase">
+              Insights & <span className="text-white text-stroke-primary">FAQ</span>
+            </h2>
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              {post.faqs.map((faq: { q: string; a: string }, idx: number) => (
+                <AccordionItem 
+                  key={idx} 
+                  value={`item-${idx}`}
+                  className="rounded-2xl border border-primary/10 bg-black/40 px-6 transition-all hover:border-primary/30 data-[state=open]:border-primary/50 data-[state=open]:bg-black/60"
+                >
+                  <AccordionTrigger className="text-left font-bold text-foreground/90 hover:text-primary hover:no-underline py-5">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-5 text-foreground/70 leading-relaxed border-t border-white/5 mt-2 pt-4">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        )}
       </article>
 
       <section className="mx-auto max-w-7xl px-6 pb-16">

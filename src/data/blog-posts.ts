@@ -6,6 +6,7 @@ export type BlogPost = {
   excerpt: string;
   hero?: string;
   sections: { heading: string; body: string }[];
+  faqs?: { q: string; a: string }[];
 };
 
 export const blogPosts: BlogPost[] = [
@@ -29,6 +30,20 @@ export const blogPosts: BlogPost[] = [
         "heading": "Expert Take: Cricbet99 Betting Strategy",
         "body": "Our analysts recommend watching the toss market and opening partnership session rates closely. Members with a verified Cricbet99 sports ID get instant access to in-play markets, high-odds betting tips, and 24x7 WhatsApp support for hassle-free withdrawals. For more details on safe play, check our [How It Works](/how-it-works) guide and [Is Cricbet99 Legal?](/is-cricbet99-legal) analysis. Stay ahead of the game with the most trusted online cricket ID in India."
       }
+    ],
+    "faqs": [
+      {
+        "q": "What is the schedule for India vs Afghanistan 2026?",
+        "a": "The series starts with a one-off Test in New Chandigarh, followed by a T20I series. Check our live match dashboard for real-time updates."
+      },
+      {
+        "q": "Can I bet on the Ind vs Afg series on Cricbet99?",
+        "a": "Yes, we provide full coverage including match winner, session rates, and player performance markets for every match in the series."
+      },
+      {
+        "q": "Are there special bonuses for this series?",
+        "a": "Active members get boosted odds on top-performing players like Rashid Khan and Virat Kohli. Message support on WhatsApp for current offers."
+      }
     ]
   },
   {
@@ -50,6 +65,20 @@ export const blogPosts: BlogPost[] = [
       {
         "heading": "Pro Tip for IPL 2027 Preview",
         "body": "As we look toward the next season, getting your Cricbet99 ID early ensures you don't miss out on pre-match bonuses and exclusive IPL betting tips. Whether you're interested in the Orange Cap race or individual player performance markets, Cricbet99 remains India's #1 destination for verified betting IDs."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Who won the IPL 2026 final?",
+        "a": "Royal Challengers Bengaluru (RCB) defeated Gujarat Titans by 5 wickets in Ahmedabad to claim their second consecutive title."
+      },
+      {
+        "q": "Where can I find IPL 2026 final betting stats?",
+        "a": "Cricbet99 members can view detailed settlement data and winning trends in their account history or via WhatsApp support."
+      },
+      {
+        "q": "When does IPL 2027 registration start?",
+        "a": "You can register your Cricbet99 ID now to be ready for the 2027 auction and pre-season markets."
       }
     ]
   },
@@ -73,6 +102,20 @@ export const blogPosts: BlogPost[] = [
         "heading": "Cricbet99 Trading Insights",
         "body": "We advise members to use the Cricbet99 app for low-latency live betting during these high-action periods. Fast execution is key when betting on session rates or player performance milestones. Secure your verified Cricbet99 ID today to participate in India's most dynamic sports trading community."
       }
+    ],
+    "faqs": [
+      {
+        "q": "How did Suryavanshi perform against Bumrah?",
+        "a": "The teenage prodigy hit Jasprit Bumrah for a six on the very first ball he faced, causing a massive surge in live exchange rates."
+      },
+      {
+        "q": "Can I bet on individual player milestones like this?",
+        "a": "Yes, Cricbet99 offers 'Fancy' markets where you can bet on whether a player will hit a boundary or reach a specific run milestone."
+      },
+      {
+        "q": "Is the Cricbet99 app fast enough for live batting?",
+        "a": "Our platform is optimized for low-latency execution, ensuring your bets are placed instantly during high-action moments."
+      }
     ]
   },
   {
@@ -94,6 +137,20 @@ export const blogPosts: BlogPost[] = [
       {
         "heading": "Safe Casino Gaming on Cricbet99",
         "body": "Cricbet99 provides a secure environment for Indian casino enthusiasts. With instant UPI deposits and same-day withdrawals, it's the most trusted platform for real-money gaming. Get your [Cricbet99 ID](/register) via WhatsApp to access exclusive [casino bonuses](/bonus) and 24/7 human support for all your gaming needs."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What are the most popular casino games on Cricbet99?",
+        "a": "Indian favorites like Teen Patti, Andar Bahar, and Live Roulette are the most active tables on our platform."
+      },
+      {
+        "q": "Is the live casino fair?",
+        "a": "Yes, all games use real dealers and physical cards/wheels, streamed in HD to ensure total transparency and fair play."
+      },
+      {
+        "q": "How do I claim a casino bonus?",
+        "a": "Message your account manager on WhatsApp after your first deposit to have your 100% casino welcome bonus credited."
       }
     ]
   },
@@ -117,6 +174,20 @@ export const blogPosts: BlogPost[] = [
         "heading": "Cricbet99: India's Best Betting ID",
         "body": "Don't miss a single match in 2026. Cricbet99 offers the most comprehensive coverage of international and domestic cricket. With our verified WhatsApp agents, setting up your [Cricbet99 ID](/cricbet99-id) is quick and easy. Enjoy [high odds](/todays-best-odds), instant payouts, and the best customer service in the Indian betting industry. New to the platform? Start with our [How to Deposit](/how-to-deposit) guide."
       }
+    ],
+    "faqs": [
+      {
+        "q": "Which major cricket tournaments are in 2026?",
+        "a": "2026 features the T20 World Cup, IPL 2026, and several high-profile bilateral series involving India, England, and Australia."
+      },
+      {
+        "q": "Can I get a season-long betting ID?",
+        "a": "One Cricbet99 ID works for the entire year, giving you access to every match and tournament on the 2026 calendar."
+      },
+      {
+        "q": "Are the match schedules on Cricbet99 official?",
+        "a": "Yes, we sync with official ICC and BCCI calendars to ensure our members have the most accurate fixture data."
+      }
     ]
   },
   {
@@ -138,6 +209,20 @@ export const blogPosts: BlogPost[] = [
       {
         "heading": "Cricbet99 Take",
         "body": "Here's what our analysts are watching next: how team management responds, whether senior players step up in the coming fixtures, and how odds shift once the lineup is confirmed. Members using [Cricbet99 sports IDs](/sports-id) get early access to preview notes, [live in-play markets](/exchange), and 24×7 support on WhatsApp — so you're never late to a moment that could swing your book. Review our [Responsible Gaming](/responsible-gaming) policy to stay in control."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Why was Shubman Gill's bowling strategy criticized?",
+        "a": "Critics pointed to a repetitive short-ball tactic against England that allowed the opposition to settle and score freely."
+      },
+      {
+        "q": "How does team criticism affect betting odds?",
+        "a": "Negative reports or internal pressure can cause a team's win probability to drop, offering higher odds for those who believe in a comeback."
+      },
+      {
+        "q": "Where can I see live match critiques?",
+        "a": "Cricbet99 members receive expert market insights and performance analysis via our exclusive WhatsApp update channel."
       }
     ]
   },
