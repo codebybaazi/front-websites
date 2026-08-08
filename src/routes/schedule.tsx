@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
 import { matches } from "@/data/matches";
+import { footballFixtures } from "@/data/football-fixtures";
 import { Calendar, MapPin, Trophy, Clock, ArrowRight, ExternalLink } from "lucide-react";
 import { format } from "date-fns";
 import { useState } from "react";
@@ -121,14 +122,14 @@ function Schedule() {
                               </tr>
                             </thead>
                             <tbody>
-                              {matches
+                              {[...matches, ...footballFixtures]
                                 .filter(m => m.sport === "Football" && (m as any).category === category)
                                 .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
                                 .map((match) => (
                                   <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors">
                                     <td className="p-4 text-sm font-medium text-foreground/80">{match.stage}</td>
                                     <td className="p-4 font-bold text-foreground">{match.homeTeam} vs {match.awayTeam}</td>
-                                    <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'eee, dd MMM yyyy')}</td>
+                                    <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'eee, dd MMM yyyy · HH:mm')}</td>
                                     <td className="p-4 text-sm text-foreground/60">{match.venue}, {match.city}</td>
                                     <td className="p-4">
                                       <Link 
