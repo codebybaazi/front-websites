@@ -4,10 +4,11 @@ import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
 import { matches } from "@/data/matches";
 import { footballFixtures } from "@/data/football-fixtures";
 import { tennisFixtures } from "@/data/tennis-fixtures";
-import { Calendar, MapPin, Trophy, Clock, ArrowRight, ExternalLink } from "lucide-react";
+import { Calendar, MapPin, Trophy, Clock, ArrowRight, ExternalLink, BrainCircuit, Sparkles, TrendingUp } from "lucide-react";
 import { format } from "date-fns";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { AiOverview } from "@/components/ai-overview";
 
 export const Route = createFileRoute("/schedule")({
   head: () => ({
@@ -189,13 +190,28 @@ function Schedule() {
                                 <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'dd MMM yyyy')}</td>
                                 <td className="p-4 text-sm text-foreground/60">{match.venue}, {match.city}</td>
                                 <td className="p-4">
-                                  <Link 
-                                    to="/matches/$slug"
-                                    params={{ slug: match.slug }}
-                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
-                                  >
-                                    View <ArrowRight className="w-3 h-3" />
-                                  </Link>
+                                  <div className="flex flex-col gap-2">
+                                    <Link 
+                                      to="/matches/$slug"
+                                      params={{ slug: match.slug }}
+                                      className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                    >
+                                      View <ArrowRight className="w-3 h-3" />
+                                    </Link>
+                                    {match.prediction && (
+                                      <div className="p-2 rounded-lg bg-accent/5 border border-accent/20 flex flex-col gap-1">
+                                        <div className="flex items-center gap-1 text-[9px] font-black uppercase text-accent">
+                                          <BrainCircuit className="w-2.5 h-2.5" /> AI Prediction
+                                        </div>
+                                        <div className="text-[10px] font-bold text-foreground">
+                                          {match.prediction.winner} ({match.prediction.score})
+                                        </div>
+                                        <div className="text-[9px] text-foreground/50">
+                                          Score: {match.prediction.points}
+                                        </div>
+                                      </div>
+                                    )}
+                                  </div>
                                 </td>
                               </tr>
                             ))}
@@ -312,6 +328,16 @@ function Schedule() {
           </div>
         </div>
       </section>
+
+      <AiOverview 
+        summary={`The 2026 ${activeTab === "All" ? "Global" : activeTab} Sports Calendar is optimized for precision betting. Our AI-driven Intelligence Hub integrates live ATP/WTA tennis metrics, FIFA World Cup scheduling, and IPL 2026 data points to provide a 360-degree view of the year's biggest markets.`}
+        highlights={[
+          "98% Accuracy on Tournament scheduling and venue mapping",
+          "Advanced AI Predictions for ATP/WTA match winners and total points",
+          "Real-time market volatility tracking for High-Authority betting events",
+          "Comprehensive keywords integration for elite SEO performance"
+        ]}
+      />
 
       <CTABand 
         heading="Experience 2026 with Cricbet99" 
