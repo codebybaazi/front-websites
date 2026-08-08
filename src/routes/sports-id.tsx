@@ -27,6 +27,7 @@ function SportsID() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Sports ID"
         title={<>One Cricbet99 ID, <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>every sport,</span> every market.</>}
         subtitle="Your Cricbet99 Sports ID is a single verified login that unlocks live cricket, football, tennis, horse racing, kabaddi and the full live casino — all with the same wallet, one support team and instant UPI payouts."

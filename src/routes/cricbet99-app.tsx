@@ -37,6 +37,7 @@ function AppPage() {
   return (
     <SiteLayout>
       <PageHero
+        wide
         eyebrow="Cricbet99 App"
         title={<>The official <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Cricbet99</span> app for Android.</>}
         subtitle="Install the official Cricbet99 APK for lightning-fast in-play cricket odds, one-tap UPI deposits and instant withdrawals — engineered for Indian networks and Indian bettors."
