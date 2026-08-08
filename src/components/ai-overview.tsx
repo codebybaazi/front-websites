@@ -89,23 +89,6 @@ export function AiOverview({ summary, highlights }: AiOverviewProps) {
           </div>
         </div>
 
-        {/* Footer info */}
-        <div className="mt-16 pt-8 border-t border-foreground/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="flex -space-x-2">
-              {[1, 2, 3].map((n) => (
-                <div key={n} className="h-6 w-6 rounded-full border-2 border-background bg-foreground/10" />
-              ))}
-            </div>
-            <span className="text-[11px] font-bold text-foreground/40 uppercase tracking-widest">
-              Join 124,000+ Verified Members
-            </span>
-          </div>
-          <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.3em] text-accent">
-            <div className="h-1.5 w-1.5 rounded-full bg-accent animate-ping" />
-            Live System Status: Optimal
-          </div>
-        </div>
       </div>
     </section>
   );
