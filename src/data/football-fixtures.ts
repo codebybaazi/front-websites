@@ -15,7 +15,7 @@ export interface FootballFixture {
 }
 
 export const footballFixtures: FootballFixture[] = [
-  // --- FIFA World Cup 2026 Group Stage ---
+  // --- FIFA World Cup 2026 Opening Matches ---
   {
     slug: "fifa-world-cup-2026-match-1",
     sport: "Football",
@@ -76,30 +76,63 @@ export const footballFixtures: FootballFixture[] = [
     marketHighlights: ["USA victory"],
     keywords: ["usa world cup opener"]
   },
-  // Bulk of fixtures to reach 104 matches total (97+ fixtures)
+
+  // Procedural fixtures for the 104-match tournament with proper FIFA-style naming
   ...Array.from({ length: 99 }).map((_, i) => {
     const matchNum = i + 5;
-    const isKnockout = matchNum > 72;
     let stage = "Group Stage";
-    if (matchNum > 102) stage = matchNum === 104 ? "Final" : "3rd Place Playoff";
-    else if (matchNum > 100) stage = "Semi Finals";
-    else if (matchNum > 96) stage = "Quarter Finals";
-    else if (matchNum > 88) stage = "Round of 16";
-    else if (matchNum > 72) stage = "Round of 32";
+    let homeTeam = "";
+    let awayTeam = "";
+
+    // Group determination
+    const groups = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"];
+    const groupIdx = Math.floor(i / 6) % 12;
+    const groupLetter = groups[groupIdx];
+
+    if (matchNum <= 72) {
+      // Group Stage (Matches 5-72)
+      stage = "Group Stage";
+      const pos1 = (i % 4) + 1;
+      const pos2 = ((i + 1) % 4) + 1;
+      
+      // Specifically ensure we don't just use "Team A1" but also the seeded hosts
+      if (groupLetter === "A" && pos1 === 1) homeTeam = "Mexico";
+      else if (groupLetter === "B" && pos1 === 1) homeTeam = "Canada";
+      else if (groupLetter === "D" && pos1 === 1) homeTeam = "USA";
+      else homeTeam = `${groupLetter}${pos1}`;
+
+      awayTeam = `${groupLetter}${pos2}`;
+    } else if (matchNum <= 88) {
+      stage = "Round of 32";
+      // Official FIFA R32 pairings usually involve Group Winners vs Runners-up
+      const g1 = groups[(matchNum - 73) % 12];
+      const g2 = groups[(matchNum - 72) % 12];
+      homeTeam = `Winner Group ${g1}`;
+      awayTeam = `Runner-up Group ${g2}`;
+    } else if (matchNum <= 96) {
+      stage = "Round of 16";
+      homeTeam = `Winner Match ${matchNum - 16}`;
+      awayTeam = `Winner Match ${matchNum - 15}`;
+    } else if (matchNum <= 100) {
+      stage = "Quarter Finals";
+      homeTeam = `Winner Match ${matchNum - 8}`;
+      awayTeam = `Winner Match ${matchNum - 7}`;
+    } else if (matchNum <= 102) {
+      stage = "Semi Finals";
+      homeTeam = `Winner Match ${matchNum - 4}`;
+      awayTeam = `Winner Match ${matchNum - 3}`;
+    } else if (matchNum === 103) {
+      stage = "3rd Place Playoff";
+      homeTeam = "Loser Match 101";
+      awayTeam = "Loser Match 102";
+    } else {
+      stage = "Final";
+      homeTeam = "Winner Match 101";
+      awayTeam = "Winner Match 102";
+    }
 
     const date = new Date("2026-06-13");
     date.setDate(date.getDate() + Math.floor(i / 3));
-
-    // Groups A-L
-    const groups = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"];
-    const groupIdx = Math.floor(i / 6) % 12;
-    const group = groups[groupIdx];
-    const pos1 = (i % 4) + 1;
-    const pos2 = ((i + 1) % 4) + 1;
-
-    // Use full names for placeholders like "Winner"
-    const homeTeam = isKnockout ? `Winner of Match ${matchNum - 32}` : `Team ${group}${pos1}`;
-    const awayTeam = isKnockout ? `Runner-up of Group ${group}` : `Team ${group}${pos2}`;
 
     return {
       slug: `fifa-world-cup-2026-match-${matchNum}`,
@@ -116,20 +149,5 @@ export const footballFixtures: FootballFixture[] = [
       marketHighlights: ["1X2", "Over/Under", "BTTS"],
       keywords: [`match ${matchNum} world cup 2026`, `${stage} betting`]
     };
-  }),
-  {
-    slug: "fifa-world-cup-2026-final",
-    sport: "Football",
-    tournament: "FIFA World Cup 2026",
-    homeTeam: "Finalist 1",
-    awayTeam: "Finalist 2",
-    venue: "MetLife Stadium",
-    city: "New York/NJ",
-    country: "USA",
-    startDate: "2026-07-19T15:00:00",
-    status: "upcoming",
-    stage: "Final",
-    marketHighlights: ["World Cup Winner", "Golden Boot"],
-    keywords: ["world cup 2026 final odds"]
-  }
+  })
 ];
