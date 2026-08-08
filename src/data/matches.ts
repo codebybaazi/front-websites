@@ -182,7 +182,6 @@ export const matches: MatchFixture[] = [
     marketHighlights: ["Match winner", "Set betting", "Total games", "Tie-break in match"],
     keywords: ["djokovic vs alcaraz wimbledon odds", "wimbledon final betting", "alcaraz djokovic live odds", "tennis set betting"],
   },
-  },
   {
     slug: "fifa-world-cup-2026-canada-vs-tbd",
     sport: "Football",
