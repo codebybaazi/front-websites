@@ -1375,6 +1375,7 @@ export const tennisFixtures: TennisFixture[] = [
     city: "Riyadh",
     country: "Saudi Arabia",
     startDate: "2026-11-01T16:00:00+03:00",
+    endDate: "2026-11-08",
     status: "upcoming",
     stage: "Year-End Finals",
     category: "Year-End Finals",
