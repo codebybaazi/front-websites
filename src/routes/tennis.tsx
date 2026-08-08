@@ -5,12 +5,14 @@ export const Route = createFileRoute("/tennis")({
   head: () => ({
     meta: [
       { title: "Tennis Betting on Cricbet99 — ATP, WTA & Grand Slams" },
-      { name: "description", content: "Wimbledon, Roland Garros, US Open, Australian Open plus every ATP and WTA event — bet live sets, games and match winners on Cricbet99." },
+      { name: "description", content: "Wimbledon, Roland Garros, US Open, Australian Open plus every ATP and WTA event — bet live sets, games and match winners on Cricbet99. Instant ID activation." },
       { property: "og:title", content: "Tennis Betting on Cricbet99" },
       { property: "og:description", content: "Grand Slams, ATP and WTA with live set and game markets." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/tennis" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/tennis" }],
   }),
   component: Tennis,
 });

@@ -5,12 +5,14 @@ export const Route = createFileRoute("/cricbet99-app")({
   head: () => ({
     meta: [
       { title: "Cricbet99 Betting App 2026 — Download APK for Android" },
-      { name: "description", content: "Download the official Cricbet99 betting app for Android. Lightweight APK, one-tap live cricket odds, instant UPI deposits and minute-fast withdrawals — safe install guide inside." },
+      { name: "description", content: "Download the official Cricbet99 betting app for Android. Lightweight APK, live cricket odds, instant UPI deposits and minute-fast withdrawals. Safe install guide." },
       { property: "og:title", content: "Cricbet99 Betting App — Android APK" },
       { property: "og:description", content: "The official Cricbet99 Android app: fast odds, secure logins and instant UPI payouts." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/cricbet99-app" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/cricbet99-app" }],
   }),
   component: AppPage,
 });

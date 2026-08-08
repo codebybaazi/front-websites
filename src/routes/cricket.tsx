@@ -6,12 +6,14 @@ export const Route = createFileRoute("/cricket")({
   head: () => ({
     meta: [
       { title: "Cricket Betting on Cricbet99 — IPL, T20 & International" },
-      { name: "description", content: "Bet on IPL 2026, T20 World Cup, ODI series and every bilateral tour with live ball-by-ball odds, Fancy Bets and session markets on Cricbet99." },
+      { name: "description", content: "Bet on IPL 2026, T20 World Cup, ODI series and every bilateral tour with live ball-by-ball odds, Fancy Bets and session markets on Cricbet99. Get your ID now." },
       { property: "og:title", content: "Cricket Betting on Cricbet99" },
-      { property: "og:description", content: "IPL, T20, ODI and Test cricket — deep live markets on every match." },
+      { property: "og:description", content: "IPL, T20, ODI and Test cricket — deep live markets on every match with instant payouts." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/cricket" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/cricket" }],
   }),
   component: Cricket,
 });

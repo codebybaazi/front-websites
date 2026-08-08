@@ -112,3 +112,72 @@ export function buildFaqJsonLd(faqs: { q: string; a: string }[]) {
     })),
   };
 }
+
+export function buildArticleJsonLd(content: PageContent, url: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: content.title,
+    description: content.subtitle,
+    datePublished: "2024-01-01T08:00:00+08:00",
+    dateModified: new Date().toISOString(),
+    author: {
+      "@type": "Organization",
+      "name": "Cricbet99",
+      "url": "https://cricbet99.com"
+    },
+    publisher: {
+      "@type": "Organization",
+      "name": "Cricbet99",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cricbet99.com/favicon.png"
+      }
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url
+    }
+  };
+}
+
+export function buildBreadcrumbJsonLd(path: string, title: string) {
+  const parts = path.split('/').filter(Boolean);
+  const items = [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://cricbet99.com/"
+    }
+  ];
+
+  if (parts.length > 1) {
+    const parentName = parts[0].charAt(0).toUpperCase() + parts[0].slice(1).replace('-', ' ');
+    items.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": parentName,
+      "item": `https://cricbet99.com/${parts[0]}`
+    });
+    items.push({
+      "@type": "ListItem",
+      "position": 3,
+      "name": title,
+      "item": `https://cricbet99.com${path}`
+    });
+  } else {
+    items.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": title,
+      "item": `https://cricbet99.com${path}`
+    });
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items
+  };
+}

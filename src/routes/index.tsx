@@ -124,7 +124,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Get your Cricbet99 ID in 5 minutes on WhatsApp. Bet on IPL, football, and casino with instant UPI payouts and 24/7 support.",
+          "Get your Cricbet99 ID in 5 minutes on WhatsApp. Bet on IPL, football, and casino with instant UPI payouts and 24/7 support. India's most trusted ID provider.",
       },
       { name: "keywords", content: "Cricbet99, cricbet99 id, online cricket id India, IPL 2026 betting, T20 World Cup betting, live cricket betting, betting id whatsapp, online casino India, teen patti, andar bahar" },
       { property: "og:title", content: "Cricbet99 — India's #1 Online Cricket ID Since 2020" },
@@ -133,7 +133,7 @@ export const Route = createFileRoute("/")({
         content: "One verified ID for cricket, football, tennis, kabaddi and live casino. Instant UPI payouts, sharpest odds, 24/7 WhatsApp support.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: origin || "/" },
       { property: "og:image", content: image },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
@@ -143,7 +143,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:description", content: "IPL, T20, football, tennis, kabaddi & live casino. Instant UPI payouts, 24/7 WhatsApp support." },
       { name: "twitter:image", content: image },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: origin || "/" }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(faqLd) },
     ],

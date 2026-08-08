@@ -6,12 +6,14 @@ export const Route = createFileRoute("/casino")({
   head: () => ({
     meta: [
       { title: "Live Casino on Cricbet99 — Teen Patti, Andar Bahar & Roulette" },
-      { name: "description", content: "HD-streamed live casino with real dealers. Play Teen Patti, Andar Bahar, Roulette, Baccarat, Blackjack and Dragon Tiger 24/7 on Cricbet99." },
+      { name: "description", content: "HD-streamed live casino with real dealers. Play Teen Patti, Andar Bahar, Roulette, Baccarat, Blackjack and Dragon Tiger 24/7 on Cricbet99. Instant payouts." },
       { property: "og:title", content: "Live Casino on Cricbet99" },
       { property: "og:description", content: "Real dealers, HD streams and instant round switching, 24/7." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/casino" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/casino" }],
   }),
   component: Casino,
 });

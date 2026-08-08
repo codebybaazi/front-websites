@@ -5,12 +5,14 @@ export const Route = createFileRoute("/football")({
   head: () => ({
     meta: [
       { title: "Football Betting on Cricbet99 — EPL, La Liga & UEFA" },
-      { name: "description", content: "Bet on Premier League, La Liga, Bundesliga, Serie A, UEFA Champions League, ISL and FIFA fixtures with deep in-play markets on Cricbet99." },
+      { name: "description", content: "Bet on Premier League, La Liga, Bundesliga, Serie A, UEFA Champions League, ISL and FIFA fixtures with deep in-play football markets on Cricbet99." },
       { property: "og:title", content: "Football Betting on Cricbet99" },
       { property: "og:description", content: "Every top league covered with match winner, BTTS, handicaps and in-play markets." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/football" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/football" }],
   }),
   component: Football,
 });
