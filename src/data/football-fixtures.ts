@@ -15,13 +15,14 @@ export interface FootballFixture {
 }
 
 export const footballFixtures: FootballFixture[] = [
-  // Group Stage - Matchday 1
+  // --- GROUP STAGE ---
+  // Thursday, 11 June 2026
   {
     slug: "mexico-vs-tbd-opening-2026",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "Mexico",
-    awayTeam: "TBD",
+    homeTeam: "Mexico (A1)",
+    awayTeam: "A2",
     venue: "Estadio Azteca",
     city: "Mexico City",
     country: "Mexico",
@@ -29,215 +30,269 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group Stage",
     marketHighlights: ["Match winner", "Opening goal", "First half goals"],
-    keywords: ["mexico vs tbd world cup 2026", "world cup opening match betting"]
+    keywords: ["mexico world cup 2026", "world cup opening match betting"]
   },
   {
-    slug: "usa-vs-tbd-opening-2026",
+    slug: "match-2-opening-2026",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "USA",
-    awayTeam: "TBD",
-    venue: "SoFi Stadium",
-    city: "Los Angeles",
-    country: "USA",
-    startDate: "2026-06-12T19:00:00-07:00",
+    homeTeam: "A3",
+    awayTeam: "A4",
+    venue: "Estadio Guadalajara",
+    city: "Guadalajara",
+    country: "Mexico",
+    startDate: "2026-06-11T20:00:00-06:00",
     status: "upcoming",
     stage: "Group Stage",
-    marketHighlights: ["Match winner", "USA odds", "BTTS"],
-    keywords: ["usa world cup 2026 odds", "sofi stadium world cup fixtures"]
+    marketHighlights: ["Match winner", "Total goals"],
+    keywords: ["world cup 2026 guadalajara"]
   },
+  // Friday, 12 June 2026
   {
     slug: "canada-vs-tbd-opening-2026",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "Canada",
-    awayTeam: "TBD",
+    homeTeam: "Canada (B1)",
+    awayTeam: "B2",
     venue: "BMO Field",
     city: "Toronto",
     country: "Canada",
     startDate: "2026-06-12T19:00:00-04:00",
     status: "upcoming",
     stage: "Group Stage",
-    marketHighlights: ["Match winner", "Canada odds", "Total goals"],
-    keywords: ["canada world cup 2026 schedule", "bmo field betting"]
+    marketHighlights: ["Match winner", "Canada odds"],
+    keywords: ["canada world cup 2026"]
   },
+  {
+    slug: "usa-vs-tbd-opening-2026",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "USA (D1)",
+    awayTeam: "D2",
+    venue: "SoFi Stadium",
+    city: "Los Angeles",
+    country: "USA",
+    startDate: "2026-06-12T19:00:00-07:00",
+    status: "upcoming",
+    stage: "Group Stage",
+    marketHighlights: ["Match winner", "USA odds"],
+    keywords: ["usa world cup 2026"]
+  },
+  // Saturday, 13 June 2026
+  {
+    slug: "match-5-2026",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "C1",
+    awayTeam: "C2",
+    venue: "Gillette Stadium",
+    city: "Boston",
+    country: "USA",
+    startDate: "2026-06-13T13:00:00-04:00",
+    status: "upcoming",
+    stage: "Group Stage",
+    marketHighlights: ["Match winner"],
+    keywords: ["world cup boston"]
+  },
+  {
+    slug: "match-6-2026",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "D3",
+    awayTeam: "D4",
+    venue: "BC Place",
+    city: "Vancouver",
+    country: "Canada",
+    startDate: "2026-06-13T15:00:00-07:00",
+    status: "upcoming",
+    stage: "Group Stage",
+    marketHighlights: ["Match winner"],
+    keywords: ["world cup vancouver"]
+  },
+  // Sunday, 14 June 2026
   {
     slug: "argentina-vs-tbd-2026",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
     homeTeam: "Argentina",
-    awayTeam: "TBD",
+    awayTeam: "E2",
     venue: "MetLife Stadium",
     city: "New York New Jersey",
     country: "USA",
     startDate: "2026-06-14T20:00:00-04:00",
     status: "upcoming",
     stage: "Group Stage",
-    marketHighlights: ["Match winner", "Messi props", "Handicap"],
-    keywords: ["argentina world cup 2026 odds", "messi world cup betting"]
+    marketHighlights: ["Match winner", "Messi props"],
+    keywords: ["argentina world cup 2026"]
   },
+  // Monday, 15 June 2026
   {
     slug: "brazil-vs-tbd-2026",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
     homeTeam: "Brazil",
-    awayTeam: "TBD",
+    awayTeam: "F2",
     venue: "Hard Rock Stadium",
     city: "Miami",
     country: "USA",
     startDate: "2026-06-15T19:00:00-04:00",
     status: "upcoming",
     stage: "Group Stage",
-    marketHighlights: ["Match winner", "Brazil goals", "Asian handicap"],
-    keywords: ["brazil world cup 2026 odds", "miami world cup fixtures"]
+    marketHighlights: ["Match winner", "Brazil goals"],
+    keywords: ["brazil world cup 2026"]
   },
+  // Tuesday, 16 June 2026
   {
     slug: "england-vs-tbd-2026",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
     homeTeam: "England",
-    awayTeam: "TBD",
+    awayTeam: "G2",
     venue: "Arrowhead Stadium",
     city: "Kansas City",
     country: "USA",
     startDate: "2026-06-16T15:00:00-05:00",
     status: "upcoming",
     stage: "Group Stage",
-    marketHighlights: ["Match winner", "England odds", "Corner betting"],
-    keywords: ["england world cup 2026 odds", "england kansas city fixtures"]
+    marketHighlights: ["Match winner", "England odds"],
+    keywords: ["england world cup 2026"]
   },
+  // Wednesday, 17 June 2026
   {
     slug: "france-vs-tbd-2026",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
     homeTeam: "France",
-    awayTeam: "TBD",
+    awayTeam: "H2",
     venue: "Hard Rock Stadium",
     city: "Miami",
     country: "USA",
     startDate: "2026-06-17T18:00:00-04:00",
     status: "upcoming",
     stage: "Group Stage",
-    marketHighlights: ["Match winner", "France odds", "Mbappe props"],
-    keywords: ["france world cup 2026 odds", "france miami fixtures"]
+    marketHighlights: ["Match winner", "France odds"],
+    keywords: ["france world cup 2026"]
   },
+  // Thursday, 18 June 2026
   {
     slug: "germany-vs-tbd-2026",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
     homeTeam: "Germany",
-    awayTeam: "TBD",
+    awayTeam: "I2",
     venue: "BC Place",
     city: "Vancouver",
     country: "Canada",
     startDate: "2026-06-18T16:00:00-07:00",
     status: "upcoming",
     stage: "Group Stage",
-    marketHighlights: ["Match winner", "Germany odds", "Total goals"],
-    keywords: ["germany world cup 2026 schedule", "vancouver betting"]
+    marketHighlights: ["Match winner", "Germany odds"],
+    keywords: ["germany world cup 2026"]
   },
+  // Friday, 19 June 2026
   {
     slug: "spain-vs-tbd-2026",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
     homeTeam: "Spain",
-    awayTeam: "TBD",
+    awayTeam: "J2",
     venue: "Levi's Stadium",
     city: "San Francisco",
     country: "USA",
     startDate: "2026-06-19T13:00:00-07:00",
     status: "upcoming",
     stage: "Group Stage",
-    marketHighlights: ["Match winner", "Spain odds", "Ball possession"],
-    keywords: ["spain world cup 2026 odds", "san francisco fixtures"]
-  },
-  
-  // Mid Group Stage
-  {
-    slug: "portugal-vs-tbd-2026",
-    sport: "Football",
-    tournament: "FIFA World Cup 2026",
-    homeTeam: "Portugal",
-    awayTeam: "TBD",
-    venue: "AT&T Stadium",
-    city: "Dallas",
-    country: "USA",
-    startDate: "2026-06-22T20:00:00-05:00",
-    status: "upcoming",
-    stage: "Group Stage",
-    marketHighlights: ["Match winner", "Ronaldo props", "BTTS"],
-    keywords: ["portugal world cup 2026 odds", "ronaldo world cup betting"]
-  },
-  {
-    slug: "netherlands-vs-tbd-2026",
-    sport: "Football",
-    tournament: "FIFA World Cup 2026",
-    homeTeam: "Netherlands",
-    awayTeam: "TBD",
-    venue: "Lincoln Financial Field",
-    city: "Philadelphia",
-    country: "USA",
-    startDate: "2026-06-23T18:00:00-04:00",
-    status: "upcoming",
-    stage: "Group Stage",
-    marketHighlights: ["Match winner", "Dutch odds", "Total goals"],
-    keywords: ["netherlands world cup 2026 odds", "philadelphia fixtures"]
-  },
-  {
-    slug: "italy-vs-tbd-2026",
-    sport: "Football",
-    tournament: "FIFA World Cup 2026",
-    homeTeam: "Italy",
-    awayTeam: "TBD",
-    venue: "Gillette Stadium",
-    city: "Boston",
-    country: "USA",
-    startDate: "2026-06-25T19:00:00-04:00",
-    status: "upcoming",
-    stage: "Group Stage",
-    marketHighlights: ["Match winner", "Italy odds", "Clean sheet"],
-    keywords: ["italy world cup 2026 odds", "boston fixtures"]
+    marketHighlights: ["Match winner", "Spain odds"],
+    keywords: ["spain world cup 2026"]
   },
 
-  // Round of 32
+  // --- KNOCKOUT STAGES ---
+  // Round of 32: 28 June - 3 July
   {
-    slug: "world-cup-2026-round-of-32-match-1",
+    slug: "round-of-32-match-1",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
     homeTeam: "Winner Group A",
-    awayTeam: "3rd Group C/D/E",
-    venue: "Estadio Azteca",
-    city: "Mexico City",
-    country: "Mexico",
-    startDate: "2026-06-29T18:00:00-06:00",
-    status: "upcoming",
-    stage: "Round of 32",
-    marketHighlights: ["To qualify", "Method of victory"],
-    keywords: ["world cup 2026 round of 32 betting", "knockout stage odds"]
-  },
-  {
-    slug: "world-cup-2026-round-of-32-match-2",
-    sport: "Football",
-    tournament: "FIFA World Cup 2026",
-    homeTeam: "Winner Group B",
-    awayTeam: "3rd Group A/C/D",
+    awayTeam: "Runner-up Group C",
     venue: "SoFi Stadium",
     city: "Los Angeles",
     country: "USA",
-    startDate: "2026-06-30T19:00:00-07:00",
+    startDate: "2026-06-28T18:00:00-07:00",
     status: "upcoming",
     stage: "Round of 32",
-    marketHighlights: ["To qualify", "Overtime odds"],
-    keywords: ["world cup 2026 knockout fixtures", "los angeles round of 32"]
+    marketHighlights: ["To qualify", "BTTS"],
+    keywords: ["world cup round of 32"]
   },
-
-  // Quarter Finals
   {
-    slug: "world-cup-2026-quarter-final-1",
+    slug: "round-of-32-match-2",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "TBD",
-    awayTeam: "TBD",
+    homeTeam: "Winner Group B",
+    awayTeam: "Runner-up Group F",
+    venue: "BMO Field",
+    city: "Toronto",
+    country: "Canada",
+    startDate: "2026-06-29T19:00:00-04:00",
+    status: "upcoming",
+    stage: "Round of 32",
+    marketHighlights: ["To qualify", "Total goals"],
+    keywords: ["world cup toronto knockout"]
+  },
+  {
+    slug: "round-of-32-match-3",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Winner Group C",
+    awayTeam: "Runner-up Group A",
+    venue: "Estadio Azteca",
+    city: "Mexico City",
+    country: "Mexico",
+    startDate: "2026-06-30T18:00:00-06:00",
+    status: "upcoming",
+    stage: "Round of 32",
+    marketHighlights: ["To qualify"],
+    keywords: ["world cup mexico knockout"]
+  },
+
+  // Round of 16: 4 July - 7 July
+  {
+    slug: "round-of-16-match-1",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Winner Match 73",
+    awayTeam: "Winner Match 74",
+    venue: "MetLife Stadium",
+    city: "New York New Jersey",
+    country: "USA",
+    startDate: "2026-07-04T20:00:00-04:00",
+    status: "upcoming",
+    stage: "Round of 16",
+    marketHighlights: ["To qualify"],
+    keywords: ["world cup round of 16"]
+  },
+  {
+    slug: "round-of-16-match-2",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Winner Match 75",
+    awayTeam: "Winner Match 76",
+    venue: "Estadio Azteca",
+    city: "Mexico City",
+    country: "Mexico",
+    startDate: "2026-07-05T18:00:00-06:00",
+    status: "upcoming",
+    stage: "Round of 16",
+    marketHighlights: ["To qualify"],
+    keywords: ["world cup round of 16 mexico"]
+  },
+
+  // Quarter Finals: 9 July - 11 July
+  {
+    slug: "quarter-final-1",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Winner Match 81",
+    awayTeam: "Winner Match 82",
     venue: "Gillette Stadium",
     city: "Boston",
     country: "USA",
@@ -245,16 +300,61 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Quarter Final",
     marketHighlights: ["Match winner", "To qualify"],
-    keywords: ["world cup 2026 quarter final odds", "boston quarter final fixtures"]
+    keywords: ["world cup 2026 quarter final"]
   },
-
-  // Semi Finals
   {
-    slug: "world-cup-2026-semi-final-1",
+    slug: "quarter-final-2",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "TBD",
-    awayTeam: "TBD",
+    homeTeam: "Winner Match 83",
+    awayTeam: "Winner Match 84",
+    venue: "SoFi Stadium",
+    city: "Los Angeles",
+    country: "USA",
+    startDate: "2026-07-10T19:00:00-07:00",
+    status: "upcoming",
+    stage: "Quarter Final",
+    marketHighlights: ["Match winner", "To qualify"],
+    keywords: ["world cup 2026 la quarter final"]
+  },
+  {
+    slug: "quarter-final-3",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Winner Match 85",
+    awayTeam: "Winner Match 86",
+    venue: "Hard Rock Stadium",
+    city: "Miami",
+    country: "USA",
+    startDate: "2026-07-11T18:00:00-04:00",
+    status: "upcoming",
+    stage: "Quarter Final",
+    marketHighlights: ["Match winner", "To qualify"],
+    keywords: ["world cup 2026 miami quarter final"]
+  },
+  {
+    slug: "quarter-final-4",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Winner Match 87",
+    awayTeam: "Winner Match 88",
+    venue: "Arrowhead Stadium",
+    city: "Kansas City",
+    country: "USA",
+    startDate: "2026-07-11T12:00:00-05:00",
+    status: "upcoming",
+    stage: "Quarter Final",
+    marketHighlights: ["Match winner", "To qualify"],
+    keywords: ["world cup 2026 kc quarter final"]
+  },
+
+  // Semi Finals: 14 July - 15 July
+  {
+    slug: "semi-final-1",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Winner Match 89",
+    awayTeam: "Winner Match 90",
     venue: "AT&T Stadium",
     city: "Dallas",
     country: "USA",
@@ -262,16 +362,48 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Semi Final",
     marketHighlights: ["To lift trophy", "Method of victory"],
-    keywords: ["world cup 2026 semi final odds", "dallas semi final fixtures"]
+    keywords: ["world cup semi final dallas"]
+  },
+  {
+    slug: "semi-final-2",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Winner Match 91",
+    awayTeam: "Winner Match 92",
+    venue: "Mercedes-Benz Stadium",
+    city: "Atlanta",
+    country: "USA",
+    startDate: "2026-07-15T20:00:00-04:00",
+    status: "upcoming",
+    stage: "Semi Final",
+    marketHighlights: ["Match winner", "To qualify"],
+    keywords: ["world cup semi final atlanta"]
   },
 
-  // Final
+  // Third Place: 18 July
+  {
+    slug: "third-place-match",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Loser Match 93",
+    awayTeam: "Loser Match 94",
+    venue: "Hard Rock Stadium",
+    city: "Miami",
+    country: "USA",
+    startDate: "2026-07-18T18:00:00-04:00",
+    status: "upcoming",
+    stage: "3rd Place Playoff",
+    marketHighlights: ["Match winner", "Total goals"],
+    keywords: ["world cup third place"]
+  },
+
+  // Final: 19 July
   {
     slug: "fifa-world-cup-2026-final",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "TBD",
-    awayTeam: "TBD",
+    homeTeam: "Winner Match 93",
+    awayTeam: "Winner Match 94",
     venue: "MetLife Stadium",
     city: "New York New Jersey",
     country: "USA",
@@ -279,6 +411,6 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Final",
     marketHighlights: ["World Cup Winner", "Golden Boot", "Penalty Shootout"],
-    keywords: ["world cup 2026 final odds", "metlife stadium final betting"]
+    keywords: ["world cup 2026 final", "metlife stadium final betting"]
   }
 ];
