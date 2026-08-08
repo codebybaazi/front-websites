@@ -1580,13 +1580,12 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
 
       {/* AI Overview at the end of page */}
       {aiOverview && (
-        <div className="border-t border-primary/10 pt-8 pb-16 bg-[oklch(0.08_0.01_260)]">
-          <AiOverview 
-            summary={aiOverview.summary} 
-            highlights={aiOverview.keyFeatures} 
-          />
-        </div>
+        <AiOverview 
+          summary={aiOverview.summary} 
+          highlights={aiOverview.keyFeatures} 
+        />
       )}
+
     </SiteLayout>
   );
 }
