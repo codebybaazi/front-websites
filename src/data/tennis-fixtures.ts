@@ -1207,6 +1207,7 @@ export const tennisFixtures: TennisFixture[] = [
     city: "Stockholm",
     country: "Sweden",
     startDate: "2026-11-06T12:00:00+01:00",
+    endDate: "2026-11-14",
     status: "upcoming",
     stage: "Main Draw",
     category: "ATP 250",
