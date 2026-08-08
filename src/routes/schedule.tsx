@@ -98,40 +98,54 @@ function Schedule() {
               
               <div className="space-y-4">
                 {activeTab === "Football" ? (
-                  <div className="overflow-x-auto rounded-2xl border border-primary/10 bg-background/40">
-                    <table className="w-full text-left border-collapse">
-                      <thead>
-                        <tr className="border-b border-primary/10 bg-primary/5">
-                          <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Stage</th>
-                          <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Match</th>
-                          <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Date & Kickoff</th>
-                          <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Venue</th>
-                          <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Details</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {matches
-                          .filter(m => m.sport === "Football")
-                          .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
-                          .map((match) => (
-                            <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors">
-                              <td className="p-4 text-sm font-medium text-foreground/80">{match.stage}</td>
-                              <td className="p-4 font-bold text-foreground">{match.homeTeam} vs {match.awayTeam}</td>
-                              <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'eee, dd MMM yyyy')}</td>
-                              <td className="p-4 text-sm text-foreground/60">{match.venue}, {match.city}</td>
-                              <td className="p-4">
-                                <Link 
-                                  to="/matches/$slug"
-                                  params={{ slug: match.slug }}
-                                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
-                                >
-                                  View <ArrowRight className="w-3 h-3" />
-                                </Link>
-                              </td>
-                            </tr>
-                          ))}
-                      </tbody>
-                    </table>
+                  <div className="space-y-12">
+                    {(["Group Stage", "Quarter-finals", "Semi-finals", "Final"] as const).map((category) => (
+                      <div key={category} className="space-y-6">
+                        <div className="flex items-center gap-3">
+                          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+                          <h3 className="text-xl font-bold text-primary px-4 py-1 rounded-full border border-primary/20 bg-primary/5 uppercase tracking-widest text-xs">
+                            {category}
+                          </h3>
+                          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+                        </div>
+                        
+                        <div className="overflow-x-auto rounded-2xl border border-primary/10 bg-background/40">
+                          <table className="w-full text-left border-collapse">
+                            <thead>
+                              <tr className="border-b border-primary/10 bg-primary/5">
+                                <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Stage</th>
+                                <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Match</th>
+                                <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Date & Kickoff</th>
+                                <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Venue</th>
+                                <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Details</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {matches
+                                .filter(m => m.sport === "Football" && (m as any).category === category)
+                                .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
+                                .map((match) => (
+                                  <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors">
+                                    <td className="p-4 text-sm font-medium text-foreground/80">{match.stage}</td>
+                                    <td className="p-4 font-bold text-foreground">{match.homeTeam} vs {match.awayTeam}</td>
+                                    <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'eee, dd MMM yyyy')}</td>
+                                    <td className="p-4 text-sm text-foreground/60">{match.venue}, {match.city}</td>
+                                    <td className="p-4">
+                                      <Link 
+                                        to="/matches/$slug"
+                                        params={{ slug: match.slug }}
+                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                      >
+                                        View <ArrowRight className="w-3 h-3" />
+                                      </Link>
+                                    </td>
+                                  </tr>
+                                ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 ) : (
                   filteredEvents.map((event, i) => (
