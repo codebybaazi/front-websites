@@ -1,64 +1,107 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
-import { Gamepad2, Sparkles, Dices, Crown } from "lucide-react";
+import { Gamepad2, Sparkles, Dices, Crown, ShieldCheck, Zap } from "lucide-react";
 import { AiOverview } from "@/components/ai-overview";
+import { getRequestOrigin } from "@/lib/origin.functions";
 
 export const Route = createFileRoute("/casino")({
-  head: () => ({
-    meta: [
-      { title: "Live Casino on Cricbet99 — Teen Patti, Andar Bahar & Roulette" },
-      { name: "description", content: "HD-streamed live casino with real dealers. Play Teen Patti, Andar Bahar, Roulette, Baccarat, Blackjack and Dragon Tiger 24/7 on Cricbet99. Instant payouts." },
-      { property: "og:title", content: "Live Casino on Cricbet99" },
-      { property: "og:description", content: "Real dealers, HD streams and instant round switching, 24/7." },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/casino" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/casino" }],
+  loader: async () => ({
+    origin: await getRequestOrigin(),
   }),
+  head: ({ loaderData }) => {
+    const origin = loaderData?.origin ?? "";
+    const canonical = `${origin}/casino`;
+    return {
+      meta: [
+        { title: "Cricbet99 Live Casino — Teen Patti, Andar Bahar & 500+ Games" },
+        { name: "description", content: "Experience India's most trusted live casino on Cricbet99. Play Teen Patti, Andar Bahar, Roulette, and Baccarat with HD streaming and real dealers. Instant 24/7 payouts." },
+        { name: "keywords", content: "cricbet99 casino, live teen patti, online andar bahar, cricbet99 live dealer, online casino india, cricbet99 app casino" },
+        { property: "og:title", content: "Cricbet99 Live Casino — Real Dealers & Instant Payouts" },
+        { property: "og:description", content: "Get your Cricbet99 Casino ID and play live card games, slots and roulette with 24/7 support and lightning fast withdrawals." },
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: canonical },
+        { name: "twitter:card", content: "summary_large_image" },
+      ],
+      links: [{ rel: "canonical", href: canonical }],
+    };
+  },
   component: Casino,
 });
 
 const tables = [
-  { icon: Crown, title: "Teen Patti", desc: "India's favourite three-card game with real dealers, side bets and fast rounds — streamed in HD around the clock." },
-  { icon: Dices, title: "Andar Bahar", desc: "Classic Indian card game with instant results and multiple side bet variants." },
-  { icon: Sparkles, title: "Roulette", desc: "European and Auto Roulette tables with straight-up, split and outside bets. Live wheels, live drama." },
-  { icon: Gamepad2, title: "Baccarat", desc: "Player, Banker and Tie plus side bets on every hand — sharp odds and quick settlement." },
-  { icon: Crown, title: "Blackjack", desc: "Real dealer Blackjack with side bets, multiple seats and 24/7 tables." },
-  { icon: Dices, title: "Dragon Tiger", desc: "Fast-paced two-card duel — pick a side and see the result in seconds." },
+  { icon: Crown, title: "Live Teen Patti", desc: "India's favorite card game, optimized for mobile and desktop. Play classic Teen Patti or Muflis with real human dealers and side bets like pair-plus." },
+  { icon: Dices, title: "Online Andar Bahar", desc: "The fastest Indian casino game. Simple rules, instant results, and multi-camera HD streams that capture every card drawn in real-time." },
+  { icon: Sparkles, title: "Live Roulette", desc: "Experience the thrill of the wheel with European and American Roulette. HD streaming ensures you never miss a spin, with instant winning settlements." },
+  { icon: Gamepad2, title: "Premium Baccarat", desc: "The high-roller classic. Bet on Player, Banker, or Tie with professional dealers. Low house edge and rapid-fire rounds for maximum action." },
+  { icon: ShieldCheck, title: "Live Blackjack", desc: "Multiple tables and seats available 24/7. Beat the dealer in HD quality with smooth controls and real-time interaction with other players." },
+  { icon: Zap, title: "Dragon Tiger", desc: "Fast-paced, high-intensity two-card duel. The simplest live casino game with the quickest payouts on the Cricbet99 platform." },
 ];
 
 function Casino() {
   return (
     <SiteLayout>
       <PageHero
-        eyebrow="Live Casino"
-        title={<>Real dealers. <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Real thrill.</span> 24/7.</>}
-        subtitle="Cricbet99's live casino brings HD-streamed tables with real dealers to your screen at any hour. Play Teen Patti, Andar Bahar, Roulette, Baccarat, Blackjack, Dragon Tiger and slots — all with one verified ID and instant round switching."
+        eyebrow="Intelligence & Entertainment"
+        title={<>Premium Live Casino. <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Zero Latency.</span> 24/7.</>}
+        subtitle="Cricbet99 redefines the online casino experience for Indian players. Combining bank-grade security with HD-streamed live tables, we offer the most immersive way to play Teen Patti, Andar Bahar, and 500+ slot titles with one verified ID."
       />
+      
       <AiOverview 
-        summary="Cricbet99's Live Casino provides an immersive HD experience with real dealers for India's favourite games like Teen Patti and Andar Bahar, operating 24/7 with instant payouts."
+        summary="Cricbet99's Casino ecosystem is built on transparency and speed. With real human dealers, HD-quality broadcasting, and instant UPI-powered withdrawals, it is the premier choice for Indian casino enthusiasts."
         highlights={[
-          "HD quality streaming with professional dealers",
-          "Wide variety of Indian and global card games",
-          "Instant settlement on all table rounds",
-          "Mobile-optimized gameplay for iOS and Android"
+          "HD-Quality streams with zero buffering",
+          "Real professional dealers speaking Hindi/English",
+          "Instant round-by-round settlement systems",
+          "Dedicated 24/7 WhatsApp support for casino players"
         ]}
       />
-      <section className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="mb-16 text-center">
+          <h2 className="text-3xl font-black md:text-5xl">Explore Our <span className="text-primary">Live Tables</span></h2>
+          <p className="mx-auto mt-4 max-w-2xl text-foreground/60">Choose from a wide variety of card games and casino classics, all streamed live from premium studios across the globe.</p>
+        </div>
+        
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {tables.map((t) => (
-            <div key={t.title} className="rounded-2xl border border-primary/20 bg-background/60 p-7">
-              <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg text-primary-foreground" style={{ background: "var(--gradient-gold)" }}>
-                <t.icon className="h-5 w-5" />
+            <div key={t.title} className="group relative rounded-3xl border border-primary/20 bg-gradient-to-b from-primary/5 to-transparent p-8 transition-all hover:border-primary/50 hover:bg-primary/10">
+              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-primary-foreground shadow-lg transition-transform group-hover:scale-110" style={{ background: "var(--gradient-gold)" }}>
+                <t.icon className="h-6 w-6" />
               </div>
-              <h3 className="text-lg font-bold">{t.title}</h3>
-              <p className="mt-2 text-sm text-foreground/70">{t.desc}</p>
+              <h3 className="text-xl font-bold">{t.title}</h3>
+              <p className="mt-3 text-[15px] leading-relaxed text-foreground/70">{t.desc}</p>
             </div>
           ))}
         </div>
       </section>
-      <CTABand heading="Take a seat at the table." sub="Get your Cricbet99 Casino ID via WhatsApp and start playing in minutes." />
+
+      <section className="bg-primary/5 py-24">
+        <div className="mx-auto max-w-7xl px-6 text-center">
+          <h2 className="text-3xl font-black md:text-5xl mb-12">Why Play Casino on <span className="text-primary">Cricbet99?</span></h2>
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="p-6 rounded-2xl bg-background/40 border border-primary/10 backdrop-blur-sm">
+              <div className="text-accent text-4xl font-black mb-4">01</div>
+              <h4 className="text-lg font-bold mb-2">Instant Cashouts</h4>
+              <p className="text-sm text-foreground/60">Won big on a Teen Patti hand? Your winnings can be in your bank account via UPI within minutes.</p>
+            </div>
+            <div className="p-6 rounded-2xl bg-background/40 border border-primary/10 backdrop-blur-sm">
+              <div className="text-accent text-4xl font-black mb-4">02</div>
+              <h4 className="text-lg font-bold mb-2">Verified Fair Play</h4>
+              <p className="text-sm text-foreground/60">Our live dealer systems are regularly audited for fairness, ensuring a transparent environment for every player.</p>
+            </div>
+            <div className="p-6 rounded-2xl bg-background/40 border border-primary/10 backdrop-blur-sm">
+              <div className="text-accent text-4xl font-black mb-4">03</div>
+              <h4 className="text-lg font-bold mb-2">One ID, Total Access</h4>
+              <p className="text-sm text-foreground/60">Use your Cricbet99 cricket ID to access all casino tables. No need for multiple accounts or balances.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CTABand 
+        heading="Claim your Casino Seat." 
+        sub="Join thousands of players winning daily on Cricbet99. Message our verified WhatsApp number to get your live casino ID and 100% welcome bonus." 
+      />
     </SiteLayout>
   );
 }
