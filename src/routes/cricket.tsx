@@ -7,9 +7,9 @@ import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
 export const Route = createFileRoute("/cricket")({
   head: () => ({
     meta: [
-      { title: "IPL 2026 Betting & Live Cricket Odds | Cricbet99 Official" },
-      { name: "description", content: "Experience premium IPL 2026 betting on Cricbet99. Get live cricket odds, session markets, and ball-by-ball fancy bets with India's most trusted sports ID." },
-      { property: "og:title", content: "Official Cricket Betting on Cricbet99 | Live IPL 2026" },
+      { title: "IPL 2026 Betting & Live Cricket Odds | Official Platform" },
+      { name: "description", content: "Experience premium IPL 2026 betting. Get live cricket odds, session markets, and ball-by-ball fancy bets with India's most trusted sports ID provider." },
+      { property: "og:title", content: "Premium Cricket Betting | Live IPL 2026" },
       { property: "og:description", content: "Bet on every ball of IPL 2026 and international tours with India's most trusted exchange. Instant withdrawals and 24/7 support." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://cricbet99.co.in/cricket" },
@@ -19,16 +19,13 @@ export const Route = createFileRoute("/cricket")({
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/cricket", "IPL 2026 Betting & Live Cricket Odds Official")),
+        children: JSON.stringify(buildBreadcrumbJsonLd("/cricket", "Cricket Betting & IPL 2026 Odds")),
       },
-      ...(content.faqs && content.faqs.length ? [{
-        type: "application/ld+json",
-        children: JSON.stringify(buildFaqJsonLd(content.faqs)),
-      }] : [])
     ],
   }),
   component: Cricket,
 });
+
 
 const markets = [
   { icon: Trophy, title: "IPL 2026", desc: "The most actively traded cricket tournament in India. Live odds on all ten teams, match winner, powerplay runs, top batsman, session totals, Fancy Bets and most sixes — refreshing ball by ball." },

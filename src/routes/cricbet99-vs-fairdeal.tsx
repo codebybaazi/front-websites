@@ -6,11 +6,11 @@ import { CheckCircle2, XCircle, Trophy, Zap, ShieldCheck, Wallet, MessageCircle,
 export const Route = createFileRoute("/cricbet99-vs-fairdeal")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 vs Fairdeal (2026): Odds, Payouts & Comparison" },
-      { name: "description", content: "Compare Cricbet99 vs Fairdeal on IPL betting odds, UPI withdrawal speed, market variety and support. Find the best betting ID in India for 2026." },
+      { title: "Comparison: Fairdeal (2026): Odds, Payouts & Comparison" },
+      { name: "description", content: "Compare Comparison: Fairdeal on IPL betting odds, UPI withdrawal speed, market variety and support. Find the best betting ID in India for 2026." },
       { name: "keywords", content: "cricbet99 vs fairdeal, fairdeal login, fairdeal app, cricbet99 id, online betting id india 2026, ipl betting app, best cricket id 2026" },
-      { property: "og:title", content: "Cricbet99 vs Fairdeal (2026) — Side-by-Side Comparison" },
-      { property: "og:description", content: "Which ID offers faster payouts and sharper odds? Full 2026 comparison of Cricbet99 vs Fairdeal for serious Indian bettors." },
+      { property: "og:title", content: "Comparison: Fairdeal (2026) — Side-by-Side Comparison" },
+      { property: "og:description", content: "Which ID offers faster payouts and sharper odds? Full 2026 comparison of Comparison: Fairdeal for serious Indian bettors." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/cricbet99-vs-fairdeal" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/cricbet99-vs-fairdeal")({
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "/" },
             { "@type": "ListItem", position: 2, name: "Compare", item: "/compare" },
-            { "@type": "ListItem", position: 3, name: "Cricbet99 vs Fairdeal", item: "/cricbet99-vs-fairdeal" },
+            { "@type": "ListItem", position: 3, name: "Comparison: Fairdeal", item: "/cricbet99-vs-fairdeal" },
           ],
         }),
       },
@@ -49,7 +49,7 @@ export const Route = createFileRoute("/cricbet99-vs-fairdeal")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "Cricbet99 vs Fairdeal — Full 2026 Comparison Guide",
+          headline: "Comparison: Fairdeal — Full 2026 Comparison Guide",
           description: "Detailed side-by-side comparison of Cricbet99 and Fairdeal for Indian players. Analyze odds, speed, and reliability.",
           author: { "@type": "Organization", name: "Cricbet99" },
           publisher: { "@type": "Organization", name: "Cricbet99" },
@@ -114,8 +114,8 @@ function Compare() {
       <PageHero
         wide
         eyebrow="Comparison Guide"
-        title={<>Cricbet99 vs Fairdeal — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>The Definitive 2026 Verdict</span></>}
-        subtitle="Compare Cricbet99 vs Fairdeal on payout speed, IPL odds, and reliability. Find out why modern Indian bettors are leaving legacy IDs behind."
+        title={<>Comparison: Fairdeal — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>The Definitive 2026 Verdict</span></>}
+        subtitle="Compare Comparison: Fairdeal on payout speed, IPL odds, and reliability. Find out why modern Indian bettors are leaving legacy IDs behind."
       />
 
       {/* Verdict Section */}
@@ -193,7 +193,7 @@ function Compare() {
       {/* SEO Articles */}
       <section className="mx-auto max-w-5xl space-y-8 px-6 py-8">
         <Article
-          h="Why Cricbet99 Leads in Payout Automation"
+          h="Why Choose Us Leads in Payout Automation"
           body="Fairdeal still relies on manual agent networks to verify and release payments, which can take hours. Cricbet99 has integrated a next-generation automated UPI gateway. This means your withdrawal requests are processed by the system immediately, ensuring your funds reach your bank account in minutes, even at 3 AM."
         />
         <Article

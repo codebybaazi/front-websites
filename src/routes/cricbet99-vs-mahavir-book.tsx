@@ -6,11 +6,11 @@ import { CheckCircle2, XCircle, Trophy, Zap, ShieldCheck, Wallet, MessageCircle,
 export const Route = createFileRoute("/cricbet99-vs-mahavir-book")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 vs Mahavir Book (2026): Payout Speed & Odds Review" },
-      { name: "description", content: "Compare Cricbet99 vs Mahavir Book for Indian betting. We analyze withdrawal times, cricket exchange depth, bonus offers, and 24/7 WhatsApp support quality." },
+      { title: "Comparison: Mahavir Book (2026): Payout Speed & Odds Review" },
+      { name: "description", content: "Compare Comparison: Mahavir Book for Indian betting. We analyze withdrawal times, cricket exchange depth, bonus offers, and 24/7 WhatsApp support quality." },
       { name: "keywords", content: "cricbet99 vs mahavir book, mahavir book review, best cricket id india, mahavir book withdrawal time, cricbet99 payouts, online cricket exchange id" },
-      { property: "og:title", content: "Cricbet99 vs Mahavir Book (2026) — Which Betting ID is Better?" },
-      { property: "og:description", content: "Side-by-side comparison of Cricbet99 vs Mahavir Book. From UPI payout speed to live exchange markets, find the best ID for your cricket bets." },
+      { property: "og:title", content: "Comparison: Mahavir Book (2026) — Which Betting ID is Better?" },
+      { property: "og:description", content: "Side-by-side comparison of Comparison: Mahavir Book. From UPI payout speed to live exchange markets, find the best ID for your cricket bets." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/cricbet99-vs-mahavir-book" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/cricbet99-vs-mahavir-book")({
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "/" },
             { "@type": "ListItem", position: 2, name: "Compare", item: "/compare" },
-            { "@type": "ListItem", position: 3, name: "Cricbet99 vs Mahavir Book", item: "/cricbet99-vs-mahavir-book" },
+            { "@type": "ListItem", position: 3, name: "Comparison: Mahavir Book", item: "/cricbet99-vs-mahavir-book" },
           ],
         }),
       },
@@ -47,8 +47,8 @@ export const Route = createFileRoute("/cricbet99-vs-mahavir-book")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "Cricbet99 vs Mahavir Book (2026): Payout Speed & Odds Review",
-          description: "Compare Cricbet99 vs Mahavir Book for Indian betting. We analyze withdrawal times, cricket exchange depth, bonus offers, and 24/7 WhatsApp support quality.",
+          headline: "Comparison: Mahavir Book (2026): Payout Speed & Odds Review",
+          description: "Compare Comparison: Mahavir Book for Indian betting. We analyze withdrawal times, cricket exchange depth, bonus offers, and 24/7 WhatsApp support quality.",
           author: { "@type": "Organization", name: "Cricbet99" },
           publisher: { "@type": "Organization", name: "Cricbet99" },
           datePublished: "2026-07-31",
@@ -105,7 +105,7 @@ function Compare() {
       <PageHero
         wide
         eyebrow="Expert Comparison"
-        title={<>Cricbet99 vs Mahavir Book — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Battle for Payouts.</span></>}
+        title={<>Comparison: Mahavir Book — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Battle for Payouts.</span></>}
         subtitle="A detailed analysis of two Indian betting giants. We compare the lightning-fast Cricbet99 engine against the traditional Mahavir Book experience."
       />
 

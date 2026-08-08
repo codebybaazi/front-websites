@@ -6,11 +6,11 @@ import { CheckCircle2, XCircle, Trophy, Zap, ShieldCheck, Wallet, MessageCircle,
 export const Route = createFileRoute("/cricbet99-vs-reddybook")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 vs Reddy Book (2026): Odds, Payouts & Verdict" },
-      { name: "description", content: "Cricbet99 vs Reddy Book compared on IPL odds, UPI withdrawal speed, market depth, bonuses and 24/7 support. Pick the best cricket ID in India for 2026." },
+      { title: "Comparison: Reddy Book (2026): Odds, Payouts & Verdict" },
+      { name: "description", content: "Comparison: Reddy Book compared on IPL odds, UPI withdrawal speed, market depth, bonuses and 24/7 support. Pick the best cricket ID in India for 2026." },
       { name: "keywords", content: "cricbet99 vs reddybook, reddy book vs cricbet99, reddybook login, cricbet99 id, best cricket id india, online betting id 2026, ipl betting id, upi withdrawal betting" },
-      { property: "og:title", content: "Cricbet99 vs Reddy Book (2026) — Side-by-Side Comparison" },
-      { property: "og:description", content: "Which ID offers faster payouts and sharper cricket odds? Full 2026 comparison of Cricbet99 vs Reddy Book for serious Indian bettors." },
+      { property: "og:title", content: "Comparison: Reddy Book (2026) — Side-by-Side Comparison" },
+      { property: "og:description", content: "Which ID offers faster payouts and sharper cricket odds? Full 2026 comparison of Comparison: Reddy Book for serious Indian bettors." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/cricbet99-vs-reddybook" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/cricbet99-vs-reddybook")({
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "/" },
             { "@type": "ListItem", position: 2, name: "Compare", item: "/compare" },
-            { "@type": "ListItem", position: 3, name: "Cricbet99 vs Reddy Book", item: "/cricbet99-vs-reddybook" },
+            { "@type": "ListItem", position: 3, name: "Comparison: Reddy Book", item: "/cricbet99-vs-reddybook" },
           ],
         }),
       },
@@ -49,7 +49,7 @@ export const Route = createFileRoute("/cricbet99-vs-reddybook")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "Cricbet99 vs Reddy Book — Full 2026 Comparison Guide",
+          headline: "Comparison: Reddy Book — Full 2026 Comparison Guide",
           description: "Which cricket ID offers faster payouts and sharper odds? Detailed side-by-side comparison of Cricbet99 and Reddy Book for Indian players.",
           author: { "@type": "Organization", name: "Cricbet99" },
           publisher: { "@type": "Organization", name: "Cricbet99" },
@@ -115,8 +115,8 @@ function Compare() {
       <PageHero
         wide
         eyebrow="Comparison Guide"
-        title={<>Cricbet99 vs Reddy Book — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>The Definitive 2026 Verdict</span></>}
-        subtitle="We break down Cricbet99 vs Reddy Book on the metrics that matter: payout speed, IPL odds, and reliability. Find out why serious Indian bettors are switching IDs this year."
+        title={<>Comparison: Reddy Book — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>The Definitive 2026 Verdict</span></>}
+        subtitle="We break down Comparison: Reddy Book on the metrics that matter: payout speed, IPL odds, and reliability. Find out why serious Indian bettors are switching IDs this year."
       />
 
       {/* Verdict Section */}
@@ -194,7 +194,7 @@ function Compare() {
       {/* SEO Articles */}
       <section className="mx-auto max-w-5xl space-y-8 px-6 py-8">
         <Article
-          h="IPL Betting Odds: Cricbet99 vs Reddy Book"
+          h="IPL Betting Odds: Comparison: Reddy Book"
           body="Cricbet99 offers a professional-grade betting exchange interface. Unlike Reddy Book's traditional bookmaker model where you bet against 'the house', Cricbet99 allows back and lay betting on IPL matches. This results in tighter spreads and better odds for you. During peak IPL 2026 matches, we found Cricbet99 consistently offered 2-3% better returns on session and fancy markets compared to Reddy Book."
         />
         <Article

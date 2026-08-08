@@ -6,11 +6,11 @@ import { CheckCircle2, XCircle, Trophy, Zap, ShieldCheck, Wallet, MessageCircle,
 export const Route = createFileRoute("/cricbet99-vs-laser247")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 vs Laser247 (2026): Odds, Payouts & Verdict" },
-      { name: "description", content: "Compare Cricbet99 vs Laser247 on IPL odds, withdrawal speed, market depth, bonuses and 24/7 support. Find the best cricket betting ID in India for 2026." },
+      { title: "Comparison: Laser247 (2026): Odds, Payouts & Verdict" },
+      { name: "description", content: "Compare Comparison: Laser247 on IPL odds, withdrawal speed, market depth, bonuses and 24/7 support. Find the best cricket betting ID in India for 2026." },
       { name: "keywords", content: "cricbet99 vs laser247, laser247 vs cricbet99, laser247 login, cricbet99 id, best cricket id india, online betting id 2026, ipl betting id, laser247 withdrawal" },
-      { property: "og:title", content: "Cricbet99 vs Laser247 (2026) — Side-by-Side Comparison" },
-      { property: "og:description", content: "Which ID offers faster payouts and sharper cricket odds? Full 2026 comparison of Cricbet99 vs Laser247 for serious Indian bettors." },
+      { property: "og:title", content: "Comparison: Laser247 (2026) — Side-by-Side Comparison" },
+      { property: "og:description", content: "Which ID offers faster payouts and sharper cricket odds? Full 2026 comparison of Comparison: Laser247 for serious Indian bettors." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/cricbet99-vs-laser247" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/cricbet99-vs-laser247")({
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "/" },
             { "@type": "ListItem", position: 2, name: "Compare", item: "/compare" },
-            { "@type": "ListItem", position: 3, name: "Cricbet99 vs Laser247", item: "/cricbet99-vs-laser247" },
+            { "@type": "ListItem", position: 3, name: "Comparison: Laser247", item: "/cricbet99-vs-laser247" },
           ],
         }),
       },
@@ -49,7 +49,7 @@ export const Route = createFileRoute("/cricbet99-vs-laser247")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "Cricbet99 vs Laser247 — Full 2026 Comparison Guide",
+          headline: "Comparison: Laser247 — Full 2026 Comparison Guide",
           description: "Which cricket ID offers faster payouts and sharper odds? Detailed side-by-side comparison of Cricbet99 and Laser247 for Indian players.",
           author: { "@type": "Organization", name: "Cricbet99" },
           publisher: { "@type": "Organization", name: "Cricbet99" },
@@ -114,8 +114,8 @@ function Compare() {
       <PageHero
         wide
         eyebrow="Comparison Guide"
-        title={<>Cricbet99 vs Laser247 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Ultimate 2026 Analysis</span></>}
-        subtitle="We compare Cricbet99 vs Laser247 on the metrics that define your betting experience. From withdrawal speed to IPL market depth, see why Cricbet99 is India's leading choice for 2026."
+        title={<>Comparison: Laser247 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Ultimate 2026 Analysis</span></>}
+        subtitle="We compare Comparison: Laser247 on the metrics that define your betting experience. From withdrawal speed to IPL market depth, see why Cricbet99 is India's leading choice for 2026."
       />
 
       {/* Verdict Section */}
@@ -193,7 +193,7 @@ function Compare() {
       {/* SEO Articles */}
       <section className="mx-auto max-w-5xl space-y-8 px-6 py-8">
         <Article
-          h="IPL Payouts: Why Cricbet99 Leads Laser247"
+          h="IPL Payouts: Why Choose Us Leads Laser247"
           body="During the high-pressure IPL season, withdrawal queues on platforms like Laser247 can stretch as thousands of players cash out simultaneously. Cricbet99 uses a load-balanced automated UPI payout system that processes transactions in parallel. This ensures that your winnings hit your bank account in minutes, not hours, regardless of match-day traffic."
         />
         <Article
