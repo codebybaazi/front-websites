@@ -112,9 +112,10 @@ function Schedule() {
                       <tbody>
                         {matches
                           .filter(m => m.sport === "Football")
+                          .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
                           .map((match) => (
                             <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors">
-                              <td className="p-4 text-sm font-medium text-foreground/80">{match.stage || (match.tournament.split(' ').pop() === '2026' ? 'Group Stage' : 'League')}</td>
+                              <td className="p-4 text-sm font-medium text-foreground/80">{match.stage}</td>
                               <td className="p-4 font-bold text-foreground">{match.homeTeam} vs {match.awayTeam}</td>
                               <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'MMM dd, HH:mm')}</td>
                               <td className="p-4 text-sm text-foreground/60">{match.venue}, {match.city}</td>
@@ -129,7 +130,6 @@ function Schedule() {
                               </td>
                             </tr>
                           ))}
-
                       </tbody>
                     </table>
                   </div>
