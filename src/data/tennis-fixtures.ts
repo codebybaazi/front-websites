@@ -267,6 +267,7 @@ export const tennisFixtures: TennisFixture[] = [
     city: "Delray Beach",
     country: "USA",
     startDate: "2026-02-14T11:00:00-05:00",
+    endDate: "2026-02-22",
     status: "upcoming",
     stage: "Main Draw",
     category: "ATP 250",
