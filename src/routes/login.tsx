@@ -5,7 +5,7 @@ import { SiteLayout, PageHero, WA } from "@/components/site-layout";
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 Login — Official Login URL & Betting ID Access" },
+      { title: "Cricbet99 Login: Official Site Access & Secure ID Recovery" },
       { name: "description", content: "Access your official Cricbet99 login URL securely. Get verified betting ID login links, reset passwords on WhatsApp, and protect your account from phishing. Available 24/7." },
       { name: "keywords", content: "cricbet99 login, cricbet99 official login, cricbet99 id login, cricbet99 login url, cricbet99 betting id access, cricbet99 password reset, online betting login india" },
       { property: "og:title", content: "Cricbet99 Official Login — Secure ID Access" },
