@@ -27,7 +27,7 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.excerpt },
         { property: "og:type", content: "article" },
-        { property: "og:url", content: `/blog/${params.slug}` },
+        { property: "og:url", content: `https://cricbet99.co.in/blog/${params.slug}` },
         ...(post.hero ? [{ property: "og:image", content: post.hero }, { name: "twitter:image", content: post.hero }] : []),
         { name: "twitter:card", content: "summary_large_image" },
       ],
