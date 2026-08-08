@@ -156,10 +156,10 @@ function Schedule() {
                       <table className="w-full text-left border-collapse">
                         <thead>
                           <tr className="border-b border-primary/10 bg-primary/5">
+                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Dates</th>
                             <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Tournament</th>
                             <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Tour/Surface</th>
-                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Defending Champ/Match</th>
-                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Date & Time</th>
+                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Defending Champ</th>
                             <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Venue</th>
                             <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Details</th>
                           </tr>
@@ -169,6 +169,7 @@ function Schedule() {
                             .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
                             .map((match) => (
                               <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors">
+                                <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'dd MMM yyyy')}</td>
                                 <td className="p-4">
                                   <div className="text-sm font-bold text-foreground">{match.tournament}</div>
                                   <div className="text-[10px] uppercase text-primary font-bold opacity-70 tracking-widest">{match.category}</div>
@@ -187,7 +188,6 @@ function Schedule() {
                                   <div className="text-sm font-bold text-foreground">{match.player1}</div>
                                   <div className="text-[10px] text-foreground/40 italic">Prev: {match.player1}</div>
                                 </td>
-                                <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'dd MMM yyyy')}</td>
                                 <td className="p-4 text-sm text-foreground/60">{match.venue}, {match.city}</td>
                                 <td className="p-4">
                                   <div className="flex flex-col gap-2">
