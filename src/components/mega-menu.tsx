@@ -425,12 +425,6 @@ export function MegaMenuHeader() {
           </nav>
 
           <div className="ml-auto flex items-center gap-2 sm:gap-3">
-            {/* Live match ticker chip — desktop */}
-            <div className="hidden items-center gap-2 rounded-full border border-accent/25 bg-accent/5 px-3 py-1.5 text-[11px] font-semibold text-accent xl:inline-flex">
-              <Radio className="h-3 w-3 animate-pulse" />
-              <span className="text-foreground/75">MI vs CSK · </span>
-              <span>Live now</span>
-            </div>
 
             {/* Premium Get ID CTA */}
             <a
