@@ -18,9 +18,9 @@ export const Route = createFileRoute("/cricbet99-app")({
 });
 
 const features = [
-  { t: "Elite Performance APK", d: "A tiny 25MB file that packs a massive punch. Optimized for ultra-low latency, ensuring your live bets are placed before the odds shift." },
-  { t: "Real-Time Market Pulse", d: "Experience ball-by-ball updates for IPL 2026 and every major T20 league. Never miss a market movement with our live-sync technology." },
-  { t: "Seamless UPI Engine", d: "Deposit and withdraw via PhonePe, Google Pay, or Paytm in seconds. Our financial backend is tuned for high-speed Indian banking." },
+  { t: "Official Cricbet99 Android APK", d: "A tiny 25MB file that packs a massive punch. Optimized for ultra-low latency, ensuring your live bets are placed before the odds shift." },
+  { t: "Live Cricket Betting Markets", d: "Experience ball-by-ball updates for IPL 2026 and every major T20 league. Never miss a market movement with our live-sync technology." },
+  { t: "Instant UPI Deposit & Withdrawal", d: "Deposit and withdraw via PhonePe, Google Pay, or Paytm in seconds. Our financial backend is tuned for high-speed Indian banking." },
   { t: "Lightning-Fast Payouts", d: "Win a bet and see the funds ready for withdrawal instantly. We process your cash-outs in minutes, delivering money directly to your UPI." },
   { t: "Fortified Security", d: "Bank-level encryption and biometric login options keep your funds and betting history invisible to prying eyes." },
   { t: "Premium Human Support", d: "A dedicated WhatsApp manager is integrated into your app experience, providing 24/7 help in Hindi and English." },
