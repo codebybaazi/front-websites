@@ -1337,6 +1337,7 @@ export const tennisFixtures: TennisFixture[] = [
     city: "London",
     country: "Great Britain",
     startDate: "2026-06-22T13:00:00+01:00",
+    endDate: "2026-07-12",
     status: "upcoming",
     stage: "Grand Slam",
     category: "Grand Slam",
