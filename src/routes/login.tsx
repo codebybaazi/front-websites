@@ -5,15 +5,35 @@ import { SiteLayout, PageHero, WA } from "@/components/site-layout";
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 Login — Access Your Betting ID Safely" },
-      { name: "description", content: "Log in to your Cricbet99 betting ID securely. Get your official login URL, reset passwords on WhatsApp and stay safe from phishing sites. Verified access 24/7." },
-      { property: "og:title", content: "Cricbet99 Login" },
-      { property: "og:description", content: "Secure login guide and password help for Cricbet99 users." },
+      { title: "Cricbet99 Login — Official Login URL & Betting ID Access" },
+      { name: "description", content: "Access your official Cricbet99 login URL securely. Get verified betting ID login links, reset passwords on WhatsApp, and protect your account from phishing. Available 24/7." },
+      { name: "keywords", content: "cricbet99 login, cricbet99 official login, cricbet99 id login, cricbet99 login url, cricbet99 betting id access, cricbet99 password reset, online betting login india" },
+      { property: "og:title", content: "Cricbet99 Official Login — Secure ID Access" },
+      { property: "og:description", content: "Secure login guide and official access for all Cricbet99 betting ID users. Get your link on WhatsApp." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/login" },
+      { property: "og:url", content: "https://cricbet99.co.in/login" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/login" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/login" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Cricbet99 Login",
+          "description": "Official login access and security guide for Cricbet99 betting ID holders.",
+          "url": "https://cricbet99.co.in/login",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cricbet99.co.in/" },
+              { "@type": "ListItem", "position": 2, "name": "Login", "item": "https://cricbet99.co.in/login" }
+            ]
+          }
+        })
+      }
+    ],
   }),
   component: LoginPage,
 });
@@ -31,21 +51,27 @@ function LoginPage() {
       <PageHero
         wide
         eyebrow="Login"
-        title={<>Log in to your <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Cricbet99 ID.</span></>}
-        subtitle="For safety, Cricbet99 login URLs are issued personally by our team. Message us on WhatsApp to get your official login link, reset your password or recover a locked account — no wait times."
+        title={<>Official <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Cricbet99 Login</span> & ID Access.</>}
+        subtitle="To ensure maximum security, official Cricbet99 login URLs are issued personally by our verified team. Message us on WhatsApp to receive your official login link, reset your password, or recover a locked betting ID instantly."
       />
-      <section className="mx-auto max-w-3xl px-6 py-8">
-        <div className="rounded-2xl border border-primary/25 bg-background/60 p-8 text-center">
-          <h2 className="text-2xl font-black">Get your login link on WhatsApp</h2>
-          <p className="mt-3 text-foreground/75">Support sends your official Cricbet99 login URL, username and (if needed) a fresh password — verified and safe.</p>
-          <a href={WA} className="mt-6 inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-bold text-primary-foreground shadow-2xl transition-transform hover:scale-[1.03]" style={{ background: "var(--gradient-gold)" }}>
-            <MessageCircle className="h-5 w-5" /> Request Login on WhatsApp
-          </a>
+      <section className="mx-auto max-w-4xl px-6 py-8">
+        <div className="rounded-3xl border border-primary/25 bg-background/60 p-8 md:p-12 text-center shadow-2xl">
+          <h2 className="text-3xl font-black">Secure Login URL via WhatsApp</h2>
+          <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
+            Our support team provides the verified Cricbet99 login URL, your unique username, and password help directly on WhatsApp to protect you from phishing and fake sites.
+          </p>
+          <div className="mt-8 flex flex-col items-center gap-4">
+            <a href={WA} className="inline-flex items-center gap-2 rounded-full px-10 py-5 text-lg font-bold text-primary-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-[1.04]" style={{ background: "var(--gradient-gold)" }}>
+              <MessageCircle className="h-6 w-6" /> Get Your Official Login Link
+            </a>
+            <p className="text-xs text-foreground/50">⚡ Instant response · 🔒 Secure & Private · 🕒 Open 24/7</p>
+          </div>
         </div>
       </section>
-      <section className="mx-auto max-w-6xl px-6 py-12">
-        <h2 className="text-3xl font-black md:text-4xl">Stay safe when logging in</h2>
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
+      <section className="mx-auto max-w-6xl px-6 py-12 border-t border-primary/10">
+        <h2 className="text-3xl font-black md:text-4xl text-center">Secure Your Cricbet99 Login</h2>
+        <p className="mt-4 text-center text-foreground/60 max-w-2xl mx-auto mb-10">Follow these critical security tips to ensure your betting ID and wallet remain protected at all times.</p>
+        <div className="grid gap-6 md:grid-cols-2">
           {tips.map((t) => (
             <div key={t.t} className="rounded-2xl border border-primary/20 bg-background/60 p-7">
               <h3 className="text-lg font-bold">{t.t}</h3>
