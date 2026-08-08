@@ -239,8 +239,8 @@ function MenuItem({ m, isOpen, setOpen }: { m: MenuDef; isOpen: boolean; setOpen
       <button
         type="button"
         onClick={() => setOpen(isOpen ? null : m.key)}
-        className={`inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-1.5 text-[13px] font-semibold transition-all ${
-          isOpen ? "bg-primary/15 text-primary" : "text-foreground/85 hover:bg-primary/10 hover:text-primary"
+        className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1.5 text-[13px] font-bold transition-all ${
+          isOpen ? "bg-primary/15 text-primary shadow-[inset_0_0_0_1px_rgba(180,140,40,0.2)]" : "text-foreground/85 hover:bg-primary/10 hover:text-primary"
         }`}
         aria-expanded={isOpen}
       >
