@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
+import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
 import { Crown, Dices, Sparkles, Gamepad2, ShieldCheck, Zap } from "lucide-react";
 import { AiOverview } from "@/components/ai-overview";
 import { getRequestOrigin } from "@/lib/origin.functions";
@@ -22,6 +23,12 @@ export const Route = createFileRoute("/indian-card-games")({
         { property: "og:url", content: canonical },
       ],
       links: [{ rel: "canonical", href: canonical }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/indian-card-games`;", "Indian Card Games on Cricbet99 — Teen Patti & Andar Bahar")),
+      },
+    ],
     };
   },
   component: IndianCardGames,
