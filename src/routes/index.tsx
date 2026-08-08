@@ -299,7 +299,7 @@ function FaqSection() {
             </span>
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-foreground/65 md:text-base">
-            Get clear, honest answers on account safety, fast payouts, welcome bonuses, and everything in between — no fine print, no automated responses, just direct support.
+            Everything you need to know about India's most trusted betting family, explained by humans, for humans. No bots, no fine print.
           </p>
         </div>
 
