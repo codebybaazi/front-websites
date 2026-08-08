@@ -1,4 +1,5 @@
 import { footballFixtures } from "./football-fixtures";
+import { tennisFixtures } from "./tennis-fixtures";
 
 export interface MatchFixture {
   slug: string;
@@ -103,6 +104,7 @@ export const matches: MatchFixture[] = [
     keywords: ["djokovic vs alcaraz wimbledon odds", "wimbledon final betting", "alcaraz djokovic live odds", "tennis set betting"],
   },
   ...footballFixtures,
+  ...(tennisFixtures as any),
 ];
 
 export const matchesBySport = (sport: MatchFixture["sport"]) =>

@@ -3,6 +3,7 @@ import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
 import { matches } from "@/data/matches";
 import { footballFixtures } from "@/data/football-fixtures";
+import { tennisFixtures } from "@/data/tennis-fixtures";
 import { Calendar, MapPin, Trophy, Clock, ArrowRight, ExternalLink } from "lucide-react";
 import { format } from "date-fns";
 import { useState } from "react";
@@ -147,6 +148,46 @@ function Schedule() {
                         </div>
                       </div>
                     ))}
+                  </div>
+                ) : activeTab === "Tennis" ? (
+                  <div className="space-y-6">
+                    <div className="overflow-x-auto rounded-2xl border border-primary/10 bg-background/40">
+                      <table className="w-full text-left border-collapse">
+                        <thead>
+                          <tr className="border-b border-primary/10 bg-primary/5">
+                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Tournament</th>
+                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Match</th>
+                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Date & Time</th>
+                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Venue</th>
+                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {tennisFixtures
+                            .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
+                            .map((match) => (
+                              <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors">
+                                <td className="p-4">
+                                  <div className="text-sm font-bold text-foreground">{match.tournament}</div>
+                                  <div className="text-[10px] uppercase text-primary font-bold opacity-70 tracking-widest">{match.stage}</div>
+                                </td>
+                                <td className="p-4 font-bold text-foreground">{match.player1} vs {match.player2}</td>
+                                <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'eee, dd MMM yyyy · HH:mm')}</td>
+                                <td className="p-4 text-sm text-foreground/60">{match.venue}, {match.city}</td>
+                                <td className="p-4">
+                                  <Link 
+                                    to="/matches/$slug"
+                                    params={{ slug: match.slug }}
+                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                  >
+                                    View <ArrowRight className="w-3 h-3" />
+                                  </Link>
+                                </td>
+                              </tr>
+                            ))}
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 ) : (
                   filteredEvents.map((event, i) => (
