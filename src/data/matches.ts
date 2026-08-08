@@ -12,6 +12,7 @@ export interface MatchFixture {
   startDate: string; // ISO
   status: "live" | "upcoming";
   stage?: string;
+  category?: string;
   marketHighlights: string[];
   keywords: string[];
 }
