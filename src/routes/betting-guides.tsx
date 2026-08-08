@@ -5,14 +5,14 @@ import content from "@/data/pages/betting-guides.json";
 export const Route = createFileRoute("/betting-guides")({
   head: () => ({
     meta: [
-      { title: "Cricbet99 Betting Guides — Cricbet99" },
-      { name: "description", content: "Cricbet99 Betting Guides on Cricbet99: expert guides to help you bet smarter on cricket and more. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:title", content: "Cricbet99 Betting Guides — Cricbet99" },
-      { property: "og:description", content: "Cricbet99 Betting Guides on Cricbet99: expert guides to help you bet smarter on cricket and more. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
+      { title: "Cricbet99 Betting Guides | Official 2026 Strategy Center" },
+      { name: "description", content: "Master IPL 2026 and cricket trading with the official Cricbet99 Betting Guides. Learn session analysis, toss markets, and bankroll management from professional traders." },
+      { property: "og:title", content: "Cricbet99 Betting Guides | Expert Cricket Trading Strategies" },
+      { property: "og:description", content: "Deep-dive tutorials on cricket session betting, toss markets, and risk management for the 2026 season. Get India's sharpest odds with a verified Cricbet99 ID." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/betting-guides" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/betting-guides" }],
     scripts: content.faqs && content.faqs.length ? [{
       type: "application/ld+json",
       children: JSON.stringify(buildFaqJsonLd(content.faqs)),

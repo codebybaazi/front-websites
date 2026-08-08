@@ -5,14 +5,14 @@ import content from "@/data/pages/betting-guides__how-to-place-a-live-bet.json";
 export const Route = createFileRoute("/betting-guides/how-to-place-a-live-bet")({
   head: () => ({
     meta: [
-      { title: "How to Place a Live Bet — Cricbet99" },
-      { name: "description", content: "How to Place a Live Bet on Cricbet99: master live in-play cricket betting on Cricbet99. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
-      { property: "og:title", content: "How to Place a Live Bet — Cricbet99" },
-      { property: "og:description", content: "How to Place a Live Bet on Cricbet99: master live in-play cricket betting on Cricbet99. 24/7 WhatsApp support, instant UPI payouts and India's sharpest odds since 2020." },
+      { title: "Master Live In-Play Betting on Cricbet99 | 2026 Guide" },
+      { name: "description", content: "Learn how to place live bets during IPL 2026 matches. Master in-play momentum trading, fluctuating odds, and fast execution on India's premier cricket exchange." },
+      { property: "og:title", content: "Live Cricket Betting Guide: How to Trade In-Play on Cricbet99" },
+      { property: "og:description", content: "Technical guide on using the Cricbet99 live dashboard to spot momentum shifts and secure profits during live cricket matches." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/betting-guides/how-to-place-a-live-bet" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.win/betting-guides/how-to-place-a-live-bet" }],
     scripts: content.faqs && content.faqs.length ? [{
       type: "application/ld+json",
       children: JSON.stringify(buildFaqJsonLd(content.faqs)),
