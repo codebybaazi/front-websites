@@ -1,4 +1,20 @@
-export const footballFixtures = [
+export interface FootballFixture {
+  slug: string;
+  sport: "Football";
+  tournament: string;
+  homeTeam: string;
+  awayTeam: string;
+  venue: string;
+  city: string;
+  country: string;
+  startDate: string;
+  status: "live" | "upcoming";
+  stage: string;
+  marketHighlights: string[];
+  keywords: string[];
+}
+
+export const footballFixtures: FootballFixture[] = [
   // Group Stage - Matchday 1
   {
     slug: "mexico-vs-tbd-opening-2026",
