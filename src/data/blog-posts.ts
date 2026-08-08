@@ -93,7 +93,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         "heading": "Safe Casino Gaming on Cricbet99",
-        "body": "Cricbet99 provides a secure environment for Indian casino enthusiasts. With instant UPI deposits and same-day withdrawals, it's the most trusted platform for real-money gaming. Get your Cricbet99 ID via WhatsApp to access exclusive casino bonuses and 24/7 human support for all your gaming needs."
+        "body": "Cricbet99 provides a secure environment for Indian casino enthusiasts. With instant UPI deposits and same-day withdrawals, it's the most trusted platform for real-money gaming. Get your [Cricbet99 ID](/register) via WhatsApp to access exclusive [casino bonuses](/bonus) and 24/7 human support for all your gaming needs."
       }
     ]
   },
@@ -115,7 +115,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         "heading": "Cricbet99: India's Best Betting ID",
-        "body": "Don't miss a single match in 2026. Cricbet99 offers the most comprehensive coverage of international and domestic cricket. With our verified WhatsApp agents, setting up your betting ID is quick and easy. Enjoy high odds, instant payouts, and the best customer service in the Indian betting industry."
+        "body": "Don't miss a single match in 2026. Cricbet99 offers the most comprehensive coverage of international and domestic cricket. With our verified WhatsApp agents, setting up your [Cricbet99 ID](/cricbet99-id) is quick and easy. Enjoy [high odds](/todays-best-odds), instant payouts, and the best customer service in the Indian betting industry. New to the platform? Start with our [How to Deposit](/how-to-deposit) guide."
       }
     ]
   },
@@ -137,7 +137,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         "heading": "Cricbet99 Take",
-        "body": "Here's what our analysts are watching next: how team management responds, whether senior players step up in the coming fixtures, and how odds shift once the lineup is confirmed. Members using Cricbet99 sports IDs get early access to preview notes, live in-play markets, and 24×7 support on WhatsApp — so you're never late to a moment that could swing your book."
+        "body": "Here's what our analysts are watching next: how team management responds, whether senior players step up in the coming fixtures, and how odds shift once the lineup is confirmed. Members using [Cricbet99 sports IDs](/sports-id) get early access to preview notes, [live in-play markets](/exchange), and 24×7 support on WhatsApp — so you're never late to a moment that could swing your book. Review our [Responsible Gaming](/responsible-gaming) policy to stay in control."
       }
     ]
   },

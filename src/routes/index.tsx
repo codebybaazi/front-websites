@@ -259,12 +259,12 @@ const casinoGames = [
 ];
 
 const steps = [
-  { icon: MessageCircle, title: "Message us on WhatsApp", desc: "Tap the WhatsApp button. A verified Cricbet99 manager responds within 60 seconds, day or night." },
-  { icon: KeyRound, title: "Share basic details", desc: "Full name, mobile number and preferred username. A quick OTP confirms your identity — no long forms." },
-  { icon: Wallet, title: "Make your first deposit", desc: "Add funds via UPI, Google Pay, PhonePe or bank transfer. Balance reflects in seconds." },
-  { icon: BadgeCheck, title: "Receive your ID", desc: "Your Cricbet99 username and password land on WhatsApp the moment your deposit clears." },
-  { icon: Gift, title: "Claim your welcome bonus", desc: "Activate your 100% welcome bonus up to ₹10,000 — usable across sports and live casino." },
-  { icon: TrendingUp, title: "Log in & start winning", desc: "Sign in on any device and dive into live IPL odds, football markets and live casino tables." },
+  { icon: MessageCircle, title: "Message us on WhatsApp", desc: <>Tap the WhatsApp button. A verified Cricbet99 manager responds within 60 seconds. Learn more about our <Link to="/whatsapp-number" className="text-primary hover:underline">official numbers</Link>.</> },
+  { icon: KeyRound, title: "Share basic details", desc: <>Full name and mobile number is all we need. Read our <Link to="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link> for data safety details.</> },
+  { icon: Wallet, title: "Make your first deposit", desc: <>Add funds via UPI or bank transfer. Check <Link to="/how-to-deposit" className="text-primary hover:underline">Deposit Guide</Link> for step-by-step help.</> },
+  { icon: BadgeCheck, title: "Receive your ID", desc: <>Your verified <Link to="/cricbet99-id" className="text-primary hover:underline">Cricbet99 ID</Link> username and password land on WhatsApp instantly.</> },
+  { icon: Gift, title: "Claim your welcome bonus", desc: <>Activate your 100% bonus up to ₹10,000. View all <Link to="/bonus" className="text-primary hover:underline">Promotions</Link> here.</> },
+  { icon: TrendingUp, title: "Log in & start winning", desc: <>Sign in and dive into live markets. Having trouble? Visit <Link to="/login-issues" className="text-primary hover:underline">Login Help</Link>.</> },
 ];
 
 function Index() {
