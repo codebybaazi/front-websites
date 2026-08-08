@@ -286,6 +286,7 @@ export const tennisFixtures: TennisFixture[] = [
     city: "Rio de Janeiro",
     country: "Brazil",
     startDate: "2026-02-14T16:00:00-03:00",
+    endDate: "2026-02-22",
     status: "upcoming",
     stage: "Main Draw",
     category: "ATP 500",
