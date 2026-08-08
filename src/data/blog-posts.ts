@@ -45,7 +45,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         "heading": "IPL 2026 Betting Trends and Statistics",
-        "body": "The IPL 2026 season was a landmark event for Indian sports betting. With RCB clinching the title, the Cricbet99 exchange saw record-breaking activity in session betting and match-winner markets. High-volume traders leveraged Cricbet99's fast payouts and sharp odds to maximize their returns throughout the tournament."
+        "body": "The IPL 2026 season was a landmark event for Indian sports betting. With RCB clinching the title, the Cricbet99 exchange saw record-breaking activity in session betting and match-winner markets. High-volume traders leveraged Cricbet99's fast payouts and sharp odds to maximize their returns throughout the tournament. New users can learn the ropes in our [Betting Guides](/betting-guides) or see a direct comparison in our [Cricbet99 vs Lotus 365](/cricbet99-vs-lotus365) breakdown."
       },
       {
         "heading": "Pro Tip for IPL 2027 Preview",
