@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { Gamepad2, Sparkles, Dices, Crown } from "lucide-react";
+import { AiOverview } from "@/components/ai-overview";
 
 export const Route = createFileRoute("/casino")({
   head: () => ({
@@ -34,6 +35,15 @@ function Casino() {
         eyebrow="Live Casino"
         title={<>Real dealers. <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Real thrill.</span> 24/7.</>}
         subtitle="Cricbet99's live casino brings HD-streamed tables with real dealers to your screen at any hour. Play Teen Patti, Andar Bahar, Roulette, Baccarat, Blackjack, Dragon Tiger and slots — all with one verified ID and instant round switching."
+      />
+      <AiOverview 
+        summary="Cricbet99's Live Casino provides an immersive HD experience with real dealers for India's favourite games like Teen Patti and Andar Bahar, operating 24/7 with instant payouts."
+        highlights={[
+          "HD quality streaming with professional dealers",
+          "Wide variety of Indian and global card games",
+          "Instant settlement on all table rounds",
+          "Mobile-optimized gameplay for iOS and Android"
+        ]}
       />
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
