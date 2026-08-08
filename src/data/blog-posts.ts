@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         "heading": "Expert Take: Cricbet99 Betting Strategy",
-        "body": "Our analysts recommend watching the toss market and opening partnership session rates closely. Members with a verified Cricbet99 sports ID get instant access to in-play markets, high-odds betting tips, and 24x7 WhatsApp support for hassle-free withdrawals. Stay ahead of the game with the most trusted online cricket ID in India."
+        "body": "Our analysts recommend watching the toss market and opening partnership session rates closely. Members with a verified Cricbet99 sports ID get instant access to in-play markets, high-odds betting tips, and 24x7 WhatsApp support for hassle-free withdrawals. For more details on safe play, check our [How It Works](/how-it-works) guide and [Is Cricbet99 Legal?](/is-cricbet99-legal) analysis. Stay ahead of the game with the most trusted online cricket ID in India."
       }
     ]
   },
