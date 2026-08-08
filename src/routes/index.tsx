@@ -270,84 +270,10 @@ const steps = [
 function Index() {
   const { aiOverview } = Route.useLoaderData();
   return (
-    <>
-      <AiOverviewModal data={aiOverview} />
-      <IndexInner />
-    </>
+    <IndexInner aiOverview={aiOverview} />
   );
 }
 
-function AiOverviewModal({ data }: { data: any }) {
-  const [show, setShow] = useState(false);
-  
-  return (
-    <>
-      <button 
-        onClick={() => setShow(true)}
-        className="fixed bottom-24 right-6 z-50 flex items-center gap-2 rounded-full border border-primary/40 bg-background/90 px-4 py-2 text-xs font-bold text-primary shadow-2xl backdrop-blur transition-all hover:scale-105 hover:border-primary md:bottom-28"
-      >
-        <Sparkles className="h-4 w-4 animate-pulse text-accent" />
-        AI Overview
-      </button>
-
-      {show && (
-        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
-          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={() => setShow(false)} />
-          <div className="relative w-full max-w-lg overflow-hidden rounded-3xl border border-primary/30 bg-[oklch(0.12_0.02_260)] p-1 shadow-2xl">
-            <div className="rounded-[calc(1.5rem-4px)] bg-gradient-to-b from-[oklch(0.15_0.03_260)] to-[oklch(0.1_0.02_260)] p-6">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="grid h-8 w-8 place-items-center rounded-lg bg-accent/20 ring-1 ring-accent/40">
-                    <Sparkles className="h-4 w-4 text-accent" />
-                  </div>
-                  <h3 className="font-black text-foreground">AI Website Overview</h3>
-                </div>
-                <button onClick={() => setShow(false)} className="text-foreground/40 hover:text-foreground">
-                  <Plus className="h-6 w-6 rotate-45" />
-                </button>
-              </div>
-
-              <div className="mt-6 space-y-4">
-                <div>
-                  <div className="text-[10px] font-black uppercase tracking-widest text-primary">Summary</div>
-                  <p className="mt-2 text-sm leading-relaxed text-foreground/80">{data.summary}</p>
-                </div>
-
-                <div>
-                  <div className="text-[10px] font-black uppercase tracking-widest text-primary">Key Highlights</div>
-                  <ul className="mt-2 space-y-2">
-                    {data.keyFeatures.map((f: string) => (
-                      <li key={f} className="flex items-start gap-2 text-xs text-foreground/70">
-                        <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-accent" />
-                        <span>{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="rounded-xl border border-primary/20 bg-primary/5 p-3">
-                  <div className="text-[9px] font-black uppercase tracking-widest text-accent">Trust Verdict</div>
-                  <p className="mt-1 text-xs text-foreground/60 italic">"{data.trustSignals}"</p>
-                </div>
-              </div>
-
-              <a 
-                href={WA}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 flex w-full items-center justify-center gap-2 rounded-xl py-3 text-sm font-bold text-primary-foreground shadow-lg transition-transform hover:scale-[1.02]"
-                style={{ background: "var(--gradient-gold)" }}
-              >
-                <MessageCircle className="h-4 w-4" />
-                Claim Your ID Now
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
-    </>
-  );
-}
 
 function FaqSection() {
   const [open, setOpen] = useState<number | null>(0);
@@ -483,7 +409,10 @@ function FaqSection() {
   );
 }
 
-function IndexInner() {
+import { AiOverview } from "@/components/ai-overview";
+
+function IndexInner({ aiOverview }: { aiOverview: any }) {
+
   return (
     <SiteLayout>
       {/* HERO BANNER */}
@@ -1648,6 +1577,17 @@ function IndexInner() {
         heading="Your winning session starts on Cricbet99."
         sub="Skip the sign-up forms. Message us on WhatsApp, verify in one tap, and go live with a loaded Cricbet99 ID — welcome bonus already in your wallet."
       />
+
+      {/* AI Overview at the end of page */}
+      {aiOverview && (
+        <div className="border-t border-primary/10 pt-8 pb-16 bg-[oklch(0.08_0.01_260)]">
+          <AiOverview 
+            summary={aiOverview.summary} 
+            highlights={aiOverview.keyFeatures} 
+          />
+        </div>
+      )}
     </SiteLayout>
   );
 }
+
