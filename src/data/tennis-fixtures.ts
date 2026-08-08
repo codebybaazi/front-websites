@@ -1120,6 +1120,31 @@ export const tennisFixtures: TennisFixture[] = [
     keywords: ["atp finals turin 2026 odds"]
   },
   {
+    slug: "next-gen-atp-finals-2026",
+    sport: "Tennis",
+    tournament: "Next Gen ATP Finals",
+    player1: "Learner Tien",
+    player2: "TBD",
+    venue: "King Abdullah Sports City",
+    city: "Jeddah",
+    country: "Saudi Arabia",
+    startDate: "2026-12-08T18:00:00+03:00",
+    status: "upcoming",
+    stage: "U21 Finals",
+    category: "Next Gen Finals",
+    surface: "Indoor Hard",
+    tour: "ATP",
+    marketHighlights: ["Match Winner", "Set Handicap"],
+    keywords: ["next gen atp finals 2026 betting", "jeddah tennis odds", "learner tien prediction"],
+    prediction: {
+      winner: "Learner Tien",
+      score: "3-1",
+      points: "Over 18.5 Games",
+      confidence: 75,
+      analysis: "Tien's rapid rise and adaptability to the unique Next Gen scoring format make him the prime candidate to defend his title in Jeddah."
+    }
+  },
+  {
     slug: "stockholm-open-2026",
     sport: "Tennis",
     tournament: "Bybit Stockholm Open",
