@@ -123,6 +123,7 @@ export function SiteFooter() {
             <li><Link to="/blog" className="hover:text-primary">Blog</Link></li>
             <li><Link to="/faq" className="hover:text-primary">FAQ</Link></li>
             <li><Link to="/contact" className="hover:text-primary">Contact</Link></li>
+            <li><Link to="/all-links" className="hover:text-primary">All Links</Link></li>
           </ul>
         </div>
         <div>
