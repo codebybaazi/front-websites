@@ -18,19 +18,19 @@ export const Route = createFileRoute("/cricbet99-app")({
 });
 
 const features = [
-  { t: "Lightweight APK", d: "Under 25 MB. Installs in seconds, opens instantly, runs smoothly on 3G / 4G / 5G." },
-  { t: "Live cricket odds", d: "Ball-by-ball IPL, T20 World Cup and international cricket markets — refreshed in real time." },
-  { t: "One-tap UPI", d: "Deposit via Google Pay, PhonePe, Paytm or any UPI app. Wallet credits inside 30 seconds." },
-  { t: "Minute-fast withdrawals", d: "Cash-out requests are pushed to UPI in minutes, not days. IMPS/bank options too." },
-  { t: "Bank-grade security", d: "SSL encryption, device fingerprinting and 24/7 fraud monitoring on every session." },
-  { t: "24/7 WhatsApp help", d: "Real humans, not chatbots. English and Hindi support any time you need it." },
+  { t: "Elite Performance APK", d: "A tiny 25MB file that packs a massive punch. Optimized for ultra-low latency, ensuring your live bets are placed before the odds shift." },
+  { t: "Real-Time Market Pulse", d: "Experience ball-by-ball updates for IPL 2026 and every major T20 league. Never miss a market movement with our live-sync technology." },
+  { t: "Seamless UPI Engine", d: "Deposit and withdraw via PhonePe, Google Pay, or Paytm in seconds. Our financial backend is tuned for high-speed Indian banking." },
+  { t: "Lightning-Fast Payouts", d: "Win a bet and see the funds ready for withdrawal instantly. We process your cash-outs in minutes, delivering money directly to your UPI." },
+  { t: "Fortified Security", d: "Bank-level encryption and biometric login options keep your funds and betting history invisible to prying eyes." },
+  { t: "Premium Human Support", d: "A dedicated WhatsApp manager is integrated into your app experience, providing 24/7 help in Hindi and English." },
 ];
 
 const steps = [
-  "Message the Cricbet99 team on WhatsApp for the official APK link.",
-  "On your Android device, tap Settings → Security → Enable 'Install from unknown sources'.",
-  "Open the APK, tap Install and wait a few seconds.",
-  "Launch the app, log in with your Cricbet99 ID and start betting.",
+  "Connect with our official team on WhatsApp to receive the verified, high-security APK download link.",
+  "Open your Android settings and toggle 'Allow installation from unknown sources' to prepare your device.",
+  "Run the Cricbet99 APK and follow the simple on-screen prompts—it takes less than 30 seconds to install.",
+  "Launch your new betting hub, log in with your verified ID, and start dominating the markets."
 ];
 
 function AppPage() {
