@@ -1,56 +1,56 @@
 {
-  "eyebrow": "Help & Support",
+  "eyebrow": "Help",
   "title": "Fix Cricbet99 Deposit Issues",
-  "subtitle": "Fix Cricbet99 Deposit Issues — stuck deposits, pending UPI and failed bank transfers. Trusted by 1 lakh+ Indian players since 2020, with 24/7 WhatsApp support and instant UPI payouts.",
+  "subtitle": "Immediate resolution for pending or failed deposits. Track your UPI, bank, or wallet transactions and get your balance updated instantly.",
   "intro": [
-    "Running into a problem is frustrating — but every issue on Cricbet99 has a quick, human-verified fix. This page walks you through stuck deposits, pending UPI and failed bank transfers step by step.",
-    "Every part of the Cricbet99 experience — from ID setup to your first withdrawal — is handled by a real human on WhatsApp. There is no faceless system, no complicated dashboard and no waiting on email tickets that go nowhere. If you can send a WhatsApp message, you can play on Cricbet99.",
-    "We've built Cricbet99 around three principles: sharp odds, fast payouts and honest support. That's why players across every Indian state trust us with their cricket, casino and multi-sport action — and why the platform has grown steadily since 2020 with almost zero marketing spend."
+    "At Cricbet99, we know that when the match is about to start, every second counts. If your deposit hasn't reflected in your ID, this guide helps you identify the cause and get your balance updated through our 24/7 WhatsApp support.",
+    "Most deposit issues are caused by bank-side delays or incorrect transaction details. Our human-led support team can manually verify your payment reference number (UTR) and push your balance update through, even if the banking system is slow.",
+    "Your funds are always safe. Every transaction on Cricbet99 is logged and traceable. If you have a successful payment receipt, your ID will be updated — guaranteed."
   ],
   "features": [
     {
-      "title": "Diagnosed in 60 seconds",
-      "desc": "Our support team runs a quick check on your account and pinpoints the exact issue."
+      "title": "UTR Verification",
+      "desc": "How to share your transaction reference number with support for manual balance updates in under 60 seconds."
     },
     {
-      "title": "Fixed on the same call",
-      "desc": "Most issues are resolved in a single WhatsApp session — no waiting, no tickets."
+      "title": "UPI Troubleshooting",
+      "desc": "Common fixes for Google Pay, PhonePe, and Paytm 'pending' states during peak match hours."
     },
     {
-      "title": "Full transaction trace",
-      "desc": "We show you exactly where a stuck deposit or withdrawal is right now."
+      "title": "Bank Transfer Trace",
+      "desc": "What to do if an IMPS, NEFT, or RTGS transfer is taking longer than usual to settle."
     },
     {
-      "title": "Free ID recovery",
-      "desc": "Lost your password, phone or email? We recover your Cricbet99 ID at no cost."
+      "title": "Instruction Verification",
+      "desc": "Always ensure you are using the latest deposit details provided by our official WhatsApp team."
     },
     {
-      "title": "Security-first fixes",
-      "desc": "Every unblock or reset goes through KYC re-confirmation to keep your funds safe."
+      "title": "Bonus Activation",
+      "desc": "How to ensure your deposit bonus is correctly applied to your wallet at the moment of deposit."
     },
     {
-      "title": "24/7 human support",
-      "desc": "Our team is online round the clock, every day of the year — including match days."
+      "title": "Human Support 24/7",
+      "desc": "A real financial agent is always online to resolve payment discrepancies on WhatsApp."
     }
   ],
   "faqs": [
     {
-      "q": "Why is my issue happening?",
-      "a": "Most account issues fall into a small set of causes — expired KYC, an in-flight bank settlement, a suspended promo, or a typo in payee details. Our team pinpoints the exact one in one WhatsApp session."
+      "q": "How long does a deposit normally take?",
+      "a": "Most UPI and wallet deposits are reflected instantly or within 5 minutes. Bank transfers can take up to 30 minutes depending on the bank."
     },
     {
-      "q": "How long does the fix take?",
-      "a": "Around 90% of issues are resolved on the same call within a few minutes. Bank-side delays may take a few hours, but you'll be kept updated."
+      "q": "What if my money was debited but not added?",
+      "a": "Don't worry. Simply send a screenshot of the payment receipt to our WhatsApp support, and we will manually credit your account."
     },
     {
-      "q": "Will I lose any funds?",
-      "a": "No. Every rupee in your Cricbet99 ID is tracked and reconciled. Even during an issue, your balance is fully protected."
+      "q": "Can I use someone else's UPI ID?",
+      "a": "For security and KYC compliance, we recommend using a payment method registered in your own name."
     },
     {
-      "q": "How do I reach support quickly?",
-      "a": "Message our official WhatsApp number. Live chat and email are available too, but WhatsApp is fastest."
+      "q": "Is there a maximum deposit limit?",
+      "a": "Limits vary by payment method. Our WhatsApp team can provide you with the best options for large-scale trading."
     }
   ],
-  "ctaHeading": "Ready to explore Fix Cricbet99 Deposit Issues?",
-  "ctaSub": "Message our team on WhatsApp — we'll set you up in under 2 minutes."
+  "ctaHeading": "Deposit not reflecting?",
+  "ctaSub": "Send your payment receipt to our WhatsApp support team now for instant balance updates."
 }
