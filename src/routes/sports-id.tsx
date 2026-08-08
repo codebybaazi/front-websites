@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
+import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
 import { ShieldCheck, Zap, Wallet, Headset } from "lucide-react";
 
 export const Route = createFileRoute("/sports-id")({
@@ -14,6 +15,12 @@ export const Route = createFileRoute("/sports-id")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/sports-id" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/sports-id", "Get Your Official Cricbet99 Sports ID")),
+      },
+    ],
   }),
   component: SportsID,
 });
