@@ -15,6 +15,13 @@ export interface TennisFixture {
   tour: "ATP" | "WTA" | "Combined";
   marketHighlights: string[];
   keywords: string[];
+  prediction?: {
+    winner: string;
+    score: string;
+    points: string;
+    confidence: number;
+    analysis: string;
+  };
 }
 
 export const tennisFixtures: TennisFixture[] = [
@@ -35,7 +42,14 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "ATP",
     marketHighlights: ["Match Winner", "Set Betting"],
-    keywords: ["brisbane international 2026 odds", "medvedev brisbane betting"]
+    keywords: ["brisbane international 2026 odds", "medvedev brisbane betting", "tennis betting india", "atp brisbane prediction"],
+    prediction: {
+      winner: "Daniil Medvedev",
+      score: "2-0",
+      points: "Over 20.5 Games",
+      confidence: 85,
+      analysis: "Medvedev's hard-court dominance and previous success in Australia make him the clear favorite for the season opener."
+    }
   },
   {
     slug: "asb-classic-2026",
@@ -89,7 +103,14 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "ATP",
     marketHighlights: ["Match Winner", "Correct Score"],
-    keywords: ["adelaide international 2026 betting", "machac adelaide odds"]
+    keywords: ["adelaide international 2026 betting", "machac adelaide odds", "tennis betting strategy", "atp adelaide picks"],
+    prediction: {
+      winner: "Tomas Machac",
+      score: "2-1",
+      points: "Over 22.5 Games",
+      confidence: 70,
+      analysis: "Machac's recent form suggests a strong start, though a tight three-setter is expected given the early-season conditions."
+    }
   },
   {
     slug: "australian-open-2026",
@@ -107,7 +128,14 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "Combined",
     marketHighlights: ["Outright Winner", "Match Odds", "Quarter Winner"],
-    keywords: ["australian open 2026 odds", "alcaraz melbourne betting"]
+    keywords: ["australian open 2026 odds", "alcaraz melbourne betting", "grand slam betting india", "australian open predictions 2026"],
+    prediction: {
+      winner: "Carlos Alcaraz",
+      score: "3-1",
+      points: "Over 38.5 Games",
+      confidence: 80,
+      analysis: "Alcaraz enters as a heavy favorite. His aggressive baseline play is perfectly suited for the Melbourne plexicushion courts."
+    }
   },
   {
     slug: "open-occitanie-2026",
@@ -233,7 +261,14 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "Combined",
     marketHighlights: ["Match Winner", "Set Handicap"],
-    keywords: ["indian wells 2026 odds", "sinner indian wells betting"]
+    keywords: ["indian wells 2026 odds", "sinner indian wells betting", "tennis betting apps india", "atp masters 1000 picks"],
+    prediction: {
+      winner: "Jannik Sinner",
+      score: "2-0",
+      points: "Under 21.5 Games",
+      confidence: 90,
+      analysis: "The 'Sunshine Double' starts with Sinner in peak physical condition. His high-altitude training provides a distinct stamina advantage."
+    }
   },
   {
     slug: "miami-open-2026",
@@ -341,7 +376,14 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Grass",
     tour: "Combined",
     marketHighlights: ["Match Winner"],
-    keywords: ["wimbledon 2026 betting odds"]
+    keywords: ["wimbledon 2026 betting odds", "wimbledon tennis picks", "grass court betting strategy"],
+    prediction: {
+      winner: "Jannik Sinner",
+      score: "3-1",
+      points: "Over 36.5 Games",
+      confidence: 75,
+      analysis: "Sinner's improved serve-and-volley game makes him the man to beat on grass this year, though tie-breakers are likely."
+    }
   },
   {
     slug: "us-open-2026",
@@ -505,7 +547,14 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Clay",
     tour: "Combined",
     marketHighlights: ["Match Winner"],
-    keywords: ["french open wta 2026 odds"]
+    keywords: ["french open wta 2026 odds", "wta clay court betting", "coco gauff paris predictions"],
+    prediction: {
+      winner: "Coco Gauff",
+      score: "2-0",
+      points: "Under 19.5 Games",
+      confidence: 82,
+      analysis: "Gauff's coverage on clay is unmatched. She's expected to dominate the early rounds with her defensive prowess."
+    }
   },
   {
     slug: "wimbledon-wta-2026",
