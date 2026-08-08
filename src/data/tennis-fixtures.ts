@@ -825,6 +825,60 @@ export const tennisFixtures: TennisFixture[] = [
     }
   },
   {
+    slug: "national-bank-open-2026",
+    sport: "Tennis",
+    tournament: "National Bank Open",
+    player1: "Ben Shelton",
+    player2: "TBD",
+    venue: "IGA Stadium",
+    city: "Montreal",
+    country: "Canada",
+    startDate: "2026-08-02T11:00:00-04:00",
+    status: "upcoming",
+    stage: "Masters 1000",
+    category: "Masters 1000",
+    surface: "Hard",
+    tour: "ATP",
+    marketHighlights: ["Match Winner"],
+    keywords: ["montreal masters 2026 betting", "shelton canada tennis"]
+  },
+  {
+    slug: "cincinnati-open-2026",
+    sport: "Tennis",
+    tournament: "Cincinnati Open",
+    player1: "Jannik Sinner",
+    player2: "TBD",
+    venue: "Lindner Family Tennis Center",
+    city: "Cincinnati",
+    country: "USA",
+    startDate: "2026-08-13T11:00:00-04:00",
+    status: "upcoming",
+    stage: "Masters 1000",
+    category: "Masters 1000",
+    surface: "Hard",
+    tour: "Combined",
+    marketHighlights: ["Match Winner"],
+    keywords: ["cincinnati tennis odds 2026"]
+  },
+  {
+    slug: "winston-salem-open-2026",
+    sport: "Tennis",
+    tournament: "Winston-Salem Open",
+    player1: "Marton Fucsovics",
+    player2: "TBD",
+    venue: "Wake Forest University",
+    city: "Winston-Salem",
+    country: "USA",
+    startDate: "2026-08-23T14:00:00-04:00",
+    status: "upcoming",
+    stage: "Main Draw",
+    category: "ATP 250",
+    surface: "Hard",
+    tour: "ATP",
+    marketHighlights: ["Match Winner"],
+    keywords: ["winston salem tennis betting"]
+  },
+  {
     slug: "us-open-2026",
     sport: "Tennis",
     tournament: "US Open",
@@ -840,7 +894,14 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "Combined",
     marketHighlights: ["Match Winner"],
-    keywords: ["us open 2026 tennis odds"]
+    keywords: ["us open 2026 tennis odds", "alcaraz us open betting", "hard court betting india"],
+    prediction: {
+      winner: "Carlos Alcaraz",
+      score: "3-0",
+      points: "Under 32.5 Games",
+      confidence: 88,
+      analysis: "The defending champion's explosive style thrives in the New York humidity. Alcaraz is primed for a dominant title defense."
+    }
   },
   {
     slug: "shanghai-masters-2026",
