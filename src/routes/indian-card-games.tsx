@@ -10,7 +10,7 @@ export const Route = createFileRoute("/indian-card-games")({
   }),
   head: ({ loaderData }) => {
     const origin = loaderData?.origin ?? "";
-    const canonical = `${origin}/indian-card-games`;
+    const canonical = `https://cricbet99.co.in/indian-card-games`;
     return {
       meta: [
         { title: "Indian Card Games on Cricbet99 — Teen Patti & Andar Bahar" },

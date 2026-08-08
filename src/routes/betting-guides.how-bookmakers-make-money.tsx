@@ -12,7 +12,7 @@ export const Route = createFileRoute("/betting-guides/how-bookmakers-make-money"
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/betting-guides/how-bookmakers-make-money" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/betting-guides/how-bookmakers-make-money" }],
     scripts: [
       {
         type: "application/ld+json",

@@ -10,10 +10,10 @@ export const Route = createFileRoute("/is-cricbet99-legal")({
       { property: "og:title", content: "Is Cricbet99 Legal in India? — Legal Review" },
       { property: "og:description", content: "Clear look at the legal position of online cricket betting in India and how Cricbet99 operates." },
       { property: "og:type", content: "article" },
-      { property: "og:url", content: "/is-cricbet99-legal" },
+      { property: "og:url", content: "https://cricbet99.co.in/is-cricbet99-legal" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/is-cricbet99-legal" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/is-cricbet99-legal" }],
     scripts: [
       {
         type: "application/ld+json",

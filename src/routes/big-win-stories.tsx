@@ -12,7 +12,7 @@ export const Route = createFileRoute("/big-win-stories")({
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/big-win-stories" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/big-win-stories" }],
     scripts: [
       {
         type: "application/ld+json",

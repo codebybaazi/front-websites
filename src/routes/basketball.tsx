@@ -12,7 +12,7 @@ export const Route = createFileRoute("/basketball")({
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/basketball" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/basketball" }],
     scripts: [
       {
         type: "application/ld+json",

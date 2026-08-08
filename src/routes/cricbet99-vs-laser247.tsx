@@ -12,10 +12,10 @@ export const Route = createFileRoute("/cricbet99-vs-laser247")({
       { property: "og:title", content: "Comparison: Laser247 (2026) — Side-by-Side Comparison" },
       { property: "og:description", content: "Which ID offers faster payouts and sharper cricket odds? Full 2026 comparison of Comparison: Laser247 for serious Indian bettors." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/cricbet99-vs-laser247" },
+      { property: "og:url", content: "https://cricbet99.co.in/cricbet99-vs-laser247" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/cricbet99-vs-laser247" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/cricbet99-vs-laser247" }],
     scripts: [
       {
         type: "application/ld+json",

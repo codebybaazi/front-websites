@@ -12,7 +12,7 @@ export const Route = createFileRoute("/why-choose-cricbet99")({
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/why-choose-cricbet99" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/why-choose-cricbet99" }],
     scripts: [
       {
         type: "application/ld+json",

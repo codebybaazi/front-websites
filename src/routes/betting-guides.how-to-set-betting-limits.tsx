@@ -12,7 +12,7 @@ export const Route = createFileRoute("/betting-guides/how-to-set-betting-limits"
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/betting-guides/how-to-set-betting-limits" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/betting-guides/how-to-set-betting-limits" }],
     scripts: [
       {
         type: "application/ld+json",

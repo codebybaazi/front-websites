@@ -10,10 +10,10 @@ export const Route = createFileRoute("/all-links")({
       { property: "og:title", content: "All Links — Cricbet99 Sitemap" },
       { property: "og:description", content: "Every important Cricbet99 page in one clean directory." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/all-links" },
+      { property: "og:url", content: "https://cricbet99.co.in/all-links" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/all-links" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/all-links" }],
   }),
   component: AllLinks,
 });

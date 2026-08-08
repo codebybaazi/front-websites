@@ -9,10 +9,10 @@ export const Route = createFileRoute("/predictions")({
       { property: "og:title", content: "Match Predictions — Cricbet99" },
       { property: "og:description", content: "Expert daily predictions across cricket, football and tennis." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/predictions" },
+      { property: "og:url", content: "https://cricbet99.co.in/predictions" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/predictions" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/predictions" }],
   }),
   component: Predictions,
 });

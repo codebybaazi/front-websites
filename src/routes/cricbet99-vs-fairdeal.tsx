@@ -12,10 +12,10 @@ export const Route = createFileRoute("/cricbet99-vs-fairdeal")({
       { property: "og:title", content: "Comparison: Fairdeal (2026) — Side-by-Side Comparison" },
       { property: "og:description", content: "Which ID offers faster payouts and sharper odds? Full 2026 comparison of Comparison: Fairdeal for serious Indian bettors." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/cricbet99-vs-fairdeal" },
+      { property: "og:url", content: "https://cricbet99.co.in/cricbet99-vs-fairdeal" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/cricbet99-vs-fairdeal" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/cricbet99-vs-fairdeal" }],
     scripts: [
       {
         type: "application/ld+json",

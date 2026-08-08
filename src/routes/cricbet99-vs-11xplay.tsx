@@ -12,10 +12,10 @@ export const Route = createFileRoute("/cricbet99-vs-11xplay")({
       { property: "og:title", content: "Comparison: 11xPlay (2026) — Honest Side-by-Side" },
       { property: "og:description", content: "Which cricket ID pays faster, prices sharper and supports better? Full 2026 comparison of Comparison: 11xPlay for Indian bettors." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/cricbet99-vs-11xplay" },
+      { property: "og:url", content: "https://cricbet99.co.in/cricbet99-vs-11xplay" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/cricbet99-vs-11xplay" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/cricbet99-vs-11xplay" }],
     scripts: [
       {
         type: "application/ld+json",

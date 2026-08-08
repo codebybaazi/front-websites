@@ -9,7 +9,7 @@ export const Route = createFileRoute("/about")({
   }),
   head: ({ loaderData }) => {
     const origin = loaderData?.origin ?? "";
-    const canonical = `${origin}/about`;
+    const canonical = `https://cricbet99.co.in/about`;
     return {
       meta: [
         { title: "About Cricbet99 — India's Trusted Official Betting ID Platform" },

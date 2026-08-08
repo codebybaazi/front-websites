@@ -16,7 +16,7 @@ export const Route = createFileRoute("/blog/")({
       { property: "og:title", content: "Cricbet99 Blog" },
       { property: "og:description", content: "Cricket previews, betting guides and responsible gaming content." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/blog" },
+      { property: "og:url", content: "https://cricbet99.co.in/blog" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/blog" }],

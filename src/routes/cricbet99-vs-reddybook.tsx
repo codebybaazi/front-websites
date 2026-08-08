@@ -12,10 +12,10 @@ export const Route = createFileRoute("/cricbet99-vs-reddybook")({
       { property: "og:title", content: "Comparison: Reddy Book (2026) — Side-by-Side Comparison" },
       { property: "og:description", content: "Which ID offers faster payouts and sharper cricket odds? Full 2026 comparison of Comparison: Reddy Book for serious Indian bettors." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/cricbet99-vs-reddybook" },
+      { property: "og:url", content: "https://cricbet99.co.in/cricbet99-vs-reddybook" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/cricbet99-vs-reddybook" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/cricbet99-vs-reddybook" }],
     scripts: [
       {
         type: "application/ld+json",

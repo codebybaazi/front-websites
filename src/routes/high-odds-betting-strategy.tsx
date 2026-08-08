@@ -12,7 +12,7 @@ export const Route = createFileRoute("/high-odds-betting-strategy")({
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/high-odds-betting-strategy" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/high-odds-betting-strategy" }],
     scripts: [
       {
         type: "application/ld+json",

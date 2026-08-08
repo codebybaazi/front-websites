@@ -12,7 +12,7 @@ export const Route = createFileRoute("/todays-best-odds")({
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/todays-best-odds" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/todays-best-odds" }],
     scripts: [
       {
         type: "application/ld+json",

@@ -12,7 +12,7 @@ export const Route = createFileRoute("/trusted-betting-id-provider")({
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/trusted-betting-id-provider" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/trusted-betting-id-provider" }],
     scripts: [
       {
         type: "application/ld+json",

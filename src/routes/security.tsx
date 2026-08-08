@@ -12,7 +12,7 @@ export const Route = createFileRoute("/security")({
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/security" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/security" }],
     scripts: [
       {
         type: "application/ld+json",

@@ -12,10 +12,10 @@ export const Route = createFileRoute("/cricbet99-vs-mahavir-book")({
       { property: "og:title", content: "Comparison: Mahavir Book (2026) — Which Betting ID is Better?" },
       { property: "og:description", content: "Side-by-side comparison of Comparison: Mahavir Book. From UPI payout speed to live exchange markets, find the best ID for your cricket bets." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/cricbet99-vs-mahavir-book" },
+      { property: "og:url", content: "https://cricbet99.co.in/cricbet99-vs-mahavir-book" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/cricbet99-vs-mahavir-book" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/cricbet99-vs-mahavir-book" }],
     scripts: [
       {
         type: "application/ld+json",

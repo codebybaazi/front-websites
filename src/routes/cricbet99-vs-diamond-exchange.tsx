@@ -12,10 +12,10 @@ export const Route = createFileRoute("/cricbet99-vs-diamond-exchange")({
       { property: "og:title", content: "Comparison: Diamond Exchange (2026) — Honest Exchange Comparison" },
       { property: "og:description", content: "Which exchange ID offers better liquidity and faster payouts? Full 2026 review of Comparison: Diamond Exchange for Indian players." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/cricbet99-vs-diamond-exchange" },
+      { property: "og:url", content: "https://cricbet99.co.in/cricbet99-vs-diamond-exchange" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/cricbet99-vs-diamond-exchange" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/cricbet99-vs-diamond-exchange" }],
     scripts: [
       {
         type: "application/ld+json",
