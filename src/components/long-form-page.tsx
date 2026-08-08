@@ -78,7 +78,7 @@ export function LongFormPage({ content, extra }: { content: PageContent; extra?:
           <h2 className="text-xl sm:text-2xl md:text-3xl font-black">{s.heading}</h2>
           <div className="mt-4 space-y-4 text-sm text-foreground/80 leading-relaxed sm:text-base">
             {s.body.map((p, i) => (
-              <p key={i}>{p}</p>
+              <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
             ))}
           </div>
         </section>
