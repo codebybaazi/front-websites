@@ -9,10 +9,10 @@ export const Route = createFileRoute("/faq")({
       { property: "og:title", content: "Cricbet99 Support Hub: Frequently Asked Questions" },
       { property: "og:description", content: "Expert answers to common questions about Cricbet99 IDs, deposit methods, and India's fastest payout system. Start trading safely today." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://cricbet99.win/faq" },
+      { property: "og:url", content: "https://cricbet99.co.in/faq" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://cricbet99.win/faq" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/faq" }],
     scripts: [
       {
         type: "application/ld+json",

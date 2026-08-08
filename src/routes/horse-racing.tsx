@@ -9,10 +9,10 @@ export const Route = createFileRoute("/horse-racing")({
       { property: "og:title", content: "Premier Horse Racing Betting | Cricbet99" },
       { property: "og:description", content: "The ultimate destination for horse racing enthusiasts. Live odds, expert markets, and instant payouts on all major meets." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://cricbet99.win/horse-racing" },
+      { property: "og:url", content: "https://cricbet99.co.in/horse-racing" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://cricbet99.win/horse-racing" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/horse-racing" }],
   }),
   component: HorseRacing,
 });

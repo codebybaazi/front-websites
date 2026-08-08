@@ -9,10 +9,10 @@ export const Route = createFileRoute("/football")({
       { property: "og:title", content: "Premium Football Betting on Cricbet99" },
       { property: "og:description", content: "Experience the thrill of football betting with live markets on every major league. Fast payouts and 24/7 WhatsApp support." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://cricbet99.win/football" },
+      { property: "og:url", content: "https://cricbet99.co.in/football" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://cricbet99.win/football" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/football" }],
   }),
   component: Football,
 });

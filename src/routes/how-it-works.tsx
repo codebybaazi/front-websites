@@ -9,10 +9,10 @@ export const Route = createFileRoute("/how-it-works")({
       { property: "og:title", content: "Start Your Cricbet99 Journey | Step-by-Step Guide" },
       { property: "og:description", content: "Joining Cricbet99 is simple and secure. Follow our guided process to activate your premium sports ID on WhatsApp today." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://cricbet99.win/how-it-works" },
+      { property: "og:url", content: "https://cricbet99.co.in/how-it-works" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://cricbet99.win/how-it-works" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/how-it-works" }],
   }),
   component: HowItWorks,
 });
