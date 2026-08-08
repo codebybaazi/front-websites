@@ -4,6 +4,8 @@ import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
 import { matches } from "@/data/matches";
 import { Calendar, MapPin, Trophy, Clock, ArrowRight, ExternalLink } from "lucide-react";
 import { format } from "date-fns";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/schedule")({
   head: () => ({
@@ -35,10 +37,22 @@ const majorEvents = [
   { m: "Jun–Jul 2026", e: "FIFA World Cup 2026", v: "North America", cat: "Football" },
   { m: "Jul 19, 2026", e: "FIFA World Cup 2026 Final", v: "New York/NJ", cat: "Football" },
   { m: "Oct–Nov 2026", e: "ICC T20 World Cup 2026", v: "India & Sri Lanka", cat: "Cricket" },
+  { m: "Jun–Jul 2026", e: "Wimbledon Championships", v: "London", cat: "Tennis" },
+  { m: "Aug–Sep 2026", e: "US Open 2026", v: "New York", cat: "Tennis" },
 ];
 
 function Schedule() {
-  const upcomingMatches = matches.filter(m => m.status === 'upcoming').slice(0, 10);
+  const [activeTab, setActiveTab] = useState<"All" | "Cricket" | "Football" | "Tennis">("All");
+  
+  const filteredEvents = activeTab === "All" 
+    ? majorEvents 
+    : majorEvents.filter(e => e.cat === activeTab);
+
+  const upcomingMatches = matches
+    .filter(m => m.status === 'upcoming' && (activeTab === "All" || m.sport === activeTab))
+    .slice(0, 10);
+
+  const tabs = ["All", "Cricket", "Football", "Tennis"] as const;
 
   return (
     <SiteLayout>
@@ -49,6 +63,25 @@ function Schedule() {
         subtitle="Your essential guide to the biggest betting events of 2026. Real-time fixtures for IPL, FIFA World Cup, and International Cricket with Cricbet99 analytics."
       />
 
+      <section className="mx-auto max-w-7xl px-6 py-8 border-b border-primary/10">
+        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={cn(
+                "px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 border",
+                activeTab === tab
+                  ? "bg-primary text-primary-foreground border-primary shadow-[0_0_20px_rgba(212,175,55,0.3)]"
+                  : "bg-background/40 text-foreground/60 border-primary/20 hover:border-primary/50 hover:text-foreground"
+              )}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+      </section>
+
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-12 lg:grid-cols-3">
           {/* Main Schedule Column */}
@@ -58,41 +91,49 @@ function Schedule() {
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
                   <Trophy className="w-5 h-5 text-primary" />
                 </div>
-                <h2 className="text-3xl font-bold tracking-tight">Major 2026 Championships</h2>
+                <h2 className="text-3xl font-bold tracking-tight">
+                  {activeTab === "All" ? "Major 2026 Championships" : `${activeTab} Fixtures 2026`}
+                </h2>
               </div>
               
               <div className="space-y-4">
-                {majorEvents.map((event, i) => (
-                  <div 
-                    key={i}
-                    className="group relative overflow-hidden rounded-2xl border border-primary/10 bg-background/40 p-6 transition-all hover:border-primary/30 hover:bg-background/60"
-                  >
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                      <div className="flex items-start gap-4">
-                        <div className="mt-1 flex flex-col items-center justify-center min-w-[80px] py-2 rounded-lg bg-primary/5 border border-primary/10 text-primary font-bold">
-                          <span className="text-xs uppercase opacity-70 tracking-tighter">Event Date</span>
-                          <span className="text-sm">{event.m}</span>
-                        </div>
-                        <div>
-                          <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">{event.cat}</div>
-                          <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{event.e}</h3>
-                          <div className="flex items-center gap-2 text-sm text-foreground/60 mt-1">
-                            <MapPin className="w-3.5 h-3.5" />
-                            {event.v}
+                {filteredEvents.length > 0 ? (
+                  filteredEvents.map((event, i) => (
+                    <div 
+                      key={i}
+                      className="group relative overflow-hidden rounded-2xl border border-primary/10 bg-background/40 p-6 transition-all hover:border-primary/30 hover:bg-background/60"
+                    >
+                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div className="flex items-start gap-4">
+                          <div className="mt-1 flex flex-col items-center justify-center min-w-[80px] py-2 rounded-lg bg-primary/5 border border-primary/10 text-primary font-bold">
+                            <span className="text-xs uppercase opacity-70 tracking-tighter">Event Date</span>
+                            <span className="text-sm">{event.m}</span>
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">{event.cat}</div>
+                            <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{event.e}</h3>
+                            <div className="flex items-center gap-2 text-sm text-foreground/60 mt-1">
+                              <MapPin className="w-3.5 h-3.5" />
+                              {event.v}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div className="flex items-center gap-4">
-                        <Link 
-                          to="/register"
-                          className="px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-bold flex items-center gap-2 hover:brightness-110 transition-all"
-                        >
-                          Bet Live <ArrowRight className="w-4 h-4" />
-                        </Link>
+                        <div className="flex items-center gap-4">
+                          <Link 
+                            to="/register"
+                            className="px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-bold flex items-center gap-2 hover:brightness-110 transition-all"
+                          >
+                            Bet Live <ArrowRight className="w-4 h-4" />
+                          </Link>
+                        </div>
                       </div>
                     </div>
+                  ))
+                ) : (
+                  <div className="text-center py-12 border border-dashed border-primary/20 rounded-2xl bg-primary/5">
+                    <p className="text-foreground/60">No major {activeTab} events listed for this selection yet.</p>
                   </div>
-                ))}
+                )}
               </div>
             </div>
 
@@ -120,34 +161,38 @@ function Schedule() {
             <div className="sticky top-24">
               <div className="flex items-center gap-3 mb-6">
                 <Clock className="w-5 h-5 text-primary" />
-                <h3 className="text-xl font-bold">Upcoming Fixtures</h3>
+                <h3 className="text-xl font-bold">Upcoming {activeTab !== "All" ? activeTab : ""} Fixtures</h3>
               </div>
               
               <div className="space-y-4">
-                {upcomingMatches.map((match) => (
-                  <Link 
-                    key={match.slug}
-                    to="/matches/$slug"
-                    params={{ slug: match.slug }}
-                    className="block group p-4 rounded-2xl border border-primary/10 bg-background/40 hover:border-primary/40 hover:bg-background/80 transition-all"
-                  >
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-primary/70">{match.tournament}</span>
-                      <span className="text-[10px] font-medium text-foreground/40">{format(new Date(match.startDate), 'MMM dd, HH:mm')}</span>
-                    </div>
-                    <div className="font-bold text-foreground mb-3 flex items-center justify-between">
-                      <span>{match.homeTeam} <span className="text-primary">vs</span> {match.awayTeam}</span>
-                    </div>
-                    <div className="flex items-center justify-between text-[11px]">
-                      <span className="text-foreground/50 flex items-center gap-1">
-                        <MapPin className="w-3 h-3" /> {match.city}
-                      </span>
-                      <span className="text-primary flex items-center gap-1 font-bold">
-                        Analyze <ExternalLink className="w-3 h-3" />
-                      </span>
-                    </div>
-                  </Link>
-                ))}
+                {upcomingMatches.length > 0 ? (
+                  upcomingMatches.map((match) => (
+                    <Link 
+                      key={match.slug}
+                      to="/matches/$slug"
+                      params={{ slug: match.slug }}
+                      className="block group p-4 rounded-2xl border border-primary/10 bg-background/40 hover:border-primary/40 hover:bg-background/80 transition-all"
+                    >
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-primary/70">{match.tournament}</span>
+                        <span className="text-[10px] font-medium text-foreground/40">{format(new Date(match.startDate), 'MMM dd, HH:mm')}</span>
+                      </div>
+                      <div className="font-bold text-foreground mb-3 flex items-center justify-between">
+                        <span>{match.homeTeam} <span className="text-primary">vs</span> {match.awayTeam}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-[11px]">
+                        <span className="text-foreground/50 flex items-center gap-1">
+                          <MapPin className="w-3 h-3" /> {match.city}
+                        </span>
+                        <span className="text-primary flex items-center gap-1 font-bold">
+                          Analyze <ExternalLink className="w-3 h-3" />
+                        </span>
+                      </div>
+                    </Link>
+                  ))
+                ) : (
+                  <p className="text-sm text-foreground/40 text-center py-8">No specific {activeTab} fixtures available.</p>
+                )}
               </div>
 
               <div className="mt-8 p-6 rounded-2xl border border-primary/20 bg-primary/5 text-center">
