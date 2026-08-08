@@ -6,12 +6,14 @@ export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
       { title: "Cricbet99 Login — Access Your Betting ID Safely" },
-      { name: "description", content: "Log in to your Cricbet99 betting ID securely. Get your official login URL, reset your password on WhatsApp and stay safe from phishing sites — 24/7 human support." },
+      { name: "description", content: "Log in to your Cricbet99 betting ID securely. Get your official login URL, reset passwords on WhatsApp and stay safe from phishing sites. Verified access 24/7." },
       { property: "og:title", content: "Cricbet99 Login" },
       { property: "og:description", content: "Secure login guide and password help for Cricbet99 users." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/login" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/login" }],
   }),
   component: LoginPage,
 });

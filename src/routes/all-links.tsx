@@ -5,12 +5,14 @@ export const Route = createFileRoute("/all-links")({
   head: () => ({
     meta: [
       { title: "All Links (Sitemap) — Cricbet99 Site Directory" },
-      { name: "description", content: "The complete Cricbet99 sitemap: sports pages, casino, guides, comparisons, blog, support, legal and account help — every important link on one page." },
+      { name: "description", content: "Complete Cricbet99 sitemap: sports, casino, guides, blog and support. Every important link in one clean directory for Indian players." },
       { property: "og:title", content: "All Links — Cricbet99 Sitemap" },
       { property: "og:description", content: "Every important Cricbet99 page in one clean directory." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/all-links" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/all-links" }],
   }),
   component: AllLinks,
 });

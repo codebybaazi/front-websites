@@ -5,12 +5,14 @@ export const Route = createFileRoute("/schedule")({
   head: () => ({
     meta: [
       { title: "2026 Match Schedule — IPL, T20 World Cup, FIFA | Cricbet99" },
-      { name: "description", content: "Complete 2026 sports schedule on Cricbet99: IPL 2026 fixtures, ICC T20 World Cup, WPL, FIFA World Cup, Grand Slam tennis and Pro Kabaddi — dates, venues and live betting markets." },
+      { name: "description", content: "Complete 2026 sports schedule: IPL 2026 fixtures, ICC T20 World Cup, WPL, FIFA World Cup and Pro Kabaddi — dates, venues and live betting markets on Cricbet99." },
       { property: "og:title", content: "2026 Match Schedule — Cricbet99" },
       { property: "og:description", content: "Every major 2026 cricket, football and tennis fixture, in one place." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/schedule" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/schedule" }],
   }),
   component: Schedule,
 });

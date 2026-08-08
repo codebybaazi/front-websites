@@ -6,12 +6,14 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact Cricbet99 — 24/7 WhatsApp Support for Players" },
-      { name: "description", content: "Reach Cricbet99 customer care 24/7 on WhatsApp, phone or email. Get help with account access, deposits, withdrawals and general queries." },
+      { name: "description", content: "Reach Cricbet99 customer care 24/7 on WhatsApp, phone or email. Get help with account access, deposits, withdrawals and general queries from India's #1 team." },
       { property: "og:title", content: "Contact Cricbet99" },
       { property: "og:description", content: "Real humans on WhatsApp, phone and email — round the clock." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/contact" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/contact" }],
   }),
   component: Contact,
 });

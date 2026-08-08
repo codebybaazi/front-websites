@@ -5,12 +5,14 @@ export const Route = createFileRoute("/predictions")({
   head: () => ({
     meta: [
       { title: "Match Predictions 2026 — Expert Cricket & Football Tips | Cricbet99" },
-      { name: "description", content: "Data-backed match predictions for IPL 2026, T20 World Cup, FIFA and top football leagues. Form, pitch reports, head-to-head and value bets — updated daily on Cricbet99." },
+      { name: "description", content: "Data-backed match predictions for IPL 2026, T20 World Cup, FIFA and top football leagues. Form, pitch reports and value bets — updated daily on Cricbet99." },
       { property: "og:title", content: "Match Predictions — Cricbet99" },
       { property: "og:description", content: "Expert daily predictions across cricket, football and tennis." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/predictions" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/predictions" }],
   }),
   component: Predictions,
 });

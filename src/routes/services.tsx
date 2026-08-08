@@ -6,12 +6,14 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Cricbet99 Services — ID Setup, Payments, Support & More" },
-      { name: "description", content: "Cricbet99 services include instant ID creation, UPI deposits and withdrawals, 24/7 support, dedicated account managers, live odds and premium casino access." },
+      { name: "description", content: "Cricbet99 services include instant ID creation, UPI deposits and withdrawals, 24/7 support, account managers and live odds. India's trusted provider since 2020." },
       { property: "og:title", content: "Cricbet99 Services" },
       { property: "og:description", content: "Everything Cricbet99 does for its players — from setup to payouts." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/services" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/services" }],
   }),
   component: Services,
 });
