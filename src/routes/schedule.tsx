@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
 import { matches } from "@/data/matches";
+import { footballFixtures } from "@/data/football-fixtures";
 import { Calendar, MapPin, Trophy, Clock, ArrowRight, ExternalLink } from "lucide-react";
 import { format } from "date-fns";
 import { useState } from "react";
@@ -121,7 +122,7 @@ function Schedule() {
                               </tr>
                             </thead>
                             <tbody>
-                              {[...matches, ...((activeTab === "Football" ? require("@/data/football-fixtures").footballFixtures : []))]
+                              {[...matches, ...footballFixtures]
                                 .filter(m => m.sport === "Football" && (m as any).category === category)
                                 .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
                                 .map((match) => (
