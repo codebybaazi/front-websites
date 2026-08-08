@@ -100,7 +100,7 @@ function Schedule() {
               <div className="space-y-4">
                 {activeTab === "Football" ? (
                   <div className="space-y-12">
-                    {(["Group Stage", "Quarter-finals", "Semi-finals", "Final"] as const).map((category) => (
+                    {(["Group Stage", "Round of 32", "Round of 16", "Quarter-finals", "Semi-finals", "Final"] as const).map((category) => (
                       <div key={category} className="space-y-6">
                         <div className="flex items-center gap-3">
                           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
