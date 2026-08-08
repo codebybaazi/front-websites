@@ -577,7 +577,7 @@ function SeoMatchIndex() {
     itemListElement: curatedMatches.map((m, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      url: `/matches/${m.slug}`,
+      url: `https://cricbet99.co.in/matches/${m.slug}`,
       name: `${m.homeTeam} vs ${m.awayTeam} — ${m.tournament} betting odds`,
     })),
   };
