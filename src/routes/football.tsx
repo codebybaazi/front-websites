@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
+import { ChevronRight } from "lucide-react";
+import { buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/components/long-form-page";
 
 export const Route = createFileRoute("/football")({
   head: () => ({
@@ -13,6 +15,16 @@ export const Route = createFileRoute("/football")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/football" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/football", "Football Betting")),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildFaqJsonLd(footballFaqs)),
+      },
+    ],
   }),
   component: Football,
 });
