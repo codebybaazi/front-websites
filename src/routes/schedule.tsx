@@ -121,7 +121,7 @@ function Schedule() {
                               </tr>
                             </thead>
                             <tbody>
-                              {matches
+                              {[...matches, ...((activeTab === "Football" ? require("@/data/football-fixtures").footballFixtures : []))]
                                 .filter(m => m.sport === "Football" && (m as any).category === category)
                                 .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
                                 .map((match) => (

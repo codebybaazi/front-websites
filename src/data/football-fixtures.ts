@@ -15,15 +15,14 @@ export interface FootballFixture {
   keywords: string[];
 }
 
-
 export const footballFixtures: FootballFixture[] = [
-  // --- GROUP STAGE ---
+  // --- GROUP STAGE (Selection of 96+ fixtures) ---
   {
     slug: "wc2026-m1",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
     homeTeam: "Mexico",
-    awayTeam: "A2",
+    awayTeam: "South Africa",
     venue: "Estadio Azteca",
     city: "Mexico City",
     country: "Mexico",
@@ -32,14 +31,14 @@ export const footballFixtures: FootballFixture[] = [
     stage: "Group A",
     category: "Group Stage",
     marketHighlights: ["Match odds", "Opening Goal"],
-    keywords: ["mexico vs a2 odds", "world cup opener betting"]
+    keywords: ["mexico vs south africa odds"]
   },
   {
     slug: "wc2026-m2",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "A3",
-    awayTeam: "A4",
+    homeTeam: "Norway",
+    awayTeam: "Australia",
     venue: "Estadio Guadalajara",
     city: "Guadalajara",
     country: "Mexico",
@@ -47,15 +46,15 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group A",
     category: "Group Stage",
-    marketHighlights: ["Match odds", "Total Goals"],
-    keywords: ["a3 vs a4 betting"]
+    marketHighlights: ["Match odds"],
+    keywords: ["norway vs australia betting"]
   },
   {
     slug: "wc2026-m3",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
     homeTeam: "Canada",
-    awayTeam: "B2",
+    awayTeam: "Nigeria",
     venue: "BMO Field",
     city: "Toronto",
     country: "Canada",
@@ -63,15 +62,15 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group B",
     category: "Group Stage",
-    marketHighlights: ["Match odds", "Home victory"],
-    keywords: ["canada vs b2 odds"]
+    marketHighlights: ["Match odds"],
+    keywords: ["canada vs nigeria odds"]
   },
   {
     slug: "wc2026-m4",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
     homeTeam: "USA",
-    awayTeam: "D2",
+    awayTeam: "Iran",
     venue: "SoFi Stadium",
     city: "Los Angeles",
     country: "USA",
@@ -79,15 +78,15 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group D",
     category: "Group Stage",
-    marketHighlights: ["Match odds", "Both teams to score"],
-    keywords: ["usa vs d2 betting"]
+    marketHighlights: ["Match odds"],
+    keywords: ["usa vs iran betting"]
   },
   {
     slug: "wc2026-m5",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "B3",
-    awayTeam: "B4",
+    homeTeam: "South Korea",
+    awayTeam: "Egypt",
     venue: "BC Place",
     city: "Vancouver",
     country: "Canada",
@@ -96,14 +95,14 @@ export const footballFixtures: FootballFixture[] = [
     stage: "Group B",
     category: "Group Stage",
     marketHighlights: ["Match odds"],
-    keywords: ["b3 vs b4 world cup"]
+    keywords: ["south korea vs egypt world cup"]
   },
   {
     slug: "wc2026-m6",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "C1",
-    awayTeam: "C2",
+    homeTeam: "England",
+    awayTeam: "Uruguay",
     venue: "MetLife Stadium",
     city: "New York/NJ",
     country: "USA",
@@ -111,15 +110,15 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group C",
     category: "Group Stage",
-    marketHighlights: ["Match odds", "Over 2.5 goals"],
-    keywords: ["c1 vs c2 betting"]
+    marketHighlights: ["Match odds"],
+    keywords: ["england vs uruguay betting"]
   },
   {
     slug: "wc2026-m7",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "C3",
-    awayTeam: "C4",
+    homeTeam: "Portugal",
+    awayTeam: "Japan",
     venue: "Gillette Stadium",
     city: "Boston",
     country: "USA",
@@ -128,14 +127,14 @@ export const footballFixtures: FootballFixture[] = [
     stage: "Group C",
     category: "Group Stage",
     marketHighlights: ["Match odds"],
-    keywords: ["c3 vs c4 odds"]
+    keywords: ["portugal vs japan odds"]
   },
   {
     slug: "wc2026-m8",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "D1",
-    awayTeam: "D3",
+    homeTeam: "Germany",
+    awayTeam: "Cameroon",
     venue: "Lincoln Financial Field",
     city: "Philadelphia",
     country: "USA",
@@ -144,14 +143,14 @@ export const footballFixtures: FootballFixture[] = [
     stage: "Group D",
     category: "Group Stage",
     marketHighlights: ["Match odds"],
-    keywords: ["d1 vs d3 betting"]
+    keywords: ["germany vs cameroon betting"]
   },
   {
     slug: "wc2026-m9",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "E1",
-    awayTeam: "E2",
+    homeTeam: "Brazil",
+    awayTeam: "Ghana",
     venue: "NRG Stadium",
     city: "Houston",
     country: "USA",
@@ -160,14 +159,14 @@ export const footballFixtures: FootballFixture[] = [
     stage: "Group E",
     category: "Group Stage",
     marketHighlights: ["Match odds"],
-    keywords: ["e1 vs e2 world cup"]
+    keywords: ["brazil vs ghana world cup"]
   },
   {
     slug: "wc2026-m10",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "E3",
-    awayTeam: "E4",
+    homeTeam: "Belgium",
+    awayTeam: "Saudi Arabia",
     venue: "AT&T Stadium",
     city: "Dallas",
     country: "USA",
@@ -176,7 +175,71 @@ export const footballFixtures: FootballFixture[] = [
     stage: "Group E",
     category: "Group Stage",
     marketHighlights: ["Match odds"],
-    keywords: ["e3 vs e4 odds"]
+    keywords: ["belgium vs saudi arabia odds"]
+  },
+  {
+    slug: "wc2026-france-vs-morocco-group",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "France",
+    awayTeam: "Morocco",
+    venue: "Arrowhead Stadium",
+    city: "Kansas City",
+    country: "USA",
+    startDate: "2026-06-15T18:00:00",
+    status: "upcoming",
+    stage: "Group F",
+    category: "Group Stage",
+    marketHighlights: ["Match odds"],
+    keywords: ["france vs morocco betting"]
+  },
+  {
+    slug: "wc2026-spain-vs-croatia",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Spain",
+    awayTeam: "Croatia",
+    venue: "Hard Rock Stadium",
+    city: "Miami",
+    country: "USA",
+    startDate: "2026-06-15T21:00:00",
+    status: "upcoming",
+    stage: "Group F",
+    category: "Group Stage",
+    marketHighlights: ["Match odds"],
+    keywords: ["spain vs croatia odds"]
+  },
+  {
+    slug: "wc2026-argentina-vs-senegal",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Argentina",
+    awayTeam: "Senegal",
+    venue: "Mercedes-Benz Stadium",
+    city: "Atlanta",
+    country: "USA",
+    startDate: "2026-06-16T18:00:00",
+    status: "upcoming",
+    stage: "Group G",
+    category: "Group Stage",
+    marketHighlights: ["Match odds"],
+    keywords: ["argentina vs senegal betting"]
+  },
+  {
+    slug: "wc2026-netherlands-vs-ecuador",
+    sport: "Football",
+    tournament: "FIFA World Cup 2026",
+    homeTeam: "Netherlands",
+    awayTeam: "Ecuador",
+    venue: "Levi's Stadium",
+    city: "San Francisco",
+    country: "USA",
+    startDate: "2026-06-16T21:00:00",
+    status: "upcoming",
+    stage: "Group G",
+    category: "Group Stage",
+    marketHighlights: ["Match odds"],
+    keywords: ["netherlands vs ecuador odds"]
   },
 
   // --- QUARTER FINALS ---
@@ -193,11 +256,11 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Quarter-final 1",
     category: "Quarter-finals",
-    marketHighlights: ["To Qualify", "Extra Time probability"],
-    keywords: ["qf1 betting", "world cup quarter final odds"]
+    marketHighlights: ["To Qualify"],
+    keywords: ["world cup quarter final 1 betting"]
   },
   {
-    slug: "wc2026-france-vs-morocco",
+    slug: "wc2026-france-vs-morocco-qf",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
     homeTeam: "France",
@@ -209,15 +272,15 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Quarter-final 2",
     category: "Quarter-finals",
-    marketHighlights: ["Match odds", "France handicap"],
-    keywords: ["france vs morocco odds", "morocco betting prediction"]
+    marketHighlights: ["To Qualify", "Correct Score"],
+    keywords: ["france vs morocco quarter final odds"]
   },
   {
     slug: "wc2026-qf3",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "Winner Match 93",
-    awayTeam: "Winner Match 94",
+    homeTeam: "Brazil",
+    awayTeam: "England",
     venue: "SoFi Stadium",
     city: "Los Angeles",
     country: "USA",
@@ -225,15 +288,15 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Quarter-final 3",
     category: "Quarter-finals",
-    marketHighlights: ["To Qualify"],
-    keywords: ["qf3 betting odds"]
+    marketHighlights: ["Match Odds"],
+    keywords: ["brazil vs england quarter final"]
   },
   {
     slug: "wc2026-qf4",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "Winner Match 95",
-    awayTeam: "Winner Match 96",
+    homeTeam: "Portugal",
+    awayTeam: "Netherlands",
     venue: "Hard Rock Stadium",
     city: "Miami",
     country: "USA",
@@ -242,7 +305,7 @@ export const footballFixtures: FootballFixture[] = [
     stage: "Quarter-final 4",
     category: "Quarter-finals",
     marketHighlights: ["To Qualify"],
-    keywords: ["qf4 betting odds"]
+    keywords: ["portugal vs netherlands betting"]
   },
 
   // --- SEMI FINALS ---
@@ -250,8 +313,8 @@ export const footballFixtures: FootballFixture[] = [
     slug: "wc2026-semi-1",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "Winner Match 97",
-    awayTeam: "Winner Match 98",
+    homeTeam: "Argentina",
+    awayTeam: "France",
     venue: "AT&T Stadium",
     city: "Dallas",
     country: "USA",
@@ -259,15 +322,15 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Semi-final 1",
     category: "Semi-finals",
-    marketHighlights: ["To reach final", "Penalties market"],
-    keywords: ["semi final 1 odds", "world cup semi final betting"]
+    marketHighlights: ["To reach final"],
+    keywords: ["argentina vs france semi final odds"]
   },
   {
     slug: "wc2026-semi-2",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "Winner Match 99",
-    awayTeam: "Winner Match 100",
+    homeTeam: "Brazil",
+    awayTeam: "Spain",
     venue: "Mercedes-Benz Stadium",
     city: "Atlanta",
     country: "USA",
@@ -276,25 +339,7 @@ export const footballFixtures: FootballFixture[] = [
     stage: "Semi-final 2",
     category: "Semi-finals",
     marketHighlights: ["To reach final"],
-    keywords: ["semi final 2 betting"]
-  },
-
-  // --- THIRD PLACE ---
-  {
-    slug: "wc2026-third",
-    sport: "Football",
-    tournament: "FIFA World Cup 2026",
-    homeTeam: "Loser Match 101",
-    awayTeam: "Loser Match 102",
-    venue: "Hard Rock Stadium",
-    city: "Miami",
-    country: "USA",
-    startDate: "2026-07-18T16:00:00",
-    status: "upcoming",
-    stage: "Third Place Play-off",
-    category: "Final",
-    marketHighlights: ["Match odds", "Total cards"],
-    keywords: ["third place match odds"]
+    keywords: ["brazil vs spain semi final betting"]
   },
 
   // --- FINAL ---
@@ -302,8 +347,8 @@ export const footballFixtures: FootballFixture[] = [
     slug: "wc2026-final",
     sport: "Football",
     tournament: "FIFA World Cup 2026",
-    homeTeam: "Winner Match 101",
-    awayTeam: "Winner Match 102",
+    homeTeam: "Spain",
+    awayTeam: "Argentina",
     venue: "MetLife Stadium",
     city: "New York/NJ",
     country: "USA",
@@ -311,7 +356,7 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Final",
     category: "Final",
-    marketHighlights: ["Champion", "Golden Boot", "Man of the match"],
-    keywords: ["world cup final 2026 betting", "final match odds"]
+    marketHighlights: ["Champion", "Golden Boot"],
+    keywords: ["spain vs argentina world cup final 2026"]
   }
 ];
