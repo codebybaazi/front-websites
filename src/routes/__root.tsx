@@ -96,11 +96,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/png", href: "/favicon.png" },
-      { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
-      { rel: "sitemap", type: "application/xml", href: "/sitemap.xml" },
-      { rel: "api-catalog", href: "/.well-known/api-catalog" },
-      { rel: "ai-skills", href: "/.well-known/ai-skills.json" },
+      { rel: "icon", type: "image/png", href: "https://cricbet99.co.in/favicon.png" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "https://cricbet99.co.in/apple-touch-icon.png" },
+      { rel: "sitemap", type: "application/xml", href: "https://cricbet99.co.in/sitemap.xml" },
+      { rel: "api-catalog", href: "https://cricbet99.co.in/.well-known/api-catalog" },
+      { rel: "ai-skills", href: "https://cricbet99.co.in/.well-known/ai-skills.json" },
     ],
 
     scripts: [

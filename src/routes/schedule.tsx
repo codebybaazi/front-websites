@@ -9,10 +9,10 @@ export const Route = createFileRoute("/schedule")({
       { property: "og:title", content: "2026 Match Schedule — Cricbet99" },
       { property: "og:description", content: "Every major 2026 cricket, football and tennis fixture, in one place." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/schedule" },
+      { property: "og:url", content: "https://cricbet99.co.in/schedule" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/schedule" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/schedule" }],
   }),
   component: Schedule,
 });

@@ -12,7 +12,7 @@ export const Route = createFileRoute("/ipl-2026-calendar")({
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/ipl-2026-calendar" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/ipl-2026-calendar" }],
     scripts: [
       {
         type: "application/ld+json",

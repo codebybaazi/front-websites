@@ -12,10 +12,10 @@ export const Route = createFileRoute("/cricbet99-vs-lotus365")({
       { property: "og:title", content: "Comparison: Lotus 365 (2026) — Honest Side-by-Side" },
       { property: "og:description", content: "Which ID pays faster, offers sharper IPL odds and better support? Full 2026 comparison of Comparison: Lotus 365 for Indian bettors." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/cricbet99-vs-lotus365" },
+      { property: "og:url", content: "https://cricbet99.co.in/cricbet99-vs-lotus365" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/cricbet99-vs-lotus365" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/cricbet99-vs-lotus365" }],
     scripts: [
       {
         type: "application/ld+json",

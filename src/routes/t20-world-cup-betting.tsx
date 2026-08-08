@@ -12,7 +12,7 @@ export const Route = createFileRoute("/t20-world-cup-betting")({
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/t20-world-cup-betting" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/t20-world-cup-betting" }],
     scripts: [
       {
         type: "application/ld+json",

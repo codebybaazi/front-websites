@@ -12,10 +12,10 @@ export const Route = createFileRoute("/cricbet99-vs-skyexchange247")({
       { property: "og:title", content: "Comparison: SkyExchange 247 (2026) — Honest Side-by-Side" },
       { property: "og:description", content: "Which cricket exchange pays faster, prices sharper and supports better? Full 2026 comparison of Comparison: SkyExchange 247 for Indian bettors." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/cricbet99-vs-skyexchange247" },
+      { property: "og:url", content: "https://cricbet99.co.in/cricbet99-vs-skyexchange247" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/cricbet99-vs-skyexchange247" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/cricbet99-vs-skyexchange247" }],
     scripts: [
       {
         type: "application/ld+json",

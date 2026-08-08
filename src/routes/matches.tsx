@@ -12,10 +12,10 @@ export const Route = createFileRoute("/matches")({
       { property: "og:title", content: "All Matches Index — Cricbet99" },
       { property: "og:description", content: "The full live and upcoming match index on Cricbet99 — cricket, football, tennis and more." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/matches" },
+      { property: "og:url", content: "https://cricbet99.co.in/matches" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/matches" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/matches" }],
   }),
   component: MatchesPage,
 });

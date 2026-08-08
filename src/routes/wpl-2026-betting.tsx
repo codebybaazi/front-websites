@@ -12,7 +12,7 @@ export const Route = createFileRoute("/wpl-2026-betting")({
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/wpl-2026-betting" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/wpl-2026-betting" }],
     scripts: [
       {
         type: "application/ld+json",

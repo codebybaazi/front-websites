@@ -12,7 +12,7 @@ export const Route = createFileRoute("/online-betting")({
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/online-betting" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/online-betting" }],
     scripts: [
       {
         type: "application/ld+json",

@@ -12,7 +12,7 @@ export const Route = createFileRoute("/kyc-policy")({
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/kyc-policy" }],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/kyc-policy" }],
     scripts: [
       {
         type: "application/ld+json",
