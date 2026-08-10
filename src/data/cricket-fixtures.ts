@@ -217,9 +217,25 @@ export const cricketFixtures: CricketSeries[] = [
         match: "Only Test",
         teams: "Bangladesh vs Zimbabwe",
         date: "Jun 28, 2026",
-        venue: "Harare, Harare Sports Club",
+        venue: "Harare Sports Club",
         details: "Match Details",
-        slug: "zim-vs-ban-test-2026"
+        slug: "zim-vs-ban-test-2026",
+        homeTeam: "Zimbabwe",
+        awayTeam: "Bangladesh",
+        format: "Test",
+        tournament: "Bangladesh tour of Zimbabwe, 2026",
+        city: "Harare",
+        country: "Zimbabwe",
+        headToHead: "In recent Tests, Bangladesh has a slight advantage over Zimbabwe.",
+        homeRecentForm: "L, D, L, W, L",
+        awayRecentForm: "W, L, D, W, L",
+        keyPlayersHome: ["Craig Ervine", "Sean Williams"],
+        keyPlayersAway: ["Shakib Al Hasan", "Litton Das"],
+        bettingTips: [
+          "Expect a slow pitch favoring spinners from Day 3.",
+          "Draw is a high-probability outcome if weather intervenes.",
+          "Shakib Al Hasan to be the leading wicket-taker."
+        ]
       },
       {
         match: "1st ODI",
