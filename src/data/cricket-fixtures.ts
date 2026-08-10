@@ -2679,7 +2679,31 @@ export const cricketFixtures: CricketSeries[] = [
         date: "Sun, 27 Dec 2026",
         venue: "Maharashtra Cricket Association Stadium",
         details: "Match Details",
-        slug: "ind-vs-sl-3rd-t20i-2026"
+        slug: "ind-vs-sl-3rd-t20i-2026",
+        homeTeam: "India",
+        awayTeam: "Sri Lanka",
+        format: "T20I",
+        tournament: "Sri Lanka tour of India, 2026",
+        city: "Pune",
+        country: "India",
+        headToHead: "Pune typically offers high-scoring games with some assistance for the pacers.",
+        homeRecentForm: "W, W, W, W, L",
+        awayRecentForm: "L, L, L, W, W",
+        keyPlayersHome: ["Hardik Pandya", "Jasprit Bumrah"],
+        keyPlayersAway: ["Wanindu Hasaranga", "Pathum Nissanka"],
+        bettingTips: [
+          "Hardik Pandya to lead with both bat and ball.",
+          "Jasprit Bumrah to deliver a match-winning spell.",
+          "India to complete a clean sweep of the T20I series."
+        ],
+        detailedNarrative: "The series concludes in Pune. The MCA Stadium usually provides a great contest between bat and ball. Hardik Pandya's captaincy and Jasprit Bumrah's lethal bowling will be India's main tactical strengths. Sri Lanka will look to finish the tour on a high note with Hasaranga leading the fight.",
+        pitchReport: "Good bounce, slightly favorable for pacers early on. High-scoring venue.",
+        tacticalPreview: "Maximum pressure series finale. Both teams will rely on their most experienced performers.",
+        winProbHome: 78,
+        winProbAway: 22,
+        predictionInsight: "India's overall strength and home advantage make them strong favorites to win the final game.",
+        projectedScoreHome: "190-210",
+        projectedScoreAway: "170-190"
       }
     ]
   }
