@@ -67,7 +67,7 @@ export const cricketFixtures: CricketSeries[] = [
         match: "2nd ODI",
         teams: "Ireland vs Afghanistan",
         date: "Fri, 7 Aug 2026",
-        venue: "Bready, Northern Ireland, Bready Cricket Club",
+        venue: "Bready Cricket Club",
         details: "Match Details",
         slug: "ire-vs-afg-2nd-odi-2026",
         homeTeam: "Ireland",
@@ -76,22 +76,22 @@ export const cricketFixtures: CricketSeries[] = [
         tournament: "Afghanistan tour of Ireland, 2026",
         city: "Bready",
         country: "Northern Ireland",
-        headToHead: "Afghanistan has won 4 out of the last 5 ODIs against Ireland.",
-        homeRecentForm: "L, W, L, L, L",
-        awayRecentForm: "W, W, L, W, W",
+        headToHead: "Afghanistan maintained their dominance in the 1st ODI, leading the series 1-0.",
+        homeRecentForm: "L, L, W, L, L",
+        awayRecentForm: "W, W, W, L, W",
         keyPlayersHome: ["Harry Tector", "Curtis Campher", "George Dockrell"],
         keyPlayersAway: ["Mohammad Nabi", "Mujeeb Ur Rahman", "Azmatullah Omarzai"],
         bettingTips: [
-          "Spinners to play a major role in the middle overs.",
-          "Ireland needs a strong start from their openers.",
-          "Afghanistan's middle order looks very solid."
+          "Expect Ireland to push harder in the 2nd game to stay in the series.",
+          "Mujeeb Ur Rahman's powerplay overs will be critical.",
+          "High probability of 280+ total score if pitch remains dry."
         ]
       },
       {
         match: "3rd ODI",
         teams: "Ireland vs Afghanistan",
         date: "Mon, 10 Aug 2026",
-        venue: "Belfast, Civil Service Cricket Club",
+        venue: "Civil Service Cricket Club",
         details: "Match Details",
         slug: "ire-vs-afg-3rd-odi-2026",
         homeTeam: "Ireland",
@@ -100,22 +100,22 @@ export const cricketFixtures: CricketSeries[] = [
         tournament: "Afghanistan tour of Ireland, 2026",
         city: "Belfast",
         country: "Northern Ireland",
-        headToHead: "In Belfast, matches have been more evenly contested between these two.",
-        homeRecentForm: "L, W, L, W, L",
-        awayRecentForm: "W, L, W, W, W",
+        headToHead: "The series moves to Belfast where the bounce favors Ireland's seamers.",
+        homeRecentForm: "W, L, L, W, L",
+        awayRecentForm: "L, W, W, W, W",
         keyPlayersHome: ["Mark Adair", "Andy Balbirnie", "Lorcan Tucker"],
         keyPlayersAway: ["Gulbadin Naib", "Hashmatullah Shahidi", "Rashid Khan"],
         bettingTips: [
-          "Belfast pitch offers more bounce; pace bowlers might thrive.",
-          "Check weather conditions; moisture can favor early swing.",
-          "Toss winner likely to bowl first under cloudy skies."
+          "Seam movement under overcast Belfast skies will be key.",
+          "Mark Adair to take 2+ wickets is a strong probability.",
+          "Afghanistan's middle order depth to be tested on a livelier track."
         ]
       },
       {
         match: "4th ODI",
         teams: "Ireland vs Afghanistan",
         date: "Wed, 12 Aug 2026",
-        venue: "Belfast, Civil Service Cricket Club",
+        venue: "Civil Service Cricket Club",
         details: "Match Details",
         slug: "ire-vs-afg-4th-odi-2026",
         homeTeam: "Ireland",
@@ -124,22 +124,22 @@ export const cricketFixtures: CricketSeries[] = [
         tournament: "Afghanistan tour of Ireland, 2026",
         city: "Belfast",
         country: "Northern Ireland",
-        headToHead: "Afghanistan leads the series historically by a significant margin.",
-        homeRecentForm: "L, L, W, L, L",
-        awayRecentForm: "W, W, W, L, W",
-        keyPlayersHome: ["Paul Stirling", "Joshua Little"],
-        keyPlayersAway: ["Rashid Khan", "Rahmanullah Gurbaz"],
+        headToHead: "Historically, the 4th match of the series sees tactical shifts from both sides.",
+        homeRecentForm: "L, W, L, L, W",
+        awayRecentForm: "W, L, W, W, W",
+        keyPlayersHome: ["Paul Stirling", "Joshua Little", "Craig Young"],
+        keyPlayersAway: ["Rahmanullah Gurbaz", "Rashid Khan", "Fazalhaq Farooqi"],
         bettingTips: [
-          "Spin dominates the latter half of the innings.",
-          "Expect high liquidity in the match-winner market.",
-          "Gurbaz to score 30+ runs is a high probability bet."
+          "Gurbaz to score 50+ runs is a value bet based on current form.",
+          "Spinners might find less grip if there's evening dew.",
+          "Toss winner should consider bowling first to exploit early moisture."
         ]
       },
       {
         match: "5th ODI",
         teams: "Ireland vs Afghanistan",
         date: "Fri, 14 Aug 2026",
-        venue: "Belfast, Civil Service Cricket Club",
+        venue: "Civil Service Cricket Club",
         details: "Match Details",
         slug: "ire-vs-afg-5th-odi-2026",
         homeTeam: "Ireland",
@@ -148,15 +148,15 @@ export const cricketFixtures: CricketSeries[] = [
         tournament: "Afghanistan tour of Ireland, 2026",
         city: "Belfast",
         country: "Northern Ireland",
-        headToHead: "Final matches of the series often see higher scoring totals.",
-        homeRecentForm: "W, L, L, W, L",
+        headToHead: "Final series deciders often see high-pressure performances.",
+        homeRecentForm: "W, L, W, L, L",
         awayRecentForm: "L, W, W, W, W",
-        keyPlayersHome: ["Harry Tector", "Mark Adair"],
-        keyPlayersAway: ["Fazalhaq Farooqi", "Mohammad Nabi"],
+        keyPlayersHome: ["Harry Tector", "Mark Adair", "Lorcan Tucker"],
+        keyPlayersAway: ["Rashid Khan", "Fazalhaq Farooqi", "Mohammad Nabi"],
         bettingTips: [
-          "Expect tactical changes in the final game.",
-          "Look for value in 'Player of the Match' markets.",
-          "Early wickets will be crucial for Ireland's chances."
+          "Look for 'Man of the Match' odds for Rashid Khan in deciders.",
+          "High stakes lead to cautious batting in the first 10 overs.",
+          "Premium ID users should watch for live session movements around 35th over."
         ]
       }
     ]
