@@ -1044,15 +1044,39 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "New Zealand tour of Australia, 2026-27",
-    details: "Australia vs New Zealand - 3 ODIs, 3 T20Is",
+    details: "4 Tests · Dec 2026 – Jan 2027",
     matches: [
       {
-        match: "1st ODI",
+        match: "1st Test",
         teams: "Australia vs New Zealand",
-        date: "Jan 2027",
-        venue: "SCG, Sydney",
-        details: "Upcoming Series",
-        slug: "aus-vs-nz-1st-odi-2027"
+        date: "Wed, 9 Dec 2026",
+        venue: "Perth, Perth Stadium",
+        details: "Match Details",
+        slug: "aus-vs-nz-1st-test-2026"
+      },
+      {
+        match: "2nd Test",
+        teams: "Australia vs New Zealand",
+        date: "Thu, 17 Dec 2026",
+        venue: "Adelaide, Adelaide Oval",
+        details: "Match Details",
+        slug: "aus-vs-nz-2nd-test-2026"
+      },
+      {
+        match: "3rd Test",
+        teams: "Australia vs New Zealand",
+        date: "Sat, 26 Dec 2026",
+        venue: "Melbourne, Melbourne Cricket Ground",
+        details: "Match Details",
+        slug: "aus-vs-nz-3rd-test-2026"
+      },
+      {
+        match: "4th Test",
+        teams: "Australia vs New Zealand",
+        date: "Mon, 4 Jan 2027",
+        venue: "Sydney, Sydney Cricket Ground",
+        details: "Match Details",
+        slug: "aus-vs-nz-4th-test-2027"
       }
     ]
   },
