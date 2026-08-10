@@ -44,7 +44,9 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "ATP",
     marketHighlights: ["Match Winner", "Set Betting"],
-    keywords: ["brisbane international 2026 odds", "medvedev brisbane betting", "tennis betting india", "atp brisbane prediction"],  {
+    keywords: ["brisbane international 2026 odds", "medvedev brisbane betting", "tennis betting india", "atp brisbane prediction"]
+  },
+  {
     slug: "asb-classic-2026",
     sport: "Tennis",
     tournament: "ASB Classic",
@@ -99,7 +101,9 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "ATP",
     marketHighlights: ["Match Winner", "Correct Score"],
-    keywords: ["adelaide international 2026 betting", "machac adelaide odds", "tennis betting strategy", "atp adelaide picks"],  {
+    keywords: ["adelaide international 2026 betting", "machac adelaide odds", "tennis betting strategy", "atp adelaide picks"]
+  },
+  {
     slug: "australian-open-2026",
     sport: "Tennis",
     tournament: "Australian Open",
@@ -116,7 +120,9 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "Combined",
     marketHighlights: ["Outright Winner", "Match Odds", "Quarter Winner"],
-    keywords: ["australian open 2026 odds", "alcaraz melbourne betting", "grand slam betting india", "australian open predictions 2026"],  {
+    keywords: ["australian open 2026 odds", "alcaraz melbourne betting", "grand slam betting india", "australian open predictions 2026"]
+  },
+  {
     slug: "open-occitanie-2026",
     sport: "Tennis",
     tournament: "Open Occitanie",
@@ -323,7 +329,9 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "Combined",
     marketHighlights: ["Match Winner", "Set Handicap"],
-    keywords: ["indian wells 2026 odds", "sinner indian wells betting", "tennis betting apps india", "atp masters 1000 picks"],  {
+    keywords: ["indian wells 2026 odds", "sinner indian wells betting", "tennis betting apps india", "atp masters 1000 picks"]
+  },
+  {
     slug: "miami-open-2026",
     sport: "Tennis",
     tournament: "Miami Open",
@@ -549,7 +557,9 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Clay",
     tour: "Combined",
     marketHighlights: ["Match Winner", "Total Games"],
-    keywords: ["roland garros 2026 odds", "zverev paris betting", "clay court betting india", "french open predictions"],  {
+    keywords: ["roland garros 2026 odds", "zverev paris betting", "clay court betting india", "french open predictions"]
+  },
+  {
     slug: "boss-open-2026",
     sport: "Tennis",
     tournament: "Boss Open",
@@ -813,7 +823,9 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Grass",
     tour: "Combined",
     marketHighlights: ["Match Winner"],
-    keywords: ["wimbledon 2026 betting odds", "wimbledon tennis picks", "grass court betting strategy"],  {
+    keywords: ["wimbledon 2026 betting odds", "wimbledon tennis picks", "grass court betting strategy"]
+  },
+  {
     slug: "national-bank-open-2026",
     sport: "Tennis",
     tournament: "National Bank Open",
@@ -887,7 +899,9 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "Combined",
     marketHighlights: ["Match Winner"],
-    keywords: ["us open 2026 tennis odds", "alcaraz us open betting", "hard court betting india"],  {
+    keywords: ["us open 2026 tennis odds", "alcaraz us open betting", "hard court betting india"]
+  },
+  {
     slug: "chengdu-open-2026",
     sport: "Tennis",
     tournament: "Chengdu Open",
@@ -1132,7 +1146,9 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Indoor Hard",
     tour: "ATP",
     marketHighlights: ["Match Winner", "Set Handicap"],
-    keywords: ["next gen atp finals 2026 betting", "jeddah tennis odds", "learner tien prediction"],  {
+    keywords: ["next gen atp finals 2026 betting", "jeddah tennis odds", "learner tien prediction"]
+  },
+  {
     slug: "stockholm-open-2026",
     sport: "Tennis",
     tournament: "Bybit Stockholm Open",
@@ -1244,7 +1260,9 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Clay",
     tour: "Combined",
     marketHighlights: ["Match Winner"],
-    keywords: ["french open wta 2026 odds", "wta clay court betting", "coco gauff paris predictions"],  {
+    keywords: ["french open wta 2026 odds", "wta clay court betting", "coco gauff paris predictions"]
+  },
+  {
     slug: "wimbledon-wta-2026",
     sport: "Tennis",
     tournament: "Wimbledon (WTA)",
@@ -1319,7 +1337,9 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "WTA",
     marketHighlights: ["Match Winner", "Total Games"],
-    keywords: ["auckland open wta 2026 betting", "clara tauson auckland odds", "wta betting india"],  {
+    keywords: ["auckland open wta 2026 betting", "clara tauson auckland odds", "wta betting india"]
+  },
+  {
     slug: "adelaide-international-2026-wta",
     sport: "Tennis",
     tournament: "Adelaide International (WTA)",
@@ -1336,7 +1356,9 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "WTA",
     marketHighlights: ["Match Winner", "Set Betting"],
-    keywords: ["adelaide international wta odds", "madison keys betting"],  {
+    keywords: ["adelaide international wta odds", "madison keys betting"]
+  },
+  {
     slug: "hobart-international-2026-wta",
     sport: "Tennis",
     tournament: "Hobart International",
