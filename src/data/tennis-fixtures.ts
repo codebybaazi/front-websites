@@ -2100,24 +2100,5 @@ export const tennisFixtures: TennisFixture[] = [
     marketHighlights: ["Match Winner"],
     keywords: ["hong kong wta 2026 betting"]
   },
-  {
-    slug: "wta-finals-2026",
-    sport: "Tennis",
-    tournament: "WTA Finals",
-    player1: "Elena Rybakina",
-    player2: "TBD",
-    venue: "King Saud University Indoor Arena",
-    city: "Riyadh",
-    country: "Saudi Arabia",
-    startDate: "2026-11-01T15:00:00+03:00",
-    endDate: "2026-11-08",
-    status: "upcoming",
-    stage: "Year-End Finals",
-    category: "Year-End Finals",
-    surface: "Hard",
-    tour: "WTA",
-    marketHighlights: ["Match Winner", "Outright Winner"],
-    keywords: ["wta finals riyadh 2026 betting", "rybakina finals odds"]
-  }
 ];
 
