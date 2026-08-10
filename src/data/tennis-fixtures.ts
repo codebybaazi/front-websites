@@ -1406,7 +1406,7 @@ export const tennisFixtures: TennisFixture[] = [
     venue: "Khalifa International Tennis Complex",
     city: "Doha",
     country: "Qatar",
-    startDate: "2026-02-08T15:00:00+03:00",
+    startDate: "2026-02-08",
     endDate: "2026-02-14",
     status: "upcoming",
     stage: "Main Draw",
