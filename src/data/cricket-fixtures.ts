@@ -363,7 +363,6 @@ export const cricketFixtures: CricketSeries[] = [
           "India's death bowling is statistically superior."
         ]
       },
-      },
       {
         match: "2nd T20I",
         teams: "India vs England",
