@@ -97,7 +97,7 @@ function MatchDetailPage() {
             <div className="flex flex-col items-center gap-2">
               <span className="text-4xl md:text-7xl font-black uppercase tracking-tighter">{m.homeTeam}</span>
               {m.homeRecentForm && <div className="flex gap-1">
-                {m.homeRecentForm.split(',').map((f, i) => (
+                {m.homeRecentForm.split(',').map((f: string, i: number) => (
                   <span key={i} className={cn("w-5 h-5 rounded text-[10px] flex items-center justify-center font-bold", f.trim() === 'W' ? 'bg-green-500/20 text-green-500' : 'bg-red-500/20 text-red-500')}>
                     {f.trim()}
                   </span>
@@ -110,7 +110,7 @@ function MatchDetailPage() {
                 {m.awayTeam}
               </span>
               {m.awayRecentForm && <div className="flex gap-1">
-                {m.awayRecentForm.split(',').map((f, i) => (
+                {m.awayRecentForm.split(',').map((f: string, i: number) => (
                   <span key={i} className={cn("w-5 h-5 rounded text-[10px] flex items-center justify-center font-bold", f.trim() === 'W' ? 'bg-green-500/20 text-green-500' : 'bg-red-500/20 text-red-500')}>
                     {f.trim()}
                   </span>
