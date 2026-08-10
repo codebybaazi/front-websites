@@ -111,115 +111,216 @@ function Schedule() {
                           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
                         </div>
                         
-                        <div className="overflow-x-auto rounded-2xl border border-primary/10 bg-background/40">
-                          <table className="w-full text-left border-collapse">
-                            <thead>
-                              <tr className="border-b border-primary/10 bg-primary/5">
-                                <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Stage</th>
-                                <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Match</th>
-                                <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Date & Kickoff</th>
-                                <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Venue</th>
-                                <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Details</th>
-                              </tr>
-                            </thead>
-                            <tbody>
+                        <div className="rounded-2xl border border-primary/10 bg-background/40 overflow-hidden">
+                          <div className="overflow-x-auto">
+                            {/* Desktop Table View */}
+                            <table className="w-full text-left border-collapse hidden md:table">
+                              <thead>
+                                <tr className="border-b border-primary/10 bg-primary/5">
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Stage</th>
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Match</th>
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Date & Kickoff</th>
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Venue</th>
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Details</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {footballFixtures
+                                  .filter(m => m.sport === "Football" && (m as any).category === category)
+                                  .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
+                                  .map((match) => (
+                                    <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap">
+                                      <td className="p-4 text-sm font-medium text-foreground/80">{match.stage}</td>
+                                      <td className="p-4 font-bold text-foreground">{match.homeTeam} vs {match.awayTeam}</td>
+                                      <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'eee, dd MMM yyyy · HH:mm')}</td>
+                                      <td className="p-4 text-sm text-foreground/60">{match.venue}, {match.city}</td>
+                                      <td className="p-4">
+                                        <Link 
+                                          to="/matches/$slug"
+                                          params={{ slug: match.slug }}
+                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                          >
+                                            Match Details <ArrowRight className="w-3 h-3" />
+                                          </Link>
+                                      </td>
+                                    </tr>
+                                  ))}
+                              </tbody>
+                            </table>
+
+                            {/* Mobile Card View */}
+                            <div className="md:hidden divide-y divide-primary/10">
                               {footballFixtures
                                 .filter(m => m.sport === "Football" && (m as any).category === category)
                                 .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
                                 .map((match) => (
-                                  <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors">
-                                    <td className="p-4 text-sm font-medium text-foreground/80">{match.stage}</td>
-                                    <td className="p-4 font-bold text-foreground">{match.homeTeam} vs {match.awayTeam}</td>
-                                    <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'eee, dd MMM yyyy · HH:mm')}</td>
-                                    <td className="p-4 text-sm text-foreground/60">{match.venue}, {match.city}</td>
-                                    <td className="p-4">
-                                      <Link 
-                                        to="/matches/$slug"
-                                        params={{ slug: match.slug }}
-                                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
-                                        >
-                                          Match Details <ArrowRight className="w-3 h-3" />
-                                        </Link>
-                                    </td>
-                                  </tr>
+                                  <div key={match.slug} className="p-4 space-y-3">
+                                    <div className="flex justify-between items-start">
+                                      <div className="text-[10px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20 w-fit">
+                                        {match.stage}
+                                      </div>
+                                      <div className="text-[10px] text-foreground/60 font-medium">
+                                        {format(new Date(match.startDate), 'dd MMM yyyy')}
+                                      </div>
+                                    </div>
+                                    <div className="text-base font-bold text-foreground">
+                                      {match.homeTeam} vs {match.awayTeam}
+                                    </div>
+                                    <div className="grid grid-cols-2 gap-2 text-[11px] text-foreground/60">
+                                      <div className="flex items-center gap-1.5">
+                                        <Clock className="w-3.5 h-3.5 text-primary/70" />
+                                        {format(new Date(match.startDate), 'HH:mm')}
+                                      </div>
+                                      <div className="flex items-center gap-1.5">
+                                        <MapPin className="w-3.5 h-3.5 text-primary/70" />
+                                        {match.city}
+                                      </div>
+                                    </div>
+                                    <Link 
+                                      to="/matches/$slug"
+                                      params={{ slug: match.slug }}
+                                      className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                    >
+                                      View Match Intelligence <ArrowRight className="w-3.5 h-3.5" />
+                                    </Link>
+                                  </div>
                                 ))}
-                            </tbody>
-                          </table>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     ))}
                   </div>
                 ) : activeTab === "Tennis" ? (
                   <div className="space-y-6">
-                    <div className="overflow-x-auto rounded-2xl border border-primary/10 bg-background/40">
-                      <table className="w-full text-left border-collapse">
-                        <thead>
-                          <tr className="border-b border-primary/10 bg-primary/5">
-                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Dates</th>
-                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Tournament</th>
-                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Tour/Surface</th>
-                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Defending Champ</th>
-                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Venue</th>
-                            <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Details</th>
-                          </tr>
-                        </thead>
-                        <tbody>
+                    <div className="rounded-2xl border border-primary/10 bg-background/40 overflow-hidden">
+                      <div className="overflow-x-auto">
+                        {/* Desktop Table View */}
+                        <table className="w-full text-left border-collapse hidden md:table">
+                          <thead>
+                            <tr className="border-b border-primary/10 bg-primary/5">
+                              <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Dates</th>
+                              <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Tournament</th>
+                              <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Tour/Surface</th>
+                              <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Defending Champ</th>
+                              <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Venue</th>
+                              <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Details</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {tennisFixtures
+                              .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
+                              .map((match) => (
+                                <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap">
+                                  <td className="p-4 text-sm text-foreground/60 whitespace-nowrap">
+                                    {match.endDate ? (
+                                      <>
+                                        {(() => {
+                                          const start = new Date(match.startDate);
+                                          const end = new Date(match.endDate);
+                                          const sameMonth = start.getMonth() === end.getMonth() && start.getFullYear() === end.getFullYear();
+                                          return (
+                                            <>
+                                              {format(start, sameMonth ? 'd' : 'd MMM')} – {format(end, 'd MMM yyyy')}
+                                            </>
+                                          );
+                                        })()}
+                                      </>
+                                    ) : (
+                                      format(new Date(match.startDate), 'dd MMM yyyy')
+                                    )}
+                                  </td>
+                                  <td className="p-4">
+                                    <div className="text-sm font-bold text-foreground">{match.tournament}</div>
+                                    <div className="text-[10px] uppercase text-primary font-bold opacity-70 tracking-widest">{match.category}</div>
+                                  </td>
+                                  <td className="p-4">
+                                    <div className="flex flex-col gap-1">
+                                      <span className="text-[10px] px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 w-fit font-bold">
+                                        {match.tour}
+                                      </span>
+                                      <span className="text-[10px] px-2 py-0.5 rounded bg-background/60 text-foreground/60 border border-primary/10 w-fit">
+                                        {match.surface}
+                                      </span>
+                                    </div>
+                                  </td>
+                                  <td className="p-4">
+                                    <div className="text-sm font-bold text-foreground">{match.player1}</div>
+                                    <div className="text-[10px] text-foreground/40 italic">Prev: {match.player1}</div>
+                                  </td>
+                                  <td className="p-4 text-sm text-foreground/60">{match.venue}, {match.city}</td>
+                                  <td className="p-4">
+                                    <div className="flex flex-col gap-2">
+                                      <Link 
+                                        to="/matches/$slug"
+                                        params={{ slug: match.slug }}
+                                        className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                      >
+                                        Match Details <ArrowRight className="w-3 h-3" />
+                                      </Link>
+                                    </div>
+                                  </td>
+                                </tr>
+                              ))}
+                          </tbody>
+                        </table>
+
+                        {/* Mobile Card View */}
+                        <div className="md:hidden divide-y divide-primary/10">
                           {tennisFixtures
                             .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
                             .map((match) => (
-                              <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors">
-                                <td className="p-4 text-sm text-foreground/60 whitespace-nowrap">
-                                  {match.endDate ? (
-                                    <>
-                                      {(() => {
-                                        const start = new Date(match.startDate);
-                                        const end = new Date(match.endDate);
-                                        const sameMonth = start.getMonth() === end.getMonth() && start.getFullYear() === end.getFullYear();
-                                        return (
-                                          <>
-                                            {format(start, sameMonth ? 'd' : 'd MMM')} – {format(end, 'd MMM yyyy')}
-                                          </>
-                                        );
-                                      })()}
-                                    </>
-                                  ) : (
-                                    format(new Date(match.startDate), 'dd MMM yyyy')
-                                  )}
-                                </td>
-                                <td className="p-4">
-                                  <div className="text-sm font-bold text-foreground">{match.tournament}</div>
-                                  <div className="text-[10px] uppercase text-primary font-bold opacity-70 tracking-widest">{match.category}</div>
-                                </td>
-                                <td className="p-4">
-                                  <div className="flex flex-col gap-1">
-                                    <span className="text-[10px] px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 w-fit font-bold">
-                                      {match.tour}
-                                    </span>
-                                    <span className="text-[10px] px-2 py-0.5 rounded bg-background/60 text-foreground/60 border border-primary/10 w-fit">
-                                      {match.surface}
-                                    </span>
+                              <div key={match.slug} className="p-4 space-y-4">
+                                <div className="flex justify-between items-start gap-4">
+                                  <div className="flex-1">
+                                    <div className="text-[10px] font-bold text-primary uppercase tracking-widest mb-1">{match.category}</div>
+                                    <div className="text-base font-bold text-foreground leading-tight">{match.tournament}</div>
                                   </div>
-                                </td>
-                                <td className="p-4">
-                                  <div className="text-sm font-bold text-foreground">{match.player1}</div>
-                                  <div className="text-[10px] text-foreground/40 italic">Prev: {match.player1}</div>
-                                </td>
-                                <td className="p-4 text-sm text-foreground/60">{match.venue}, {match.city}</td>
-                                <td className="p-4">
-                                  <div className="flex flex-col gap-2">
-                                    <Link 
-                                      to="/matches/$slug"
-                                      params={{ slug: match.slug }}
-                                      className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
-                                    >
-                                      Match Details <ArrowRight className="w-3 h-3" />
-                                    </Link>
+                                  <div className="text-right">
+                                    <div className="text-[10px] text-foreground/60 font-bold whitespace-nowrap">
+                                      {match.endDate ? (
+                                        <>
+                                          {format(new Date(match.startDate), 'd')} - {format(new Date(match.endDate), 'd MMM')}
+                                        </>
+                                      ) : format(new Date(match.startDate), 'dd MMM')}
+                                    </div>
+                                    <div className="text-[9px] text-foreground/40 uppercase tracking-tighter mt-0.5">2026 Season</div>
                                   </div>
-                                </td>
-                              </tr>
+                                </div>
+
+                                <div className="grid grid-cols-2 gap-3 p-3 rounded-xl bg-primary/5 border border-primary/10">
+                                  <div>
+                                    <div className="text-[9px] text-foreground/40 uppercase font-bold mb-1 tracking-widest">Defending</div>
+                                    <div className="text-xs font-bold text-foreground">{match.player1}</div>
+                                  </div>
+                                  <div>
+                                    <div className="text-[9px] text-foreground/40 uppercase font-bold mb-1 tracking-widest">Surface</div>
+                                    <div className="text-xs font-bold text-foreground">{match.surface}</div>
+                                  </div>
+                                </div>
+
+                                <div className="flex items-center justify-between text-[11px] text-foreground/60 px-1">
+                                  <div className="flex items-center gap-1.5">
+                                    <MapPin className="w-3.5 h-3.5 text-primary/70" />
+                                    {match.city}
+                                  </div>
+                                  <div className="flex items-center gap-1.5">
+                                    <Trophy className="w-3.5 h-3.5 text-primary/70" />
+                                    {match.tour}
+                                  </div>
+                                </div>
+
+                                <Link 
+                                  to="/matches/$slug"
+                                  params={{ slug: match.slug }}
+                                  className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                >
+                                  View Tournament Intelligence <ArrowRight className="w-3.5 h-3.5" />
+                                </Link>
+                              </div>
                             ))}
-                        </tbody>
-                      </table>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ) : activeTab === "Cricket" ? (
@@ -231,37 +332,70 @@ function Schedule() {
                           <p className="text-foreground/60 text-sm leading-relaxed">{series.details}</p>
                         </div>
                         
-                        <div className="overflow-x-auto rounded-2xl border border-primary/10 bg-background/40">
-                          <table className="w-full text-left border-collapse">
-                            <thead>
-                              <tr className="border-b border-primary/10 bg-primary/5">
-                                <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Match</th>
-                                <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Teams</th>
-                                <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Date</th>
-                                <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Venue</th>
-                                <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Details</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {series.matches.map((match) => (
-                                <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors">
-                                  <td className="p-4 text-sm font-medium text-foreground/80">{match.match}</td>
-                                  <td className="p-4 font-bold text-foreground">{match.teams}</td>
-                                  <td className="p-4 text-sm text-foreground/60 whitespace-nowrap">{match.date}</td>
-                                  <td className="p-4 text-sm text-foreground/60">{match.venue}</td>
-                                  <td className="p-4">
-                                    <Link 
-                                      to="/matches/$slug"
-                                      params={{ slug: match.slug }}
-                                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
-                                    >
-                                      Match Details <ArrowRight className="w-3 h-3" />
-                                    </Link>
-                                  </td>
+                        <div className="rounded-2xl border border-primary/10 bg-background/40 overflow-hidden">
+                          <div className="overflow-x-auto">
+                            {/* Desktop Table View */}
+                            <table className="w-full text-left border-collapse hidden md:table">
+                              <thead>
+                                <tr className="border-b border-primary/10 bg-primary/5">
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Match</th>
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Teams</th>
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Date</th>
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Venue</th>
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Details</th>
                                 </tr>
+                              </thead>
+                              <tbody>
+                                {series.matches.map((match) => (
+                                  <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap">
+                                    <td className="p-4 text-sm font-medium text-foreground/80">{match.match}</td>
+                                    <td className="p-4 font-bold text-foreground">{match.teams}</td>
+                                    <td className="p-4 text-sm text-foreground/60 whitespace-nowrap">{match.date}</td>
+                                    <td className="p-4 text-sm text-foreground/60">{match.venue}</td>
+                                    <td className="p-4">
+                                      <Link 
+                                        to="/matches/$slug"
+                                        params={{ slug: match.slug }}
+                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                      >
+                                        Match Details <ArrowRight className="w-3 h-3" />
+                                      </Link>
+                                    </td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+
+                            {/* Mobile Card View */}
+                            <div className="md:hidden divide-y divide-primary/10">
+                              {series.matches.map((match) => (
+                                <div key={match.slug} className="p-4 space-y-3">
+                                  <div className="flex justify-between items-start">
+                                    <div className="text-[10px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20 w-fit">
+                                      {match.match}
+                                    </div>
+                                    <div className="text-[10px] text-foreground/60 font-medium">
+                                      {match.date}
+                                    </div>
+                                  </div>
+                                  <div className="text-base font-bold text-foreground">
+                                    {match.teams}
+                                  </div>
+                                  <div className="flex items-center gap-1.5 text-[11px] text-foreground/60">
+                                    <MapPin className="w-3.5 h-3.5 text-primary/70" />
+                                    {match.venue}
+                                  </div>
+                                  <Link 
+                                    to="/matches/$slug"
+                                    params={{ slug: match.slug }}
+                                    className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                  >
+                                    Match Analytics <ArrowRight className="w-3.5 h-3.5" />
+                                  </Link>
+                                </div>
                               ))}
-                            </tbody>
-                          </table>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     ))}
