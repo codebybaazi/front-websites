@@ -111,29 +111,7 @@ export const cricketFixtures: CricketSeries[] = [
         projectedScoreHome: "235-255",
         projectedScoreAway: "270-290"
       },
-        match: "2nd ODI",
-        teams: "Ireland vs Afghanistan",
-        date: "Fri, 7 Aug 2026",
-        venue: "Bready Cricket Club",
-        details: "Match Details",
-        slug: "ire-vs-afg-2nd-odi-2026",
-        homeTeam: "Ireland",
-        awayTeam: "Afghanistan",
-        format: "ODI",
-        tournament: "Afghanistan tour of Ireland, 2026",
-        city: "Bready",
-        country: "Northern Ireland",
-        headToHead: "Afghanistan maintained their dominance in the 1st ODI, leading the series 1-0.",
-        homeRecentForm: "L, L, W, L, L",
-        awayRecentForm: "W, W, W, L, W",
-        keyPlayersHome: ["Harry Tector", "Curtis Campher", "George Dockrell"],
-        keyPlayersAway: ["Mohammad Nabi", "Mujeeb Ur Rahman", "Azmatullah Omarzai"],
-        bettingTips: [
-          "Expect Ireland to push harder in the 2nd game to stay in the series.",
-          "Mujeeb Ur Rahman's powerplay overs will be critical.",
-          "High probability of 280+ total score if pitch remains dry."
-        ]
-      },
+      {
       {
         match: "3rd ODI",
         teams: "Ireland vs Afghanistan",
