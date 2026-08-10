@@ -160,17 +160,17 @@ function MatchDetailPage() {
                 <Sparkles className="h-6 w-6 text-primary animate-pulse" /> AI Match Overview
               </h2>
               <div className="prose prose-invert max-w-none text-foreground/80 leading-relaxed space-y-6">
-                <p className="text-lg">
-                  {aiAnalysis.detailedNarrative}
-                </p>
+                <div className="text-lg">
+                  {m.detailedNarrative || aiAnalysis.detailedNarrative}
+                </div>
                 <div className="grid gap-6 md:grid-cols-2 mt-10">
                   <div className="p-6 rounded-2xl bg-primary/5 border border-primary/10">
-                    <h3 className="text-sm font-black uppercase tracking-widest text-primary mb-3">Home Advantage</h3>
-                    <p className="text-sm">Data from {m.venue} indicates that {m.homeTeam} has a significantly higher win rate when batting first on this pitch.</p>
+                    <h3 className="text-sm font-black uppercase tracking-widest text-primary mb-3">Pitch & Conditions</h3>
+                    <p className="text-sm">{m.pitchReport || `Data from ${m.venue} indicates that ${m.homeTeam} has a significantly higher win rate when batting first on this pitch.`}</p>
                   </div>
                   <div className="p-6 rounded-2xl bg-accent/5 border border-accent/10">
-                    <h3 className="text-sm font-black uppercase tracking-widest text-accent mb-3">Visitor Strategy</h3>
-                    <p className="text-sm">{m.awayTeam}'s recent success has come from aggressive early plays, forcing opponents onto the defensive quickly.</p>
+                    <h3 className="text-sm font-black uppercase tracking-widest text-accent mb-3">Tactical Strategy</h3>
+                    <p className="text-sm">{m.tacticalPreview || `${m.awayTeam}'s recent success has come from aggressive early plays, forcing opponents onto the defensive quickly.`}</p>
                   </div>
                 </div>
               </div>
@@ -215,16 +215,16 @@ function MatchDetailPage() {
                   <div className="flex justify-between items-end mb-2">
                     <div className="flex flex-col">
                       <span className="text-sm font-black text-primary uppercase tracking-widest">{m.homeTeam}</span>
-                      <span className="text-5xl font-black">58%</span>
+                      <span className="text-5xl font-black">{m.winProbHome || 58}%</span>
                     </div>
                     <div className="flex flex-col items-end">
                       <span className="text-sm font-black text-accent uppercase tracking-widest">{m.awayTeam}</span>
-                      <span className="text-5xl font-black">42%</span>
+                      <span className="text-5xl font-black">{m.winProbAway || 42}%</span>
                     </div>
                   </div>
                   <div className="h-6 w-full bg-white/5 rounded-full overflow-hidden flex shadow-inner">
-                    <div className="h-full bg-primary shadow-[0_0_20px_rgba(212,175,55,0.4)]" style={{ width: "58%" }} />
-                    <div className="h-full bg-accent" style={{ width: "42%" }} />
+                    <div className="h-full bg-primary shadow-[0_0_20px_rgba(212,175,55,0.4)]" style={{ width: `${m.winProbHome || 58}%` }} />
+                    <div className="h-full bg-accent" style={{ width: `${m.winProbAway || 42}%` }} />
                   </div>
                 </div>
                 
@@ -247,7 +247,7 @@ function MatchDetailPage() {
                 <div className="p-8 rounded-2xl bg-background/60 border border-primary/10 italic text-center max-w-2xl">
                   <Lightbulb className="w-6 h-6 text-primary mx-auto mb-4" />
                   <p className="text-lg leading-relaxed">
-                    "Historical head-to-head data at {m.venue} shows that the team winning the toss and batting first has won 64% of encounters. If {m.homeTeam} secures a good start, they are statistically poised to take this game."
+                    "{m.predictionInsight || `Historical head-to-head data at ${m.venue} shows that the team winning the toss and batting first has won 64% of encounters. If ${m.homeTeam} secures a good start, they are statistically poised to take this game.`}"
                   </p>
                 </div>
               </div>
@@ -322,11 +322,11 @@ function MatchDetailPage() {
                      <Target className="h-5 w-5 text-accent" />
                      <span className="font-bold">Projected Totals</span>
                    </div>
-                   <div className="p-8 rounded-2xl bg-accent/5 border border-accent/10 flex flex-col items-center justify-center text-center">
-                     <span className="text-xs font-black uppercase text-accent mb-2">Estimated 1st Innings Score</span>
-                     <span className="text-5xl font-black text-white">175 - 190</span>
-                     <p className="mt-4 text-xs text-foreground/50 italic">Based on pitch behavior at {m.venue} and {m.homeTeam}'s recent strike rates.</p>
-                   </div>
+                    <div className="p-8 rounded-2xl bg-accent/5 border border-accent/10 flex flex-col items-center justify-center text-center">
+                      <span className="text-xs font-black uppercase text-accent mb-2">Estimated 1st Innings Score</span>
+                      <span className="text-5xl font-black text-white">{m.projectedScoreHome || "175 - 190"}</span>
+                      <p className="mt-4 text-xs text-foreground/50 italic">Based on pitch behavior at {m.venue} and {m.homeTeam}'s recent strike rates.</p>
+                    </div>
                    <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
                      <h4 className="text-sm font-black mb-2 flex items-center gap-2">
                        <Globe className="h-4 w-4 text-primary" /> Market Sentiment

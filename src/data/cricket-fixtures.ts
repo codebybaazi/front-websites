@@ -24,6 +24,14 @@ export interface CricketMatch {
   keyPlayersAway?: string[];
   bettingTips?: string[];
   relatedMatches?: string[];
+  detailedNarrative?: string;
+  pitchReport?: string;
+  tacticalPreview?: string;
+  winProbHome?: number;
+  winProbAway?: number;
+  predictionInsight?: string;
+  projectedScoreHome?: string;
+  projectedScoreAway?: string;
 }
 
 export const getCricketMatch = (slug: string) => {
@@ -61,13 +69,21 @@ export const cricketFixtures: CricketSeries[] = [
           "Afghanistan's spin duo expected to dominate the middle overs.",
           "High probability of a high-scoring match if Ireland bats first.",
           "Rashid Khan to take 2+ wickets looks like a value bet."
-        ]
+        ],
+        detailedNarrative: "The 1st ODI between Ireland and Afghanistan at Bready is set to be a tactical masterclass. Ireland, playing in familiar home conditions, will look to exploit the early morning moisture, while Afghanistan's spin-heavy attack is expected to come alive as the pitch dries out. Our AI models predict a high-intensity start with the powerplay determining the momentum for the rest of the game.",
+        pitchReport: "Bready is known for its balanced nature. Expect some grass cover to help the seamers early on, transitioning into a batting paradise by the second session.",
+        tacticalPreview: "Ireland must neutralize Rashid Khan's middle overs to stand a chance. Afghanistan will likely use aggressive field placements during the first 10 to force errors.",
+        winProbHome: 45,
+        winProbAway: 55,
+        predictionInsight: "Afghanistan's superior spin variety gives them the edge on a drying pitch. If they bat first and post 280+, Ireland might struggle to chase under pressure.",
+        projectedScoreHome: "240-260",
+        projectedScoreAway: "275-295"
       },
       {
         match: "2nd ODI",
         teams: "Ireland vs Afghanistan",
         date: "Fri, 7 Aug 2026",
-        venue: "Bready, Northern Ireland, Bready Cricket Club",
+        venue: "Bready Cricket Club",
         details: "Match Details",
         slug: "ire-vs-afg-2nd-odi-2026",
         homeTeam: "Ireland",
@@ -76,22 +92,30 @@ export const cricketFixtures: CricketSeries[] = [
         tournament: "Afghanistan tour of Ireland, 2026",
         city: "Bready",
         country: "Northern Ireland",
-        headToHead: "Afghanistan has won 4 out of the last 5 ODIs against Ireland.",
-        homeRecentForm: "L, W, L, L, L",
-        awayRecentForm: "W, W, L, W, W",
+        headToHead: "Afghanistan maintained their dominance in the 1st ODI, leading the series 1-0.",
+        homeRecentForm: "L, L, W, L, L",
+        awayRecentForm: "W, W, W, L, W",
         keyPlayersHome: ["Harry Tector", "Curtis Campher", "George Dockrell"],
         keyPlayersAway: ["Mohammad Nabi", "Mujeeb Ur Rahman", "Azmatullah Omarzai"],
         bettingTips: [
-          "Spinners to play a major role in the middle overs.",
-          "Ireland needs a strong start from their openers.",
-          "Afghanistan's middle order looks very solid."
-        ]
+          "Expect Ireland to push harder in the 2nd game to stay in the series.",
+          "Mujeeb Ur Rahman's powerplay overs will be critical.",
+          "High probability of 280+ total score if pitch remains dry."
+        ],
+        detailedNarrative: "The 2nd ODI continues at Bready with Afghanistan holding the lead. Ireland showed promise in the first encounter but needs more stability in their top order. Afghanistan's balanced side looks hard to beat, but home advantage for Ireland could play a role if they can execute their plans better under pressure.",
+        pitchReport: "Slightly more wear on the surface compared to the 1st ODI. Spinners might get more assistance as the match progresses.",
+        tacticalPreview: "Ireland needs to bowl straighter to curb the Afghan openers. Afghanistan will rely on their middle-order to stabilize if early wickets fall.",
+        winProbHome: 40,
+        winProbAway: 60,
+        predictionInsight: "Afghanistan is likely to stick to their winning formula. Ireland needs a miracle from their middle order to level the series.",
+        projectedScoreHome: "235-255",
+        projectedScoreAway: "270-290"
       },
       {
         match: "3rd ODI",
         teams: "Ireland vs Afghanistan",
         date: "Mon, 10 Aug 2026",
-        venue: "Belfast, Civil Service Cricket Club",
+        venue: "Civil Service Cricket Club",
         details: "Match Details",
         slug: "ire-vs-afg-3rd-odi-2026",
         homeTeam: "Ireland",
@@ -100,22 +124,30 @@ export const cricketFixtures: CricketSeries[] = [
         tournament: "Afghanistan tour of Ireland, 2026",
         city: "Belfast",
         country: "Northern Ireland",
-        headToHead: "In Belfast, matches have been more evenly contested between these two.",
-        homeRecentForm: "L, W, L, W, L",
-        awayRecentForm: "W, L, W, W, W",
+        headToHead: "The series moves to Belfast where the bounce favors Ireland's seamers.",
+        homeRecentForm: "W, L, L, W, L",
+        awayRecentForm: "L, W, W, W, W",
         keyPlayersHome: ["Mark Adair", "Andy Balbirnie", "Lorcan Tucker"],
         keyPlayersAway: ["Gulbadin Naib", "Hashmatullah Shahidi", "Rashid Khan"],
         bettingTips: [
-          "Belfast pitch offers more bounce; pace bowlers might thrive.",
-          "Check weather conditions; moisture can favor early swing.",
-          "Toss winner likely to bowl first under cloudy skies."
-        ]
+          "Seam movement under overcast Belfast skies will be key.",
+          "Mark Adair to take 2+ wickets is a strong probability.",
+          "Afghanistan's middle order depth to be tested on a livelier track."
+        ],
+        detailedNarrative: "The 3rd ODI in Belfast introduces new dynamics with a livelier pitch. Ireland's seamers will relish the extra bounce, while Afghanistan's batters will need to adjust their technique quickly. With the series in a critical phase, the tactical battle between Ireland's pace and Afghanistan's resilience will be the highlight.",
+        pitchReport: "Civil Service Cricket Club offers a hard surface with good carry. Pace bowlers will find joy in the early overs, but it levels out to a high-scoring deck later.",
+        tacticalPreview: "Ireland will likely stack their pace attack. Afghanistan might consider bringing in an extra seamer to exploit the Belfast conditions.",
+        winProbHome: 52,
+        winProbAway: 48,
+        predictionInsight: "Ireland has a statistical advantage in Belfast due to the bounce. If Joshua Little finds his rhythm early, Afghanistan could be in trouble.",
+        projectedScoreHome: "270-290",
+        projectedScoreAway: "255-275"
       },
       {
         match: "4th ODI",
         teams: "Ireland vs Afghanistan",
         date: "Wed, 12 Aug 2026",
-        venue: "Belfast, Civil Service Cricket Club",
+        venue: "Civil Service Cricket Club",
         details: "Match Details",
         slug: "ire-vs-afg-4th-odi-2026",
         homeTeam: "Ireland",
@@ -124,22 +156,30 @@ export const cricketFixtures: CricketSeries[] = [
         tournament: "Afghanistan tour of Ireland, 2026",
         city: "Belfast",
         country: "Northern Ireland",
-        headToHead: "Afghanistan leads the series historically by a significant margin.",
-        homeRecentForm: "L, L, W, L, L",
-        awayRecentForm: "W, W, W, L, W",
-        keyPlayersHome: ["Paul Stirling", "Joshua Little"],
-        keyPlayersAway: ["Rashid Khan", "Rahmanullah Gurbaz"],
+        headToHead: "Historically, the 4th match of the series sees tactical shifts from both sides.",
+        homeRecentForm: "L, W, L, L, W",
+        awayRecentForm: "W, L, W, W, W",
+        keyPlayersHome: ["Paul Stirling", "Joshua Little", "Craig Young"],
+        keyPlayersAway: ["Rahmanullah Gurbaz", "Rashid Khan", "Fazalhaq Farooqi"],
         bettingTips: [
-          "Spin dominates the latter half of the innings.",
-          "Expect high liquidity in the match-winner market.",
-          "Gurbaz to score 30+ runs is a high probability bet."
-        ]
+          "Gurbaz to score 50+ runs is a value bet based on current form.",
+          "Spinners might find less grip if there's evening dew.",
+          "Toss winner should consider bowling first to exploit early moisture."
+        ],
+        detailedNarrative: "Entering the 4th ODI, the tactical shifts become evident. Both teams are now familiar with each other's weaknesses. Ireland's reliance on Paul Stirling's start and Afghanistan's middle-order stability under Rashid Khan's leadership will define this encounter. The match promises high volatility in the betting markets as momentum swings frequently.",
+        pitchReport: "The pitch is expected to slow down slightly for the 4th game. Change of pace will be a vital weapon for the bowlers.",
+        tacticalPreview: "Afghanistan will look to target the Ireland tail early. Ireland needs to rotate strike effectively against the Afghan spinners in the middle phase.",
+        winProbHome: 47,
+        winProbAway: 53,
+        predictionInsight: "Afghanistan's ability to adapt to slower tracks gives them a slight edge here. Watch for Rahmanullah Gurbaz's intent in the first powerplay.",
+        projectedScoreHome: "250-270",
+        projectedScoreAway: "265-285"
       },
       {
         match: "5th ODI",
         teams: "Ireland vs Afghanistan",
         date: "Fri, 14 Aug 2026",
-        venue: "Belfast, Civil Service Cricket Club",
+        venue: "Civil Service Cricket Club",
         details: "Match Details",
         slug: "ire-vs-afg-5th-odi-2026",
         homeTeam: "Ireland",
@@ -148,16 +188,24 @@ export const cricketFixtures: CricketSeries[] = [
         tournament: "Afghanistan tour of Ireland, 2026",
         city: "Belfast",
         country: "Northern Ireland",
-        headToHead: "Final matches of the series often see higher scoring totals.",
-        homeRecentForm: "W, L, L, W, L",
+        headToHead: "Final series deciders often see high-pressure performances.",
+        homeRecentForm: "W, L, W, L, L",
         awayRecentForm: "L, W, W, W, W",
-        keyPlayersHome: ["Harry Tector", "Mark Adair"],
-        keyPlayersAway: ["Fazalhaq Farooqi", "Mohammad Nabi"],
+        keyPlayersHome: ["Harry Tector", "Mark Adair", "Lorcan Tucker"],
+        keyPlayersAway: ["Rashid Khan", "Fazalhaq Farooqi", "Mohammad Nabi"],
         bettingTips: [
-          "Expect tactical changes in the final game.",
-          "Look for value in 'Player of the Match' markets.",
-          "Early wickets will be crucial for Ireland's chances."
-        ]
+          "Look for 'Man of the Match' odds for Rashid Khan in deciders.",
+          "High stakes lead to cautious batting in the first 10 overs.",
+          "Premium ID users should watch for live session movements around 35th over."
+        ],
+        detailedNarrative: "The series decider in Belfast brings everything to the table. Both teams have shown flashes of brilliance, and this final clash at the Civil Service Cricket Club will test their temperament. With the series potentially on the line, expect conservative strategies early on, followed by an explosive finish in the death overs.",
+        pitchReport: "Belfast pitches tend to stay true throughout the 100 overs. Good bounce for pace bowlers and a fast outfield will reward aggressive stroke play.",
+        tacticalPreview: "High-pressure decider requires experience. Both teams will lean on their veterans to stabilize the innings during crucial transitions.",
+        winProbHome: 50,
+        winProbAway: 50,
+        predictionInsight: "A true 50-50 clash. The team that handles the pressure of the final 10 overs better will likely take the series trophy home.",
+        projectedScoreHome: "265-285",
+        projectedScoreAway: "260-280"
       }
     ]
   },
