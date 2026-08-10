@@ -1165,7 +1165,8 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Indoor Hard",
     tour: "ATP",
     marketHighlights: ["Match Winner", "Total Games"],
-    keywords: ["stockholm open 2026 odds", "casper ruud stockholm betting", "tennis predictions indoor hard"],
+    keywords: ["stockholm open 2026 odds", "casper ruud stockholm betting", "tennis predictions indoor hard"]
+  },
   // --- WTA 2026 ---
   {
     slug: "adelaide-wta-2026",
