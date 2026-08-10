@@ -101,6 +101,37 @@ export const cricketFixtures: CricketSeries[] = [
           "Expect Ireland to push harder in the 2nd game to stay in the series.",
           "Mujeeb Ur Rahman's powerplay overs will be critical.",
           "High probability of 280+ total score if pitch remains dry."
+        ],
+        detailedNarrative: "The 2nd ODI continues at Bready with Afghanistan holding the lead. Ireland showed promise in the first encounter but needs more stability in their top order. Afghanistan's balanced side looks hard to beat, but home advantage for Ireland could play a role if they can execute their plans better under pressure.",
+        pitchReport: "Slightly more wear on the surface compared to the 1st ODI. Spinners might get more assistance as the match progresses.",
+        tacticalPreview: "Ireland needs to bowl straighter to curb the Afghan openers. Afghanistan will rely on their middle-order to stabilize if early wickets fall.",
+        winProbHome: 40,
+        winProbAway: 60,
+        predictionInsight: "Afghanistan is likely to stick to their winning formula. Ireland needs a miracle from their middle order to level the series.",
+        projectedScoreHome: "235-255",
+        projectedScoreAway: "270-290"
+      },
+        match: "2nd ODI",
+        teams: "Ireland vs Afghanistan",
+        date: "Fri, 7 Aug 2026",
+        venue: "Bready Cricket Club",
+        details: "Match Details",
+        slug: "ire-vs-afg-2nd-odi-2026",
+        homeTeam: "Ireland",
+        awayTeam: "Afghanistan",
+        format: "ODI",
+        tournament: "Afghanistan tour of Ireland, 2026",
+        city: "Bready",
+        country: "Northern Ireland",
+        headToHead: "Afghanistan maintained their dominance in the 1st ODI, leading the series 1-0.",
+        homeRecentForm: "L, L, W, L, L",
+        awayRecentForm: "W, W, W, L, W",
+        keyPlayersHome: ["Harry Tector", "Curtis Campher", "George Dockrell"],
+        keyPlayersAway: ["Mohammad Nabi", "Mujeeb Ur Rahman", "Azmatullah Omarzai"],
+        bettingTips: [
+          "Expect Ireland to push harder in the 2nd game to stay in the series.",
+          "Mujeeb Ur Rahman's powerplay overs will be critical.",
+          "High probability of 280+ total score if pitch remains dry."
         ]
       },
       {
