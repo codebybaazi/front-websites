@@ -344,7 +344,7 @@ function MatchDetailPage() {
                   `Analyze the toss carefully; the pitch at ${m.venue} favors the team batting first.`,
                   `Value is found in mid-game session markets where volatility is high.`,
                   "Always maintain a disciplined bankroll strategy for high-volume fixtures."
-                ]).map((tip, i) => (
+                ]).map((tip: string, i: number) => (
                   <div key={i} className="flex gap-5 p-6 rounded-2xl bg-background/40 border border-primary/10">
                     <div className="h-10 w-10 shrink-0 rounded-full bg-primary/20 flex items-center justify-center text-sm font-black text-primary">0{i+1}</div>
                     <p className="text-foreground/80 leading-relaxed font-medium">{tip}</p>
