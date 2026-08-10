@@ -173,7 +173,15 @@ export const cricketFixtures: CricketSeries[] = [
           "Look for 'Man of the Match' odds for Rashid Khan in deciders.",
           "High stakes lead to cautious batting in the first 10 overs.",
           "Premium ID users should watch for live session movements around 35th over."
-        ]
+        ],
+        detailedNarrative: "The series decider in Belfast brings everything to the table. Both teams have shown flashes of brilliance, and this final clash at the Civil Service Cricket Club will test their temperament. With the series potentially on the line, expect conservative strategies early on, followed by an explosive finish in the death overs.",
+        pitchReport: "Belfast pitches tend to stay true throughout the 100 overs. Good bounce for pace bowlers and a fast outfield will reward aggressive stroke play.",
+        tacticalPreview: "High-pressure decider requires experience. Both teams will lean on their veterans to stabilize the innings during crucial transitions.",
+        winProbHome: 50,
+        winProbAway: 50,
+        predictionInsight: "A true 50-50 clash. The team that handles the pressure of the final 10 overs better will likely take the series trophy home.",
+        projectedScoreHome: "265-285",
+        projectedScoreAway: "260-280"
       }
     ]
   },

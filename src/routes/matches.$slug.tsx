@@ -247,7 +247,7 @@ function MatchDetailPage() {
                 <div className="p-8 rounded-2xl bg-background/60 border border-primary/10 italic text-center max-w-2xl">
                   <Lightbulb className="w-6 h-6 text-primary mx-auto mb-4" />
                   <p className="text-lg leading-relaxed">
-                    "Historical head-to-head data at {m.venue} shows that the team winning the toss and batting first has won 64% of encounters. If {m.homeTeam} secures a good start, they are statistically poised to take this game."
+                    "{m.predictionInsight || `Historical head-to-head data at ${m.venue} shows that the team winning the toss and batting first has won 64% of encounters. If ${m.homeTeam} secures a good start, they are statistically poised to take this game.`}"
                   </p>
                 </div>
               </div>
