@@ -345,7 +345,24 @@ export const cricketFixtures: CricketSeries[] = [
         date: "Jul 01, 2026",
         venue: "Chester-le-Street, Riverside Ground",
         details: "Match Details",
-        slug: "eng-vs-ind-1st-t20i-2026"
+        slug: "eng-vs-ind-1st-t20i-2026",
+        homeTeam: "England",
+        awayTeam: "India",
+        format: "T20I",
+        tournament: "India tour of England, 2026",
+        city: "Durham",
+        country: "England",
+        headToHead: "In T20Is in England, the record is balanced at 3-3.",
+        homeRecentForm: "W, L, W, W, L",
+        awayRecentForm: "W, W, W, W, W",
+        keyPlayersHome: ["Jos Buttler", "Jofra Archer", "Harry Brook"],
+        keyPlayersAway: ["Suryakumar Yadav", "Jasprit Bumrah", "Hardik Pandya"],
+        bettingTips: [
+          "Expect a high-scoring encounter on a flat Durham track.",
+          "Jos Buttler's performance in powerplay will be key.",
+          "India's death bowling is statistically superior."
+        ]
+      },
       },
       {
         match: "2nd T20I",
