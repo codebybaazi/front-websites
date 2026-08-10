@@ -41,7 +41,6 @@ import { Route as PredictionsRouteImport } from './routes/predictions'
 import { Route as PoliciesRouteImport } from './routes/policies'
 import { Route as PlatformsRouteImport } from './routes/platforms'
 import { Route as OnlineBettingRouteImport } from './routes/online-betting'
-import { Route as MatchesRouteImport } from './routes/matches'
 import { Route as LoginIssuesRouteImport } from './routes/login-issues'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as KycPolicyRouteImport } from './routes/kyc-policy'
@@ -91,8 +90,9 @@ import { Route as AllLinksRouteImport } from './routes/all-links'
 import { Route as AccountBlockedRouteImport } from './routes/account-blocked'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as MatchesIndexRouteImport } from './routes/matches/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
-import { Route as MatchesSlugRouteImport } from './routes/matches.$slug'
+import { Route as MatchesSlugRouteImport } from './routes/matches/$slug'
 import { Route as CaseStudiesTossMarket10MinuteProfitRouteImport } from './routes/case-studies.toss-market-10-minute-profit'
 import { Route as CaseStudiesSmallBudgetBettingStrategyRouteImport } from './routes/case-studies.small-budget-betting-strategy'
 import { Route as CaseStudiesLiveBetting3xReturnsRouteImport } from './routes/case-studies.live-betting-3x-returns'
@@ -264,11 +264,6 @@ const PlatformsRoute = PlatformsRouteImport.update({
 const OnlineBettingRoute = OnlineBettingRouteImport.update({
   id: '/online-betting',
   path: '/online-betting',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MatchesRoute = MatchesRouteImport.update({
-  id: '/matches',
-  path: '/matches',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LoginIssuesRoute = LoginIssuesRouteImport.update({
@@ -518,15 +513,20 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MatchesIndexRoute = MatchesIndexRouteImport.update({
+  id: '/matches/',
+  path: '/matches/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MatchesSlugRoute = MatchesSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => MatchesRoute,
+  id: '/matches/$slug',
+  path: '/matches/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const CaseStudiesTossMarket10MinuteProfitRoute =
   CaseStudiesTossMarket10MinuteProfitRouteImport.update({
@@ -644,7 +644,6 @@ export interface FileRoutesByFullPath {
   '/kyc-policy': typeof KycPolicyRoute
   '/login': typeof LoginRoute
   '/login-issues': typeof LoginIssuesRoute
-  '/matches': typeof MatchesRouteWithChildren
   '/online-betting': typeof OnlineBettingRoute
   '/platforms': typeof PlatformsRoute
   '/policies': typeof PoliciesRoute
@@ -690,6 +689,7 @@ export interface FileRoutesByFullPath {
   '/case-studies/toss-market-10-minute-profit': typeof CaseStudiesTossMarket10MinuteProfitRoute
   '/matches/$slug': typeof MatchesSlugRoute
   '/blog/': typeof BlogIndexRoute
+  '/matches/': typeof MatchesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -741,7 +741,6 @@ export interface FileRoutesByTo {
   '/kyc-policy': typeof KycPolicyRoute
   '/login': typeof LoginRoute
   '/login-issues': typeof LoginIssuesRoute
-  '/matches': typeof MatchesRouteWithChildren
   '/online-betting': typeof OnlineBettingRoute
   '/platforms': typeof PlatformsRoute
   '/policies': typeof PoliciesRoute
@@ -787,6 +786,7 @@ export interface FileRoutesByTo {
   '/case-studies/toss-market-10-minute-profit': typeof CaseStudiesTossMarket10MinuteProfitRoute
   '/matches/$slug': typeof MatchesSlugRoute
   '/blog': typeof BlogIndexRoute
+  '/matches': typeof MatchesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -839,7 +839,6 @@ export interface FileRoutesById {
   '/kyc-policy': typeof KycPolicyRoute
   '/login': typeof LoginRoute
   '/login-issues': typeof LoginIssuesRoute
-  '/matches': typeof MatchesRouteWithChildren
   '/online-betting': typeof OnlineBettingRoute
   '/platforms': typeof PlatformsRoute
   '/policies': typeof PoliciesRoute
@@ -885,6 +884,7 @@ export interface FileRoutesById {
   '/case-studies/toss-market-10-minute-profit': typeof CaseStudiesTossMarket10MinuteProfitRoute
   '/matches/$slug': typeof MatchesSlugRoute
   '/blog/': typeof BlogIndexRoute
+  '/matches/': typeof MatchesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -938,7 +938,6 @@ export interface FileRouteTypes {
     | '/kyc-policy'
     | '/login'
     | '/login-issues'
-    | '/matches'
     | '/online-betting'
     | '/platforms'
     | '/policies'
@@ -984,6 +983,7 @@ export interface FileRouteTypes {
     | '/case-studies/toss-market-10-minute-profit'
     | '/matches/$slug'
     | '/blog/'
+    | '/matches/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -1035,7 +1035,6 @@ export interface FileRouteTypes {
     | '/kyc-policy'
     | '/login'
     | '/login-issues'
-    | '/matches'
     | '/online-betting'
     | '/platforms'
     | '/policies'
@@ -1081,6 +1080,7 @@ export interface FileRouteTypes {
     | '/case-studies/toss-market-10-minute-profit'
     | '/matches/$slug'
     | '/blog'
+    | '/matches'
   id:
     | '__root__'
     | '/'
@@ -1132,7 +1132,6 @@ export interface FileRouteTypes {
     | '/kyc-policy'
     | '/login'
     | '/login-issues'
-    | '/matches'
     | '/online-betting'
     | '/platforms'
     | '/policies'
@@ -1178,6 +1177,7 @@ export interface FileRouteTypes {
     | '/case-studies/toss-market-10-minute-profit'
     | '/matches/$slug'
     | '/blog/'
+    | '/matches/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -1230,7 +1230,6 @@ export interface RootRouteChildren {
   KycPolicyRoute: typeof KycPolicyRoute
   LoginRoute: typeof LoginRoute
   LoginIssuesRoute: typeof LoginIssuesRoute
-  MatchesRoute: typeof MatchesRouteWithChildren
   OnlineBettingRoute: typeof OnlineBettingRoute
   PlatformsRoute: typeof PlatformsRoute
   PoliciesRoute: typeof PoliciesRoute
@@ -1264,7 +1263,9 @@ export interface RootRouteChildren {
   WithdrawalDelayRoute: typeof WithdrawalDelayRoute
   Wpl2026BettingRoute: typeof Wpl2026BettingRoute
   BlogSlugRoute: typeof BlogSlugRoute
+  MatchesSlugRoute: typeof MatchesSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
+  MatchesIndexRoute: typeof MatchesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -1491,13 +1492,6 @@ declare module '@tanstack/react-router' {
       path: '/online-betting'
       fullPath: '/online-betting'
       preLoaderRoute: typeof OnlineBettingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/matches': {
-      id: '/matches'
-      path: '/matches'
-      fullPath: '/matches'
-      preLoaderRoute: typeof MatchesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/login-issues': {
@@ -1843,6 +1837,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/matches/': {
+      id: '/matches/'
+      path: '/matches'
+      fullPath: '/matches/'
+      preLoaderRoute: typeof MatchesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/': {
       id: '/blog/'
       path: '/blog'
@@ -1852,10 +1853,10 @@ declare module '@tanstack/react-router' {
     }
     '/matches/$slug': {
       id: '/matches/$slug'
-      path: '/$slug'
+      path: '/matches/$slug'
       fullPath: '/matches/$slug'
       preLoaderRoute: typeof MatchesSlugRouteImport
-      parentRoute: typeof MatchesRoute
+      parentRoute: typeof rootRouteImport
     }
     '/case-studies/toss-market-10-minute-profit': {
       id: '/case-studies/toss-market-10-minute-profit'
@@ -1984,17 +1985,6 @@ const CaseStudiesRouteWithChildren = CaseStudiesRoute._addFileChildren(
   CaseStudiesRouteChildren,
 )
 
-interface MatchesRouteChildren {
-  MatchesSlugRoute: typeof MatchesSlugRoute
-}
-
-const MatchesRouteChildren: MatchesRouteChildren = {
-  MatchesSlugRoute: MatchesSlugRoute,
-}
-
-const MatchesRouteWithChildren =
-  MatchesRoute._addFileChildren(MatchesRouteChildren)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
@@ -2045,7 +2035,6 @@ const rootRouteChildren: RootRouteChildren = {
   KycPolicyRoute: KycPolicyRoute,
   LoginRoute: LoginRoute,
   LoginIssuesRoute: LoginIssuesRoute,
-  MatchesRoute: MatchesRouteWithChildren,
   OnlineBettingRoute: OnlineBettingRoute,
   PlatformsRoute: PlatformsRoute,
   PoliciesRoute: PoliciesRoute,
@@ -2079,7 +2068,9 @@ const rootRouteChildren: RootRouteChildren = {
   WithdrawalDelayRoute: WithdrawalDelayRoute,
   Wpl2026BettingRoute: Wpl2026BettingRoute,
   BlogSlugRoute: BlogSlugRoute,
+  MatchesSlugRoute: MatchesSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
+  MatchesIndexRoute: MatchesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

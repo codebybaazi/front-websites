@@ -13,7 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/matches")({
+export const Route = createFileRoute("/matches/")({
   head: () => ({
     meta: [
       { title: "Live Matches, Betting Odds & IPL 2026 Schedule | Cricbet99" },
