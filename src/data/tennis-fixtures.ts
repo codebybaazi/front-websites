@@ -1398,6 +1398,25 @@ export const tennisFixtures: TennisFixture[] = [
     keywords: ["abu dhabi open 2026 betting", "bencic abu dhabi odds"]
   },
   {
+    slug: "qatar-open-2026-wta",
+    sport: "Tennis",
+    tournament: "Qatar TotalEnergies Open",
+    player1: "Amanda Anisimova",
+    player2: "TBD",
+    venue: "Khalifa International Tennis Complex",
+    city: "Doha",
+    country: "Qatar",
+    startDate: "2026-02-08T15:00:00+03:00",
+    endDate: "2026-02-14",
+    status: "upcoming",
+    stage: "Main Draw",
+    category: "WTA 1000",
+    surface: "Hard",
+    tour: "WTA",
+    marketHighlights: ["Match Winner"],
+    keywords: ["doha wta 2026 odds", "anisimova doha betting"]
+  },
+  {
     slug: "copa-colsanitas-2026-wta",
     sport: "Tennis",
     tournament: "Copa Colsanitas",
@@ -1434,6 +1453,25 @@ export const tennisFixtures: TennisFixture[] = [
     tour: "WTA",
     marketHighlights: ["Match Winner"],
     keywords: ["merida tennis 2026 odds"]
+  },
+  {
+    slug: "dubai-wta-2026",
+    sport: "Tennis",
+    tournament: "Dubai Duty Free Championships (WTA)",
+    player1: "Mirra Andreeva",
+    player2: "TBD",
+    venue: "Dubai Tennis Stadium",
+    city: "Dubai",
+    country: "UAE",
+    startDate: "2026-02-16T14:00:00+04:00",
+    endDate: "2026-02-23",
+    status: "upcoming",
+    stage: "Main Draw",
+    category: "WTA 1000",
+    surface: "Hard",
+    tour: "WTA",
+    marketHighlights: ["Match Winner"],
+    keywords: ["dubai wta odds 2026"]
   },
   {
     slug: "atx-open-2026-wta",
