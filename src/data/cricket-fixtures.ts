@@ -122,15 +122,31 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "Pakistan tour of West Indies, 2026",
-    details: "West Indies vs Pakistan - 3 Tests, 3 ODIs, 3 T20Is",
+    details: "2 Tests · Jul – Aug 2026",
     matches: [
+      {
+        match: "4-Day Warm-up match",
+        teams: "Pakistan vs West Indies Select XI",
+        date: "Jul 18, 2026",
+        venue: "Tarouba, Trinidad, Brian Lara Stadium",
+        details: "Match Details",
+        slug: "wi-vs-pak-warmup-2026"
+      },
       {
         match: "1st Test",
         teams: "West Indies vs Pakistan",
-        date: "May 2026",
-        venue: "Sabina Park, Kingston",
-        details: "Upcoming Series",
+        date: "Jul 25-29, 2026",
+        venue: "Tarouba, Trinidad, Brian Lara Stadium",
+        details: "Match Details",
         slug: "wi-vs-pak-1st-test-2026"
+      },
+      {
+        match: "2nd Test",
+        teams: "West Indies vs Pakistan",
+        date: "Aug 02-06, 2026",
+        venue: "Port of Spain, Trinidad, Queen's Park Oval",
+        details: "Match Details",
+        slug: "wi-vs-pak-2nd-test-2026"
       }
     ]
   },
