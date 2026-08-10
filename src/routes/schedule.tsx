@@ -46,17 +46,15 @@ const majorEvents = [
 ];
 
 function Schedule() {
-  const [activeTab, setActiveTab] = useState<"All" | "Cricket" | "Football" | "Tennis">("All");
+  const [activeTab, setActiveTab] = useState<"Cricket" | "Football" | "Tennis">("Cricket");
   
-  const filteredEvents = activeTab === "All" 
-    ? majorEvents 
-    : majorEvents.filter(e => e.cat === activeTab);
-
+  const filteredEvents = majorEvents.filter(e => e.cat === activeTab);
+  
   const upcomingMatches = matches
-    .filter(m => m.status === 'upcoming' && (activeTab === "All" || m.sport === activeTab))
+    .filter(m => m.status === 'upcoming' && m.sport === activeTab)
     .slice(0, 10);
-
-  const tabs = ["All", "Cricket", "Football", "Tennis"] as const;
+  
+  const tabs = ["Cricket", "Football", "Tennis"] as const;
 
   return (
     <SiteLayout>
@@ -96,7 +94,7 @@ function Schedule() {
                   <Trophy className="w-5 h-5 text-primary" />
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight">
-                  {activeTab === "All" ? "Major 2026 Championships" : `${activeTab} Fixtures 2026`}
+                  {`${activeTab} Fixtures 2026`}
                 </h2>
               </div>
               
@@ -314,7 +312,7 @@ function Schedule() {
       </section>
 
       <AiOverview 
-        summary={`The 2026 ${activeTab === "All" ? "Global" : activeTab} Sports Calendar is optimized for precision betting. Our AI-driven Intelligence Hub integrates live ATP/WTA tennis metrics, FIFA World Cup scheduling, and IPL 2026 data points to provide a 360-degree view of the year's biggest markets.`}
+        summary={`The 2026 ${activeTab} Sports Calendar is optimized for precision betting. Our AI-driven Intelligence Hub integrates live ATP/WTA tennis metrics, FIFA World Cup scheduling, and IPL 2026 data points to provide a 360-degree view of the year's biggest markets.`}
         highlights={[
           "98% Accuracy on Tournament scheduling and venue mapping",
           "Advanced AI Predictions for ATP/WTA match winners and total points",
