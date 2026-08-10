@@ -746,15 +746,71 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "Bangladesh tour of South Africa, 2026",
-    details: "South Africa vs Bangladesh - 2 Tests, 3 ODIs, 3 T20Is",
+    details: "2 Tests, 3 ODIs, 3 T20Is · Nov – Dec 2026",
     matches: [
       {
         match: "1st Test",
         teams: "South Africa vs Bangladesh",
-        date: "Oct 2026",
-        venue: "Kingsmead, Durban",
-        details: "Upcoming Series",
+        date: "Sun, 15 Nov 2026",
+        venue: "Johannesburg, The Wanderers Stadium",
+        details: "Match Details",
         slug: "sa-vs-ban-1st-test-2026"
+      },
+      {
+        match: "2nd Test",
+        teams: "South Africa vs Bangladesh",
+        date: "Mon, 23 Nov 2026",
+        venue: "Centurion, SuperSport Park",
+        details: "Match Details",
+        slug: "sa-vs-ban-2nd-test-2026"
+      },
+      {
+        match: "1st ODI",
+        teams: "South Africa vs Bangladesh",
+        date: "Tue, 1 Dec 2026",
+        venue: "East London, Buffalo Park",
+        details: "Match Details",
+        slug: "sa-vs-ban-1st-odi-2026"
+      },
+      {
+        match: "2nd ODI",
+        teams: "South Africa vs Bangladesh",
+        date: "Fri, 4 Dec 2026",
+        venue: "Gqeberha, St George's Park",
+        details: "Match Details",
+        slug: "sa-vs-ban-2nd-odi-2026"
+      },
+      {
+        match: "3rd ODI",
+        teams: "South Africa vs Bangladesh",
+        date: "Mon, 7 Dec 2026",
+        venue: "Cape Town, Newlands",
+        details: "Match Details",
+        slug: "sa-vs-ban-3rd-odi-2026"
+      },
+      {
+        match: "1st T20I",
+        teams: "South Africa vs Bangladesh",
+        date: "Thu, 10 Dec 2026",
+        venue: "Kimberley, Diamond Oval",
+        details: "Match Details",
+        slug: "sa-vs-ban-1st-t20i-2026"
+      },
+      {
+        match: "2nd T20I",
+        teams: "South Africa vs Bangladesh",
+        date: "Sat, 12 Dec 2026",
+        venue: "Benoni, Willowmoore Park",
+        details: "Match Details",
+        slug: "sa-vs-ban-2nd-t20i-2026"
+      },
+      {
+        match: "3rd T20I",
+        teams: "South Africa vs Bangladesh",
+        date: "Sun, 13 Dec 2026",
+        venue: "Centurion, SuperSport Park",
+        details: "Match Details",
+        slug: "sa-vs-ban-3rd-t20i-2026"
       }
     ]
   },
