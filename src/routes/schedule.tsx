@@ -60,9 +60,9 @@ function Schedule() {
     <SiteLayout>
       <PageHero
         wide
-        eyebrow="Intelligence Hub"
-        title={<>2026 Master <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Sports Calendar.</span></>}
-        subtitle="Your essential guide to the biggest betting events of 2026. Real-time fixtures for IPL, FIFA World Cup, and International Cricket with Cricbet99 analytics."
+        eyebrow="2026 Sports Intelligence Hub"
+        title={<>2026 Cricket Schedule & <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Live Sports Calendar.</span></>}
+        subtitle="The definitive guide to the IPL 2026 fixtures, T20 World Cup 2026 schedule, and international football/tennis events. Track every live match and betting market on Cricbet99."
       />
 
       <section className="mx-auto max-w-7xl px-6 py-8 border-b border-primary/10">
