@@ -1030,15 +1030,31 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "Zimbabwe tour of India, 2027",
-    details: "India vs Zimbabwe - 1 Test, 3 ODIs",
+    details: "3 ODIs · Jan 2027",
     matches: [
       {
-        match: "Only Test",
+        match: "1st ODI",
         teams: "India vs Zimbabwe",
-        date: "Mar 2027",
-        venue: "TBC, India",
-        details: "Upcoming Series",
-        slug: "ind-vs-zim-test-2027"
+        date: "Sun, 3 Jan 2027",
+        venue: "Kolkata, Eden Gardens",
+        details: "Match Details",
+        slug: "ind-vs-zim-1st-odi-2027"
+      },
+      {
+        match: "2nd ODI",
+        teams: "India vs Zimbabwe",
+        date: "Wed, 6 Jan 2027",
+        venue: "Hyderabad, Rajiv Gandhi International Stadium",
+        details: "Match Details",
+        slug: "ind-vs-zim-2nd-odi-2027"
+      },
+      {
+        match: "3rd ODI",
+        teams: "India vs Zimbabwe",
+        date: "Sat, 9 Jan 2027",
+        venue: "Mumbai, Wankhede Stadium",
+        details: "Match Details",
+        slug: "ind-vs-zim-3rd-odi-2027"
       }
     ]
   },
