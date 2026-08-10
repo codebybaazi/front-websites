@@ -464,15 +464,71 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "West Indies tour of India, 2026",
-    details: "India vs West Indies - 3 Tests, 5 ODIs",
+    details: "3 ODIs, 5 T20Is · Sep – Oct 2026",
     matches: [
       {
-        match: "1st Test",
+        match: "1st ODI",
         teams: "India vs West Indies",
-        date: "Sep 2026",
-        venue: "Narendra Modi Stadium, Ahmedabad",
-        details: "Upcoming Series",
-        slug: "ind-vs-wi-1st-test-2026"
+        date: "Sun, 27 Sep 2026",
+        venue: "Thiruvananthapuram, Greenfield International Stadium",
+        details: "Match Details",
+        slug: "ind-vs-wi-1st-odi-2026"
+      },
+      {
+        match: "2nd ODI",
+        teams: "India vs West Indies",
+        date: "Wed, 30 Sep 2026",
+        venue: "Guwahati, Barsapara Cricket Stadium",
+        details: "Match Details",
+        slug: "ind-vs-wi-2nd-odi-2026"
+      },
+      {
+        match: "3rd ODI",
+        teams: "India vs West Indies",
+        date: "Sat, 3 Oct 2026",
+        venue: "New Chandigarh, Mullanpur Stadium",
+        details: "Match Details",
+        slug: "ind-vs-wi-3rd-odi-2026"
+      },
+      {
+        match: "1st T20I",
+        teams: "India vs West Indies",
+        date: "Tue, 6 Oct 2026",
+        venue: "Lucknow, Ekana Cricket Stadium",
+        details: "Match Details",
+        slug: "ind-vs-wi-1st-t20i-2026"
+      },
+      {
+        match: "2nd T20I",
+        teams: "India vs West Indies",
+        date: "Fri, 9 Oct 2026",
+        venue: "Ranchi, JSCA Stadium",
+        details: "Match Details",
+        slug: "ind-vs-wi-2nd-t20i-2026"
+      },
+      {
+        match: "3rd T20I",
+        teams: "India vs West Indies",
+        date: "Sun, 11 Oct 2026",
+        venue: "Indore, Holkar Stadium",
+        details: "Match Details",
+        slug: "ind-vs-wi-3rd-t20i-2026"
+      },
+      {
+        match: "4th T20I",
+        teams: "India vs West Indies",
+        date: "Wed, 14 Oct 2026",
+        venue: "Hyderabad, Rajiv Gandhi Stadium",
+        details: "Match Details",
+        slug: "ind-vs-wi-4th-t20i-2026"
+      },
+      {
+        match: "5th T20I",
+        teams: "India vs West Indies",
+        date: "Sat, 17 Oct 2026",
+        venue: "Bengaluru, M.Chinnaswamy Stadium",
+        details: "Match Details",
+        slug: "ind-vs-wi-5th-t20i-2026"
       }
     ]
   },
