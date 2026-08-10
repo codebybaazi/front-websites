@@ -492,15 +492,55 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "Sri Lanka tour of England, 2026",
-    details: "England vs Sri Lanka - 3 ODIs, 3 T20Is",
+    details: "3 T20Is, 3 ODIs · Sep 2026",
     matches: [
+      {
+        match: "1st T20I",
+        teams: "England vs Sri Lanka",
+        date: "Tue, 15 Sep 2026",
+        venue: "Southampton, The Rose Bowl",
+        details: "Match Details",
+        slug: "eng-vs-sl-1st-t20i-2026"
+      },
+      {
+        match: "2nd T20I",
+        teams: "England vs Sri Lanka",
+        date: "Thu, 17 Sep 2026",
+        venue: "Cardiff, Sophia Gardens",
+        details: "Match Details",
+        slug: "eng-vs-sl-2nd-t20i-2026"
+      },
+      {
+        match: "3rd T20I",
+        teams: "England vs Sri Lanka",
+        date: "Sat, 19 Sep 2026",
+        venue: "Manchester, Emirates Old Trafford",
+        details: "Match Details",
+        slug: "eng-vs-sl-3rd-t20i-2026"
+      },
       {
         match: "1st ODI",
         teams: "England vs Sri Lanka",
-        date: "Sep 2026",
-        venue: "The Rose Bowl, Southampton",
-        details: "Upcoming Series",
+        date: "Tue, 22 Sep 2026",
+        venue: "Chester-le-Street, Riverside Ground",
+        details: "Match Details",
         slug: "eng-vs-sl-1st-odi-2026"
+      },
+      {
+        match: "2nd ODI",
+        teams: "England vs Sri Lanka",
+        date: "Thu, 24 Sep 2026",
+        venue: "Leeds, Headingley",
+        details: "Match Details",
+        slug: "eng-vs-sl-2nd-odi-2026"
+      },
+      {
+        match: "3rd ODI",
+        teams: "England vs Sri Lanka",
+        date: "Sun, 27 Sep 2026",
+        venue: "London, Kennington Oval",
+        details: "Match Details",
+        slug: "eng-vs-sl-3rd-odi-2026"
       }
     ]
   },
