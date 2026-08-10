@@ -1168,26 +1168,7 @@ export const tennisFixtures: TennisFixture[] = [
     keywords: ["stockholm open 2026 odds", "casper ruud stockholm betting", "tennis predictions indoor hard"]
   },
   // --- WTA 2026 ---
-  {
-    slug: "adelaide-wta-2026",
-    sport: "Tennis",
-    tournament: "Adelaide International (WTA)",
-    player1: "Madison Keys",
-    player2: "TBD",
-    venue: "Memorial Drive Tennis Centre",
-    city: "Adelaide",
-    country: "Australia",
-    startDate: "2026-01-04T11:00:00+10:30",
-    endDate: "2026-01-11",
-    status: "upcoming",
-    stage: "Main Draw",
-    category: "WTA 500",
-    surface: "Hard",
-    tour: "WTA",
-    marketHighlights: ["Match Winner"],
-    keywords: ["adelaide wta 2026 odds"]
-  },
-  {
+    {
     slug: "doha-wta-2026",
     sport: "Tennis",
     tournament: "Qatar TotalEnergies Open",
