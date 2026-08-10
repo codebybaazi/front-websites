@@ -15,6 +15,12 @@ export interface MatchFixture {
   status: "live" | "upcoming";
   marketHighlights: string[];
   keywords: string[];
+  headToHead?: string;
+  homeRecentForm?: string;
+  awayRecentForm?: string;
+  keyPlayersHome?: string[];
+  keyPlayersAway?: string[];
+  bettingTips?: string[];
 }
 
 // Transform cricket fixtures
