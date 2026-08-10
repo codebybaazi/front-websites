@@ -1425,7 +1425,7 @@ export const tennisFixtures: TennisFixture[] = [
     venue: "Country Club de Bogotá",
     city: "Bogotá",
     country: "Colombia",
-    startDate: "2026-02-08T11:00:00-05:00",
+    startDate: "2026-02-08",
     endDate: "2026-02-14",
     status: "upcoming",
     stage: "Main Draw",
