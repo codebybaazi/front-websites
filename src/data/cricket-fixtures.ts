@@ -281,16 +281,168 @@ export const cricketFixtures: CricketSeries[] = [
     ]
   },
   {
-    name: "ICC T20 World Cup Europe Qualifier B, 2026",
-    details: "Path to T20 World Cup 2028 Qualifiers",
+    name: "ICC Men's T20 World Cup Europe Sub Regional Qualifier B, 2026",
+    details: "20 T20s · Jul 2026",
     matches: [
       {
-        match: "Group Stage",
-        teams: "TBC vs TBC",
-        date: "Jul 2026",
-        venue: "Various, Germany",
-        details: "Qualifier Event",
-        slug: "t20-wc-eur-qual-b-2026"
+        match: "1st Match",
+        teams: "Denmark vs Estonia",
+        date: "Jul 08, 2026",
+        venue: "Brondby, Svanholm Park",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-m1"
+      },
+      {
+        match: "2nd Match",
+        teams: "Gibraltar vs Belgium",
+        date: "Jul 08, 2026",
+        venue: "Koge, Koge Cricket Club",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-m2"
+      },
+      {
+        match: "3rd Match",
+        teams: "Hungary vs Norway",
+        date: "Jul 08, 2026",
+        venue: "Brondby, Svanholm Park",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-m3"
+      },
+      {
+        match: "4th Match",
+        teams: "Serbia vs Romania",
+        date: "Jul 08, 2026",
+        venue: "Koge, Koge Cricket Club",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-m4"
+      },
+      {
+        match: "5th Match",
+        teams: "Denmark vs Turkey",
+        date: "Jul 09, 2026",
+        venue: "Koge, Koge Cricket Club",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-m5"
+      },
+      {
+        match: "6th Match",
+        teams: "Estonia vs Norway",
+        date: "Jul 09, 2026",
+        venue: "Koge, Koge Cricket Club",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-m6"
+      },
+      {
+        match: "7th Match",
+        teams: "Gibraltar vs Romania",
+        date: "Jul 10, 2026",
+        venue: "Brondby, Svanholm Park",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-m7"
+      },
+      {
+        match: "8th Match",
+        teams: "Hungary vs Estonia",
+        date: "Jul 10, 2026",
+        venue: "Koge, Koge Cricket Club",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-m8"
+      },
+      {
+        match: "9th Match",
+        teams: "Belgium vs Serbia",
+        date: "Jul 10, 2026",
+        venue: "Brondby, Svanholm Park",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-m9"
+      },
+      {
+        match: "10th Match",
+        teams: "Turkey vs Norway",
+        date: "Jul 10, 2026",
+        venue: "Koge, Koge Cricket Club",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-m10"
+      },
+      {
+        match: "11th Match",
+        teams: "Denmark vs Norway",
+        date: "Jul 12, 2026",
+        venue: "Brondby, Svanholm Park",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-m11"
+      },
+      {
+        match: "12th Match",
+        teams: "Belgium vs Romania",
+        date: "Jul 12, 2026",
+        venue: "Koge, Koge Cricket Club",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-m12"
+      },
+      {
+        match: "13th Match",
+        teams: "Hungary vs Turkey",
+        date: "Jul 12, 2026",
+        venue: "Brondby, Svanholm Park",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-m13"
+      },
+      {
+        match: "14th Match",
+        teams: "Serbia vs Gibraltar",
+        date: "Jul 12, 2026",
+        venue: "Koge, Koge Cricket Club",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-m14"
+      },
+      {
+        match: "15th Match",
+        teams: "Denmark vs Hungary",
+        date: "Jul 13, 2026",
+        venue: "Brondby, Svanholm Park",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-m15"
+      },
+      {
+        match: "16th Match",
+        teams: "Turkey vs Estonia",
+        date: "Jul 13, 2026",
+        venue: "Brondby, Svanholm Park",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-m16"
+      },
+      {
+        match: "7th Place Play-off",
+        teams: "Serbia vs Estonia",
+        date: "Jul 14, 2026",
+        venue: "Koge, Koge Cricket Club",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-7th"
+      },
+      {
+        match: "5th Place Play-off",
+        teams: "Norway vs Gibraltar",
+        date: "Jul 14, 2026",
+        venue: "Koge, Koge Cricket Club",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-5th"
+      },
+      {
+        match: "3rd Place Play-off",
+        teams: "Hungary vs Belgium",
+        date: "Jul 14, 2026",
+        venue: "Brondby, Svanholm Park",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-3rd"
+      },
+      {
+        match: "Final",
+        teams: "Denmark vs Romania",
+        date: "Jul 14, 2026",
+        venue: "Brondby, Svanholm Park",
+        details: "Match Details",
+        slug: "t20-wc-eur-qual-b-final"
       }
     ]
   },
