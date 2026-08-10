@@ -777,7 +777,7 @@ export const tennisFixtures: TennisFixture[] = [
     venue: "Cabo Sports Complex",
     city: "Los Cabos",
     country: "Mexico",
-    startDate: "2026-07-27T18:00:00-06:00",
+    startDate: "2026-07-27",
     endDate: "2026-08-01",
     status: "upcoming",
     stage: "Main Draw",
