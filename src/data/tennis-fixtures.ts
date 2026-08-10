@@ -1626,25 +1626,6 @@ export const tennisFixtures: TennisFixture[] = [
     keywords: ["rome wta 2026 odds", "paolini rome betting"]
   },
   {
-    slug: "roland-garros-2026-wta",
-    sport: "Tennis",
-    tournament: "Roland Garros (WTA)",
-    player1: "Coco Gauff",
-    player2: "TBD",
-    venue: "Stade Roland Garros",
-    city: "Paris",
-    country: "France",
-    startDate: "2026-05-18T11:00:00+02:00",
-    endDate: "2026-06-07",
-    status: "upcoming",
-    stage: "Grand Slam",
-    category: "Grand Slam",
-    surface: "Clay",
-    tour: "Combined",
-    marketHighlights: ["Match Winner", "Outright Winner"],
-    keywords: ["roland garros wta 2026 odds", "gauff paris betting"]
-  },
-  {
     slug: "libema-open-2026-wta",
     sport: "Tennis",
     tournament: "Libéma Open (WTA)",
