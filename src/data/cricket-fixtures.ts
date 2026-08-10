@@ -97,7 +97,19 @@ export const cricketFixtures: CricketSeries[] = [
         homeTeam: "Ireland",
         awayTeam: "Afghanistan",
         format: "ODI",
-        tournament: "Afghanistan tour of Ireland, 2026"
+        tournament: "Afghanistan tour of Ireland, 2026",
+        city: "Belfast",
+        country: "Northern Ireland",
+        headToHead: "In Belfast, matches have been more evenly contested between these two.",
+        homeRecentForm: "L, W, L, W, L",
+        awayRecentForm: "W, L, W, W, W",
+        keyPlayersHome: ["Mark Adair", "Andy Balbirnie", "Lorcan Tucker"],
+        keyPlayersAway: ["Gulbadin Naib", "Hashmatullah Shahidi", "Rashid Khan"],
+        bettingTips: [
+          "Belfast pitch offers more bounce; pace bowlers might thrive.",
+          "Check weather conditions; moisture can favor early swing.",
+          "Toss winner likely to bowl first under cloudy skies."
+        ]
       },
       {
         match: "4th ODI",
@@ -109,7 +121,19 @@ export const cricketFixtures: CricketSeries[] = [
         homeTeam: "Ireland",
         awayTeam: "Afghanistan",
         format: "ODI",
-        tournament: "Afghanistan tour of Ireland, 2026"
+        tournament: "Afghanistan tour of Ireland, 2026",
+        city: "Belfast",
+        country: "Northern Ireland",
+        headToHead: "Afghanistan leads the series historically by a significant margin.",
+        homeRecentForm: "L, L, W, L, L",
+        awayRecentForm: "W, W, W, L, W",
+        keyPlayersHome: ["Paul Stirling", "Joshua Little"],
+        keyPlayersAway: ["Rashid Khan", "Rahmanullah Gurbaz"],
+        bettingTips: [
+          "Spin dominates the latter half of the innings.",
+          "Expect high liquidity in the match-winner market.",
+          "Gurbaz to score 30+ runs is a high probability bet."
+        ]
       },
       {
         match: "5th ODI",
