@@ -14,10 +14,10 @@ import { AiOverview } from "@/components/ai-overview";
 export const Route = createFileRoute("/schedule")({
   head: () => ({
     meta: [
-      { title: "2026 Sports Schedule — IPL, World Cup & Major Events | Cricbet99" },
-      { name: "description", content: "Official 2026 sports calendar. IPL 2026 fixtures, FIFA World Cup, T20 World Cup, and major tennis events. View dates, venues, and live betting markets on Cricbet99." },
-      { property: "og:title", content: "2026 Sports Schedule — Cricbet99" },
-      { property: "og:description", content: "The definitive 2026 sports betting calendar. From IPL to FIFA World Cup." },
+      { title: "2026 Cricket Schedule & Live Sports Calendar | IPL & T20 World Cup 2026 | Cricbet99" },
+      { name: "description", content: "Official 2026 cricket schedule and live sports calendar. Get IPL 2026 fixtures, T20 World Cup 2026 dates, football, and tennis match details with real-time betting updates on Cricbet99." },
+      { property: "og:title", content: "2026 Cricket Schedule & Live Sports Calendar — Cricbet99" },
+      { property: "og:description", content: "Your definitive guide to the 2026 sports calendar. IPL fixtures, T20 World Cup 2026, and major tennis/football events with live betting analytics." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://cricbet99.co.in/schedule" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -26,7 +26,7 @@ export const Route = createFileRoute("/schedule")({
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/schedule", "2026 Sports Schedule")),
+        children: JSON.stringify(buildBreadcrumbJsonLd("/schedule", "2026 Cricket Schedule & Sports Calendar")),
       },
     ],
   }),
@@ -60,9 +60,9 @@ function Schedule() {
     <SiteLayout>
       <PageHero
         wide
-        eyebrow="Intelligence Hub"
-        title={<>2026 Master <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Sports Calendar.</span></>}
-        subtitle="Your essential guide to the biggest betting events of 2026. Real-time fixtures for IPL, FIFA World Cup, and International Cricket with Cricbet99 analytics."
+        eyebrow="2026 Sports Intelligence Hub"
+        title={<>2026 Cricket Schedule & <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Live Sports Calendar.</span></>}
+        subtitle="The definitive guide to the IPL 2026 fixtures, T20 World Cup 2026 schedule, and international football/tennis events. Track every live match and betting market on Cricbet99."
       />
 
       <section className="mx-auto max-w-7xl px-6 py-8 border-b border-primary/10">
@@ -312,7 +312,7 @@ function Schedule() {
       </section>
 
       <AiOverview 
-        summary={`The 2026 ${activeTab} Sports Calendar is optimized for precision betting. Our AI-driven Intelligence Hub integrates live ATP/WTA tennis metrics, FIFA World Cup scheduling, and IPL 2026 data points to provide a 360-degree view of the year's biggest markets.`}
+        summary={`The 2026 ${activeTab} Cricket Schedule and Sports Calendar is optimized for precision betting. Our AI-driven Intelligence Hub integrates live T20 World Cup 2026 scheduling, IPL fixtures, and tennis/football metrics to provide a 360-degree view of today's match and high-authority betting markets.`}
         highlights={[
           "98% Accuracy on Tournament scheduling and venue mapping",
           "Advanced AI Predictions for ATP/WTA match winners and total points",
