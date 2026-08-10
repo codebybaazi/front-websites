@@ -1740,25 +1740,6 @@ export const tennisFixtures: TennisFixture[] = [
     keywords: ["eastbourne wta 2026 odds"]
   },
   {
-    slug: "wimbledon-2026-wta",
-    sport: "Tennis",
-    tournament: "Wimbledon (WTA)",
-    player1: "Iga Swiatek",
-    player2: "TBD",
-    venue: "All England Lawn Tennis and Croquet Club",
-    city: "London",
-    country: "Great Britain",
-    startDate: "2026-06-22T11:00:00+01:00",
-    endDate: "2026-07-12",
-    status: "upcoming",
-    stage: "Grand Slam",
-    category: "Grand Slam",
-    surface: "Grass",
-    tour: "Combined",
-    marketHighlights: ["Match Winner", "Outright Winner"],
-    keywords: ["wimbledon wta 2026 odds", "swiatek wimbledon betting"]
-  },
-  {
     slug: "hamburg-open-2026-wta",
     sport: "Tennis",
     tournament: "Hamburg European Open (WTA)",
