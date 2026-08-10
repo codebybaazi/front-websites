@@ -339,7 +339,7 @@ function MatchDetailPage() {
               </div>
             </div>
 
-            {/* About the Fixture */}
+            {/* About Team A vs Team B */}
             <div className="space-y-6">
               <h2 className="text-2xl font-black uppercase tracking-widest">About {m.homeTeam} vs {m.awayTeam}</h2>
               <div className="prose prose-invert max-w-none text-foreground/70 leading-relaxed">
@@ -421,7 +421,7 @@ function MatchDetailPage() {
                   {otherMatches.map(om => (
                     <Link key={om.slug} to="/matches/$slug" params={{ slug: om.slug }} className="group p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-primary/30 transition-all flex items-center justify-between">
                       <div>
-                        <div className="text-[10px] font-black uppercase text-primary/60 mb-1">{om.startDate}</div>
+                        <div className="text-[10px] font-black uppercase text-primary/60 mb-1">{om.startDate || om.date}</div>
                         <div className="font-bold group-hover:text-primary transition-colors">{om.homeTeam} vs {om.awayTeam}</div>
                       </div>
                       <ChevronRight className="h-5 w-5 text-foreground/20 group-hover:text-primary group-hover:translate-x-1 transition-all" />
