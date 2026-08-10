@@ -145,7 +145,20 @@ export const cricketFixtures: CricketSeries[] = [
         homeTeam: "Ireland",
         awayTeam: "Afghanistan",
         format: "ODI",
-        tournament: "Afghanistan tour of Ireland, 2026"
+        tournament: "Afghanistan tour of Ireland, 2026",
+        city: "Belfast",
+        country: "Northern Ireland",
+        headToHead: "Final matches of the series often see higher scoring totals.",
+        homeRecentForm: "W, L, L, W, L",
+        awayRecentForm: "L, W, W, W, W",
+        keyPlayersHome: ["Harry Tector", "Mark Adair"],
+        keyPlayersAway: ["Fazalhaq Farooqi", "Mohammad Nabi"],
+        bettingTips: [
+          "Expect tactical changes in the final game.",
+          "Look for value in 'Player of the Match' markets.",
+          "Early wickets will be crucial for Ireland's chances."
+        ]
+      },
       }
     ]
   },
