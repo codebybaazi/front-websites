@@ -1766,5 +1766,43 @@ export const tennisFixtures: TennisFixture[] = [
     tour: "Combined",
     marketHighlights: ["Match Winner", "Tournament Winner"],
     keywords: ["madrid open wta odds", "sabalenka madrid betting"]
+  },
+  {
+    slug: "rome-masters-2026-wta",
+    sport: "Tennis",
+    tournament: "Internazionali d'Italia (WTA)",
+    player1: "Jasmine Paolini",
+    player2: "TBD",
+    venue: "Foro Italico",
+    city: "Rome",
+    country: "Italy",
+    startDate: "2026-05-04T11:00:00+02:00",
+    endDate: "2026-05-17",
+    status: "upcoming",
+    stage: "Main Draw",
+    category: "WTA 1000",
+    surface: "Clay",
+    tour: "Combined",
+    marketHighlights: ["Match Winner", "Set Handicap"],
+    keywords: ["rome wta 2026 odds", "paolini rome betting"]
+  },
+  {
+    slug: "roland-garros-2026-wta",
+    sport: "Tennis",
+    tournament: "Roland Garros (WTA)",
+    player1: "Coco Gauff",
+    player2: "TBD",
+    venue: "Stade Roland Garros",
+    city: "Paris",
+    country: "France",
+    startDate: "2026-05-18T11:00:00+02:00",
+    endDate: "2026-06-07",
+    status: "upcoming",
+    stage: "Grand Slam",
+    category: "Grand Slam",
+    surface: "Clay",
+    tour: "Combined",
+    marketHighlights: ["Match Winner", "Outright Winner"],
+    keywords: ["roland garros wta 2026 odds", "gauff paris betting"]
   }
 ];
