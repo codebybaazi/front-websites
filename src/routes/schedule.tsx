@@ -136,10 +136,10 @@ function Schedule() {
                                       <Link 
                                         to="/matches/$slug"
                                         params={{ slug: match.slug }}
-                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
-                                      >
-                                        View <ArrowRight className="w-3 h-3" />
-                                      </Link>
+                                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                        >
+                                          Match Details <ArrowRight className="w-3 h-3" />
+                                        </Link>
                                     </td>
                                   </tr>
                                 ))}
@@ -212,7 +212,7 @@ function Schedule() {
                                       params={{ slug: match.slug }}
                                       className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
                                     >
-                                      View <ArrowRight className="w-3 h-3" />
+                                      Match Details <ArrowRight className="w-3 h-3" />
                                     </Link>
                                   </div>
                                 </td>
@@ -255,7 +255,7 @@ function Schedule() {
                                       params={{ slug: match.slug }}
                                       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
                                     >
-                                      View <ArrowRight className="w-3 h-3" />
+                                      Match Details <ArrowRight className="w-3 h-3" />
                                     </Link>
                                   </td>
                                 </tr>
