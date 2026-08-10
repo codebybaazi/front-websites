@@ -1368,7 +1368,7 @@ export const tennisFixtures: TennisFixture[] = [
     venue: "BTarena",
     city: "Cluj-Napoca",
     country: "Romania",
-    startDate: "2026-02-01T13:00:00+02:00",
+    startDate: "2026-02-01",
     endDate: "2026-02-08",
     status: "upcoming",
     stage: "Main Draw",
