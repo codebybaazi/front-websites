@@ -76,22 +76,30 @@ function MatchesPage() {
               key={m.slug}
               to="/matches/$slug"
               params={{ slug: m.slug }}
-              className="group rounded-2xl border border-primary/20 bg-background/60 p-5 transition-colors hover:border-primary/60"
+              className="group relative overflow-hidden rounded-[2rem] border border-primary/20 bg-background/60 p-6 transition-all hover:border-primary/60 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(212,175,55,0.1)]"
             >
-              <div className="flex items-center justify-between text-xs font-bold uppercase tracking-widest">
+              <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                <Trophy className="w-12 h-12" />
+              </div>
+              <div className="flex items-center justify-between text-[10px] font-black uppercase tracking-[0.2em]">
                 <span className="text-primary">{m.tournament}</span>
                 {m.status === "live" && (
-                  <span className="inline-flex items-center gap-1 rounded-full bg-primary/15 px-2 py-0.5 text-[10px] text-primary">
-                    <Radio className="h-3 w-3" /> LIVE
+                  <span className="inline-flex items-center gap-1 rounded-full bg-primary/15 px-2 py-0.5 text-[8px] text-primary border border-primary/20">
+                    <Radio className="h-2.5 w-2.5 animate-pulse" /> LIVE
                   </span>
                 )}
               </div>
-              <div className="mt-3 text-lg font-bold group-hover:text-primary">
-                {m.homeTeam} vs {m.awayTeam}
+              <div className="mt-4 flex flex-col gap-1">
+                <div className="text-xl font-black group-hover:text-primary transition-colors flex items-center justify-between">
+                  {m.homeTeam} 
+                  <span className="text-[10px] font-bold text-foreground/20 px-2">VS</span>
+                  {m.awayTeam}
+                </div>
+                <div className="text-[10px] font-bold text-foreground/40 uppercase tracking-widest">{m.venue} · {m.city}</div>
               </div>
-              <div className="mt-1 text-xs text-foreground/60">{m.venue}, {m.city}</div>
-              <div className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-primary">
-                Live odds &amp; markets <ChevronRight className="h-3 w-3" />
+              <div className="mt-6 flex items-center justify-between pt-4 border-t border-white/5">
+                <span className="text-[10px] font-black text-primary uppercase tracking-widest">View Analysis</span>
+                <ChevronRight className="h-4 w-4 text-primary group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
           ))}
