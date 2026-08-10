@@ -759,16 +759,72 @@ export const cricketFixtures: CricketSeries[] = [
     ]
   },
   {
-    name: "England tour of Australia, 2026-27 (The Ashes)",
-    details: "Australia vs England - 5 Tests",
+    name: "England tour of Australia, 2026",
+    details: "3 ODIs, 5 T20Is · Nov – Dec 2026",
     matches: [
       {
-        match: "1st Test",
+        match: "1st ODI",
         teams: "Australia vs England",
-        date: "Nov 2026",
-        venue: "The Gabba, Brisbane",
-        details: "Upcoming Series",
-        slug: "aus-vs-eng-1st-test-ashes-2026"
+        date: "Thu, 12 Nov 2026",
+        venue: "Perth, Perth Stadium",
+        details: "Match Details",
+        slug: "aus-vs-eng-1st-odi-2026"
+      },
+      {
+        match: "2nd ODI",
+        teams: "Australia vs England",
+        date: "Sun, 15 Nov 2026",
+        venue: "Adelaide, Adelaide Oval",
+        details: "Match Details",
+        slug: "aus-vs-eng-2nd-odi-2026"
+      },
+      {
+        match: "3rd ODI",
+        teams: "Australia vs England",
+        date: "Wed, 18 Nov 2026",
+        venue: "Hobart, Bellerive Oval",
+        details: "Match Details",
+        slug: "aus-vs-eng-3rd-odi-2026"
+      },
+      {
+        match: "1st T20I",
+        teams: "Australia vs England",
+        date: "Sat, 21 Nov 2026",
+        venue: "Melbourne, Melbourne Cricket Ground",
+        details: "Match Details",
+        slug: "aus-vs-eng-1st-t20i-2026"
+      },
+      {
+        match: "2nd T20I",
+        teams: "Australia vs England",
+        date: "Tue, 24 Nov 2026",
+        venue: "Queensland, Carrara Oval",
+        details: "Match Details",
+        slug: "aus-vs-eng-2nd-t20i-2026"
+      },
+      {
+        match: "3rd T20I",
+        teams: "Australia vs England",
+        date: "Fri, 27 Nov 2026",
+        venue: "Brisbane, The Gabba",
+        details: "Match Details",
+        slug: "aus-vs-eng-3rd-t20i-2026"
+      },
+      {
+        match: "4th T20I",
+        teams: "Australia vs England",
+        date: "Sun, 29 Nov 2026",
+        venue: "Sydney, Sydney Cricket Ground",
+        details: "Match Details",
+        slug: "aus-vs-eng-4th-t20i-2026"
+      },
+      {
+        match: "5th T20I",
+        teams: "Australia vs England",
+        date: "Wed, 2 Dec 2026",
+        venue: "Canberra, Manuka Oval",
+        details: "Match Details",
+        slug: "aus-vs-eng-5th-t20i-2026"
       }
     ]
   },
