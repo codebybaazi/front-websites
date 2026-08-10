@@ -548,15 +548,23 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "Bangladesh tour of Australia, 2026",
-    details: "Australia vs Bangladesh - 3 ODIs, 3 T20Is",
+    details: "2 Tests · Aug 2026",
     matches: [
       {
-        match: "1st ODI",
+        match: "1st Test",
         teams: "Australia vs Bangladesh",
-        date: "Aug 2026",
-        venue: "TBC, Australia",
-        details: "Upcoming Series",
-        slug: "aus-vs-ban-1st-odi-2026"
+        date: "Thu, 13 Aug 2026",
+        venue: "Darwin, Marrara Cricket Ground",
+        details: "Match Details",
+        slug: "aus-vs-ban-1st-test-2026"
+      },
+      {
+        match: "2nd Test",
+        teams: "Australia vs Bangladesh",
+        date: "Sat, 22 Aug 2026",
+        venue: "Mackay, Great Barrier Reef Arena",
+        details: "Match Details",
+        slug: "aus-vs-ban-2nd-test-2026"
       }
     ]
   },
