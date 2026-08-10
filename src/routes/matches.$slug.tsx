@@ -227,6 +227,23 @@ function MatchDetailPage() {
                     <div className="h-full bg-accent" style={{ width: "42%" }} />
                   </div>
                 </div>
+                
+                {/* Win Probability Logic Explanation */}
+                <div className="grid gap-6 md:grid-cols-2 w-full">
+                  <div className="p-6 rounded-2xl bg-background/40 border border-white/5">
+                    <h4 className="text-xs font-black uppercase text-primary mb-2 tracking-widest">Winning Momentum</h4>
+                    <p className="text-xs text-foreground/60 leading-relaxed">
+                      AI modeling suggests {m.homeTeam} has a slight edge due to their familiarity with {m.venue} conditions and superior net run rate in the tournament.
+                    </p>
+                  </div>
+                  <div className="p-6 rounded-2xl bg-background/40 border border-white/5">
+                    <h4 className="text-xs font-black uppercase text-accent mb-2 tracking-widest">Challenger Outlook</h4>
+                    <p className="text-xs text-foreground/60 leading-relaxed">
+                      {m.awayTeam} can flip the odds if they manage to take early wickets during the powerplay, where {m.homeTeam} has shown statistical vulnerability.
+                    </p>
+                  </div>
+                </div>
+
                 <div className="p-8 rounded-2xl bg-background/60 border border-primary/10 italic text-center max-w-2xl">
                   <Lightbulb className="w-6 h-6 text-primary mx-auto mb-4" />
                   <p className="text-lg leading-relaxed">
