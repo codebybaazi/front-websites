@@ -988,15 +988,47 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "Australia tour of India, 2027",
-    details: "India vs Australia - 5 Tests (Border-Gavaskar Trophy)",
+    details: "5 Tests · Jan – Feb 2027",
     matches: [
       {
         match: "1st Test",
         teams: "India vs Australia",
-        date: "Feb 2027",
-        venue: "Wankhede Stadium, Mumbai",
-        details: "Upcoming Series",
+        date: "Thu, 21 Jan 2027",
+        venue: "Nagpur, Vidarbha Cricket Association Stadium",
+        details: "View",
         slug: "ind-vs-aus-1st-test-2027"
+      },
+      {
+        match: "2nd Test",
+        teams: "India vs Australia",
+        date: "Fri, 29 Jan 2027",
+        venue: "Chennai, MA Chidambaram Stadium",
+        details: "View",
+        slug: "ind-vs-aus-2nd-test-2027"
+      },
+      {
+        match: "3rd Test",
+        teams: "India vs Australia",
+        date: "Thu, 11 Feb 2027",
+        venue: "Guwahati, Barsapara Cricket Stadium",
+        details: "View",
+        slug: "ind-vs-aus-3rd-test-2027"
+      },
+      {
+        match: "4th Test",
+        teams: "India vs Australia",
+        date: "Fri, 19 Feb 2027",
+        venue: "Ranchi, JSCA International Stadium Complex",
+        details: "View",
+        slug: "ind-vs-aus-4th-test-2027"
+      },
+      {
+        match: "5th Test",
+        teams: "India vs Australia",
+        date: "Sat, 27 Feb 2027",
+        venue: "Ahmedabad, Narendra Modi Stadium",
+        details: "View",
+        slug: "ind-vs-aus-5th-test-2027"
       }
     ]
   },
