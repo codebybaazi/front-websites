@@ -48,15 +48,13 @@ const majorEvents = [
 function Schedule() {
   const [activeTab, setActiveTab] = useState<"Cricket" | "Football" | "Tennis">("Cricket");
   
-  const filteredEvents = activeTab === "All" 
-    ? majorEvents 
-    : majorEvents.filter(e => e.cat === activeTab);
-
+  const filteredEvents = majorEvents.filter(e => e.cat === activeTab);
+  
   const upcomingMatches = matches
-    .filter(m => m.status === 'upcoming' && (activeTab === "All" || m.sport === activeTab))
+    .filter(m => m.status === 'upcoming' && m.sport === activeTab)
     .slice(0, 10);
-
-  const tabs = ["All", "Cricket", "Football", "Tennis"] as const;
+  
+  const tabs = ["Cricket", "Football", "Tennis"] as const;
 
   return (
     <SiteLayout>
