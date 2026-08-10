@@ -1493,23 +1493,23 @@ export const tennisFixtures: TennisFixture[] = [
     keywords: ["austin tennis odds", "valentova atx betting"]
   },
   {
-    slug: "indian-wells-2026-wta",
+    slug: "indian-wells-2026",
     sport: "Tennis",
-    tournament: "BNP Paribas Open (WTA)",
-    player1: "Mirra Andreeva",
+    tournament: "BNP Paribas Open",
+    player1: "Jannik Sinner",
     player2: "TBD",
     venue: "Indian Wells Tennis Garden",
     city: "Indian Wells",
     country: "USA",
-    startDate: "2026-03-01T11:00:00-08:00",
+    startDate: "2026-03-01",
     endDate: "2026-03-15",
     status: "upcoming",
     stage: "Main Draw",
-    category: "WTA 1000",
+    category: "Masters 1000",
     surface: "Hard",
     tour: "Combined",
     marketHighlights: ["Match Winner", "Set Betting"],
-    keywords: ["indian wells wta 2026 odds", "andreeva indian wells betting"]
+    keywords: ["indian wells odds 2026", "sinner indian wells betting"]
   },
   {
     slug: "miami-open-2026-wta",
