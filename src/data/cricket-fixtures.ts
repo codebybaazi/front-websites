@@ -15,6 +15,15 @@ export interface CricketMatch {
   awayTeam?: string;
   format?: string;
   tournament?: string;
+  city?: string;
+  country?: string;
+  headToHead?: string;
+  homeRecentForm?: string;
+  awayRecentForm?: string;
+  keyPlayersHome?: string[];
+  keyPlayersAway?: string[];
+  bettingTips?: string[];
+  relatedMatches?: string[];
 }
 
 export const getCricketMatch = (slug: string) => {
@@ -34,13 +43,25 @@ export const cricketFixtures: CricketSeries[] = [
         match: "1st ODI",
         teams: "Ireland vs Afghanistan",
         date: "Wed, 5 Aug 2026",
-        venue: "Bready, Northern Ireland, Bready Cricket Club",
+        venue: "Bready Cricket Club",
         details: "Match Details",
         slug: "ire-vs-afg-1st-odi-2026",
         homeTeam: "Ireland",
         awayTeam: "Afghanistan",
         format: "ODI",
-        tournament: "Afghanistan tour of Ireland, 2026"
+        tournament: "Afghanistan tour of Ireland, 2026",
+        city: "Bready",
+        country: "Northern Ireland",
+        headToHead: "In their last 5 ODIs, Afghanistan leads 4-1 against Ireland.",
+        homeRecentForm: "L, W, L, L, L",
+        awayRecentForm: "W, W, L, W, W",
+        keyPlayersHome: ["Paul Stirling", "Joshua Little", "Harry Tector"],
+        keyPlayersAway: ["Rashid Khan", "Rahmanullah Gurbaz", "Fazalhaq Farooqi"],
+        bettingTips: [
+          "Afghanistan's spin duo expected to dominate the middle overs.",
+          "High probability of a high-scoring match if Ireland bats first.",
+          "Rashid Khan to take 2+ wickets looks like a value bet."
+        ]
       },
       {
         match: "2nd ODI",
@@ -100,13 +121,25 @@ export const cricketFixtures: CricketSeries[] = [
         match: "1st T20I",
         teams: "Zimbabwe vs India",
         date: "Jul 23, 2026",
-        venue: "Harare, Harare Sports Club",
+        venue: "Harare Sports Club",
         details: "Match Details",
         slug: "zim-vs-ind-1st-t20i-2026",
         homeTeam: "Zimbabwe",
         awayTeam: "India",
         format: "T20I",
-        tournament: "India tour of Zimbabwe, 2026"
+        tournament: "India tour of Zimbabwe, 2026",
+        city: "Harare",
+        country: "Zimbabwe",
+        headToHead: "India has won all previous 5 T20Is against Zimbabwe.",
+        homeRecentForm: "L, L, W, L, L",
+        awayRecentForm: "W, W, W, W, W",
+        keyPlayersHome: ["Sikandar Raza", "Blessing Muzarabani", "Ryan Burl"],
+        keyPlayersAway: ["Shubman Gill", "Yashasvi Jaiswal", "Arshdeep Singh"],
+        bettingTips: [
+          "India is strong favorites; look for player performance markets.",
+          "Sikandar Raza to be the top run-scorer for Zimbabwe.",
+          "High probability of 180+ score if India bats first."
+        ]
       },
       {
         match: "2nd T20I",
@@ -184,9 +217,25 @@ export const cricketFixtures: CricketSeries[] = [
         match: "Only Test",
         teams: "Bangladesh vs Zimbabwe",
         date: "Jun 28, 2026",
-        venue: "Harare, Harare Sports Club",
+        venue: "Harare Sports Club",
         details: "Match Details",
-        slug: "zim-vs-ban-test-2026"
+        slug: "zim-vs-ban-test-2026",
+        homeTeam: "Zimbabwe",
+        awayTeam: "Bangladesh",
+        format: "Test",
+        tournament: "Bangladesh tour of Zimbabwe, 2026",
+        city: "Harare",
+        country: "Zimbabwe",
+        headToHead: "In recent Tests, Bangladesh has a slight advantage over Zimbabwe.",
+        homeRecentForm: "L, D, L, W, L",
+        awayRecentForm: "W, L, D, W, L",
+        keyPlayersHome: ["Craig Ervine", "Sean Williams"],
+        keyPlayersAway: ["Shakib Al Hasan", "Litton Das"],
+        bettingTips: [
+          "Expect a slow pitch favoring spinners from Day 3.",
+          "Draw is a high-probability outcome if weather intervenes.",
+          "Shakib Al Hasan to be the leading wicket-taker."
+        ]
       },
       {
         match: "1st ODI",
