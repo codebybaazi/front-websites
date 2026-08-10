@@ -121,13 +121,25 @@ export const cricketFixtures: CricketSeries[] = [
         match: "1st T20I",
         teams: "Zimbabwe vs India",
         date: "Jul 23, 2026",
-        venue: "Harare, Harare Sports Club",
+        venue: "Harare Sports Club",
         details: "Match Details",
         slug: "zim-vs-ind-1st-t20i-2026",
         homeTeam: "Zimbabwe",
         awayTeam: "India",
         format: "T20I",
-        tournament: "India tour of Zimbabwe, 2026"
+        tournament: "India tour of Zimbabwe, 2026",
+        city: "Harare",
+        country: "Zimbabwe",
+        headToHead: "India has won all previous 5 T20Is against Zimbabwe.",
+        homeRecentForm: "L, L, W, L, L",
+        awayRecentForm: "W, W, W, W, W",
+        keyPlayersHome: ["Sikandar Raza", "Blessing Muzarabani", "Ryan Burl"],
+        keyPlayersAway: ["Shubman Gill", "Yashasvi Jaiswal", "Arshdeep Singh"],
+        bettingTips: [
+          "India is strong favorites; look for player performance markets.",
+          "Sikandar Raza to be the top run-scorer for Zimbabwe.",
+          "High probability of 180+ score if India bats first."
+        ]
       },
       {
         match: "2nd T20I",
