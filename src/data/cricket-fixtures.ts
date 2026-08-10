@@ -534,15 +534,23 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "India tour of Sri Lanka, 2026",
-    details: "Sri Lanka vs India - 3 ODIs, 3 T20Is",
+    details: "2 Tests · Aug 2026",
     matches: [
       {
-        match: "1st T20I",
+        match: "1st Test",
         teams: "Sri Lanka vs India",
-        date: "Jul 2026",
-        venue: "R.Premadasa Stadium, Colombo",
-        details: "Upcoming Series",
-        slug: "sl-vs-ind-1st-t20i-2026"
+        date: "Sat, 15 Aug 2026",
+        venue: "Galle, Galle International Stadium",
+        details: "Match Details",
+        slug: "sl-vs-ind-1st-test-2026"
+      },
+      {
+        match: "2nd Test",
+        teams: "Sri Lanka vs India",
+        date: "Sun, 23 Aug 2026",
+        venue: "Colombo, Sinhalese Sports Club",
+        details: "Match Details",
+        slug: "sl-vs-ind-2nd-test-2026"
       }
     ]
   },
