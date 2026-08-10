@@ -158,7 +158,6 @@ export const cricketFixtures: CricketSeries[] = [
           "Look for value in 'Player of the Match' markets.",
           "Early wickets will be crucial for Ireland's chances."
         ]
-      },
       }
     ]
   },
