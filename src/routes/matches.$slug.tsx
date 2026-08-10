@@ -127,13 +127,8 @@ function MatchDetailPage() {
                 <h2 className="text-3xl font-black tracking-tight">Intelligence Hub</h2>
               </div>
               <AiOverview 
-                summary={`Our proprietary AI engine has synthesized data from over 5,000 ${m.sport} fixtures to analyze this ${m.tournament} encounter. The historical trends at ${m.venue} suggest a highly competitive match with significant market liquidity.`}
-                highlights={[
-                  `${m.homeTeam} has a ${m.sport === 'Cricket' ? '65% win rate when defending' : 'stable home record'} at this venue.`,
-                  "Market sentiment indicates high-volume trading on session brackets.",
-                  "Key player matchups favor the bowling/defensive unit in the first half.",
-                  "Official Cricbet99 ID holders get access to exclusive live signals."
-                ]}
+                summary={aiAnalysis.summary}
+                highlights={aiAnalysis.highlights}
               />
             </div>
 
@@ -144,10 +139,7 @@ function MatchDetailPage() {
               </h2>
               <div className="prose prose-invert max-w-none text-foreground/80 leading-relaxed space-y-4">
                 <p>
-                  As {m.homeTeam} prepares to host {m.awayTeam} at {m.venue}, the analytical spotlight falls on the consistent performance of the top order. Our AI models indicate that the initial 15 minutes of play will set the tone for the entire match.
-                </p>
-                <p>
-                  Statistical probability favors a high-scoring encounter if {m.homeTeam} bats first. Conversely, if {m.awayTeam} can exploit the early moisture or conditions, we might see a low-scoring thriller. Savvy bettors should look for 'Fancy' markets that open after the first few overs/minutes.
+                  {aiAnalysis.detailedAnalysis}
                 </p>
               </div>
             </div>
