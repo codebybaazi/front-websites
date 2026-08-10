@@ -17,11 +17,59 @@ export const cricketFixtures: CricketSeries[] = [
     details: "Ireland vs Afghanistan - 1 Test, 3 ODIs, 3 T20Is",
     matches: [
       {
+        match: "1st T20I",
+        teams: "Ireland vs Afghanistan",
+        date: "Aug 20, 2026",
+        venue: "Stormont, Belfast",
+        details: "Match Details",
+        slug: "ire-vs-afg-1st-t20i-2026"
+      },
+      {
+        match: "2nd T20I",
+        teams: "Ireland vs Afghanistan",
+        date: "Aug 22, 2026",
+        venue: "Stormont, Belfast",
+        details: "Match Details",
+        slug: "ire-vs-afg-2nd-t20i-2026"
+      },
+      {
+        match: "3rd T20I",
+        teams: "Ireland vs Afghanistan",
+        date: "Aug 24, 2026",
+        venue: "Stormont, Belfast",
+        details: "Match Details",
+        slug: "ire-vs-afg-3rd-t20i-2026"
+      },
+      {
+        match: "1st ODI",
+        teams: "Ireland vs Afghanistan",
+        date: "Aug 27, 2026",
+        venue: "Stormont, Belfast",
+        details: "Match Details",
+        slug: "ire-vs-afg-1st-odi-2026"
+      },
+      {
+        match: "2nd ODI",
+        teams: "Ireland vs Afghanistan",
+        date: "Aug 29, 2026",
+        venue: "Stormont, Belfast",
+        details: "Match Details",
+        slug: "ire-vs-afg-2nd-odi-2026"
+      },
+      {
+        match: "3rd ODI",
+        teams: "Ireland vs Afghanistan",
+        date: "Aug 31, 2026",
+        venue: "Stormont, Belfast",
+        details: "Match Details",
+        slug: "ire-vs-afg-3rd-odi-2026"
+      },
+      {
         match: "Only Test",
         teams: "Ireland vs Afghanistan",
-        date: "Apr 2026",
+        date: "Sep 04-08, 2026",
         venue: "Stormont, Belfast",
-        details: "Upcoming Series",
+        details: "Match Details",
         slug: "ire-vs-afg-test-2026"
       }
     ]
