@@ -112,7 +112,6 @@ export const cricketFixtures: CricketSeries[] = [
         projectedScoreAway: "270-290"
       },
       {
-      {
         match: "3rd ODI",
         teams: "Ireland vs Afghanistan",
         date: "Mon, 10 Aug 2026",
