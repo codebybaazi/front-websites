@@ -102,7 +102,11 @@ export const cricketFixtures: CricketSeries[] = [
         date: "Jul 23, 2026",
         venue: "Harare, Harare Sports Club",
         details: "Match Details",
-        slug: "zim-vs-ind-1st-t20i-2026"
+        slug: "zim-vs-ind-1st-t20i-2026",
+        homeTeam: "Zimbabwe",
+        awayTeam: "India",
+        format: "T20I",
+        tournament: "India tour of Zimbabwe, 2026"
       },
       {
         match: "2nd T20I",
@@ -110,7 +114,11 @@ export const cricketFixtures: CricketSeries[] = [
         date: "Jul 25, 2026",
         venue: "Harare, Harare Sports Club",
         details: "Match Details",
-        slug: "zim-vs-ind-2nd-t20i-2026"
+        slug: "zim-vs-ind-2nd-t20i-2026",
+        homeTeam: "Zimbabwe",
+        awayTeam: "India",
+        format: "T20I",
+        tournament: "India tour of Zimbabwe, 2026"
       },
       {
         match: "3rd T20I",
@@ -118,7 +126,11 @@ export const cricketFixtures: CricketSeries[] = [
         date: "Jul 26, 2026",
         venue: "Harare, Harare Sports Club",
         details: "Match Details",
-        slug: "zim-vs-ind-3rd-t20i-2026"
+        slug: "zim-vs-ind-3rd-t20i-2026",
+        homeTeam: "Zimbabwe",
+        awayTeam: "India",
+        format: "T20I",
+        tournament: "India tour of Zimbabwe, 2026"
       }
     ]
   },
@@ -132,7 +144,11 @@ export const cricketFixtures: CricketSeries[] = [
         date: "Jul 18, 2026",
         venue: "Tarouba, Trinidad, Brian Lara Stadium",
         details: "Match Details",
-        slug: "wi-vs-pak-warmup-2026"
+        slug: "wi-vs-pak-warmup-2026",
+        homeTeam: "West Indies Select XI",
+        awayTeam: "Pakistan",
+        format: "Warm-up",
+        tournament: "Pakistan tour of West Indies, 2026"
       },
       {
         match: "1st Test",
@@ -140,7 +156,11 @@ export const cricketFixtures: CricketSeries[] = [
         date: "Jul 25-29, 2026",
         venue: "Tarouba, Trinidad, Brian Lara Stadium",
         details: "Match Details",
-        slug: "wi-vs-pak-1st-test-2026"
+        slug: "wi-vs-pak-1st-test-2026",
+        homeTeam: "West Indies",
+        awayTeam: "Pakistan",
+        format: "Test",
+        tournament: "Pakistan tour of West Indies, 2026"
       },
       {
         match: "2nd Test",
@@ -148,7 +168,11 @@ export const cricketFixtures: CricketSeries[] = [
         date: "Aug 02-06, 2026",
         venue: "Port of Spain, Trinidad, Queen's Park Oval",
         details: "Match Details",
-        slug: "wi-vs-pak-2nd-test-2026"
+        slug: "wi-vs-pak-2nd-test-2026",
+        homeTeam: "West Indies",
+        awayTeam: "Pakistan",
+        format: "Test",
+        tournament: "Pakistan tour of West Indies, 2026"
       }
     ]
   },
@@ -1030,7 +1054,11 @@ export const cricketFixtures: CricketSeries[] = [
         date: "Thu, 21 Jan 2027",
         venue: "Nagpur, Vidarbha Cricket Association Stadium",
         details: "View",
-        slug: "ind-vs-aus-1st-test-2027"
+        slug: "ind-vs-aus-1st-test-2027",
+        homeTeam: "India",
+        awayTeam: "Australia",
+        format: "Test",
+        tournament: "Australia tour of India, 2027"
       },
       {
         match: "2nd Test",
