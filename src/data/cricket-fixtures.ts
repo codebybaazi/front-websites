@@ -506,15 +506,31 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "Australia tour of Zimbabwe, 2026",
-    details: "Zimbabwe vs Australia - 3 ODIs",
+    details: "3 ODIs · Sep 2026",
     matches: [
       {
         match: "1st ODI",
         teams: "Zimbabwe vs Australia",
-        date: "Oct 2026",
-        venue: "Harare Sports Club, Harare",
-        details: "Upcoming Series",
+        date: "Tue, 15 Sep 2026",
+        venue: "Harare, Harare Sports Club",
+        details: "Match Details",
         slug: "zim-vs-aus-1st-odi-2026"
+      },
+      {
+        match: "2nd ODI",
+        teams: "Zimbabwe vs Australia",
+        date: "Fri, 18 Sep 2026",
+        venue: "Harare, Harare Sports Club",
+        details: "Match Details",
+        slug: "zim-vs-aus-2nd-odi-2026"
+      },
+      {
+        match: "3rd ODI",
+        teams: "Zimbabwe vs Australia",
+        date: "Sun, 20 Sep 2026",
+        venue: "Harare, Harare Sports Club",
+        details: "Match Details",
+        slug: "zim-vs-aus-3rd-odi-2026"
       }
     ]
   },
