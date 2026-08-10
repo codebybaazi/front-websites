@@ -1016,15 +1016,71 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "Sri Lanka tour of New Zealand, 2027",
-    details: "New Zealand vs Sri Lanka - 2 Tests, 3 ODIs, 3 T20Is",
+    details: "3 ODIs, 3 T20Is, 2 Tests · Jan – Feb 2027",
     matches: [
+      {
+        match: "1st ODI",
+        teams: "New Zealand vs Sri Lanka",
+        date: "Sat, 16 Jan 2027",
+        venue: "Napier, McLean Park",
+        details: "Match Details",
+        slug: "nz-vs-sl-1st-odi-2027"
+      },
+      {
+        match: "2nd ODI",
+        teams: "New Zealand vs Sri Lanka",
+        date: "Tue, 19 Jan 2027",
+        venue: "Wellington, Sky Stadium",
+        details: "Match Details",
+        slug: "nz-vs-sl-2nd-odi-2027"
+      },
+      {
+        match: "3rd ODI",
+        teams: "New Zealand vs Sri Lanka",
+        date: "Fri, 22 Jan 2027",
+        venue: "Dunedin, University Oval",
+        details: "Match Details",
+        slug: "nz-vs-sl-3rd-odi-2027"
+      },
+      {
+        match: "1st T20I",
+        teams: "New Zealand vs Sri Lanka",
+        date: "Tue, 26 Jan 2027",
+        venue: "Christchurch, Hagley Oval",
+        details: "Match Details",
+        slug: "nz-vs-sl-1st-t20i-2027"
+      },
+      {
+        match: "2nd T20I",
+        teams: "New Zealand vs Sri Lanka",
+        date: "Fri, 29 Jan 2027",
+        venue: "Nelson, Saxton Oval",
+        details: "Match Details",
+        slug: "nz-vs-sl-2nd-t20i-2027"
+      },
+      {
+        match: "3rd T20I",
+        teams: "New Zealand vs Sri Lanka",
+        date: "Sun, 31 Jan 2027",
+        venue: "Nelson, Saxton Oval",
+        details: "Match Details",
+        slug: "nz-vs-sl-3rd-t20i-2027"
+      },
       {
         match: "1st Test",
         teams: "New Zealand vs Sri Lanka",
-        date: "Mar 2027",
-        venue: "Hagley Oval, Christchurch",
-        details: "Upcoming Series",
+        date: "Thu, 4 Feb 2027",
+        venue: "Mount Maunganui, Bay Oval",
+        details: "Match Details",
         slug: "nz-vs-sl-1st-test-2027"
+      },
+      {
+        match: "2nd Test",
+        teams: "New Zealand vs Sri Lanka",
+        date: "Fri, 12 Feb 2027",
+        venue: "Hamilton, Seddon Park",
+        details: "Match Details",
+        slug: "nz-vs-sl-2nd-test-2027"
       }
     ]
   },
