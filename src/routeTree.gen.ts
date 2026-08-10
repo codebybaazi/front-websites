@@ -90,8 +90,8 @@ import { Route as AllLinksRouteImport } from './routes/all-links'
 import { Route as AccountBlockedRouteImport } from './routes/account-blocked'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as MatchesIndexRouteImport } from './routes/matches/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
-import { Route as MatchesLayoutRouteImport } from './routes/matches.layout'
 import { Route as MatchesSlugRouteImport } from './routes/matches/$slug'
 import { Route as CaseStudiesTossMarket10MinuteProfitRouteImport } from './routes/case-studies.toss-market-10-minute-profit'
 import { Route as CaseStudiesSmallBudgetBettingStrategyRouteImport } from './routes/case-studies.small-budget-betting-strategy'
@@ -513,14 +513,14 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MatchesIndexRoute = MatchesIndexRouteImport.update({
+  id: '/matches/',
+  path: '/matches/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MatchesLayoutRoute = MatchesLayoutRouteImport.update({
-  id: '/matches/layout',
-  path: '/matches/layout',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MatchesSlugRoute = MatchesSlugRouteImport.update({
@@ -688,8 +688,8 @@ export interface FileRoutesByFullPath {
   '/case-studies/small-budget-betting-strategy': typeof CaseStudiesSmallBudgetBettingStrategyRoute
   '/case-studies/toss-market-10-minute-profit': typeof CaseStudiesTossMarket10MinuteProfitRoute
   '/matches/$slug': typeof MatchesSlugRoute
-  '/matches/layout': typeof MatchesLayoutRoute
   '/blog/': typeof BlogIndexRoute
+  '/matches/': typeof MatchesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -785,8 +785,8 @@ export interface FileRoutesByTo {
   '/case-studies/small-budget-betting-strategy': typeof CaseStudiesSmallBudgetBettingStrategyRoute
   '/case-studies/toss-market-10-minute-profit': typeof CaseStudiesTossMarket10MinuteProfitRoute
   '/matches/$slug': typeof MatchesSlugRoute
-  '/matches/layout': typeof MatchesLayoutRoute
   '/blog': typeof BlogIndexRoute
+  '/matches': typeof MatchesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -883,8 +883,8 @@ export interface FileRoutesById {
   '/case-studies/small-budget-betting-strategy': typeof CaseStudiesSmallBudgetBettingStrategyRoute
   '/case-studies/toss-market-10-minute-profit': typeof CaseStudiesTossMarket10MinuteProfitRoute
   '/matches/$slug': typeof MatchesSlugRoute
-  '/matches/layout': typeof MatchesLayoutRoute
   '/blog/': typeof BlogIndexRoute
+  '/matches/': typeof MatchesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -982,8 +982,8 @@ export interface FileRouteTypes {
     | '/case-studies/small-budget-betting-strategy'
     | '/case-studies/toss-market-10-minute-profit'
     | '/matches/$slug'
-    | '/matches/layout'
     | '/blog/'
+    | '/matches/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -1079,8 +1079,8 @@ export interface FileRouteTypes {
     | '/case-studies/small-budget-betting-strategy'
     | '/case-studies/toss-market-10-minute-profit'
     | '/matches/$slug'
-    | '/matches/layout'
     | '/blog'
+    | '/matches'
   id:
     | '__root__'
     | '/'
@@ -1176,8 +1176,8 @@ export interface FileRouteTypes {
     | '/case-studies/small-budget-betting-strategy'
     | '/case-studies/toss-market-10-minute-profit'
     | '/matches/$slug'
-    | '/matches/layout'
     | '/blog/'
+    | '/matches/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -1264,8 +1264,8 @@ export interface RootRouteChildren {
   Wpl2026BettingRoute: typeof Wpl2026BettingRoute
   BlogSlugRoute: typeof BlogSlugRoute
   MatchesSlugRoute: typeof MatchesSlugRoute
-  MatchesLayoutRoute: typeof MatchesLayoutRoute
   BlogIndexRoute: typeof BlogIndexRoute
+  MatchesIndexRoute: typeof MatchesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -1837,18 +1837,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/matches/': {
+      id: '/matches/'
+      path: '/matches'
+      fullPath: '/matches/'
+      preLoaderRoute: typeof MatchesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/': {
       id: '/blog/'
       path: '/blog'
       fullPath: '/blog/'
       preLoaderRoute: typeof BlogIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/matches/layout': {
-      id: '/matches/layout'
-      path: '/matches/layout'
-      fullPath: '/matches/layout'
-      preLoaderRoute: typeof MatchesLayoutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/matches/$slug': {
@@ -2069,8 +2069,8 @@ const rootRouteChildren: RootRouteChildren = {
   Wpl2026BettingRoute: Wpl2026BettingRoute,
   BlogSlugRoute: BlogSlugRoute,
   MatchesSlugRoute: MatchesSlugRoute,
-  MatchesLayoutRoute: MatchesLayoutRoute,
   BlogIndexRoute: BlogIndexRoute,
+  MatchesIndexRoute: MatchesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
