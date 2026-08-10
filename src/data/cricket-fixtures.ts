@@ -43,13 +43,25 @@ export const cricketFixtures: CricketSeries[] = [
         match: "1st ODI",
         teams: "Ireland vs Afghanistan",
         date: "Wed, 5 Aug 2026",
-        venue: "Bready, Northern Ireland, Bready Cricket Club",
+        venue: "Bready Cricket Club",
         details: "Match Details",
         slug: "ire-vs-afg-1st-odi-2026",
         homeTeam: "Ireland",
         awayTeam: "Afghanistan",
         format: "ODI",
-        tournament: "Afghanistan tour of Ireland, 2026"
+        tournament: "Afghanistan tour of Ireland, 2026",
+        city: "Bready",
+        country: "Northern Ireland",
+        headToHead: "In their last 5 ODIs, Afghanistan leads 4-1 against Ireland.",
+        homeRecentForm: "L, W, L, L, L",
+        awayRecentForm: "W, W, L, W, W",
+        keyPlayersHome: ["Paul Stirling", "Joshua Little", "Harry Tector"],
+        keyPlayersAway: ["Rashid Khan", "Rahmanullah Gurbaz", "Fazalhaq Farooqi"],
+        bettingTips: [
+          "Afghanistan's spin duo expected to dominate the middle overs.",
+          "High probability of a high-scoring match if Ireland bats first.",
+          "Rashid Khan to take 2+ wickets looks like a value bet."
+        ]
       },
       {
         match: "2nd ODI",
