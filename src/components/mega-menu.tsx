@@ -422,6 +422,13 @@ export function MegaMenuHeader() {
               const isOpen = open === m.key;
               return <MenuItem key={m.key} m={m} isOpen={isOpen} setOpen={setOpen} />;
             })}
+            <Link
+              to="/schedule"
+              className="rounded-full px-3 py-1.5 text-[13px] font-bold text-foreground/85 transition-all hover:bg-primary/10 hover:text-primary"
+              activeProps={{ className: "!text-accent bg-primary/10 shadow-[inset_0_0_0_1px_rgba(180,140,40,0.2)]" }}
+            >
+              Schedule
+            </Link>
           </nav>
 
           <div className="ml-auto flex items-center gap-2 sm:gap-3">
