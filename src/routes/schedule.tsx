@@ -94,7 +94,7 @@ function Schedule() {
                   <Trophy className="w-5 h-5 text-primary" />
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight">
-                  {activeTab === "All" ? "Major 2026 Championships" : `${activeTab} Fixtures 2026`}
+                  {`${activeTab} Fixtures 2026`}
                 </h2>
               </div>
               
