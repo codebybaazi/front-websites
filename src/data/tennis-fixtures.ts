@@ -44,14 +44,7 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "ATP",
     marketHighlights: ["Match Winner", "Set Betting"],
-    keywords: ["brisbane international 2026 odds", "medvedev brisbane betting", "tennis betting india", "atp brisbane prediction"],
-    prediction: {
-      winner: "Daniil Medvedev",
-      score: "2-0",
-      points: "Over 20.5 Games",
-      confidence: 85,
-      analysis: "Medvedev's hard-court dominance and previous success in Australia make him the clear favorite for the season opener."
-    }
+    keywords: ["brisbane international 2026 odds", "medvedev brisbane betting", "tennis betting india", "atp brisbane prediction"]
   },
   {
     slug: "asb-classic-2026",
@@ -108,14 +101,7 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "ATP",
     marketHighlights: ["Match Winner", "Correct Score"],
-    keywords: ["adelaide international 2026 betting", "machac adelaide odds", "tennis betting strategy", "atp adelaide picks"],
-    prediction: {
-      winner: "Tomas Machac",
-      score: "2-1",
-      points: "Over 22.5 Games",
-      confidence: 70,
-      analysis: "Machac's recent form suggests a strong start, though a tight three-setter is expected given the early-season conditions."
-    }
+    keywords: ["adelaide international 2026 betting", "machac adelaide odds", "tennis betting strategy", "atp adelaide picks"]
   },
   {
     slug: "australian-open-2026",
@@ -134,14 +120,7 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "Combined",
     marketHighlights: ["Outright Winner", "Match Odds", "Quarter Winner"],
-    keywords: ["australian open 2026 odds", "alcaraz melbourne betting", "grand slam betting india", "australian open predictions 2026"],
-    prediction: {
-      winner: "Carlos Alcaraz",
-      score: "3-1",
-      points: "Over 38.5 Games",
-      confidence: 80,
-      analysis: "Alcaraz enters as a heavy favorite. His aggressive baseline play is perfectly suited for the Melbourne plexicushion courts."
-    }
+    keywords: ["australian open 2026 odds", "alcaraz melbourne betting", "grand slam betting india", "australian open predictions 2026"]
   },
   {
     slug: "open-occitanie-2026",
@@ -350,14 +329,7 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "Combined",
     marketHighlights: ["Match Winner", "Set Handicap"],
-    keywords: ["indian wells 2026 odds", "sinner indian wells betting", "tennis betting apps india", "atp masters 1000 picks"],
-    prediction: {
-      winner: "Jannik Sinner",
-      score: "2-0",
-      points: "Under 21.5 Games",
-      confidence: 90,
-      analysis: "The 'Sunshine Double' starts with Sinner in peak physical condition. His high-altitude training provides a distinct stamina advantage."
-    }
+    keywords: ["indian wells 2026 odds", "sinner indian wells betting", "tennis betting apps india", "atp masters 1000 picks"]
   },
   {
     slug: "miami-open-2026",
@@ -585,14 +557,7 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Clay",
     tour: "Combined",
     marketHighlights: ["Match Winner", "Total Games"],
-    keywords: ["roland garros 2026 odds", "zverev paris betting", "clay court betting india", "french open predictions"],
-    prediction: {
-      winner: "Alexander Zverev",
-      score: "3-1",
-      points: "Over 34.5 Games",
-      confidence: 78,
-      analysis: "Zverev's height and slide technique on clay give him a massive advantage in five-set battles at Roland Garros."
-    }
+    keywords: ["roland garros 2026 odds", "zverev paris betting", "clay court betting india", "french open predictions"]
   },
   {
     slug: "boss-open-2026",
@@ -858,14 +823,7 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Grass",
     tour: "Combined",
     marketHighlights: ["Match Winner"],
-    keywords: ["wimbledon 2026 betting odds", "wimbledon tennis picks", "grass court betting strategy"],
-    prediction: {
-      winner: "Jannik Sinner",
-      score: "3-1",
-      points: "Over 36.5 Games",
-      confidence: 75,
-      analysis: "Sinner's improved serve-and-volley game makes him the man to beat on grass this year, though tie-breakers are likely."
-    }
+    keywords: ["wimbledon 2026 betting odds", "wimbledon tennis picks", "grass court betting strategy"]
   },
   {
     slug: "national-bank-open-2026",
@@ -941,14 +899,7 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "Combined",
     marketHighlights: ["Match Winner"],
-    keywords: ["us open 2026 tennis odds", "alcaraz us open betting", "hard court betting india"],
-    prediction: {
-      winner: "Carlos Alcaraz",
-      score: "3-0",
-      points: "Under 32.5 Games",
-      confidence: 88,
-      analysis: "The defending champion's explosive style thrives in the New York humidity. Alcaraz is primed for a dominant title defense."
-    }
+    keywords: ["us open 2026 tennis odds", "alcaraz us open betting", "hard court betting india"]
   },
   {
     slug: "chengdu-open-2026",
@@ -1195,14 +1146,7 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Indoor Hard",
     tour: "ATP",
     marketHighlights: ["Match Winner", "Set Handicap"],
-    keywords: ["next gen atp finals 2026 betting", "jeddah tennis odds", "learner tien prediction"],
-    prediction: {
-      winner: "Learner Tien",
-      score: "3-1",
-      points: "Over 18.5 Games",
-      confidence: 75,
-      analysis: "Tien's rapid rise and adaptability to the unique Next Gen scoring format make him the prime candidate to defend his title in Jeddah."
-    }
+    keywords: ["next gen atp finals 2026 betting", "jeddah tennis odds", "learner tien prediction"]
   },
   {
     slug: "stockholm-open-2026",
@@ -1221,16 +1165,8 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Indoor Hard",
     tour: "ATP",
     marketHighlights: ["Match Winner", "Total Games"],
-    keywords: ["stockholm open 2026 odds", "casper ruud stockholm betting", "tennis predictions indoor hard"],
-    prediction: {
-      winner: "Casper Ruud",
-      score: "2-0",
-      points: "Over 21.5 Games",
-      confidence: 78,
-      analysis: "Ruud's consistency in late-season indoor events makes him a strong favorite in Stockholm, where he traditionally performs well."
-    }
+    keywords: ["stockholm open 2026 odds", "casper ruud stockholm betting", "tennis predictions indoor hard"]
   },
-
   // --- WTA 2026 ---
   {
     slug: "adelaide-wta-2026",
@@ -1325,14 +1261,7 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Clay",
     tour: "Combined",
     marketHighlights: ["Match Winner"],
-    keywords: ["french open wta 2026 odds", "wta clay court betting", "coco gauff paris predictions"],
-    prediction: {
-      winner: "Coco Gauff",
-      score: "2-0",
-      points: "Under 19.5 Games",
-      confidence: 82,
-      analysis: "Gauff's coverage on clay is unmatched. She's expected to dominate the early rounds with her defensive prowess."
-    }
+    keywords: ["french open wta 2026 odds", "wta clay court betting", "coco gauff paris predictions"]
   },
   {
     slug: "wimbledon-wta-2026",
@@ -1409,14 +1338,7 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "WTA",
     marketHighlights: ["Match Winner", "Total Games"],
-    keywords: ["auckland open wta 2026 betting", "clara tauson auckland odds", "wta betting india"],
-    prediction: {
-      winner: "Clara Tauson",
-      score: "2-0",
-      points: "Under 21.5 Games",
-      confidence: 75,
-      analysis: "Tauson's powerful serve and flat groundstrokes are well-suited for the Auckland hard courts."
-    }
+    keywords: ["auckland open wta 2026 betting", "clara tauson auckland odds", "wta betting india"]
   },
   {
     slug: "adelaide-international-2026-wta",
@@ -1435,14 +1357,7 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "WTA",
     marketHighlights: ["Match Winner", "Set Betting"],
-    keywords: ["adelaide international wta odds", "madison keys betting"],
-    prediction: {
-      winner: "Madison Keys",
-      score: "2-1",
-      points: "Over 22.5 Games",
-      confidence: 70,
-      analysis: "Keys usually performs well in Australia. Expect a competitive match against top-tier opposition in this WTA 500 event."
-    }
+    keywords: ["adelaide international wta odds", "madison keys betting"]
   },
   {
     slug: "hobart-international-2026-wta",
