@@ -264,23 +264,6 @@ function Schedule() {
               </div>
             </div>
 
-            {/* Betting Analysis Section */}
-            <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/5 to-transparent p-8 md:p-12">
-              <h2 className="text-2xl font-bold mb-4">Strategic Betting Insights</h2>
-              <p className="text-foreground/70 leading-relaxed mb-8">
-                The 2026 season represents a unique convergence of major tournaments. With the IPL shifting to a longer window and the FIFA World Cup expanding to 48 teams, market volatility will be at an all-time high. Our analysts recommend focusing on <span className="text-primary font-semibold">Toss-based outcomes in Ahmedabad</span> and <span className="text-primary font-semibold">BTTS (Both Teams To Score) markets in Mexico City</span> during the opening week.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="p-4 rounded-xl border border-primary/10 bg-background/20">
-                  <div className="font-bold text-primary mb-1">IPL 2026 Focus</div>
-                  <div className="text-sm text-foreground/60">Expect higher par scores as boundaries are standardized across venues.</div>
-                </div>
-                <div className="p-4 rounded-xl border border-primary/10 bg-background/20">
-                  <div className="font-bold text-primary mb-1">World Cup Logistics</div>
-                  <div className="text-sm text-foreground/60">Altitude in Mexico City will impact long-range shooting and player fatigue.</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
