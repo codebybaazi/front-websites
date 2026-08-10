@@ -322,11 +322,11 @@ function MatchDetailPage() {
                      <Target className="h-5 w-5 text-accent" />
                      <span className="font-bold">Projected Totals</span>
                    </div>
-                   <div className="p-8 rounded-2xl bg-accent/5 border border-accent/10 flex flex-col items-center justify-center text-center">
-                     <span className="text-xs font-black uppercase text-accent mb-2">Estimated 1st Innings Score</span>
-                     <span className="text-5xl font-black text-white">175 - 190</span>
-                     <p className="mt-4 text-xs text-foreground/50 italic">Based on pitch behavior at {m.venue} and {m.homeTeam}'s recent strike rates.</p>
-                   </div>
+                    <div className="p-8 rounded-2xl bg-accent/5 border border-accent/10 flex flex-col items-center justify-center text-center">
+                      <span className="text-xs font-black uppercase text-accent mb-2">Estimated 1st Innings Score</span>
+                      <span className="text-5xl font-black text-white">{m.projectedScoreHome || "175 - 190"}</span>
+                      <p className="mt-4 text-xs text-foreground/50 italic">Based on pitch behavior at {m.venue} and {m.homeTeam}'s recent strike rates.</p>
+                    </div>
                    <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
                      <h4 className="text-sm font-black mb-2 flex items-center gap-2">
                        <Globe className="h-4 w-4 text-primary" /> Market Sentiment
