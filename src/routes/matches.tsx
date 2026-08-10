@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { matches, matchesBySport, type MatchFixture } from "@/data/matches";
-import { ChevronRight, Radio } from "lucide-react";
+import { ChevronRight, Radio, Trophy } from "lucide-react";
 import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
 
 export const Route = createFileRoute("/matches")({
