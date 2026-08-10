@@ -773,16 +773,104 @@ export const cricketFixtures: CricketSeries[] = [
     ]
   },
   {
-    name: "India tour of New Zealand, 2026-27",
-    details: "New Zealand vs India - 2 Tests, 3 ODIs, 5 T20Is",
+    name: "India tour of New Zealand, 2026",
+    details: "5 T20Is, 5 ODIs, 2 Tests · Oct – Nov 2026",
     matches: [
+      {
+        match: "1st T20I",
+        teams: "New Zealand vs India",
+        date: "Thu, 22 Oct 2026",
+        venue: "Christchurch, Hagley Oval",
+        details: "Match Details",
+        slug: "nz-vs-ind-1st-t20i-2026"
+      },
+      {
+        match: "2nd T20I",
+        teams: "New Zealand vs India",
+        date: "Sat, 24 Oct 2026",
+        venue: "Christchurch, Hagley Oval",
+        details: "Match Details",
+        slug: "nz-vs-ind-2nd-t20i-2026"
+      },
+      {
+        match: "3rd T20I",
+        teams: "New Zealand vs India",
+        date: "Tue, 27 Oct 2026",
+        venue: "Wellington, Sky Stadium",
+        details: "Match Details",
+        slug: "nz-vs-ind-3rd-t20i-2026"
+      },
+      {
+        match: "4th T20I",
+        teams: "New Zealand vs India",
+        date: "Fri, 30 Oct 2026",
+        venue: "Auckland, Eden Park",
+        details: "Match Details",
+        slug: "nz-vs-ind-4th-t20i-2026"
+      },
+      {
+        match: "5th T20I",
+        teams: "New Zealand vs India",
+        date: "Sun, 1 Nov 2026",
+        venue: "Hamilton, Seddon Park",
+        details: "Match Details",
+        slug: "nz-vs-ind-5th-t20i-2026"
+      },
+      {
+        match: "1st ODI",
+        teams: "New Zealand vs India",
+        date: "Wed, 4 Nov 2026",
+        venue: "Auckland, Eden Park",
+        details: "Match Details",
+        slug: "nz-vs-ind-1st-odi-2026"
+      },
+      {
+        match: "2nd ODI",
+        teams: "New Zealand vs India",
+        date: "Sat, 7 Nov 2026",
+        venue: "Wellington, Sky Stadium",
+        details: "Match Details",
+        slug: "nz-vs-ind-2nd-odi-2026"
+      },
+      {
+        match: "3rd ODI",
+        teams: "New Zealand vs India",
+        date: "Tue, 10 Nov 2026",
+        venue: "Hamilton, Seddon Park",
+        details: "Match Details",
+        slug: "nz-vs-ind-3rd-odi-2026"
+      },
+      {
+        match: "4th ODI",
+        teams: "New Zealand vs India",
+        date: "Fri, 13 Nov 2026",
+        venue: "Mount Maunganui, Bay Oval",
+        details: "Match Details",
+        slug: "nz-vs-ind-4th-odi-2026"
+      },
+      {
+        match: "5th ODI",
+        teams: "New Zealand vs India",
+        date: "Sun, 15 Nov 2026",
+        venue: "Mount Maunganui, Bay Oval",
+        details: "Match Details",
+        slug: "nz-vs-ind-5th-odi-2026"
+      },
       {
         match: "1st Test",
         teams: "New Zealand vs India",
-        date: "Dec 2026",
-        venue: "Eden Park, Auckland",
-        details: "Upcoming Series",
+        date: "Thu, 19 Nov 2026",
+        venue: "Wellington, Basin Reserve",
+        details: "Match Details",
         slug: "nz-vs-ind-1st-test-2026"
+      },
+      {
+        match: "2nd Test",
+        teams: "New Zealand vs India",
+        date: "Fri, 27 Nov 2026",
+        venue: "Christchurch, Hagley Oval",
+        details: "Match Details",
+        slug: "nz-vs-ind-2nd-test-2026"
       }
     ]
   },
