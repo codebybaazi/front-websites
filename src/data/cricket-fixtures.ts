@@ -133,7 +133,15 @@ export const cricketFixtures: CricketSeries[] = [
           "Seam movement under overcast Belfast skies will be key.",
           "Mark Adair to take 2+ wickets is a strong probability.",
           "Afghanistan's middle order depth to be tested on a livelier track."
-        ]
+        ],
+        detailedNarrative: "The 3rd ODI in Belfast introduces new dynamics with a livelier pitch. Ireland's seamers will relish the extra bounce, while Afghanistan's batters will need to adjust their technique quickly. With the series in a critical phase, the tactical battle between Ireland's pace and Afghanistan's resilience will be the highlight.",
+        pitchReport: "Civil Service Cricket Club offers a hard surface with good carry. Pace bowlers will find joy in the early overs, but it levels out to a high-scoring deck later.",
+        tacticalPreview: "Ireland will likely stack their pace attack. Afghanistan might consider bringing in an extra seamer to exploit the Belfast conditions.",
+        winProbHome: 52,
+        winProbAway: 48,
+        predictionInsight: "Ireland has a statistical advantage in Belfast due to the bounce. If Joshua Little finds his rhythm early, Afghanistan could be in trouble.",
+        projectedScoreHome: "270-290",
+        projectedScoreAway: "255-275"
       },
       {
         match: "4th ODI",
@@ -157,7 +165,15 @@ export const cricketFixtures: CricketSeries[] = [
           "Gurbaz to score 50+ runs is a value bet based on current form.",
           "Spinners might find less grip if there's evening dew.",
           "Toss winner should consider bowling first to exploit early moisture."
-        ]
+        ],
+        detailedNarrative: "Entering the 4th ODI, the tactical shifts become evident. Both teams are now familiar with each other's weaknesses. Ireland's reliance on Paul Stirling's start and Afghanistan's middle-order stability under Rashid Khan's leadership will define this encounter. The match promises high volatility in the betting markets as momentum swings frequently.",
+        pitchReport: "The pitch is expected to slow down slightly for the 4th game. Change of pace will be a vital weapon for the bowlers.",
+        tacticalPreview: "Afghanistan will look to target the Ireland tail early. Ireland needs to rotate strike effectively against the Afghan spinners in the middle phase.",
+        winProbHome: 47,
+        winProbAway: 53,
+        predictionInsight: "Afghanistan's ability to adapt to slower tracks gives them a slight edge here. Watch for Rahmanullah Gurbaz's intent in the first powerplay.",
+        projectedScoreHome: "250-270",
+        projectedScoreAway: "265-285"
       },
       {
         match: "5th ODI",
