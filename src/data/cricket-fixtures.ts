@@ -11,10 +11,10 @@ export interface CricketMatch {
   venue: string;
   details: string;
   slug: string;
-  homeTeam: string;
-  awayTeam: string;
-  format: string;
-  tournament: string;
+  homeTeam?: string;
+  awayTeam?: string;
+  format?: string;
+  tournament?: string;
 }
 
 export const getCricketMatch = (slug: string) => {
