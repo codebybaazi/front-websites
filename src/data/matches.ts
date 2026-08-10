@@ -33,11 +33,17 @@ const transformedCricket: MatchFixture[] = cricketFixtures.flatMap(series =>
     awayTeam: m.awayTeam || m.teams.split(" vs ")[1] || "Team B",
     startDate: m.date,
     venue: m.venue.split(",")[0] || m.venue,
-    city: m.venue.split(",")[1]?.trim() || "TBA",
-    country: "Various",
+    city: m.city || m.venue.split(",")[1]?.trim() || "TBA",
+    country: m.country || "Various",
     status: "upcoming" as const,
     marketHighlights: ["Match Winner", "Top Batsman", "Total Sixes", "Session Runs"],
-    keywords: ["cricket betting", m.slug, "live odds"]
+    keywords: ["cricket betting", m.slug, "live odds"],
+    headToHead: m.headToHead,
+    homeRecentForm: m.homeRecentForm,
+    awayRecentForm: m.awayRecentForm,
+    keyPlayersHome: m.keyPlayersHome,
+    keyPlayersAway: m.keyPlayersAway,
+    bettingTips: m.bettingTips
   }))
 );
 
