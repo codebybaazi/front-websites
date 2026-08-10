@@ -15,6 +15,15 @@ export interface CricketMatch {
   awayTeam?: string;
   format?: string;
   tournament?: string;
+  city?: string;
+  country?: string;
+  headToHead?: string;
+  homeRecentForm?: string;
+  awayRecentForm?: string;
+  keyPlayersHome?: string[];
+  keyPlayersAway?: string[];
+  bettingTips?: string[];
+  relatedMatches?: string[];
 }
 
 export const getCricketMatch = (slug: string) => {
