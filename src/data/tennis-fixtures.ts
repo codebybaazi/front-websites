@@ -1436,25 +1436,6 @@ export const tennisFixtures: TennisFixture[] = [
     keywords: ["merida tennis 2026 odds"]
   },
   {
-    slug: "dubai-championships-2026-wta",
-    sport: "Tennis",
-    tournament: "Dubai Duty Free Championships (WTA)",
-    player1: "Mirra Andreeva",
-    player2: "TBD",
-    venue: "Dubai Tennis Stadium",
-    city: "Dubai",
-    country: "UAE",
-    startDate: "2026-02-16T14:00:00+04:00",
-    endDate: "2026-02-22",
-    status: "upcoming",
-    stage: "Main Draw",
-    category: "WTA 1000",
-    surface: "Hard",
-    tour: "WTA",
-    marketHighlights: ["Match Winner"],
-    keywords: ["dubai wta betting 2026", "andreeva dubai odds"]
-  },
-  {
     slug: "atx-open-2026-wta",
     sport: "Tennis",
     tournament: "ATX Open",
