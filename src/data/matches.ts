@@ -59,7 +59,7 @@ const transformedCricket: MatchFixture[] = cricketFixtures.flatMap(series =>
     winProbAway: m.winProbAway,
     predictionInsight: m.predictionInsight,
     projectedScoreHome: m.projectedScoreHome,
-    projectedScoreAway: m.projectedScoreAway
+    projectedScoreAway: m.projectedScoreAway,
   }))
 );
 
