@@ -56,22 +56,22 @@ function MatchDetailPage() {
 
   // Dynamic analysis generator
   const aiAnalysis = {
-    summary: m.sport === 'Cricket' 
+    summary: m.detailedNarrative || (m.sport === 'Cricket' 
       ? `Our AI engine has crunched 10 years of data for ${m.homeTeam} and ${m.awayTeam}. For this ${m.tournament} fixture at ${m.venue}, we anticipate a high-liquidity market with significant session movements in the first 10 overs.`
-      : `Neural models indicate a high-intensity clash between ${m.homeTeam} and ${m.awayTeam}. The historical trends for the ${m.tournament} at ${m.venue} suggest a tight encounter with premium betting opportunities in live markets.`,
-    highlights: m.bettingTips || [
+      : `Neural models indicate a high-intensity clash between ${m.homeTeam} and ${m.awayTeam}. The historical trends for the ${m.tournament} at ${m.venue} suggest a tight encounter with premium betting opportunities in live markets.`),
+    highlights: m.bettingTips && m.bettingTips.length > 0 ? m.bettingTips : [
       `${m.homeTeam} has shown a strong ${m.sport === 'Cricket' ? 'defending' : 'home'} record recently.`,
       "Market sentiment is leaning heavily towards a high-scoring encounter.",
       "Weather conditions are expected to stay clear, favoring a full game.",
       "Get instant Cricbet99 ID via WhatsApp for 100% bonus on this match."
     ],
-    detailedNarrative: `As ${m.homeTeam} takes on ${m.awayTeam} at ${m.venue}, the tactical focus is on the ${m.sport === 'Cricket' ? 'top-order stability' : 'midfield control'}. Our AI match overview predicts that ${m.homeTeam}'s current form gives them a statistical advantage, but ${m.awayTeam}'s ability to capitalize on transitions makes them a dangerous underdog in the ${m.tournament}.`
+    detailedNarrative: m.detailedNarrative || `As ${m.homeTeam} takes on ${m.awayTeam} at ${m.venue}, the tactical focus is on the ${m.sport === 'Cricket' ? 'top-order stability' : 'midfield control'}. Our AI match overview predicts that ${m.homeTeam}'s current form gives them a statistical advantage, but ${m.awayTeam}'s ability to capitalize on transitions makes them a dangerous underdog in the ${m.tournament}.`
   };
 
   const faqs = [
     {
       q: `What is the win probability for ${m.homeTeam} vs ${m.awayTeam}?`,
-      a: `Based on Cricbet99's AI modeling, ${m.homeTeam} currently holds a 58% win probability compared to ${m.awayTeam}'s 42%. These odds are dynamic and will update based on the toss and live match events.`
+      a: `Based on Cricbet99's AI modeling, ${m.homeTeam} currently holds a ${m.winProbHome || 58}% win probability compared to ${m.awayTeam}'s ${m.winProbAway || 42}%. These odds are dynamic and will update based on the toss and live match events.`
     },
     {
       q: `How can I bet on the ${m.homeTeam} vs ${m.awayTeam} match?`,
@@ -324,7 +324,7 @@ function MatchDetailPage() {
                    </div>
                     <div className="p-8 rounded-2xl bg-accent/5 border border-accent/10 flex flex-col items-center justify-center text-center">
                       <span className="text-xs font-black uppercase text-accent mb-2">Estimated 1st Innings Score</span>
-                      <span className="text-5xl font-black text-white">{m.projectedScoreHome || "175 - 190"}</span>
+                      <span className="text-5xl font-black text-white">{m.projectedScoreHome || (m.sport === 'Cricket' ? "175 - 190" : "2 - 1")}</span>
                       <p className="mt-4 text-xs text-foreground/50 italic">Based on pitch behavior at {m.venue} and {m.homeTeam}'s recent strike rates.</p>
                     </div>
                    <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
@@ -540,3 +540,4 @@ function MatchDetailPage() {
     </SiteLayout>
   );
 }
+
