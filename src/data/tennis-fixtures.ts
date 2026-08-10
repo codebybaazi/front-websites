@@ -1482,7 +1482,7 @@ export const tennisFixtures: TennisFixture[] = [
     venue: "Westwood Country Club",
     city: "Austin",
     country: "USA",
-    startDate: "2026-02-23T11:00:00-06:00",
+    startDate: "2026-02-23",
     endDate: "2026-03-01",
     status: "upcoming",
     stage: "Main Draw",
