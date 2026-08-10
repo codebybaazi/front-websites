@@ -1387,7 +1387,7 @@ export const tennisFixtures: TennisFixture[] = [
     venue: "Zayed Sports City International Tennis Centre",
     city: "Abu Dhabi",
     country: "UAE",
-    startDate: "2026-02-01T14:00:00+04:00",
+    startDate: "2026-02-01",
     endDate: "2026-02-08",
     status: "upcoming",
     stage: "Main Draw",
