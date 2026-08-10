@@ -69,7 +69,15 @@ export const cricketFixtures: CricketSeries[] = [
           "Afghanistan's spin duo expected to dominate the middle overs.",
           "High probability of a high-scoring match if Ireland bats first.",
           "Rashid Khan to take 2+ wickets looks like a value bet."
-        ]
+        ],
+        detailedNarrative: "The 1st ODI between Ireland and Afghanistan at Bready is set to be a tactical masterclass. Ireland, playing in familiar home conditions, will look to exploit the early morning moisture, while Afghanistan's spin-heavy attack is expected to come alive as the pitch dries out. Our AI models predict a high-intensity start with the powerplay determining the momentum for the rest of the game.",
+        pitchReport: "Bready is known for its balanced nature. Expect some grass cover to help the seamers early on, transitioning into a batting paradise by the second session.",
+        tacticalPreview: "Ireland must neutralize Rashid Khan's middle overs to stand a chance. Afghanistan will likely use aggressive field placements during the first 10 to force errors.",
+        winProbHome: 45,
+        winProbAway: 55,
+        predictionInsight: "Afghanistan's superior spin variety gives them the edge on a drying pitch. If they bat first and post 280+, Ireland might struggle to chase under pressure.",
+        projectedScoreHome: "240-260",
+        projectedScoreAway: "275-295"
       },
       {
         match: "2nd ODI",

@@ -215,16 +215,16 @@ function MatchDetailPage() {
                   <div className="flex justify-between items-end mb-2">
                     <div className="flex flex-col">
                       <span className="text-sm font-black text-primary uppercase tracking-widest">{m.homeTeam}</span>
-                      <span className="text-5xl font-black">58%</span>
+                      <span className="text-5xl font-black">{m.winProbHome || 58}%</span>
                     </div>
                     <div className="flex flex-col items-end">
                       <span className="text-sm font-black text-accent uppercase tracking-widest">{m.awayTeam}</span>
-                      <span className="text-5xl font-black">42%</span>
+                      <span className="text-5xl font-black">{m.winProbAway || 42}%</span>
                     </div>
                   </div>
                   <div className="h-6 w-full bg-white/5 rounded-full overflow-hidden flex shadow-inner">
-                    <div className="h-full bg-primary shadow-[0_0_20px_rgba(212,175,55,0.4)]" style={{ width: "58%" }} />
-                    <div className="h-full bg-accent" style={{ width: "42%" }} />
+                    <div className="h-full bg-primary shadow-[0_0_20px_rgba(212,175,55,0.4)]" style={{ width: `${m.winProbHome || 58}%` }} />
+                    <div className="h-full bg-accent" style={{ width: `${m.winProbAway || 42}%` }} />
                   </div>
                 </div>
                 
