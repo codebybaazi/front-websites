@@ -1096,15 +1096,55 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "Sri Lanka tour of India, 2026",
-    details: "India vs Sri Lanka - 3 ODIs, 3 T20Is",
+    details: "3 ODIs, 3 T20Is · Dec 2026",
     matches: [
+      {
+        match: "1st ODI",
+        teams: "India vs Sri Lanka",
+        date: "Sun, 13 Dec 2026",
+        venue: "Delhi, Arun Jaitley Stadium",
+        details: "Match Details",
+        slug: "ind-vs-sl-1st-odi-2026"
+      },
+      {
+        match: "2nd ODI",
+        teams: "India vs Sri Lanka",
+        date: "Wed, 16 Dec 2026",
+        venue: "Bengaluru, M.Chinnaswamy Stadium",
+        details: "Match Details",
+        slug: "ind-vs-sl-2nd-odi-2026"
+      },
+      {
+        match: "3rd ODI",
+        teams: "India vs Sri Lanka",
+        date: "Sat, 19 Dec 2026",
+        venue: "Ahmedabad, Narendra Modi Stadium",
+        details: "Match Details",
+        slug: "ind-vs-sl-3rd-odi-2026"
+      },
       {
         match: "1st T20I",
         teams: "India vs Sri Lanka",
-        date: "Jan 2026",
-        venue: "TBC, India",
-        details: "Upcoming Series",
+        date: "Tue, 22 Dec 2026",
+        venue: "Rajkot, Niranjan Shah Stadium, Khandheri",
+        details: "Match Details",
         slug: "ind-vs-sl-1st-t20i-2026"
+      },
+      {
+        match: "2nd T20I",
+        teams: "India vs Sri Lanka",
+        date: "Thu, 24 Dec 2026",
+        venue: "Cuttack, Barabati Stadium",
+        details: "Match Details",
+        slug: "ind-vs-sl-2nd-t20i-2026"
+      },
+      {
+        match: "3rd T20I",
+        teams: "India vs Sri Lanka",
+        date: "Sun, 27 Dec 2026",
+        venue: "Pune, Maharashtra Cricket Association Stadium",
+        details: "Match Details",
+        slug: "ind-vs-sl-3rd-t20i-2026"
       }
     ]
   }
