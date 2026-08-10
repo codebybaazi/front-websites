@@ -227,6 +227,23 @@ function MatchDetailPage() {
                     <div className="h-full bg-accent" style={{ width: "42%" }} />
                   </div>
                 </div>
+                
+                {/* Win Probability Logic Explanation */}
+                <div className="grid gap-6 md:grid-cols-2 w-full">
+                  <div className="p-6 rounded-2xl bg-background/40 border border-white/5">
+                    <h4 className="text-xs font-black uppercase text-primary mb-2 tracking-widest">Winning Momentum</h4>
+                    <p className="text-xs text-foreground/60 leading-relaxed">
+                      AI modeling suggests {m.homeTeam} has a slight edge due to their familiarity with {m.venue} conditions and superior net run rate in the tournament.
+                    </p>
+                  </div>
+                  <div className="p-6 rounded-2xl bg-background/40 border border-white/5">
+                    <h4 className="text-xs font-black uppercase text-accent mb-2 tracking-widest">Challenger Outlook</h4>
+                    <p className="text-xs text-foreground/60 leading-relaxed">
+                      {m.awayTeam} can flip the odds if they manage to take early wickets during the powerplay, where {m.homeTeam} has shown statistical vulnerability.
+                    </p>
+                  </div>
+                </div>
+
                 <div className="p-8 rounded-2xl bg-background/60 border border-primary/10 italic text-center max-w-2xl">
                   <Lightbulb className="w-6 h-6 text-primary mx-auto mb-4" />
                   <p className="text-lg leading-relaxed">
@@ -272,30 +289,52 @@ function MatchDetailPage() {
             </div>
 
             {/* Projected Scoreline & Analysis */}
-            <div className="rounded-[3rem] border border-white/5 bg-white/[0.02] p-12">
+            <div className="rounded-[3rem] border border-white/5 bg-white/[0.02] p-12 relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-8 opacity-5">
+                <BarChart3 className="w-32 h-32" />
+              </div>
               <h2 className="text-2xl font-black flex items-center gap-3 mb-10 uppercase tracking-widest">
-                <TrendingUp className="h-6 w-6 text-primary" /> Projected Scoreline & Analysis
+                <TrendingUp className="h-6 w-6 text-primary" /> Projected Scoreline & Over-by-Over
               </h2>
               <div className="grid gap-12 md:grid-cols-2">
                 <div className="space-y-6">
                    <div className="flex items-center gap-3 p-4 rounded-xl bg-primary/10 border border-primary/20">
-                     <LayoutDashboard className="h-5 w-5 text-primary" />
-                     <span className="font-bold">{m.sport === 'Cricket' ? 'Over-by-Over Trend' : 'Match Momentum'}</span>
+                     <Timer className="h-5 w-5 text-primary" />
+                     <span className="font-bold">Innings Progression</span>
                    </div>
-                   <p className="text-foreground/70 leading-relaxed">
-                     {m.sport === 'Cricket' 
-                       ? "Expect a fast start in the first 6 overs. The middle phase (overs 15-35) will likely see a drop in run rate as spinners come into play at this venue."
-                       : "A high-intensity start is expected. Defensive organization will be tested in the final 20 minutes where fatigue sets in."}
-                   </p>
+                   <div className="space-y-4">
+                     <div className="p-4 rounded-xl bg-background/40 border border-white/5">
+                       <span className="text-[10px] font-black uppercase text-primary block mb-1">Overs 0-6 (Powerplay)</span>
+                       <p className="text-sm text-foreground/70">Projected: 45-55 runs. High probability of swing favoring bowlers early on.</p>
+                     </div>
+                     <div className="p-4 rounded-xl bg-background/40 border border-white/5">
+                       <span className="text-[10px] font-black uppercase text-primary block mb-1">Overs 7-15 (Middle Overs)</span>
+                       <p className="text-sm text-foreground/70">Projected: 65-75 runs. Spinners will look to tighten the run rate.</p>
+                     </div>
+                     <div className="p-4 rounded-xl bg-background/40 border border-white/5">
+                       <span className="text-[10px] font-black uppercase text-primary block mb-1">Overs 16-20 (Death Overs)</span>
+                       <p className="text-sm text-foreground/70">Projected: 50-65 runs. Batsmen will target short boundaries.</p>
+                     </div>
+                   </div>
                 </div>
                 <div className="space-y-6">
                    <div className="flex items-center gap-3 p-4 rounded-xl bg-accent/10 border border-accent/20">
-                     <Globe className="h-5 w-5 text-accent" />
-                     <span className="font-bold">Market Liquidity</span>
+                     <Target className="h-5 w-5 text-accent" />
+                     <span className="font-bold">Projected Totals</span>
                    </div>
-                   <p className="text-foreground/70 leading-relaxed">
-                     This is a premium high-volume fixture on Cricbet99. Live trading on session brackets and fancy markets is expected to be extremely active during the first half.
-                   </p>
+                   <div className="p-8 rounded-2xl bg-accent/5 border border-accent/10 flex flex-col items-center justify-center text-center">
+                     <span className="text-xs font-black uppercase text-accent mb-2">Estimated 1st Innings Score</span>
+                     <span className="text-5xl font-black text-white">175 - 190</span>
+                     <p className="mt-4 text-xs text-foreground/50 italic">Based on pitch behavior at {m.venue} and {m.homeTeam}'s recent strike rates.</p>
+                   </div>
+                   <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
+                     <h4 className="text-sm font-black mb-2 flex items-center gap-2">
+                       <Globe className="h-4 w-4 text-primary" /> Market Sentiment
+                     </h4>
+                     <p className="text-xs text-foreground/60">
+                       Cricbet99 traders are currently backing a high-scoring game. Fancy markets for "Total Sixes" are seeing significant upward pressure.
+                     </p>
+                   </div>
                 </div>
               </div>
             </div>

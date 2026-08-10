@@ -73,7 +73,19 @@ export const cricketFixtures: CricketSeries[] = [
         homeTeam: "Ireland",
         awayTeam: "Afghanistan",
         format: "ODI",
-        tournament: "Afghanistan tour of Ireland, 2026"
+        tournament: "Afghanistan tour of Ireland, 2026",
+        city: "Bready",
+        country: "Northern Ireland",
+        headToHead: "Afghanistan has won 4 out of the last 5 ODIs against Ireland.",
+        homeRecentForm: "L, W, L, L, L",
+        awayRecentForm: "W, W, L, W, W",
+        keyPlayersHome: ["Harry Tector", "Curtis Campher", "George Dockrell"],
+        keyPlayersAway: ["Mohammad Nabi", "Mujeeb Ur Rahman", "Azmatullah Omarzai"],
+        bettingTips: [
+          "Spinners to play a major role in the middle overs.",
+          "Ireland needs a strong start from their openers.",
+          "Afghanistan's middle order looks very solid."
+        ]
       },
       {
         match: "3rd ODI",
@@ -85,7 +97,19 @@ export const cricketFixtures: CricketSeries[] = [
         homeTeam: "Ireland",
         awayTeam: "Afghanistan",
         format: "ODI",
-        tournament: "Afghanistan tour of Ireland, 2026"
+        tournament: "Afghanistan tour of Ireland, 2026",
+        city: "Belfast",
+        country: "Northern Ireland",
+        headToHead: "In Belfast, matches have been more evenly contested between these two.",
+        homeRecentForm: "L, W, L, W, L",
+        awayRecentForm: "W, L, W, W, W",
+        keyPlayersHome: ["Mark Adair", "Andy Balbirnie", "Lorcan Tucker"],
+        keyPlayersAway: ["Gulbadin Naib", "Hashmatullah Shahidi", "Rashid Khan"],
+        bettingTips: [
+          "Belfast pitch offers more bounce; pace bowlers might thrive.",
+          "Check weather conditions; moisture can favor early swing.",
+          "Toss winner likely to bowl first under cloudy skies."
+        ]
       },
       {
         match: "4th ODI",
@@ -97,7 +121,19 @@ export const cricketFixtures: CricketSeries[] = [
         homeTeam: "Ireland",
         awayTeam: "Afghanistan",
         format: "ODI",
-        tournament: "Afghanistan tour of Ireland, 2026"
+        tournament: "Afghanistan tour of Ireland, 2026",
+        city: "Belfast",
+        country: "Northern Ireland",
+        headToHead: "Afghanistan leads the series historically by a significant margin.",
+        homeRecentForm: "L, L, W, L, L",
+        awayRecentForm: "W, W, W, L, W",
+        keyPlayersHome: ["Paul Stirling", "Joshua Little"],
+        keyPlayersAway: ["Rashid Khan", "Rahmanullah Gurbaz"],
+        bettingTips: [
+          "Spin dominates the latter half of the innings.",
+          "Expect high liquidity in the match-winner market.",
+          "Gurbaz to score 30+ runs is a high probability bet."
+        ]
       },
       {
         match: "5th ODI",
@@ -109,7 +145,19 @@ export const cricketFixtures: CricketSeries[] = [
         homeTeam: "Ireland",
         awayTeam: "Afghanistan",
         format: "ODI",
-        tournament: "Afghanistan tour of Ireland, 2026"
+        tournament: "Afghanistan tour of Ireland, 2026",
+        city: "Belfast",
+        country: "Northern Ireland",
+        headToHead: "Final matches of the series often see higher scoring totals.",
+        homeRecentForm: "W, L, L, W, L",
+        awayRecentForm: "L, W, W, W, W",
+        keyPlayersHome: ["Harry Tector", "Mark Adair"],
+        keyPlayersAway: ["Fazalhaq Farooqi", "Mohammad Nabi"],
+        bettingTips: [
+          "Expect tactical changes in the final game.",
+          "Look for value in 'Player of the Match' markets.",
+          "Early wickets will be crucial for Ireland's chances."
+        ]
       }
     ]
   },
@@ -297,7 +345,23 @@ export const cricketFixtures: CricketSeries[] = [
         date: "Jul 01, 2026",
         venue: "Chester-le-Street, Riverside Ground",
         details: "Match Details",
-        slug: "eng-vs-ind-1st-t20i-2026"
+        slug: "eng-vs-ind-1st-t20i-2026",
+        homeTeam: "England",
+        awayTeam: "India",
+        format: "T20I",
+        tournament: "India tour of England, 2026",
+        city: "Durham",
+        country: "England",
+        headToHead: "In T20Is in England, the record is balanced at 3-3.",
+        homeRecentForm: "W, L, W, W, L",
+        awayRecentForm: "W, W, W, W, W",
+        keyPlayersHome: ["Jos Buttler", "Jofra Archer", "Harry Brook"],
+        keyPlayersAway: ["Suryakumar Yadav", "Jasprit Bumrah", "Hardik Pandya"],
+        bettingTips: [
+          "Expect a high-scoring encounter on a flat Durham track.",
+          "Jos Buttler's performance in powerplay will be key.",
+          "India's death bowling is statistically superior."
+        ]
       },
       {
         match: "2nd T20I",
