@@ -79,11 +79,35 @@ export const cricketFixtures: CricketSeries[] = [
     details: "Zimbabwe vs India - 1 Test, 3 ODIs",
     matches: [
       {
+        match: "1st ODI",
+        teams: "Zimbabwe vs India",
+        date: "Jul 11, 2026",
+        venue: "Harare Sports Club, Harare",
+        details: "Match Details",
+        slug: "zim-vs-ind-1st-odi-2026"
+      },
+      {
+        match: "2nd ODI",
+        teams: "Zimbabwe vs India",
+        date: "Jul 13, 2026",
+        venue: "Harare Sports Club, Harare",
+        details: "Match Details",
+        slug: "zim-vs-ind-2nd-odi-2026"
+      },
+      {
+        match: "3rd ODI",
+        teams: "Zimbabwe vs India",
+        date: "Jul 15, 2026",
+        venue: "Harare Sports Club, Harare",
+        details: "Match Details",
+        slug: "zim-vs-ind-3rd-odi-2026"
+      },
+      {
         match: "Only Test",
         teams: "Zimbabwe vs India",
-        date: "Jun 2026",
+        date: "Jul 19-23, 2026",
         venue: "Harare Sports Club, Harare",
-        details: "Upcoming Series",
+        details: "Match Details",
         slug: "zim-vs-ind-test-2026"
       }
     ]
