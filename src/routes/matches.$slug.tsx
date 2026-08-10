@@ -245,7 +245,7 @@ function MatchDetailPage() {
                 <div className="p-8 rounded-[2rem] border border-primary/20 bg-primary/5 transition-transform hover:scale-[1.02]">
                   <h4 className="font-black text-primary text-2xl mb-6">{m.homeTeam} Stars</h4>
                   <ul className="space-y-4">
-                    {(m.keyPlayersHome || ["Top Batsman", "Strike Bowler", "Captain"]).map((player, i) => (
+                    {(m.keyPlayersHome || ["Top Batsman", "Strike Bowler", "Captain"]).map((player: string, i: number) => (
                       <li key={i} className="flex items-center gap-3">
                         <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
                           <CheckCircle2 className="h-4 w-4" />
@@ -258,7 +258,7 @@ function MatchDetailPage() {
                 <div className="p-8 rounded-[2rem] border border-accent/20 bg-accent/5 transition-transform hover:scale-[1.02]">
                   <h4 className="font-black text-accent text-2xl mb-6">{m.awayTeam} X-Factors</h4>
                   <ul className="space-y-4">
-                    {(m.keyPlayersAway || ["Hard-hitting Opener", "Spin Wizard", "Leading Wicket Taker"]).map((player, i) => (
+                    {(m.keyPlayersAway || ["Hard-hitting Opener", "Spin Wizard", "Leading Wicket Taker"]).map((player: string, i: number) => (
                       <li key={i} className="flex items-center gap-3">
                         <div className="h-8 w-8 rounded-full bg-accent/20 flex items-center justify-center text-accent">
                           <CheckCircle2 className="h-4 w-4" />
