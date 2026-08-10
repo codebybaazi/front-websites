@@ -24,6 +24,14 @@ export interface CricketMatch {
   keyPlayersAway?: string[];
   bettingTips?: string[];
   relatedMatches?: string[];
+  detailedNarrative?: string;
+  pitchReport?: string;
+  tacticalPreview?: string;
+  winProbHome?: number;
+  winProbAway?: number;
+  predictionInsight?: string;
+  projectedScoreHome?: string;
+  projectedScoreAway?: string;
 }
 
 export const getCricketMatch = (slug: string) => {

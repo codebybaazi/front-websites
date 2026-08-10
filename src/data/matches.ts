@@ -21,6 +21,14 @@ export interface MatchFixture {
   keyPlayersHome?: string[];
   keyPlayersAway?: string[];
   bettingTips?: string[];
+  detailedNarrative?: string;
+  pitchReport?: string;
+  tacticalPreview?: string;
+  winProbHome?: number;
+  winProbAway?: number;
+  predictionInsight?: string;
+  projectedScoreHome?: string;
+  projectedScoreAway?: string;
 }
 
 // Transform cricket fixtures
