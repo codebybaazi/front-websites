@@ -268,15 +268,47 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "New Zealand tour of West Indies, 2026",
-    details: "West Indies vs New Zealand - 2 Tests, 3 ODIs, 3 T20Is",
+    details: "5 ODIs · Jul 2026",
     matches: [
       {
-        match: "1st Test",
+        match: "1st ODI",
+        teams: "New Zealand vs West Indies",
+        date: "Jul 11, 2026",
+        venue: "Guyana, Providence Stadium",
+        details: "Match Details",
+        slug: "wi-vs-nz-1st-odi-2026"
+      },
+      {
+        match: "2nd ODI",
         teams: "West Indies vs New Zealand",
-        date: "Jun 2026",
-        venue: "Kensington Oval, Barbados",
-        details: "Upcoming Series",
-        slug: "wi-vs-nz-1st-test-2026"
+        date: "Jul 13, 2026",
+        venue: "Guyana, Providence Stadium",
+        details: "Match Details",
+        slug: "wi-vs-nz-2nd-odi-2026"
+      },
+      {
+        match: "3rd ODI",
+        teams: "West Indies vs New Zealand",
+        date: "Jul 16, 2026",
+        venue: "Guyana, Providence Stadium",
+        details: "Match Details",
+        slug: "wi-vs-nz-3rd-odi-2026"
+      },
+      {
+        match: "4th ODI",
+        teams: "West Indies vs New Zealand",
+        date: "Jul 19, 2026",
+        venue: "Bridgetown, Barbados, Kensington Oval",
+        details: "Match Details",
+        slug: "wi-vs-nz-4th-odi-2026"
+      },
+      {
+        match: "5th ODI",
+        teams: "West Indies vs New Zealand",
+        date: "Jul 21, 2026",
+        venue: "Bridgetown, Barbados, Kensington Oval",
+        details: "Match Details",
+        slug: "wi-vs-nz-5th-odi-2026"
       }
     ]
   },
