@@ -524,9 +524,9 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const MatchesSlugRoute = MatchesSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => MatchesRoute,
+  id: '/matches/$slug',
+  path: '/matches/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const CaseStudiesTossMarket10MinuteProfitRoute =
   CaseStudiesTossMarket10MinuteProfitRouteImport.update({
@@ -1263,6 +1263,7 @@ export interface RootRouteChildren {
   WithdrawalDelayRoute: typeof WithdrawalDelayRoute
   Wpl2026BettingRoute: typeof Wpl2026BettingRoute
   BlogSlugRoute: typeof BlogSlugRoute
+  MatchesSlugRoute: typeof MatchesSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
   MatchesIndexRoute: typeof MatchesIndexRoute
 }
@@ -1852,10 +1853,10 @@ declare module '@tanstack/react-router' {
     }
     '/matches/$slug': {
       id: '/matches/$slug'
-      path: '/$slug'
+      path: '/matches/$slug'
       fullPath: '/matches/$slug'
       preLoaderRoute: typeof MatchesSlugRouteImport
-      parentRoute: typeof MatchesRoute
+      parentRoute: typeof rootRouteImport
     }
     '/case-studies/toss-market-10-minute-profit': {
       id: '/case-studies/toss-market-10-minute-profit'
@@ -2067,19 +2068,10 @@ const rootRouteChildren: RootRouteChildren = {
   WithdrawalDelayRoute: WithdrawalDelayRoute,
   Wpl2026BettingRoute: Wpl2026BettingRoute,
   BlogSlugRoute: BlogSlugRoute,
+  MatchesSlugRoute: MatchesSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
   MatchesIndexRoute: MatchesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
