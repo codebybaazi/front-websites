@@ -215,19 +215,6 @@ function Schedule() {
                                     >
                                       View <ArrowRight className="w-3 h-3" />
                                     </Link>
-                                    {match.prediction && (
-                                      <div className="p-2 rounded-lg bg-accent/5 border border-accent/20 flex flex-col gap-1">
-                                        <div className="flex items-center gap-1 text-[9px] font-black uppercase text-accent">
-                                          <BrainCircuit className="w-2.5 h-2.5" /> AI Prediction
-                                        </div>
-                                        <div className="text-[10px] font-bold text-foreground">
-                                          {match.prediction.winner} ({match.prediction.score})
-                                        </div>
-                                        <div className="text-[9px] text-foreground/50">
-                                          Score: {match.prediction.points}
-                                        </div>
-                                      </div>
-                                    )}
                                   </div>
                                 </td>
                               </tr>
