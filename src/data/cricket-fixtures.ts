@@ -1033,15 +1033,15 @@ export const cricketFixtures: CricketSeries[] = [
     ]
   },
   {
-    name: "Australia vs England 150th Anniversary Test, 2027",
-    details: "One-off Test Match celebrating 150 years of Test Cricket",
+    name: "Australia vs England — 150th Anniversary One-off Test",
+    details: "1 Test · Mar 2027",
     matches: [
       {
-        match: "Anniversary Test",
+        match: "Only Test",
         teams: "Australia vs England",
-        date: "Mar 2027",
-        venue: "MCG, Melbourne",
-        details: "Historic Match",
+        date: "Thu, 11 Mar 2027",
+        venue: "Melbourne, Melbourne Cricket Ground",
+        details: "View",
         slug: "aus-vs-eng-150th-test-2027"
       }
     ]
