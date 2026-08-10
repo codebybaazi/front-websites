@@ -136,15 +136,63 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "Bangladesh tour of Zimbabwe, 2026",
-    details: "Zimbabwe vs Bangladesh - 2 Tests, 3 ODIs, 3 T20Is",
+    details: "1 Test, 3 ODIs, 3 T20Is · Jun – Jul 2026",
     matches: [
       {
-        match: "1st Test",
+        match: "Only Test",
+        teams: "Bangladesh vs Zimbabwe",
+        date: "Jun 28, 2026",
+        venue: "Harare, Harare Sports Club",
+        details: "Match Details",
+        slug: "zim-vs-ban-test-2026"
+      },
+      {
+        match: "1st ODI",
         teams: "Zimbabwe vs Bangladesh",
-        date: "Jul 2026",
-        venue: "Queens Sports Club, Bulawayo",
-        details: "Upcoming Series",
-        slug: "zim-vs-ban-1st-test-2026"
+        date: "Jul 06, 2026",
+        venue: "Harare, Harare Sports Club",
+        details: "Match Details",
+        slug: "zim-vs-ban-1st-odi-2026"
+      },
+      {
+        match: "2nd ODI",
+        teams: "Zimbabwe vs Bangladesh",
+        date: "Jul 09, 2026",
+        venue: "Harare, Harare Sports Club",
+        details: "Match Details",
+        slug: "zim-vs-ban-2nd-odi-2026"
+      },
+      {
+        match: "3rd ODI",
+        teams: "Zimbabwe vs Bangladesh",
+        date: "Jul 11, 2026",
+        venue: "Harare, Harare Sports Club",
+        details: "Match Details",
+        slug: "zim-vs-ban-3rd-odi-2026"
+      },
+      {
+        match: "1st T20I",
+        teams: "Zimbabwe vs Bangladesh",
+        date: "Jul 15, 2026",
+        venue: "Bulawayo, Queens Sports Club",
+        details: "Match Details",
+        slug: "zim-vs-ban-1st-t20i-2026"
+      },
+      {
+        match: "2nd T20I",
+        teams: "Bangladesh vs Zimbabwe",
+        date: "Jul 17, 2026",
+        venue: "Bulawayo, Queens Sports Club",
+        details: "Match Details",
+        slug: "zim-vs-ban-2nd-t20i-2026"
+      },
+      {
+        match: "3rd T20I",
+        teams: "Zimbabwe vs Bangladesh",
+        date: "Jul 19, 2026",
+        venue: "Bulawayo, Queens Sports Club",
+        details: "Match Details",
+        slug: "zim-vs-ban-3rd-t20i-2026"
       }
     ]
   },
