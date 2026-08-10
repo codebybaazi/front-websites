@@ -1082,15 +1082,55 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "England tour of South Africa, 2026-27",
-    details: "South Africa vs England - 3 Tests, 3 ODIs, 3 T20Is",
+    details: "3 Tests, 3 ODIs · Dec 2026 – Jan 2027",
     matches: [
       {
         match: "1st Test",
         teams: "South Africa vs England",
-        date: "Dec 2026",
-        venue: "Centurion, Pretoria",
-        details: "Upcoming Series",
+        date: "Thu, 17 Dec 2026",
+        venue: "Johannesburg, The Wanderers Stadium",
+        details: "Match Details",
         slug: "sa-vs-eng-1st-test-2026"
+      },
+      {
+        match: "2nd Test",
+        teams: "South Africa vs England",
+        date: "Sat, 26 Dec 2026",
+        venue: "Centurion, SuperSport Park",
+        details: "Match Details",
+        slug: "sa-vs-eng-2nd-test-2026"
+      },
+      {
+        match: "3rd Test",
+        teams: "South Africa vs England",
+        date: "Sun, 3 Jan 2027",
+        venue: "Cape Town, Newlands",
+        details: "Match Details",
+        slug: "sa-vs-eng-3rd-test-2027"
+      },
+      {
+        match: "1st ODI",
+        teams: "South Africa vs England",
+        date: "Sun, 10 Jan 2027",
+        venue: "Paarl, Boland Park",
+        details: "Match Details",
+        slug: "sa-vs-eng-1st-odi-2027"
+      },
+      {
+        match: "2nd ODI",
+        teams: "South Africa vs England",
+        date: "Wed, 13 Jan 2027",
+        venue: "Bloemfontein, Mangaung Oval",
+        details: "Match Details",
+        slug: "sa-vs-eng-2nd-odi-2027"
+      },
+      {
+        match: "3rd ODI",
+        teams: "South Africa vs England",
+        date: "Fri, 15 Jan 2027",
+        venue: "Bloemfontein, Mangaung Oval",
+        details: "Match Details",
+        slug: "sa-vs-eng-3rd-odi-2027"
       }
     ]
   },
