@@ -76,47 +76,31 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "India tour of Zimbabwe, 2026",
-    details: "Zimbabwe vs India - 5 ODIs",
+    details: "3 T20Is · Jul 2026",
     matches: [
       {
-        match: "1st ODI",
+        match: "1st T20I",
         teams: "Zimbabwe vs India",
-        date: "Jul 11, 2026",
-        venue: "Harare Sports Club, Harare",
+        date: "Jul 23, 2026",
+        venue: "Harare, Harare Sports Club",
         details: "Match Details",
-        slug: "zim-vs-ind-1st-odi-2026"
+        slug: "zim-vs-ind-1st-t20i-2026"
       },
       {
-        match: "2nd ODI",
+        match: "2nd T20I",
         teams: "Zimbabwe vs India",
-        date: "Jul 13, 2026",
-        venue: "Harare Sports Club, Harare",
+        date: "Jul 25, 2026",
+        venue: "Harare, Harare Sports Club",
         details: "Match Details",
-        slug: "zim-vs-ind-2nd-odi-2026"
+        slug: "zim-vs-ind-2nd-t20i-2026"
       },
       {
-        match: "3rd ODI",
+        match: "3rd T20I",
         teams: "Zimbabwe vs India",
-        date: "Jul 15, 2026",
-        venue: "Harare Sports Club, Harare",
+        date: "Jul 26, 2026",
+        venue: "Harare, Harare Sports Club",
         details: "Match Details",
-        slug: "zim-vs-ind-3rd-odi-2026"
-      },
-      {
-        match: "4th ODI",
-        teams: "Zimbabwe vs India",
-        date: "Jul 17, 2026",
-        venue: "Harare Sports Club, Harare",
-        details: "Match Details",
-        slug: "zim-vs-ind-4th-odi-2026"
-      },
-      {
-        match: "5th ODI",
-        teams: "Zimbabwe vs India",
-        date: "Jul 19, 2026",
-        venue: "Harare Sports Club, Harare",
-        details: "Match Details",
-        slug: "zim-vs-ind-5th-odi-2026"
+        slug: "zim-vs-ind-3rd-t20i-2026"
       }
     ]
   },
