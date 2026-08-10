@@ -520,15 +520,31 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "Pakistan tour of England, 2026",
-    details: "England vs Pakistan - 3 ODIs, 3 T20Is",
+    details: "3 Tests · Aug – Sep 2026",
     matches: [
       {
-        match: "1st ODI",
+        match: "1st Test",
         teams: "England vs Pakistan",
-        date: "May 2026",
-        venue: "Old Trafford, Manchester",
-        details: "Upcoming Series",
-        slug: "eng-vs-pak-1st-odi-2026"
+        date: "Wed, 19 Aug 2026",
+        venue: "Leeds, Headingley",
+        details: "Match Details",
+        slug: "eng-vs-pak-1st-test-2026"
+      },
+      {
+        match: "2nd Test",
+        teams: "England vs Pakistan",
+        date: "Thu, 27 Aug 2026",
+        venue: "London, Lord's",
+        details: "Match Details",
+        slug: "eng-vs-pak-2nd-test-2026"
+      },
+      {
+        match: "3rd Test",
+        teams: "England vs Pakistan",
+        date: "Wed, 9 Sep 2026",
+        venue: "Birmingham, Edgbaston",
+        details: "Match Details",
+        slug: "eng-vs-pak-3rd-test-2026"
       }
     ]
   },
