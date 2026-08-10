@@ -1,15 +1,29 @@
 export interface CricketSeries {
   name: string;
   details: string;
-  matches: {
-    match: string;
-    teams: string;
-    date: string;
-    venue: string;
-    details: string;
-    slug: string;
-  }[];
+  matches: CricketMatch[];
 }
+
+export interface CricketMatch {
+  match: string;
+  teams: string;
+  date: string;
+  venue: string;
+  details: string;
+  slug: string;
+  homeTeam: string;
+  awayTeam: string;
+  format: string;
+  tournament: string;
+}
+
+export const getCricketMatch = (slug: string) => {
+  for (const series of cricketFixtures) {
+    const match = series.matches.find(m => m.slug === slug);
+    if (match) return match;
+  }
+  return null;
+};
 
 export const cricketFixtures: CricketSeries[] = [
   {
@@ -22,7 +36,11 @@ export const cricketFixtures: CricketSeries[] = [
         date: "Wed, 5 Aug 2026",
         venue: "Bready, Northern Ireland, Bready Cricket Club",
         details: "Match Details",
-        slug: "ire-vs-afg-1st-odi-2026"
+        slug: "ire-vs-afg-1st-odi-2026",
+        homeTeam: "Ireland",
+        awayTeam: "Afghanistan",
+        format: "ODI",
+        tournament: "Afghanistan tour of Ireland, 2026"
       },
       {
         match: "2nd ODI",
@@ -30,7 +48,11 @@ export const cricketFixtures: CricketSeries[] = [
         date: "Fri, 7 Aug 2026",
         venue: "Bready, Northern Ireland, Bready Cricket Club",
         details: "Match Details",
-        slug: "ire-vs-afg-2nd-odi-2026"
+        slug: "ire-vs-afg-2nd-odi-2026",
+        homeTeam: "Ireland",
+        awayTeam: "Afghanistan",
+        format: "ODI",
+        tournament: "Afghanistan tour of Ireland, 2026"
       },
       {
         match: "3rd ODI",
@@ -38,7 +60,11 @@ export const cricketFixtures: CricketSeries[] = [
         date: "Mon, 10 Aug 2026",
         venue: "Belfast, Civil Service Cricket Club",
         details: "Match Details",
-        slug: "ire-vs-afg-3rd-odi-2026"
+        slug: "ire-vs-afg-3rd-odi-2026",
+        homeTeam: "Ireland",
+        awayTeam: "Afghanistan",
+        format: "ODI",
+        tournament: "Afghanistan tour of Ireland, 2026"
       },
       {
         match: "4th ODI",
@@ -46,7 +72,11 @@ export const cricketFixtures: CricketSeries[] = [
         date: "Wed, 12 Aug 2026",
         venue: "Belfast, Civil Service Cricket Club",
         details: "Match Details",
-        slug: "ire-vs-afg-4th-odi-2026"
+        slug: "ire-vs-afg-4th-odi-2026",
+        homeTeam: "Ireland",
+        awayTeam: "Afghanistan",
+        format: "ODI",
+        tournament: "Afghanistan tour of Ireland, 2026"
       },
       {
         match: "5th ODI",
@@ -54,7 +84,11 @@ export const cricketFixtures: CricketSeries[] = [
         date: "Fri, 14 Aug 2026",
         venue: "Belfast, Civil Service Cricket Club",
         details: "Match Details",
-        slug: "ire-vs-afg-5th-odi-2026"
+        slug: "ire-vs-afg-5th-odi-2026",
+        homeTeam: "Ireland",
+        awayTeam: "Afghanistan",
+        format: "ODI",
+        tournament: "Afghanistan tour of Ireland, 2026"
       }
     ]
   },
