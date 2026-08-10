@@ -198,47 +198,71 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "India tour of England, 2026",
-    details: "England vs India - 5 Tests (Pataudi Trophy)",
+    details: "5 T20Is, 3 ODIs · Jul 2026",
     matches: [
       {
-        match: "1st Test",
-        teams: "England vs India",
-        date: "Jun 20, 2026",
-        venue: "Lord's, London",
-        details: "Upcoming Series",
-        slug: "eng-vs-ind-1st-test-2026"
+        match: "1st T20I",
+        teams: "India vs England",
+        date: "Jul 01, 2026",
+        venue: "Chester-le-Street, Riverside Ground",
+        details: "Match Details",
+        slug: "eng-vs-ind-1st-t20i-2026"
       },
       {
-        match: "2nd Test",
-        teams: "England vs India",
-        date: "Jul 02, 2026",
-        venue: "The Oval, London",
-        details: "Upcoming Series",
-        slug: "eng-vs-ind-2nd-test-2026"
+        match: "2nd T20I",
+        teams: "India vs England",
+        date: "Jul 04, 2026",
+        venue: "Manchester, Emirates Old Trafford",
+        details: "Match Details",
+        slug: "eng-vs-ind-2nd-t20i-2026"
       },
       {
-        match: "3rd Test",
+        match: "3rd T20I",
         teams: "England vs India",
-        date: "Jul 15, 2026",
-        venue: "Old Trafford, Manchester",
-        details: "Upcoming Series",
-        slug: "eng-vs-ind-3rd-test-2026"
+        date: "Jul 07, 2026",
+        venue: "Nottingham, Trent Bridge",
+        details: "Match Details",
+        slug: "eng-vs-ind-3rd-t20i-2026"
       },
       {
-        match: "4th Test",
-        teams: "England vs India",
-        date: "Jul 28, 2026",
-        venue: "Trent Bridge, Nottingham",
-        details: "Upcoming Series",
-        slug: "eng-vs-ind-4th-test-2026"
+        match: "4th T20I",
+        teams: "India vs England",
+        date: "Jul 09, 2026",
+        venue: "Bristol, County Ground",
+        details: "Match Details",
+        slug: "eng-vs-ind-4th-t20i-2026"
       },
       {
-        match: "5th Test",
+        match: "5th T20I",
         teams: "England vs India",
-        date: "Aug 10, 2026",
-        venue: "Edgbaston, Birmingham",
-        details: "Upcoming Series",
-        slug: "eng-vs-ind-5th-test-2026"
+        date: "Jul 11, 2026",
+        venue: "Southampton, The Rose Bowl",
+        details: "Match Details",
+        slug: "eng-vs-ind-5th-t20i-2026"
+      },
+      {
+        match: "1st ODI",
+        teams: "England vs India",
+        date: "Jul 14, 2026",
+        venue: "Birmingham, Edgbaston",
+        details: "Match Details",
+        slug: "eng-vs-ind-1st-odi-2026"
+      },
+      {
+        match: "2nd ODI",
+        teams: "India vs England",
+        date: "Jul 16, 2026",
+        venue: "Cardiff, Sophia Gardens",
+        details: "Match Details",
+        slug: "eng-vs-ind-2nd-odi-2026"
+      },
+      {
+        match: "3rd ODI",
+        teams: "England vs India",
+        date: "Jul 19, 2026",
+        venue: "London, Lord's",
+        details: "Match Details",
+        slug: "eng-vs-ind-3rd-odi-2026"
       }
     ]
   },
