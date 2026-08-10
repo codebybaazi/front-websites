@@ -86,9 +86,9 @@ function Schedule() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-12 lg:grid-cols-3">
+        <div className="space-y-12">
           {/* Main Schedule Column */}
-          <div className="lg:col-span-2 space-y-12">
+          <div className="space-y-12">
             <div>
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
@@ -279,54 +279,6 @@ function Schedule() {
                   <div className="font-bold text-primary mb-1">World Cup Logistics</div>
                   <div className="text-sm text-foreground/60">Altitude in Mexico City will impact long-range shooting and player fatigue.</div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Sidebar / Detailed Fixtures */}
-          <div className="space-y-8">
-            <div className="sticky top-24">
-              <div className="flex items-center gap-3 mb-6">
-                <Clock className="w-5 h-5 text-primary" />
-                <h3 className="text-xl font-bold">Upcoming {activeTab !== "All" ? activeTab : ""} Fixtures</h3>
-              </div>
-              
-              <div className="space-y-4">
-                {upcomingMatches.length > 0 ? (
-                  upcomingMatches.map((match) => (
-                    <Link 
-                      key={match.slug}
-                      to="/matches/$slug"
-                      params={{ slug: match.slug }}
-                      className="block group p-4 rounded-2xl border border-primary/10 bg-background/40 hover:border-primary/40 hover:bg-background/80 transition-all"
-                    >
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-primary/70">{match.tournament}</span>
-                        <span className="text-[10px] font-medium text-foreground/40">{format(new Date(match.startDate), 'MMM dd, HH:mm')}</span>
-                      </div>
-                      <div className="font-bold text-foreground mb-3 flex items-center justify-between">
-                        <span>{match.homeTeam} <span className="text-primary">vs</span> {match.awayTeam}</span>
-                      </div>
-                      <div className="flex items-center justify-between text-[11px]">
-                        <span className="text-foreground/50 flex items-center gap-1">
-                          <MapPin className="w-3 h-3" /> {match.city}
-                        </span>
-                        <span className="text-primary flex items-center gap-1 font-bold">
-                          Analyze <ExternalLink className="w-3 h-3" />
-                        </span>
-                      </div>
-                    </Link>
-                  ))
-                ) : (
-                  <p className="text-sm text-foreground/40 text-center py-8">No specific {activeTab} fixtures available.</p>
-                )}
-              </div>
-
-              <div className="mt-8 p-6 rounded-2xl border border-primary/20 bg-primary/5 text-center">
-                <div className="text-sm font-medium mb-4">Want the full raw CSV schedule?</div>
-                <button className="w-full py-3 rounded-xl border border-primary/30 text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-primary-foreground transition-all">
-                  Download Full 2026 PDF
-                </button>
               </div>
             </div>
           </div>
