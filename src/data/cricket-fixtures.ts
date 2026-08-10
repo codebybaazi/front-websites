@@ -73,7 +73,19 @@ export const cricketFixtures: CricketSeries[] = [
         homeTeam: "Ireland",
         awayTeam: "Afghanistan",
         format: "ODI",
-        tournament: "Afghanistan tour of Ireland, 2026"
+        tournament: "Afghanistan tour of Ireland, 2026",
+        city: "Bready",
+        country: "Northern Ireland",
+        headToHead: "Afghanistan has won 4 out of the last 5 ODIs against Ireland.",
+        homeRecentForm: "L, W, L, L, L",
+        awayRecentForm: "W, W, L, W, W",
+        keyPlayersHome: ["Harry Tector", "Curtis Campher", "George Dockrell"],
+        keyPlayersAway: ["Mohammad Nabi", "Mujeeb Ur Rahman", "Azmatullah Omarzai"],
+        bettingTips: [
+          "Spinners to play a major role in the middle overs.",
+          "Ireland needs a strong start from their openers.",
+          "Afghanistan's middle order looks very solid."
+        ]
       },
       {
         match: "3rd ODI",
