@@ -1349,7 +1349,7 @@ export const tennisFixtures: TennisFixture[] = [
     venue: "Design Center Linz",
     city: "Linz",
     country: "Austria",
-    startDate: "2026-02-01T12:00:00+01:00",
+    startDate: "2026-02-01",
     endDate: "2026-02-08",
     status: "upcoming",
     stage: "Main Draw",
