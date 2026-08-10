@@ -46,7 +46,7 @@ const majorEvents = [
 ];
 
 function Schedule() {
-  const [activeTab, setActiveTab] = useState<"All" | "Cricket" | "Football" | "Tennis">("All");
+  const [activeTab, setActiveTab] = useState<"Cricket" | "Football" | "Tennis">("Cricket");
   
   const filteredEvents = activeTab === "All" 
     ? majorEvents 
