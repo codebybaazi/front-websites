@@ -1607,25 +1607,6 @@ export const tennisFixtures: TennisFixture[] = [
     keywords: ["stuttgart wta betting", "paolini stuttgart odds"]
   },
   {
-    slug: "madrid-open-2026-wta",
-    sport: "Tennis",
-    tournament: "Mutua Madrid Open (WTA)",
-    player1: "Aryna Sabalenka",
-    player2: "TBD",
-    venue: "Caja Mágica",
-    city: "Madrid",
-    country: "Spain",
-    startDate: "2026-04-20T11:00:00+02:00",
-    endDate: "2026-05-03",
-    status: "upcoming",
-    stage: "Main Draw",
-    category: "WTA 1000",
-    surface: "Clay",
-    tour: "Combined",
-    marketHighlights: ["Match Winner", "Tournament Winner"],
-    keywords: ["madrid open wta odds", "sabalenka madrid betting"]
-  },
-  {
     slug: "rome-masters-2026-wta",
     sport: "Tennis",
     tournament: "Internazionali d'Italia (WTA)",
