@@ -339,7 +339,7 @@ function MatchDetailPage() {
               </div>
             </div>
 
-            {/* About the Fixture */}
+            {/* About Team A vs Team B */}
             <div className="space-y-6">
               <h2 className="text-2xl font-black uppercase tracking-widest">About {m.homeTeam} vs {m.awayTeam}</h2>
               <div className="prose prose-invert max-w-none text-foreground/70 leading-relaxed">
