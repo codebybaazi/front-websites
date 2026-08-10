@@ -478,15 +478,55 @@ export const cricketFixtures: CricketSeries[] = [
   },
   {
     name: "Australia tour of South Africa, 2026",
-    details: "South Africa vs Australia - 3 Tests, 3 ODIs",
+    details: "3 Tests, 3 ODIs · Sep – Oct 2026",
     matches: [
+      {
+        match: "1st ODI",
+        teams: "South Africa vs Australia",
+        date: "Thu, 24 Sep 2026",
+        venue: "Durban, Kingsmead",
+        details: "Match Details",
+        slug: "sa-vs-aus-1st-odi-2026"
+      },
+      {
+        match: "2nd ODI",
+        teams: "South Africa vs Australia",
+        date: "Sun, 27 Sep 2026",
+        venue: "Johannesburg, The Wanderers Stadium",
+        details: "Match Details",
+        slug: "sa-vs-aus-2nd-odi-2026"
+      },
+      {
+        match: "3rd ODI",
+        teams: "South Africa vs Australia",
+        date: "Wed, 30 Sep 2026",
+        venue: "Potchefstroom, Senwes Park",
+        details: "Match Details",
+        slug: "sa-vs-aus-3rd-odi-2026"
+      },
       {
         match: "1st Test",
         teams: "South Africa vs Australia",
-        date: "Sep 2026",
-        venue: "Wanderers Stadium, Johannesburg",
-        details: "Upcoming Series",
+        date: "Fri, 9 Oct 2026",
+        venue: "Durban, Kingsmead",
+        details: "Match Details",
         slug: "sa-vs-aus-1st-test-2026"
+      },
+      {
+        match: "2nd Test",
+        teams: "South Africa vs Australia",
+        date: "Sun, 18 Oct 2026",
+        venue: "Gqeberha, St George's Park",
+        details: "Match Details",
+        slug: "sa-vs-aus-2nd-test-2026"
+      },
+      {
+        match: "3rd Test",
+        teams: "South Africa vs Australia",
+        date: "Tue, 27 Oct 2026",
+        venue: "Cape Town, Newlands",
+        details: "Match Details",
+        slug: "sa-vs-aus-3rd-test-2026"
       }
     ]
   },
