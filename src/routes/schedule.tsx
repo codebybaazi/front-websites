@@ -14,10 +14,10 @@ import { AiOverview } from "@/components/ai-overview";
 export const Route = createFileRoute("/schedule")({
   head: () => ({
     meta: [
-      { title: "2026 Sports Schedule — IPL, World Cup & Major Events | Cricbet99" },
-      { name: "description", content: "Official 2026 sports calendar. IPL 2026 fixtures, FIFA World Cup, T20 World Cup, and major tennis events. View dates, venues, and live betting markets on Cricbet99." },
-      { property: "og:title", content: "2026 Sports Schedule — Cricbet99" },
-      { property: "og:description", content: "The definitive 2026 sports betting calendar. From IPL to FIFA World Cup." },
+      { title: "2026 Cricket Schedule & Live Sports Calendar | IPL & T20 World Cup 2026 | Cricbet99" },
+      { name: "description", content: "Official 2026 cricket schedule and live sports calendar. Get IPL 2026 fixtures, T20 World Cup 2026 dates, football, and tennis match details with real-time betting updates on Cricbet99." },
+      { property: "og:title", content: "2026 Cricket Schedule & Live Sports Calendar — Cricbet99" },
+      { property: "og:description", content: "Your definitive guide to the 2026 sports calendar. IPL fixtures, T20 World Cup 2026, and major tennis/football events with live betting analytics." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://cricbet99.co.in/schedule" },
       { name: "twitter:card", content: "summary_large_image" },
