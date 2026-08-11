@@ -509,6 +509,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                 India's #1 Online Cricket ID for Sports & Casino
               </span>
             </h1>
+            <h2 className="mt-2 text-xs font-black text-primary/60 uppercase tracking-[0.4em]">Official Licensed Exchange & Premium Betting Network</h2>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/80">
               One verified ID. Every game that matters. Bet on IPL 2026, T20 World Cup, football, tennis, kabaddi and live casino with lightning-fast UPI payouts and a real human on WhatsApp — trusted by 1 lakh+ Indian players.
             </p>
