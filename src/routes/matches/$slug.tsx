@@ -38,27 +38,106 @@ export const Route = createFileRoute("/matches/$slug")({
   head: ({ loaderData }) => {
     if (!loaderData?.match) return { title: "Match Not Found | Cricbet99" };
     const m = loaderData.match;
-    const title = `${m.sport === 'Tennis' ? m.tournament : `${m.homeTeam} vs ${m.awayTeam}`} Match Prediction, Betting Tips & Odds | Cricbet99`;
-    const description = `Live ${m.sport} analysis for ${m.homeTeam} vs ${m.awayTeam} at ${m.venue}. Who will win today's match? Expert AI predictions, pitch report, and best betting markets on Cricbet99.`;
+    const isTennis = m.sport === 'Tennis';
+    const matchName = isTennis ? m.tournament : `${m.homeTeam} vs ${m.awayTeam}`;
     
+    // SEO Optimized title with high-volume keywords
+    const title = `${matchName} Prediction, Betting Tips & Live Odds | ${m.tournament} 2026 | Cricbet99`;
+    
+    // Rich meta description for better CTR
+    const description = `Get expert ${m.sport.toLowerCase()} analysis for ${matchName} at ${m.venue}. ${m.winProbHome}% vs ${m.winProbAway}% win probability. Discover AI-driven betting tips, pitch reports, and live exchange odds on Cricbet99.`;
+    
+    // Dynamic keywords based on match data
+    const keywords = [
+      `${m.homeTeam} vs ${m.awayTeam} live`,
+      `${m.homeTeam} vs ${m.awayTeam} prediction`,
+      `${m.sport.toLowerCase()} betting tips`,
+      `${m.tournament} fixtures 2026`,
+      "online cricket id",
+      "sports betting exchange",
+      `live ${m.sport.toLowerCase()} odds`,
+      `${m.city} ${m.sport.toLowerCase()} matches`
+    ].join(", ");
+
     return {
       meta: [
         { title },
         { name: "description", content: description },
+        { name: "keywords", content: keywords },
         { property: "og:title", content: title },
         { property: "og:description", content: description },
         { property: "og:url", content: `https://cricbet99.co.in/matches/${m.slug}` },
-        { property: "og:image", content: "https://cricbet99.co.in/og-image.png" },
+        { property: "og:image", content: "https://cricbet99.co.in/og-image.jpg" },
+        { property: "og:type", content: "article" },
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: description },
         { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:image", content: "https://cricbet99.co.in/og-image.jpg" },
       ],
-      links: [{ rel: "canonical", href: `https://cricbet99.co.in/matches/${m.slug}` }],
+      links: [
+        { rel: "canonical", href: `https://cricbet99.co.in/matches/${m.slug}` },
+        { rel: "alternate", hreflang: "en-in", href: `https://cricbet99.co.in/matches/${m.slug}` }
+      ],
       scripts: [
         {
           type: "application/ld+json",
-          children: JSON.stringify(buildBreadcrumbJsonLd(`/matches/${m.slug}`, m.sport === 'Tennis' ? m.tournament : `${m.homeTeam} vs ${m.awayTeam}`)),
+          children: JSON.stringify(buildBreadcrumbJsonLd(`/matches/${m.slug}`, matchName)),
         },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SportsEvent",
+            "name": matchName,
+            "description": description,
+            "startDate": m.startDate,
+            "location": {
+              "@type": "Place",
+              "name": m.venue,
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": m.city,
+                "addressCountry": m.country || "India"
+              }
+            },
+            "competitor": [
+              { "@type": "SportsTeam", "name": m.homeTeam },
+              { "@type": "SportsTeam", "name": m.awayTeam }
+            ],
+            "offers": {
+              "@type": "Offer",
+              "url": "https://cricbet99.co.in/register",
+              "price": "0",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock"
+            }
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": `Who will win ${m.homeTeam} vs ${m.awayTeam}?`,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": `According to our AI models, ${m.homeTeam} has a ${m.winProbHome}% win probability while ${m.awayTeam} stands at ${m.winProbAway}%.`
+                }
+              },
+              {
+                "@type": "Question",
+                "name": `Where is the ${m.homeTeam} vs ${m.awayTeam} match being played?`,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": `The match is scheduled at ${m.venue} in ${m.city}.`
+                }
+              }
+            ]
+          }),
+        }
       ],
     };
   },
