@@ -2222,8 +2222,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group L",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["panama vs england"]
+    marketHighlights: ["Match Winner", "England to Win", "Jude Bellingham Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["panama vs england prediction", "metlife stadium world cup odds", "three lions vs panama betting"],
+    headToHead: "England won their only previous World Cup meeting 6-1 in 2018. Panama's physical resilience vs England's tactical dominance and depth.",
+    homeRecentForm: "L,W,L,D,L",
+    awayRecentForm: "W,W,W,D,W",
+    keyPlayersHome: ["Adalberto Carrasquilla (Midfield)", "Michael Murillo (Defender)", "José Fajardo (Striker)"],
+    keyPlayersAway: ["Jude Bellingham (Midfield)", "Harry Kane (Striker)", "Phil Foden (Forward)"],
+    bettingTips: [
+      "Jude Bellingham's late runs into the box are a major statistical outlier; back him for anytime scorer.",
+      "Panama's Adalberto Carrasquilla remains a potent threat on the counter.",
+      "Back 'England to Win and Over 2.5 Goals' given the quality differential."
+    ],
+    detailedNarrative: "The Three Lions look to secure their knockout spot at MetLife Stadium against a resilient Panama side. Jude Bellingham's creative genius will be the focal point against a Panamanian defense led by Murillo. Our AI models predict a masterclass in control from the English.",
+    pitchReport: "MetLife Stadium features a top-tier hybrid surface. The mild weather will suit the high-energy passing game favored by England.",
+    tacticalPreview: "England will deploy their fluid 4-2-3-1, prioritizing ball retention. Panama is expected to respond with a compact 5-4-1, focusing on neutralizing the wings.",
+    winProbHome: 10,
+    winProbAway: 90,
+    predictionInsight: "England has a high win rate against non-European opposition in recent World Cups. Their physical and technical profile is too strong for the debutants.",
+    projectedScoreHome: "0 - 3"
   },
   {
     slug: "wc2026-m68",
@@ -2238,8 +2255,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group L",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["croatia vs ghana"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Luka Modrić Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["croatia vs ghana prediction", "philadelphia world cup odds", "black stars vs vatreni betting"],
+    headToHead: "First competitive meeting. Croatia's midfield control vs Ghana's high-pressing intensity and physical pace.",
+    homeRecentForm: "W,D,W,L,W",
+    awayRecentForm: "W,L,W,D,W",
+    keyPlayersHome: ["Luka Modrić (Midfield)", "Joško Gvardiol (Defender)", "Mateo Kovačić (Midfield)"],
+    keyPlayersAway: ["Mohammed Kudus (Midfield)", "Iñaki Williams (Forward)", "Jordan Ayew (Striker)"],
+    bettingTips: [
+      "Luka Modrić's creative control is the primary market variable to watch.",
+      "Ghana's Mohammed Kudus is a clinical finisher on the break; back 'Ghana to Score Anytime'.",
+      "Back 'Both Teams to Score' given the high-octane offensive styles of both sides."
+    ],
+    detailedNarrative: "A clash of tactical philosophies in Philadelphia. Croatia's technical brilliance, led by the legendary Luka Modrić, faces the high-intensity energy of Ghana. Joško Gvardiol will be the primary defensive anchor against Ghana's Williams. Our AI match overview predicts a high-quality encounter.",
+    pitchReport: "Lincoln Financial Field features a fast-paced grass surface. This will suit the rapid ball-movement favored by the Croatian midfield.",
+    tacticalPreview: "Croatia will deploy their fluid 4-3-3, prioritizing ball retention. Ghana is expected to respond with a robust 4-2-3-1, focusing on neutralizing the wings.",
+    winProbHome: 62,
+    winProbAway: 38,
+    predictionInsight: "Croatia has a strong record against African nations in the World Cup. Their technical and tactical organization provides a significant edge.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-m69",
@@ -2254,8 +2288,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group J",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["algeria vs austria"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Marcel Sabitzer Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["algeria vs austria prediction", "kansas city world cup betting", "fennecs vs das team betting"],
+    headToHead: "Austria won their only previous competitive meeting 2-0 in 1982. Algeria's technical flair vs Austria's high-intensity pressing.",
+    homeRecentForm: "W,D,W,L,D",
+    awayRecentForm: "W,W,D,W,W",
+    keyPlayersHome: ["Riyad Mahrez (Winger)", "Said Benrahma (Winger)", "Ismaël Bennacer (Midfield)"],
+    keyPlayersAway: ["Marcel Sabitzer (Midfield)", "Konrad Laimer (Midfield)", "Christoph Baumgartner (Forward)"],
+    bettingTips: [
+      "Marcel Sabitzer's performance in high-pressure games is a major statistical factor.",
+      "Algeria's Riyad Mahrez remains a potent threat on the break; back him for anytime scorer.",
+      "Back 'Both Teams to Score' as both sides have elite attacking quality and tactical flexibility."
+    ],
+    detailedNarrative: "A fascinating tactical battle in Kansas City. Algeria's technical flair faces the high-intensity pressing system of Austria. Riyad Mahrez will be the primary creative threat for the Fennecs, while Austria will look to exploit Sabitzer's late runs. Our AI match overview predicts a high-energy encounter.",
+    pitchReport: "Arrowhead Stadium features a top-tier grass surface. The warm Kansas City weather will suit the high-stamina Austrian pressing game.",
+    tacticalPreview: "Austria will deploy their fluid 4-2-2-2, prioritizing high turnovers. Algeria is expected to respond with a compact 4-3-3, focusing on wide counters.",
+    winProbHome: 42,
+    winProbAway: 58,
+    predictionInsight: "Austria has defeated multiple top-tier African nations recently. Their tactical discipline and physical fitness are major market advantages.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-m70",
