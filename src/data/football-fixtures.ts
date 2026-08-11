@@ -52,7 +52,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersHome: ["Santiago Giménez (Striker)", "Edson Álvarez (Midfield)", "Chucky Lozano (Winger)"],
     keyPlayersAway: ["Percy Tau (Forward)", "Lyle Foster (Striker)", "Teboho Mokoena (Midfield)"],
     bettingTips: [
-      "Mexico's home advantage at the high-altitude Estadio Azteca is a decisive statistical factor.",
+      "Mexico's home advantage at the high-altitude Estadio Azteca is a key metric for Asian Handicap markets.",
       "Expect a high-intensity opening 20 minutes; back 'Early Goal' markets for premium value.",
       "Santiago Giménez to score anytime is the top-rated AI pick for this fixture."
     ],
@@ -185,7 +185,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersAway: ["John McGinn (Midfield)", "Scott McTominay (Midfield)", "Andrew Robertson (Defender)"],
     bettingTips: [
       "Scotland's defensive organization is their strongest asset; back 'Haiti Total Goals Under 0.5'.",
-      "John McGinn's late runs into the box are a consistent goal-scoring trend in major tournaments.",
+      "John McGinn's late runs into the box are a high-probability 'Anytime Scorer' marker in major tournaments.",
       "Expect a low-scoring affair as Haiti will likely park the bus to secure a historic point."
     ],
     detailedNarrative: "Scotland looks to start their World Cup journey with three points against Haiti in Boston. With a massive Scottish diaspora in the area, Gillette Stadium will feel like a home game for the Tartan Army. Haiti, making a rare World Cup appearance, will rely on their physicality and direct long balls. Our AI analysis suggests Scotland will dominate possession but may struggle to break down Haiti's stubborn low block initially.",
@@ -943,7 +943,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersHome: ["Santiago Giménez (Striker)", "Edson Álvarez (Midfield)", "Hirving Lozano (Winger)"],
     keyPlayersAway: ["Son Heung-min (Forward)", "Kim Min-jae (Defender)", "Lee Kang-in (Midfield)"],
     bettingTips: [
-      "Mexico's home advantage in Guadalajara is a decisive statistical factor.",
+      "Mexico's home advantage in Guadalajara is a key metric for Asian Handicap markets.",
       "Son Heung-min's clinical finishing is South Korea's primary threat on the break.",
       "Back 'Both Teams to Score' given the offensive tendencies of both sides."
     ],
@@ -1768,7 +1768,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersHome: ["Patrik Schick (Striker)", "Tomas Soucek (Midfield)", "Adam Hlozek (Forward)"],
     keyPlayersAway: ["Santiago Giménez (Striker)", "Edson Álvarez (Midfield)", "Hirving Lozano (Winger)"],
     bettingTips: [
-      "Mexico's home advantage at Estadio Azteca is a decisive statistical factor.",
+      "Mexico's home advantage at Estadio Azteca is a key metric for Asian Handicap markets.",
       "Czechia's aerial threat via Soucek is their primary route to goal.",
       "Back 'Mexico to Win' given their historical dominance at high altitude."
     ],
@@ -2628,7 +2628,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersHome: ["Santiago Giménez (Striker)", "Edson Álvarez (Midfield)", "Hirving Lozano (Winger)"],
     keyPlayersAway: ["Enner Valencia (Striker)", "Moisés Caicedo (Midfield)", "Pervis Estupiñán (Defender)"],
     bettingTips: [
-      "Mexico's home advantage at Estadio Azteca is a decisive statistical factor.",
+      "Mexico's home advantage at Estadio Azteca is a key metric for Asian Handicap markets.",
       "Ecuador's Moisés Caicedo is the primary engine in midfield; back him for 3+ tackles.",
       "Back 'Mexico to Win' given their historical dominance at high altitude."
     ],
@@ -3061,7 +3061,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersHome: ["Santiago Giménez (Striker)", "Edson Álvarez (Midfield)", "Hirving Lozano (Winger)"],
     keyPlayersAway: ["Harry Kane (Striker)", "Jude Bellingham (Midfield)", "Bukayo Saka (Winger)"],
     bettingTips: [
-      "Mexico's home advantage at Estadio Azteca is a decisive statistical factor.",
+      "Mexico's home advantage at Estadio Azteca is a key metric for Asian Handicap markets.",
       "Harry Kane's clinical finishing is the primary threat for England; back him for anytime scorer.",
       "Back 'Mexico to Win (in 90 mins)' as a high-value play given the altitude advantage."
     ],
