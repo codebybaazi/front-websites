@@ -66,9 +66,9 @@ export const cricketFixtures: CricketSeries[] = [
         keyPlayersHome: ["Paul Stirling", "Joshua Little", "Harry Tector"],
         keyPlayersAway: ["Rashid Khan", "Rahmanullah Gurbaz", "Fazalhaq Farooqi"],
         bettingTips: [
-          "Afghanistan's spin duo expected to dominate the middle overs.",
-          "High probability of a high-scoring match if Ireland bats first.",
-          "Rashid Khan to take 2+ wickets looks like a value bet."
+          "Afghanistan's spin duo expected to dominate the middle overs in today's match prediction.",
+          "High probability of a high-scoring match if Ireland bats first - check live cricket exchange odds.",
+          "Rashid Khan to take 2+ wickets looks like a value bet for online cricket ID users."
         ],
         detailedNarrative: "The 1st ODI between Ireland and Afghanistan at Bready is set to be a tactical masterclass. Ireland, playing in familiar home conditions, will look to exploit the early morning moisture, while Afghanistan's spin-heavy attack is expected to come alive as the pitch dries out. Our AI models predict a high-intensity start with the powerplay determining the momentum for the rest of the game.",
         pitchReport: "Bready is known for its balanced nature. Expect some grass cover to help the seamers early on, transitioning into a batting paradise by the second session.",
@@ -98,9 +98,9 @@ export const cricketFixtures: CricketSeries[] = [
         keyPlayersHome: ["Harry Tector", "Curtis Campher", "George Dockrell"],
         keyPlayersAway: ["Mohammad Nabi", "Mujeeb Ur Rahman", "Azmatullah Omarzai"],
         bettingTips: [
-          "Expect Ireland to push harder in the 2nd game to stay in the series.",
-          "Mujeeb Ur Rahman's powerplay overs will be critical.",
-          "High probability of 280+ total score if pitch remains dry."
+          "Expect Ireland to push harder in the 2nd game; follow today match winning percentage.",
+          "Mujeeb Ur Rahman's powerplay overs will be critical for your cricket betting strategy.",
+          "High probability of 280+ total score if pitch remains dry - get your online cricket ID ready."
         ],
         detailedNarrative: "The 2nd ODI continues at Bready with Afghanistan holding the lead. Ireland showed promise in the first encounter but needs more stability in their top order. Afghanistan's balanced side looks hard to beat, but home advantage for Ireland could play a role if they can execute their plans better under pressure.",
         pitchReport: "Slightly more wear on the surface compared to the 1st ODI. Spinners might get more assistance as the match progresses.",
@@ -130,9 +130,9 @@ export const cricketFixtures: CricketSeries[] = [
         keyPlayersHome: ["Mark Adair", "Andy Balbirnie", "Lorcan Tucker"],
         keyPlayersAway: ["Gulbadin Naib", "Hashmatullah Shahidi", "Rashid Khan"],
         bettingTips: [
-          "Seam movement under overcast Belfast skies will be key.",
-          "Mark Adair to take 2+ wickets is a strong probability.",
-          "Afghanistan's middle order depth to be tested on a livelier track."
+          "Seam movement under overcast Belfast skies will be key for match prediction.",
+          "Mark Adair to take 2+ wickets is a strong probability for live cricket line followers.",
+          "Afghanistan's middle order depth to be tested on a livelier track - check cricket betting tips."
         ],
         detailedNarrative: "The 3rd ODI in Belfast introduces new dynamics with a livelier pitch. Ireland's seamers will relish the extra bounce, while Afghanistan's batters will need to adjust their technique quickly. With the series in a critical phase, the tactical battle between Ireland's pace and Afghanistan's resilience will be the highlight.",
         pitchReport: "Civil Service Cricket Club offers a hard surface with good carry. Pace bowlers will find joy in the early overs, but it levels out to a high-scoring deck later.",
@@ -256,9 +256,9 @@ export const cricketFixtures: CricketSeries[] = [
         keyPlayersHome: ["Sikandar Raza", "Richard Ngarava"],
         keyPlayersAway: ["Shubman Gill", "Ravi Bishnoi"],
         bettingTips: [
-          "India to win the toss and bowl first if there is overcast condition.",
-          "Bishnoi to be the top wicket-taker in the middle overs.",
-          "High intensity game expected with 170+ par score."
+          "India to win the toss and bowl first - check today match prediction for latest updates.",
+          "Bishnoi to be the top wicket-taker in the middle overs for online cricket ID users.",
+          "High intensity game expected with 170+ par score - follow live cricket exchange."
         ],
         detailedNarrative: "The 2nd T20I at Harare will test Zimbabwe's resilience. After a tough first game, the hosts need their veterans to step up. India's young brigade looks unstoppable, but the Harare surface can be unpredictable if the sun stays out. Our AI expects a dominant show from the Indian top order.",
         pitchReport: "Flatter than the 1st T20I. Batsmen will enjoy the true bounce, but spinners might find some grip late in the evening.",
@@ -288,9 +288,9 @@ export const cricketFixtures: CricketSeries[] = [
         keyPlayersHome: ["Blessing Muzarabani", "Sikandar Raza"],
         keyPlayersAway: ["Yashasvi Jaiswal", "Arshdeep Singh"],
         bettingTips: [
-          "Jaiswal to score 30+ runs in the powerplay.",
-          "Muzarabani to exploit the morning moisture if Zimbabwe bowls first.",
-          "Clean sweep for India is the most likely outcome."
+          "Jaiswal to score 30+ runs in the powerplay; follow today ipl match style aggression.",
+          "Muzarabani to exploit the morning moisture - vital for cricket match prediction.",
+          "Clean sweep for India is the most likely outcome - log in to your Cricbet99 ID."
         ],
         detailedNarrative: "The T20I series concludes at the Harare Sports Club. India has been clinical, and Zimbabwe is playing for pride. The tactical focus for India will be testing their depth, while Zimbabwe aims to find a winning combination before the ODIs. A high-scoring game is on the cards.",
         pitchReport: "Worn out slightly due to continuous play. Change of pace will be effective for bowlers.",
