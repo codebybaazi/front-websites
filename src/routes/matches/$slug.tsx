@@ -165,12 +165,12 @@ function MatchDetailPage() {
                 </div>
                 <div className="grid gap-6 md:grid-cols-2 mt-10">
                   <div className="p-6 rounded-2xl bg-primary/5 border border-primary/10">
-                    <h3 className="text-sm font-black uppercase tracking-widest text-primary mb-3">Pitch & Conditions</h3>
-                    <p className="text-sm">{m.pitchReport || (m.sport === 'Football' ? `The technical committee reports that the surface at ${m.venue} is optimal for high-speed transitions, which suits ${m.homeTeam}'s attacking style.` : `Data from ${m.venue} indicates that ${m.homeTeam} has a significantly higher win rate when batting first on this pitch.`)}</p>
+                    <h3 className="text-sm font-black uppercase tracking-widest text-primary mb-3">{m.sport === 'Football' ? 'Tactical Preview' : 'Pitch & Conditions'}</h3>
+                    <p className="text-sm">{m.tacticalPreview || m.pitchReport || (m.sport === 'Football' ? `The technical committee reports that the surface at ${m.venue} is optimal for high-speed transitions, which suits ${m.homeTeam}'s attacking style.` : `Data from ${m.venue} indicates that ${m.homeTeam} has a significantly higher win rate when batting first on this pitch.`)}</p>
                   </div>
                   <div className="p-6 rounded-2xl bg-accent/5 border border-accent/10">
-                    <h3 className="text-sm font-black uppercase tracking-widest text-accent mb-3">Tactical Strategy</h3>
-                    <p className="text-sm">{m.tacticalPreview || (m.sport === 'Football' ? `${m.awayTeam} is likely to deploy a medium block to soak up pressure before hitting on the counter through their clinical wingers.` : `${m.awayTeam}'s recent success has come from aggressive early plays, forcing opponents onto the defensive quickly.`)}</p>
+                    <h3 className="text-sm font-black uppercase tracking-widest text-accent mb-3">{m.sport === 'Football' ? 'Squad Dynamics' : 'Tactical Strategy'}</h3>
+                    <p className="text-sm">{m.detailedNarrative || m.tacticalPreview || (m.sport === 'Football' ? `${m.awayTeam} is likely to deploy a medium block to soak up pressure before hitting on the counter through their clinical wingers.` : `${m.awayTeam}'s recent success has come from aggressive early plays, forcing opponents onto the defensive quickly.`)}</p>
                   </div>
                 </div>
               </div>
