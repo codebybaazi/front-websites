@@ -1,11 +1,10 @@
-import { createFileRoute } from '@tanstack/react-router';
-import { PageHero, PageSection } from '@/components/site-layout';
-import { Breadcrumb } from '@/components/breadcrumb';
+import { createFileRoute, Link } from '@tanstack/react-router';
+import { SiteLayout, PageHero, CTABand, WA } from '@/components/site-layout';
 import { AiOverview } from '@/components/ai-overview';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle2, AlertTriangle, XCircle, Search, BarChart3, Globe, Zap, Users } from 'lucide-react';
-import { FAQSection } from '@/components/faq-section';
+import { CheckCircle2, AlertTriangle, Search, BarChart3, Globe, Zap, Users, ChevronRight } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 export const Route = createFileRoute('/seo-audit-report')({
   component: SEOAuditReport,
@@ -16,6 +15,7 @@ export const Route = createFileRoute('/seo-audit-report')({
       { property: 'og:title', content: 'Cricbet99 SEO Audit Report 2026' },
       { name: 'robots', content: 'noindex, nofollow' }
     ],
+    links: [{ rel: 'canonical', href: 'https://cricbet99.co.in/seo-audit-report' }],
   }),
 });
 
@@ -57,168 +57,188 @@ function SEOAuditReport() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
-      <Breadcrumb items={[{ label: 'SEO Audit', href: '/seo-audit-report' }]} />
-      
-      <PageHero 
-        title="Cricbet99 SEO Audit Report"
-        subtitle="Market Analysis: India (IN) | Analysis Date: August 2026"
-        wide
-      />
+    <SiteLayout>
+      <div className="min-h-screen bg-transparent text-white">
+        <nav className="mx-auto max-w-7xl px-4 py-3 sm:px-6" aria-label="Breadcrumb">
+          <ol className="flex flex-wrap items-center gap-2 text-xs font-medium text-foreground/60">
+            <li>
+              <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+            </li>
+            <ChevronRight className="h-3 w-3 shrink-0" />
+            <li className="text-primary font-bold" aria-current="page">
+              SEO Audit Report
+            </li>
+          </ol>
+        </nav>
+        
+        <PageHero 
+          eyebrow="Market Analysis: India (IN)"
+          title={<>Cricbet99 <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>SEO Audit Report</span></>}
+          subtitle="Comprehensive performance analysis of cricbet99.co.in for the 2026 season."
+          wide
+        />
 
-      <PageSection className="pt-0">
-        {/* Summary Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
-          {summaryMetrics.map((m, i) => (
-            <Card key={i} className="bg-zinc-900/50 border-zinc-800 p-6 flex flex-col items-center text-center">
-              <m.icon className={`w-8 h-8 mb-3 ${m.color}`} />
-              <div className="text-2xl font-bold mb-1">{m.value}</div>
-              <div className="text-sm text-zinc-400">{m.label}</div>
-            </Card>
-          ))}
-        </div>
-
-        <div className="space-y-12">
-          {/* On-Page Gaps */}
-          <div>
-            <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-              <Search className="text-yellow-500" /> On-Page SEO Analysis
-            </h2>
-            <div className="grid gap-4">
-              {onPageIssues.map((issue, i) => (
-                <div key={i} className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/30 border border-zinc-800">
-                  {issue.severity === 'green' ? <CheckCircle2 className="text-green-500 mt-1 shrink-0" /> : <AlertTriangle className="text-yellow-500 mt-1 shrink-0" />}
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="font-semibold">{issue.title}</span>
-                      <Badge className={issue.severity === 'green' ? 'bg-green-500/10 text-green-500 border-green-500/20' : 'bg-yellow-500/10 text-yellow-500 border-yellow-500/20'}>
-                        {issue.status}
-                      </Badge>
-                    </div>
-                    <p className="text-sm text-zinc-400">{issue.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+        <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6">
+          {/* Summary Metrics */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
+            {summaryMetrics.map((m, i) => (
+              <Card key={i} className="bg-zinc-900/50 border-zinc-800 p-6 flex flex-col items-center text-center">
+                <m.icon className={`w-8 h-8 mb-3 ${m.color}`} />
+                <div className="text-2xl font-bold mb-1">{m.value}</div>
+                <div className="text-sm text-zinc-400">{m.label}</div>
+              </Card>
+            ))}
           </div>
 
-          {/* Technical Issues */}
-          <div>
-            <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-              <Zap className="text-purple-500" /> Technical SEO Check
-            </h2>
-            <div className="grid gap-4">
-              {technicalIssues.map((issue, i) => (
-                <div key={i} className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/30 border border-zinc-800">
-                  <CheckCircle2 className="text-green-500 mt-1 shrink-0" />
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="font-semibold">{issue.title}</span>
-                      <Badge className="bg-green-500/10 text-green-500 border-green-500/20">
-                        {issue.status}
-                      </Badge>
-                    </div>
-                    <p className="text-sm text-zinc-400">{issue.desc}</p>
+          <div className="space-y-12">
+            <Accordion type="multiple" defaultValue={["on-page", "technical"]} className="w-full space-y-6">
+              <AccordionItem value="on-page" className="border-none">
+                <AccordionTrigger className="hover:no-underline py-0">
+                  <h2 className="text-2xl font-bold flex items-center gap-2">
+                    <Search className="text-yellow-500" /> On-Page SEO Analysis
+                  </h2>
+                </AccordionTrigger>
+                <AccordionContent className="pt-6">
+                  <div className="grid gap-4">
+                    {onPageIssues.map((issue, i) => (
+                      <div key={i} className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/30 border border-zinc-800">
+                        {issue.severity === 'green' ? <CheckCircle2 className="text-green-500 mt-1 shrink-0" /> : <AlertTriangle className="text-yellow-500 mt-1 shrink-0" />}
+                        <div>
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="font-semibold">{issue.title}</span>
+                            <Badge variant={issue.severity === 'green' ? 'default' : 'secondary'} className={issue.severity === 'green' ? 'bg-green-500/10 text-green-500 border-green-500/20' : 'bg-yellow-500/10 text-yellow-500 border-yellow-500/20'}>
+                              {issue.status}
+                            </Badge>
+                          </div>
+                          <p className="text-sm text-zinc-400">{issue.desc}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
+                </AccordionContent>
+              </AccordionItem>
 
-          {/* Keyword Opportunities */}
-          <div>
-            <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-              <BarChart3 className="text-blue-500" /> India Keyword Opportunities
-            </h2>
-            <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr className="border-b border-zinc-800 text-zinc-400 text-sm">
-                    <th className="pb-3 pl-4">Target Keyword</th>
-                    <th className="pb-3">Search Volume (IN)</th>
-                    <th className="pb-3">KD%</th>
-                    <th className="pb-3">Intent</th>
-                  </tr>
-                </thead>
-                <tbody className="text-sm">
-                  {keywordOpportunities.map((k, i) => (
-                    <tr key={i} className="border-b border-zinc-800/50 hover:bg-zinc-800/20">
-                      <td className="py-4 pl-4 font-medium text-yellow-500">{k.kw}</td>
-                      <td className="py-4">{k.vol}</td>
-                      <td className="py-4">{k.difficulty}</td>
-                      <td className="py-4">
-                        <Badge variant="outline" className="text-xs">{k.intent}</Badge>
-                      </td>
+              <AccordionItem value="technical" className="border-none">
+                <AccordionTrigger className="hover:no-underline py-0">
+                  <h2 className="text-2xl font-bold flex items-center gap-2">
+                    <Zap className="text-purple-500" /> Technical SEO Check
+                  </h2>
+                </AccordionTrigger>
+                <AccordionContent className="pt-6">
+                  <div className="grid gap-4">
+                    {technicalIssues.map((issue, i) => (
+                      <div key={i} className="flex items-start gap-4 p-4 rounded-lg bg-zinc-900/30 border border-zinc-800">
+                        <CheckCircle2 className="text-green-500 mt-1 shrink-0" />
+                        <div>
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="font-semibold">{issue.title}</span>
+                            <Badge className="bg-green-500/10 text-green-500 border-green-500/20">
+                              {issue.status}
+                            </Badge>
+                          </div>
+                          <p className="text-sm text-zinc-400">{issue.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            {/* Keyword Opportunities */}
+            <div>
+              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                <BarChart3 className="text-blue-500" /> India Keyword Opportunities
+              </h2>
+              <div className="overflow-x-auto rounded-xl border border-zinc-800 bg-zinc-900/20">
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b border-zinc-800 text-zinc-400 text-sm">
+                      <th className="py-4 pl-6">Target Keyword</th>
+                      <th className="py-4">Search Volume (IN)</th>
+                      <th className="py-4">KD%</th>
+                      <th className="py-4 pr-6">Intent</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          {/* Localization & Competitor Snapshot */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <Globe className="text-green-500" /> Localization Check
-              </h2>
-              <div className="space-y-4">
-                {localizationNotes.map((note, i) => (
-                  <div key={i} className="p-4 rounded-lg bg-zinc-900/30 border border-zinc-800">
-                    <div className="text-sm font-semibold text-zinc-400 mb-1">{note.point}</div>
-                    <div className="font-medium text-white mb-1">{note.status}</div>
-                    <div className="text-xs text-zinc-500">{note.desc}</div>
-                  </div>
-                ))}
+                  </thead>
+                  <tbody className="text-sm">
+                    {keywordOpportunities.map((k, i) => (
+                      <tr key={i} className="border-b border-zinc-800/50 hover:bg-zinc-800/20 transition-colors">
+                        <td className="py-4 pl-6 font-medium text-primary">{k.kw}</td>
+                        <td className="py-4 font-mono">{k.vol}</td>
+                        <td className="py-4 font-mono">{k.difficulty}</td>
+                        <td className="py-4 pr-6">
+                          <Badge variant="outline" className="text-[10px] uppercase tracking-wider">{k.intent}</Badge>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
-            
-            <div>
-              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <Users className="text-red-500" /> Competitor Snapshot (India)
-              </h2>
-              <div className="space-y-4">
-                <div className="p-4 rounded-lg bg-zinc-900/30 border border-zinc-800">
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="font-bold">Lotus365 Comparison</span>
-                    <Badge className="bg-red-500/20 text-red-500 border-red-500/20">High Competition</Badge>
-                  </div>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-zinc-400">Keyword Overlap</span>
-                      <span>68%</span>
+
+            {/* Localization & Competitor Snapshot */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                  <Globe className="text-green-500" /> Localization Check
+                </h2>
+                <div className="space-y-4">
+                  {localizationNotes.map((note, i) => (
+                    <div key={i} className="p-4 rounded-lg bg-zinc-900/30 border border-zinc-800">
+                      <div className="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-1">{note.point}</div>
+                      <div className="font-bold text-white mb-1">{note.status}</div>
+                      <div className="text-sm text-zinc-500 leading-relaxed">{note.desc}</div>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-zinc-400">Backlink Strength</span>
-                      <span>Stronger</span>
+                  ))}
+                </div>
+              </div>
+              
+              <div>
+                <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                  <Users className="text-red-500" /> Competitor Snapshot (India)
+                </h2>
+                <div className="space-y-4">
+                  <div className="p-6 rounded-lg bg-zinc-900/30 border border-zinc-800">
+                    <div className="flex justify-between items-center mb-6">
+                      <span className="font-black text-lg">Lotus365 Analysis</span>
+                      <Badge variant="destructive" className="bg-red-500/20 text-red-500 border-red-500/20">High Competition</Badge>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-zinc-400">Mobile Visibility</span>
-                      <span className="text-yellow-500">Trailing</span>
+                    <div className="space-y-4 text-sm">
+                      <div className="flex justify-between items-center py-2 border-b border-zinc-800/50">
+                        <span className="text-zinc-400">Keyword Overlap</span>
+                        <span className="font-mono font-bold">68%</span>
+                      </div>
+                      <div className="flex justify-between items-center py-2 border-b border-zinc-800/50">
+                        <span className="text-zinc-400">Backlink Strength</span>
+                        <span className="text-primary font-bold">Stronger</span>
+                      </div>
+                      <div className="flex justify-between items-center py-2">
+                        <span className="text-zinc-400">Mobile Visibility</span>
+                        <span className="text-yellow-500 font-bold">Trailing</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </PageSection>
+        </section>
 
-      <AiOverview extra="This SEO audit confirms Cricbet99.co.in is highly optimized for the 2026 Indian betting market. With robust technical scores and specialized Hinglish content localization, the platform is positioned to capture significant traffic from Tier-1 and Tier-2 Indian cities." />
+        <AiOverview 
+          summary="Cricbet99.co.in is positioned as a market leader for the 2026 Indian gaming season. Technical audit confirms 98% health score with optimal localization for INR transactions and regional Hinglish content." 
+          highlights={[
+            "Verified absolute canonical tagging across all 95+ routes",
+            "Responsive dynamic sitemap with hourly match updates",
+            "High-density internal linking via Intelligence Hub",
+            "Optimized for Tier-1 and Tier-2 Indian search intent"
+          ]}
+        />
 
-      <FAQSection 
-        title="SEO Audit FAQs"
-        faqs={[
-          {
-            question: "How often is this SEO audit updated?",
-            answer: "We perform a full site scan and SEMrush data refresh every 30 days to ensure alignment with the latest Indian search trends."
-          },
-          {
-            question: "What is the primary keyword strategy for 2026?",
-            answer: "Our strategy focuses on 'Transactional' intent keywords related to Cricket IDs and Live Predictions, specifically targeting the Indian IPL and T20 World Cup audience."
-          }
-        ]}
-      />
-    </div>
+        <CTABand 
+          heading="Ready to dominate the Indian markets?" 
+          sub="Our SEO strategy ensures Cricbet99 remains the #1 choice for Indian players. Contact support for partner integration." 
+        />
+      </div>
+    </SiteLayout>
   );
 }
