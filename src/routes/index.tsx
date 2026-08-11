@@ -1283,10 +1283,11 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
               How To Start
             </div>
-            <h2 className="mt-6 text-4xl font-black tracking-tight md:text-6xl">
+            <h2 className="mt-6 text-4xl font-black tracking-tight md:text-6xl uppercase tracking-tighter">
               Your Cricbet99 ID in{" "}
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>six easy steps.</span>
             </h2>
+            <h3 className="mt-2 text-xs font-black text-accent/60 uppercase tracking-[0.4em]">Official 2026 Onboarding Roadmap</h3>
             <p className="mx-auto mt-5 max-w-2xl text-foreground/70 md:text-lg">
               From your first WhatsApp hello to your first winning withdrawal — a guided journey that's safe, fast, and rewarding at every stage.
             </p>
