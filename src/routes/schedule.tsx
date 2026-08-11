@@ -212,7 +212,7 @@ function Schedule() {
                               .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
                               .map((match) => (
                                 <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap md:text-wrap">
-                                  <td className="p-4 text-sm text-foreground/60 whitespace-nowrap">
+                                  <td className="p-4 text-sm text-foreground/60 md:text-wrap">
                                     {match.endDate ? (
                                       <>
                                         {(() => {
