@@ -38,6 +38,18 @@ export function LongFormPage({ content, extra }: { content: PageContent; extra?:
         subtitle={subtitle}
       />
 
+      <nav className="mx-auto max-w-4xl px-4 py-3 sm:px-6" aria-label="Breadcrumb">
+        <ol className="flex flex-wrap items-center gap-2 text-xs font-medium text-foreground/60">
+          <li>
+            <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+          </li>
+          <ChevronRight className="h-3 w-3 shrink-0" />
+          <li className="text-primary font-bold truncate max-w-[200px]" aria-current="page">
+            {title}
+          </li>
+        </ol>
+      </nav>
+
       <AiOverview 
         summary={subtitle}
         highlights={features.slice(0, 4).map(f => f.desc)}
