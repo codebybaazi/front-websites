@@ -44,14 +44,14 @@ export const tennisFixtures: TennisFixture[] = [
     category: "ATP 250",
     surface: "Hard",
     tour: "ATP",
-    marketHighlights: ["Match Winner", "Set Betting"],
-    keywords: ["brisbane international 2026 odds", "medvedev brisbane betting", "tennis betting india", "atp brisbane prediction"],
+    marketHighlights: ["Match Winner", "Set Betting", "Total Games Over/Under"],
+    keywords: ["brisbane international 2026 odds", "medvedev brisbane betting", "tennis betting india", "atp brisbane prediction", "tennis prediction today", "tennis matches today"],
     prediction: {
       winner: "Daniil Medvedev",
       score: "2-0",
       points: "High",
       confidence: 72,
-      analysis: "Medvedev's elite hard-court coverage and flat groundstrokes are perfectly suited for the quick Brisbane surface. His recent training metrics indicate a high first-serve percentage, which should minimize break opportunities for his opponent."
+      analysis: "Medvedev's elite hard-court coverage and flat groundstrokes are perfectly suited for the quick Brisbane surface. Our tennis prediction today indicates a high first-serve percentage, which should minimize break opportunities for his opponent. Check live tennis odds on Cricbet99 for real-time value."
     }
   },
   {
@@ -108,8 +108,8 @@ export const tennisFixtures: TennisFixture[] = [
     category: "ATP 250",
     surface: "Hard",
     tour: "ATP",
-    marketHighlights: ["Match Winner", "Correct Score"],
-    keywords: ["adelaide international 2026 betting", "machac adelaide odds", "tennis betting strategy", "atp adelaide picks"]
+    marketHighlights: ["Match Winner", "Correct Score", "Total Games O/U", "Set Betting"],
+    keywords: ["adelaide international 2026 betting", "machac adelaide odds", "tennis betting strategy", "atp adelaide picks", "tennis prediction today", "tennis matches today"]
   },
   {
     slug: "australian-open-2026",
@@ -127,14 +127,14 @@ export const tennisFixtures: TennisFixture[] = [
     category: "Grand Slam",
     surface: "Hard",
     tour: "Combined",
-    marketHighlights: ["Outright Winner", "Match Odds", "Quarter Winner"],
-    keywords: ["australian open 2026 odds", "alcaraz melbourne betting", "grand slam betting india", "australian open predictions 2026"],
+    marketHighlights: ["Outright Winner", "Match Odds", "Quarter Winner", "Set Handicap", "Over/Under Games"],
+    keywords: ["australian open 2026 odds", "alcaraz melbourne betting", "grand slam betting india", "australian open predictions 2026", "australian open 2026 schedule", "tennis live score today match"],
     prediction: {
       winner: "Carlos Alcaraz",
       score: "3-1",
       points: "Elite",
       confidence: 85,
-      analysis: "Alcaraz enters the Australian Open as the primary contender. His tactical versatility and physical endurance give him a massive edge in five-set formats. Expect high intensity in the opening rounds to establish psychological dominance."
+      analysis: "Alcaraz enters the Australian Open as the primary contender. His tactical versatility and physical endurance give him a massive edge in five-set formats. Expert tennis predictions today suggest high intensity in the opening rounds to establish psychological dominance. Follow the Australian Open 2026 schedule for complete coverage."
     }
   },
   {
@@ -343,14 +343,14 @@ export const tennisFixtures: TennisFixture[] = [
     category: "Masters 1000",
     surface: "Hard",
     tour: "Combined",
-    marketHighlights: ["Match Winner", "Set Handicap"],
-    keywords: ["indian wells 2026 odds", "sinner indian wells betting", "tennis betting apps india", "atp masters 1000 picks"],
+    marketHighlights: ["Match Winner", "Set Handicap", "Total Games O/U", "First Set Winner"],
+    keywords: ["indian wells 2026 odds", "sinner indian wells betting", "tennis betting apps india", "atp masters 1000 picks", "tennis prediction today", "tennis matches today"],
     prediction: {
       winner: "Jannik Sinner",
       score: "2-0",
       points: "High",
       confidence: 80,
-      analysis: "Sinner's aggressive baseline play and improved mental fortitude make him the favorite for the desert title. The slow hard courts at Indian Wells allow him to dictate play with his powerful groundstrokes."
+      analysis: "Sinner's aggressive baseline play and improved mental fortitude make him the favorite for the desert title. Our tennis prediction today suggests that the slow hard courts at Indian Wells allow him to dictate play with his powerful groundstrokes. Follow live tennis scores on Cricbet99 for real-time updates."
     }
   },
   {
