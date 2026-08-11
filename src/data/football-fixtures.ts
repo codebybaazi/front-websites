@@ -638,8 +638,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group J",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["argentina vs algeria"]
+    marketHighlights: ["Match Winner", "Argentina -1.5 Handicap", "Lionel Messi Anytime Assist", "Both Teams to Score - No"],
+    keywords: ["argentina vs algeria prediction", "arrowhead stadium world cup betting", "albiceleste vs desert foxes odds"],
+    headToHead: "Argentina won their only previous competitive meeting. Algeria is known for their technical midfield but has historically struggled against South American flair.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "W,L,W,D,W",
+    keyPlayersHome: ["Lionel Messi (Midfield)", "Lautaro Martínez (Striker)", "Alexis Mac Allister (Midfield)"],
+    keyPlayersAway: ["Riyad Mahrez (Winger)", "Said Benrahma (Forward)", "Ismaël Bennacer (Midfield)"],
+    bettingTips: [
+      "Argentina's ball retention in the middle third will be the deciding tactical factor.",
+      "Algeria's Riyad Mahrez remains a potent threat on the break; back 'Algeria Total Shots Over 8.5'.",
+      "Back 'Argentina Clean Sheet' given their organized defensive structure under Scaloni."
+    ],
+    detailedNarrative: "The world champions, Argentina, take on Algeria in Kansas City. Lionel Messi's creative genius will be the focal point against a technical Algerian side led by Mahrez. Our AI match overview predicts a masterclass in control from Argentina, while Algeria will look to exploit rare transitions. The atmosphere at Arrowhead is expected to be electric.",
+    pitchReport: "Arrowhead Stadium features a top-tier grass surface. The Kansas City weather is expected to be warm, favoring the high-intensity passing game of the Albiceleste.",
+    tacticalPreview: "Argentina will use their fluid 4-3-3, prioritizing creative freedom for Messi and quick vertical passes to Lautaro. Algeria is expected to set up in a 4-1-4-1, focusing on closing gaps in the central channel.",
+    winProbHome: 78,
+    winProbAway: 22,
+    predictionInsight: "Argentina has a high win rate in their opening group matches in major tournaments. Their technical superiority should tell over 90 minutes.",
+    projectedScoreHome: "3 - 0"
   },
   {
     slug: "wc2026-m20",
@@ -654,8 +671,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group J",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["austria vs jordan"]
+    marketHighlights: ["Match Winner", "Austria to Win to Nil", "Total Goals Under 2.5", "Marcel Sabitzer Anytime Goal"],
+    keywords: ["austria vs jordan prediction", "levis stadium world cup odds", "austria national team betting"],
+    headToHead: "First competitive meeting. Austria's high-pressing system vs Jordan's defensive resilience and direct play.",
+    homeRecentForm: "W,D,W,L,W",
+    awayRecentForm: "L,W,D,L,L",
+    keyPlayersHome: ["Marcel Sabitzer (Midfield)", "Konrad Laimer (Midfield)", "Christoph Baumgartner (Midfield)"],
+    keyPlayersAway: ["Mousa Al-Tamari (Forward)", "Yazan Al-Naimat (Striker)", "Ali Olwan (Midfield)"],
+    bettingTips: [
+      "Austria's physical presence and high press should dominate the midfield transitions.",
+      "Jordan's Mousa Al-Tamari is their primary threat on the break; back 'Jordan Over 2.5 Offsides'.",
+      "Back 'Austria to Win to Nil' for premium value given the technical gap."
+    ],
+    detailedNarrative: "Austria looks to start their campaign with a win against a determined Jordan side in San Francisco. Marcel Sabitzer's leadership will be key against a Jordan team that made a historic run in the Asian Cup. Our AI models predict a tactical battle where Austria's fitness and pressing will eventually wear down the Jordanian defense.",
+    pitchReport: "Levi's Stadium features a fast-paced grass surface. The cool San Francisco weather will suit the high-energy pressing style favored by the Austrians.",
+    tacticalPreview: "Austria will deploy an aggressive 4-2-2-2 with high fullbacks. Jordan is expected to respond with a compact 5-4-1, prioritizing a low block and hitting Austria on the break through Al-Tamari.",
+    winProbHome: 82,
+    winProbAway: 18,
+    predictionInsight: "Austria has a strong record against non-European opposition in recent years. Their physical and tactical organization is a major data point.",
+    projectedScoreHome: "2 - 0"
   },
   {
     slug: "wc2026-m21",
