@@ -1826,8 +1826,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group E",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["curacao vs cote d'ivoire"]
+    marketHighlights: ["Match Winner", "Côte d'Ivoire to Win", "Total Goals Over 2.5", "Sébastien Haller Anytime Goal"],
+    keywords: ["curacao vs cote d'ivoire prediction", "philadelphia world cup odds", "ivory coast national team betting"],
+    headToHead: "First competitive meeting. Curaçao's defensive resilience vs Côte d'Ivoire's physical intensity and technical depth.",
+    homeRecentForm: "L,W,L,D,L",
+    awayRecentForm: "W,W,W,D,W",
+    keyPlayersHome: ["Leandro Bacuna (Midfield)", "Juninho Bacuna (Midfield)", "Eloy Room (Goalkeeper)"],
+    keyPlayersAway: ["Sébastien Haller (Striker)", "Franck Kessié (Midfield)", "Simon Adingra (Winger)"],
+    bettingTips: [
+      "Sébastien Haller's physicality in the box is the primary tactical weapon; back him for anytime scorer.",
+      "Curaçao's Eloy Room will likely face 7+ shots on target; monitor 'Goalkeeper Saves'.",
+      "Back 'Côte d'Ivoire to Win' given their technical and physical superiority."
+    ],
+    detailedNarrative: "The African champions, Côte d'Ivoire, look to secure their spot in the knockouts against a determined Curaçao side. Sébastien Haller's creative leadership will be the focal point against a Curaçao defense led by Room. Our AI models predict a dominant performance from the Ivorians in Philadelphia.",
+    pitchReport: "Lincoln Financial Field features a fast-paced grass surface. This will suit Côte d'Ivoire's quick vertical transitions and technical brilliance.",
+    tacticalPreview: "Côte d'Ivoire will deploy a robust 4-3-3, prioritizing physical presence in the midfield. Curaçao is expected to respond with a compact 5-4-1, focusing on neutralizing the central areas.",
+    winProbHome: 10,
+    winProbAway: 90,
+    predictionInsight: "Côte d'Ivoire has a high win rate against non-European opposition in neutral venues. Their technical and physical organization is too strong for the debutants.",
+    projectedScoreHome: "0 - 3"
   },
   {
     slug: "wc2026-m56",
@@ -1842,8 +1859,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group E",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["ecuador vs germany"]
+    marketHighlights: ["Match Winner", "Germany to Win", "Both Teams to Score", "Jamal Musiala Anytime Goal"],
+    keywords: ["ecuador vs germany prediction", "metlife stadium world cup odds", "germany national team betting"],
+    headToHead: "Germany won their only previous competitive meeting 3-0 in 2006. Ecuador's high-intensity pressing vs Germany's technical control is the primary tactical battle.",
+    homeRecentForm: "W,D,L,W,W",
+    awayRecentForm: "W,D,W,L,W",
+    keyPlayersHome: ["Enner Valencia (Striker)", "Moisés Caicedo (Midfield)", "Pervis Estupiñán (Defender)"],
+    keyPlayersAway: ["Jamal Musiala (Midfield)", "Florian Wirtz (Midfield)", "Kai Havertz (Forward)"],
+    bettingTips: [
+      "Jamal Musiala's individual brilliance is the primary market variable to watch.",
+      "Ecuador's high-pressing intensity can be vulnerable to Germany's quick vertical passes.",
+      "Back 'Both Teams to Score' given the offensive tendencies of both sides."
+    ],
+    detailedNarrative: "A heavyweight Group E decider at MetLife Stadium. Germany looks to exert their authority against a resurgent Ecuador side. Jamal Musiala's creative genius will be tested by Ecuador's disciplined mid-block and energy. Our AI match overview predicts a masterclass in control from Germany, with both teams finding the net.",
+    pitchReport: "MetLife Stadium features a top-tier hybrid surface. The mild weather will suit the high-energy running game favored by both sides.",
+    tacticalPreview: "Germany will deploy their fluid 4-2-3-1, prioritizing creative freedom for Musiala. Ecuador is expected to respond with a robust 4-3-3, focusing on winning second balls.",
+    winProbHome: 42,
+    winProbAway: 58,
+    predictionInsight: "Germany has a strong record in tournament deciders. Their technical and tactical depth provides a significant edge in high-pressure games.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-m57",
@@ -1858,8 +1892,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group F",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["japan vs sweden"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Kaoru Mitoma Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["japan vs sweden prediction", "dallas world cup betting", "samurai blue vs sweden odds"],
+    headToHead: "First competitive meeting. Japan's high-pressing speed vs Sweden's physical presence and tactical discipline.",
+    homeRecentForm: "W,W,W,D,W",
+    awayRecentForm: "W,L,W,D,W",
+    keyPlayersHome: ["Takefusa Kubo (Winger)", "Kaoru Mitoma (Winger)", "Wataru Endō (Midfield)"],
+    keyPlayersAway: ["Alexander Isak (Striker)", "Dejan Kulusevski (Winger)", "Viktor Gyökeres (Forward)"],
+    bettingTips: [
+      "Kaoru Mitoma's speed on the indoor turf of AT&T Stadium is a major tactical weapon.",
+      "Sweden's Alexander Isak is their primary threat on the break; back 'Sweden to Score Anytime'.",
+      "Back 'Both Teams to Score' given the high-octane offensive styles of both teams."
+    ],
+    detailedNarrative: "A clash of tactical philosophies in Dallas. Japan's high-octane pressing meets Sweden's robust and physically imposing setup. Takefusa Kubo will be the primary creative threat for Japan, while Sweden will look to exploit Isak's pace in transition. Our AI match overview predicts a high-quality encounter.",
+    pitchReport: "AT&T Stadium's fast indoor turf will suit the rapid transitions favored by Japan's wingers.",
+    tacticalPreview: "Japan will deploy their fluid 4-2-3-1, prioritizing ball retention. Sweden is expected to respond with a robust 4-4-2, focusing on neutralizing the wings.",
+    winProbHome: 52,
+    winProbAway: 48,
+    predictionInsight: "Japan has defeated multiple top-tier European nations recently. Their tactical flexibility provides a slight edge in neutral venues.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-m58",
