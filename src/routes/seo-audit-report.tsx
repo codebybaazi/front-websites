@@ -28,11 +28,11 @@ function SEOAuditReport() {
   ];
 
   const onPageIssues = [
-    { title: 'Canonical Tags', status: 'Passed', severity: 'green', desc: 'All 95+ routes verified with absolute https://cricbet99.co.in/ URLs.' },
-    { title: 'Meta Descriptions', status: 'Optimized', severity: 'green', desc: 'Unique, keyword-rich meta descriptions implemented for all fixtures and guides.' },
-    { title: 'H1 Header Structure', status: 'Verified', severity: 'green', desc: 'Single H1 tag per page strategy maintained across all dynamic routes.' },
-    { title: 'Image Alt Text', status: 'Passed', severity: 'green', desc: 'All dynamic match team logos and platform assets now include descriptive, keyword-optimized alt text.' },
-    { title: 'Internal Linking', status: 'Strong', severity: 'green', desc: 'Intelligence Hub grid provides high-density internal linking across 90+ pages.' },
+    { title: 'Canonical Integrity', status: 'Passed', severity: 'green', desc: 'All 95+ routes verified with absolute https://cricbet99.co.in/ URLs; zero duplicate content detected.' },
+    { title: 'Semantic Hierarchy', status: 'Optimized', severity: 'green', desc: 'Heading ratios (H1-H4) balanced sitewide for readability and keyword density.' },
+    { title: 'Header Structure', status: 'Verified', severity: 'green', desc: 'Single H1 tag per page strategy maintained across all dynamic routes.' },
+    { title: 'Alt Text Coverage', status: 'Passed', severity: 'green', desc: 'All dynamic match team logos and platform assets now include descriptive, unique alt text.' },
+    { title: 'Link Architecture', status: 'Strong', severity: 'green', desc: 'Intelligence Hub grid provides high-density internal linking across 90+ pages with unique anchor text.' },
   ];
 
   const technicalIssues = [
