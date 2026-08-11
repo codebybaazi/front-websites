@@ -88,7 +88,8 @@ export function LongFormPage({ content, extra }: { content: PageContent; extra?:
 
       {sections?.map((s) => (
         <section key={s.heading} className="mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-8">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-black">{s.heading}</h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-black mb-1 uppercase tracking-tight">{s.heading}</h2>
+          <h3 className="text-[10px] font-black text-foreground/30 uppercase tracking-[0.4em] mb-4">Detailed Insights & Analysis</h3>
           <div className="mt-4 space-y-4 text-sm text-foreground/80 leading-relaxed sm:text-base">
             {s.body.map((p, i) => (
               <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
@@ -119,7 +120,8 @@ export function LongFormPage({ content, extra }: { content: PageContent; extra?:
 
       {faqs && faqs.length > 0 && (
         <section className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black">Frequently asked questions</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-1 uppercase tracking-tighter">Frequently asked questions</h2>
+          <h3 className="text-xs font-black text-accent/60 uppercase tracking-[0.3em] mb-8">Support Knowledge Base</h3>
           <div className="mt-5 space-y-3 sm:mt-6">
             {faqs.map((f, i) => (
               <details key={i} className="group rounded-xl border border-primary/25 bg-background/50 p-4 open:bg-background/70 sm:p-5">

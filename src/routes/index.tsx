@@ -329,12 +329,13 @@ function FaqSection() {
           <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
             <HelpCircle className="h-3.5 w-3.5" /> Support · 24/7 on WhatsApp
           </div>
-          <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl">
+          <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl uppercase tracking-tighter">
             Everything about
             <span className="ml-2 bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>
               your Cricbet99 ID.
             </span>
           </h2>
+          <h3 className="mt-2 text-xs font-black text-primary/60 uppercase tracking-[0.4em]">Expert Support & Resource Center</h3>
           <p className="mt-4 text-sm leading-relaxed text-foreground/65 md:text-base">
             Everything you need to know about India's most trusted betting family, explained by humans, for humans. No bots, no fine print.
           </p>
@@ -1200,7 +1201,18 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
               30+ Sports · 100+ Live Markets
             </div>
-            <h2 className="mt-6 text-4xl font-black tracking-tight md:text-6xl">
+            <h2 className="mt-6 text-4xl font-black tracking-tight md:text-6xl uppercase tracking-tighter">
+              Comprehensive
+              <br className="hidden sm:block" />
+              <span
+                className="bg-clip-text text-transparent"
+                style={{ backgroundImage: "var(--gradient-gold)" }}
+              >
+                Sports Selection.
+              </span>
+            </h2>
+            <h3 className="mt-3 text-sm font-black text-foreground/40 uppercase tracking-[0.5em]">Global Market Coverage & Exchange Odds</h3>
+          </div>
               One ID.{" "}
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Every sport</span>
               <br />
