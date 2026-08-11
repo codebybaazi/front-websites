@@ -176,29 +176,26 @@ function PostPage() {
 
         <div className="mt-20">
           <h3 className="text-sm font-bold uppercase tracking-widest text-foreground/60">More from the blog</h3>
-
-        <h3 className="text-sm font-bold uppercase tracking-widest text-foreground/60">More from the blog</h3>
-        <div className="mt-4 grid gap-6 md:grid-cols-3">
-          {related.map((p) => (
-            <Link
-              key={p.slug}
-              to="/blog/$slug"
-              params={{ slug: p.slug }}
-              className="group overflow-hidden rounded-2xl border border-primary/20 bg-background/60 hover:border-primary/50"
-            >
-              <div className="aspect-[16/9] w-full overflow-hidden">
-                <img src={p.hero ?? defaultHero} alt={p.title} loading="lazy" className="h-full w-full object-cover transition group-hover:scale-105" />
-              </div>
-              <div className="p-6">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-accent-foreground">{p.tag}</span>
-                <h4 className="mt-2 font-bold leading-snug">{p.title}</h4>
-              </div>
-            </Link>
-          ))}
+          <div className="mt-4 grid gap-6 md:grid-cols-3">
+            {related.map((p) => (
+              <Link
+                key={p.slug}
+                to="/blog/$slug"
+                params={{ slug: p.slug }}
+                className="group overflow-hidden rounded-2xl border border-primary/20 bg-background/60 hover:border-primary/50"
+              >
+                <div className="aspect-[16/9] w-full overflow-hidden">
+                  <img src={p.hero ?? defaultHero} alt={p.title} loading="lazy" className="h-full w-full object-cover transition group-hover:scale-105" />
+                </div>
+                <div className="p-6">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-accent-foreground">{p.tag}</span>
+                  <h4 className="mt-2 font-bold leading-snug">{p.title}</h4>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
-
-      <CTABand heading="Read up, then bet smart." sub="Get your Cricbet99 ID on WhatsApp and put what you've learned into play." />
     </SiteLayout>
   );
 }
