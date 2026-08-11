@@ -1464,10 +1464,11 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
                 <Flame className="h-3.5 w-3.5" /> Cricbet99 Journal
               </div>
-              <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl">
+              <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl uppercase tracking-tighter">
                 Recent
                 <span className="ml-2 bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>posts & analysis.</span>
               </h2>
+              <h3 className="mt-2 text-xs font-black text-primary/60 uppercase tracking-[0.4em]">Intelligence Hub & Tactical Briefings</h3>
               <p className="mt-4 text-foreground/75">
                 Sharp match previews, IPL storylines, betting strategy and platform guides — refreshed by our editorial desk every week.
               </p>
