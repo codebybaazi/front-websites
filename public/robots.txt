@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
 
 # Enhanced Content-Signals (RFC 9727 & RFC 8288 support)
 # Content-Signals: sitemap="https://cricbet99.co.in/sitemap.xml"
