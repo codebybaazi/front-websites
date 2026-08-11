@@ -111,12 +111,14 @@ export const Route = createFileRoute("/matches/$slug")({
               { 
                 "@type": "SportsTeam", 
                 "name": m.homeTeam,
-                "url": `https://cricbet99.co.in/matches/${m.slug}#analysis`
+                "url": `https://cricbet99.co.in/matches/${m.slug}#analysis`,
+                "image": `https://cricbet99.co.in/images/teams/${m.homeTeam.toLowerCase().replace(/\s+/g, '-')}.png`
               },
               { 
                 "@type": "SportsTeam", 
                 "name": m.awayTeam,
-                "url": `https://cricbet99.co.in/matches/${m.slug}#analysis`
+                "url": `https://cricbet99.co.in/matches/${m.slug}#analysis`,
+                "image": `https://cricbet99.co.in/images/teams/${m.awayTeam.toLowerCase().replace(/\s+/g, '-')}.png`
               }
             ],
             "offers": {

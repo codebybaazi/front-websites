@@ -11,15 +11,15 @@ export function generateScheduleSitemap(
   const today = new Date().toISOString().split('T')[0];
 
   const staticRoutes = [
-    "",
-    "/schedule",
-    "/matches",
-    "/cricket-schedule",
-    "/football-schedule",
-    "/tennis-schedule",
-    "/all-links",
-    "/login",
-    "/register",
+    { path: "", changefreq: "daily", priority: "1.0" },
+    { path: "/schedule", changefreq: "daily", priority: "0.9" },
+    { path: "/matches", changefreq: "always", priority: "0.9" },
+    { path: "/cricket-schedule", changefreq: "daily", priority: "0.8" },
+    { path: "/football-schedule", changefreq: "daily", priority: "0.8" },
+    { path: "/tennis-schedule", changefreq: "daily", priority: "0.8" },
+    { path: "/all-links", changefreq: "weekly", priority: "0.5" },
+    { path: "/login", changefreq: "monthly", priority: "0.3" },
+    { path: "/register", changefreq: "monthly", priority: "0.3" },
   ];
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -28,9 +28,10 @@ export function generateScheduleSitemap(
   staticRoutes.forEach(route => {
     xml += `
   <url>
-    <loc>${baseUrl}${route}</loc>
+    <loc>${baseUrl}${route.path}</loc>
     <lastmod>${today}</lastmod>
-    <priority>${route === "" ? "1.0" : "0.8"}</priority>
+    <changefreq>${route.changefreq}</changefreq>
+    <priority>${route.priority}</priority>
   </url>`;
   });
 
@@ -41,7 +42,8 @@ export function generateScheduleSitemap(
   <url>
     <loc>${baseUrl}/matches/${match.slug}</loc>
     <lastmod>${today}</lastmod>
-    <priority>0.7</priority>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
   </url>`;
     });
   });
@@ -52,7 +54,8 @@ export function generateScheduleSitemap(
   <url>
     <loc>${baseUrl}/matches/${match.slug}</loc>
     <lastmod>${today}</lastmod>
-    <priority>0.7</priority>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
   </url>`;
   });
 
@@ -62,7 +65,8 @@ export function generateScheduleSitemap(
   <url>
     <loc>${baseUrl}/matches/${match.slug}</loc>
     <lastmod>${today}</lastmod>
-    <priority>0.7</priority>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
   </url>`;
   });
 
