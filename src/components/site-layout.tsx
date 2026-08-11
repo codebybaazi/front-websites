@@ -121,7 +121,7 @@ export function SiteFooter() {
             <li><Link to="/services" className="hover:text-primary">Services</Link></li>
             <li><Link to="/platforms" className="hover:text-primary">Platforms</Link></li>
             <li><Link to="/sports-id" className="hover:text-primary">Sports ID</Link></li>
-            <li><Link to="/how-it-works" className="hover:text-primary">How It Works</Link></li>
+            <li><Link to="/how-it-works" className="hover:text-primary">Getting Started Guide</Link></li>
             <li><Link to="/blog" className="hover:text-primary">Blog</Link></li>
             <li><Link to="/faq" className="hover:text-primary">Help Center FAQ</Link></li>
             <li><Link to="/contact" className="hover:text-primary">Contact</Link></li>

@@ -79,7 +79,7 @@ function AppPage() {
           <span className="text-foreground/20">|</span>
           <Link to="/about" className="text-sm font-bold text-primary hover:underline">About Us</Link>
           <span className="text-foreground/20">|</span>
-          <Link to="/faq" className="text-sm font-bold text-primary hover:underline">Cricbet99 FAQ</Link>
+          <Link to="/faq" className="text-sm font-bold text-primary hover:underline">Support Hub FAQ</Link>
           <span className="text-foreground/20">|</span>
           <Link to="/trusted-betting-id-provider" className="text-sm font-bold text-primary hover:underline">Trusted Provider</Link>
           <span className="text-foreground/20">|</span>
