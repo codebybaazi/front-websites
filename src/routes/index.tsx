@@ -516,8 +516,8 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                 <MessageCircle className="h-5 w-5" /> Get Your Cricbet99 ID
                 <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
-              <Link to="/how-it-works" className="group/link text-sm font-bold text-foreground/80 transition-colors hover:text-primary">Getting Started Guide</Link>
-                See how it works <ChevronRight className="inline h-3.5 w-3.5 transition-transform group-hover/link:translate-x-0.5" />
+              <Link to="/how-it-works" className="group/link text-sm font-bold text-foreground/80 transition-colors hover:text-primary">
+                Getting Started Guide <ChevronRight className="inline h-3.5 w-3.5 transition-transform group-hover/link:translate-x-0.5" />
               </Link>
             </div>
 
