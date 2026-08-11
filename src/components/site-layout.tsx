@@ -205,7 +205,7 @@ export function PageHero({ eyebrow, title, subtitle, wide = false }: { eyebrow: 
         <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-primary sm:px-4 sm:py-1.5 sm:text-xs">
           {eyebrow}
         </span>
-        <h1 className={`mt-4 font-black leading-[1.08] tracking-tight sm:mt-6 sm:text-4xl md:text-5xl lg:text-6xl ${wide ? 'w-full text-4xl' : 'max-w-4xl text-3xl'}`}>
+        <h1 className={`mt-4 font-black leading-[1.08] tracking-tight sm:mt-6 md:text-4xl lg:text-5xl ${wide ? 'w-full text-3xl' : 'max-w-4xl text-2xl'}`}>
           {title}
         </h1>
         {subtitle && <p className={`mt-4 text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-lg ${wide ? 'w-full max-w-4xl' : 'max-w-2xl'}`}>{subtitle}</p>}
