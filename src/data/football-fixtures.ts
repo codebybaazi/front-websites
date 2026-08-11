@@ -2422,8 +2422,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["south africa vs canada r32"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Alphonso Davies Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["south africa vs canada prediction", "r32 world cup odds", "bafana bafana vs les rouges betting"],
+    headToHead: "First competitive meeting in a knockout stage. South Africa's high-intensity pressing vs Canada's vertical pace and home-continent support.",
+    homeRecentForm: "W,D,W,L,W",
+    awayRecentForm: "W,W,D,W,W",
+    keyPlayersHome: ["Percy Tau (Forward)", "Teboho Mokoena (Midfield)", "Ronwen Williams (Goalkeeper)"],
+    keyPlayersAway: ["Alphonso Davies (Winger)", "Jonathan David (Striker)", "Stephen Eustáquio (Midfield)"],
+    bettingTips: [
+      "Alphonso Davies's speed on the SoFi turf is the primary tactical weapon for Canada.",
+      "South Africa's Mokoena is a set-piece specialist; back 'South Africa to Score from Outside the Box'.",
+      "Back 'To Qualify: Canada' given their recent form and familiarity with North American conditions."
+    ],
+    detailedNarrative: "The Round of 32 kicks off in Los Angeles with a high-stakes encounter. South Africa's Bafana Bafana face the rising power of Canada. Our AI match overview predicts a high-energy transition game where individual brilliance from Davies or David could be the deciding factor. Expect a vibrant atmosphere at SoFi Stadium.",
+    pitchReport: "SoFi Stadium features a fast-paced grass surface. The Los Angeles heat will suit the high-stamina requirements of a knockout fixture.",
+    tacticalPreview: "Canada will deploy a fluid 4-2-3-1, prioritizing ball retention and wide overloads. South Africa is expected to respond with a compact 4-4-2, focusing on quick counters through Percy Tau.",
+    winProbHome: 42,
+    winProbAway: 58,
+    predictionInsight: "Canada has a strong record in knockout tournaments on home soil. Their tactical organization and physical fitness provide a significant edge.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-r32-2",
@@ -2438,8 +2455,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["germany vs paraguay r32"]
+    marketHighlights: ["To qualify", "Germany to Win to Nil", "Jamal Musiala Anytime Goal", "Total Goals Under 2.5"],
+    keywords: ["germany vs paraguay prediction", "r32 world cup betting", "die mannschaft vs la albirroja odds"],
+    headToHead: "Germany won their only previous World Cup meeting 1-0 in 2002. Germany's technical mastery vs Paraguay's legendary defensive grit.",
+    homeRecentForm: "W,W,W,D,W",
+    awayRecentForm: "D,W,L,D,L",
+    keyPlayersHome: ["Jamal Musiala (Midfield)", "Florian Wirtz (Midfield)", "Antonio Rüdiger (Defender)"],
+    keyPlayersAway: ["Miguel Almirón (Winger)", "Julio Enciso (Forward)", "Gustavo Gómez (Defender)"],
+    bettingTips: [
+      "Jamal Musiala's individual brilliance is the primary route to breaking the Paraguayan block.",
+      "Paraguay's Gustavo Gómez is an elite aerial defender; back 'Germany Total Corners Over 6.5'.",
+      "Back 'Germany to Win to Nil' as their defensive organization is expected to neutralize Almirón."
+    ],
+    detailedNarrative: "A tactical chess match in Boston. Germany's creative engine faces the most disciplined defense in South America. Our AI models predict a game of high possession for Germany, with Paraguay looking to exploit rare set-piece opportunities. Expect a tense, low-scoring knockout encounter.",
+    pitchReport: "Gillette Stadium features a fast synthetic surface. This will suit Germany's quick vertical passing and technical ball-control.",
+    tacticalPreview: "Germany will deploy their fluid 4-2-3-1. Paraguay is expected to set up in a deep 5-4-1, prioritizing spatial compression and clearances.",
+    winProbHome: 78,
+    winProbAway: 22,
+    predictionInsight: "Germany has never lost a Round of 32/16 fixture to South American opposition. Their tournament experience is a decisive factor.",
+    projectedScoreHome: "2 - 0"
   },
   {
     slug: "wc2026-r32-3",
@@ -2454,8 +2488,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["netherlands vs morocco r32"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Cody Gakpo Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["netherlands vs morocco prediction", "r32 world cup odds", "oranje vs atlas lions betting"],
+    headToHead: "First competitive meeting in a knockout stage. The tactical battle between the Netherlands' technical dominance and Morocco's elite defensive structure.",
+    homeRecentForm: "W,W,D,W,W",
+    awayRecentForm: "W,D,W,W,L",
+    keyPlayersHome: ["Cody Gakpo (Forward)", "Xavi Simons (Midfield)", "Virgil van Dijk (Defender)"],
+    keyPlayersAway: ["Achraf Hakimi (Defender)", "Brahim Díaz (Midfield)", "Yassine Bounou (Goalkeeper)"],
+    bettingTips: [
+      "Cody Gakpo's movement between the lines is the primary threat to the Moroccan block.",
+      "Achraf Hakimi's vertical runs are a major tactical weapon; monitor 'Morocco Total Crosses Over 12.5'.",
+      "Back 'Both Teams to Score' given the elite attacking transitions of both sides."
+    ],
+    detailedNarrative: "A clash of tactical giants in Monterrey. The Oranje take on the history-making Atlas Lions. Our AI match overview predicts a masterclass in tactical discipline from both sides, with the Netherlands' creative depth potentially being the deciding factor in extra time.",
+    pitchReport: "Estadio BBVA features a top-tier grass surface. The humidity in Monterrey will test the physical endurance of both squads.",
+    tacticalPreview: "Netherlands will deploy their fluid 3-4-3. Morocco is expected to respond with a compact 4-1-4-1, focusing on closing down Simons and Gakpo.",
+    winProbHome: 55,
+    winProbAway: 45,
+    predictionInsight: "The Netherlands has a high win rate against African opposition in tournaments. However, Morocco's record against top-tier European sides is world-class.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-r32-4",
@@ -2470,8 +2521,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["brazil vs japan r32"]
+    marketHighlights: ["To qualify", "Vinícius Jr Anytime Goal", "Total Goals Over 3.5", "Both Teams to Score"],
+    keywords: ["brazil vs japan prediction", "houston world cup odds", "selecao vs samurai blue betting"],
+    headToHead: "Brazil won their last competitive meeting 3-1 in 2017. Brazil's offensive flair vs Japan's tactical discipline and high-pressing speed.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "W,W,W,D,W",
+    keyPlayersHome: ["Vinícius Jr (Winger)", "Rodrygo (Forward)", "Bruno Guimarães (Midfield)"],
+    keyPlayersAway: ["Takefusa Kubo (Winger)", "Kaoru Mitoma (Winger)", "Wataru Endō (Midfield)"],
+    bettingTips: [
+      "Vinícius Jr's explosive pace is the primary market variable to watch.",
+      "Japan's Kaoru Mitoma is a elite dribbler; back him to have 2+ successful take-ons.",
+      "Back 'Total Goals Over 2.5' as both sides prioritize offensive transitions."
+    ],
+    detailedNarrative: "A clash of styles in Houston. The five-time world champions face the technical speed of Japan. Our AI match overview predicts a masterclass in offensive play, where Brazil's individual brilliance will be tested by Japan's collective intensity. Expect a high-octane encounter at NRG Stadium.",
+    pitchReport: "NRG Stadium features a top-tier indoor grass surface. The controlled environment will suit the technical ball-movement of both sides.",
+    tacticalPreview: "Brazil will deploy their standard 4-3-3. Japan is expected to respond with a fluid 4-2-3-1, looking to exploit rare spaces behind the Brazilian full-backs.",
+    winProbHome: 70,
+    winProbAway: 30,
+    predictionInsight: "Brazil has a dominant record in early knockout stages against non-European opposition. Their depth provides a significant edge.",
+    projectedScoreHome: "3 - 1"
   },
   {
     slug: "wc2026-r32-5",
