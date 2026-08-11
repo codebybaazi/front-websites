@@ -11,7 +11,7 @@ export const Route = createFileRoute("/services")({
   }),
   head: ({ loaderData }) => {
     const origin = loaderData?.origin ?? "";
-    const canonical = `https://cricbet99.co.in/services
+    const canonical = `https://cricbet99.co.in/services`;
     return {
       meta: [
         { title: "Cricbet99 Services — Premium Betting ID & 24/7 Support" },
