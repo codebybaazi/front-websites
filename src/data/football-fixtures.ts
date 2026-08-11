@@ -704,8 +704,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group L",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["ghana vs panama"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Mohammed Kudus Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["ghana vs panama prediction", "bmo field world cup odds", "black stars vs panama betting"],
+    headToHead: "First competitive meeting. Ghana's physical presence vs Panama's organized defensive transitions.",
+    homeRecentForm: "W,L,W,D,L",
+    awayRecentForm: "W,W,D,L,W",
+    keyPlayersHome: ["Mohammed Kudus (Midfield)", "Iñaki Williams (Striker)", "Jordan Ayew (Forward)"],
+    keyPlayersAway: ["Adalberto Carrasquilla (Midfield)", "José Fajardo (Striker)", "Eric Davis (Defender)"],
+    bettingTips: [
+      "Mohammed Kudus is the primary creative spark; back him for anytime scorer or assist.",
+      "Panama's Adalberto Carrasquilla is the key to their transitions; monitor his pass completion.",
+      "Back 'Both Teams to Score' as both sides have high-variance defensive records."
+    ],
+    detailedNarrative: "A fascinating intercontinental clash in Toronto. Ghana's Black Stars, led by the brilliant Mohammed Kudus, take on a resilient Panama side. Ghana will look to dominate the game through their physical superiority, while Panama will rely on their organized shape to frustrate the Africans. Our AI match overview predicts a high-energy encounter.",
+    pitchReport: "BMO Field's grass surface is being meticulously maintained for the World Cup. It is expected to be slightly damp, favoring quick vertical passing.",
+    tacticalPreview: "Ghana will deploy an aggressive 4-2-3-1, prioritizing Kudus's creative freedom. Panama is expected to respond with a compact 4-4-2, focusing on neutralizing the central channel and hitting on the break.",
+    winProbHome: 58,
+    winProbAway: 42,
+    predictionInsight: "Ghana has a strong record in North American tournaments. Their technical and physical profile is suited to high-intensity games.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-m22",
