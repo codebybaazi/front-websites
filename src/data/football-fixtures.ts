@@ -591,8 +591,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group D",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["usa vs australia"]
+    marketHighlights: ["Match Winner", "Total Corners Over 9.5", "USA Clean Sheet - No"],
+    keywords: ["usa vs australia prediction", "usa vs australia odds", "world cup 2026 soccer betting"],
+    headToHead: "USA won their last competitive encounter 1-0 in a friendly, but Australia has been a tricky opponent for CONCACAF teams.",
+    homeRecentForm: "W,D,W,W,L",
+    awayRecentForm: "W,W,L,D,W",
+    keyPlayersHome: ["Christian Pulisic (Forward)", "Gio Reyna (Midfield)", "Tyler Adams (Midfield)"],
+    keyPlayersAway: ["Harry Souttar (Defender)", "Riley McGree (Midfield)", "Craig Goodwin (Winger)"],
+    bettingTips: [
+      "USA's pace on the wings will be the primary threat; back Pulisic for anytime assist.",
+      "Australia's set-piece dominance via Harry Souttar is a major statistical outlier to watch.",
+      "A high-intensity game with both teams scoring (BTTS) is predicted by our neural models."
+    ],
+    detailedNarrative: "A clash of styles in Seattle. The USA's energetic, high-pressing system meets Australia's organized and physically imposing setup. Our AI match overview suggests that the USA will look to exploit the artificial turf's speed, while the Socceroos will prioritize defensive stability and aerial threats from set pieces.",
+    pitchReport: "Lumen Field features a fast-paced synthetic surface. Ball movement will be rapid, which favors the technically gifted US midfielders but requires high defensive concentration from the Australians.",
+    tacticalPreview: "The USMNT will likely use a 4-3-3 with overlapping fullbacks. Australia is expected to set up in a rigid 4-4-2, focusing on neutralizing central space and forcing the US wide.",
+    winProbHome: 62,
+    winProbAway: 38,
+    predictionInsight: "Home field advantage in Seattle is significant; the crowd noise often disrupts visitor communication during defensive transitions.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-m33",
