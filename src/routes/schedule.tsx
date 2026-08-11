@@ -248,7 +248,7 @@ function Schedule() {
                                     <div className="text-sm font-bold text-foreground">{match.player1}</div>
                                     <div className="text-[10px] text-foreground/40 italic">Prev: {match.player1}</div>
                                   </td>
-                                  <td className="p-4 text-sm text-foreground/60">{match.venue}, {match.city}</td>
+                                  <td className="p-4 text-sm text-foreground/60 xl:text-wrap">{match.venue}, {match.city}</td>
                                   <td className="p-4">
                                     <div className="flex flex-col gap-2">
                                       <Link 
