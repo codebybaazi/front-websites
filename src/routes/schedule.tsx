@@ -351,7 +351,7 @@ function Schedule() {
                                     <td className="p-4 text-sm font-medium text-foreground/80">{match.match}</td>
                                     <td className="p-4 font-bold text-foreground">{match.teams}</td>
                                     <td className="p-4 text-sm text-foreground/60 whitespace-nowrap">{match.date}</td>
-                                    <td className="p-4 text-sm text-foreground/60 xl:text-wrap">{match.venue}</td>
+                                    <td className="p-4 text-sm text-foreground/60 lg:text-wrap">{match.venue}</td>
                                     <td className="p-4">
                                       <Link 
                                         to="/matches/$slug"
