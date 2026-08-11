@@ -36,7 +36,7 @@ export const Route = createFileRoute("/matches/")({
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/matches", "Live Matches")),
+        children: JSON.stringify(buildBreadcrumbJsonLd("/matches", "All Matches & Predictions")),
       },
       {
         type: "application/ld+json",
