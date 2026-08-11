@@ -71,7 +71,8 @@ export function LongFormPage({ content, extra }: { content: PageContent; extra?:
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black">Key highlights</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-1 uppercase tracking-tighter">Key highlights</h2>
+        <h3 className="text-xs font-black text-primary/60 uppercase tracking-[0.3em] mb-8">Strategic Platform Advantages</h3>
         <div className="mt-6 grid gap-4 sm:mt-8 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
           {features.map((f) => (
             <div key={f.title} className="rounded-2xl border border-primary/25 bg-background/50 p-5 backdrop-blur sm:p-6">
