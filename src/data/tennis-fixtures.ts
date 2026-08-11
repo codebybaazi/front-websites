@@ -343,14 +343,14 @@ export const tennisFixtures: TennisFixture[] = [
     category: "Masters 1000",
     surface: "Hard",
     tour: "Combined",
-    marketHighlights: ["Match Winner", "Set Handicap"],
-    keywords: ["indian wells 2026 odds", "sinner indian wells betting", "tennis betting apps india", "atp masters 1000 picks"],
+    marketHighlights: ["Match Winner", "Set Handicap", "Total Games O/U", "First Set Winner"],
+    keywords: ["indian wells 2026 odds", "sinner indian wells betting", "tennis betting apps india", "atp masters 1000 picks", "tennis prediction today", "tennis matches today"],
     prediction: {
       winner: "Jannik Sinner",
       score: "2-0",
       points: "High",
       confidence: 80,
-      analysis: "Sinner's aggressive baseline play and improved mental fortitude make him the favorite for the desert title. The slow hard courts at Indian Wells allow him to dictate play with his powerful groundstrokes."
+      analysis: "Sinner's aggressive baseline play and improved mental fortitude make him the favorite for the desert title. Our tennis prediction today suggests that the slow hard courts at Indian Wells allow him to dictate play with his powerful groundstrokes. Follow live tennis scores on Cricbet99 for real-time updates."
     }
   },
   {
