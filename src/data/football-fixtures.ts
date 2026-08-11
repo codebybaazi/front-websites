@@ -2123,8 +2123,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group G",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["new zealand vs belgium"]
+    marketHighlights: ["Match Winner", "Belgium to Win", "Romelu Lukaku Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["new zealand vs belgium prediction", "bc place world cup odds", "all whites vs red devils betting"],
+    headToHead: "First competitive meeting. New Zealand's aerial threat vs Belgium's high-pressing technical brilliance.",
+    homeRecentForm: "L,W,D,L,W",
+    awayRecentForm: "W,W,D,L,W",
+    keyPlayersHome: ["Chris Wood (Striker)", "Liberto Cacace (Defender)", "Joe Bell (Midfield)"],
+    keyPlayersAway: ["Kevin De Bruyne (Midfield)", "Romelu Lukaku (Striker)", "Jérémy Doku (Winger)"],
+    bettingTips: [
+      "Romelu Lukaku's physicality against the New Zealand center-backs is a major tactical advantage.",
+      "New Zealand's Chris Wood remains a potent threat on the break; back 'New Zealand Total Shots Over 7.5'.",
+      "Back 'Belgium to Win' given the significant quality differential in midfield."
+    ],
+    detailedNarrative: "The Red Devils look to exert their authority in Vancouver against a resilient New Zealand side. Kevin De Bruyne's creative genius will be the focal point against an All Whites defense led by Cacace. Our AI match overview predicts a high-scoring encounter where Belgium's squad depth will prevail.",
+    pitchReport: "BC Place features a fast synthetic surface. This will suit the rapid transitions favored by Jérémy Doku and Kevin De Bruyne.",
+    tacticalPreview: "Belgium will deploy their fluid 3-4-2-1, prioritizing ball retention. New Zealand is expected to respond with a robust 5-3-2, focusing on neutralizing the wings.",
+    winProbHome: 15,
+    winProbAway: 85,
+    predictionInsight: "Belgium has a 100% win rate against non-European opposition in recent World Cup group stages. Their experience at the highest level is a major data point.",
+    projectedScoreHome: "0 - 3"
   },
   {
     slug: "wc2026-m65",
@@ -2139,8 +2156,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group H",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["cabo verde vs saudi arabia"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Salem Al-Dawsari Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["cabo verde vs saudi arabia prediction", "houston world cup odds", "green falcons vs blue sharks betting"],
+    headToHead: "First competitive meeting. Cabo Verde's flair and technical speed vs Saudi Arabia's disciplined high-pressing system.",
+    homeRecentForm: "W,L,D,W,L",
+    awayRecentForm: "W,W,L,D,W",
+    keyPlayersHome: ["Ryan Mendes (Forward)", "Bebé (Striker)", "Logan Costa (Defender)"],
+    keyPlayersAway: ["Salem Al-Dawsari (Winger)", "Firas Al-Buraikan (Striker)", "Mohammed Al-Owais (Goalkeeper)"],
+    bettingTips: [
+      "Salem Al-Dawsari's performance in major tournaments is a major statistical factor.",
+      "Cabo Verde's Ryan Mendes remains a potent threat on the break; back him for anytime scorer.",
+      "Back 'Both Teams to Score' given the high-octane offensive styles of both sides."
+    ],
+    detailedNarrative: "A fascinating tactical battle in Houston. Cabo Verde's technical flair faces the disciplined pressing of Saudi Arabia. Salem Al-Dawsari will be the primary creative threat for the Green Falcons, while Cabo Verde will look to exploit rare transitions. Our AI match overview predicts a high-energy encounter.",
+    pitchReport: "NRG Stadium features a top-tier indoor grass surface. The controlled environment will suit the technical ball-movement of both sides.",
+    tacticalPreview: "Saudi Arabia will deploy their fluid 4-1-4-1, prioritizing ball retention. Cabo Verde is expected to respond with a compact 4-3-3, focusing on wide counters.",
+    winProbHome: 45,
+    winProbAway: 55,
+    predictionInsight: "Saudi Arabia has a strong record against non-European opposition in neutral venues. Their tactical organization is a major data point.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-m66",
@@ -2155,8 +2189,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group H",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["uruguay vs spain"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Lamine Yamal Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["uruguay vs spain prediction", "guadalajara world cup odds", "la roja vs la celeste betting"],
+    headToHead: "Spain won their last competitive meeting 2-1 in 2013. Uruguay's high-intensity pressing vs Spain's technical mastery.",
+    homeRecentForm: "W,D,W,W,L",
+    awayRecentForm: "W,W,W,W,D",
+    keyPlayersHome: ["Darwin Núñez (Striker)", "Federico Valverde (Midfield)", "Ronald Araújo (Defender)"],
+    keyPlayersAway: ["Lamine Yamal (Winger)", "Rodri (Midfield)", "Nico Williams (Winger)"],
+    bettingTips: [
+      "Spain's technical dominance in midfield is expected to result in high possession (65%+).",
+      "Uruguay's Darwin Núñez is a potent threat on the break; back 'Uruguay Over 3.5 Shots on Target'.",
+      "Back 'Both Teams to Score' given the elite attacking quality on both sides."
+    ],
+    detailedNarrative: "A heavyweight Group H clash in Guadalajara. Spain's technical mastery faces the high-intensity pressing of Uruguay. Lamine Yamal's individual brilliance will be tested by Uruguay's disciplined mid-block and energy. Our AI match overview predicts a masterclass in control from Spain, but cautions against a classic Uruguayan counter-attack.",
+    pitchReport: "Estadio Akron features a top-tier grass surface. The warm Mexican weather will suit the high-energy running game favored by both sides.",
+    tacticalPreview: "Spain will deploy their fluid 4-3-3, prioritizing ball retention. Uruguay is expected to respond with a robust 4-4-2, focusing on winning second balls.",
+    winProbHome: 48,
+    winProbAway: 52,
+    predictionInsight: "Spain has a high win rate against South American opposition in recent years. Their tactical depth provides a slight edge.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-m67",
