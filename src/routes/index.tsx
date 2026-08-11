@@ -582,7 +582,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
 
                 {/* Header row */}
                 <div className="flex items-center justify-between gap-3">
-                  <img src={logo} alt="Cricbet99 official logo" className="h-7 w-auto shrink-0 drop-shadow-[0_4px_14px_rgba(0,0,0,0.55)] sm:h-8" />
+                  <img src={logo} alt="Cricbet99 Official Logo - India's Most Trusted Online Cricket ID Platform" className="h-7 w-auto shrink-0 drop-shadow-[0_4px_14px_rgba(0,0,0,0.55)] sm:h-8" />
                   <div className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-accent">
                     <BadgeCheck className="h-3 w-3" /> Verified · 2 min
                   </div>
