@@ -218,7 +218,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersAway: ["Hakan Çalhanoğlu (Midfield)", "Arda Güler (Forward)", "Barış Alper Yılmaz (Winger)"],
     bettingTips: [
       "Türkiye's technical midfield quality gives them a distinct edge in ball retention markets.",
-      "Australia's threat from set-pieces remains their best route to goal; back 'Souttar dominance in 'Total Corners' and 'Aerial Duel' markets'.",
+      "Australia's threat from set-pieces remains their best route to goal; back Harry Souttar's dominance in 'Total Corners' and 'Aerial Duel' markets.",
       "The 'Both Teams to Score' market is statistically favored given both teams' recent defensive lapses."
     ],
     detailedNarrative: "A fascinating intercontinental clash in Vancouver. Australia's physical, direct approach meets the technical flair and high-pressing style of Türkiye. Arda Güler is the one to watch for the Turkish side, while Australia will look to exploit their height advantage at every dead-ball situation. Our AI analysis predicts a high xG (Expected Goals) outcome with significant market liquidity with plenty of action in both boxes.",
