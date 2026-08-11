@@ -191,6 +191,7 @@ const trustCards = [
   {
     icon: ShieldCheck,
     title: "Trusted & Verified Since 2020",
+    description: "Cricbet99 has built a reputation as the gold standard for online cricket IDs in India.",
     points: [
       "15+ years serving Indian players — one of the country's oldest cricket ID platforms.",
       "Every ID is issued only through verified Cricbet99 agents — zero fakes.",
@@ -201,6 +202,7 @@ const trustCards = [
   {
     icon: Wallet,
     title: "Instant Deposits & Same-Day Withdrawals",
+    description: "Financial speed is our priority. We understand that quick access to your winnings is non-negotiable.",
     points: [
       "UPI, Google Pay, PhonePe, Paytm, IMPS and bank transfer — all supported 24/7.",
       "Deposits reflect in seconds; withdrawals settle in minutes, not days.",
@@ -210,7 +212,8 @@ const trustCards = [
   },
   {
     icon: Target,
-    title: "The Widest Range of Markets",
+    title: "The Widest Range of Betting Markets",
+    description: "Diversity in sports and markets ensures you never run out of winning opportunities.",
     points: [
       "One ID unlocks cricket, football, tennis, kabaddi, horse racing and live casino.",
       "Real-time odds update ball-by-ball across every major event.",
@@ -220,7 +223,8 @@ const trustCards = [
   },
   {
     icon: Lock,
-    title: "Licensed & Advanced Platform",
+    title: "Licensed & Advanced Betting Platform",
+    description: "Security and innovation go hand-in-hand to provide a seamless user experience.",
     points: [
       "Operates under international gaming compliance standards.",
       "AI-based session monitoring blocks fraud attempts in real time.",
@@ -231,6 +235,7 @@ const trustCards = [
   {
     icon: Headphones,
     title: "24/7 Human Support on WhatsApp",
+    description: "Never talk to a bot. Our dedicated account managers are available round-the-clock.",
     points: [
       "Real people — not bots — on WhatsApp, Telegram and live chat.",
       "Verified managers walk you through ID setup, deposits and payouts.",
@@ -240,7 +245,8 @@ const trustCards = [
   },
   {
     icon: Gift,
-    title: "Exclusive Bonuses & Promotions",
+    title: "Exclusive Bonuses & Promotions 2026",
+    description: "Reward your loyalty with the most generous bonus schemes in the Indian market.",
     points: [
       "100% welcome bonus up to ₹10,000 on your first deposit.",
       "Weekly cashback, refill bonuses and referral rewards for regulars.",
@@ -323,12 +329,13 @@ function FaqSection() {
           <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
             <HelpCircle className="h-3.5 w-3.5" /> Support · 24/7 on WhatsApp
           </div>
-          <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl">
+          <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl uppercase tracking-tighter">
             Everything about
             <span className="ml-2 bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>
               your Cricbet99 ID.
             </span>
           </h2>
+          <h3 className="mt-2 text-xs font-black text-primary/60 uppercase tracking-[0.4em]">Expert Support & Resource Center</h3>
           <p className="mt-4 text-sm leading-relaxed text-foreground/65 md:text-base">
             Everything you need to know about India's most trusted betting family, explained by humans, for humans. No bots, no fine print.
           </p>
@@ -502,6 +509,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                 India's #1 Online Cricket ID for Sports & Casino
               </span>
             </h1>
+            <h2 className="mt-2 text-xs font-black text-primary/60 uppercase tracking-[0.4em]">Official Licensed Exchange & Premium Betting Network</h2>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/80">
               One verified ID. Every game that matters. Bet on IPL 2026, T20 World Cup, football, tennis, kabaddi and live casino with lightning-fast UPI payouts and a real human on WhatsApp — trusted by 1 lakh+ Indian players.
             </p>
@@ -588,7 +596,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                   </div>
                 </div>
 
-                <h2 className="mt-5 text-2xl font-black tracking-tight">
+                <h3 className="mt-5 text-2xl font-black tracking-tight uppercase tracking-tighter">
                   Your ID, ready in
                   <span
                     className="ml-1.5 bg-clip-text text-transparent"
@@ -596,7 +604,8 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                   >
                     3 quick steps.
                   </span>
-                </h2>
+                </h3>
+                <h4 className="mt-1 text-[10px] font-black text-primary/60 uppercase tracking-[0.3em]">Instant Platform Integration</h4>
                 <p className="mt-2 text-sm text-foreground/70">
                   No forms. No wait. Just message us on WhatsApp and start playing on India's most trusted platform.
                 </p>
@@ -697,7 +706,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
             >
               <Trophy className="h-3.5 w-3.5" /> Why Indian Players Trust Cricbet99
             </div>
-            <h2 className="mt-6 text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
+            <h2 className="mt-6 text-4xl font-black leading-[1.05] tracking-tight md:text-6xl uppercase tracking-tighter">
               A premium, secure & rewarding
               <br className="hidden sm:block" />
               <span
@@ -707,6 +716,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                 online betting experience.
               </span>
             </h2>
+            <h3 className="mt-3 text-sm font-black text-primary/60 uppercase tracking-[0.5em]">Industry-Leading Security & Market Liquidity</h3>
             <p className="mx-auto mt-5 max-w-2xl text-base text-foreground/70 md:text-lg">
               Sharper odds. Faster payouts. A support team that actually picks up — every single time. Here's what 1 lakh+ Indian bettors already know.
             </p>
@@ -768,7 +778,10 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                     />
                   </div>
 
-                  <h3 className="relative text-lg font-extrabold tracking-tight">{c.title}</h3>
+                  <h3 className="relative text-xl font-extrabold tracking-tight">{c.title}</h3>
+                  <h4 className="relative mt-2 text-xs font-bold text-accent tracking-[0.1em] uppercase">
+                    {(c as any).description}
+                  </h4>
                   <div
                     aria-hidden
                     className="relative mt-3 h-px w-10 opacity-70"
@@ -813,7 +826,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               <Sparkles className="h-3.5 w-3.5" /> Just Launched
             </span>
 
-            <h2 className="mt-6 text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
+            <h2 className="mt-6 text-4xl font-black leading-[1.05] tracking-tight md:text-6xl uppercase tracking-tighter">
               <span
                 className="bg-clip-text text-transparent"
                 style={{ backgroundImage: "var(--gradient-gold)" }}
@@ -823,6 +836,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               <br className="hidden sm:block" />
               <span className="text-foreground/90">Games on Cricbet99.</span>
             </h2>
+            <h3 className="mt-2 text-xs font-black text-primary/60 uppercase tracking-[0.4em]">Exclusive 2026 Table & Crash Game Releases</h3>
             <p className="mt-4 max-w-2xl text-base text-foreground/70 md:text-lg">
               Fresh titles, live dealers and instant-win crash favourites — the hottest tables on the platform, all playable from your existing Cricbet99 ID.
             </p>
@@ -994,7 +1008,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
             <span className="inline-flex items-center gap-2 rounded-full border border-accent/50 bg-accent/10 px-3.5 py-1 text-[10px] font-black uppercase tracking-[0.28em] text-accent">
               <Gamepad2 className="h-3 w-3" /> Player Favourites
             </span>
-            <h2 className="mt-4 text-3xl font-black leading-[1.1] tracking-tight md:text-5xl">
+            <h2 className="mt-4 text-3xl font-black leading-[1.1] tracking-tight md:text-5xl uppercase tracking-tighter">
               <span className="text-foreground/90">Popular </span>
               <span
                 className="bg-clip-text text-transparent"
@@ -1004,6 +1018,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               </span>
               <span className="text-foreground/90"> on Cricbet99</span>
             </h2>
+            <h3 className="mt-2 text-xs font-black text-accent/60 uppercase tracking-[0.4em]">High-RTP Exchange Tables & Live Dealers</h3>
             <p className="mt-3 max-w-xl text-sm text-foreground/70 md:text-base">
               Six all-time hits played daily by our members — smooth gameplay, fair odds and instant payouts on every table.
             </p>
@@ -1191,12 +1206,17 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
               30+ Sports · 100+ Live Markets
             </div>
-            <h2 className="mt-6 text-4xl font-black tracking-tight md:text-6xl">
-              One ID.{" "}
-              <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Every sport</span>
-              <br />
-              <span className="text-foreground/90">you love.</span>
+            <h2 className="mt-6 text-4xl font-black tracking-tight md:text-6xl uppercase tracking-tighter">
+              Comprehensive
+              <br className="hidden sm:block" />
+              <span
+                className="bg-clip-text text-transparent"
+                style={{ backgroundImage: "var(--gradient-gold)" }}
+              >
+                Sports Selection.
+              </span>
             </h2>
+            <h3 className="mt-3 text-sm font-black text-foreground/40 uppercase tracking-[0.5em]">Global Market Coverage & Exchange Odds</h3>
             <p className="mx-auto mt-5 max-w-2xl text-foreground/70 md:text-lg">
               From an IPL run-chase to a Grand Slam final — deep coverage, sharp odds, and buttery-fast in-play action across every sport that matters.
             </p>
@@ -1268,10 +1288,11 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
               How To Start
             </div>
-            <h2 className="mt-6 text-4xl font-black tracking-tight md:text-6xl">
+            <h2 className="mt-6 text-4xl font-black tracking-tight md:text-6xl uppercase tracking-tighter">
               Your Cricbet99 ID in{" "}
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>six easy steps.</span>
             </h2>
+            <h3 className="mt-2 text-xs font-black text-accent/60 uppercase tracking-[0.4em]">Official 2026 Onboarding Roadmap</h3>
             <p className="mx-auto mt-5 max-w-2xl text-foreground/70 md:text-lg">
               From your first WhatsApp hello to your first winning withdrawal — a guided journey that's safe, fast, and rewarding at every stage.
             </p>
@@ -1362,12 +1383,13 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
               Live Casino · HD Streaming
             </div>
-            <h2 className="mt-6 text-4xl font-black tracking-tight md:text-6xl">
+            <h2 className="mt-6 text-4xl font-black tracking-tight md:text-6xl uppercase tracking-tighter">
               India's most-loved{" "}
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>casino tables</span>
               <br />
               <span className="text-foreground/90">— streaming live, 24/7.</span>
             </h2>
+            <h3 className="mt-3 text-sm font-black text-accent/60 uppercase tracking-[0.5em]">Global Professional Gaming Standards</h3>
             <p className="mx-auto mt-5 max-w-2xl text-foreground/70 md:text-lg">
               Real dealers. Real stakes. Real wins. Every table is broadcast in crystal-clear HD with certified fair-play RNG and near-zero latency — one Cricbet99 wallet, endless action.
             </p>
@@ -1447,10 +1469,11 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
                 <Flame className="h-3.5 w-3.5" /> Cricbet99 Journal
               </div>
-              <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl">
+              <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl uppercase tracking-tighter">
                 Recent
                 <span className="ml-2 bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>posts & analysis.</span>
               </h2>
+              <h3 className="mt-2 text-xs font-black text-primary/60 uppercase tracking-[0.4em]">Intelligence Hub & Tactical Briefings</h3>
               <p className="mt-4 text-foreground/75">
                 Sharp match previews, IPL storylines, betting strategy and platform guides — refreshed by our editorial desk every week.
               </p>
@@ -1537,10 +1560,11 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
             <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
               <ClipboardCheck className="h-3.5 w-3.5" /> Verified Winners · Real Payouts
             </div>
-            <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl">
+            <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl uppercase tracking-tighter">
               Trusted by punters who
               <span className="ml-2 bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>actually win.</span>
             </h2>
+            <h3 className="mt-2 text-xs font-black text-accent/60 uppercase tracking-[0.4em]">Verified Community Testimonials</h3>
             <p className="mt-4 text-sm leading-relaxed text-foreground/65 md:text-base">
               Unedited words from real Cricbet99 members — verified IDs, verified withdrawals, straight from WhatsApp.
             </p>

@@ -311,9 +311,10 @@ function MatchDetailPage() {
                <div className="absolute top-0 right-0 p-4 opacity-10">
                  <Timer className="w-24 h-24" />
                </div>
-               <h2 className="text-xl font-black uppercase tracking-[0.2em] text-primary mb-6 flex items-center gap-2">
+               <h2 className="text-xl font-black uppercase tracking-[0.2em] text-primary mb-2 flex items-center gap-2">
                  <Zap className="h-5 w-5" /> Quick Summary
                </h2>
+               <h3 className="text-sm font-bold text-foreground/60 mb-6 uppercase tracking-widest">Crucial Match Briefing</h3>
                <p className="text-lg font-medium leading-relaxed text-foreground/90">
                  {m.homeTeam} vs {m.awayTeam} is one of the most anticipated fixtures in the {m.tournament}. With {m.homeTeam} showing {(m.homeRecentForm?.split('W').length || 1) > 2 ? 'strong' : 'mixed'} recent form, this match at {m.venue} is set to be a high-scoring encounter with massive betting liquidity.
                </p>
@@ -336,9 +337,10 @@ function MatchDetailPage() {
             {/* AI Match Overview (Detailed) */}
             <div className="rounded-[2.5rem] border border-white/5 bg-white/[0.02] p-10 relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <h2 className="text-2xl font-black flex items-center gap-3 mb-8">
+              <h2 className="text-2xl font-black flex items-center gap-3 mb-2">
                 <Sparkles className="h-6 w-6 text-primary animate-pulse" /> AI Match Overview
               </h2>
+              <h3 className="text-xs font-black text-primary/60 uppercase tracking-[0.3em] mb-8">Deep Analytical Forecast</h3>
               <div className="prose prose-invert max-w-none text-foreground/80 leading-relaxed space-y-6">
                 <div className="text-lg">
                   {m.detailedNarrative || aiAnalysis.detailedNarrative}
@@ -489,9 +491,10 @@ function MatchDetailPage() {
               <div className="absolute top-0 right-0 p-8 opacity-5">
                 <BarChart3 className="w-32 h-32" />
               </div>
-              <h2 className="text-2xl font-black flex items-center gap-3 mb-10 uppercase tracking-widest">
+              <h2 className="text-2xl font-black flex items-center gap-3 mb-2 uppercase tracking-widest">
                 <TrendingUp className="h-6 w-6 text-primary" /> {m.sport === 'Football' ? 'Projected Score & HT/FT' : m.sport === 'Tennis' ? 'Predicted score & set markets' : 'Projected Scoreline & Over-by-Over'}
               </h2>
+              <h3 className="text-xs font-black text-foreground/40 uppercase tracking-[0.25em] mb-10">Real-time Performance Metrics</h3>
               <div className="grid gap-12 md:grid-cols-2">
                 <div className="space-y-6">
                    <div className="flex items-center gap-3 p-4 rounded-xl bg-primary/10 border border-primary/20">
@@ -571,7 +574,8 @@ function MatchDetailPage() {
 
             {/* About Team A vs Team B */}
             <div className="space-y-6">
-              <h2 className="text-2xl font-black uppercase tracking-widest">About {m.sport === 'Tennis' ? 'this round' : `${m.homeTeam} vs ${m.awayTeam}`}</h2>
+              <h2 className="text-2xl font-black uppercase tracking-widest mb-1">About {m.sport === 'Tennis' ? 'this round' : `${m.homeTeam} vs ${m.awayTeam}`}</h2>
+              <h3 className="text-[10px] font-black text-foreground/30 uppercase tracking-[0.4em] mb-6">Historical Background & Contestants</h3>
               <div className="prose prose-invert max-w-none text-foreground/70 leading-relaxed">
                 <p>
                   The rivalry between {m.homeTeam} and {m.awayTeam} is a highlight of the {m.tournament}. {m.headToHead || `Historically, these two teams have provided some of the most competitive encounters in ${m.sport}.`}
@@ -584,9 +588,10 @@ function MatchDetailPage() {
 
             {/* Popular Betting Markets */}
             <div className="space-y-10">
-              <h2 className="text-2xl font-black flex items-center gap-3 uppercase tracking-widest">
+              <h2 className="text-2xl font-black flex items-center gap-3 uppercase tracking-widest mb-1">
                 <BarChart3 className="h-6 w-6 text-primary" /> Popular Betting Markets
               </h2>
+              <h3 className="text-[10px] font-black text-primary/40 uppercase tracking-[0.3em] mb-10">High-Volume Exchange Opportunities</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                  {(m.sport === 'Cricket' 
                    ? ["Match Winner", "Total Sixes", "Session Runs", "Fancy Bets", "Top Batsman", "Top Bowler", "Next Wicket", "Over/Under"]
@@ -609,9 +614,10 @@ function MatchDetailPage() {
                <div className="absolute top-0 right-0 p-8 opacity-5">
                  <History className="w-32 h-32" />
                </div>
-               <h2 className="text-3xl font-black flex items-center gap-3 uppercase tracking-tighter">
+               <h2 className="text-3xl font-black flex items-center gap-3 uppercase tracking-tighter mb-1">
                 <Lightbulb className="h-8 w-8 text-primary" /> {m.sport === 'Tennis' ? 'Match Betting Strategy' : 'Betting Strategy'}
               </h2>
+              <h3 className="text-xs font-black text-accent/60 uppercase tracking-[0.4em] mb-8">Professional Tactical Guidance</h3>
               <div className="grid gap-6">
                 {(m.bettingTips || [
                    m.sport === 'Football' ? `Analyze the starting lineups carefully; injuries to key defenders in ${m.homeTeam}'s squad could shift the odds toward over 2.5 goals.` : 
@@ -630,7 +636,8 @@ function MatchDetailPage() {
 
             {/* Why Bet on... */}
             <div className="space-y-8">
-              <h2 className="text-2xl font-black uppercase tracking-widest text-center">Why bet on {m.homeTeam} vs {m.awayTeam} with Cricbet99?</h2>
+              <h2 className="text-2xl font-black uppercase tracking-widest text-center mb-1">Why bet on {m.homeTeam} vs {m.awayTeam} with Cricbet99?</h2>
+              <h3 className="text-[10px] font-black text-foreground/30 uppercase tracking-[0.5em] text-center mb-10">India's Most Professional Exchange Experience</h3>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {[
                   { t: "Fastest Withdrawals", d: "15-minute guaranteed payouts via UPI.", i: Zap },
@@ -669,9 +676,12 @@ function MatchDetailPage() {
 
             {/* FAQs */}
             <div className="pt-20 border-t border-white/10">
-              <div className="flex items-center gap-3 mb-10">
-                <HelpCircle className="h-8 w-8 text-primary" />
-                <h2 className="text-3xl font-black uppercase tracking-tighter">Analytical FAQ</h2>
+              <div className="flex flex-col gap-1 mb-10">
+                <div className="flex items-center gap-3">
+                  <HelpCircle className="h-8 w-8 text-primary" />
+                  <h2 className="text-3xl font-black uppercase tracking-tighter">Analytical FAQ</h2>
+                </div>
+                <h3 className="text-xs font-black text-foreground/40 uppercase tracking-[0.3em] ml-11">Expert Answers to Critical Match Questions</h3>
               </div>
               <Accordion type="single" collapsible className="w-full space-y-4">
                 {faqs.map((faq, i) => (
