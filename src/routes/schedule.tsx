@@ -347,7 +347,7 @@ function Schedule() {
                               </thead>
                               <tbody>
                                 {series.matches.map((match) => (
-                                  <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap">
+                                  <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap xl:text-wrap">
                                     <td className="p-4 text-sm font-medium text-foreground/80">{match.match}</td>
                                     <td className="p-4 font-bold text-foreground">{match.teams}</td>
                                     <td className="p-4 text-sm text-foreground/60 whitespace-nowrap">{match.date}</td>
