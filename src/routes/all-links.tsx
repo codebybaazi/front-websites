@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { blogPosts } from "@/data/blog-posts";
 import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
+import { AiOverview } from "@/components/ai-overview";
 
 export const Route = createFileRoute("/all-links")({
   head: () => ({
@@ -167,7 +168,17 @@ function AllLinks() {
           ))}
         </div>
       </section>
+      <AiOverview 
+        summary="Cricbet99 Directory: Every link you need for IPL 2026, live casino games, and expert betting strategies in one secure place."
+        highlights={[
+          "Official 2026 Sports Schedule",
+          "Verified ID Registration Links",
+          "Instant Withdrawal Support Hub",
+          "Advanced Betting Strategy Guides"
+        ]}
+      />
       <CTABand 
+
         heading="Couldn't find what you need?" 
         sub="Our 24/7 WhatsApp support team is ready to help you with ID creation, deposits, or any queries you have." 
       />

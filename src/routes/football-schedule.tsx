@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import SchedulePage from './schedule'
 import { buildBreadcrumbJsonLd } from '@/components/long-form-page'
+import { AiOverview } from '@/components/ai-overview'
 
 export const Route = createFileRoute('/football-schedule')({
   head: () => ({
@@ -19,5 +20,18 @@ export const Route = createFileRoute('/football-schedule')({
       },
     ],
   }),
-  component: () => <SchedulePage initialTab="Football" />,
+  component: () => (
+    <>
+      <SchedulePage initialTab="Football" />
+      <AiOverview 
+        summary="FIFA World Cup & Football Schedule Hub: Comprehensive 2026 calendar covering Premier League, UCL, and international fixtures."
+        highlights={[
+          "FIFA World Cup 2026 Calendar",
+          "Premier League Matchday Data",
+          "Champions League Key Dates",
+          "Global Soccer Event Intelligence"
+        ]}
+      />
+    </>
+  ),
 })

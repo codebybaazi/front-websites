@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
+import { AiOverview } from "@/components/ai-overview";
 import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
 
 export const Route = createFileRoute("/horse-racing")({
@@ -52,6 +53,17 @@ function HorseRacing() {
           ))}
         </div>
       </section>
+
+      <AiOverview 
+        summary="Back your first winner on Cricbet99 with elite horse racing markets. From Indian turf clubs to Royal Ascot, we bring the track to your screen."
+        highlights={[
+          "Win, place, and exotic racing markets available",
+          "Coverage of all major Indian and global meets",
+          "Secure racing IDs issued via WhatsApp instantly",
+          "Fastest payout settlements in the racing circuit"
+        ]}
+      />
+
       <CTABand heading="Back your first winner." sub="Message us on WhatsApp and get your Cricbet99 racing ID in minutes." />
     </SiteLayout>
   );

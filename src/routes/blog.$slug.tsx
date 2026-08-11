@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteLayout, CTABand } from "@/components/site-layout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { blogPosts, getPostBySlug } from "@/data/blog-posts";
+import { AiOverview } from "@/components/ai-overview";
 import defaultHero from "@/assets/stadium.webp";
 
 export const Route = createFileRoute("/blog/$slug")({
@@ -146,7 +147,13 @@ function PostPage() {
         )}
       </article>
 
+      <AiOverview 
+        summary={post.excerpt}
+        highlights={post.sections.map((s: any) => s.heading).slice(0, 4)}
+      />
+
       <section className="mx-auto max-w-7xl px-6 pb-16">
+
         <h3 className="text-sm font-bold uppercase tracking-widest text-foreground/60">More from the blog</h3>
         <div className="mt-4 grid gap-6 md:grid-cols-3">
           {related.map((p) => (
