@@ -233,13 +233,13 @@ function MatchDetailPage() {
                   <div className="p-6 rounded-2xl bg-background/40 border border-white/5">
                     <h4 className="text-xs font-black uppercase text-primary mb-2 tracking-widest">Winning Momentum</h4>
                     <p className="text-xs text-foreground/60 leading-relaxed">
-                      AI modeling suggests {m.homeTeam} has a slight edge due to their {m.sport === 'Football' ? 'home conversion rates' : 'familiarity with venue conditions'} and superior {m.sport === 'Football' ? 'defensive metrics' : 'net run rate'} in the tournament.
+                      AI modeling suggests {m.homeTeam} has a slight edge due to their {m.sport === 'Football' ? 'high xG conversion rates' : 'familiarity with venue conditions'} and superior {m.sport === 'Football' ? 'defensive block metrics' : 'net run rate'} in the tournament.
                     </p>
                   </div>
                   <div className="p-6 rounded-2xl bg-background/40 border border-white/5">
                     <h4 className="text-xs font-black uppercase text-accent mb-2 tracking-widest">Challenger Outlook</h4>
                     <p className="text-xs text-foreground/60 leading-relaxed">
-                      {m.awayTeam} can flip the odds if they manage to {m.sport === 'Football' ? 'control the midfield tempo' : 'take early wickets'} during the {m.sport === 'Football' ? 'first half' : 'powerplay'}, where {m.homeTeam} has shown statistical vulnerability.
+                      {m.awayTeam} can flip the odds if they manage to {m.sport === 'Football' ? 'exploit the high-line defense' : 'take early wickets'} during the {m.sport === 'Football' ? 'transition phase' : 'powerplay'}, where {m.homeTeam} has shown tactical vulnerability.
                     </p>
                   </div>
                 </div>
