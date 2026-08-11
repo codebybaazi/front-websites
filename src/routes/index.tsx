@@ -774,7 +774,10 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                     />
                   </div>
 
-                  <h3 className="relative text-lg font-extrabold tracking-tight">{c.title}</h3>
+                  <h3 className="relative text-xl font-extrabold tracking-tight">{c.title}</h3>
+                  <h4 className="relative mt-2 text-xs font-bold text-accent tracking-[0.1em] uppercase">
+                    {(c as any).description}
+                  </h4>
                   <div
                     aria-hidden
                     className="relative mt-3 h-px w-10 opacity-70"
