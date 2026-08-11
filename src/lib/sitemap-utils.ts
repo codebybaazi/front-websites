@@ -1,6 +1,7 @@
 import { CricketSeries } from "@/data/cricket-fixtures";
 import { FootballFixture } from "@/data/football-fixtures";
 import { TennisFixture } from "@/data/tennis-fixtures";
+import { blogPosts } from "@/data/blog-posts";
 
 export function generateScheduleSitemap(
   cricket: CricketSeries[],
@@ -17,9 +18,18 @@ export function generateScheduleSitemap(
     { path: "/cricket-schedule", changefreq: "daily", priority: "0.8" },
     { path: "/football-schedule", changefreq: "daily", priority: "0.8" },
     { path: "/tennis-schedule", changefreq: "daily", priority: "0.8" },
+    { path: "/blog", changefreq: "daily", priority: "0.8" },
+    { path: "/betting-guides", changefreq: "weekly", priority: "0.7" },
+    { path: "/casino", changefreq: "daily", priority: "0.8" },
+    { path: "/ipl-betting", changefreq: "always", priority: "0.9" },
+    { path: "/cricket", changefreq: "always", priority: "0.9" },
+    { path: "/football", changefreq: "daily", priority: "0.8" },
+    { path: "/tennis", changefreq: "daily", priority: "0.8" },
+    { path: "/horse-racing", changefreq: "daily", priority: "0.7" },
     { path: "/all-links", changefreq: "weekly", priority: "0.5" },
-    { path: "/login", changefreq: "monthly", priority: "0.3" },
-    { path: "/register", changefreq: "monthly", priority: "0.3" },
+    { path: "/faq", changefreq: "monthly", priority: "0.4" },
+    { path: "/about", changefreq: "monthly", priority: "0.3" },
+    { path: "/contact", changefreq: "monthly", priority: "0.3" },
   ];
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -32,6 +42,17 @@ export function generateScheduleSitemap(
     <lastmod>${today}</lastmod>
     <changefreq>${route.changefreq}</changefreq>
     <priority>${route.priority}</priority>
+  </url>`;
+  });
+
+  // Add Blog Posts
+  blogPosts.forEach(post => {
+    xml += `
+  <url>
+    <loc>${baseUrl}/blog/${post.slug}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>`;
   });
 
