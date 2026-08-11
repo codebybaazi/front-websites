@@ -2199,7 +2199,7 @@ export const footballFixtures: FootballFixture[] = [
     bettingTips: [
       "Spain's technical dominance in midfield is expected to result in high possession (65%+).",
       "Uruguay's Darwin Núñez is a potent threat on the break; back 'Uruguay Over 3.5 Shots on Target'.",
-      "Back 'Both Teams to Score' given the elite attacking quality on both sides."
+      "Monitor 'Total Cards Over 3.5' as high-stakes knockout intensity often leads to tactical fouls."
     ],
     detailedNarrative: "A heavyweight Group H clash in Guadalajara. Spain's technical mastery faces the high-intensity pressing of Uruguay. Lamine Yamal's individual brilliance will be tested by Uruguay's disciplined mid-block and energy. Our AI match overview predicts a masterclass in control from Spain, but cautions against a classic Uruguayan counter-attack.",
     pitchReport: "Estadio Akron features a top-tier grass surface. The warm Mexican weather will suit the high-energy running game favored by both sides.",
@@ -2298,7 +2298,7 @@ export const footballFixtures: FootballFixture[] = [
     bettingTips: [
       "Marcel Sabitzer's performance in high-pressure games is a major statistical factor.",
       "Algeria's Riyad Mahrez remains a potent threat on the break; back him for anytime scorer.",
-      "Back 'Both Teams to Score' as both sides have elite attacking quality and tactical flexibility."
+      "Target 'BTTS - Yes' in the second half when tactical adjustments typically lead to defensive spacing issues."
     ],
     detailedNarrative: "A fascinating tactical battle in Kansas City. Algeria's technical flair faces the high-intensity pressing system of Austria. Riyad Mahrez will be the primary creative threat for the Fennecs, while Austria will look to exploit Sabitzer's late runs. Our AI match overview predicts a high-energy encounter.",
     pitchReport: "Arrowhead Stadium features a top-tier grass surface. The warm Kansas City weather will suit the high-stamina Austrian pressing game.",
@@ -2597,7 +2597,7 @@ export const footballFixtures: FootballFixture[] = [
     bettingTips: [
       "Erling Haaland's scoring record in tournaments is elite; back him for anytime scorer.",
       "Côte d'Ivoire's Adingra is a potent threat on the wing; back him to provide an assist.",
-      "Back 'Both Teams to Score' given the elite attacking quality on both sides."
+      "Monitor 'Total Cards Over 3.5' as high-stakes knockout intensity often leads to tactical fouls."
     ],
     detailedNarrative: "A generational clash in Dallas. The African champions face the raw power of Norway's attack. Erling Haaland will be the primary threat, while Martin Ødegaard will look to orchestrate the Norwegian transitions. Our AI match overview predicts a high-quality encounter with plenty of offensive action at AT&T Stadium.",
     pitchReport: "AT&T Stadium features a fast-paced synthetic surface. This will suit the rapid transitions favored by both Haaland and Adingra.",
@@ -2729,7 +2729,7 @@ export const footballFixtures: FootballFixture[] = [
     bettingTips: [
       "Kevin De Bruyne's creative depth in midfield is the primary market variable to watch.",
       "Senegal's Nicolas Jackson is a potent threat in the box; back 'Senegal Total Shots Over 10.5'.",
-      "Back 'Both Teams to Score' given the elite attacking quality on both sides."
+      "Monitor 'Total Cards Over 3.5' as high-stakes knockout intensity often leads to tactical fouls."
     ],
     detailedNarrative: "A heavyweight knockout clash in Seattle. The technical brilliance of Belgium faces the physical power of Senegal. De Bruyne's creative genius will be tested by Koulibaly's defensive organization. Our AI match overview predicts a high-intensity encounter where a single moment of individual magic will decide it.",
     pitchReport: "Lumen Field features a fast-paced synthetic surface. This will suit the rapid transitions favored by both Doku and Jackson.",
@@ -2927,7 +2927,7 @@ export const footballFixtures: FootballFixture[] = [
     bettingTips: [
       "Mohamed Salah's individual brilliance is the primary route to breaking the Australian block.",
       "Australia's Harry Souttar is a major aerial threat; monitor 'Australia Total Corners Over 5.5'.",
-      "Back 'Both Teams to Score' as both sides have elite attacking quality and tactical flexibility."
+      "Target 'BTTS - Yes' in the second half when tactical adjustments typically lead to defensive spacing issues."
     ],
     detailedNarrative: "A clash of tactical philosophies in Dallas. The physical set-piece dominance of Australia faces the technical flair of Egypt's golden generation. Mohamed Salah's individual brilliance will be tested by the clinical organization of the Socceroos. Our AI match overview predicts a high-intensity encounter at AT&T Stadium.",
     pitchReport: "AT&T Stadium features a fast-paced synthetic surface. This will suit the rapid transitions favored by both Salah and Goodwin.",
