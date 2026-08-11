@@ -221,42 +221,80 @@ function MatchDetailPage() {
         eyebrow={`${m.sport} · ${m.tournament}`}
         title={
           m.sport === 'Tennis' ? (
-            <div className="flex flex-col items-center gap-4">
-              <span className="text-3xl md:text-5xl font-black uppercase tracking-tighter bg-clip-text text-transparent text-center px-4" style={{ backgroundImage: "var(--gradient-gold)" }}>
+            <div className="flex flex-col items-center gap-6">
+              <span className="text-2xl md:text-4xl font-black uppercase tracking-tighter bg-clip-text text-transparent text-center px-4" style={{ backgroundImage: "var(--gradient-gold)" }}>
                 {m.tournament}
               </span>
               {m.showPlayerMatchup && m.homeTeam && m.awayTeam && (
                 <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-                  <span className="text-xl md:text-3xl font-black uppercase tracking-tighter">{m.homeTeam}</span>
-                  <span className="text-base md:text-lg font-bold bg-primary/20 px-3 py-1.5 rounded-full border border-primary/30">VS</span>
-                  <span className="text-xl md:text-3xl font-black uppercase tracking-tighter">{m.awayTeam}</span>
+                  <div className="flex flex-col items-center gap-4 group">
+                    <img 
+                      src={`https://cricbet99.co.in/images/teams/${m.homeTeam.toLowerCase().replace(/\s+/g, '-')}.png`} 
+                      alt={`${m.homeTeam} official team logo - ${m.sport} match analysis`}
+                      className="w-16 h-16 md:w-24 md:h-24 object-contain filter drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-transform hover:scale-110"
+                      onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                    />
+                    <span className="text-xl md:text-3xl font-black uppercase tracking-tighter">{m.homeTeam}</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2">
+                    <span className="text-base md:text-lg font-bold bg-primary/20 px-3 py-1.5 rounded-full border border-primary/30">VS</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-4 group">
+                    <img 
+                      src={`https://cricbet99.co.in/images/teams/${m.awayTeam.toLowerCase().replace(/\s+/g, '-')}.png`} 
+                      alt={`${m.awayTeam} official team logo - ${m.sport} match analysis`}
+                      className="w-16 h-16 md:w-24 md:h-24 object-contain filter drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-transform hover:scale-110"
+                      onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                    />
+                    <span className="text-xl md:text-3xl font-black uppercase tracking-tighter">{m.awayTeam}</span>
+                  </div>
                 </div>
               )}
             </div>
           ) : (
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-              <div className="flex flex-col items-center gap-2">
-                <span className="text-3xl md:text-5xl font-black uppercase tracking-tighter">{m.homeTeam}</span>
-                {m.homeRecentForm && <div className="flex gap-1">
-                  {m.homeRecentForm.split(',').map((f: string, i: number) => (
-                    <span key={i} className={cn("w-5 h-5 rounded text-[10px] flex items-center justify-center font-bold", f.trim() === 'W' ? 'bg-green-500/20 text-green-500' : 'bg-red-500/20 text-red-500')}>
-                      {f.trim()}
-                    </span>
-                  ))}
-                </div>}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
+              <div className="flex flex-col items-center gap-4 group">
+                <img 
+                  src={`https://cricbet99.co.in/images/teams/${m.homeTeam.toLowerCase().replace(/\s+/g, '-')}.png`} 
+                  alt={`${m.homeTeam} official team logo - ${m.sport} match analysis`}
+                  className="w-20 h-20 md:w-32 md:h-32 object-contain filter drop-shadow-[0_0_20px_rgba(255,255,255,0.15)] transition-transform hover:scale-110"
+                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                />
+                <div className="flex flex-col items-center gap-2">
+                  <span className="text-2xl md:text-4xl font-black uppercase tracking-tighter">{m.homeTeam}</span>
+                  {m.homeRecentForm && <div className="flex gap-1">
+                    {m.homeRecentForm.split(',').map((f: string, i: number) => (
+                      <span key={i} className={cn("w-5 h-5 rounded text-[10px] flex items-center justify-center font-bold", f.trim() === 'W' ? 'bg-green-500/20 text-green-500' : 'bg-red-500/20 text-red-500')}>
+                        {f.trim()}
+                      </span>
+                    ))}
+                  </div>}
+                </div>
               </div>
-              <span className="text-lg md:text-xl font-bold bg-primary/20 px-5 py-2.5 rounded-full border border-primary/30 shadow-[0_0_20px_rgba(212,175,55,0.2)]">VS</span>
-              <div className="flex flex-col items-center gap-2">
-                <span className="text-3xl md:text-5xl font-black uppercase tracking-tighter bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>
-                  {m.awayTeam}
-                </span>
-                {m.awayRecentForm && <div className="flex gap-1">
-                  {m.awayRecentForm.split(',').map((f: string, i: number) => (
-                    <span key={i} className={cn("w-5 h-5 rounded text-[10px] flex items-center justify-center font-bold", f.trim() === 'W' ? 'bg-green-500/20 text-green-500' : 'bg-red-500/20 text-red-500')}>
-                      {f.trim()}
-                    </span>
-                  ))}
-                </div>}
+              
+              <div className="flex flex-col items-center gap-4">
+                <span className="text-lg md:text-xl font-bold bg-primary/20 px-6 py-3 rounded-full border border-primary/30 shadow-[0_0_25px_rgba(212,175,55,0.25)]">VS</span>
+              </div>
+
+              <div className="flex flex-col items-center gap-4 group">
+                <img 
+                  src={`https://cricbet99.co.in/images/teams/${m.awayTeam.toLowerCase().replace(/\s+/g, '-')}.png`} 
+                  alt={`${m.awayTeam} official team logo - ${m.sport} match analysis`}
+                  className="w-20 h-20 md:w-32 md:h-32 object-contain filter drop-shadow-[0_0_20px_rgba(255,255,255,0.15)] transition-transform hover:scale-110"
+                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                />
+                <div className="flex flex-col items-center gap-2">
+                  <span className="text-2xl md:text-4xl font-black uppercase tracking-tighter bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>
+                    {m.awayTeam}
+                  </span>
+                  {m.awayRecentForm && <div className="flex gap-1">
+                    {m.awayRecentForm.split(',').map((f: string, i: number) => (
+                      <span key={i} className={cn("w-5 h-5 rounded text-[10px] flex items-center justify-center font-bold", f.trim() === 'W' ? 'bg-green-500/20 text-green-500' : 'bg-red-500/20 text-red-500')}>
+                        {f.trim()}
+                      </span>
+                    ))}
+                  </div>}
+                </div>
               </div>
             </div>
           )

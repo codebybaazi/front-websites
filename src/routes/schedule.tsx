@@ -391,7 +391,23 @@ function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
                                 {series.matches.map((match) => (
                                   <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap md:text-wrap">
                                     <td className="p-4 text-sm font-medium text-foreground/80">{match.match}</td>
-                                    <td className="p-4 font-bold text-foreground">{match.teams}</td>
+                                    <td className="p-4">
+                                      <div className="flex items-center gap-3">
+                                        <img 
+                                          src={`https://cricbet99.co.in/images/teams/${match.homeTeam?.toLowerCase().replace(/\s+/g, '-')}.png`} 
+                                          alt={`${match.homeTeam} logo - Official Match Fixture`}
+                                          className="w-6 h-6 object-contain"
+                                          onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                        />
+                                        <span className="font-bold text-foreground">{match.teams}</span>
+                                        <img 
+                                          src={`https://cricbet99.co.in/images/teams/${match.awayTeam?.toLowerCase().replace(/\s+/g, '-')}.png`} 
+                                          alt={`${match.awayTeam} logo - Official Match Fixture`}
+                                          className="w-6 h-6 object-contain"
+                                          onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                        />
+                                      </div>
+                                    </td>
                                     <td className="p-4 text-sm text-foreground/60 md:text-wrap">{match.date}</td>
                                     <td className="p-4 text-sm text-foreground/60 md:text-wrap">{match.venue}</td>
                                     <td className="p-4">
@@ -420,8 +436,22 @@ function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
                                       {match.date}
                                     </div>
                                   </div>
-                                  <div className="text-base font-bold text-foreground">
-                                    {match.teams}
+                                  <div className="flex items-center gap-3">
+                                    <img 
+                                      src={`https://cricbet99.co.in/images/teams/${match.homeTeam?.toLowerCase().replace(/\s+/g, '-')}.png`} 
+                                      alt={`${match.homeTeam} logo - Official Match Fixture`}
+                                      className="w-6 h-6 object-contain"
+                                      onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                    />
+                                    <div className="text-base font-bold text-foreground">
+                                      {match.teams}
+                                    </div>
+                                    <img 
+                                      src={`https://cricbet99.co.in/images/teams/${match.awayTeam?.toLowerCase().replace(/\s+/g, '-')}.png`} 
+                                      alt={`${match.awayTeam} logo - Official Match Fixture`}
+                                      className="w-6 h-6 object-contain"
+                                      onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                    />
                                   </div>
                                   <div className="flex items-center gap-1.5 text-[11px] text-foreground/60">
                                     <MapPin className="w-3.5 h-3.5 text-primary/70" />
@@ -456,7 +486,21 @@ function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
                           </div>
                           <div>
                             <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">{event.cat}</div>
-                            <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{event.e}</h3>
+                            <div className="flex items-center gap-3">
+                              <img 
+                                src={`https://cricbet99.co.in/images/teams/${(event.e.split(' vs ')[0] || '').toLowerCase().replace(/\s+/g, '-')}.png`} 
+                                alt={`${event.e.split(' vs ')[0]} logo - Official Match Fixture`}
+                                className="w-8 h-8 object-contain"
+                                onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                              />
+                              <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{event.e}</h3>
+                              <img 
+                                src={`https://cricbet99.co.in/images/teams/${(event.e.split(' vs ')[1] || '').toLowerCase().replace(/\s+/g, '-')}.png`} 
+                                alt={`${event.e.split(' vs ')[1]} logo - Official Match Fixture`}
+                                className="w-8 h-8 object-contain"
+                                onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                              />
+                            </div>
                             <div className="flex items-center gap-2 text-sm text-foreground/60 mt-1">
                               <MapPin className="w-3.5 h-3.5" />
                               {event.v}

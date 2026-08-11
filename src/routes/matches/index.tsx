@@ -171,9 +171,25 @@ function MatchesPage() {
 
                   <div className="flex flex-col gap-4">
                     <div className="flex items-center justify-between gap-4">
-                      <span className="text-xl sm:text-2xl font-black uppercase tracking-tighter truncate">{m.homeTeam}</span>
+                      <div className="flex items-center gap-3 truncate">
+                        <img 
+                          src={`https://cricbet99.co.in/images/teams/${m.homeTeam.toLowerCase().replace(/\s+/g, '-')}.png`} 
+                          alt={`${m.homeTeam} official logo - Today match prediction`}
+                          className="w-8 h-8 object-contain shrink-0"
+                          onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                        />
+                        <span className="text-lg sm:text-xl font-black uppercase tracking-tighter truncate">{m.homeTeam}</span>
+                      </div>
                       <span className="text-[9px] sm:text-[10px] font-bold bg-primary/10 text-primary px-1.5 sm:px-2 py-1 rounded border border-primary/20 shrink-0">VS</span>
-                      <span className="text-xl sm:text-2xl font-black uppercase tracking-tighter truncate text-right">{m.awayTeam}</span>
+                      <div className="flex items-center gap-3 truncate justify-end">
+                        <span className="text-lg sm:text-xl font-black uppercase tracking-tighter truncate text-right">{m.awayTeam}</span>
+                        <img 
+                          src={`https://cricbet99.co.in/images/teams/${m.awayTeam.toLowerCase().replace(/\s+/g, '-')}.png`} 
+                          alt={`${m.awayTeam} official logo - Today match prediction`}
+                          className="w-8 h-8 object-contain shrink-0"
+                          onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                        />
+                      </div>
                     </div>
 
                     <div className="flex items-center gap-2 text-[10px] font-bold text-foreground/40 uppercase tracking-widest mt-2">
