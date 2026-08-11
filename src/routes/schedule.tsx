@@ -133,7 +133,7 @@ function Schedule() {
                                       <td className="p-4 text-sm font-medium text-foreground/80">{match.stage}</td>
                                       <td className="p-4 font-bold text-foreground">{match.homeTeam} vs {match.awayTeam}</td>
                                       <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'eee, dd MMM yyyy · HH:mm')}</td>
-                                      <td className="p-4 text-sm text-foreground/60">{match.venue}, {match.city}</td>
+                                      <td className="p-4 text-sm text-foreground/60 xl:text-wrap">{match.venue}, {match.city}</td>
                                       <td className="p-4">
                                         <Link 
                                           to="/matches/$slug"
