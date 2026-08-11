@@ -191,6 +191,7 @@ const trustCards = [
   {
     icon: ShieldCheck,
     title: "Trusted & Verified Since 2020",
+    description: "Cricbet99 has built a reputation as the gold standard for online cricket IDs in India.",
     points: [
       "15+ years serving Indian players — one of the country's oldest cricket ID platforms.",
       "Every ID is issued only through verified Cricbet99 agents — zero fakes.",
@@ -201,6 +202,7 @@ const trustCards = [
   {
     icon: Wallet,
     title: "Instant Deposits & Same-Day Withdrawals",
+    description: "Financial speed is our priority. We understand that quick access to your winnings is non-negotiable.",
     points: [
       "UPI, Google Pay, PhonePe, Paytm, IMPS and bank transfer — all supported 24/7.",
       "Deposits reflect in seconds; withdrawals settle in minutes, not days.",
@@ -210,7 +212,8 @@ const trustCards = [
   },
   {
     icon: Target,
-    title: "The Widest Range of Markets",
+    title: "The Widest Range of Betting Markets",
+    description: "Diversity in sports and markets ensures you never run out of winning opportunities.",
     points: [
       "One ID unlocks cricket, football, tennis, kabaddi, horse racing and live casino.",
       "Real-time odds update ball-by-ball across every major event.",
@@ -220,7 +223,8 @@ const trustCards = [
   },
   {
     icon: Lock,
-    title: "Licensed & Advanced Platform",
+    title: "Licensed & Advanced Betting Platform",
+    description: "Security and innovation go hand-in-hand to provide a seamless user experience.",
     points: [
       "Operates under international gaming compliance standards.",
       "AI-based session monitoring blocks fraud attempts in real time.",
@@ -231,6 +235,7 @@ const trustCards = [
   {
     icon: Headphones,
     title: "24/7 Human Support on WhatsApp",
+    description: "Never talk to a bot. Our dedicated account managers are available round-the-clock.",
     points: [
       "Real people — not bots — on WhatsApp, Telegram and live chat.",
       "Verified managers walk you through ID setup, deposits and payouts.",
@@ -240,7 +245,8 @@ const trustCards = [
   },
   {
     icon: Gift,
-    title: "Exclusive Bonuses & Promotions",
+    title: "Exclusive Bonuses & Promotions 2026",
+    description: "Reward your loyalty with the most generous bonus schemes in the Indian market.",
     points: [
       "100% welcome bonus up to ₹10,000 on your first deposit.",
       "Weekly cashback, refill bonuses and referral rewards for regulars.",
