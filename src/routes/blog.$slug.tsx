@@ -42,8 +42,12 @@ export const Route = createFileRoute("/blog/$slug")({
             headline: post.title,
             description: post.excerpt,
             datePublished: post.date,
-            dateModified: post.date,
-            author: { "@type": "Organization", name: "Cricbet99", url: "https://cricbet99.co.in" },
+            dateModified: post.dateModified || post.date,
+            author: { 
+              "@type": "Person", 
+              "name": post.author || "Cricbet99 Editorial",
+              "url": "https://cricbet99.co.in/about"
+            },
             publisher: {
               "@type": "Organization",
               name: "Cricbet99",
@@ -105,9 +109,22 @@ function PostPage() {
   return (
     <SiteLayout>
       <article className="mx-auto max-w-3xl px-6 pt-16 pb-8">
-        <div className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest">
+        <div className="flex flex-wrap items-center gap-y-2 gap-x-4 text-[10px] font-bold uppercase tracking-widest text-foreground/50">
           <span className="inline-flex rounded-full bg-accent/20 px-3 py-1 text-accent-foreground">{post.tag}</span>
-          <span className="text-foreground/50">{new Date(post.date).toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}</span>
+          <div className="flex items-center gap-1.5">
+            <span className="text-primary/60">By</span>
+            <span className="text-foreground/90">{post.author || "Cricbet99 Editorial"}</span>
+          </div>
+          <div className="flex items-center gap-1.5 border-l border-white/10 pl-4">
+            <span className="text-primary/60">Published</span>
+            <span className="text-foreground/90">{new Date(post.date).toLocaleDateString("en-IN", { year: "numeric", month: "short", day: "numeric" })}</span>
+          </div>
+          {post.dateModified && post.dateModified !== post.date && (
+            <div className="flex items-center gap-1.5 border-l border-white/10 pl-4">
+              <span className="text-primary/60">Updated</span>
+              <span className="text-foreground/90">{new Date(post.dateModified).toLocaleDateString("en-IN", { year: "numeric", month: "short", day: "numeric" })}</span>
+            </div>
+          )}
         </div>
         <h1 className="mt-4 text-4xl font-black leading-tight md:text-5xl">{post.title}</h1>
         <p className="mt-4 text-lg text-foreground/70">{post.excerpt}</p>
