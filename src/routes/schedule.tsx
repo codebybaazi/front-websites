@@ -201,7 +201,6 @@ function Schedule() {
                             <tr className="border-b border-primary/10 bg-primary/5">
                               <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Dates</th>
                               <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Tournament</th>
-                              <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Tour/Surface</th>
                               <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Defending Champ</th>
                               <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Venue</th>
                               <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Details</th>
