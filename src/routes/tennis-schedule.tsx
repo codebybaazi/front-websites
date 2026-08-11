@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import SchedulePage from './schedule'
+import { buildBreadcrumbJsonLd } from '@/components/long-form-page'
 
 export const Route = createFileRoute('/tennis-schedule')({
   head: () => ({
@@ -11,6 +12,12 @@ export const Route = createFileRoute('/tennis-schedule')({
       { property: "og:url", content: "https://cricbet99.co.in/tennis-schedule" },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/tennis-schedule" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/tennis-schedule", "2026 Tennis Schedule")),
+      },
+    ],
   }),
   component: () => <SchedulePage initialTab="Tennis" />,
 })
