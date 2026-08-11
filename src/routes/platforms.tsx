@@ -11,7 +11,7 @@ export const Route = createFileRoute("/platforms")({
   }),
   head: ({ loaderData }) => {
     const origin = loaderData?.origin ?? "";
-    const canonical = `https://cricbet99.co.in/platforms`;
+    const canonical = `https://cricbet99.co.in/platforms
     return {
       meta: [
         { title: "Cricbet99 Platforms — Official Betting App & Web Exchange" },
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/platforms")({
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/platforms`;", "Cricbet99 Platforms — Official Betting App & Web Exchange")),
+        children: JSON.stringify(buildBreadcrumbJsonLd("/platforms", "Cricbet99 Platforms — Official Betting App & Web Exchange")),
       },
     ],
     };

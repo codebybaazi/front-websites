@@ -2,5 +2,15 @@ import { createFileRoute } from '@tanstack/react-router'
 import SchedulePage from './schedule'
 
 export const Route = createFileRoute('/football-schedule')({
+  head: () => ({
+    meta: [
+      { title: "2026 Football Schedule & Live Soccer Calendar | FIFA World Cup 2026 | Cricbet99" },
+      { name: "description", content: "Official 2026 football schedule and live soccer calendar. Get FIFA World Cup 2026 fixtures, Premier League dates, and UCL match details on Cricbet99." },
+      { property: "og:title", content: "2026 Football Schedule & Live Soccer Calendar — Cricbet99" },
+      { property: "og:description", content: "Definitive guide to the 2026 football calendar. FIFA World Cup fixtures, Premier League, and major league events with live betting analytics." },
+      { property: "og:url", content: "https://cricbet99.co.in/football-schedule" },
+    ],
+    links: [{ rel: "canonical", href: "https://cricbet99.co.in/football-schedule" }],
+  }),
   component: () => <SchedulePage initialTab="Football" />,
 })
