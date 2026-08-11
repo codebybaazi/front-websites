@@ -27,7 +27,7 @@ export const Route = createFileRoute("/matches/")({
       { name: "twitter:title", content: "Live Matches & Betting Intelligence 2026 | Cricbet99" },
       { name: "twitter:description", content: "Real-time cricket, football, and tennis betting analysis with live odds and AI predictions." },
       { name: "twitter:image", content: "https://cricbet99.co.in/og-image.jpg" },
-      { name: "keywords", content: "cricbet99 matches, live cricket betting, football match predictions, tennis betting tips, IPL 2026 schedule, sports exchange odds, live score updates" },
+      { name: "keywords", content: "cricbet99 matches, live cricket betting, football match predictions, tennis betting tips, IPL 2026 schedule, sports exchange odds, live score updates, online cricket ID, cricket prediction today, today match prediction, today match winner" },
     ],
     links: [
       { rel: "canonical", href: "https://cricbet99.co.in/matches" },
