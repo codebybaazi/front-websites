@@ -1241,7 +1241,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                       Live markets
                     </span>
                     <span className="inline-flex items-center gap-1 text-xs font-bold text-primary transition-transform group-hover:translate-x-1">
-                      View Market Details
+                      Market Analysis
                       <span aria-hidden>→</span>
                     </span>
                   </div>
