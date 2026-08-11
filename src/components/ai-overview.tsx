@@ -31,7 +31,7 @@ export function AiOverview({ summary, highlights }: AiOverviewProps) {
                 <Sparkles className="h-5 w-5 text-accent animate-pulse" />
                 <div className="absolute inset-0 blur-sm bg-accent/40 animate-pulse" />
               </div>
-              <span className="text-xs font-black uppercase tracking-[0.25em] text-primary">Improve internal linking</span>
+              <span className="text-xs font-black uppercase tracking-[0.25em] text-primary">Intelligence Hub</span>
             </div>
 
             <div>
