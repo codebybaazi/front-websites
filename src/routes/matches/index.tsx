@@ -145,6 +145,7 @@ function MatchesPage() {
                 to="/matches/$slug"
                 params={{ slug: m.slug }}
                 className="group relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-white/[0.02] transition-all hover:bg-white/[0.05] hover:border-primary/30 hover:scale-[1.02] flex flex-col"
+                title={`Bet on ${m.homeTeam} vs ${m.awayTeam}`}
               >
                 {/* Visual Accent */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
