@@ -1554,10 +1554,11 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
             <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
               <ClipboardCheck className="h-3.5 w-3.5" /> Verified Winners · Real Payouts
             </div>
-            <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl">
+            <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl uppercase tracking-tighter">
               Trusted by punters who
               <span className="ml-2 bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>actually win.</span>
             </h2>
+            <h3 className="mt-2 text-xs font-black text-accent/60 uppercase tracking-[0.4em]">Verified Community Testimonials</h3>
             <p className="mt-4 text-sm leading-relaxed text-foreground/65 md:text-base">
               Unedited words from real Cricbet99 members — verified IDs, verified withdrawals, straight from WhatsApp.
             </p>
