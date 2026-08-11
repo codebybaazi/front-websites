@@ -23,7 +23,7 @@ export const Route = createFileRoute("/matches/$slug")({
   head: ({ loaderData }) => {
     if (!loaderData?.match) return { title: "Match Not Found | Cricbet99" };
     const m = loaderData.match;
-    const title = `${m.homeTeam} vs ${m.awayTeam} ${m.sport} Match Prediction, Betting Tips & Odds | Cricbet99`;
+    const title = `${m.sport === 'Tennis' ? m.tournament : `${m.homeTeam} vs ${m.awayTeam}`} Match Prediction, Betting Tips & Odds | Cricbet99`;
     const description = `Live ${m.sport} analysis for ${m.homeTeam} vs ${m.awayTeam} at ${m.venue}. Who will win today's match? Expert AI predictions, pitch report, and best betting markets on Cricbet99.`;
     
     return {
@@ -42,7 +42,7 @@ export const Route = createFileRoute("/matches/$slug")({
       scripts: [
         {
           type: "application/ld+json",
-          children: JSON.stringify(buildBreadcrumbJsonLd(`/matches/${m.slug}`, `${m.homeTeam} vs ${m.awayTeam}`)),
+          children: JSON.stringify(buildBreadcrumbJsonLd(`/matches/${m.slug}`, m.sport === 'Tennis' ? m.tournament : `${m.homeTeam} vs ${m.awayTeam}`)),
         },
       ],
     };
