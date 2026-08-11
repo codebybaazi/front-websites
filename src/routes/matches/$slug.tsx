@@ -574,7 +574,8 @@ function MatchDetailPage() {
 
             {/* About Team A vs Team B */}
             <div className="space-y-6">
-              <h2 className="text-2xl font-black uppercase tracking-widest">About {m.sport === 'Tennis' ? 'this round' : `${m.homeTeam} vs ${m.awayTeam}`}</h2>
+              <h2 className="text-2xl font-black uppercase tracking-widest mb-1">About {m.sport === 'Tennis' ? 'this round' : `${m.homeTeam} vs ${m.awayTeam}`}</h2>
+              <h3 className="text-[10px] font-black text-foreground/30 uppercase tracking-[0.4em] mb-6">Historical Background & Contestants</h3>
               <div className="prose prose-invert max-w-none text-foreground/70 leading-relaxed">
                 <p>
                   The rivalry between {m.homeTeam} and {m.awayTeam} is a highlight of the {m.tournament}. {m.headToHead || `Historically, these two teams have provided some of the most competitive encounters in ${m.sport}.`}
