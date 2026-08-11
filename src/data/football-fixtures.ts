@@ -440,8 +440,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group H",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["saudi arabia vs uruguay"]
+    marketHighlights: ["Match Winner", "Total Goals Under 2.5", "Darwin Núñez Anytime Goal", "Uruguay to Win to Nil"],
+    keywords: ["saudi arabia vs uruguay prediction", "hard rock stadium world cup odds", "uruguay national team betting"],
+    headToHead: "Uruguay won their last competitive meeting 1-0 in the 2018 World Cup. Saudi Arabia has shown significant tactical improvement under high-profile coaching.",
+    homeRecentForm: "L,W,D,L,W",
+    awayRecentForm: "W,W,D,W,W",
+    keyPlayersHome: ["Salem Al-Dawsari (Winger)", "Firas Al-Buraikan (Striker)", "Mohammed Al-Owais (Goalkeeper)"],
+    keyPlayersAway: ["Darwin Núñez (Striker)", "Federico Valverde (Midfield)", "Ronald Araújo (Defender)"],
+    bettingTips: [
+      "Uruguay's defensive discipline under Marcelo Bielsa is a major market factor.",
+      "Saudi Arabia's Salem Al-Dawsari remains a potent threat on the counter.",
+      "Back 'Uruguay to Win to Nil' given their physical dominance in the defensive third."
+    ],
+    detailedNarrative: "A clash of tactical endurance in Miami. Saudi Arabia looks to repeat their historic upset of Argentina against a rejuvenated Uruguay. Uruguay, known for their 'Garra Charrúa' spirit, will look to dominate the transitions through Valverde. Our AI models suggest Uruguay will control the central zones, while Saudi Arabia will rely on their compact shape to frustrate the South Americans.",
+    pitchReport: "Hard Rock Stadium features a top-tier grass surface. The Miami heat will be a significant factor, potentially favoring the desert-acclimated Saudi players in the second half.",
+    tacticalPreview: "Saudi Arabia will deploy a high-pressing 4-1-4-1. Uruguay is expected to counter with an aggressive 4-3-3, focusing on vertical transitions and early balls to Darwin Núñez.",
+    winProbHome: 22,
+    winProbAway: 78,
+    predictionInsight: "Uruguay's win rate in North American conditions is notably high. The technical gap in the final third should be the deciding factor.",
+    projectedScoreHome: "0 - 2"
   },
   {
     slug: "wc2026-m14",
@@ -456,8 +473,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group H",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["spain vs cabo verde"]
+    marketHighlights: ["Spain -2.5 Handicap", "Total Goals Over 3.5", "Lamine Yamal Anytime Goal", "Spain Clean Sheet"],
+    keywords: ["spain vs cabo verde prediction", "atlanta world cup soccer betting", "la roja match odds"],
+    headToHead: "First competitive meeting. Spain's high-possession style vs Cabo Verde's physical resilience in transition.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "W,L,D,W,L",
+    keyPlayersHome: ["Lamine Yamal (Winger)", "Rodri (Midfield)", "Pedri (Midfield)"],
+    keyPlayersAway: ["Bebé (Forward)", "Ryan Mendes (Winger)", "Garry Rodrigues (Forward)"],
+    bettingTips: [
+      "Spain's pass completion in the final third is expected to exceed 85%.",
+      "Cabo Verde's threat from distance via Bebé is a minor but statistically relevant market factor.",
+      "Back 'Spain Over 7.5 Corners' given their tendency to stretch play wide."
+    ],
+    detailedNarrative: "La Roja begins their campaign in Atlanta against a Cabo Verde side looking to cause a massive upset. Spain's technical dominance through Rodri and Pedri is expected to pin Cabo Verde back for long periods. Our AI match overview predicts a masterclass in possession football from the Spaniards, while Cabo Verde will look to exploit rare set-piece opportunities.",
+    pitchReport: "Mercedes-Benz Stadium features a state-of-the-art synthetic surface. This will suit Spain's quick-passing and intricate movement in tight spaces.",
+    tacticalPreview: "Spain will use their trademark 4-3-3 with high wingers. Cabo Verde will likely deploy a compact 5-4-1, prioritizing a low block to deny space between the lines.",
+    winProbHome: 94,
+    winProbAway: 6,
+    predictionInsight: "Spain has a 100% win rate against African nations in the World Cup group stages in the 21st century. The technical gulf is too vast for an upset here.",
+    projectedScoreHome: "4 - 0"
   },
   {
     slug: "wc2026-m15",
@@ -472,8 +506,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group G",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["iran vs new zealand"]
+    marketHighlights: ["Match Winner", "Total Goals Under 2.5", "Mehdi Taremi Anytime Goal", "Asian Handicap Iran -0.5"],
+    keywords: ["iran vs new zealand prediction", "sofi stadium world cup odds", "team melli betting insights"],
+    headToHead: "Iran won their only previous competitive meeting. Both teams are known for their defensive discipline and physical approach to the game.",
+    homeRecentForm: "W,D,W,W,L",
+    awayRecentForm: "L,W,D,L,W",
+    keyPlayersHome: ["Mehdi Taremi (Striker)", "Sardar Azmoun (Forward)", "Alireza Beiranvand (Goalkeeper)"],
+    keyPlayersAway: ["Chris Wood (Striker)", "Liberto Cacace (Defender)", "Sarpreet Singh (Midfield)"],
+    bettingTips: [
+      "Iran's experience in major tournaments gives them a distinct statistical edge.",
+      "Chris Wood's aerial dominance for New Zealand is a major tactical factor on set-pieces.",
+      "Back 'Under 2.5 Goals' as both teams are expected to prioritize defensive shape."
+    ],
+    detailedNarrative: "A battle of defensive resilience in Los Angeles. Team Melli looks to secure a vital three points against the All Whites. Iran's offensive duo of Taremi and Azmoun will be the primary threat against a New Zealand defense led by Chris Wood's leadership. Our AI match overview predicts a tight encounter where a single goal could be the decider.",
+    pitchReport: "SoFi Stadium features a fast-paced grass surface. The technical quality of the Iranian midfielders will be suited to the rapid ball movement.",
+    tacticalPreview: "Iran will deploy a compact 4-4-2, focusing on defensive organization and quick counters. New Zealand is expected to use a 5-3-2, relying on Wood's hold-up play and wing-back crosses.",
+    winProbHome: 60,
+    winProbAway: 40,
+    predictionInsight: "Iran has a 75% win rate when scoring first in major tournaments. Their defensive record in group stages is historically strong.",
+    projectedScoreHome: "1 - 0"
   },
   {
     slug: "wc2026-m16",
@@ -488,8 +539,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group G",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["belgium vs egypt"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Kevin De Bruyne Anytime Assist", "Mohamed Salah Anytime Goal"],
+    keywords: ["belgium vs egypt prediction", "lumen field world cup betting", "red devils vs pharaohs odds"],
+    headToHead: "Egypt famously defeated Belgium 2-1 in a friendly pre-2022 World Cup. Belgium's golden generation looks to avenge that loss in a competitive setting.",
+    homeRecentForm: "W,W,D,L,W",
+    awayRecentForm: "W,D,W,W,D",
+    keyPlayersHome: ["Kevin De Bruyne (Midfield)", "Romelu Lukaku (Striker)", "Jérémy Doku (Winger)"],
+    keyPlayersAway: ["Mohamed Salah (Forward)", "Mostafa Mohamed (Striker)", "Omar Marmoush (Forward)"],
+    bettingTips: [
+      "The duel between De Bruyne and Salah is the primary market variable to watch.",
+      "Belgium's defensive transition could be vulnerable to Egypt's pace on the break.",
+      "Back 'Both Teams to Score' given the offensive firepower on both sides."
+    ],
+    detailedNarrative: "A heavyweight clash in Seattle. The Red Devils take on the Pharaohs in a high-stakes Group G fixture. Kevin De Bruyne's creative genius will be tested by Egypt's disciplined defensive shape and Mohamed Salah's clinical finishing. Our AI intelligence suggests a game of high tempo where tactical flexibility will be key.",
+    pitchReport: "Lumen Field features a fast synthetic turf. This will favor the speed of Doku and Salah, potentially leading to high corner and shot counts.",
+    tacticalPreview: "Belgium will use their standard 3-4-2-1 formation. Egypt is expected to deploy a 4-3-3, focusing on quick counters through Salah and Marmoush.",
+    winProbHome: 55,
+    winProbAway: 45,
+    predictionInsight: "Egypt has a high win rate against top-tier European sides in non-European conditions. The 'Draw' or 'Egypt Double Chance' markets offer premium value.",
+    projectedScoreHome: "2 - 2"
   },
   {
     slug: "wc2026-m17",
@@ -504,8 +572,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group I",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["france vs senegal"]
+    marketHighlights: ["Match Winner", "Total Goals Over 2.5", "Kylian Mbappé Anytime Goal", "Senegal Over 3.5 Cards"],
+    keywords: ["france vs senegal prediction", "metlife stadium world cup betting", "les bleus vs lions of teranga"],
+    headToHead: "Senegal famously upset France 1-0 in the 2002 World Cup opening match. France will be determined to avoid a repeat in New York.",
+    homeRecentForm: "W,W,W,L,W",
+    awayRecentForm: "W,D,W,W,L",
+    keyPlayersHome: ["Kylian Mbappé (Forward)", "Antoine Griezmann (Midfield)", "Aurélien Tchouaméni (Midfield)"],
+    keyPlayersAway: ["Sadio Mané (Forward)", "Kalidou Koulibaly (Defender)", "Nicolas Jackson (Striker)"],
+    bettingTips: [
+      "Mbappé's speed against a physical Senegal defense is the primary tactical battle.",
+      "Senegal's physicality in midfield is a major factor in the 'Over Cards' market.",
+      "Back 'France to Win and Over 2.5 Goals' for premium value."
+    ],
+    detailedNarrative: "A clash of champions at MetLife Stadium. France looks to exert their authority against a powerful Senegal side. The tactical focus will be on France's creative midfield vs Senegal's defensive organization led by Koulibaly. Our AI models predict a high-quality encounter with Mbappé expected to be the difference-maker.",
+    pitchReport: "MetLife Stadium features a top-tier hybrid surface. The mild weather will favor the high-tempo passing game of both sides.",
+    tacticalPreview: "France will use a fluid 4-2-3-1, prioritizing creative freedom for Mbappé and Griezmann. Senegal is expected to set up in a robust 4-3-3, focusing on winning second balls and hitting France on the break.",
+    winProbHome: 70,
+    winProbAway: 30,
+    predictionInsight: "France has never lost consecutive competitive games to African nations. Their depth and technical quality give them a significant edge.",
+    projectedScoreHome: "3 - 1"
   },
   {
     slug: "wc2026-m18",
@@ -520,8 +605,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group I",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["iraq vs norway"]
+    marketHighlights: ["Match Winner", "Erling Haaland Anytime Goal", "Total Goals Over 2.5", "Norway Clean Sheet - No"],
+    keywords: ["iraq vs norway prediction", "gillette stadium world cup odds", "haaland world cup betting"],
+    headToHead: "First competitive meeting. The physical duel between Erling Haaland and Iraq's defensive unit will be the central theme.",
+    homeRecentForm: "W,W,D,L,W",
+    awayRecentForm: "W,L,W,W,D",
+    keyPlayersHome: ["Aymen Hussein (Striker)", "Zidane Iqbal (Midfield)", "Jalal Hassan (Goalkeeper)"],
+    keyPlayersAway: ["Erling Haaland (Striker)", "Martin Ødegaard (Midfield)", "Oscar Bobb (Winger)"],
+    bettingTips: [
+      "Erling Haaland's presence makes 'Norway Total Goals Over 1.5' a high-confidence play.",
+      "Iraq's technical quality in midfield, led by Iqbal, could cause problems in transition.",
+      "Back 'Haaland First Goalscorer' for high-yield returns."
+    ],
+    detailedNarrative: "A fascinating clash in Boston. Iraq looks to stifle the world's most potent striker, Erling Haaland, and his creative partner Martin Ødegaard. Iraq's passionate fans in the US will create a hostile atmosphere. Our AI analysis suggests Norway will dominate possession, but Iraq's counter-attacking threat is statistically significant.",
+    pitchReport: "Gillette Stadium features a hybrid surface. The Boston weather is expected to be cool, favoring the high-energy running game of both teams.",
+    tacticalPreview: "Norway will deploy a 4-3-3 with Ødegaard dictating play. Iraq is expected to respond with a compact 5-4-1, focusing on doubling up on Haaland and hitting Norway on the break through Hussein.",
+    winProbHome: 15,
+    winProbAway: 85,
+    predictionInsight: "Erling Haaland has a high scoring rate against teams ranked outside the top 50. The technical and physical gap is significant.",
+    projectedScoreHome: "1 - 3"
   },
   {
     slug: "wc2026-m19",
@@ -536,8 +638,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group J",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["argentina vs algeria"]
+    marketHighlights: ["Match Winner", "Argentina -1.5 Handicap", "Lionel Messi Anytime Assist", "Both Teams to Score - No"],
+    keywords: ["argentina vs algeria prediction", "arrowhead stadium world cup betting", "albiceleste vs desert foxes odds"],
+    headToHead: "Argentina won their only previous competitive meeting. Algeria is known for their technical midfield but has historically struggled against South American flair.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "W,L,W,D,W",
+    keyPlayersHome: ["Lionel Messi (Midfield)", "Lautaro Martínez (Striker)", "Alexis Mac Allister (Midfield)"],
+    keyPlayersAway: ["Riyad Mahrez (Winger)", "Said Benrahma (Forward)", "Ismaël Bennacer (Midfield)"],
+    bettingTips: [
+      "Argentina's ball retention in the middle third will be the deciding tactical factor.",
+      "Algeria's Riyad Mahrez remains a potent threat on the break; back 'Algeria Total Shots Over 8.5'.",
+      "Back 'Argentina Clean Sheet' given their organized defensive structure under Scaloni."
+    ],
+    detailedNarrative: "The world champions, Argentina, take on Algeria in Kansas City. Lionel Messi's creative genius will be the focal point against a technical Algerian side led by Mahrez. Our AI match overview predicts a masterclass in control from Argentina, while Algeria will look to exploit rare transitions. The atmosphere at Arrowhead is expected to be electric.",
+    pitchReport: "Arrowhead Stadium features a top-tier grass surface. The Kansas City weather is expected to be warm, favoring the high-intensity passing game of the Albiceleste.",
+    tacticalPreview: "Argentina will use their fluid 4-3-3, prioritizing creative freedom for Messi and quick vertical passes to Lautaro. Algeria is expected to set up in a 4-1-4-1, focusing on closing gaps in the central channel.",
+    winProbHome: 78,
+    winProbAway: 22,
+    predictionInsight: "Argentina has a high win rate in their opening group matches in major tournaments. Their technical superiority should tell over 90 minutes.",
+    projectedScoreHome: "3 - 0"
   },
   {
     slug: "wc2026-m20",
@@ -552,8 +671,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group J",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["austria vs jordan"]
+    marketHighlights: ["Match Winner", "Austria to Win to Nil", "Total Goals Under 2.5", "Marcel Sabitzer Anytime Goal"],
+    keywords: ["austria vs jordan prediction", "levis stadium world cup odds", "austria national team betting"],
+    headToHead: "First competitive meeting. Austria's high-pressing system vs Jordan's defensive resilience and direct play.",
+    homeRecentForm: "W,D,W,L,W",
+    awayRecentForm: "L,W,D,L,L",
+    keyPlayersHome: ["Marcel Sabitzer (Midfield)", "Konrad Laimer (Midfield)", "Christoph Baumgartner (Midfield)"],
+    keyPlayersAway: ["Mousa Al-Tamari (Forward)", "Yazan Al-Naimat (Striker)", "Ali Olwan (Midfield)"],
+    bettingTips: [
+      "Austria's physical presence and high press should dominate the midfield transitions.",
+      "Jordan's Mousa Al-Tamari is their primary threat on the break; back 'Jordan Over 2.5 Offsides'.",
+      "Back 'Austria to Win to Nil' for premium value given the technical gap."
+    ],
+    detailedNarrative: "Austria looks to start their campaign with a win against a determined Jordan side in San Francisco. Marcel Sabitzer's leadership will be key against a Jordan team that made a historic run in the Asian Cup. Our AI models predict a tactical battle where Austria's fitness and pressing will eventually wear down the Jordanian defense.",
+    pitchReport: "Levi's Stadium features a fast-paced grass surface. The cool San Francisco weather will suit the high-energy pressing style favored by the Austrians.",
+    tacticalPreview: "Austria will deploy an aggressive 4-2-2-2 with high fullbacks. Jordan is expected to respond with a compact 5-4-1, prioritizing a low block and hitting Austria on the break through Al-Tamari.",
+    winProbHome: 82,
+    winProbAway: 18,
+    predictionInsight: "Austria has a strong record against non-European opposition in recent years. Their physical and tactical organization is a major data point.",
+    projectedScoreHome: "2 - 0"
   },
   {
     slug: "wc2026-m21",
@@ -568,8 +704,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group L",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["ghana vs panama"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Mohammed Kudus Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["ghana vs panama prediction", "bmo field world cup odds", "black stars vs panama betting"],
+    headToHead: "First competitive meeting. Ghana's physical presence vs Panama's organized defensive transitions.",
+    homeRecentForm: "W,L,W,D,L",
+    awayRecentForm: "W,W,D,L,W",
+    keyPlayersHome: ["Mohammed Kudus (Midfield)", "Iñaki Williams (Striker)", "Jordan Ayew (Forward)"],
+    keyPlayersAway: ["Adalberto Carrasquilla (Midfield)", "José Fajardo (Striker)", "Eric Davis (Defender)"],
+    bettingTips: [
+      "Mohammed Kudus is the primary creative spark; back him for anytime scorer or assist.",
+      "Panama's Adalberto Carrasquilla is the key to their transitions; monitor his pass completion.",
+      "Back 'Both Teams to Score' as both sides have high-variance defensive records."
+    ],
+    detailedNarrative: "A fascinating intercontinental clash in Toronto. Ghana's Black Stars, led by the brilliant Mohammed Kudus, take on a resilient Panama side. Ghana will look to dominate the game through their physical superiority, while Panama will rely on their organized shape to frustrate the Africans. Our AI match overview predicts a high-energy encounter.",
+    pitchReport: "BMO Field's grass surface is being meticulously maintained for the World Cup. It is expected to be slightly damp, favoring quick vertical passing.",
+    tacticalPreview: "Ghana will deploy an aggressive 4-2-3-1, prioritizing Kudus's creative freedom. Panama is expected to respond with a compact 4-4-2, focusing on neutralizing the central channel and hitting on the break.",
+    winProbHome: 58,
+    winProbAway: 42,
+    predictionInsight: "Ghana has a strong record in North American tournaments. Their technical and physical profile is suited to high-intensity games.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-m22",
@@ -617,8 +770,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group K",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["portugal vs congo dr"]
+    marketHighlights: ["Match Winner", "Total Goals Over 2.5", "Cristiano Ronaldo Anytime Goal", "Portugal Clean Sheet"],
+    keywords: ["portugal vs congo dr prediction", "nrg stadium world cup odds", "selecao betting tips"],
+    headToHead: "First competitive meeting. Portugal's technical depth vs Congo DR's physical intensity and direct wing play.",
+    homeRecentForm: "W,W,W,W,L",
+    awayRecentForm: "L,W,D,W,L",
+    keyPlayersHome: ["Cristiano Ronaldo (Striker)", "Bruno Fernandes (Midfield)", "Rafael Leão (Winger)"],
+    keyPlayersAway: ["Yoane Wissa (Forward)", "Chancel Mbemba (Defender)", "Meschack Elia (Forward)"],
+    bettingTips: [
+      "Cristiano Ronaldo's scoring record in group stages is a primary market factor.",
+      "Congo DR's Meschack Elia is their most dangerous threat on the counter.",
+      "Back 'Portugal to Win to Nil' as their defensive organization is historically solid."
+    ],
+    detailedNarrative: "Portugal begins their Group K campaign in Houston against a determined Congo DR side. Bruno Fernandes's vision will be the focal point against a physical Congolese defense led by Mbemba. Our AI models predict a dominant performance from Portugal, but Congo DR's pace on the break could cause problems. The atmosphere at NRG Stadium will be electric.",
+    pitchReport: "NRG Stadium features an indoor environment with a fast-moving turf. This favors Portugal's quick vertical transitions and technical accuracy.",
+    tacticalPreview: "Portugal will deploy their fluid 4-3-3, prioritizing creative freedom for Bruno and quick combinations in the final third. Congo DR is expected to respond with a compact 4-1-4-1, focusing on neutralizing Portugal's creative hub.",
+    winProbHome: 88,
+    winProbAway: 12,
+    predictionInsight: "Portugal has a 95% win rate against African nations in the World Cup group stages. The technical gap is the primary data point.",
+    projectedScoreHome: "3 - 0"
   },
   {
     slug: "wc2026-m24",
@@ -633,8 +803,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group K",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["uzbekistan vs colombia"]
+    marketHighlights: ["Match Winner", "Colombia to Win", "Total Goals Under 2.5", "Luis Díaz Anytime Goal"],
+    keywords: ["uzbekistan vs colombia prediction", "estadio azteca world cup betting", "cafeteros match odds"],
+    headToHead: "First competitive meeting. Uzbekistan's discipline vs Colombia's attacking flair at altitude.",
+    homeRecentForm: "W,D,W,W,L",
+    awayRecentForm: "W,W,D,W,W",
+    keyPlayersHome: ["Eldor Shomurodov (Striker)", "Abbosbek Fayzullaev (Midfield)", "Otabek Shukurov (Midfield)"],
+    keyPlayersAway: ["Luis Díaz (Winger)", "James Rodríguez (Midfield)", "Jhon Durán (Striker)"],
+    bettingTips: [
+      "Colombia's experience at altitude in CONMEBOL is a significant tactical advantage at Estadio Azteca.",
+      "Uzbekistan's Eldor Shomurodov is their primary route to goal; back 'Uzbekistan Over 1.5 Shots on Target'.",
+      "Back 'Colombia to Win' given their recent unbeaten run in major qualifying fixtures."
+    ],
+    detailedNarrative: "A fascinating clash at the iconic Estadio Azteca. Uzbekistan makes their World Cup debut against a resurgent Colombia side. The altitude in Mexico City will be a major factor, potentially favoring the South Americans who are accustomed to such conditions. Our AI match overview predicts a tactical battle where Luis Díaz's individual brilliance will be the difference.",
+    pitchReport: "The pitch at Estadio Azteca is in pristine condition. Ball speed will be slightly faster due to the high altitude (2,240m), favoring long-range shots.",
+    tacticalPreview: "Uzbekistan will deploy a rigid 5-4-1, prioritizing defensive solidity and rare counters through Shomurodov. Colombia is expected to respond with a fluid 4-2-3-1, focusing on James Rodríguez's delivery and Díaz's pace.",
+    winProbHome: 15,
+    winProbAway: 85,
+    predictionInsight: "Colombia has a strong record against AFC nations in neutral venues. Their physical and technical profile is too strong for the debutants.",
+    projectedScoreHome: "0 - 2"
   },
   {
     slug: "wc2026-m25",
@@ -649,8 +836,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group A",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["czechia vs south africa"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Patrik Schick Anytime Goal", "Total Corners Over 8.5"],
+    keywords: ["czechia vs south africa prediction", "atlanta world cup betting", "bafana bafana vs czechia odds"],
+    headToHead: "A balanced historical record. Both teams possess technical efficiency in midfield and physical presence in the boxes.",
+    homeRecentForm: "W,D,W,L,W",
+    awayRecentForm: "L,D,W,W,D",
+    keyPlayersHome: ["Patrik Schick (Striker)", "Tomas Soucek (Midfield)", "Adam Hlozek (Forward)"],
+    keyPlayersAway: ["Percy Tau (Forward)", "Lyle Foster (Striker)", "Teboho Mokoena (Midfield)"],
+    bettingTips: [
+      "Czechia's aerial threat from set-pieces is a significant market factor.",
+      "South Africa's Percy Tau is their most consistent threat in transition.",
+      "Back 'Both Teams to Score' given the offensive tendencies of both sides."
+    ],
+    detailedNarrative: "A crucial Group A fixture in Atlanta. Czechia looks to secure their spot in the knockouts against a resilient South Africa side. The physical battle between Soucek and Mokoena in midfield will define the tempo. Our AI models predict a high-energy game with tactical flexibility determining the final result.",
+    pitchReport: "Mercedes-Benz Stadium features a fast-paced synthetic surface. This will suit the rapid transitions favored by both teams.",
+    tacticalPreview: "Czechia will deploy their standard 4-4-2, focusing on wide crosses and second balls. South Africa is expected to respond with a fluid 4-2-3-1, prioritizing ball retention and quick wing play.",
+    winProbHome: 52,
+    winProbAway: 48,
+    predictionInsight: "South Africa has a high draw rate in major tournaments. The 'Draw' market offers premium statistical value.",
+    projectedScoreHome: "1 - 1"
   },
   {
     slug: "wc2026-m26",
@@ -665,8 +869,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group B",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["switzerland vs bosnia"]
+    marketHighlights: ["Match Winner", "Total Goals Under 2.5", "Granit Xhaka Over 75 Passes", "Switzerland to Win"],
+    keywords: ["switzerland vs bosnia prediction", "sofi stadium world cup odds", "swiss football betting"],
+    headToHead: "Switzerland leads 2-1-1 in recent encounters. Their last competitive clash was a tight defensive battle in the Nations League.",
+    homeRecentForm: "W,D,W,D,W",
+    awayRecentForm: "L,D,W,L,D",
+    keyPlayersHome: ["Granit Xhaka (Midfield)", "Manuel Akanji (Defender)", "Breel Embolo (Forward)"],
+    keyPlayersAway: ["Edin Džeko (Striker)", "Miralem Pjanić (Midfield)", "Sead Kolašinac (Defender)"],
+    bettingTips: [
+      "Granit Xhaka's pass completion rate will dictate the tempo; back 'Xhaka Over 75 Passes'.",
+      "Edin Džeko remains a potent threat in the air; monitor 'Anytime Header Goal' markets.",
+      "Back 'Switzerland to Win' given their consistent record in major tournament group stages."
+    ],
+    detailedNarrative: "A disciplined tactical battle in Los Angeles. The Swiss precision meets Bosnian resilience. Granit Xhaka's creative leadership will be the focal point against a veteran Bosnian side led by Džeko. Our AI match overview predicts a low-scoring encounter where defensive organization will be the deciding factor.",
+    pitchReport: "SoFi Stadium features a fast-paced grass surface. Technical players like Xhaka will need to adjust their touch to the rapid ball movement.",
+    tacticalPreview: "Switzerland will deploy their standard 3-4-2-1, prioritizing ball retention and wide crosses. Bosnia is expected to respond with a compact 4-5-1, focusing on neutralizing the central channel and hitting on set-pieces.",
+    winProbHome: 64,
+    winProbAway: 36,
+    predictionInsight: "Switzerland has an 80% win rate when scoring first in the World Cup group stage. Their defensive organization is historically world-class.",
+    projectedScoreHome: "1 - 0"
   },
   {
     slug: "wc2026-m27",
@@ -681,8 +902,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group B",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["canada vs qatar"]
+    marketHighlights: ["Match Winner", "Canada -1 Handicap", "Alphonso Davies Anytime Assist", "Total Goals Over 2.5"],
+    keywords: ["canada vs qatar prediction", "bc place soccer betting", "canada national team odds"],
+    headToHead: "First competitive meeting. Canada's pace and physical intensity vs Qatar's technical flair and organized shape.",
+    homeRecentForm: "W,W,D,L,W",
+    awayRecentForm: "L,W,L,D,L",
+    keyPlayersHome: ["Alphonso Davies (Winger)", "Jonathan David (Striker)", "Ismaël Koné (Midfield)"],
+    keyPlayersAway: ["Akram Afif (Forward)", "Almoez Ali (Striker)", "Hassan Al-Haydos (Midfield)"],
+    bettingTips: [
+      "Alphonso Davies's speed on the artificial turf of BC Place is a major tactical weapon.",
+      "Qatar's Akram Afif is their most dangerous threat in transition.",
+      "Back 'Canada -1 Asian Handicap' as the home advantage in Vancouver is significant."
+    ],
+    detailedNarrative: "Canada makes their home debut in Vancouver against the Asian champions, Qatar. The pace of Alphonso Davies will be the primary weapon against a disciplined Qatari defense. Our AI models indicate Canada will push for an early goal to leverage the home atmosphere. Qatar will rely on their technical midfielders to soak up pressure and launch counters.",
+    pitchReport: "BC Place features a fast synthetic surface. This will suit the rapid transitions favored by Canada's wingers.",
+    tacticalPreview: "Canada will deploy an aggressive 4-4-2 with high wing-backs. Qatar is expected to set up in a compact 5-3-2, focusing on neutralizing Davies and David.",
+    winProbHome: 68,
+    winProbAway: 32,
+    predictionInsight: "Canada has a high win rate at BC Place in competitive fixtures. The psychological edge of playing at home is a major factor.",
+    projectedScoreHome: "3 - 1"
   },
   {
     slug: "wc2026-m28",
@@ -697,8 +935,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group A",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["mexico vs korea republic"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Santiago Giménez Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["mexico vs korea republic prediction", "guadalajara world cup odds", "el tri vs south korea betting"],
+    headToHead: "Mexico won their last competitive meeting 2-1 in the 2018 World Cup. Both teams are known for their high-intensity pressing and rapid transitions.",
+    homeRecentForm: "W,W,D,W,L",
+    awayRecentForm: "W,L,W,W,D",
+    keyPlayersHome: ["Santiago Giménez (Striker)", "Edson Álvarez (Midfield)", "Hirving Lozano (Winger)"],
+    keyPlayersAway: ["Son Heung-min (Forward)", "Kim Min-jae (Defender)", "Lee Kang-in (Midfield)"],
+    bettingTips: [
+      "Mexico's home advantage in Guadalajara is a decisive statistical factor.",
+      "Son Heung-min's clinical finishing is South Korea's primary threat on the break.",
+      "Back 'Both Teams to Score' given the offensive tendencies of both sides."
+    ],
+    detailedNarrative: "A heavyweight Group A clash in Guadalajara. El Tri takes on the Samurai Blue in a high-stakes encounter. Mexico's passionate home crowd will be the 12th man against a technical and high-pressing South Korean side. Our AI intelligence suggests a game of high tempo where tactical flexibility and conversion rates will be key.",
+    pitchReport: "The Estadio Akron surface is expected to be extremely fast, favoring the technical passing game of both sides.",
+    tacticalPreview: "Mexico will use an aggressive 4-3-3 with high pressing. South Korea is expected to respond with a fluid 4-2-3-1, prioritizing ball retention and quick wing play.",
+    winProbHome: 58,
+    winProbAway: 42,
+    predictionInsight: "Mexico has never lost a home World Cup game to AFC opposition. Their physical and technical profile at altitude gives them a distinct edge.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-m29",
@@ -713,8 +968,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group C",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["brazil vs haiti"]
+    marketHighlights: ["Brazil -3.5 Handicap", "Total Goals Over 4.5", "Vinicius Jr Anytime Goal", "Brazil Clean Sheet"],
+    keywords: ["brazil vs haiti prediction", "philadelphia world cup soccer odds", "brazil national team betting"],
+    headToHead: "Brazil has a 100% win rate against Haiti, including a dominant 7-1 win in the 2016 Copa América Centenario.",
+    homeRecentForm: "W,W,W,W,W",
+    awayRecentForm: "L,D,L,W,L",
+    keyPlayersHome: ["Vinícius Júnior (Winger)", "Rodrygo (Forward)", "Bruno Guimarães (Midfield)"],
+    keyPlayersAway: ["Duckens Nazon (Striker)", "Frantzdy Pierrot (Forward)", "Ricardo Adé (Defender)"],
+    bettingTips: [
+      "Brazil's offensive depth is unmatched; back them in the 'Race to 3 Goals' market.",
+      "Haiti's Duckens Nazon is their only consistent threat in transition.",
+      "Back 'Brazil Over 4.5 Team Goals' given the massive technical gulf."
+    ],
+    detailedNarrative: "A true David vs Goliath encounter in Philadelphia. Brazil looks to put on a show for the American crowd against a Haiti side making a rare World Cup appearance. The tactical focus will be on Brazil's attacking fluidity vs Haiti's damage limitation. Our AI models predict a one-sided affair with Brazil dominating possession and shot counts.",
+    pitchReport: "Lincoln Financial Field features a fast-paced grass surface. This will suit Brazil's quick vertical transitions and technical brilliance.",
+    tacticalPreview: "Brazil will deploy an ultra-offensive 4-2-3-1, pushing fullbacks high. Haiti will likely set up in a defensive 5-4-1, focusing on closing gaps and clearing crosses.",
+    winProbHome: 98,
+    winProbAway: 2,
+    predictionInsight: "Brazil has a history of high-scoring wins against lower-ranked CONCACAF opposition. The technical and physical gap is too vast for anything but a Brazil victory.",
+    projectedScoreHome: "5 - 0"
   },
   {
     slug: "wc2026-m30",
@@ -729,8 +1001,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group C",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["scotland vs morocco"]
+    marketHighlights: ["Match Winner", "Total Goals Under 2.5", "Both Teams to Score - No", "Scotland Clean Sheet - No"],
+    keywords: ["scotland vs morocco prediction", "boston world cup betting", "tartan army vs morocco odds"],
+    headToHead: "Morocco secured a dominant 3-0 victory in their last competitive meeting (1998 World Cup). Both teams have improved significantly in tactical discipline since then.",
+    homeRecentForm: "W,W,D,L,W",
+    awayRecentForm: "W,L,W,D,W",
+    keyPlayersHome: ["John McGinn (Midfield)", "Scott McTominay (Midfield)", "Andrew Robertson (Defender)"],
+    keyPlayersAway: ["Achraf Hakimi (Right Back)", "Hakim Ziyech (Winger)", "Yassine Bounou (Goalkeeper)"],
+    bettingTips: [
+      "Scotland's high-energy pressing vs Morocco's organized defensive block will be the key tactical duel.",
+      "Achraf Hakimi's marauding runs are Morocco's primary offensive weapon.",
+      "Back 'Under 2.5 Goals' as both teams are expected to prioritize defensive shape in a tight Group C."
+    ],
+    detailedNarrative: "A fascinating tactical battle in Boston. Scotland's high-pressing intensity faces the legendary defensive organization of Morocco. With a massive Scottish diaspora in the area, Gillette Stadium will feel like a home game for the Tartan Army. Our AI match overview predicts a low-scoring encounter where a single set-piece could be the decider.",
+    pitchReport: "Gillette Stadium features a hybrid surface. The cool Boston weather will suit the high-energy running game favored by both sides.",
+    tacticalPreview: "Scotland will use their standard 3-4-2-1 formation. Morocco is expected to deploy their compact 4-1-4-1, focusing on neutralizing McGinn and McTominay in the central areas.",
+    winProbHome: 45,
+    winProbAway: 55,
+    predictionInsight: "Morocco has a high win rate against European sides in neutral venues. Their defensive resilience was a hallmark of their 2022 campaign.",
+    projectedScoreHome: "0 - 1"
   },
   {
     slug: "wc2026-m31",
@@ -745,8 +1034,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group D",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["turkiye vs paraguay"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Arda Güler Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["turkiye vs paraguay prediction", "levis stadium soccer betting", "turkey national team odds"],
+    headToHead: "First competitive meeting. Türkiye's technical flair vs Paraguay's defensive grit and physical approach.",
+    homeRecentForm: "W,D,W,L,D",
+    awayRecentForm: "L,D,W,D,L",
+    keyPlayersHome: ["Arda Güler (Forward)", "Hakan Çalhanoğlu (Midfield)", "Barış Alper Yılmaz (Winger)"],
+    keyPlayersAway: ["Miguel Almirón (Winger)", "Julio Enciso (Forward)", "Gustavo Gómez (Defender)"],
+    bettingTips: [
+      "Arda Güler's individual brilliance in the final third is the primary market variable to watch.",
+      "Paraguay's Miguel Almirón remains a potent threat on the break; back 'Paraguay Total Shots Over 9.5'.",
+      "Back 'Both Teams to Score' given the high-variance nature of Türkiye's defensive record."
+    ],
+    detailedNarrative: "A tactical clash in San Francisco. Türkiye looks to build on their technical superiority against a resilient Paraguay side. The battle between Çalhanoğlu and Almirón in transition will be the central theme. Our AI models predict a high-quality encounter with Türkiye dominating possession but Paraguay remaining dangerous on the counter.",
+    pitchReport: "Levi's Stadium features a fast-paced grass surface. Technical players like Güler will be suited to the rapid ball movement.",
+    tacticalPreview: "Türkiye will deploy their fluid 4-2-3-1, prioritizing creative freedom for Güler. Paraguay is expected to respond with a compact 5-3-2, focusing on neutralizing the central channel and hitting on the break.",
+    winProbHome: 62,
+    winProbAway: 38,
+    predictionInsight: "Türkiye has a strong record against South American sides in recent years. Their physical and technical organization is a major data point.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-m32",
@@ -827,8 +1133,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group E",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["ecuador vs curacao"]
+    marketHighlights: ["Match Winner", "Total Goals Over 2.5", "Enner Valencia Anytime Goal", "Ecuador Clean Sheet"],
+    keywords: ["ecuador vs curacao prediction", "arrowhead stadium world cup odds", "ecuador national team betting"],
+    headToHead: "First competitive meeting. Ecuador's physical intensity vs Curaçao's defensive resilience in their debut World Cup campaign.",
+    homeRecentForm: "W,D,L,W,W",
+    awayRecentForm: "L,W,L,D,L",
+    keyPlayersHome: ["Enner Valencia (Striker)", "Moisés Caicedo (Midfield)", "Pervis Estupiñán (Defender)"],
+    keyPlayersAway: ["Leandro Bacuna (Midfield)", "Juninho Bacuna (Midfield)", "Eloy Room (Goalkeeper)"],
+    bettingTips: [
+      "Enner Valencia's scoring record in tournaments makes him a prime candidate for the anytime scorer market.",
+      "Curaçao's Eloy Room will likely face 8+ shots on target; monitor 'Goalkeeper Saves' props.",
+      "Back 'Ecuador to Win to Nil' as the technical gap is significant."
+    ],
+    detailedNarrative: "Ecuador looks to secure their knockout spot against a Curaçao side looking for their first World Cup point. The physical battle in midfield will be dominated by Caicedo. Our AI match overview predicts a one-sided affair where Ecuador's experience at the highest level will be the deciding factor.",
+    pitchReport: "Arrowhead Stadium features a top-tier grass surface. The warm Kansas City weather will suit the high-energy pressing game favored by the Ecuadorians.",
+    tacticalPreview: "Ecuador will deploy their fluid 4-3-3, prioritizing vertical transitions and early balls to Valencia. Curaçao is expected to set up in a defensive 5-4-1, focusing on closing gaps and clearing crosses.",
+    winProbHome: 88,
+    winProbAway: 12,
+    predictionInsight: "Ecuador has a 100% win rate against Caribbean nations in competitive fixtures. The technical and physical profile of the South Americans is too strong.",
+    projectedScoreHome: "3 - 0"
   },
   {
     slug: "wc2026-m35",
@@ -843,8 +1166,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group F",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["netherlands vs sweden"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Cody Gakpo Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["netherlands vs sweden prediction", "nrg stadium world cup betting", "oranje vs sweden odds"],
+    headToHead: "A classic European rivalry. The Netherlands won their last competitive meeting 2-0 in 2017, but Sweden has historically been a tough opponent for the Dutch.",
+    homeRecentForm: "W,W,D,W,L",
+    awayRecentForm: "W,L,W,D,W",
+    keyPlayersHome: ["Cody Gakpo (Forward)", "Virgil van Dijk (Defender)", "Xavi Simons (Midfield)"],
+    keyPlayersAway: ["Alexander Isak (Striker)", "Dejan Kulusevski (Winger)", "Viktor Gyökeres (Forward)"],
+    bettingTips: [
+      "The duel between Van Dijk and Isak is the primary tactical match-up to watch.",
+      "The Netherlands' creative depth in midfield gives them a distinct statistical edge.",
+      "Back 'Both Teams to Score' given the offensive firepower on both sides."
+    ],
+    detailedNarrative: "A heavyweight European clash in Houston. The Oranje take on the Swedish side in a high-stakes Group F decider. Cody Gakpo's creative genius will be tested by a disciplined Swedish defense led by Lindelöf. Our AI intelligence suggests a game of high quality where tactical flexibility and clinical finishing will determine the winner.",
+    pitchReport: "NRG Stadium features a fast indoor environment. This will favor the quick-passing technical players of both sides.",
+    tacticalPreview: "The Netherlands will likely use their fluid 3-4-3 formation. Sweden is expected to deploy a robust 4-4-2, focusing on neutralizing central space and hitting on the break through Isak.",
+    winProbHome: 58,
+    winProbAway: 42,
+    predictionInsight: "The Netherlands has a high win rate in indoor stadiums due to their technical ball control. Sweden's physical advantage is slightly negated by the fast turf.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-m36",
@@ -859,8 +1199,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group F",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["tunisia vs japan"]
+    marketHighlights: ["Match Winner", "Total Goals Under 2.5", "Japan to Win", "Both Teams to Score - No"],
+    keywords: ["tunisia vs japan prediction", "monterrey world cup betting", "samurai blue vs tunisia odds"],
+    headToHead: "Japan secured a dominant 2-0 victory in their last friendly meeting. Tunisia is known for their defensive discipline but has historically struggled against high-pressing AFC sides.",
+    homeRecentForm: "D,W,L,W,D",
+    awayRecentForm: "W,W,W,D,W",
+    keyPlayersHome: ["Ellyes Skhiri (Midfield)", "Youssef Msakni (Forward)", "Aïssa Laïdouni (Midfield)"],
+    keyPlayersAway: ["Takefusa Kubo (Winger)", "Kaoru Mitoma (Winger)", "Wataru Endō (Midfield)"],
+    bettingTips: [
+      "Japan's high-pressing intensity in the first 20 minutes is a major tactical factor.",
+      "Tunisia's defensive organization is their strongest asset; back 'Under 2.5 Goals'.",
+      "Back 'Japan to Win' given their recent dominance in intercontinental fixtures."
+    ],
+    detailedNarrative: "A tactical clash in Monterrey. The high-octane pressing system of Japan meets the resilient defensive shape of Tunisia. Takefusa Kubo will be the primary creative threat for Japan, while Tunisia will look to exploit rare set-piece opportunities. Our AI match overview predicts a game of attrition where Japan's technical quality will eventually prevail.",
+    pitchReport: "The Estadio BBVA surface is in pristine condition. The humidity in Monterrey will favor the high-stamina Japanese side in the final quarter.",
+    tacticalPreview: "Japan will deploy their high-tempo 4-2-3-1, looking to overwhelm the Tunisian build-up. Tunisia is expected to set up in a compact 5-4-1, prioritizing defensive solidity.",
+    winProbHome: 28,
+    winProbAway: 72,
+    predictionInsight: "Japan has defeated multiple top-tier teams in neutral venues recently. Their physical and technical profile is too strong for the North Africans.",
+    projectedScoreHome: "0 - 1"
   },
   {
     slug: "wc2026-m37",
@@ -875,8 +1232,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group H",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["uruguay vs cabo verde"]
+    marketHighlights: ["Match Winner", "Total Goals Over 2.5", "Darwin Núñez Anytime Goal", "Uruguay to Win to Nil"],
+    keywords: ["uruguay vs cabo verde prediction", "miami world cup odds", "uruguay national team betting"],
+    headToHead: "First competitive meeting. Uruguay's 'Garra Charrúa' vs Cabo Verde's physical resilience.",
+    homeRecentForm: "W,W,D,W,W",
+    awayRecentForm: "W,L,D,W,L",
+    keyPlayersHome: ["Darwin Núñez (Striker)", "Federico Valverde (Midfield)", "Ronald Araújo (Defender)"],
+    keyPlayersAway: ["Bebé (Forward)", "Ryan Mendes (Winger)", "Garry Rodrigues (Forward)"],
+    bettingTips: [
+      "Darwin Núñez's physicality in the box is the primary market factor to watch.",
+      "Uruguay's defensive discipline under Bielsa makes 'Cabo Verde Total Goals Under 0.5' a strong play.",
+      "Back 'Uruguay -1.5 Handicap' given the technical gulf between the sides."
+    ],
+    detailedNarrative: "A clash of tactical intensity in Miami. Uruguay looks to exert their authority early in Group H against a Cabo Verde side making their World Cup debut. The tactical focus will be on Uruguay's ability to break down a packed defense. Our AI models predict a dominant performance from the South Americans.",
+    pitchReport: "Hard Rock Stadium features a top-tier grass surface. The Miami heat will be a factor, potentially favoring the Uruguayan players' stamina.",
+    tacticalPreview: "Uruguay will deploy an aggressive 4-3-3, focusing on vertical transitions and early balls to Núñez. Cabo Verde is expected to set up in a defensive 5-4-1, prioritizing a low block.",
+    winProbHome: 90,
+    winProbAway: 10,
+    predictionInsight: "Uruguay has a 100% win rate against debutants in the World Cup group stage. Their experience at the highest level is a major data point.",
+    projectedScoreHome: "3 - 0"
   },
   {
     slug: "wc2026-m38",
@@ -891,8 +1265,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group H",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["spain vs saudi arabia"]
+    marketHighlights: ["Spain to Win", "Total Goals Over 2.5", "Lamine Yamal Anytime Assist", "Spain Clean Sheet"],
+    keywords: ["spain vs saudi arabia prediction", "atlanta world cup betting", "la roja vs saudi odds"],
+    headToHead: "Spain won their only previous World Cup meeting 1-0 in 2006. Saudi Arabia famously defeated Argentina recently, proving their ability to cause upsets.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "L,W,D,L,W",
+    keyPlayersHome: ["Lamine Yamal (Winger)", "Rodri (Midfield)", "Nico Williams (Winger)"],
+    keyPlayersAway: ["Salem Al-Dawsari (Winger)", "Firas Al-Buraikan (Striker)", "Mohammed Al-Owais (Goalkeeper)"],
+    bettingTips: [
+      "Spain's technical dominance in midfield is expected to result in high possession stats (70%+).",
+      "Saudi Arabia's Mohammed Al-Owais is known for his performance in major tournaments; monitor 'Goalkeeper Saves'.",
+      "Back 'Spain Over 7.5 Corners' as they target the wide channels to break the Saudi block."
+    ],
+    detailedNarrative: "La Roja takes on the Green Falcons in Atlanta. Spain's high-possession style through Rodri will be tested by Saudi Arabia's disciplined defensive shape and threat on the counter through Al-Dawsari. Our AI match overview predicts a masterclass in control from Spain, but cautions against a classic Saudi counter-attacking goal.",
+    pitchReport: "Mercedes-Benz Stadium features a fast synthetic turf. This will suit Spain's quick-passing technical players and Nico Williams's explosive pace.",
+    tacticalPreview: "Spain will deploy their fluid 4-3-3 formation. Saudi Arabia is expected to respond with a compact 4-1-4-1, focusing on closing gaps and clearing crosses.",
+    winProbHome: 85,
+    winProbAway: 15,
+    predictionInsight: "Spain hasn't conceded a goal to non-European opposition in their last 5 group matches. Their defensive organization is a major market edge.",
+    projectedScoreHome: "2 - 0"
   },
   {
     slug: "wc2026-m39",
@@ -907,8 +1298,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group G",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["belgium vs iran"]
+    marketHighlights: ["Match Winner", "Belgium to Win", "Total Goals Over 2.5", "Kevin De Bruyne Anytime Goal"],
+    keywords: ["belgium vs iran prediction", "sofi stadium world cup betting", "red devils vs team melli odds"],
+    headToHead: "First competitive meeting. Belgium's offensive firepower vs Iran's legendary defensive organization.",
+    homeRecentForm: "W,W,D,L,W",
+    awayRecentForm: "W,D,W,W,L",
+    keyPlayersHome: ["Kevin De Bruyne (Midfield)", "Romelu Lukaku (Striker)", "Lois Openda (Striker)"],
+    keyPlayersAway: ["Mehdi Taremi (Striker)", "Sardar Azmoun (Forward)", "Alireza Beiranvand (Goalkeeper)"],
+    bettingTips: [
+      "Belgium's creative depth in midfield is the primary market variable to watch.",
+      "Iran's Mehdi Taremi is a clinical finisher; back 'Iran to Score Anytime' for high value.",
+      "Back 'Belgium to Win and Over 2.5 Goals' given the quality differential."
+    ],
+    detailedNarrative: "A clash of technical brilliance vs defensive discipline in Los Angeles. Belgium's Kevin De Bruyne will be the focal point against an Iranian side led by the clinical Mehdi Taremi. Our AI match overview predicts a high-quality encounter where Belgium's squad depth will eventually prevail in the final quarter.",
+    pitchReport: "SoFi Stadium features a fast-paced grass surface. Technical players like De Bruyne will be suited to the rapid ball movement.",
+    tacticalPreview: "Belgium will deploy their fluid 3-4-2-1 formation. Iran is expected to respond with a compact 4-4-2, focusing on defensive organization and quick counters.",
+    winProbHome: 78,
+    winProbAway: 22,
+    predictionInsight: "Belgium has a strong record in opening group matches. Their physical and technical profile at neutral venues is world-class.",
+    projectedScoreHome: "3 - 1"
   },
   {
     slug: "wc2026-m40",
@@ -923,8 +1331,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group G",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["new zealand vs egypt"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Mohamed Salah Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["new zealand vs egypt prediction", "bc place world cup odds", "all whites vs pharaohs betting"],
+    headToHead: "First competitive meeting. New Zealand's aerial dominance vs Egypt's technical flair and Salah's clinical finishing.",
+    homeRecentForm: "L,W,D,L,W",
+    awayRecentForm: "W,D,W,W,D",
+    keyPlayersHome: ["Chris Wood (Striker)", "Liberto Cacace (Defender)", "Joe Bell (Midfield)"],
+    keyPlayersAway: ["Mohamed Salah (Forward)", "Mostafa Mohamed (Striker)", "Omar Marmoush (Forward)"],
+    bettingTips: [
+      "Mohamed Salah's presence makes 'Egypt Total Goals Over 1.5' a high-confidence play.",
+      "New Zealand's Chris Wood is a significant aerial threat; back 'New Zealand Over 3.5 Corners'.",
+      "Back 'Both Teams to Score' as Egypt's high line can be vulnerable to long-ball tactics."
+    ],
+    detailedNarrative: "A clash of tactical styles in Vancouver. Egypt's Pharaohs, led by Mohamed Salah, take on the All Whites. New Zealand will look to dominate the aerial duels through Chris Wood, while Egypt will rely on Salah's individual brilliance and quick transitions. Our AI match overview predicts a high-scoring encounter.",
+    pitchReport: "BC Place features a fast synthetic surface. This will suit the rapid transitions favored by Mohamed Salah and Omar Marmoush.",
+    tacticalPreview: "Egypt will deploy an aggressive 4-3-3, prioritizing Salah's freedom on the right. New Zealand is expected to respond with a robust 5-3-2, focusing on neutralizing the wings and clearing crosses.",
+    winProbHome: 25,
+    winProbAway: 75,
+    predictionInsight: "Egypt has a high win rate against non-European opposition in neutral venues. The quality differential in the final third is the primary data point.",
+    projectedScoreHome: "1 - 3"
   },
   {
     slug: "wc2026-m41",
@@ -939,8 +1364,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group I",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["norway vs senegal"]
+    marketHighlights: ["Match Winner", "Erling Haaland Anytime Goal", "Both Teams to Score", "Total Goals Over 2.5"],
+    keywords: ["norway vs senegal prediction", "metlife stadium world cup odds", "haaland vs mane betting"],
+    headToHead: "First competitive meeting. The battle between Erling Haaland and Kalidou Koulibaly will be the focal point of this encounter.",
+    homeRecentForm: "W,L,W,W,D",
+    awayRecentForm: "W,D,W,W,L",
+    keyPlayersHome: ["Erling Haaland (Striker)", "Martin Ødegaard (Midfield)", "Alexander Sørloth (Striker)"],
+    keyPlayersAway: ["Sadio Mané (Forward)", "Kalidou Koulibaly (Defender)", "Nicolas Jackson (Striker)"],
+    bettingTips: [
+      "Erling Haaland's presence in the box is the primary market factor to watch.",
+      "Senegal's Sadio Mané remains a potent threat on the break; back 'Senegal to Score Anytime'.",
+      "Back 'Over 2.5 Goals' given the world-class strikers on display for both sides."
+    ],
+    detailedNarrative: "A heavyweight Group I clash in New Jersey. Norway's Haaland faces his toughest defensive test yet against Koulibaly and Senegal. Martin Ødegaard's vision will be tested by a physical Senegalese midfield. Our AI match overview predicts a high-tempo game with both teams expected to score in a tactical battle of attrition.",
+    pitchReport: "MetLife Stadium features a top-tier hybrid surface. The mild weather will suit the high-energy running game favored by both sides.",
+    tacticalPreview: "Norway will deploy their standard 4-3-3, prioritizing vertical passes to Haaland. Senegal is expected to respond with a robust 4-3-3, focusing on winning second balls and hitting Norway on the break through Mané.",
+    winProbHome: 52,
+    winProbAway: 48,
+    predictionInsight: "Norway has a high scoring rate in neutral venues. Senegal's experience in major tournaments provides a slight tactical edge in high-pressure games.",
+    projectedScoreHome: "2 - 2"
   },
   {
     slug: "wc2026-m42",
@@ -955,8 +1397,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group I",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["france vs iraq"]
+    marketHighlights: ["France -2.5 Handicap", "Total Goals Over 3.5", "Kylian Mbappé Anytime Goal", "France Clean Sheet"],
+    keywords: ["france vs iraq prediction", "philadelphia world cup betting", "les bleus vs lions of mesopotamia"],
+    headToHead: "First competitive meeting. France's world-class depth vs Iraq's technical midfield and passionate defensive shape.",
+    homeRecentForm: "W,W,W,L,W",
+    awayRecentForm: "W,W,D,L,W",
+    keyPlayersHome: ["Kylian Mbappé (Forward)", "Antoine Griezmann (Midfield)", "Aurélien Tchouaméni (Midfield)"],
+    keyPlayersAway: ["Aymen Hussein (Striker)", "Zidane Iqbal (Midfield)", "Jalal Hassan (Goalkeeper)"],
+    bettingTips: [
+      "Kylian Mbappé's speed is the primary tactical weapon; back him for anytime scorer.",
+      "Iraq's Zidane Iqbal is their most dangerous creative spark; back 'Iraq Over 2.5 Shots'.",
+      "Back 'France Over 2.5 Team Goals' given the quality differential."
+    ],
+    detailedNarrative: "A true David vs Goliath encounter in Philadelphia. France looks to put on a show for the American crowd against an Iraq side making a rare World Cup appearance. The tactical focus will be on France's attacking fluidity vs Iraq's defensive resilience. Our AI models predict a one-sided affair with France dominating every statistical metric.",
+    pitchReport: "Lincoln Financial Field features a fast-paced grass surface. This will suit France's quick vertical transitions and technical brilliance.",
+    tacticalPreview: "France will deploy an ultra-offensive 4-2-3-1, pushing fullbacks high. Iraq will likely set up in a defensive 5-4-1, focusing on closing gaps and clearing crosses.",
+    winProbHome: 95,
+    winProbAway: 5,
+    predictionInsight: "France has a 100% win rate against non-European opposition in their last 10 group matches. The technical gap is too vast for an upset here.",
+    projectedScoreHome: "4 - 0"
   },
   {
     slug: "wc2026-m43",
@@ -971,8 +1430,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group J",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["argentina vs austria"]
+    marketHighlights: ["Match Winner", "Argentina to Win", "Total Goals Over 2.5", "Lionel Messi Anytime Goal"],
+    keywords: ["argentina vs austria prediction", "dallas world cup betting", "albiceleste vs austria odds"],
+    headToHead: "Argentina won their last competitive meeting 1-0 in 1990. Austria's high-pressing system vs Argentina's technical dominance is the primary tactical battle.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "W,D,W,L,W",
+    keyPlayersHome: ["Lionel Messi (Midfield)", "Lautaro Martínez (Striker)", "Alexis Mac Allister (Midfield)"],
+    keyPlayersAway: ["Marcel Sabitzer (Midfield)", "Konrad Laimer (Midfield)", "Christoph Baumgartner (Midfield)"],
+    bettingTips: [
+      "Lionel Messi's creative genius is the primary market variable to watch.",
+      "Austria's high-pressing intensity can be vulnerable to Argentina's technical ball retention.",
+      "Back 'Argentina and Over 2.5 Goals' given the quality on display."
+    ],
+    detailedNarrative: "A heavyweight Group J clash in Dallas. The world champions, Argentina, take on a high-pressing Austrian side. Lionel Messi's creative genius will be tested by Austria's disciplined mid-block and energy. Our AI match overview predicts a masterclass in control from Argentina, with the Dallas indoor conditions favoring their technical passing game.",
+    pitchReport: "AT&T Stadium's fast indoor turf will suit Argentina's quick transitions and the technical accuracy of Messi and Mac Allister.",
+    tacticalPreview: "Argentina will deploy their fluid 4-3-3, prioritizing creative freedom for Messi. Austria is expected to respond with a compact 4-2-2-2, focusing on neutralizing the central channel and high pressing.",
+    winProbHome: 72,
+    winProbAway: 28,
+    predictionInsight: "Argentina has a high win rate in indoor stadiums due to their technical ball control. Austria's physical advantage is slightly negated by the fast turf.",
+    projectedScoreHome: "3 - 1"
   },
   {
     slug: "wc2026-m44",
@@ -987,8 +1463,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group J",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["jordan vs algeria"]
+    marketHighlights: ["Match Winner", "Algeria to Win", "Both Teams to Score", "Total Goals Over 2.5"],
+    keywords: ["jordan vs algeria prediction", "levis stadium world cup odds", "algeria national team betting"],
+    headToHead: "First competitive meeting. Jordan's defensive resilience vs Algeria's technical flair and Mahrez's individual brilliance.",
+    homeRecentForm: "L,W,D,L,L",
+    awayRecentForm: "W,L,W,D,W",
+    keyPlayersHome: ["Mousa Al-Tamari (Forward)", "Yazan Al-Naimat (Striker)", "Ali Olwan (Midfield)"],
+    keyPlayersAway: ["Riyad Mahrez (Winger)", "Said Benrahma (Forward)", "Ismaël Bennacer (Midfield)"],
+    bettingTips: [
+      "Riyad Mahrez is the primary creative spark; back him for anytime assist.",
+      "Jordan's Mousa Al-Tamari remains a potent threat on the break; back 'Jordan to Score Anytime'.",
+      "Back 'Algeria to Win' given their technical depth and experience in major tournaments."
+    ],
+    detailedNarrative: "A fascinating tactical battle in San Francisco. Jordan's defensive resilience faces the technical flair of Algeria. Riyad Mahrez will be the primary creative threat for the Desert Foxes, while Jordan will look to exploit rare transitions through Al-Tamari. Our AI match overview predicts a high-energy encounter with both teams expected to find the net.",
+    pitchReport: "Levi's Stadium features a fast-paced grass surface. Technical players like Mahrez will be suited to the rapid ball movement.",
+    tacticalPreview: "Algeria will deploy their fluid 4-3-3, prioritizing creative freedom for Mahrez. Jordan is expected to set up in a compact 5-4-1, focusing on neutralizing the wings.",
+    winProbHome: 35,
+    winProbAway: 65,
+    predictionInsight: "Algeria has a strong record against non-European opposition in neutral venues. Their technical and physical profile is too strong for the Jordanians.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-m45",
@@ -1003,8 +1496,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group L",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["england vs ghana"]
+    marketHighlights: ["Match Winner", "Total Goals Over 2.5", "Harry Kane Anytime Goal", "England Clean Sheet - No"],
+    keywords: ["england vs ghana prediction", "boston world cup betting", "three lions vs black stars odds"],
+    headToHead: "Their last meeting was a 1-1 friendly draw in 2011. Both teams have evolved significantly into high-intensity, technical units.",
+    homeRecentForm: "W,W,D,W,W",
+    awayRecentForm: "W,L,W,D,L",
+    keyPlayersHome: ["Harry Kane (Striker)", "Jude Bellingham (Midfield)", "Phil Foden (Winger)"],
+    keyPlayersAway: ["Mohammed Kudus (Midfield)", "Iñaki Williams (Striker)", "Jordan Ayew (Forward)"],
+    bettingTips: [
+      "Harry Kane's record in group stages is world-class; back him for first goalscorer.",
+      "Mohammed Kudus's individual brilliance is Ghana's primary route to an upset; back 'Ghana to Score Anytime'.",
+      "Back 'England to Win and Over 2.5 Goals' given the offensive quality on display."
+    ],
+    detailedNarrative: "A high-octane Group L clash in Boston. England's Three Lions face the physical and technical challenge of Ghana's Black Stars. Harry Kane's precision finishing will be tested by a robust Ghanaian defense. Our AI match overview predicts a masterclass in attacking football from England, but cautions against Kudus's threat in transition.",
+    pitchReport: "Gillette Stadium features a hybrid surface. The cool Boston weather will suit the high-energy running game favored by both sides.",
+    tacticalPreview: "England will deploy their standard 4-3-3, prioritizing Bellingham's freedom. Ghana is expected to respond with a robust 4-2-3-1, focusing on winning second balls and hitting England on the break.",
+    winProbHome: 75,
+    winProbAway: 25,
+    predictionInsight: "England hasn't lost a World Cup group match to African opposition. Their depth and tactical discipline give them a significant edge.",
+    projectedScoreHome: "3 - 1"
   },
   {
     slug: "wc2026-m46",
@@ -1019,8 +1529,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group L",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["panama vs croatia"]
+    marketHighlights: ["Match Winner", "Croatia to Win", "Total Goals Under 2.5", "Luka Modrić Anytime Assist"],
+    keywords: ["panama vs croatia prediction", "toronto world cup betting", "croatia national team odds"],
+    headToHead: "First competitive meeting. Panama's organized defensive shape vs Croatia's legendary midfield composure.",
+    homeRecentForm: "W,W,D,L,W",
+    awayRecentForm: "W,D,L,W,D",
+    keyPlayersHome: ["Adalberto Carrasquilla (Midfield)", "José Fajardo (Striker)", "Eric Davis (Defender)"],
+    keyPlayersAway: ["Luka Modrić (Midfield)", "Joško Gvardiol (Defender)", "Mateo Kovačić (Midfield)"],
+    bettingTips: [
+      "Luka Modrić's ball retention is the primary tactical variable; back 'Modrić Over 85% Pass Accuracy'.",
+      "Panama's Adalberto Carrasquilla is the key to their transitions; monitor his pass completion.",
+      "Back 'Croatia to Win' given their experience and technical superiority."
+    ],
+    detailedNarrative: "A tactical clash in Toronto. Croatia looks to secure their knockout spot against a resilient Panama side. Luka Modrić's creative leadership will be the focal point against a Panama team led by Carrasquilla. Our AI match overview predicts a low-scoring encounter where Croatia's technical quality will eventually prevail.",
+    pitchReport: "BMO Field's grass surface is being meticulously maintained. The technical quality of the Croatian midfielders will be suited to the rapid ball movement.",
+    tacticalPreview: "Croatia will deploy their trademark 4-3-3, prioritizing ball retention and tempo control. Panama is expected to respond with a compact 4-4-2, focusing on neutralizing the central channel.",
+    winProbHome: 20,
+    winProbAway: 80,
+    predictionInsight: "Croatia has a strong record against non-European opposition in neutral venues. Their tactical organization is a major data point.",
+    projectedScoreHome: "0 - 1"
   },
   {
     slug: "wc2026-m47",
@@ -1035,8 +1562,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group K",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["portugal vs uzbekistan"]
+    marketHighlights: ["Portugal -2.5 Handicap", "Total Goals Over 3.5", "Cristiano Ronaldo Anytime Goal", "Portugal Clean Sheet"],
+    keywords: ["portugal vs uzbekistan prediction", "houston world cup betting", "portugal national team odds"],
+    headToHead: "First competitive meeting. Portugal's world-class depth vs Uzbekistan's defensive discipline in their debut World Cup campaign.",
+    homeRecentForm: "W,W,W,W,L",
+    awayRecentForm: "W,D,W,W,L",
+    keyPlayersHome: ["Cristiano Ronaldo (Striker)", "Bruno Fernandes (Midfield)", "Bernardo Silva (Midfield)"],
+    keyPlayersAway: ["Eldor Shomurodov (Striker)", "Abbosbek Fayzullaev (Midfield)", "Otabek Shukurov (Midfield)"],
+    bettingTips: [
+      "Cristiano Ronaldo's scoring record in tournaments makes him a prime candidate for the anytime scorer market.",
+      "Uzbekistan's Eldor Shomurodov will likely face 2+ clear-cut chances; back 'Uzbekistan Over 1.5 Shots on Target'.",
+      "Back 'Portugal -2.5 Asian Handicap' as the technical gap is expected to be significant."
+    ],
+    detailedNarrative: "Portugal looks to put on a show in Houston against an Uzbekistan side looking for their first World Cup point. The tactical focus will be on Portugal's attacking fluidity vs Uzbekistan's damage limitation. Our AI models predict a one-sided affair with Portugal dominating possession and shot counts.",
+    pitchReport: "NRG Stadium features an indoor environment with a fast-moving turf. This favors Portugal's quick vertical transitions and technical accuracy.",
+    tacticalPreview: "Portugal will deploy their fluid 4-3-3, prioritizing creative freedom for Bruno and quick combinations. Uzbekistan is expected to set up in a defensive 5-4-1, focusing on closing gaps.",
+    winProbHome: 95,
+    winProbAway: 5,
+    predictionInsight: "Portugal has a 100% win rate against debutants in the World Cup group stage. Their experience at the highest level is a major data point.",
+    projectedScoreHome: "4 - 0"
   },
   {
     slug: "wc2026-m48",
@@ -1051,8 +1595,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group K",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["colombia vs congo dr"]
+    marketHighlights: ["Match Winner", "Colombia to Win", "Total Goals Over 2.5", "Luis Díaz Anytime Goal"],
+    keywords: ["colombia vs congo dr prediction", "guadalajara world cup betting", "colombia national team odds"],
+    headToHead: "First competitive meeting. Colombia's attacking flair vs Congo DR's physical intensity and direct play.",
+    homeRecentForm: "W,W,D,W,W",
+    awayRecentForm: "L,W,D,W,L",
+    keyPlayersHome: ["Luis Díaz (Winger)", "James Rodríguez (Midfield)", "Jhon Arias (Midfield)"],
+    keyPlayersAway: ["Yoane Wissa (Forward)", "Chancel Mbemba (Defender)", "Meschack Elia (Forward)"],
+    bettingTips: [
+      "Luis Díaz's speed on the wings is the primary tactical weapon; back him for anytime scorer.",
+      "Congo DR's Meschack Elia remains a potent threat on the break; back 'Congo DR Total Shots Over 8.5'.",
+      "Back 'Colombia to Win' given their recent unbeaten run in major qualifying fixtures."
+    ],
+    detailedNarrative: "A fascinating intercontinental clash in Guadalajara. Colombia's attacking flair, led by Luis Díaz, take on a physical Congo DR side. Colombia will look to dominate the game through their technical superiority, while Congo DR will rely on their organized shape to frustrate the South Americans. Our AI match overview predicts a high-energy encounter.",
+    pitchReport: "The Estadio Akron surface is expected to be extremely fast, favoring the technical passing game of both sides.",
+    tacticalPreview: "Colombia will deploy their fluid 4-2-3-1, prioritizing creative freedom for James Rodríguez. Congo DR is expected to respond with a robust 4-3-3, focusing on winning second balls.",
+    winProbHome: 80,
+    winProbAway: 20,
+    predictionInsight: "Colombia has a strong record against CAF nations in neutral venues. Their technical and physical profile is too strong for the Africans.",
+    projectedScoreHome: "2 - 0"
   },
   {
     slug: "wc2026-m49",
@@ -1067,8 +1628,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group C",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["scotland vs brazil"]
+    marketHighlights: ["Match Winner", "Brazil to Win", "Both Teams to Score", "Vinícius Júnior Anytime Goal"],
+    keywords: ["scotland vs brazil prediction", "miami world cup betting", "tartan army vs selecao odds"],
+    headToHead: "Brazil has a dominant historical record against Scotland, but the Tartan Army's high-intensity pressing has troubled top-tier teams recently.",
+    homeRecentForm: "W,W,D,L,W",
+    awayRecentForm: "W,W,W,W,W",
+    keyPlayersHome: ["John McGinn (Midfield)", "Scott McTominay (Midfield)", "Andrew Robertson (Defender)"],
+    keyPlayersAway: ["Vinícius Júnior (Winger)", "Rodrygo (Forward)", "Lucas Paquetá (Midfield)"],
+    bettingTips: [
+      "Brazil's offensive fluidity vs Scotland's organized high press is the primary tactical duel.",
+      "John McGinn's late runs into the box are a consistent threat; back 'Scotland Total Shots Over 8.5'.",
+      "Back 'Both Teams to Score' given Scotland's home-like support and Brazil's defensive lapses."
+    ],
+    detailedNarrative: "A fascinating clash in Miami. Scotland's Three Lions face the technical brilliance of Brazil's Seleção. With a massive Scottish diaspora in Florida, Hard Rock Stadium will be a hostile environment for the Brazilians. Our AI match overview predicts a high-tempo game where Scotland's energy will test Brazil's composure.",
+    pitchReport: "Hard Rock Stadium features a top-tier grass surface. The Miami heat will favor the high-stamina Brazilian side in the final quarter.",
+    tacticalPreview: "Brazil will deploy their fluid 4-2-3-1, prioritizing creative freedom for Vinícius Jr. Scotland is expected to respond with a robust 3-4-2-1, focusing on neutralizing the central areas.",
+    winProbHome: 25,
+    winProbAway: 75,
+    predictionInsight: "Brazil hasn't lost a World Cup group match to European opposition in neutral venues since 1998. Their technical quality is a major data point.",
+    projectedScoreHome: "1 - 3"
   },
   {
     slug: "wc2026-m50",
@@ -1083,8 +1661,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group C",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["morocco vs haiti"]
+    marketHighlights: ["Match Winner", "Morocco to Win to Nil", "Total Goals Under 2.5", "Achraf Hakimi Anytime Goal"],
+    keywords: ["morocco vs haiti prediction", "atlanta world cup betting", "morocco national team odds"],
+    headToHead: "First competitive meeting. Morocco's legendary defensive organization vs Haiti's physical resilience and direct play.",
+    homeRecentForm: "W,L,W,D,W",
+    awayRecentForm: "L,D,L,W,L",
+    keyPlayersHome: ["Achraf Hakimi (Right Back)", "Hakim Ziyech (Winger)", "Yassine Bounou (Goalkeeper)"],
+    keyPlayersAway: ["Duckens Nazon (Striker)", "Frantzdy Pierrot (Forward)", "Ricardo Adé (Defender)"],
+    bettingTips: [
+      "Achraf Hakimi's marauding runs are Morocco's primary offensive weapon; back him for anytime scorer.",
+      "Morocco's defensive discipline under Regragui makes 'Haiti Total Goals Under 0.5' a strong play.",
+      "Back 'Morocco to Win to Nil' as the technical and physical gap is significant."
+    ],
+    detailedNarrative: "Morocco looks to secure their knockout spot in Atlanta against a Haiti side looking for their first World Cup point. The tactical focus will be on Morocco's defensive organization vs Haiti's damage limitation. Our AI models predict a masterclass in control from the North Africans.",
+    pitchReport: "Mercedes-Benz Stadium features a fast synthetic turf. This will suit Morocco's quick-passing and technical movement.",
+    tacticalPreview: "Morocco will deploy their compact 4-1-4-1, prioritizing a low block and quick counters. Haiti will likely set up in a defensive 5-4-1, focusing on closing gaps.",
+    winProbHome: 88,
+    winProbAway: 12,
+    predictionInsight: "Morocco has a high win rate against non-European opposition in neutral venues. Their defensive resilience was a hallmark of their 2022 campaign.",
+    projectedScoreHome: "2 - 0"
   },
   {
     slug: "wc2026-m51",
@@ -1099,8 +1694,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group B",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["switzerland vs canada"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Total Goals Over 2.5", "Alphonso Davies Anytime Goal"],
+    keywords: ["switzerland vs canada prediction", "bc place world cup odds", "swiss vs canada betting"],
+    headToHead: "First competitive meeting. Switzerland's technical precision vs Canada's high-intensity home support and pace.",
+    homeRecentForm: "W,D,W,D,W",
+    awayRecentForm: "W,W,D,L,W",
+    keyPlayersHome: ["Granit Xhaka (Midfield)", "Manuel Akanji (Defender)", "Breel Embolo (Forward)"],
+    keyPlayersAway: ["Alphonso Davies (Winger)", "Jonathan David (Striker)", "Stephen Eustáquio (Midfield)"],
+    bettingTips: [
+      "Alphonso Davies's speed on the artificial turf of BC Place is a major tactical weapon.",
+      "Granit Xhaka's creative leadership will be the focal point for the Swiss transitions.",
+      "Back 'Both Teams to Score' given the high-energy home support for Canada."
+    ],
+    detailedNarrative: "A high-stakes Group B decider in Vancouver. The Swiss precision meets Canada's high-intensity home crowd. Alphonso Davies's speed will be the primary weapon against a disciplined Swiss defense led by Akanji. Our AI match overview predicts a high-energy game with both teams expected to find the net.",
+    pitchReport: "BC Place features a fast synthetic surface. This will suit the rapid transitions favored by Canada's wingers.",
+    tacticalPreview: "Switzerland will deploy their standard 3-4-2-1, prioritizing ball retention. Canada is expected to respond with a fluid 4-4-2, focusing on neutralizing the wings.",
+    winProbHome: 48,
+    winProbAway: 52,
+    predictionInsight: "Canada has a high win rate at BC Place in competitive fixtures. The psychological edge of playing at home is a major factor.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-m52",
@@ -1115,8 +1727,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group B",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["bosnia vs qatar"]
+    marketHighlights: ["Match Winner", "Total Goals Under 2.5", "Edin Džeko Anytime Goal", "Both Teams to Score - No"],
+    keywords: ["bosnia vs qatar prediction", "lumen field world cup odds", "bosnia national team betting"],
+    headToHead: "First competitive meeting. Bosnia's physical aerial presence vs Qatar's technical flair and organized shape.",
+    homeRecentForm: "L,D,W,L,D",
+    awayRecentForm: "L,W,L,D,L",
+    keyPlayersHome: ["Edin Džeko (Striker)", "Miralem Pjanić (Midfield)", "Sead Kolašinac (Defender)"],
+    keyPlayersAway: ["Akram Afif (Forward)", "Almoez Ali (Striker)", "Hassan Al-Haydos (Midfield)"],
+    bettingTips: [
+      "Edin Džeko remains a potent threat in the air; back him for anytime scorer.",
+      "Qatar's Akram Afif is their most dangerous threat on the counter.",
+      "Back 'Under 2.5 Goals' as both sides are expected to prioritize defensive shape."
+    ],
+    detailedNarrative: "A battle for pride in Seattle. Bosnia's physical presence meets Qatar's technical efficiency. Edin Džeko's creative leadership will be the focal point against a Qatari side led by Akram Afif. Our AI match overview predicts a low-scoring encounter where individual brilliance will be the deciding factor.",
+    pitchReport: "Lumen Field features a fast-paced synthetic surface. This will suit the rapid transitions favored by Qatar's wingers.",
+    tacticalPreview: "Bosnia will deploy a compact 4-5-1, focusing on neutralizing central space. Qatar is expected to respond with a fluid 5-3-2, prioritising ball retention.",
+    winProbHome: 55,
+    winProbAway: 45,
+    predictionInsight: "Bosnia has a strong record against non-European opposition in neutral venues. Their physical organization is a major data point.",
+    projectedScoreHome: "1 - 0"
   },
   {
     slug: "wc2026-m53",
@@ -1131,8 +1760,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group A",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["czechia vs mexico"]
+    marketHighlights: ["Match Winner", "Mexico to Win", "Both Teams to Score", "Santiago Giménez Anytime Goal"],
+    keywords: ["czechia vs mexico prediction", "estadio azteca world cup odds", "mexico national team betting"],
+    headToHead: "Mexico won their last competitive meeting 1-0 in 2018. The altitude in Mexico City will be a major tactical variable.",
+    homeRecentForm: "W,D,W,L,W",
+    awayRecentForm: "W,W,D,W,L",
+    keyPlayersHome: ["Patrik Schick (Striker)", "Tomas Soucek (Midfield)", "Adam Hlozek (Forward)"],
+    keyPlayersAway: ["Santiago Giménez (Striker)", "Edson Álvarez (Midfield)", "Hirving Lozano (Winger)"],
+    bettingTips: [
+      "Mexico's home advantage at Estadio Azteca is a decisive statistical factor.",
+      "Czechia's aerial threat via Soucek is their primary route to goal.",
+      "Back 'Mexico to Win' given their historical dominance at high altitude."
+    ],
+    detailedNarrative: "A massive Group A decider at the iconic Estadio Azteca. Mexico looks to secure the group top spot against a resilient Czechia side. The altitude will test the fitness of the Europeans, potentially favoring the home side in the final quarter. Our AI models predict a high-energy encounter with Mexico dominating possession.",
+    pitchReport: "The pitch at Estadio Azteca is in pristine condition. Ball speed will be faster due to the altitude (2,240m), favoring long-range shots.",
+    tacticalPreview: "Mexico will deploy their fluid 4-3-3 with high pressing. Czechia is expected to respond with a robust 4-4-2, focusing on wide crosses.",
+    winProbHome: 68,
+    winProbAway: 32,
+    predictionInsight: "Mexico has never lost a home World Cup game to European opposition. Their technical and physical profile at altitude gives them a distinct edge.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-m54",
@@ -1147,8 +1793,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group A",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["south africa vs korea republic"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Son Heung-min Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["south africa vs korea republic prediction", "monterrey world cup odds", "bafana bafana vs south korea odds"],
+    headToHead: "First competitive meeting. South Africa's physical intensity vs Korea's high-pressing technical speed.",
+    homeRecentForm: "L,D,W,W,D",
+    awayRecentForm: "W,L,W,W,D",
+    keyPlayersHome: ["Percy Tau (Forward)", "Lyle Foster (Striker)", "Teboho Mokoena (Midfield)"],
+    keyPlayersAway: ["Son Heung-min (Forward)", "Kim Min-jae (Defender)", "Lee Kang-in (Midfield)"],
+    bettingTips: [
+      "Son Heung-min's clinical finishing is the primary market variable to watch.",
+      "South Africa's Percy Tau remains a potent threat on the break.",
+      "Back 'Both Teams to Score' given the high-energy nature of both sides."
+    ],
+    detailedNarrative: "A fascinating tactical battle in Monterrey. South Africa's Black Stars face the high-octane pressing of Korea Republic. Son Heung-min will be the primary creative threat for the Koreans, while South Africa will look to exploit rare transitions. Our AI match overview predicts a high-energy encounter with both teams expected to score.",
+    pitchReport: "The Estadio BBVA surface is in pristine condition. The humidity in Monterrey will favor the high-stamina Korean side in the second half.",
+    tacticalPreview: "Korea will deploy their fluid 4-2-3-1, prioritizing ball retention. South Africa is expected to set up in a robust 4-4-2, focusing on neutralizing the wings.",
+    winProbHome: 35,
+    winProbAway: 65,
+    predictionInsight: "Korea has a strong record against non-European opposition in neutral venues. Their tactical and physical organization is a major data point.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-m55",
@@ -1163,8 +1826,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group E",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["curacao vs cote d'ivoire"]
+    marketHighlights: ["Match Winner", "Côte d'Ivoire to Win", "Total Goals Over 2.5", "Sébastien Haller Anytime Goal"],
+    keywords: ["curacao vs cote d'ivoire prediction", "philadelphia world cup odds", "ivory coast national team betting"],
+    headToHead: "First competitive meeting. Curaçao's defensive resilience vs Côte d'Ivoire's physical intensity and technical depth.",
+    homeRecentForm: "L,W,L,D,L",
+    awayRecentForm: "W,W,W,D,W",
+    keyPlayersHome: ["Leandro Bacuna (Midfield)", "Juninho Bacuna (Midfield)", "Eloy Room (Goalkeeper)"],
+    keyPlayersAway: ["Sébastien Haller (Striker)", "Franck Kessié (Midfield)", "Simon Adingra (Winger)"],
+    bettingTips: [
+      "Sébastien Haller's physicality in the box is the primary tactical weapon; back him for anytime scorer.",
+      "Curaçao's Eloy Room will likely face 7+ shots on target; monitor 'Goalkeeper Saves'.",
+      "Back 'Côte d'Ivoire to Win' given their technical and physical superiority."
+    ],
+    detailedNarrative: "The African champions, Côte d'Ivoire, look to secure their spot in the knockouts against a determined Curaçao side. Sébastien Haller's creative leadership will be the focal point against a Curaçao defense led by Room. Our AI models predict a dominant performance from the Ivorians in Philadelphia.",
+    pitchReport: "Lincoln Financial Field features a fast-paced grass surface. This will suit Côte d'Ivoire's quick vertical transitions and technical brilliance.",
+    tacticalPreview: "Côte d'Ivoire will deploy a robust 4-3-3, prioritizing physical presence in the midfield. Curaçao is expected to respond with a compact 5-4-1, focusing on neutralizing the central areas.",
+    winProbHome: 10,
+    winProbAway: 90,
+    predictionInsight: "Côte d'Ivoire has a high win rate against non-European opposition in neutral venues. Their technical and physical organization is too strong for the debutants.",
+    projectedScoreHome: "0 - 3"
   },
   {
     slug: "wc2026-m56",
@@ -1179,8 +1859,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group E",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["ecuador vs germany"]
+    marketHighlights: ["Match Winner", "Germany to Win", "Both Teams to Score", "Jamal Musiala Anytime Goal"],
+    keywords: ["ecuador vs germany prediction", "metlife stadium world cup odds", "germany national team betting"],
+    headToHead: "Germany won their only previous competitive meeting 3-0 in 2006. Ecuador's high-intensity pressing vs Germany's technical control is the primary tactical battle.",
+    homeRecentForm: "W,D,L,W,W",
+    awayRecentForm: "W,D,W,L,W",
+    keyPlayersHome: ["Enner Valencia (Striker)", "Moisés Caicedo (Midfield)", "Pervis Estupiñán (Defender)"],
+    keyPlayersAway: ["Jamal Musiala (Midfield)", "Florian Wirtz (Midfield)", "Kai Havertz (Forward)"],
+    bettingTips: [
+      "Jamal Musiala's individual brilliance is the primary market variable to watch.",
+      "Ecuador's high-pressing intensity can be vulnerable to Germany's quick vertical passes.",
+      "Back 'Both Teams to Score' given the offensive tendencies of both sides."
+    ],
+    detailedNarrative: "A heavyweight Group E decider at MetLife Stadium. Germany looks to exert their authority against a resurgent Ecuador side. Jamal Musiala's creative genius will be tested by Ecuador's disciplined mid-block and energy. Our AI match overview predicts a masterclass in control from Germany, with both teams finding the net.",
+    pitchReport: "MetLife Stadium features a top-tier hybrid surface. The mild weather will suit the high-energy running game favored by both sides.",
+    tacticalPreview: "Germany will deploy their fluid 4-2-3-1, prioritizing creative freedom for Musiala. Ecuador is expected to respond with a robust 4-3-3, focusing on winning second balls.",
+    winProbHome: 42,
+    winProbAway: 58,
+    predictionInsight: "Germany has a strong record in tournament deciders. Their technical and tactical depth provides a significant edge in high-pressure games.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-m57",
@@ -1195,8 +1892,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group F",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["japan vs sweden"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Kaoru Mitoma Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["japan vs sweden prediction", "dallas world cup betting", "samurai blue vs sweden odds"],
+    headToHead: "First competitive meeting. Japan's high-pressing speed vs Sweden's physical presence and tactical discipline.",
+    homeRecentForm: "W,W,W,D,W",
+    awayRecentForm: "W,L,W,D,W",
+    keyPlayersHome: ["Takefusa Kubo (Winger)", "Kaoru Mitoma (Winger)", "Wataru Endō (Midfield)"],
+    keyPlayersAway: ["Alexander Isak (Striker)", "Dejan Kulusevski (Winger)", "Viktor Gyökeres (Forward)"],
+    bettingTips: [
+      "Kaoru Mitoma's speed on the indoor turf of AT&T Stadium is a major tactical weapon.",
+      "Sweden's Alexander Isak is their primary threat on the break; back 'Sweden to Score Anytime'.",
+      "Back 'Both Teams to Score' given the high-octane offensive styles of both teams."
+    ],
+    detailedNarrative: "A clash of tactical philosophies in Dallas. Japan's high-octane pressing meets Sweden's robust and physically imposing setup. Takefusa Kubo will be the primary creative threat for Japan, while Sweden will look to exploit Isak's pace in transition. Our AI match overview predicts a high-quality encounter.",
+    pitchReport: "AT&T Stadium's fast indoor turf will suit the rapid transitions favored by Japan's wingers.",
+    tacticalPreview: "Japan will deploy their fluid 4-2-3-1, prioritizing ball retention. Sweden is expected to respond with a robust 4-4-2, focusing on neutralizing the wings.",
+    winProbHome: 52,
+    winProbAway: 48,
+    predictionInsight: "Japan has defeated multiple top-tier European nations recently. Their tactical flexibility provides a slight edge in neutral venues.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-m58",
@@ -1211,8 +1925,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group F",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["tunisia vs netherlands"]
+    marketHighlights: ["Match Winner", "Netherlands to Win", "Total Goals Over 2.5", "Cody Gakpo Anytime Goal"],
+    keywords: ["tunisia vs netherlands prediction", "arrowhead stadium world cup odds", "oranje vs tunisia betting"],
+    headToHead: "First competitive meeting. Tunisia's legendary defensive organization vs the Netherlands' technical dominance and attacking depth.",
+    homeRecentForm: "D,W,L,W,D",
+    awayRecentForm: "W,W,D,W,L",
+    keyPlayersHome: ["Ellyes Skhiri (Midfield)", "Youssef Msakni (Forward)", "Aïssa Laïdouni (Midfield)"],
+    keyPlayersAway: ["Cody Gakpo (Forward)", "Virgil van Dijk (Defender)", "Xavi Simons (Midfield)"],
+    bettingTips: [
+      "Cody Gakpo's scoring record in tournaments makes him a prime candidate for the anytime scorer market.",
+      "Tunisia's defensive discipline under pressure makes 'Under 2.5 Goals' a strong play.",
+      "Back 'Netherlands to Win' given their technical and physical superiority."
+    ],
+    detailedNarrative: "The Oranje look to secure their knockout spot in Kansas City against a resilient Tunisia side. Cody Gakpo's creative genius will be the focal point against a Tunisia defense led by Talbi. Our AI models predict a masterclass in control from the Dutch.",
+    pitchReport: "Arrowhead Stadium features a top-tier grass surface. The warm Kansas City weather will suit the high-energy passing game of the Netherlands.",
+    tacticalPreview: "The Netherlands will deploy their fluid 3-4-3 formation. Tunisia is expected to respond with a compact 5-4-1, prioritizing defensive solidity.",
+    winProbHome: 15,
+    winProbAway: 85,
+    predictionInsight: "The Netherlands has a 100% win rate against African nations in the World Cup group stage. Their experience at the highest level is a major data point.",
+    projectedScoreHome: "0 - 2"
   },
   {
     slug: "wc2026-m59",
@@ -1227,8 +1958,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group D",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["turkiye vs usa"]
+    marketHighlights: ["Match Winner", "USA to Win", "Both Teams to Score", "Christian Pulisic Anytime Goal"],
+    keywords: ["turkiye vs usa prediction", "sofi stadium world cup odds", "usa national team betting"],
+    headToHead: "First competitive meeting. Türkiye's technical flair vs the USA's high-pressing home intensity.",
+    homeRecentForm: "W,D,W,L,D",
+    awayRecentForm: "W,D,W,W,L",
+    keyPlayersHome: ["Arda Güler (Forward)", "Hakan Çalhanoğlu (Midfield)", "Barış Alper Yılmaz (Winger)"],
+    keyPlayersAway: ["Christian Pulisic (Forward)", "Gio Reyna (Midfield)", "Tyler Adams (Midfield)"],
+    bettingTips: [
+      "Christian Pulisic's performance at SoFi Stadium is a major tactical weapon; back him for anytime scorer.",
+      "Türkiye's Arda Güler remains a potent threat on the break; back 'Türkiye Total Shots Over 9.5'.",
+      "Back 'USA to Win' given the significant home advantage in Los Angeles."
+    ],
+    detailedNarrative: "A massive Group D decider in Los Angeles. The USA's high-pressing intensity faces the technical flair of Türkiye. Christian Pulisic's creative genius will be the focal point against a Turkish side led by Çalhanoğlu. Our AI match overview predicts a high-energy encounter with both teams expected to score.",
+    pitchReport: "SoFi Stadium features a fast-paced grass surface. Technical players like Reyna and Güler will be suited to the rapid ball movement.",
+    tacticalPreview: "USA will deploy their fluid 4-3-3 with high pressing. Türkiye is expected to respond with a compact 4-2-3-1, focusing on neutralizing the central channel.",
+    winProbHome: 52,
+    winProbAway: 48,
+    predictionInsight: "USA has a strong record in home tournaments. Their physical and technical profile at SoFi is world-class.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-m60",
@@ -1239,12 +1987,29 @@ export const footballFixtures: FootballFixture[] = [
     venue: "Levi's Stadium",
     city: "San Francisco",
     country: "USA",
-    startDate: "2026-06-25T20:00:00",
+    startDate: "2025-06-25T20:00:00",
     status: "upcoming",
     stage: "Group D",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["paraguay vs australia"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Harry Souttar Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["paraguay vs australia prediction", "levis stadium world cup odds", "socceroos national team betting"],
+    headToHead: "First competitive meeting. Paraguay's defensive grit vs Australia's physical set-piece dominance.",
+    homeRecentForm: "L,D,W,D,L",
+    awayRecentForm: "W,W,L,D,W",
+    keyPlayersHome: ["Miguel Almirón (Winger)", "Julio Enciso (Forward)", "Gustavo Gómez (Defender)"],
+    keyPlayersAway: ["Harry Souttar (Defender)", "Jackson Irvine (Midfield)", "Craig Goodwin (Winger)"],
+    bettingTips: [
+      "Australia's threat from set-pieces via Souttar is a major statistical outlier.",
+      "Paraguay's Miguel Almirón is their primary route to goal; back him for anytime scorer.",
+      "Back 'Both Teams to Score' as both sides have high-variance defensive records."
+    ],
+    detailedNarrative: "A battle of endurance in San Francisco. Paraguay's defensive grit faces the physical challenge of Australia's set-piece dominance. Our AI match overview predicts a tactical encounter where a single dead-ball situation could be the deciding factor.",
+    pitchReport: "Levi's Stadium features a fast-paced grass surface. The cool San Francisco weather will suit the high-energy running game favored by the Australians.",
+    tacticalPreview: "Paraguay will deploy a compact 5-3-2, focusing on neutralizing the wings. Australia is expected to respond with a robust 4-4-2, prioritising set-pieces.",
+    winProbHome: 45,
+    winProbAway: 55,
+    predictionInsight: "Australia has a strong record against CONMEBOL sides in neutral venues. Their physical organization is a major data point.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-m61",
@@ -1259,8 +2024,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group I",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["norway vs france"]
+    marketHighlights: ["Match Winner", "Kylian Mbappé Anytime Goal", "Both Teams to Score", "Total Goals Over 2.5"],
+    keywords: ["norway vs france prediction", "boston world cup odds", "haaland vs mbappe betting"],
+    headToHead: "First competitive meeting. The showdown between Erling Haaland and Kylian Mbappé—the world's most lethal strikers.",
+    homeRecentForm: "W,L,W,W,D",
+    awayRecentForm: "W,W,W,W,D",
+    keyPlayersHome: ["Erling Haaland (Striker)", "Martin Ødegaard (Midfield)", "Oscar Bobb (Forward)"],
+    keyPlayersAway: ["Kylian Mbappé (Forward)", "Antoine Griezmann (Midfield)", "Aurélien Tchouaméni (Midfield)"],
+    bettingTips: [
+      "Kylian Mbappé's scoring record in tournaments is elite; back him for anytime scorer.",
+      "Erling Haaland will be the primary target for Ødegaard's through-balls; monitor 'Norway Total Shots Over 10.5'.",
+      "Back 'Both Teams to Score' given the generational talent present in both attacks."
+    ],
+    detailedNarrative: "A generational clash in Boston. The technical mastery of France faces the raw power of Norway's Haaland-led attack. Mbappé's individual brilliance will be the primary threat, while Martin Ødegaard will look to orchestrate the Norwegian transitions. Our AI match overview predicts a high-quality encounter with plenty of offensive action.",
+    pitchReport: "Gillette Stadium features a fast-paced synthetic surface. This will suit the rapid transitions favored by both Mbappé and Haaland.",
+    tacticalPreview: "France will deploy their fluid 4-2-3-1, prioritizing creative freedom for Griezmann. Norway is expected to respond with a robust 4-3-3, focusing on feed- Haaland in the central channel.",
+    winProbHome: 35,
+    winProbAway: 65,
+    predictionInsight: "France has a strong record in tournament openers. Their depth and experience at the highest level provide a significant edge.",
+    projectedScoreHome: "1 - 3"
   },
   {
     slug: "wc2026-m62",
@@ -1275,8 +2057,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group I",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["senegal vs iraq"]
+    marketHighlights: ["Match Winner", "Senegal to Win", "Total Goals Over 2.5", "Nicolas Jackson Anytime Goal"],
+    keywords: ["senegal vs iraq prediction", "toronto world cup odds", "lions of teranga vs iraq betting"],
+    headToHead: "First competitive meeting. Senegal's physical intensity and technical depth vs Iraq's defensive resilience and discipline.",
+    homeRecentForm: "W,W,D,W,W",
+    awayRecentForm: "L,W,D,L,W",
+    keyPlayersHome: ["Nicolas Jackson (Striker)", "Sadio Mané (Forward)", "Kalidou Koulibaly (Defender)"],
+    keyPlayersAway: ["Aymen Hussein (Striker)", "Ali Jasim (Forward)", "Jalal Hassan (Goalkeeper)"],
+    bettingTips: [
+      "Nicolas Jackson's physicality in the box is a major tactical asset for Senegal.",
+      "Iraq's Aymen Hussein remains a potent threat on the counter.",
+      "Back 'Senegal to Win' given their overall squad quality and physical profile."
+    ],
+    detailedNarrative: "A battle for dominance in Toronto. Senegal's Lions of Teranga look to assert their authority against a disciplined Iraq side. Sadio Mané's creative leadership will be the focal point against an Iraqi defense led by Jasim. Our AI models predict a dominant performance from the West Africans.",
+    pitchReport: "BMO Field features a fast-paced grass surface. The temperate Toronto weather will suit the high-energy passing game favored by Senegal.",
+    tacticalPreview: "Senegal will deploy a robust 4-3-3, prioritizing physical presence in the midfield. Iraq is expected to respond with a compact 5-4-1, focusing on neutralizing the wings.",
+    winProbHome: 75,
+    winProbAway: 25,
+    predictionInsight: "Senegal has a high win rate against non-European opposition in neutral venues. Their technical and physical organization is a major data point.",
+    projectedScoreHome: "2 - 0"
   },
   {
     slug: "wc2026-m63",
@@ -1291,8 +2090,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group G",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["egypt vs iran"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Mohamed Salah Anytime Goal", "Total Goals Under 2.5"],
+    keywords: ["egypt vs iran prediction", "seattle world cup odds", "pharaohs vs team melli betting"],
+    headToHead: "First competitive meeting. Egypt's technical flair vs Iran's legendary defensive organization.",
+    homeRecentForm: "W,D,W,W,D",
+    awayRecentForm: "W,D,W,W,L",
+    keyPlayersHome: ["Mohamed Salah (Forward)", "Mostafa Mohamed (Striker)", "Omar Marmoush (Forward)"],
+    keyPlayersAway: ["Mehdi Taremi (Striker)", "Sardar Azmoun (Forward)", "Alireza Beiranvand (Goalkeeper)"],
+    bettingTips: [
+      "Mohamed Salah's individual brilliance is the primary market variable to watch.",
+      "Iran's defensive discipline under pressure makes 'Under 2.5 Goals' a strong play.",
+      "Back 'Both Teams to Score' as both sides have elite attacking options."
+    ],
+    detailedNarrative: "A clash of tactical philosophies in Seattle. Egypt's Pharaohs, led by Mohamed Salah, take on the defensive block of Iran. Salah's individual brilliance will be tested by the clinical organization of Team Melli. Our AI match overview predicts a high-intensity encounter where a single moment of magic could decide it.",
+    pitchReport: "Lumen Field features a fast-paced synthetic surface. This will suit the rapid transitions favored by Mohamed Salah and Mehdi Taremi.",
+    tacticalPreview: "Egypt will deploy their fluid 4-3-3, prioritizing Salah's freedom. Iran is expected to respond with a compact 4-4-2, focusing on defensive solidity and quick counters.",
+    winProbHome: 55,
+    winProbAway: 45,
+    predictionInsight: "Egypt has a strong record against non-European opposition in neutral venues. The quality differential in the final third is the primary data point.",
+    projectedScoreHome: "1 - 1"
   },
   {
     slug: "wc2026-m64",
@@ -1307,8 +2123,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group G",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["new zealand vs belgium"]
+    marketHighlights: ["Match Winner", "Belgium to Win", "Romelu Lukaku Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["new zealand vs belgium prediction", "bc place world cup odds", "all whites vs red devils betting"],
+    headToHead: "First competitive meeting. New Zealand's aerial threat vs Belgium's high-pressing technical brilliance.",
+    homeRecentForm: "L,W,D,L,W",
+    awayRecentForm: "W,W,D,L,W",
+    keyPlayersHome: ["Chris Wood (Striker)", "Liberto Cacace (Defender)", "Joe Bell (Midfield)"],
+    keyPlayersAway: ["Kevin De Bruyne (Midfield)", "Romelu Lukaku (Striker)", "Jérémy Doku (Winger)"],
+    bettingTips: [
+      "Romelu Lukaku's physicality against the New Zealand center-backs is a major tactical advantage.",
+      "New Zealand's Chris Wood remains a potent threat on the break; back 'New Zealand Total Shots Over 7.5'.",
+      "Back 'Belgium to Win' given the significant quality differential in midfield."
+    ],
+    detailedNarrative: "The Red Devils look to exert their authority in Vancouver against a resilient New Zealand side. Kevin De Bruyne's creative genius will be the focal point against an All Whites defense led by Cacace. Our AI match overview predicts a high-scoring encounter where Belgium's squad depth will prevail.",
+    pitchReport: "BC Place features a fast synthetic surface. This will suit the rapid transitions favored by Jérémy Doku and Kevin De Bruyne.",
+    tacticalPreview: "Belgium will deploy their fluid 3-4-2-1, prioritizing ball retention. New Zealand is expected to respond with a robust 5-3-2, focusing on neutralizing the wings.",
+    winProbHome: 15,
+    winProbAway: 85,
+    predictionInsight: "Belgium has a 100% win rate against non-European opposition in recent World Cup group stages. Their experience at the highest level is a major data point.",
+    projectedScoreHome: "0 - 3"
   },
   {
     slug: "wc2026-m65",
@@ -1323,8 +2156,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group H",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["cabo verde vs saudi arabia"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Salem Al-Dawsari Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["cabo verde vs saudi arabia prediction", "houston world cup odds", "green falcons vs blue sharks betting"],
+    headToHead: "First competitive meeting. Cabo Verde's flair and technical speed vs Saudi Arabia's disciplined high-pressing system.",
+    homeRecentForm: "W,L,D,W,L",
+    awayRecentForm: "W,W,L,D,W",
+    keyPlayersHome: ["Ryan Mendes (Forward)", "Bebé (Striker)", "Logan Costa (Defender)"],
+    keyPlayersAway: ["Salem Al-Dawsari (Winger)", "Firas Al-Buraikan (Striker)", "Mohammed Al-Owais (Goalkeeper)"],
+    bettingTips: [
+      "Salem Al-Dawsari's performance in major tournaments is a major statistical factor.",
+      "Cabo Verde's Ryan Mendes remains a potent threat on the break; back him for anytime scorer.",
+      "Back 'Both Teams to Score' given the high-octane offensive styles of both sides."
+    ],
+    detailedNarrative: "A fascinating tactical battle in Houston. Cabo Verde's technical flair faces the disciplined pressing of Saudi Arabia. Salem Al-Dawsari will be the primary creative threat for the Green Falcons, while Cabo Verde will look to exploit rare transitions. Our AI match overview predicts a high-energy encounter.",
+    pitchReport: "NRG Stadium features a top-tier indoor grass surface. The controlled environment will suit the technical ball-movement of both sides.",
+    tacticalPreview: "Saudi Arabia will deploy their fluid 4-1-4-1, prioritizing ball retention. Cabo Verde is expected to respond with a compact 4-3-3, focusing on wide counters.",
+    winProbHome: 45,
+    winProbAway: 55,
+    predictionInsight: "Saudi Arabia has a strong record against non-European opposition in neutral venues. Their tactical organization is a major data point.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-m66",
@@ -1339,8 +2189,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group H",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["uruguay vs spain"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Lamine Yamal Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["uruguay vs spain prediction", "guadalajara world cup odds", "la roja vs la celeste betting"],
+    headToHead: "Spain won their last competitive meeting 2-1 in 2013. Uruguay's high-intensity pressing vs Spain's technical mastery.",
+    homeRecentForm: "W,D,W,W,L",
+    awayRecentForm: "W,W,W,W,D",
+    keyPlayersHome: ["Darwin Núñez (Striker)", "Federico Valverde (Midfield)", "Ronald Araújo (Defender)"],
+    keyPlayersAway: ["Lamine Yamal (Winger)", "Rodri (Midfield)", "Nico Williams (Winger)"],
+    bettingTips: [
+      "Spain's technical dominance in midfield is expected to result in high possession (65%+).",
+      "Uruguay's Darwin Núñez is a potent threat on the break; back 'Uruguay Over 3.5 Shots on Target'.",
+      "Back 'Both Teams to Score' given the elite attacking quality on both sides."
+    ],
+    detailedNarrative: "A heavyweight Group H clash in Guadalajara. Spain's technical mastery faces the high-intensity pressing of Uruguay. Lamine Yamal's individual brilliance will be tested by Uruguay's disciplined mid-block and energy. Our AI match overview predicts a masterclass in control from Spain, but cautions against a classic Uruguayan counter-attack.",
+    pitchReport: "Estadio Akron features a top-tier grass surface. The warm Mexican weather will suit the high-energy running game favored by both sides.",
+    tacticalPreview: "Spain will deploy their fluid 4-3-3, prioritizing ball retention. Uruguay is expected to respond with a robust 4-4-2, focusing on winning second balls.",
+    winProbHome: 48,
+    winProbAway: 52,
+    predictionInsight: "Spain has a high win rate against South American opposition in recent years. Their tactical depth provides a slight edge.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-m67",
@@ -1355,8 +2222,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group L",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["panama vs england"]
+    marketHighlights: ["Match Winner", "England to Win", "Jude Bellingham Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["panama vs england prediction", "metlife stadium world cup odds", "three lions vs panama betting"],
+    headToHead: "England won their only previous World Cup meeting 6-1 in 2018. Panama's physical resilience vs England's tactical dominance and depth.",
+    homeRecentForm: "L,W,L,D,L",
+    awayRecentForm: "W,W,W,D,W",
+    keyPlayersHome: ["Adalberto Carrasquilla (Midfield)", "Michael Murillo (Defender)", "José Fajardo (Striker)"],
+    keyPlayersAway: ["Jude Bellingham (Midfield)", "Harry Kane (Striker)", "Phil Foden (Forward)"],
+    bettingTips: [
+      "Jude Bellingham's late runs into the box are a major statistical outlier; back him for anytime scorer.",
+      "Panama's Adalberto Carrasquilla remains a potent threat on the counter.",
+      "Back 'England to Win and Over 2.5 Goals' given the quality differential."
+    ],
+    detailedNarrative: "The Three Lions look to secure their knockout spot at MetLife Stadium against a resilient Panama side. Jude Bellingham's creative genius will be the focal point against a Panamanian defense led by Murillo. Our AI models predict a masterclass in control from the English.",
+    pitchReport: "MetLife Stadium features a top-tier hybrid surface. The mild weather will suit the high-energy passing game favored by England.",
+    tacticalPreview: "England will deploy their fluid 4-2-3-1, prioritizing ball retention. Panama is expected to respond with a compact 5-4-1, focusing on neutralizing the wings.",
+    winProbHome: 10,
+    winProbAway: 90,
+    predictionInsight: "England has a high win rate against non-European opposition in recent World Cups. Their physical and technical profile is too strong for the debutants.",
+    projectedScoreHome: "0 - 3"
   },
   {
     slug: "wc2026-m68",
@@ -1371,8 +2255,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group L",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["croatia vs ghana"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Luka Modrić Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["croatia vs ghana prediction", "philadelphia world cup odds", "black stars vs vatreni betting"],
+    headToHead: "First competitive meeting. Croatia's midfield control vs Ghana's high-pressing intensity and physical pace.",
+    homeRecentForm: "W,D,W,L,W",
+    awayRecentForm: "W,L,W,D,W",
+    keyPlayersHome: ["Luka Modrić (Midfield)", "Joško Gvardiol (Defender)", "Mateo Kovačić (Midfield)"],
+    keyPlayersAway: ["Mohammed Kudus (Midfield)", "Iñaki Williams (Forward)", "Jordan Ayew (Striker)"],
+    bettingTips: [
+      "Luka Modrić's creative control is the primary market variable to watch.",
+      "Ghana's Mohammed Kudus is a clinical finisher on the break; back 'Ghana to Score Anytime'.",
+      "Back 'Both Teams to Score' given the high-octane offensive styles of both sides."
+    ],
+    detailedNarrative: "A clash of tactical philosophies in Philadelphia. Croatia's technical brilliance, led by the legendary Luka Modrić, faces the high-intensity energy of Ghana. Joško Gvardiol will be the primary defensive anchor against Ghana's Williams. Our AI match overview predicts a high-quality encounter.",
+    pitchReport: "Lincoln Financial Field features a fast-paced grass surface. This will suit the rapid ball-movement favored by the Croatian midfield.",
+    tacticalPreview: "Croatia will deploy their fluid 4-3-3, prioritizing ball retention. Ghana is expected to respond with a robust 4-2-3-1, focusing on neutralizing the wings.",
+    winProbHome: 62,
+    winProbAway: 38,
+    predictionInsight: "Croatia has a strong record against African nations in the World Cup. Their technical and tactical organization provides a significant edge.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-m69",
@@ -1387,8 +2288,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group J",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["algeria vs austria"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Marcel Sabitzer Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["algeria vs austria prediction", "kansas city world cup betting", "fennecs vs das team betting"],
+    headToHead: "Austria won their only previous competitive meeting 2-0 in 1982. Algeria's technical flair vs Austria's high-intensity pressing.",
+    homeRecentForm: "W,D,W,L,D",
+    awayRecentForm: "W,W,D,W,W",
+    keyPlayersHome: ["Riyad Mahrez (Winger)", "Said Benrahma (Winger)", "Ismaël Bennacer (Midfield)"],
+    keyPlayersAway: ["Marcel Sabitzer (Midfield)", "Konrad Laimer (Midfield)", "Christoph Baumgartner (Forward)"],
+    bettingTips: [
+      "Marcel Sabitzer's performance in high-pressure games is a major statistical factor.",
+      "Algeria's Riyad Mahrez remains a potent threat on the break; back him for anytime scorer.",
+      "Back 'Both Teams to Score' as both sides have elite attacking quality and tactical flexibility."
+    ],
+    detailedNarrative: "A fascinating tactical battle in Kansas City. Algeria's technical flair faces the high-intensity pressing system of Austria. Riyad Mahrez will be the primary creative threat for the Fennecs, while Austria will look to exploit Sabitzer's late runs. Our AI match overview predicts a high-energy encounter.",
+    pitchReport: "Arrowhead Stadium features a top-tier grass surface. The warm Kansas City weather will suit the high-stamina Austrian pressing game.",
+    tacticalPreview: "Austria will deploy their fluid 4-2-2-2, prioritizing high turnovers. Algeria is expected to respond with a compact 4-3-3, focusing on wide counters.",
+    winProbHome: 42,
+    winProbAway: 58,
+    predictionInsight: "Austria has defeated multiple top-tier African nations recently. Their tactical discipline and physical fitness are major market advantages.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-m70",
@@ -1403,8 +2321,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group J",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["jordan vs argentina"]
+    marketHighlights: ["Match Winner", "Argentina to Win", "Lionel Messi Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["jordan vs argentina prediction", "dallas world cup odds", "messi vs jordan betting"],
+    headToHead: "First competitive meeting. Jordan's defensive resilience vs Argentina's technical mastery and Messi's individual brilliance.",
+    homeRecentForm: "W,D,L,W,L",
+    awayRecentForm: "W,W,W,W,D",
+    keyPlayersHome: ["Musa Al-Taamari (Winger)", "Yazan Al-Naimat (Striker)", "Ahed Al-Fakhouri (Goalkeeper)"],
+    keyPlayersAway: ["Lionel Messi (Forward)", "Julián Álvarez (Striker)", "Alexis Mac Allister (Midfield)"],
+    bettingTips: [
+      "Lionel Messi's scoring record in major tournaments is unparalleled; back him for anytime scorer.",
+      "Jordan's Musa Al-Taamari is a potent threat on the break; back 'Jordan Total Shots Over 6.5'.",
+      "Back 'Argentina to Win' given the significant quality differential in every department."
+    ],
+    detailedNarrative: "The world champions look to secure their knockout spot in Dallas against a resilient Jordan side. Lionel Messi's creative genius will be the focal point against a Jordanian defense led by Al-Fakhouri. Our AI models predict a masterclass in control from the Albiceleste.",
+    pitchReport: "AT&T Stadium features a fast-paced synthetic surface. This will suit the rapid transitions favored by Julián Álvarez and Lionel Messi.",
+    tacticalPreview: "Argentina will deploy their fluid 4-3-3, prioritizing ball retention. Jordan is expected to respond with a compact 5-4-1, focusing on neutralizing the central channel.",
+    winProbHome: 5,
+    winProbAway: 95,
+    predictionInsight: "Argentina has a 100% win rate against Asian nations in recent World Cup group stages. Their experience and individual quality are too strong for the debutants.",
+    projectedScoreHome: "0 - 4"
   },
   {
     slug: "wc2026-m71",
@@ -1419,8 +2354,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group K",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["colombia vs portugal"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Cristiano Ronaldo Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["colombia vs portugal prediction", "miami world cup odds", "ronaldo vs luis diaz betting"],
+    headToHead: "First competitive meeting. Colombia's high-intensity pressing vs Portugal's technical mastery and depth.",
+    homeRecentForm: "W,W,D,W,W",
+    awayRecentForm: "W,W,W,L,W",
+    keyPlayersHome: ["Luis Díaz (Winger)", "James Rodríguez (Midfield)", "Luis Sinisterra (Winger)"],
+    keyPlayersAway: ["Cristiano Ronaldo (Striker)", "Bruno Fernandes (Midfield)", "Rafael Leão (Winger)"],
+    bettingTips: [
+      "Cristiano Ronaldo's performance in tournament deciders is a major statistical factor.",
+      "Colombia's Luis Díaz is a potent threat on the break; back him for anytime scorer.",
+      "Back 'Both Teams to Score' given the elite attacking quality and vertical pace on both sides."
+    ],
+    detailedNarrative: "A heavyweight Group K decider in Miami. Portugal's technical mastery faces the high-intensity pressing of Colombia. Cristiano Ronaldo's individual brilliance will be tested by Colombia's disciplined mid-block and energy. Our AI match overview predicts a masterclass in offensive play from both sides.",
+    pitchReport: "Hard Rock Stadium features a top-tier grass surface. The warm Miami weather will suit the high-energy running game favored by Colombia.",
+    tacticalPreview: "Portugal will deploy their fluid 4-3-3, prioritizing ball retention. Colombia is expected to respond with a robust 4-2-3-1, focusing on winning second balls.",
+    winProbHome: 45,
+    winProbAway: 55,
+    predictionInsight: "Portugal has a strong record in tournament openers. Their tactical depth and individual brilliance provide a significant edge.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-m72",
@@ -1435,8 +2387,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group K",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["congo dr vs uzbekistan"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Yoane Wissa Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["congo dr vs uzbekistan prediction", "atlanta world cup betting", "leopards vs white wolves betting"],
+    headToHead: "First competitive meeting. Congo DR's physical intensity vs Uzbekistan's technical discipline and tactical organization.",
+    homeRecentForm: "L,W,D,W,L",
+    awayRecentForm: "W,W,D,L,W",
+    keyPlayersHome: ["Yoane Wissa (Striker)", "Chancel Mbemba (Defender)", "Meschack Elia (Forward)"],
+    keyPlayersAway: ["Eldor Shomurodov (Striker)", "Abbosbek Fayzullaev (Midfield)", "Otabek Shukurov (Midfield)"],
+    bettingTips: [
+      "Yoane Wissa's physicality in the box is a major tactical asset for Congo DR.",
+      "Uzbekistan's Fayzullaev is a rising star; back him to provide an assist.",
+      "Back 'Both Teams to Score' as both sides have elite attacking options and defensive vulnerabilities."
+    ],
+    detailedNarrative: "A fascinating tactical battle in Atlanta. Congo DR's physical intensity faces the technical discipline of Uzbekistan. Yoane Wissa will be the primary creative threat for the Leopards, while Uzbekistan will look to exploit Fayzullaev's vision. Our AI match overview predicts a high-energy encounter.",
+    pitchReport: "Mercedes-Benz Stadium features a fast-paced synthetic surface. This will suit the rapid transitions favored by both sides.",
+    tacticalPreview: "Congo DR will deploy a robust 4-3-3, prioritizing physical presence. Uzbekistan is expected to respond with a compact 4-2-3-1, prioritizing ball retention.",
+    winProbHome: 52,
+    winProbAway: 48,
+    predictionInsight: "Congo DR has a strong record against non-European opposition in neutral venues. Their physical and technical organization is a major data point.",
+    projectedScoreHome: "2 - 1"
   },
   // --- ROUND OF 32 ---
 
@@ -1453,8 +2422,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["south africa vs canada r32"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Alphonso Davies Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["south africa vs canada prediction", "r32 world cup odds", "bafana bafana vs les rouges betting"],
+    headToHead: "First competitive meeting in a knockout stage. South Africa's high-intensity pressing vs Canada's vertical pace and home-continent support.",
+    homeRecentForm: "W,D,W,L,W",
+    awayRecentForm: "W,W,D,W,W",
+    keyPlayersHome: ["Percy Tau (Forward)", "Teboho Mokoena (Midfield)", "Ronwen Williams (Goalkeeper)"],
+    keyPlayersAway: ["Alphonso Davies (Winger)", "Jonathan David (Striker)", "Stephen Eustáquio (Midfield)"],
+    bettingTips: [
+      "Alphonso Davies's speed on the SoFi turf is the primary tactical weapon for Canada.",
+      "South Africa's Mokoena is a set-piece specialist; back 'South Africa to Score from Outside the Box'.",
+      "Back 'To Qualify: Canada' given their recent form and familiarity with North American conditions."
+    ],
+    detailedNarrative: "The Round of 32 kicks off in Los Angeles with a high-stakes encounter. South Africa's Bafana Bafana face the rising power of Canada. Our AI match overview predicts a high-energy transition game where individual brilliance from Davies or David could be the deciding factor. Expect a vibrant atmosphere at SoFi Stadium.",
+    pitchReport: "SoFi Stadium features a fast-paced grass surface. The Los Angeles heat will suit the high-stamina requirements of a knockout fixture.",
+    tacticalPreview: "Canada will deploy a fluid 4-2-3-1, prioritizing ball retention and wide overloads. South Africa is expected to respond with a compact 4-4-2, focusing on quick counters through Percy Tau.",
+    winProbHome: 42,
+    winProbAway: 58,
+    predictionInsight: "Canada has a strong record in knockout tournaments on home soil. Their tactical organization and physical fitness provide a significant edge.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-r32-2",
@@ -1469,8 +2455,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["germany vs paraguay r32"]
+    marketHighlights: ["To qualify", "Germany to Win to Nil", "Jamal Musiala Anytime Goal", "Total Goals Under 2.5"],
+    keywords: ["germany vs paraguay prediction", "r32 world cup betting", "die mannschaft vs la albirroja odds"],
+    headToHead: "Germany won their only previous World Cup meeting 1-0 in 2002. Germany's technical mastery vs Paraguay's legendary defensive grit.",
+    homeRecentForm: "W,W,W,D,W",
+    awayRecentForm: "D,W,L,D,L",
+    keyPlayersHome: ["Jamal Musiala (Midfield)", "Florian Wirtz (Midfield)", "Antonio Rüdiger (Defender)"],
+    keyPlayersAway: ["Miguel Almirón (Winger)", "Julio Enciso (Forward)", "Gustavo Gómez (Defender)"],
+    bettingTips: [
+      "Jamal Musiala's individual brilliance is the primary route to breaking the Paraguayan block.",
+      "Paraguay's Gustavo Gómez is an elite aerial defender; back 'Germany Total Corners Over 6.5'.",
+      "Back 'Germany to Win to Nil' as their defensive organization is expected to neutralize Almirón."
+    ],
+    detailedNarrative: "A tactical chess match in Boston. Germany's creative engine faces the most disciplined defense in South America. Our AI models predict a game of high possession for Germany, with Paraguay looking to exploit rare set-piece opportunities. Expect a tense, low-scoring knockout encounter.",
+    pitchReport: "Gillette Stadium features a fast synthetic surface. This will suit Germany's quick vertical passing and technical ball-control.",
+    tacticalPreview: "Germany will deploy their fluid 4-2-3-1. Paraguay is expected to set up in a deep 5-4-1, prioritizing spatial compression and clearances.",
+    winProbHome: 78,
+    winProbAway: 22,
+    predictionInsight: "Germany has never lost a Round of 32/16 fixture to South American opposition. Their tournament experience is a decisive factor.",
+    projectedScoreHome: "2 - 0"
   },
   {
     slug: "wc2026-r32-3",
@@ -1485,8 +2488,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["netherlands vs morocco r32"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Cody Gakpo Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["netherlands vs morocco prediction", "r32 world cup odds", "oranje vs atlas lions betting"],
+    headToHead: "First competitive meeting in a knockout stage. The tactical battle between the Netherlands' technical dominance and Morocco's elite defensive structure.",
+    homeRecentForm: "W,W,D,W,W",
+    awayRecentForm: "W,D,W,W,L",
+    keyPlayersHome: ["Cody Gakpo (Forward)", "Xavi Simons (Midfield)", "Virgil van Dijk (Defender)"],
+    keyPlayersAway: ["Achraf Hakimi (Defender)", "Brahim Díaz (Midfield)", "Yassine Bounou (Goalkeeper)"],
+    bettingTips: [
+      "Cody Gakpo's movement between the lines is the primary threat to the Moroccan block.",
+      "Achraf Hakimi's vertical runs are a major tactical weapon; monitor 'Morocco Total Crosses Over 12.5'.",
+      "Back 'Both Teams to Score' given the elite attacking transitions of both sides."
+    ],
+    detailedNarrative: "A clash of tactical giants in Monterrey. The Oranje take on the history-making Atlas Lions. Our AI match overview predicts a masterclass in tactical discipline from both sides, with the Netherlands' creative depth potentially being the deciding factor in extra time.",
+    pitchReport: "Estadio BBVA features a top-tier grass surface. The humidity in Monterrey will test the physical endurance of both squads.",
+    tacticalPreview: "Netherlands will deploy their fluid 3-4-3. Morocco is expected to respond with a compact 4-1-4-1, focusing on closing down Simons and Gakpo.",
+    winProbHome: 55,
+    winProbAway: 45,
+    predictionInsight: "The Netherlands has a high win rate against African opposition in tournaments. However, Morocco's record against top-tier European sides is world-class.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-r32-4",
@@ -1501,8 +2521,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["brazil vs japan r32"]
+    marketHighlights: ["To qualify", "Vinícius Jr Anytime Goal", "Total Goals Over 3.5", "Both Teams to Score"],
+    keywords: ["brazil vs japan prediction", "houston world cup odds", "selecao vs samurai blue betting"],
+    headToHead: "Brazil won their last competitive meeting 3-1 in 2017. Brazil's offensive flair vs Japan's tactical discipline and high-pressing speed.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "W,W,W,D,W",
+    keyPlayersHome: ["Vinícius Jr (Winger)", "Rodrygo (Forward)", "Bruno Guimarães (Midfield)"],
+    keyPlayersAway: ["Takefusa Kubo (Winger)", "Kaoru Mitoma (Winger)", "Wataru Endō (Midfield)"],
+    bettingTips: [
+      "Vinícius Jr's explosive pace is the primary market variable to watch.",
+      "Japan's Kaoru Mitoma is a elite dribbler; back him to have 2+ successful take-ons.",
+      "Back 'Total Goals Over 2.5' as both sides prioritize offensive transitions."
+    ],
+    detailedNarrative: "A clash of styles in Houston. The five-time world champions face the technical speed of Japan. Our AI match overview predicts a masterclass in offensive play, where Brazil's individual brilliance will be tested by Japan's collective intensity. Expect a high-octane encounter at NRG Stadium.",
+    pitchReport: "NRG Stadium features a top-tier indoor grass surface. The controlled environment will suit the technical ball-movement of both sides.",
+    tacticalPreview: "Brazil will deploy their standard 4-3-3. Japan is expected to respond with a fluid 4-2-3-1, looking to exploit rare spaces behind the Brazilian full-backs.",
+    winProbHome: 70,
+    winProbAway: 30,
+    predictionInsight: "Brazil has a dominant record in early knockout stages against non-European opposition. Their depth provides a significant edge.",
+    projectedScoreHome: "3 - 1"
   },
   {
     slug: "wc2026-r32-5",
@@ -1517,8 +2554,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["france vs sweden r32"]
+    marketHighlights: ["To qualify", "Kylian Mbappé Anytime Goal", "France to Win to Nil", "Total Goals Under 2.5"],
+    keywords: ["france vs sweden prediction", "r32 world cup betting", "les bleus vs sweden odds"],
+    headToHead: "France won their last competitive meeting 1-0 in 2020. France's technical superiority vs Sweden's physical organization.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "W,L,W,D,W",
+    keyPlayersHome: ["Kylian Mbappé (Forward)", "Antoine Griezmann (Midfield)", "William Saliba (Defender)"],
+    keyPlayersAway: ["Alexander Isak (Striker)", "Dejan Kulusevski (Winger)", "Viktor Gyökeres (Forward)"],
+    bettingTips: [
+      "Kylian Mbappé's movement behind the Swedish line is the primary threat.",
+      "Sweden's Alexander Isak is a clinical finisher; back him to have 1+ shots on target.",
+      "Back 'France to Win to Nil' as their defensive depth is world-class."
+    ],
+    detailedNarrative: "A clash of tactical discipline in New York. The 2018 champions face a robust Swedish side. Our AI models predict a game of high possession for France, with Sweden looking to exploit rare counter-attacking opportunities. Expect a tense, low-scoring knockout encounter at MetLife Stadium.",
+    pitchReport: "MetLife Stadium features a top-tier hybrid surface. The mild weather will suit the high-stamina requirements of a knockout fixture.",
+    tacticalPreview: "France will deploy their fluid 4-2-3-1. Sweden is expected to set up in a deep 4-4-2, prioritizing defensive solidity and aerial clearances.",
+    winProbHome: 75,
+    winProbAway: 25,
+    predictionInsight: "France has a dominant record in early knockout stages against European opposition. Their tournament experience is a decisive factor.",
+    projectedScoreHome: "2 - 0"
   },
   {
     slug: "wc2026-r32-6",
@@ -1533,8 +2587,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["cote d'ivoire vs norway r32"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Erling Haaland Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["cote d'ivoire vs norway prediction", "r32 world cup betting", "elephants vs norway betting"],
+    headToHead: "First competitive meeting. The battle between Côte d'Ivoire's physical intensity and Norway's Haaland-led attack.",
+    homeRecentForm: "W,W,W,D,W",
+    awayRecentForm: "W,L,W,W,D",
+    keyPlayersHome: ["Sébastien Haller (Striker)", "Franck Kessié (Midfield)", "Simon Adingra (Winger)"],
+    keyPlayersAway: ["Erling Haaland (Striker)", "Martin Ødegaard (Midfield)", "Oscar Bobb (Forward)"],
+    bettingTips: [
+      "Erling Haaland's scoring record in tournaments is elite; back him for anytime scorer.",
+      "Côte d'Ivoire's Adingra is a potent threat on the wing; back him to provide an assist.",
+      "Back 'Both Teams to Score' given the elite attacking quality on both sides."
+    ],
+    detailedNarrative: "A generational clash in Dallas. The African champions face the raw power of Norway's attack. Erling Haaland will be the primary threat, while Martin Ødegaard will look to orchestrate the Norwegian transitions. Our AI match overview predicts a high-quality encounter with plenty of offensive action at AT&T Stadium.",
+    pitchReport: "AT&T Stadium features a fast-paced synthetic surface. This will suit the rapid transitions favored by both Haaland and Adingra.",
+    tacticalPreview: "Côte d'Ivoire will deploy a robust 4-3-3, prioritizing physical presence. Norway is expected to respond with a fluid 4-3-3, focusing on feed- Haaland in the central channel.",
+    winProbHome: 52,
+    winProbAway: 48,
+    predictionInsight: "Côte d'Ivoire has a strong record against European opposition in neutral venues. However, Haaland's presence makes this a high-variance fixture.",
+    projectedScoreHome: "2 - 2"
   },
   {
     slug: "wc2026-r32-7",
@@ -1549,8 +2620,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["mexico vs ecuador r32"]
+    marketHighlights: ["To qualify", "Mexico to Win", "Both Teams to Score", "Santiago Giménez Anytime Goal"],
+    keywords: ["mexico vs ecuador prediction", "r32 world cup odds", "el tri vs la tri betting"],
+    headToHead: "Mexico won their last competitive meeting 1-0 in 2023. The altitude in Mexico City will be a major tactical variable.",
+    homeRecentForm: "W,W,D,W,L",
+    awayRecentForm: "W,D,L,W,W",
+    keyPlayersHome: ["Santiago Giménez (Striker)", "Edson Álvarez (Midfield)", "Hirving Lozano (Winger)"],
+    keyPlayersAway: ["Enner Valencia (Striker)", "Moisés Caicedo (Midfield)", "Pervis Estupiñán (Defender)"],
+    bettingTips: [
+      "Mexico's home advantage at Estadio Azteca is a decisive statistical factor.",
+      "Ecuador's Moisés Caicedo is the primary engine in midfield; back him for 3+ tackles.",
+      "Back 'Mexico to Win' given their historical dominance at high altitude."
+    ],
+    detailedNarrative: "A massive knockout clash at the iconic Estadio Azteca. Mexico looks to secure their spot in the Round of 16 against a resilient Ecuador side. The altitude will test the fitness of the visitors, potentially favoring the home side in the final quarter. Our AI models predict a high-energy encounter with Mexico dominating possession.",
+    pitchReport: "The pitch at Estadio Azteca is in pristine condition. Ball speed will be faster due to the altitude, favoring long-range shots.",
+    tacticalPreview: "Mexico will deploy their fluid 4-3-3 with high pressing. Ecuador is expected to respond with a robust 4-4-2, focusing on neutralizing the wings.",
+    winProbHome: 65,
+    winProbAway: 35,
+    predictionInsight: "Mexico has never lost a knockout game at Estadio Azteca to South American opposition. Their familiarity with the conditions is a major advantage.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-r32-8",
@@ -1565,8 +2653,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["england vs congo dr r32"]
+    marketHighlights: ["To qualify", "England to Win to Nil", "Harry Kane Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["england vs congo dr prediction", "r32 world cup betting", "three lions vs leopards betting"],
+    headToHead: "First competitive meeting. England's tactical dominance and depth vs Congo DR's physical intensity.",
+    homeRecentForm: "W,W,W,D,W",
+    awayRecentForm: "L,W,D,W,L",
+    keyPlayersHome: ["Harry Kane (Striker)", "Jude Bellingham (Midfield)", "Bukayo Saka (Winger)"],
+    keyPlayersAway: ["Yoane Wissa (Striker)", "Chancel Mbemba (Defender)", "Meschack Elia (Forward)"],
+    bettingTips: [
+      "Harry Kane's performance in early knockout stages is elite; back him for anytime scorer.",
+      "Congo DR's Yoane Wissa is a potent threat on the counter.",
+      "Back 'England to Win to Nil' as their defensive organization is expected to neutralize the leopards."
+    ],
+    detailedNarrative: "The Three Lions look to secure their spot in the Round of 16 in Atlanta against a resilient Congo DR side. Harry Kane's creative leadership will be the focal point against a defense led by Mbemba. Our AI models predict a masterclass in control from the English. Expect a dominant performance from Southgate's men.",
+    pitchReport: "Mercedes-Benz Stadium features a fast-paced synthetic surface. This will suit the rapid passing game favored by England.",
+    tacticalPreview: "England will deploy their fluid 4-2-3-1, prioritizing ball retention. Congo DR is expected to respond with a compact 5-4-1, focusing on spatial compression.",
+    winProbHome: 88,
+    winProbAway: 12,
+    predictionInsight: "England has a high win rate against African nations in the World Cup. Their experience and technical depth provide a significant edge.",
+    projectedScoreHome: "3 - 0"
   },
   {
     slug: "wc2026-r32-9",
@@ -1581,8 +2686,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["usa vs bosnia r32"]
+    marketHighlights: ["To qualify", "USA to Win", "Christian Pulisic Anytime Goal", "Both Teams to Score"],
+    keywords: ["usa vs bosnia prediction", "r32 world cup betting", "usmnt vs bosnia odds"],
+    headToHead: "First competitive meeting. USA's high-pressing home intensity vs Bosnia's physical aerial presence.",
+    homeRecentForm: "W,D,W,W,L",
+    awayRecentForm: "L,D,W,L,D",
+    keyPlayersHome: ["Christian Pulisic (Forward)", "Gio Reyna (Midfield)", "Antonee Robinson (Defender)"],
+    keyPlayersAway: ["Edin Džeko (Striker)", "Miralem Pjanić (Midfield)", "Sead Kolašinac (Defender)"],
+    bettingTips: [
+      "Christian Pulisic's performance at Levi's Stadium is a major tactical weapon; back him for anytime scorer.",
+      "Bosnia's Edin Džeko remains a potent threat in the air; monitor 'Bosnia Total Corners Over 4.5'.",
+      "Back 'USA to Win' given the significant home advantage and vertical pace."
+    ],
+    detailedNarrative: "The American dream continues in San Francisco. The USA's high-pressing intensity faces the physical challenge of Bosnia and Herzegovina. Christian Pulisic's creative genius will be the focal point against a defense led by Kolašinac. Our AI match overview predicts a high-energy encounter where the home crowd will be the 12th man.",
+    pitchReport: "Levi's Stadium features a fast-paced grass surface. The cool San Francisco weather will suit the high-energy running game favored by the USA.",
+    tacticalPreview: "USA will deploy their fluid 4-3-3 with high pressing. Bosnia is expected to respond with a compact 4-5-1, focusing on neutralizing central space.",
+    winProbHome: 65,
+    winProbAway: 35,
+    predictionInsight: "USA has a strong record in home tournaments. Their physical and technical profile at Levi's is world-class.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-r32-10",
@@ -1597,8 +2719,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["belgium vs senegal r32"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Romelu Lukaku Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["belgium vs senegal prediction", "r32 world cup betting", "red devils vs lions of teranga betting"],
+    headToHead: "First competitive meeting. Belgium's offensive firepower vs Senegal's physical intensity and tactical depth.",
+    homeRecentForm: "W,W,D,L,W",
+    awayRecentForm: "W,W,D,W,W",
+    keyPlayersHome: ["Kevin De Bruyne (Midfield)", "Romelu Lukaku (Striker)", "Jérémy Doku (Winger)"],
+    keyPlayersAway: ["Sadio Mané (Forward)", "Nicolas Jackson (Striker)", "Kalidou Koulibaly (Defender)"],
+    bettingTips: [
+      "Kevin De Bruyne's creative depth in midfield is the primary market variable to watch.",
+      "Senegal's Nicolas Jackson is a potent threat in the box; back 'Senegal Total Shots Over 10.5'.",
+      "Back 'Both Teams to Score' given the elite attacking quality on both sides."
+    ],
+    detailedNarrative: "A heavyweight knockout clash in Seattle. The technical brilliance of Belgium faces the physical power of Senegal. De Bruyne's creative genius will be tested by Koulibaly's defensive organization. Our AI match overview predicts a high-intensity encounter where a single moment of individual magic will decide it.",
+    pitchReport: "Lumen Field features a fast-paced synthetic surface. This will suit the rapid transitions favored by both Doku and Jackson.",
+    tacticalPreview: "Belgium will deploy their fluid 3-4-2-1. Senegal is expected to respond with a robust 4-3-3, prioritizing physical presence in the midfield.",
+    winProbHome: 52,
+    winProbAway: 48,
+    predictionInsight: "Belgium has a strong record in opening knockout matches. However, Senegal's physical profile makes this a high-variance fixture.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-r32-11",
@@ -1613,8 +2752,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["portugal vs croatia r32"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Cristiano Ronaldo Anytime Goal", "Total Goals Under 2.5"],
+    keywords: ["portugal vs croatia prediction", "r32 world cup odds", "ronaldo vs modric betting"],
+    headToHead: "Portugal won their last competitive meeting 1-0 in 2020. The battle between the legendary Cristiano Ronaldo and Luka Modrić.",
+    homeRecentForm: "W,W,W,L,W",
+    awayRecentForm: "W,D,W,L,W",
+    keyPlayersHome: ["Cristiano Ronaldo (Striker)", "Bruno Fernandes (Midfield)", "Rafael Leão (Winger)"],
+    keyPlayersAway: ["Luka Modrić (Midfield)", "Mateo Kovačić (Midfield)", "Joško Gvardiol (Defender)"],
+    bettingTips: [
+      "Cristiano Ronaldo's performance in high-stakes knockout games is a major statistical factor.",
+      "Croatia's Luka Modrić remains the primary engine in midfield; back him to have 60+ successful passes.",
+      "Back 'Both Teams to Score' as both sides have elite attacking options."
+    ],
+    detailedNarrative: "A legendary showdown in Toronto. The technical mastery of Portugal, led by Cristiano Ronaldo, faces the tactical discipline of Croatia's golden generation. Our AI match overview predicts a masterclass in tactical control, where a single dead-ball situation could be the deciding factor.",
+    pitchReport: "BMO Field features a fast-paced grass surface. The temperate Toronto weather will suit the high-stamina requirements of a knockout fixture.",
+    tacticalPreview: "Portugal will deploy their fluid 4-3-3. Croatia is expected to respond with a compact 4-3-3, focusing on closing down the central channel.",
+    winProbHome: 55,
+    winProbAway: 45,
+    predictionInsight: "Portugal has a strong record in early knockout stages. Their tactical depth and individual brilliance provide a significant edge.",
+    projectedScoreHome: "1 - 1"
   },
   {
     slug: "wc2026-r32-12",
@@ -1629,8 +2785,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["spain vs austria r32"]
+    marketHighlights: ["To qualify", "Spain to Win", "Lamine Yamal Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["spain vs austria prediction", "r32 world cup odds", "la roja vs das team betting"],
+    headToHead: "Spain won their last competitive meeting 5-1 in 2018. Spain's technical mastery vs Austria's high-intensity pressing.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "W,W,D,W,W",
+    keyPlayersHome: ["Lamine Yamal (Winger)", "Rodri (Midfield)", "Nico Williams (Winger)"],
+    keyPlayersAway: ["Marcel Sabitzer (Midfield)", "Konrad Laimer (Midfield)", "Christoph Baumgartner (Forward)"],
+    bettingTips: [
+      "Spain's technical dominance in midfield is expected to result in high possession (65%+).",
+      "Austria's Marcel Sabitzer is a clinical finisher from range; monitor 'Austria Total Shots from Outside the Box Over 3.5'.",
+      "Back 'Spain to Win' given their tactical depth and superior ball-control."
+    ],
+    detailedNarrative: "A tactical masterclass in Los Angeles. Spain's technical dominance faces the high-intensity energy of Austria's pressing system. Lamine Yamal's individual brilliance will be tested by Austria's disciplined mid-block and energy. Our AI match overview predicts a dominant performance from La Roja.",
+    pitchReport: "SoFi Stadium features a fast-paced grass surface. The warm environment will suit the high-energy running game favored by both sides.",
+    tacticalPreview: "Spain will deploy their fluid 4-3-3. Austria is expected to respond with a robust 4-2-2-2, focusing on winning second balls and high turnovers.",
+    winProbHome: 68,
+    winProbAway: 32,
+    predictionInsight: "Spain has a dominant record in early knockout stages against European opposition. Their tactical organization provides a significant edge.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-r32-13",
@@ -1645,8 +2818,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["switzerland vs algeria r32"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Breel Embolo Anytime Goal", "Total Goals Under 2.5"],
+    keywords: ["switzerland vs algeria prediction", "r32 world cup betting", "rossocrociati vs fennecs betting"],
+    headToHead: "First competitive meeting. Switzerland's technical precision vs Algeria's flair and high-intensity energy.",
+    homeRecentForm: "W,D,W,D,W",
+    awayRecentForm: "W,D,W,L,D",
+    keyPlayersHome: ["Granit Xhaka (Midfield)", "Manuel Akanji (Defender)", "Breel Embolo (Forward)"],
+    keyPlayersAway: ["Riyad Mahrez (Winger)", "Said Benrahma (Winger)", "Ismaël Bennacer (Midfield)"],
+    bettingTips: [
+      "Granit Xhaka's creative leadership is the primary engine for the Swiss midfield.",
+      "Algeria's Riyad Mahrez is a clinical finisher on the break; back 'Algeria to Score Anytime'.",
+      "Back 'Total Goals Under 2.5' as both sides are expected to prioritize defensive shape in a knockout."
+    ],
+    detailedNarrative: "A clash of tactical discipline in Vancouver. The technical precision of Switzerland faces the flair of Algeria. Xhaka's creative genius will be tested by Algeria's disciplined mid-block and energy. Our AI match overview predicts a high-quality encounter where a single moment of magic could decide it at BC Place.",
+    pitchReport: "BC Place features a fast synthetic surface. This will suit the rapid ball-movement favored by the Swiss midfield.",
+    tacticalPreview: "Switzerland will deploy their fluid 3-4-2-1. Algeria is expected to respond with a compact 4-3-3, focusing on wide counters through Mahrez.",
+    winProbHome: 58,
+    winProbAway: 42,
+    predictionInsight: "Switzerland has a strong record in opening knockout matches against non-European opposition. Their technical organization is a major advantage.",
+    projectedScoreHome: "1 - 1"
   },
   {
     slug: "wc2026-r32-14",
@@ -1661,8 +2851,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["argentina vs cabo verde r32"]
+    marketHighlights: ["To qualify", "Argentina to Win", "Lionel Messi Anytime Goal", "Total Goals Over 3.5"],
+    keywords: ["argentina vs cabo verde prediction", "r32 world cup betting", "messi vs cabo verde odds"],
+    headToHead: "First competitive meeting. The world champions face the rising flair of Cabo Verde.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "W,L,D,W,L",
+    keyPlayersHome: ["Lionel Messi (Forward)", "Julián Álvarez (Striker)", "Alexis Mac Allister (Midfield)"],
+    keyPlayersAway: ["Ryan Mendes (Forward)", "Bebé (Striker)", "Logan Costa (Defender)"],
+    bettingTips: [
+      "Lionel Messi's scoring record in knockout stages is unparalleled; back him for anytime scorer.",
+      "Cabo Verde's Ryan Mendes is a potent threat on the counter.",
+      "Back 'Argentina to Win and Over 2.5 Goals' given the significant quality differential."
+    ],
+    detailedNarrative: "The world champions look to exert their authority in Miami against a resilient Cabo Verde side. Lionel Messi's creative genius will be the focal point against a defense led by Costa. Our AI models predict a masterclass in control from the Albiceleste. Expect a vibrant atmosphere at Hard Rock Stadium.",
+    pitchReport: "Hard Rock Stadium features a top-tier grass surface. The warm Miami weather will suit the high-energy running game favored by Argentina.",
+    tacticalPreview: "Argentina will deploy their fluid 4-3-3. Cabo Verde is expected to respond with a compact 5-4-1, prioritizing spatial compression.",
+    winProbHome: 92,
+    winProbAway: 8,
+    predictionInsight: "Argentina has a 100% win rate against African nations in recent World Cups. Their individual brilliance and experience provide a significant edge.",
+    projectedScoreHome: "4 - 0"
   },
   {
     slug: "wc2026-r32-15",
@@ -1677,8 +2884,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["colombia vs ghana r32"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Luis Díaz Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["colombia vs ghana prediction", "r32 world cup odds", "los cafeteros vs black stars betting"],
+    headToHead: "First competitive meeting. Colombia's high-intensity pressing vs Ghana's vertical pace and physical intensity.",
+    homeRecentForm: "W,W,D,W,W",
+    awayRecentForm: "W,L,W,D,W",
+    keyPlayersHome: ["Luis Díaz (Winger)", "James Rodríguez (Midfield)", "Luis Sinisterra (Winger)"],
+    keyPlayersAway: ["Mohammed Kudus (Midfield)", "Iñaki Williams (Forward)", "Jordan Ayew (Striker)"],
+    bettingTips: [
+      "Luis Díaz's explosive pace is the primary market variable to watch.",
+      "Ghana's Mohammed Kudus is a clinical finisher on the break; back him for 1+ shots on target.",
+      "Back 'Both Teams to Score' given the elite attacking quality and high-intensity style of both sides."
+    ],
+    detailedNarrative: "A clash of styles in Kansas City. The technical flair of Colombia faces the physical power of Ghana. James Rodríguez's creative genius will be tested by Kudus's offensive energy. Our AI match overview predicts a high-scoring encounter where individual brilliance could decide it at Arrowhead Stadium.",
+    pitchReport: "Arrowhead Stadium features a top-tier grass surface. The warm Kansas City environment will favor the high-energy running game favored by both sides.",
+    tacticalPreview: "Colombia will deploy their fluid 4-2-3-1. Ghana is expected to respond with a robust 4-4-2, focusing on winning second balls and quick transitions.",
+    winProbHome: 60,
+    winProbAway: 40,
+    predictionInsight: "Colombia has a strong record in early knockout stages against non-European opposition. Their tactical organization provides a significant edge.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-r32-16",
@@ -1693,8 +2917,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["australia vs egypt r32"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Mohamed Salah Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["australia vs egypt prediction", "r32 world cup betting", "socceroos vs pharaohs betting"],
+    headToHead: "First competitive meeting. Australia's physical set-piece dominance vs Egypt's technical flair and Salah's clinical brilliance.",
+    homeRecentForm: "W,W,L,D,W",
+    awayRecentForm: "W,D,W,W,D",
+    keyPlayersHome: ["Harry Souttar (Defender)", "Jackson Irvine (Midfield)", "Craig Goodwin (Winger)"],
+    keyPlayersAway: ["Mohamed Salah (Forward)", "Mostafa Mohamed (Striker)", "Omar Marmoush (Forward)"],
+    bettingTips: [
+      "Mohamed Salah's individual brilliance is the primary route to breaking the Australian block.",
+      "Australia's Harry Souttar is a major aerial threat; monitor 'Australia Total Corners Over 5.5'.",
+      "Back 'Both Teams to Score' as both sides have elite attacking quality and tactical flexibility."
+    ],
+    detailedNarrative: "A clash of tactical philosophies in Dallas. The physical set-piece dominance of Australia faces the technical flair of Egypt's golden generation. Mohamed Salah's individual brilliance will be tested by the clinical organization of the Socceroos. Our AI match overview predicts a high-intensity encounter at AT&T Stadium.",
+    pitchReport: "AT&T Stadium features a fast-paced synthetic surface. This will suit the rapid transitions favored by both Salah and Goodwin.",
+    tacticalPreview: "Australia will deploy their robust 4-4-2. Egypt is expected to respond with an aggressive 4-3-3, prioritizing Salah's freedom on the right.",
+    winProbHome: 45,
+    winProbAway: 55,
+    predictionInsight: "Egypt has a strong record in knockout tournaments. However, Australia's physical profile makes this a high-variance fixture.",
+    projectedScoreHome: "1 - 2"
   },
 
 
@@ -1713,8 +2954,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 16",
     category: "Round of 16",
-    marketHighlights: ["To qualify"],
-    keywords: ["paraguay vs france r16"]
+    marketHighlights: ["To qualify", "Kylian Mbappé Anytime Goal", "France to Win to Nil", "Total Goals Under 2.5"],
+    keywords: ["paraguay vs france prediction", "r16 world cup betting", "les bleus vs la albirroja odds"],
+    headToHead: "France won their last competitive meeting 1-0 in 2022. France's technical dominance vs Paraguay's legendary defensive grit.",
+    homeRecentForm: "D,W,L,D,L",
+    awayRecentForm: "W,W,W,W,D",
+    keyPlayersHome: ["Miguel Almirón (Winger)", "Julio Enciso (Forward)", "Gustavo Gómez (Defender)"],
+    keyPlayersAway: ["Kylian Mbappé (Forward)", "Antoine Griezmann (Midfield)", "Aurélien Tchouaméni (Midfield)"],
+    bettingTips: [
+      "Kylian Mbappé's individual brilliance is the primary route to breaking the Paraguayan block.",
+      "Paraguay's Gustavo Gómez is an elite aerial defender; back 'France Total Corners Over 7.5'.",
+      "Back 'France to Win to Nil' as their defensive organization is expected to neutralize Almirón."
+    ],
+    detailedNarrative: "A tactical chess match in Philadelphia. The world champions face the most disciplined defense in South America. Our AI models predict a game of high possession for France, with Paraguay looking to exploit rare counter-attacking opportunities. Expect a tense, low-scoring knockout encounter at Lincoln Financial Field.",
+    pitchReport: "Lincoln Financial Field features a fast-paced grass surface. This will suit France's quick vertical passing and technical ball-control.",
+    tacticalPreview: "France will deploy their fluid 4-2-3-1. Paraguay is expected to set up in a deep 5-4-1, prioritizing spatial compression and clearances.",
+    winProbHome: 20,
+    winProbAway: 80,
+    predictionInsight: "France has a dominant record in knockout stages against South American opposition. Their tournament experience is a decisive factor.",
+    projectedScoreHome: "0 - 2"
   },
   {
     slug: "wc2026-r16-2",
@@ -1729,8 +2987,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 16",
     category: "Round of 16",
-    marketHighlights: ["To qualify"],
-    keywords: ["canada vs morocco r16"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Alphonso Davies Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["canada vs morocco prediction", "r16 world cup betting", "les rouges vs atlas lions betting"],
+    headToHead: "Morocco won their only previous World Cup meeting 2-1 in 2022. Canada's home-continent advantage vs Morocco's elite tactical discipline.",
+    homeRecentForm: "W,W,D,W,W",
+    awayRecentForm: "W,D,W,W,L",
+    keyPlayersHome: ["Alphonso Davies (Winger)", "Jonathan David (Striker)", "Stephen Eustáquio (Midfield)"],
+    keyPlayersAway: ["Achraf Hakimi (Defender)", "Brahim Díaz (Midfield)", "Yassine Bounou (Goalkeeper)"],
+    bettingTips: [
+      "Alphonso Davies's speed on the NRG turf is a major tactical weapon for Canada.",
+      "Achraf Hakimi's vertical runs are the primary creative outlet for Morocco.",
+      "Back 'Both Teams to Score' given the elite attacking transitions of both sides."
+    ],
+    detailedNarrative: "A high-stakes rematch of 2022 in Houston. Canada, buoyed by home-continent support, faces the history-making Atlas Lions. Our AI match overview predicts a high-energy encounter where individual brilliance from Davies or Hakimi will be the deciding factor. Expect a vibrant atmosphere at NRG Stadium.",
+    pitchReport: "NRG Stadium features a top-tier indoor grass surface. The controlled environment will suit the technical ball-movement of both sides.",
+    tacticalPreview: "Canada will deploy a fluid 4-2-3-1. Morocco is expected to respond with a compact 4-1-4-1, focusing on closing down the wings and neutralizing Davies.",
+    winProbHome: 52,
+    winProbAway: 48,
+    predictionInsight: "Canada has a strong record in knockout tournaments on home soil. However, Morocco's tactical organization is world-class.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-r16-3",
@@ -1745,8 +3020,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 16",
     category: "Round of 16",
-    marketHighlights: ["To qualify"],
-    keywords: ["brazil vs norway r16"]
+    marketHighlights: ["To qualify", "Vinícius Jr Anytime Goal", "Erling Haaland Anytime Goal", "Both Teams to Score"],
+    keywords: ["brazil vs norway prediction", "r16 world cup betting", "selecao vs haaland betting"],
+    headToHead: "Norway famously defeated Brazil 2-1 in the 1998 World Cup. Brazil's offensive flair vs Norway's Haaland-led attack.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "W,L,W,W,D",
+    keyPlayersHome: ["Vinícius Jr (Winger)", "Rodrygo (Forward)", "Bruno Guimarães (Midfield)"],
+    keyPlayersAway: ["Erling Haaland (Striker)", "Martin Ødegaard (Midfield)", "Oscar Bobb (Forward)"],
+    bettingTips: [
+      "Vinícius Jr's explosive pace is the primary market variable to watch.",
+      "Erling Haaland's scoring record in major tournaments is elite; back him for anytime scorer.",
+      "Back 'Both Teams to Score' given the generational talent present in both attacks."
+    ],
+    detailedNarrative: "A blockbuster showdown at MetLife Stadium. The five-time champions face the most lethal striker in the world. Vinícius Jr's creative brilliance will be tested by Norway's tactical discipline and Haaland's physical presence. Our AI match overview predicts a high-scoring thriller where individual magic will decide it.",
+    pitchReport: "MetLife Stadium features a top-tier hybrid surface. The mild weather will suit the high-energy running game favored by both sides.",
+    tacticalPreview: "Brazil will deploy their standard 4-3-3. Norway is expected to respond with a fluid 4-3-3, focusing on feeding Haaland in the central channel.",
+    winProbHome: 65,
+    winProbAway: 35,
+    predictionInsight: "Brazil has a dominant record in early knockout stages. However, Haaland's presence makes this a high-variance fixture.",
+    projectedScoreHome: "3 - 2"
   },
   {
     slug: "wc2026-r16-4",
@@ -1761,8 +3053,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 16",
     category: "Round of 16",
-    marketHighlights: ["To qualify"],
-    keywords: ["mexico vs england r16"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Harry Kane Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["mexico vs england prediction", "r16 world cup odds", "el tri vs three lions betting"],
+    headToHead: "England won their last competitive meeting 3-1 in 2010. The altitude in Mexico City will be a major tactical variable.",
+    homeRecentForm: "W,W,D,W,L",
+    awayRecentForm: "W,W,W,D,W",
+    keyPlayersHome: ["Santiago Giménez (Striker)", "Edson Álvarez (Midfield)", "Hirving Lozano (Winger)"],
+    keyPlayersAway: ["Harry Kane (Striker)", "Jude Bellingham (Midfield)", "Bukayo Saka (Winger)"],
+    bettingTips: [
+      "Mexico's home advantage at Estadio Azteca is a decisive statistical factor.",
+      "Harry Kane's clinical finishing is the primary threat for England; back him for anytime scorer.",
+      "Back 'Mexico to Win (in 90 mins)' as a high-value play given the altitude advantage."
+    ],
+    detailedNarrative: "A monumental encounter at the iconic Estadio Azteca. Mexico's El Tri face the tactical mastery of England's Three Lions. The altitude will test the fitness of the English squad, potentially favoring the home side in the final quarter. Our AI models predict a high-energy thriller where the home crowd will be a major factor.",
+    pitchReport: "The pitch at Estadio Azteca is in pristine condition. Ball speed will be faster due to the altitude, favoring long-range shots from Bellingham.",
+    tacticalPreview: "Mexico will deploy their fluid 4-3-3 with high pressing. England is expected to respond with a robust 4-2-3-1, prioritizing ball retention to manage the tempo.",
+    winProbHome: 52,
+    winProbAway: 48,
+    predictionInsight: "England has struggled at high altitude historically. Mexico's familiarity with the conditions at Azteca provides a statistically significant edge.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-r16-5",
@@ -1777,8 +3086,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 16",
     category: "Round of 16",
-    marketHighlights: ["To qualify"],
-    keywords: ["portugal vs spain r16"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Cristiano Ronaldo Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["portugal vs spain prediction", "r16 world cup odds", "iberian derby betting"],
+    headToHead: "Spain won their last competitive meeting 1-0 in 2022. The Iberian Derby returns to the world stage.",
+    homeRecentForm: "W,W,W,L,W",
+    awayRecentForm: "W,W,W,W,D",
+    keyPlayersHome: ["Cristiano Ronaldo (Striker)", "Bruno Fernandes (Midfield)", "Rafael Leão (Winger)"],
+    keyPlayersAway: ["Lamine Yamal (Winger)", "Rodri (Midfield)", "Nico Williams (Winger)"],
+    bettingTips: [
+      "Cristiano Ronaldo's scoring record in tournament knockouts is elite; back him for anytime scorer.",
+      "Spain's Lamine Yamal is the primary threat on the wing; monitor 'Spain Total Take-ons Over 8.5'.",
+      "Back 'Both Teams to Score' given the elite attacking quality and high-intensity rivalry."
+    ],
+    detailedNarrative: "The Iberian Derby headlines the Round of 16 in Dallas. Portugal's technical mastery, led by Cristiano Ronaldo, faces the tactical dominance of Spain's new generation. Our AI match overview predicts a masterclass in ball-control from both sides, where a single moment of individual magic will decide it at AT&T Stadium.",
+    pitchReport: "AT&T Stadium features a fast-paced synthetic surface. This will suit the rapid passing game favored by both sides.",
+    tacticalPreview: "Portugal will deploy their fluid 4-3-3. Spain is expected to respond with a compact 4-3-3, prioritizing ball retention and high pressing.",
+    winProbHome: 50,
+    winProbAway: 50,
+    predictionInsight: "This fixture has a high rate of draws in 90 minutes. Tactical discipline and game management in extra time will be the deciding factors.",
+    projectedScoreHome: "2 - 2"
   },
   {
     slug: "wc2026-r16-6",
@@ -1793,8 +3119,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 16",
     category: "Round of 16",
-    marketHighlights: ["To qualify"],
-    keywords: ["usa vs belgium r16"]
+    marketHighlights: ["To qualify", "USA to Win", "Christian Pulisic Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["usa vs belgium prediction", "r16 world cup betting", "usmnt vs red devils betting"],
+    headToHead: "Belgium famously defeated the USA 2-1 in the 2014 World Cup Round of 16. USA's home-continent intensity vs Belgium's technical brilliance.",
+    homeRecentForm: "W,D,W,W,L",
+    awayRecentForm: "W,W,D,L,W",
+    keyPlayersHome: ["Christian Pulisic (Forward)", "Gio Reyna (Midfield)", "Tyler Adams (Midfield)"],
+    keyPlayersAway: ["Kevin De Bruyne (Midfield)", "Romelu Lukaku (Striker)", "Jérémy Doku (Winger)"],
+    bettingTips: [
+      "Christian Pulisic's performance at Lumen Field is a major tactical weapon; back him for anytime scorer.",
+      "Kevin De Bruyne's creative depth in midfield is the primary threat for Belgium.",
+      "Back 'USA to Win (to qualify)' given the significant home advantage and vertical pace."
+    ],
+    detailedNarrative: "A high-stakes rematch of 2014 in Seattle. The USA's home-continent intensity faces the technical brilliance of Belgium's golden generation. Our AI match overview predicts a high-energy transition game where the home crowd will be the 12th man. Expect a vibrant atmosphere at Lumen Field.",
+    pitchReport: "Lumen Field features a fast-paced synthetic surface. This will suit the rapid transitions favored by both Pulisic and Doku.",
+    tacticalPreview: "USA will deploy their fluid 4-3-3 with high pressing. Belgium is expected to respond with a fluid 3-4-2-1, prioritizing ball retention.",
+    winProbHome: 48,
+    winProbAway: 52,
+    predictionInsight: "USA has a strong record in home tournaments. However, Belgium's technical depth and experience provide a significant edge in knockout football.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-r16-7",
@@ -1809,8 +3152,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 16",
     category: "Round of 16",
-    marketHighlights: ["To qualify"],
-    keywords: ["argentina vs egypt r16"]
+    marketHighlights: ["To qualify", "Lionel Messi Anytime Goal", "Argentina to Win to Nil", "Total Goals Over 2.5"],
+    keywords: ["argentina vs egypt prediction", "r16 world cup betting", "messi vs salah betting"],
+    headToHead: "First competitive meeting between Lionel Messi and Mohamed Salah at international level. The world champions vs the Pharaohs.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "W,D,W,W,D",
+    keyPlayersHome: ["Lionel Messi (Forward)", "Julián Álvarez (Striker)", "Alexis Mac Allister (Midfield)"],
+    keyPlayersAway: ["Mohamed Salah (Forward)", "Mostafa Mohamed (Striker)", "Omar Marmoush (Forward)"],
+    bettingTips: [
+      "Lionel Messi's performance in tournament knockouts is elite; back him for anytime scorer.",
+      "Mohamed Salah's individual brilliance is the primary creative outlet for Egypt.",
+      "Back 'Argentina to Win' given their tactical depth and superior ball-control."
+    ],
+    detailedNarrative: "A clash of icons in Atlanta. The world champions face the clinical excellence of Egypt's Pharaohs. Messi's creative genius will be tested by Egypt's disciplined mid-block and Salah's individual brilliance. Our AI match overview predicts a masterclass in control from the Albiceleste. Expect a dominant performance from Argentina.",
+    pitchReport: "Mercedes-Benz Stadium features a fast-paced synthetic surface. This will suit the rapid passing game favored by Argentina.",
+    tacticalPreview: "Argentina will deploy their fluid 4-3-3. Egypt is expected to respond with a robust 4-3-3, prioritizing Salah's freedom on the right.",
+    winProbHome: 78,
+    winProbAway: 22,
+    predictionInsight: "Argentina has a 100% win rate against African nations in recent World Cups. Their experience and individual quality are too strong for the debutants.",
+    projectedScoreHome: "3 - 0"
   },
   {
     slug: "wc2026-r16-8",
@@ -1825,8 +3185,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 16",
     category: "Round of 16",
-    marketHighlights: ["To qualify"],
-    keywords: ["switzerland vs colombia r16"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Breel Embolo Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["switzerland vs colombia prediction", "r16 world cup betting", "rossocrociati vs los cafeteros betting"],
+    headToHead: "Colombia won their last competitive meeting 2-0 in 1994. Switzerland's technical precision vs Colombia's high-intensity pressing.",
+    homeRecentForm: "W,D,W,D,W",
+    awayRecentForm: "W,W,D,W,W",
+    keyPlayersHome: ["Granit Xhaka (Midfield)", "Manuel Akanji (Defender)", "Breel Embolo (Forward)"],
+    keyPlayersAway: ["Luis Díaz (Winger)", "James Rodríguez (Midfield)", "Luis Sinisterra (Winger)"],
+    bettingTips: [
+      "Granit Xhaka's creative leadership is the primary engine for the Swiss midfield.",
+      "Colombia's Luis Díaz is a potent threat on the break; back him for anytime scorer.",
+      "Back 'Both Teams to Score' given the elite attacking quality and vertical pace on both sides."
+    ],
+    detailedNarrative: "A clash of tactical discipline in Vancouver. The technical precision of Switzerland faces the high-intensity energy of Colombia. Our AI match overview predicts a high-quality encounter where a single moment of magic will decide it. Expect a tense knockout battle at BC Place.",
+    pitchReport: "BC Place features a fast synthetic surface. This will suit the rapid ball-movement favored by both sides.",
+    tacticalPreview: "Switzerland will deploy their fluid 3-4-2-1. Colombia is expected to respond with a robust 4-2-3-1, focusing on winning second balls and quick transitions.",
+    winProbHome: 48,
+    winProbAway: 52,
+    predictionInsight: "Colombia has a strong record in early knockout stages against European opposition. Their tactical organization provides a significant edge.",
+    projectedScoreHome: "1 - 2"
   },
 
 
@@ -1844,8 +3221,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Quarter-final",
     category: "Quarter-finals",
-    marketHighlights: ["To qualify"],
-    keywords: ["france vs morocco quarter final"]
+    marketHighlights: ["To qualify", "Kylian Mbappé Anytime Goal", "Both Teams to Score", "Total Goals Over 2.5"],
+    keywords: ["france vs morocco prediction", "qf world cup betting", "les bleus vs atlas lions odds"],
+    headToHead: "France won their last World Cup meeting 2-0 in 2022. A high-stakes rematch of the semi-final.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "W,W,D,W,L",
+    keyPlayersHome: ["Kylian Mbappé (Forward)", "Antoine Griezmann (Midfield)", "Aurélien Tchouaméni (Midfield)"],
+    keyPlayersAway: ["Achraf Hakimi (Defender)", "Brahim Díaz (Midfield)", "Yassine Bounou (Goalkeeper)"],
+    bettingTips: [
+      "Kylian Mbappé's individual brilliance is the primary route to breaking the Moroccan block.",
+      "Achraf Hakimi's vertical runs are the primary creative outlet for Morocco.",
+      "Back 'France to Win' given their tactical depth and tournament experience."
+    ],
+    detailedNarrative: "A heavyweight rematch in Boston. The world champions face the history-making Atlas Lions once again. France's offensive flair, led by Mbappé, will be tested by Morocco's elite tactical discipline and Hakimi's vertical pace. Our AI match overview predicts a masterclass in control from the French. Expect a high-intensity battle at Gillette Stadium.",
+    pitchReport: "Gillette Stadium features a top-tier synthetic surface. This will suit the rapid passing game favored by both sides.",
+    tacticalPreview: "France will deploy their fluid 4-2-3-1. Morocco is expected to respond with a compact 4-1-4-1, focusing on closing down the wings.",
+    winProbHome: 72,
+    winProbAway: 28,
+    predictionInsight: "France has a dominant record in late knockout stages. Morocco's defensive organization is world-class, but France's individual quality is too strong.",
+    projectedScoreHome: "2 - 0"
   },
   {
     slug: "wc2026-qf-2",
@@ -1860,8 +3254,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Quarter-final",
     category: "Quarter-finals",
-    marketHighlights: ["To qualify"],
-    keywords: ["spain vs belgium quarter final"]
+    marketHighlights: ["To qualify", "Lamine Yamal Anytime Goal", "Both Teams to Score", "Total Goals Over 2.5"],
+    keywords: ["spain vs belgium prediction", "qf world cup odds", "la roja vs red devils betting"],
+    headToHead: "Spain won their last competitive meeting 1-0 in 2022. Tactical mastery vs technical brilliance.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "W,W,D,L,W",
+    keyPlayersHome: ["Lamine Yamal (Winger)", "Rodri (Midfield)", "Nico Williams (Winger)"],
+    keyPlayersAway: ["Kevin De Bruyne (Midfield)", "Romelu Lukaku (Striker)", "Jérémy Doku (Winger)"],
+    bettingTips: [
+      "Lamine Yamal's performance on the wing is the primary market variable to watch.",
+      "Kevin De Bruyne's creative depth in midfield is the primary threat for Belgium.",
+      "Back 'Both Teams to Score' given the elite attacking talent present on both sides."
+    ],
+    detailedNarrative: "A clash of tactical philosophies in Los Angeles. Spain's technical dominance, led by Rodri and Yamal, faces the creative brilliance of Belgium's golden generation. Our AI match overview predicts a masterclass in ball-control from both sides, where a single moment of individual magic will decide it at SoFi Stadium.",
+    pitchReport: "SoFi Stadium features a pristine grass surface. The controlled environment will suit the technical ball-movement of both sides.",
+    tacticalPreview: "Spain will deploy their fluid 4-3-3. Belgium is expected to respond with a fluid 3-4-2-1, prioritizing spatial control and quick transitions.",
+    winProbHome: 60,
+    winProbAway: 40,
+    predictionInsight: "Spain's ball-retention capability provides a significant advantage in late-game fatigue scenarios. Belgium's verticality makes them dangerous on the break.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-qf-3",
@@ -1876,8 +3287,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Quarter-final",
     category: "Quarter-finals",
-    marketHighlights: ["To qualify"],
-    keywords: ["norway vs england quarter final"]
+    marketHighlights: ["To qualify", "Erling Haaland Anytime Goal", "Harry Kane Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["norway vs england prediction", "qf world cup betting", "haaland vs kane odds"],
+    headToHead: "England won their last competitive meeting 3-1 in 2010. The world's two most lethal strikers face off.",
+    homeRecentForm: "W,L,W,W,D",
+    awayRecentForm: "W,W,W,D,W",
+    keyPlayersHome: ["Erling Haaland (Striker)", "Martin Ødegaard (Midfield)", "Oscar Bobb (Forward)"],
+    keyPlayersAway: ["Harry Kane (Striker)", "Jude Bellingham (Midfield)", "Bukayo Saka (Winger)"],
+    bettingTips: [
+      "Erling Haaland's scoring record in major tournaments is elite; back him for anytime scorer.",
+      "Harry Kane's clinical finishing is the primary threat for England; back him for anytime scorer.",
+      "Back 'Total Goals Over 2.5' given the generational talent present in both attacks."
+    ],
+    detailedNarrative: "A monumental quarter-final showdown in Miami. Norway's Haaland faces England's Kane in a battle of the strikers. Our AI match overview predicts a high-scoring thriller where individual brilliance will be the deciding factor. Expect a vibrant atmosphere at Hard Rock Stadium.",
+    pitchReport: "Hard Rock Stadium features a top-tier hybrid surface. The warm Miami weather will suit the high-energy running game favored by both sides.",
+    tacticalPreview: "Norway will deploy their fluid 4-3-3, focusing on feeding Haaland. England is expected to respond with a robust 4-2-3-1, prioritizing ball retention.",
+    winProbHome: 45,
+    winProbAway: 55,
+    predictionInsight: "England's tactical depth and experience provide a significant edge in knockout football. However, Haaland's presence makes this a high-variance fixture.",
+    projectedScoreHome: "2 - 3"
   },
   {
     slug: "wc2026-qf-4",
@@ -1892,11 +3320,26 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Quarter-final",
     category: "Quarter-finals",
-    marketHighlights: ["To qualify"],
-    keywords: ["argentina vs switzerland quarter final"]
+    marketHighlights: ["To qualify", "Lionel Messi Anytime Goal", "Argentina to Win to Nil", "Total Goals Under 2.5"],
+    keywords: ["argentina vs switzerland prediction", "qf world cup betting", "messi vs xhaka odds"],
+    headToHead: "Argentina famously defeated Switzerland 1-0 in the 2014 World Cup Round of 16. The world champions face the Swiss block.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "W,D,W,D,W",
+    keyPlayersHome: ["Lionel Messi (Forward)", "Julián Álvarez (Striker)", "Alexis Mac Allister (Midfield)"],
+    keyPlayersAway: ["Granit Xhaka (Midfield)", "Manuel Akanji (Defender)", "Breel Embolo (Forward)"],
+    bettingTips: [
+      "Lionel Messi's creative brilliance is the primary route to breaking the Swiss block.",
+      "Granit Xhaka's leadership in midfield is the primary engine for Switzerland.",
+      "Back 'Argentina to Win' given their tactical depth and superior ball-control."
+    ],
+    detailedNarrative: "A tactical chess match in Kansas City. The world champions face the most disciplined defense in Europe. Messi's creative genius will be tested by Switzerland's tactical discipline and Akanji's physical presence. Our AI match overview predicts a masterclass in control from the Albiceleste. Expect a dominant performance from Argentina.",
+    pitchReport: "Arrowhead Stadium features a top-tier grass surface. The warm Kansas City environment will favor the high-energy ball-movement favored by Argentina.",
+    tacticalPreview: "Argentina will deploy their fluid 4-3-3. Switzerland is expected to respond with a compact 3-4-2-1, prioritizing spatial compression.",
+    winProbHome: 75,
+    winProbAway: 25,
+    predictionInsight: "Argentina has a dominant record in late knockout stages. Switzerland's defensive organization is world-class, but Argentina's individual quality is too strong.",
+    projectedScoreHome: "2 - 0"
   },
-
-  // --- SEMI FINALS ---
   {
     slug: "wc2026-sf-1",
     sport: "Football",
@@ -1910,8 +3353,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Semi-final",
     category: "Semi-finals",
-    marketHighlights: ["To reach final"],
-    keywords: ["france vs spain semi final odds"]
+    marketHighlights: ["To reach final", "Kylian Mbappé Anytime Goal", "Both Teams to Score", "Total Goals Over 2.5"],
+    keywords: ["france vs spain prediction", "semi final world cup odds", "iberian rivalry betting"],
+    headToHead: "Spain won their last competitive meeting 1-0 in 2022. The two best teams in Europe face off for a spot in the final.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "W,W,W,W,D",
+    keyPlayersHome: ["Kylian Mbappé (Forward)", "Antoine Griezmann (Midfield)", "Aurélien Tchouaméni (Midfield)"],
+    keyPlayersAway: ["Lamine Yamal (Winger)", "Rodri (Midfield)", "Nico Williams (Winger)"],
+    bettingTips: [
+      "Kylian Mbappé's individual brilliance is the primary market variable to watch.",
+      "Spain's ball-retention capability is the primary threat for France; back 'Spain Possession Over 55%'.",
+      "Back 'Both Teams to Score' given the elite attacking quality and high stakes."
+    ],
+    detailedNarrative: "A blockbuster semi-final showdown in Dallas. The world champions face the technical mastery of Spain's new generation. Our AI match overview predicts a masterclass in tactical discipline from both sides, where a single moment of magic will decide who reaches the final at MetLife Stadium. Expect a high-intensity encounter at AT&T Stadium.",
+    pitchReport: "AT&T Stadium features a fast-paced synthetic surface. This will suit the rapid transitions favored by Mbappé and Yamal.",
+    tacticalPreview: "France will deploy their fluid 4-2-3-1. Spain is expected to respond with a compact 4-3-3, prioritizing ball retention and high pressing.",
+    winProbHome: 52,
+    winProbAway: 48,
+    predictionInsight: "France's tournament experience and individual quality provide a slight edge. Spain's collective organization makes this a true toss-up.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-sf-2",
@@ -1926,11 +3386,26 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Semi-final",
     category: "Semi-finals",
-    marketHighlights: ["To reach final"],
-    keywords: ["england vs argentina semi final odds"]
+    marketHighlights: ["To reach final", "Harry Kane Anytime Goal", "Lionel Messi Anytime Goal", "Both Teams to Score"],
+    keywords: ["england vs argentina prediction", "semi final world cup betting", "kane vs messi odds"],
+    headToHead: "England and Argentina share one of the most storied rivalries in world football. A place in the final is on the line.",
+    homeRecentForm: "W,W,W,D,W",
+    awayRecentForm: "W,W,W,W,D",
+    keyPlayersHome: ["Harry Kane (Striker)", "Jude Bellingham (Midfield)", "Bukayo Saka (Winger)"],
+    keyPlayersAway: ["Lionel Messi (Forward)", "Julián Álvarez (Striker)", "Alexis Mac Allister (Midfield)"],
+    bettingTips: [
+      "Harry Kane's clinical finishing is the primary threat for England; back him for anytime scorer.",
+      "Lionel Messi's creative depth in midfield is the primary engine for Argentina.",
+      "Back 'Both Teams to Score' given the generational talent and high stakes of the rivalry."
+    ],
+    detailedNarrative: "A legendary semi-final encounter in Atlanta. The Three Lions face the world champions in a clash of titans. Our AI match overview predicts a high-energy thriller where historical weight and individual genius will converge. Expect a vibrant atmosphere at Mercedes-Benz Stadium.",
+    pitchReport: "Mercedes-Benz Stadium features a fast-paced synthetic surface. This will suit the rapid passing game favored by both sides.",
+    tacticalPreview: "England will deploy their robust 4-2-3-1. Argentina is expected to respond with a fluid 4-3-3, prioritizing ball retention and Messi's freedom.",
+    winProbHome: 48,
+    winProbAway: 52,
+    predictionInsight: "Argentina's experience in high-pressure knockout games provides a significant edge. England's tactical depth makes this a high-variance fixture.",
+    projectedScoreHome: "1 - 2"
   },
-
-  // --- THIRD PLACE ---
   {
     slug: "wc2026-third-place",
     sport: "Football",
@@ -1944,11 +3419,26 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Third-place Play-off",
     category: "Final",
-    marketHighlights: ["Match odds"],
-    keywords: ["france vs england third place"]
+    marketHighlights: ["Match odds", "Total Goals Over 3.5", "Kylian Mbappé Anytime Goal", "Harry Kane Anytime Goal"],
+    keywords: ["france vs england third place prediction", "world cup betting", "les bleus vs three lions odds"],
+    headToHead: "France defeated England 2-1 in the 2022 World Cup quarter-final. A high-scoring exhibition of two European giants.",
+    homeRecentForm: "L,W,W,W,W",
+    awayRecentForm: "L,W,W,W,D",
+    keyPlayersHome: ["Kylian Mbappé (Forward)", "Antoine Griezmann (Midfield)", "Bradley Barcola (Winger)"],
+    keyPlayersAway: ["Harry Kane (Striker)", "Phil Foden (Midfield)", "Cole Palmer (Forward)"],
+    bettingTips: [
+      "Third-place play-offs are historically high-scoring; back 'Total Goals Over 3.5'.",
+      "Kylian Mbappé's speed against a rotated English defense is a major market variable.",
+      "Back 'Harry Kane' for anytime scorer as he looks to secure the Golden Boot."
+    ],
+    detailedNarrative: "A star-studded third-place play-off in Miami. France and England face off in an exhibition of attacking quality. Our AI match overview predicts an open, high-scoring game where individual brilliance will take center stage. Expect a vibrant atmosphere at Hard Rock Stadium.",
+    pitchReport: "Hard Rock Stadium features a top-tier hybrid surface. The warm Miami weather will suit the high-energy running game favored by both sides.",
+    tacticalPreview: "Both teams are expected to rotate their squads. France will deploy a fluid 4-2-3-1, while England is expected to respond with an aggressive 4-3-3.",
+    winProbHome: 55,
+    winProbAway: 45,
+    predictionInsight: "France's attacking depth provides a significant edge in a game where defensive intensity might be slightly lower than the final.",
+    projectedScoreHome: "3 - 2"
   },
-
-  // --- FINAL ---
   {
     slug: "wc2026-final",
     sport: "Football",
@@ -1962,7 +3452,24 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Final",
     category: "Final",
-    marketHighlights: ["Champion"],
-    keywords: ["spain vs argentina world cup final"]
+    marketHighlights: ["Champion", "Lionel Messi Anytime Goal", "Both Teams to Score", "Total Goals Over 2.5"],
+    keywords: ["spain vs argentina final prediction", "world cup winner odds", "la roja vs albiceleste final betting"],
+    headToHead: "Spain won their last competitive meeting 1-0 in 2022. The two best teams in the world face off for the ultimate prize.",
+    homeRecentForm: "W,W,W,W,W",
+    awayRecentForm: "W,W,W,W,W",
+    keyPlayersHome: ["Lamine Yamal (Winger)", "Rodri (Midfield)", "Pedri (Midfield)"],
+    keyPlayersAway: ["Lionel Messi (Forward)", "Julián Álvarez (Striker)", "Emiliano Martínez (Goalkeeper)"],
+    bettingTips: [
+      "Lionel Messi's final World Cup game is the primary market narrative; back him for anytime scorer.",
+      "Spain's ball-retention mastery is the primary threat for Argentina; monitor 'Spain Possession Over 60%'.",
+      "Back 'Both Teams to Score' given the elite attacking quality and historic stakes."
+    ],
+    detailedNarrative: "The ultimate showdown at MetLife Stadium. Spain's technical mastery, led by the generational talent of Lamine Yamal and Rodri, faces the defending world champions and their legendary captain Lionel Messi. Our AI match overview predicts a masterclass in tactical discipline and individual genius, where a single moment of magic will crown the kings of the world. Expect a monumental atmosphere in New Jersey for the 2026 FIFA World Cup Final.",
+    pitchReport: "MetLife Stadium features a top-tier hybrid surface. The mild weather will suit the high-energy ball-movement favored by both sides.",
+    tacticalPreview: "Spain will deploy their fluid 4-3-3, prioritizing collective ball retention. Argentina is expected to respond with a robust 4-4-2, focusing on defensive solidity and Messi's offensive freedom.",
+    winProbHome: 48,
+    winProbAway: 52,
+    predictionInsight: "Argentina's championship DNA and Messi's individual brilliance provide a slight edge. Spain's collective organization makes this the closest final in history.",
+    projectedScoreHome: "1 - 2"
   }
 ];
