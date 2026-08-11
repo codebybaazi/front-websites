@@ -52,8 +52,8 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersHome: ["Santiago Giménez (Striker)", "Edson Álvarez (Midfield)", "Chucky Lozano (Winger)"],
     keyPlayersAway: ["Percy Tau (Forward)", "Lyle Foster (Striker)", "Teboho Mokoena (Midfield)"],
     bettingTips: [
-      "Mexico's home advantage at the high-altitude Estadio Azteca is a decisive statistical factor.",
-      "Expect a high-intensity opening 20 minutes; back 'Early Goal' markets for premium value.",
+      "Mexico's home advantage at the high-altitude Estadio Azteca is a key metric for Asian Handicap markets.",
+      "Expect a aggressive tactical high-press in the opening quarter; back 'Early Goal' markets for premium value.",
       "Santiago Giménez to score anytime is the top-rated AI pick for this fixture."
     ],
     detailedNarrative: "The opening match of the 2026 World Cup at the iconic Estadio Azteca. Mexico enters as heavy favorites, buoyed by a fanatical home crowd. South Africa, known for their disciplined defensive structure, will look to exploit transitions through the pace of Percy Tau. Our AI models predict Mexico will dominate possession (60%+) and target the wings to break down the Bafana Bafana low block.",
@@ -118,8 +118,8 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersHome: ["Alphonso Davies (Winger)", "Jonathan David (Striker)", "Ismaël Koné (Midfield)"],
     keyPlayersAway: ["Edin Džeko (Striker)", "Miralem Pjanić (Midfield)", "Sead Kolašinac (Defender)"],
     bettingTips: [
-      "Canada's home crowd at BMO Field provides a +0.5 goal statistical advantage.",
-      "Edin Džeko remains a potent threat in the air; monitor 'Anytime Header Goal' markets.",
+      "Canada's home crowd at BMO Field provides a +0.5 goal tactical xG superiority.",
+      "Edin Džeko remains a potent threat in the air; monitor 'dominance in 'Total Corners' and 'Aerial Duel' markets' markets.",
       "Canada's high-line defense could be vulnerable to Džeko's intelligent movement."
     ],
     detailedNarrative: "Canada makes their home debut in the 2026 World Cup at a sold-out BMO Field. The pace of Alphonso Davies will be the primary weapon against a veteran Bosnian defense. Our AI models indicate Canada will push for an early goal to leverage the home atmosphere. Bosnia will rely on Džeko's hold-up play to release their technical midfielders into the half-spaces.",
@@ -185,7 +185,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersAway: ["John McGinn (Midfield)", "Scott McTominay (Midfield)", "Andrew Robertson (Defender)"],
     bettingTips: [
       "Scotland's defensive organization is their strongest asset; back 'Haiti Total Goals Under 0.5'.",
-      "John McGinn's late runs into the box are a consistent goal-scoring trend in major tournaments.",
+      "John McGinn's late runs into the box are a high-probability 'Anytime Scorer' marker in major tournaments.",
       "Expect a low-scoring affair as Haiti will likely park the bus to secure a historic point."
     ],
     detailedNarrative: "Scotland looks to start their World Cup journey with three points against Haiti in Boston. With a massive Scottish diaspora in the area, Gillette Stadium will feel like a home game for the Tartan Army. Haiti, making a rare World Cup appearance, will rely on their physicality and direct long balls. Our AI analysis suggests Scotland will dominate possession but may struggle to break down Haiti's stubborn low block initially.",
@@ -218,10 +218,10 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersAway: ["Hakan Çalhanoğlu (Midfield)", "Arda Güler (Forward)", "Barış Alper Yılmaz (Winger)"],
     bettingTips: [
       "Türkiye's technical midfield quality gives them a distinct edge in ball retention markets.",
-      "Australia's threat from set-pieces remains their best route to goal; back 'Souttar Anytime Header Goal'.",
+      "Australia's threat from set-pieces remains their best route to goal; back 'Souttar dominance in 'Total Corners' and 'Aerial Duel' markets'.",
       "The 'Both Teams to Score' market is statistically favored given both teams' recent defensive lapses."
     ],
-    detailedNarrative: "A fascinating intercontinental clash in Vancouver. Australia's physical, direct approach meets the technical flair and high-pressing style of Türkiye. Arda Güler is the one to watch for the Turkish side, while Australia will look to exploit their height advantage at every dead-ball situation. Our AI analysis predicts a high-scoring encounter with plenty of action in both boxes.",
+    detailedNarrative: "A fascinating intercontinental clash in Vancouver. Australia's physical, direct approach meets the technical flair and high-pressing style of Türkiye. Arda Güler is the one to watch for the Turkish side, while Australia will look to exploit their height advantage at every dead-ball situation. Our AI analysis predicts a high xG (Expected Goals) outcome with significant market liquidity with plenty of action in both boxes.",
     pitchReport: "BC Place features an indoor environment with a fast synthetic surface. This will suit Türkiye's quick-passing technical players like Çalhanoğlu.",
     tacticalPreview: "Australia will likely use a rigid 4-4-2 to stay compact. Türkiye will deploy a fluid 4-2-3-1, prioritizing creative freedom for Güler and Çalhanoğlu in the final third.",
     winProbHome: 42,
@@ -754,7 +754,7 @@ export const footballFixtures: FootballFixture[] = [
     tacticalPreview: "England will likely use a 4-3-3 with Jude Bellingham given a free role. Croatia will counter with their trademark 4-3-3, relying on a midfield trio that excels at ball retention and tempo control.",
     winProbHome: 60,
     winProbAway: 40,
-    predictionInsight: "England's squad depth provides a 20% statistical advantage in substitutions. Expect the 'Three Lions' to exert more pressure in the second half.",
+    predictionInsight: "England's squad depth provides a 20% tactical xG superiority in substitutions. Expect the 'Three Lions' to exert more pressure in the second half.",
     projectedScoreHome: "1 - 0"
   },
   {
@@ -878,7 +878,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersAway: ["Edin Džeko (Striker)", "Miralem Pjanić (Midfield)", "Sead Kolašinac (Defender)"],
     bettingTips: [
       "Granit Xhaka's pass completion rate will dictate the tempo; back 'Xhaka Over 75 Passes'.",
-      "Edin Džeko remains a potent threat in the air; monitor 'Anytime Header Goal' markets.",
+      "Edin Džeko remains a potent threat in the air; monitor 'dominance in 'Total Corners' and 'Aerial Duel' markets' markets.",
       "Back 'Switzerland to Win' given their consistent record in major tournament group stages."
     ],
     detailedNarrative: "A disciplined tactical battle in Los Angeles. The Swiss precision meets Bosnian resilience. Granit Xhaka's creative leadership will be the focal point against a veteran Bosnian side led by Džeko. Our AI match overview predicts a low-scoring encounter where defensive organization will be the deciding factor.",
@@ -943,7 +943,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersHome: ["Santiago Giménez (Striker)", "Edson Álvarez (Midfield)", "Hirving Lozano (Winger)"],
     keyPlayersAway: ["Son Heung-min (Forward)", "Kim Min-jae (Defender)", "Lee Kang-in (Midfield)"],
     bettingTips: [
-      "Mexico's home advantage in Guadalajara is a decisive statistical factor.",
+      "Mexico's home advantage in Guadalajara is a key metric for Asian Handicap markets.",
       "Son Heung-min's clinical finishing is South Korea's primary threat on the break.",
       "Back 'Both Teams to Score' given the offensive tendencies of both sides."
     ],
@@ -1343,7 +1343,7 @@ export const footballFixtures: FootballFixture[] = [
       "New Zealand's Chris Wood is a significant aerial threat; back 'New Zealand Over 3.5 Corners'.",
       "Back 'Both Teams to Score' as Egypt's high line can be vulnerable to long-ball tactics."
     ],
-    detailedNarrative: "A clash of tactical styles in Vancouver. Egypt's Pharaohs, led by Mohamed Salah, take on the All Whites. New Zealand will look to dominate the aerial duels through Chris Wood, while Egypt will rely on Salah's individual brilliance and quick transitions. Our AI match overview predicts a high-scoring encounter.",
+    detailedNarrative: "A clash of tactical styles in Vancouver. Egypt's Pharaohs, led by Mohamed Salah, take on the All Whites. New Zealand will look to dominate the aerial duels through Chris Wood, while Egypt will rely on Salah's individual brilliance and quick transitions. Our AI match overview predicts a high xG (Expected Goals) outcome with significant market liquidity.",
     pitchReport: "BC Place features a fast synthetic surface. This will suit the rapid transitions favored by Mohamed Salah and Omar Marmoush.",
     tacticalPreview: "Egypt will deploy an aggressive 4-3-3, prioritizing Salah's freedom on the right. New Zealand is expected to respond with a robust 5-3-2, focusing on neutralizing the wings and clearing crosses.",
     winProbHome: 25,
@@ -1768,7 +1768,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersHome: ["Patrik Schick (Striker)", "Tomas Soucek (Midfield)", "Adam Hlozek (Forward)"],
     keyPlayersAway: ["Santiago Giménez (Striker)", "Edson Álvarez (Midfield)", "Hirving Lozano (Winger)"],
     bettingTips: [
-      "Mexico's home advantage at Estadio Azteca is a decisive statistical factor.",
+      "Mexico's home advantage at Estadio Azteca is a key metric for Asian Handicap markets.",
       "Czechia's aerial threat via Soucek is their primary route to goal.",
       "Back 'Mexico to Win' given their historical dominance at high altitude."
     ],
@@ -2135,7 +2135,7 @@ export const footballFixtures: FootballFixture[] = [
       "New Zealand's Chris Wood remains a potent threat on the break; back 'New Zealand Total Shots Over 7.5'.",
       "Back 'Belgium to Win' given the significant quality differential in midfield."
     ],
-    detailedNarrative: "The Red Devils look to exert their authority in Vancouver against a resilient New Zealand side. Kevin De Bruyne's creative genius will be the focal point against an All Whites defense led by Cacace. Our AI match overview predicts a high-scoring encounter where Belgium's squad depth will prevail.",
+    detailedNarrative: "The Red Devils look to exert their authority in Vancouver against a resilient New Zealand side. Kevin De Bruyne's creative genius will be the focal point against an All Whites defense led by Cacace. Our AI match overview predicts a high xG (Expected Goals) outcome with significant market liquidity where Belgium's squad depth will prevail.",
     pitchReport: "BC Place features a fast synthetic surface. This will suit the rapid transitions favored by Jérémy Doku and Kevin De Bruyne.",
     tacticalPreview: "Belgium will deploy their fluid 3-4-2-1, prioritizing ball retention. New Zealand is expected to respond with a robust 5-3-2, focusing on neutralizing the wings.",
     winProbHome: 15,
@@ -2199,7 +2199,7 @@ export const footballFixtures: FootballFixture[] = [
     bettingTips: [
       "Spain's technical dominance in midfield is expected to result in high possession (65%+).",
       "Uruguay's Darwin Núñez is a potent threat on the break; back 'Uruguay Over 3.5 Shots on Target'.",
-      "Back 'Both Teams to Score' given the elite attacking quality on both sides."
+      "Monitor 'Total Cards Over 3.5' as high-stakes knockout intensity often leads to tactical fouls."
     ],
     detailedNarrative: "A heavyweight Group H clash in Guadalajara. Spain's technical mastery faces the high-intensity pressing of Uruguay. Lamine Yamal's individual brilliance will be tested by Uruguay's disciplined mid-block and energy. Our AI match overview predicts a masterclass in control from Spain, but cautions against a classic Uruguayan counter-attack.",
     pitchReport: "Estadio Akron features a top-tier grass surface. The warm Mexican weather will suit the high-energy running game favored by both sides.",
@@ -2298,7 +2298,7 @@ export const footballFixtures: FootballFixture[] = [
     bettingTips: [
       "Marcel Sabitzer's performance in high-pressure games is a major statistical factor.",
       "Algeria's Riyad Mahrez remains a potent threat on the break; back him for anytime scorer.",
-      "Back 'Both Teams to Score' as both sides have elite attacking quality and tactical flexibility."
+      "Target 'BTTS - Yes' in the second half when tactical adjustments typically lead to defensive spacing issues."
     ],
     detailedNarrative: "A fascinating tactical battle in Kansas City. Algeria's technical flair faces the high-intensity pressing system of Austria. Riyad Mahrez will be the primary creative threat for the Fennecs, while Austria will look to exploit Sabitzer's late runs. Our AI match overview predicts a high-energy encounter.",
     pitchReport: "Arrowhead Stadium features a top-tier grass surface. The warm Kansas City weather will suit the high-stamina Austrian pressing game.",
@@ -2597,7 +2597,7 @@ export const footballFixtures: FootballFixture[] = [
     bettingTips: [
       "Erling Haaland's scoring record in tournaments is elite; back him for anytime scorer.",
       "Côte d'Ivoire's Adingra is a potent threat on the wing; back him to provide an assist.",
-      "Back 'Both Teams to Score' given the elite attacking quality on both sides."
+      "Monitor 'Total Cards Over 3.5' as high-stakes knockout intensity often leads to tactical fouls."
     ],
     detailedNarrative: "A generational clash in Dallas. The African champions face the raw power of Norway's attack. Erling Haaland will be the primary threat, while Martin Ødegaard will look to orchestrate the Norwegian transitions. Our AI match overview predicts a high-quality encounter with plenty of offensive action at AT&T Stadium.",
     pitchReport: "AT&T Stadium features a fast-paced synthetic surface. This will suit the rapid transitions favored by both Haaland and Adingra.",
@@ -2628,7 +2628,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersHome: ["Santiago Giménez (Striker)", "Edson Álvarez (Midfield)", "Hirving Lozano (Winger)"],
     keyPlayersAway: ["Enner Valencia (Striker)", "Moisés Caicedo (Midfield)", "Pervis Estupiñán (Defender)"],
     bettingTips: [
-      "Mexico's home advantage at Estadio Azteca is a decisive statistical factor.",
+      "Mexico's home advantage at Estadio Azteca is a key metric for Asian Handicap markets.",
       "Ecuador's Moisés Caicedo is the primary engine in midfield; back him for 3+ tackles.",
       "Back 'Mexico to Win' given their historical dominance at high altitude."
     ],
@@ -2729,7 +2729,7 @@ export const footballFixtures: FootballFixture[] = [
     bettingTips: [
       "Kevin De Bruyne's creative depth in midfield is the primary market variable to watch.",
       "Senegal's Nicolas Jackson is a potent threat in the box; back 'Senegal Total Shots Over 10.5'.",
-      "Back 'Both Teams to Score' given the elite attacking quality on both sides."
+      "Monitor 'Total Cards Over 3.5' as high-stakes knockout intensity often leads to tactical fouls."
     ],
     detailedNarrative: "A heavyweight knockout clash in Seattle. The technical brilliance of Belgium faces the physical power of Senegal. De Bruyne's creative genius will be tested by Koulibaly's defensive organization. Our AI match overview predicts a high-intensity encounter where a single moment of individual magic will decide it.",
     pitchReport: "Lumen Field features a fast-paced synthetic surface. This will suit the rapid transitions favored by both Doku and Jackson.",
@@ -2896,7 +2896,7 @@ export const footballFixtures: FootballFixture[] = [
       "Ghana's Mohammed Kudus is a clinical finisher on the break; back him for 1+ shots on target.",
       "Back 'Both Teams to Score' given the elite attacking quality and high-intensity style of both sides."
     ],
-    detailedNarrative: "A clash of styles in Kansas City. The technical flair of Colombia faces the physical power of Ghana. James Rodríguez's creative genius will be tested by Kudus's offensive energy. Our AI match overview predicts a high-scoring encounter where individual brilliance could decide it at Arrowhead Stadium.",
+    detailedNarrative: "A clash of styles in Kansas City. The technical flair of Colombia faces the physical power of Ghana. James Rodríguez's creative genius will be tested by Kudus's offensive energy. Our AI match overview predicts a high xG (Expected Goals) outcome with significant market liquidity where individual brilliance could decide it at Arrowhead Stadium.",
     pitchReport: "Arrowhead Stadium features a top-tier grass surface. The warm Kansas City environment will favor the high-energy running game favored by both sides.",
     tacticalPreview: "Colombia will deploy their fluid 4-2-3-1. Ghana is expected to respond with a robust 4-4-2, focusing on winning second balls and quick transitions.",
     winProbHome: 60,
@@ -2927,7 +2927,7 @@ export const footballFixtures: FootballFixture[] = [
     bettingTips: [
       "Mohamed Salah's individual brilliance is the primary route to breaking the Australian block.",
       "Australia's Harry Souttar is a major aerial threat; monitor 'Australia Total Corners Over 5.5'.",
-      "Back 'Both Teams to Score' as both sides have elite attacking quality and tactical flexibility."
+      "Target 'BTTS - Yes' in the second half when tactical adjustments typically lead to defensive spacing issues."
     ],
     detailedNarrative: "A clash of tactical philosophies in Dallas. The physical set-piece dominance of Australia faces the technical flair of Egypt's golden generation. Mohamed Salah's individual brilliance will be tested by the clinical organization of the Socceroos. Our AI match overview predicts a high-intensity encounter at AT&T Stadium.",
     pitchReport: "AT&T Stadium features a fast-paced synthetic surface. This will suit the rapid transitions favored by both Salah and Goodwin.",
@@ -3061,7 +3061,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersHome: ["Santiago Giménez (Striker)", "Edson Álvarez (Midfield)", "Hirving Lozano (Winger)"],
     keyPlayersAway: ["Harry Kane (Striker)", "Jude Bellingham (Midfield)", "Bukayo Saka (Winger)"],
     bettingTips: [
-      "Mexico's home advantage at Estadio Azteca is a decisive statistical factor.",
+      "Mexico's home advantage at Estadio Azteca is a key metric for Asian Handicap markets.",
       "Harry Kane's clinical finishing is the primary threat for England; back him for anytime scorer.",
       "Back 'Mexico to Win (in 90 mins)' as a high-value play given the altitude advantage."
     ],
