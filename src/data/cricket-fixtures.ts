@@ -1640,13 +1640,14 @@ export const cricketFixtures: CricketSeries[] = [
         keyPlayersHome: ["Jos Buttler", "Sam Curran"],
         keyPlayersAway: ["Wanindu Hasaranga", "Pathum Nissanka"],
         bettingTips: [
-          "Jos Buttler to be the top run-scorer for England.",
-          "Wanindu Hasaranga to be the main threat for English middle order.",
-          "High intensity powerplay expected."
+          "Jos Buttler to be the top run-scorer for England in this 2026 series opener.",
+          "Wanindu Hasaranga to be the main threat for English middle order, a key pick for eng vs sl betting tips.",
+          "High intensity powerplay expected with England's aggressive intent.",
+          "Follow 'india vs sri lanka schedule' patterns for spin-heavy middle overs."
         ],
-        detailedNarrative: "Sri Lanka's tour of England begins in Southampton. The Rose Bowl is known for its true bounce, which will suit England's aggressive style. Sri Lanka's spin magic, especially through Hasaranga, will be the biggest challenge for the hosts. A tactical opener to a high-voltage T20 series.",
-        pitchReport: "True bounce, good batting surface. Par score is 180.",
-        tacticalPreview: "England will look to maximize the powerplay. Sri Lanka will rely on Hasaranga to squeeze the middle overs.",
+        detailedNarrative: "Sri Lanka's tour of England 2026 begins in Southampton. The Rose Bowl is known for its true bounce, which will suit England's aggressive style. Fans searching for the Sri Lanka tour of England 2026 schedule will see this as a critical T20 test. Sri Lanka's spin magic, especially through Hasaranga, will be the biggest challenge for the hosts. A tactical opener where 'cricket india vs sri lanka' comparisons will be drawn for spin effectiveness.",
+        pitchReport: "True bounce, good batting surface. Par score is 180. Essential for 'eng vs sl' live match predictions.",
+        tacticalPreview: "England will look to maximize the powerplay. Sri Lanka will rely on Hasaranga to squeeze the middle overs, similar to the strategy in 'india vs sri lanka' white-ball encounters.",
         winProbHome: 60,
         winProbAway: 40,
         predictionInsight: "England's home advantage and power hitters make them favorites.",
@@ -1753,7 +1754,31 @@ export const cricketFixtures: CricketSeries[] = [
         date: "Tue, 15 Sep 2026",
         venue: "Harare, Harare Sports Club",
         details: "Match Details",
-        slug: "zim-vs-aus-1st-odi-2026"
+        slug: "zim-vs-aus-1st-odi-2026",
+        homeTeam: "Zimbabwe",
+        awayTeam: "Australia",
+        format: "ODI",
+        tournament: "Australia tour of Zimbabwe, 2026",
+        city: "Harare",
+        country: "Zimbabwe",
+        headToHead: "Australia has a dominant record, but Zimbabwe has caused upsets at Harare Sports Club.",
+        homeRecentForm: "L, W, L, L, W",
+        awayRecentForm: "W, W, W, L, W",
+        keyPlayersHome: ["Sikandar Raza", "Blessing Muzarabani"],
+        keyPlayersAway: ["Glenn Maxwell", "Mitchell Starc"],
+        bettingTips: [
+          "Glenn Maxwell to be the X-factor in the middle overs.",
+          "Sikandar Raza to anchor the Zimbabwe innings.",
+          "Australia to start as strong favorites in the 2026 Zimbabwe tour."
+        ],
+        detailedNarrative: "The Australia tour of Zimbabwe 2026 kicks off in Harare. The Harare Sports Club deck usually offers a balanced contest. Australia's power hitting vs Zimbabwe's spirited spin attack led by Raza will be the highlight. Fans of 'australia vs zimbabwe cricket' will recall the 2022 upset, adding intrigue to this series opener.",
+        pitchReport: "Balanced deck with some turn for the spinners. Par score is 260.",
+        tacticalPreview: "Australia will look to dominate the powerplay. Zimbabwe must target the Australian middle order early to stay in the game.",
+        winProbHome: 20,
+        winProbAway: 80,
+        predictionInsight: "Australia's all-round depth makes them clear favorites for the 1st ODI.",
+        projectedScoreHome: "220-240",
+        projectedScoreAway: "300-320"
       },
       {
         match: "2nd ODI",
