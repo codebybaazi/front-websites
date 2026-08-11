@@ -36,6 +36,18 @@ const events = [
 function Tennis() {
   return (
     <SiteLayout>
+      <nav className="mx-auto max-w-7xl px-6 py-3" aria-label="Breadcrumb">
+        <ol className="flex items-center gap-2 text-xs font-medium text-foreground/60">
+          <li>
+            <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+          </li>
+          <ChevronRight className="h-3 w-3 shrink-0" />
+          <li className="text-primary font-bold" aria-current="page">
+            Tennis Betting on Cricbet99
+          </li>
+        </ol>
+      </nav>
+
       <PageHero
         wide
         eyebrow="Tennis"
