@@ -77,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Cricbet99 — India's #1 Trusted Online Cricket ID Platform" },
+      { title: "Cricbet99 — India's #1 Trusted Cricket Exchange" },
       {
         name: "description",
         content:

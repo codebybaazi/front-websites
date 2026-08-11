@@ -168,7 +168,7 @@ const MENUS: MenuDef[] = [
       ]},
       { title: "Help & Fixes", items: [
         { label: "Bettor FAQ Hub", to: "/faq" },
-        { label: "Getting Started Guide", to: "/how-it-works" },
+        { label: "Setup Guide", to: "/how-it-works" },
         { label: "Login Issues", to: "/login-issues" },
         { label: "Deposit Issues", to: "/deposit-issues" },
         { label: "Withdrawal Delay", to: "/withdrawal-delay" },

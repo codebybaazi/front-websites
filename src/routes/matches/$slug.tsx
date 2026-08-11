@@ -610,7 +610,7 @@ function MatchDetailPage() {
                  <History className="w-32 h-32" />
                </div>
                <h2 className="text-3xl font-black flex items-center gap-3 uppercase tracking-tighter">
-                <Lightbulb className="h-8 w-8 text-primary" /> {m.sport === 'Tennis' ? 'Betting Tips for Top seed vs Challenger' : 'Betting Tips & Strategy'}
+                <Lightbulb className="h-8 w-8 text-primary" /> {m.sport === 'Tennis' ? 'Match Betting Strategy' : 'Betting Strategy'}
               </h2>
               <div className="grid gap-6">
                 {(m.bettingTips || [
@@ -671,7 +671,7 @@ function MatchDetailPage() {
             <div className="pt-20 border-t border-white/10">
               <div className="flex items-center gap-3 mb-10">
                 <HelpCircle className="h-8 w-8 text-primary" />
-                <h2 className="text-3xl font-black uppercase tracking-tighter">Analytical Match FAQ</h2>
+                <h2 className="text-3xl font-black uppercase tracking-tighter">Analytical FAQ</h2>
               </div>
               <Accordion type="single" collapsible className="w-full space-y-4">
                 {faqs.map((faq, i) => (
@@ -736,21 +736,21 @@ function MatchDetailPage() {
                   <Link to="/schedule" className="block p-5 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.06] transition-all group hover:border-primary/20">
                     <div className="text-[10px] font-black uppercase tracking-widest text-primary mb-1">Schedule</div>
                     <div className="text-sm font-bold flex items-center justify-between">
-                      2026 Sports Calendar
+                      Sports Calendar 2026
                       <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </Link>
                   <Link to="/betting-guides" className="block p-5 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.06] transition-all group hover:border-primary/20">
                     <div className="text-[10px] font-black uppercase tracking-widest text-primary mb-1">Learning</div>
                     <div className="text-sm font-bold flex items-center justify-between">
-                      Pro Betting Guides
+                      Pro Betting Guide
                       <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </Link>
                   <Link to="/bonus" className="block p-5 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.06] transition-all group hover:border-primary/20">
                     <div className="text-[10px] font-black uppercase tracking-widest text-primary mb-1">Rewards</div>
                     <div className="text-sm font-bold flex items-center justify-between">
-                      VIP Bonus Offers
+                      VIP Bonus Hub
                       <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </Link>

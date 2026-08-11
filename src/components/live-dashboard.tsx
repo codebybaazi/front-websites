@@ -662,7 +662,7 @@ function SeoMatchIndex() {
             to="/matches"
             className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-5 py-2.5 text-xs font-black uppercase tracking-widest text-primary transition-colors hover:bg-primary/20"
           >
-            Browse all matches <ChevronRight className="h-3.5 w-3.5" />
+            All Matches <ChevronRight className="h-3.5 w-3.5" />
           </Link>
         </div>
       </div>

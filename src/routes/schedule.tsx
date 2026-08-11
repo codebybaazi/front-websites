@@ -185,7 +185,7 @@ function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
                                           params={{ slug: match.slug }}
                                             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
                                           >
-                                            Match Details <ArrowRight className="w-3 h-3" />
+                                            Analytics <ArrowRight className="w-3 h-3" />
                                           </Link>
                                       </td>
                                     </tr>
@@ -226,7 +226,7 @@ function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
                                       params={{ slug: match.slug }}
                                       className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
                                     >
-                                      View Match Intelligence <ArrowRight className="w-3.5 h-3.5" />
+                                      Match Analytics <ArrowRight className="w-3.5 h-3.5" />
                                     </Link>
                                   </div>
                                 ))}
@@ -357,7 +357,7 @@ function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
                                   params={{ slug: match.slug }}
                                   className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
                                 >
-                                  View Tournament Intelligence <ArrowRight className="w-3.5 h-3.5" />
+                                  Event Analytics <ArrowRight className="w-3.5 h-3.5" />
                                 </Link>
                               </div>
                             ))}
@@ -416,7 +416,7 @@ function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
                                         params={{ slug: match.slug }}
                                         className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
                                       >
-                                        Match Details <ArrowRight className="w-3 h-3" />
+                                        Analytics <ArrowRight className="w-3 h-3" />
                                       </Link>
                                     </td>
                                   </tr>

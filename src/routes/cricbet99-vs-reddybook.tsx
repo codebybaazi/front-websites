@@ -244,7 +244,7 @@ function Compare() {
             { to: "/cricbet99-vs-diamond-exchange", label: "vs Diamond Exch" },
           ].map((l) => (
             <Link key={l.to} to={l.to} className="rounded-full border border-primary/25 bg-primary/5 px-4 py-2 text-xs font-semibold text-primary transition-colors hover:bg-primary/15">
-              Cricbet99 {l.label}
+              {l.label}
             </Link>
           ))}
         </div>
