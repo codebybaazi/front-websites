@@ -337,9 +337,10 @@ function MatchDetailPage() {
             {/* AI Match Overview (Detailed) */}
             <div className="rounded-[2.5rem] border border-white/5 bg-white/[0.02] p-10 relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <h2 className="text-2xl font-black flex items-center gap-3 mb-8">
+              <h2 className="text-2xl font-black flex items-center gap-3 mb-2">
                 <Sparkles className="h-6 w-6 text-primary animate-pulse" /> AI Match Overview
               </h2>
+              <h3 className="text-xs font-black text-primary/60 uppercase tracking-[0.3em] mb-8">Deep Analytical Forecast</h3>
               <div className="prose prose-invert max-w-none text-foreground/80 leading-relaxed space-y-6">
                 <div className="text-lg">
                   {m.detailedNarrative || aiAnalysis.detailedNarrative}
