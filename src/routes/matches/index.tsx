@@ -22,14 +22,34 @@ export const Route = createFileRoute("/matches/")({
       { property: "og:description", content: "Explore real-time match analysis for IPL 2026, World Cup Football, and WTA Tennis. Get AI-driven insights and premium betting IDs instantly." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://cricbet99.co.in/matches" },
+      { property: "og:image", content: "https://cricbet99.co.in/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "keywords", content: "cricbet99 matches, live cricket betting, football match predictions, tennis betting tips, IPL 2026 schedule, sports exchange odds" },
+      { name: "twitter:title", content: "Live Matches & Betting Intelligence 2026 | Cricbet99" },
+      { name: "twitter:description", content: "Real-time cricket, football, and tennis betting analysis with live odds and AI predictions." },
+      { name: "twitter:image", content: "https://cricbet99.co.in/og-image.jpg" },
+      { name: "keywords", content: "cricbet99 matches, live cricket betting, football match predictions, tennis betting tips, IPL 2026 schedule, sports exchange odds, live score updates" },
     ],
-    links: [{ rel: "canonical", href: "https://cricbet99.co.in/matches" }],
+    links: [
+      { rel: "canonical", href: "https://cricbet99.co.in/matches" },
+      { rel: "alternate", hreflang: "en-in", href: "https://cricbet99.co.in/matches" },
+    ],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/matches", "Live Matches")),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "itemListElement": matches.slice(0, 10).map((m, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "url": `https://cricbet99.co.in/matches/${m.slug}`,
+            "name": `${m.homeTeam} vs ${m.awayTeam} - ${m.tournament}`
+          }))
+        }),
       },
     ],
   }),

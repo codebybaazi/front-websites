@@ -116,13 +116,24 @@ function Schedule() {
         <div className="space-y-12">
           {/* Main Schedule Column */}
           <div className="space-y-12">
+            <div className="prose prose-invert max-w-none mb-12">
+              <h1 className="text-4xl md:text-5xl font-black mb-6">
+                2026 Cricket Schedule, <span className="text-primary">IPL Fixtures</span> & Sports Calendar
+              </h1>
+              <p className="text-lg text-foreground/70 leading-relaxed">
+                Stay ahead of the game with the most comprehensive 2026 sports calendar. Whether you're tracking the <strong>IPL 2026 schedule</strong>, 
+                planning for the <strong>T20 World Cup 2026</strong>, or looking for <strong>FIFA World Cup 2026</strong> kickoff times, Cricbet99 
+                provides real-time updates and AI-driven betting intelligence for every major tournament.
+              </p>
+            </div>
+            
             <div>
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
                   <Trophy className="w-5 h-5 text-primary" />
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight">
-                  {`${activeTab} Fixtures 2026`}
+                  {`${activeTab} Fixtures & Betting Schedule 2026`}
                 </h2>
               </div>
               
