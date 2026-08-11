@@ -81,7 +81,7 @@ const MENUS: MenuDef[] = [
     tagline: "Instant ID on WhatsApp",
     groups: [
       { title: "Get Started", items: [
-        { label: "Cricbet99 ID", to: "/cricbet99-id" },
+        { label: "Cricbet99 Official ID", to: "/cricbet99-id" },
         { label: "Sports ID", to: "/sports-id" },
         { label: "Demo ID", to: "/demo-id" },
         { label: "Register", to: "/register" },
