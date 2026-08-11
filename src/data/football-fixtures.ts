@@ -878,7 +878,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersAway: ["Edin Džeko (Striker)", "Miralem Pjanić (Midfield)", "Sead Kolašinac (Defender)"],
     bettingTips: [
       "Granit Xhaka's pass completion rate will dictate the tempo; back 'Xhaka Over 75 Passes'.",
-      "Edin Džeko remains a potent threat in the air; monitor 'dominance in 'Total Corners' and 'Aerial Duel' markets' markets.",
+      "Edin Džeko remains a potent threat in the air; monitor dominance in 'Total Corners' and 'Aerial Duel' markets.",
       "Back 'Switzerland to Win' given their consistent record in major tournament group stages."
     ],
     detailedNarrative: "A disciplined tactical battle in Los Angeles. The Swiss precision meets Bosnian resilience. Granit Xhaka's creative leadership will be the focal point against a veteran Bosnian side led by Džeko. Our AI match overview predicts a low-scoring encounter where defensive organization will be the deciding factor.",
