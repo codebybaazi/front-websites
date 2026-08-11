@@ -1212,12 +1212,6 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               </span>
             </h2>
             <h3 className="mt-3 text-sm font-black text-foreground/40 uppercase tracking-[0.5em]">Global Market Coverage & Exchange Odds</h3>
-          </div>
-              One ID.{" "}
-              <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Every sport</span>
-              <br />
-              <span className="text-foreground/90">you love.</span>
-            </h2>
             <p className="mx-auto mt-5 max-w-2xl text-foreground/70 md:text-lg">
               From an IPL run-chase to a Grand Slam final — deep coverage, sharp odds, and buttery-fast in-play action across every sport that matters.
             </p>
