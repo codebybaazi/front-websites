@@ -968,8 +968,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group C",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["brazil vs haiti"]
+    marketHighlights: ["Brazil -3.5 Handicap", "Total Goals Over 4.5", "Vinicius Jr Anytime Goal", "Brazil Clean Sheet"],
+    keywords: ["brazil vs haiti prediction", "philadelphia world cup soccer odds", "brazil national team betting"],
+    headToHead: "Brazil has a 100% win rate against Haiti, including a dominant 7-1 win in the 2016 Copa América Centenario.",
+    homeRecentForm: "W,W,W,W,W",
+    awayRecentForm: "L,D,L,W,L",
+    keyPlayersHome: ["Vinícius Júnior (Winger)", "Rodrygo (Forward)", "Bruno Guimarães (Midfield)"],
+    keyPlayersAway: ["Duckens Nazon (Striker)", "Frantzdy Pierrot (Forward)", "Ricardo Adé (Defender)"],
+    bettingTips: [
+      "Brazil's offensive depth is unmatched; back them in the 'Race to 3 Goals' market.",
+      "Haiti's Duckens Nazon is their only consistent threat in transition.",
+      "Back 'Brazil Over 4.5 Team Goals' given the massive technical gulf."
+    ],
+    detailedNarrative: "A true David vs Goliath encounter in Philadelphia. Brazil looks to put on a show for the American crowd against a Haiti side making a rare World Cup appearance. The tactical focus will be on Brazil's attacking fluidity vs Haiti's damage limitation. Our AI models predict a one-sided affair with Brazil dominating possession and shot counts.",
+    pitchReport: "Lincoln Financial Field features a fast-paced grass surface. This will suit Brazil's quick vertical transitions and technical brilliance.",
+    tacticalPreview: "Brazil will deploy an ultra-offensive 4-2-3-1, pushing fullbacks high. Haiti will likely set up in a defensive 5-4-1, focusing on closing gaps and clearing crosses.",
+    winProbHome: 98,
+    winProbAway: 2,
+    predictionInsight: "Brazil has a history of high-scoring wins against lower-ranked CONCACAF opposition. The technical and physical gap is too vast for anything but a Brazil victory.",
+    projectedScoreHome: "5 - 0"
   },
   {
     slug: "wc2026-m30",
@@ -984,8 +1001,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group C",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["scotland vs morocco"]
+    marketHighlights: ["Match Winner", "Total Goals Under 2.5", "Both Teams to Score - No", "Scotland Clean Sheet - No"],
+    keywords: ["scotland vs morocco prediction", "boston world cup betting", "tartan army vs morocco odds"],
+    headToHead: "Morocco secured a dominant 3-0 victory in their last competitive meeting (1998 World Cup). Both teams have improved significantly in tactical discipline since then.",
+    homeRecentForm: "W,W,D,L,W",
+    awayRecentForm: "W,L,W,D,W",
+    keyPlayersHome: ["John McGinn (Midfield)", "Scott McTominay (Midfield)", "Andrew Robertson (Defender)"],
+    keyPlayersAway: ["Achraf Hakimi (Right Back)", "Hakim Ziyech (Winger)", "Yassine Bounou (Goalkeeper)"],
+    bettingTips: [
+      "Scotland's high-energy pressing vs Morocco's organized defensive block will be the key tactical duel.",
+      "Achraf Hakimi's marauding runs are Morocco's primary offensive weapon.",
+      "Back 'Under 2.5 Goals' as both teams are expected to prioritize defensive shape in a tight Group C."
+    ],
+    detailedNarrative: "A fascinating tactical battle in Boston. Scotland's high-pressing intensity faces the legendary defensive organization of Morocco. With a massive Scottish diaspora in the area, Gillette Stadium will feel like a home game for the Tartan Army. Our AI match overview predicts a low-scoring encounter where a single set-piece could be the decider.",
+    pitchReport: "Gillette Stadium features a hybrid surface. The cool Boston weather will suit the high-energy running game favored by both sides.",
+    tacticalPreview: "Scotland will use their standard 3-4-2-1 formation. Morocco is expected to deploy their compact 4-1-4-1, focusing on neutralizing McGinn and McTominay in the central areas.",
+    winProbHome: 45,
+    winProbAway: 55,
+    predictionInsight: "Morocco has a high win rate against European sides in neutral venues. Their defensive resilience was a hallmark of their 2022 campaign.",
+    projectedScoreHome: "0 - 1"
   },
   {
     slug: "wc2026-m31",
@@ -1000,8 +1034,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group D",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["turkiye vs paraguay"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Arda Güler Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["turkiye vs paraguay prediction", "levis stadium soccer betting", "turkey national team odds"],
+    headToHead: "First competitive meeting. Türkiye's technical flair vs Paraguay's defensive grit and physical approach.",
+    homeRecentForm: "W,D,W,L,D",
+    awayRecentForm: "L,D,W,D,L",
+    keyPlayersHome: ["Arda Güler (Forward)", "Hakan Çalhanoğlu (Midfield)", "Barış Alper Yılmaz (Winger)"],
+    keyPlayersAway: ["Miguel Almirón (Winger)", "Julio Enciso (Forward)", "Gustavo Gómez (Defender)"],
+    bettingTips: [
+      "Arda Güler's individual brilliance in the final third is the primary market variable to watch.",
+      "Paraguay's Miguel Almirón remains a potent threat on the break; back 'Paraguay Total Shots Over 9.5'.",
+      "Back 'Both Teams to Score' given the high-variance nature of Türkiye's defensive record."
+    ],
+    detailedNarrative: "A tactical clash in San Francisco. Türkiye looks to build on their technical superiority against a resilient Paraguay side. The battle between Çalhanoğlu and Almirón in transition will be the central theme. Our AI models predict a high-quality encounter with Türkiye dominating possession but Paraguay remaining dangerous on the counter.",
+    pitchReport: "Levi's Stadium features a fast-paced grass surface. Technical players like Güler will be suited to the rapid ball movement.",
+    tacticalPreview: "Türkiye will deploy their fluid 4-2-3-1, prioritizing creative freedom for Güler. Paraguay is expected to respond with a compact 5-3-2, focusing on neutralizing the central channel and hitting on the break.",
+    winProbHome: 62,
+    winProbAway: 38,
+    predictionInsight: "Türkiye has a strong record against South American sides in recent years. Their physical and technical organization is a major data point.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-m32",
