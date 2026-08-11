@@ -310,13 +310,13 @@ function MatchDetailPage() {
                 <BarChart3 className="w-32 h-32" />
               </div>
               <h2 className="text-2xl font-black flex items-center gap-3 mb-10 uppercase tracking-widest">
-                <TrendingUp className="h-6 w-6 text-primary" /> {m.sport === 'Football' ? 'Projected Score & HT/FT' : 'Projected Scoreline & Over-by-Over'}
+                <TrendingUp className="h-6 w-6 text-primary" /> {m.sport === 'Football' ? 'Projected Score & HT/FT' : m.sport === 'Tennis' ? 'Predicted score & set markets' : 'Projected Scoreline & Over-by-Over'}
               </h2>
               <div className="grid gap-12 md:grid-cols-2">
                 <div className="space-y-6">
                    <div className="flex items-center gap-3 p-4 rounded-xl bg-primary/10 border border-primary/20">
                      <Timer className="h-5 w-5 text-primary" />
-                     <span className="font-bold">{m.sport === 'Football' ? 'HT/FT & Goal Markets' : 'Innings Progression'}</span>
+                     <span className="font-bold">{m.sport === 'Football' ? 'HT/FT & Goal Markets' : m.sport === 'Tennis' ? 'Set Progression' : 'Innings Progression'}</span>
                    </div>
                    <div className="space-y-4">
                      {m.sport === 'Football' ? (
@@ -332,6 +332,21 @@ function MatchDetailPage() {
                          <div className="p-4 rounded-xl bg-background/40 border border-white/5">
                            <span className="text-[10px] font-black uppercase text-primary block mb-1">Corner Count</span>
                            <p className="text-sm text-foreground/70">Expect 9-11 corners. {m.homeTeam}'s wing-play focus drives high corner liquidity.</p>
+                         </div>
+                       </>
+                     ) : m.sport === 'Tennis' ? (
+                       <>
+                         <div className="p-4 rounded-xl bg-background/40 border border-white/5">
+                           <span className="text-[10px] font-black uppercase text-primary block mb-1">Set 1 Dynamics</span>
+                           <p className="text-sm text-foreground/70">Projected: {m.homeTeam} to hold serve. 70% probability of a set winner within 10 games.</p>
+                         </div>
+                         <div className="p-4 rounded-xl bg-background/40 border border-white/5">
+                           <span className="text-[10px] font-black uppercase text-primary block mb-1">Aces Count (O/U)</span>
+                           <p className="text-sm text-foreground/70">Expect Over 8.5 aces. Both players possess high service velocities on this surface.</p>
+                         </div>
+                         <div className="p-4 rounded-xl bg-background/40 border border-white/5">
+                           <span className="text-[10px] font-black uppercase text-primary block mb-1">Tie Break Probability</span>
+                           <p className="text-sm text-foreground/70">Moderate (35%). Surface speed and return metrics suggest at least one close set.</p>
                          </div>
                        </>
                      ) : (
@@ -355,11 +370,11 @@ function MatchDetailPage() {
                 <div className="space-y-6">
                    <div className="flex items-center gap-3 p-4 rounded-xl bg-accent/10 border border-accent/20">
                      <Target className="h-5 w-5 text-accent" />
-                     <span className="font-bold">{m.sport === 'Football' ? 'Score Prediction' : 'Projected Totals'}</span>
+                     <span className="font-bold">{m.sport === 'Football' ? 'Score Prediction' : m.sport === 'Tennis' ? 'Set Prediction' : 'Projected Totals'}</span>
                    </div>
                     <div className="p-8 rounded-2xl bg-accent/5 border border-accent/10 flex flex-col items-center justify-center text-center">
-                      <span className="text-xs font-black uppercase text-accent mb-2">{m.sport === 'Football' ? 'Correct Scoreline' : 'Estimated 1st Innings Score'}</span>
-                      <span className="text-5xl font-black text-white">{m.projectedScoreHome || (m.sport === 'Cricket' ? "175 - 190" : "2 - 1")}</span>
+                      <span className="text-xs font-black uppercase text-accent mb-2">{m.sport === 'Football' ? 'Correct Scoreline' : m.sport === 'Tennis' ? 'Correct Set Score' : 'Estimated 1st Innings Score'}</span>
+                      <span className="text-5xl font-black text-white">{m.projectedScoreHome || (m.sport === 'Cricket' ? "175 - 190" : m.sport === 'Tennis' ? "2 - 0" : "2 - 1")}</span>
                       <p className="mt-4 text-xs text-foreground/50 italic">Based on {m.sport === 'Football' ? 'offensive efficiency' : 'pitch behavior'} at {m.venue} and {m.homeTeam}'s recent {m.sport === 'Football' ? 'scoring frequency' : 'strike rates'}.</p>
                     </div>
                    <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
@@ -367,7 +382,7 @@ function MatchDetailPage() {
                        <Globe className="h-4 w-4 text-primary" /> Market Sentiment
                      </h4>
                      <p className="text-xs text-foreground/60">
-                       Cricbet99 traders are currently backing a {m.sport === 'Football' ? 'tactical stalemate or late winner' : 'high-scoring game'}. {m.sport === 'Football' ? 'Goal line markets' : 'Fancy markets for "Total Sixes"'} are seeing significant upward pressure.
+                       Cricbet99 traders are currently backing a {m.sport === 'Football' ? 'tactical stalemate or late winner' : m.sport === 'Tennis' ? 'straight sets victory or high game count' : 'high-scoring game'}. {m.sport === 'Football' ? 'Goal line markets' : m.sport === 'Tennis' ? 'Set handicap and Total Games markets' : 'Fancy markets for "Total Sixes"'} are seeing significant upward pressure.
                      </p>
                    </div>
                 </div>
@@ -376,7 +391,7 @@ function MatchDetailPage() {
 
             {/* About Team A vs Team B */}
             <div className="space-y-6">
-              <h2 className="text-2xl font-black uppercase tracking-widest">About {m.homeTeam} vs {m.awayTeam}</h2>
+              <h2 className="text-2xl font-black uppercase tracking-widest">About {m.sport === 'Tennis' ? 'this round' : `${m.homeTeam} vs ${m.awayTeam}`}</h2>
               <div className="prose prose-invert max-w-none text-foreground/70 leading-relaxed">
                 <p>
                   The rivalry between {m.homeTeam} and {m.awayTeam} is a highlight of the {m.tournament}. {m.headToHead || `Historically, these two teams have provided some of the most competitive encounters in ${m.sport}.`}
@@ -393,10 +408,12 @@ function MatchDetailPage() {
                 <BarChart3 className="h-6 w-6 text-primary" /> Popular Betting Markets
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                {(m.sport === 'Cricket' 
-                  ? ["Match Winner", "Total Sixes", "Session Runs", "Fancy Bets", "Top Batsman", "Top Bowler", "Next Wicket", "Over/Under"]
-                  : ["Match Winner", "Total Goals", "Correct Score", "BTTS", "Corner Count", "Asian Handicap", "Player to Score", "Live Props"]
-                ).map(market => (
+                 {(m.sport === 'Cricket' 
+                   ? ["Match Winner", "Total Sixes", "Session Runs", "Fancy Bets", "Top Batsman", "Top Bowler", "Next Wicket", "Over/Under"]
+                   : m.sport === 'Tennis'
+                   ? ["Match Winner", "Set Betting", "Total Games", "Set Handicap", "Over/Under Games", "Next Set Winner", "Correct Score", "Tie Break?"]
+                   : ["Match Winner", "Total Goals", "Correct Score", "BTTS", "Corner Count", "Asian Handicap", "Player to Score", "Live Props"]
+                 ).map(market => (
                   <div key={market} className="group p-5 rounded-2xl border border-white/5 bg-white/[0.02] text-center hover:border-primary/30 transition-all hover:scale-[1.05]">
                     <div className="text-xs font-black text-foreground/80 group-hover:text-primary mb-3 uppercase tracking-wider">{market}</div>
                     <Badge className={cn("bg-primary/20 text-primary border-none text-[8px] uppercase font-black px-3 py-1", market === "Asian Handicap" || market === "BTTS" ? "bg-accent/20 text-accent" : "")}>
@@ -413,11 +430,13 @@ function MatchDetailPage() {
                  <History className="w-32 h-32" />
                </div>
                <h2 className="text-3xl font-black flex items-center gap-3 uppercase tracking-tighter">
-                <Lightbulb className="h-8 w-8 text-primary" /> Betting Tips & Strategy
+                <Lightbulb className="h-8 w-8 text-primary" /> {m.sport === 'Tennis' ? 'Betting Tips for Top seed vs Challenger' : 'Betting Tips & Strategy'}
               </h2>
               <div className="grid gap-6">
                 {(m.bettingTips || [
-                  m.sport === 'Football' ? `Analyze the starting lineups carefully; injuries to key defenders in ${m.homeTeam}'s squad could shift the odds toward over 2.5 goals.` : `Analyze the toss carefully; the pitch at ${m.venue} favors the team batting first.`,
+                   m.sport === 'Football' ? `Analyze the starting lineups carefully; injuries to key defenders in ${m.homeTeam}'s squad could shift the odds toward over 2.5 goals.` : 
+                   m.sport === 'Tennis' ? `Surface conditions at ${m.venue} (${m.surface}) favor aggressive servers. Betting on ${m.homeTeam} to hold their opening three service games offers early-market value.` :
+                   `Analyze the toss carefully; the pitch at ${m.venue} favors the team batting first.`,
                   `Value is found in mid-game session markets where volatility is high.`,
                   "Always maintain a disciplined bankroll strategy for high-volume fixtures."
                 ]).map((tip: string, i: number) => (
