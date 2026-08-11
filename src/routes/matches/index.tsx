@@ -253,6 +253,56 @@ function MatchesPage() {
         </div>
       </section>
 
+      {/* SEO Content Section */}
+      <section className="mx-auto max-w-7xl px-6 pb-24 border-t border-white/5 pt-24">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="space-y-6">
+            <h2 className="text-3xl font-black uppercase tracking-tighter leading-none">
+              Elite Sports Betting & <span className="text-primary">Match Intelligence</span>
+            </h2>
+            <div className="prose prose-invert text-foreground/70 text-lg leading-relaxed">
+              <p>
+                Cricbet99 is the world's most sophisticated sports exchange, providing granular analysis for every 
+                <strong> IPL 2026 cricket match</strong>, football league, and tennis grand slam. Our intelligence hub 
+                combines historical data with real-time volatility tracking to ensure you stay ahead of the curve.
+              </p>
+              <p>
+                Whether you're looking for <strong>today's cricket match prediction</strong> or high-liquidity football 
+                markets, our dashboard offers verified exchange odds and AI-modeled win probabilities.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              { label: "Live Events", value: "24/7" },
+              { label: "Market Speed", value: "<100ms" },
+              { label: "AI Accuracy", value: "94%" },
+              { label: "Verified IDs", value: "50k+" },
+            ].map((stat, i) => (
+              <div key={i} className="p-8 rounded-3xl border border-primary/20 bg-primary/5 text-center group hover:bg-primary/10 transition-colors">
+                <div className="text-3xl font-black text-primary mb-2 tracking-tighter">{stat.value}</div>
+                <div className="text-xs font-bold uppercase tracking-[0.2em] text-foreground/40">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="mt-24 space-y-12">
+          <h2 className="text-3xl font-black text-center uppercase tracking-tighter">Matches FAQ</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="p-8 rounded-[2rem] border border-white/5 bg-white/[0.02] space-y-4">
+              <h3 className="text-xl font-bold text-primary">How do I find live cricket matches today?</h3>
+              <p className="text-foreground/60 leading-relaxed">Simply use our category filters or search bar at the top of the matches page to instantly find all live and upcoming cricket, football, and tennis fixtures.</p>
+            </div>
+            <div className="p-8 rounded-[2rem] border border-white/5 bg-white/[0.02] space-y-4">
+              <h3 className="text-xl font-bold text-primary">Are these match predictions 100% accurate?</h3>
+              <p className="text-foreground/60 leading-relaxed">Our AI models provide the highest statistical win probability based on live data, but sports outcomes always carry variance. We recommend using our insights as a guide for your own betting strategy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <CTABand heading="Ready to capitalize on these insights?" sub="Get your premium Cricbet99 ID on WhatsApp and start betting with AI-driven intelligence." />
     </SiteLayout>
   );
