@@ -232,9 +232,9 @@ export const cricketFixtures: CricketSeries[] = [
         keyPlayersHome: ["Sikandar Raza", "Blessing Muzarabani", "Ryan Burl"],
         keyPlayersAway: ["Shubman Gill", "Yashasvi Jaiswal", "Arshdeep Singh"],
         bettingTips: [
-          "India is strong favorites; look for player performance markets.",
-          "Sikandar Raza to be the top run-scorer for Zimbabwe.",
-          "High probability of 180+ score if India bats first."
+          "India is strong favorites; look for player performance markets on your Cricbet99 ID.",
+          "Sikandar Raza to be the top run-scorer for Zimbabwe in today's match winning percentage.",
+          "High probability of 180+ score if India bats first - track live cricket exchange scores."
         ]
       },
       {
