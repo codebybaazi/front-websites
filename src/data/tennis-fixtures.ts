@@ -44,7 +44,14 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "ATP",
     marketHighlights: ["Match Winner", "Set Betting"],
-    keywords: ["brisbane international 2026 odds", "medvedev brisbane betting", "tennis betting india", "atp brisbane prediction"]
+    keywords: ["brisbane international 2026 odds", "medvedev brisbane betting", "tennis betting india", "atp brisbane prediction"],
+    prediction: {
+      winner: "Daniil Medvedev",
+      score: "2-0",
+      points: "High",
+      confidence: 72,
+      analysis: "Medvedev's elite hard-court coverage and flat groundstrokes are perfectly suited for the quick Brisbane surface. His recent training metrics indicate a high first-serve percentage, which should minimize break opportunities for his opponent."
+    }
   },
   {
     slug: "asb-classic-2026",
@@ -120,7 +127,14 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "Combined",
     marketHighlights: ["Outright Winner", "Match Odds", "Quarter Winner"],
-    keywords: ["australian open 2026 odds", "alcaraz melbourne betting", "grand slam betting india", "australian open predictions 2026"]
+    keywords: ["australian open 2026 odds", "alcaraz melbourne betting", "grand slam betting india", "australian open predictions 2026"],
+    prediction: {
+      winner: "Carlos Alcaraz",
+      score: "3-1",
+      points: "Elite",
+      confidence: 85,
+      analysis: "Alcaraz enters the Australian Open as the primary contender. His tactical versatility and physical endurance give him a massive edge in five-set formats. Expect high intensity in the opening rounds to establish psychological dominance."
+    }
   },
   {
     slug: "open-occitanie-2026",
@@ -329,7 +343,14 @@ export const tennisFixtures: TennisFixture[] = [
     surface: "Hard",
     tour: "Combined",
     marketHighlights: ["Match Winner", "Set Handicap"],
-    keywords: ["indian wells 2026 odds", "sinner indian wells betting", "tennis betting apps india", "atp masters 1000 picks"]
+    keywords: ["indian wells 2026 odds", "sinner indian wells betting", "tennis betting apps india", "atp masters 1000 picks"],
+    prediction: {
+      winner: "Jannik Sinner",
+      score: "2-0",
+      points: "High",
+      confidence: 80,
+      analysis: "Sinner's aggressive baseline play and improved mental fortitude make him the favorite for the desert title. The slow hard courts at Indian Wells allow him to dictate play with his powerful groundstrokes."
+    }
   },
   {
     slug: "miami-open-2026",
