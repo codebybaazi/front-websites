@@ -165,12 +165,28 @@ function MatchDetailPage() {
                 </div>
                 <div className="grid gap-6 md:grid-cols-2 mt-10">
                   <div className="p-6 rounded-2xl bg-primary/5 border border-primary/10">
-                    <h3 className="text-sm font-black uppercase tracking-widest text-primary mb-3">{m.sport === 'Football' ? 'Tactical Preview' : 'Pitch & Conditions'}</h3>
-                    <p className="text-sm">{m.tacticalPreview || m.pitchReport || (m.sport === 'Football' ? `The technical committee reports that the surface at ${m.venue} is optimal for high-speed transitions, which suits ${m.homeTeam}'s attacking style.` : `Data from ${m.venue} indicates that ${m.homeTeam} has a significantly higher win rate when batting first on this pitch.`)}</p>
+                    <h3 className="text-sm font-black uppercase tracking-widest text-primary mb-3">
+                      {m.sport === 'Football' ? 'Tactical Preview' : m.sport === 'Tennis' ? 'Court Analysis' : 'Pitch & Conditions'}
+                    </h3>
+                    <p className="text-sm">
+                      {m.tacticalPreview || m.pitchReport || (
+                        m.sport === 'Football' ? `The technical committee reports that the surface at ${m.venue} is optimal for high-speed transitions, which suits ${m.homeTeam}'s attacking style.` :
+                        m.sport === 'Tennis' ? `The technical analysis for ${m.venue} indicates that the ${m.surface || 'hard'} court surface favors ${m.homeTeam}'s playing style, particularly their ability to handle low bounces and generate pace.` :
+                        `Data from ${m.venue} indicates that ${m.homeTeam} has a significantly higher win rate when batting first on this pitch.`
+                      )}
+                    </p>
                   </div>
                   <div className="p-6 rounded-2xl bg-accent/5 border border-accent/10">
-                    <h3 className="text-sm font-black uppercase tracking-widest text-accent mb-3">{m.sport === 'Football' ? 'Squad Dynamics' : 'Tactical Strategy'}</h3>
-                    <p className="text-sm">{m.detailedNarrative || m.tacticalPreview || (m.sport === 'Football' ? `${m.awayTeam} is likely to deploy a medium block to soak up pressure before hitting on the counter through their clinical wingers.` : `${m.awayTeam}'s recent success has come from aggressive early plays, forcing opponents onto the defensive quickly.`)}</p>
+                    <h3 className="text-sm font-black uppercase tracking-widest text-accent mb-3">
+                      {m.sport === 'Football' ? 'Squad Dynamics' : m.sport === 'Tennis' ? 'Match Strategy' : 'Tactical Strategy'}
+                    </h3>
+                    <p className="text-sm">
+                      {m.detailedNarrative || m.tacticalPreview || (
+                        m.sport === 'Football' ? `${m.awayTeam} is likely to deploy a medium block to soak up pressure before hitting on the counter through their clinical wingers.` :
+                        m.sport === 'Tennis' ? `${m.awayTeam} will need to focus on their return game to disrupt ${m.homeTeam}'s service rhythm, aiming to force errors during extended rallies.` :
+                        `${m.awayTeam}'s recent success has come from aggressive early plays, forcing opponents onto the defensive quickly.`
+                      )}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -208,7 +224,7 @@ function MatchDetailPage() {
             <div className="rounded-[3rem] border border-primary/30 bg-primary/5 p-12 relative overflow-hidden">
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-[80px]" />
               <h2 className="text-3xl md:text-4xl font-black text-center mb-8">
-                Who will win today's match?
+                {m.sport === 'Tennis' ? "Who will win — and by how many sets?" : "Who will win today's match?"}
               </h2>
               <div className="flex flex-col items-center gap-8">
                 <div className="w-full space-y-4">
@@ -233,13 +249,13 @@ function MatchDetailPage() {
                   <div className="p-6 rounded-2xl bg-background/40 border border-white/5">
                     <h4 className="text-xs font-black uppercase text-primary mb-2 tracking-widest">Winning Momentum</h4>
                     <p className="text-xs text-foreground/60 leading-relaxed">
-                      AI modeling suggests {m.homeTeam} has a slight edge due to their {m.sport === 'Football' ? 'high xG conversion rates' : 'familiarity with venue conditions'} and superior {m.sport === 'Football' ? 'defensive block metrics' : 'net run rate'} in the tournament.
+                      AI modeling suggests {m.homeTeam} has a slight edge due to their {m.sport === 'Football' ? 'high xG conversion rates' : m.sport === 'Tennis' ? 'superior first-serve percentages' : 'familiarity with venue conditions'} and superior {m.sport === 'Football' ? 'defensive block metrics' : m.sport === 'Tennis' ? 'tie-break win record' : 'net run rate'} in the tournament.
                     </p>
                   </div>
                   <div className="p-6 rounded-2xl bg-background/40 border border-white/5">
                     <h4 className="text-xs font-black uppercase text-accent mb-2 tracking-widest">Challenger Outlook</h4>
                     <p className="text-xs text-foreground/60 leading-relaxed">
-                      {m.awayTeam} can flip the odds if they manage to {m.sport === 'Football' ? 'exploit the high-line defense' : 'take early wickets'} during the {m.sport === 'Football' ? 'transition phase' : 'powerplay'}, where {m.homeTeam} has shown tactical vulnerability.
+                      {m.awayTeam} can flip the odds if they manage to {m.sport === 'Football' ? 'exploit the high-line defense' : m.sport === 'Tennis' ? 'break serve early in the sets' : 'take early wickets'} during the {m.sport === 'Football' ? 'transition phase' : m.sport === 'Tennis' ? 'critical set points' : 'powerplay'}, where {m.homeTeam} has shown tactical vulnerability.
                     </p>
                   </div>
                 </div>
@@ -247,7 +263,7 @@ function MatchDetailPage() {
                 <div className="p-8 rounded-2xl bg-background/60 border border-primary/10 italic text-center max-w-2xl">
                   <Lightbulb className="w-6 h-6 text-primary mx-auto mb-4" />
                   <p className="text-lg leading-relaxed">
-                    "{m.predictionInsight || (m.sport === 'Football' ? `Historical head-to-head data suggests that the team scoring first in this fixture has won 78% of encounters. If ${m.homeTeam} secures an early lead, they are statistically poised to take this game.` : `Historical head-to-head data at ${m.venue} shows that the team winning the toss and batting first has won 64% of encounters. If ${m.homeTeam} secures a good start, they are statistically poised to take this game.`)}"
+                    "{m.predictionInsight || (m.sport === 'Football' ? `Historical head-to-head data suggests that the team scoring first in this fixture has won 78% of encounters. If ${m.homeTeam} secures an early lead, they are statistically poised to take this game.` : m.sport === 'Tennis' ? `Match metrics indicate that ${m.homeTeam} has a high probability of covering the -1.5 set handicap if the first serve percentage stays above 68%.` : `Historical head-to-head data at ${m.venue} shows that the team winning the toss and batting first has won 64% of encounters. If ${m.homeTeam} secures a good start, they are statistically poised to take this game.`)}"
                   </p>
                 </div>
               </div>
@@ -262,7 +278,7 @@ function MatchDetailPage() {
                 <div className="p-8 rounded-[2rem] border border-primary/20 bg-primary/5 transition-transform hover:scale-[1.02]">
                   <h4 className="font-black text-primary text-2xl mb-6">{m.homeTeam} Stars</h4>
                   <ul className="space-y-4">
-                    {(m.keyPlayersHome || ["Top Batsman", "Strike Bowler", "Captain"]).map((player: string, i: number) => (
+                    {(m.keyPlayersHome || (m.sport === 'Tennis' ? ["First Serve Accuracy", "Baseline Coverage", "Break Point Conversion"] : ["Top Batsman", "Strike Bowler", "Captain"])).map((player: string, i: number) => (
                       <li key={i} className="flex items-center gap-3">
                         <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
                           <CheckCircle2 className="h-4 w-4" />
@@ -275,7 +291,7 @@ function MatchDetailPage() {
                 <div className="p-8 rounded-[2rem] border border-accent/20 bg-accent/5 transition-transform hover:scale-[1.02]">
                   <h4 className="font-black text-accent text-2xl mb-6">{m.awayTeam} X-Factors</h4>
                   <ul className="space-y-4">
-                    {(m.keyPlayersAway || ["Hard-hitting Opener", "Spin Wizard", "Leading Wicket Taker"]).map((player: string, i: number) => (
+                    {(m.keyPlayersAway || (m.sport === 'Tennis' ? ["Return of Serve", "Net Game Efficiency", "Unforced Error Control"] : ["Hard-hitting Opener", "Spin Wizard", "Leading Wicket Taker"])).map((player: string, i: number) => (
                       <li key={i} className="flex items-center gap-3">
                         <div className="h-8 w-8 rounded-full bg-accent/20 flex items-center justify-center text-accent">
                           <CheckCircle2 className="h-4 w-4" />
