@@ -350,7 +350,7 @@ function Schedule() {
                                   <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap md:text-wrap">
                                     <td className="p-4 text-sm font-medium text-foreground/80">{match.match}</td>
                                     <td className="p-4 font-bold text-foreground">{match.teams}</td>
-                                    <td className="p-4 text-sm text-foreground/60 whitespace-nowrap">{match.date}</td>
+                                    <td className="p-4 text-sm text-foreground/60 md:text-wrap">{match.date}</td>
                                     <td className="p-4 text-sm text-foreground/60 md:text-wrap">{match.venue}</td>
                                     <td className="p-4">
                                       <Link 
