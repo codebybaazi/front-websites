@@ -110,6 +110,7 @@ export function SiteFooter() {
             <li><Link to="/horse-racing" className="hover:text-primary">Horse Racing</Link></li>
             <li><Link to="/casino" className="hover:text-primary">Live Casino</Link></li>
             <li><Link to="/schedule" className="hover:text-primary">2026–27 Match Schedule</Link></li>
+            <li><Link to="/matches" className="hover:text-primary">All Matches & Predictions</Link></li>
             <li><Link to="/indian-card-games" className="hover:text-primary">Indian Card Games</Link></li>
           </ul>
         </div>
