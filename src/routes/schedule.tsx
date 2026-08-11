@@ -470,6 +470,28 @@ function Schedule() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-7xl px-6 py-16 bg-primary/5 rounded-3xl mb-16 border border-primary/10">
+        <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions — 2026 Sports Schedule</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-primary">Where can I find the IPL 2026 full schedule?</h3>
+            <p className="text-foreground/70 leading-relaxed">The IPL 2026 full schedule is updated live on Cricbet99. The tournament is expected to run from March to May 2026, featuring a 74-match format with the final in late May.</p>
+          </div>
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-primary">When is the T20 World Cup 2026 starting?</h3>
+            <p className="text-foreground/70 leading-relaxed">The ICC T20 World Cup 2026 is scheduled to be co-hosted by India and Sri Lanka in October and November 2026, capturing massive search intent for cricket fans worldwide.</p>
+          </div>
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-primary">How to track FIFA World Cup 2026 match timings in IST?</h3>
+            <p className="text-foreground/70 leading-relaxed">Our football tab converts all North American match times to Indian Standard Time (IST), ensuring you never miss a kickoff for the FIFA World Cup 2026 league stage or final.</p>
+          </div>
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-primary">Are tennis tournament dates for 2026 confirmed?</h3>
+            <p className="text-foreground/70 leading-relaxed">Yes, all major Grand Slams—Wimbledon, US Open, and WTA events—are listed in our Tennis calendar with surface details and defending champion insights.</p>
+          </div>
+        </div>
+      </section>
+
       <AiOverview 
         summary={`The 2026 ${activeTab} Cricket Schedule and Sports Calendar is optimized for precision betting. Our AI-driven Intelligence Hub integrates live T20 World Cup 2026 scheduling, IPL fixtures, and tennis/football metrics to provide a 360-degree view of today's match and high-authority betting markets.`}
         highlights={[
