@@ -16,6 +16,7 @@ export interface TennisFixture {
   tour: "ATP" | "WTA" | "Combined";
   marketHighlights: string[];
   keywords: string[];
+  showPlayerMatchup?: boolean;
   prediction?: {
     winner: string;
     score: string;

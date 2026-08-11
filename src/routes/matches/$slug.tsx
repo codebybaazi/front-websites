@@ -98,17 +98,13 @@ function MatchDetailPage() {
               <span className="text-4xl md:text-7xl font-black uppercase tracking-tighter bg-clip-text text-transparent text-center px-4" style={{ backgroundImage: "var(--gradient-gold)" }}>
                 {m.tournament}
               </span>
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-                <div className="flex flex-col items-center gap-2">
+              {m.showPlayerMatchup && m.homeTeam && m.awayTeam && (
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
                   <span className="text-2xl md:text-4xl font-black uppercase tracking-tighter">{m.homeTeam}</span>
+                  <span className="text-lg md:text-xl font-bold bg-primary/20 px-4 py-2 rounded-full border border-primary/30">VS</span>
+                  <span className="text-2xl md:text-4xl font-black uppercase tracking-tighter">{m.awayTeam}</span>
                 </div>
-                <span className="text-lg md:text-xl font-bold bg-primary/20 px-4 py-2 rounded-full border border-primary/30 shadow-[0_0_20px_rgba(212,175,55,0.2)]">VS</span>
-                <div className="flex flex-col items-center gap-2">
-                  <span className="text-2xl md:text-4xl font-black uppercase tracking-tighter">
-                    {m.awayTeam}
-                  </span>
-                </div>
-              </div>
+              )}
             </div>
           ) : (
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
