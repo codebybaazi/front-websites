@@ -588,9 +588,10 @@ function MatchDetailPage() {
 
             {/* Popular Betting Markets */}
             <div className="space-y-10">
-              <h2 className="text-2xl font-black flex items-center gap-3 uppercase tracking-widest">
+              <h2 className="text-2xl font-black flex items-center gap-3 uppercase tracking-widest mb-1">
                 <BarChart3 className="h-6 w-6 text-primary" /> Popular Betting Markets
               </h2>
+              <h3 className="text-[10px] font-black text-primary/40 uppercase tracking-[0.3em] mb-10">High-Volume Exchange Opportunities</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                  {(m.sport === 'Cricket' 
                    ? ["Match Winner", "Total Sixes", "Session Runs", "Fancy Bets", "Top Batsman", "Top Bowler", "Next Wicket", "Over/Under"]
