@@ -83,7 +83,7 @@ function MatchDetailPage() {
     },
     {
       q: `What are the key players for ${m.homeTeam} vs ${m.awayTeam}?`,
-      a: `For ${m.homeTeam}, watch out for ${(m.keyPlayersHome || ['the captain']).join(', ')}. For ${m.awayTeam}, ${(m.keyPlayersAway || ['their top striker']).join(', ')} will be the X-factors to watch.`
+      a: `For ${m.homeTeam}, watch out for ${(m.keyPlayersHome || (m.sport === 'Football' ? ['the striker'] : ['the captain'])).join(', ')}. For ${m.awayTeam}, ${(m.keyPlayersAway || (m.sport === 'Football' ? ['their goalkeeper'] : ['their top striker'])).join(', ')} will be the X-factors to watch.`
     }
   ];
 
@@ -166,11 +166,11 @@ function MatchDetailPage() {
                 <div className="grid gap-6 md:grid-cols-2 mt-10">
                   <div className="p-6 rounded-2xl bg-primary/5 border border-primary/10">
                     <h3 className="text-sm font-black uppercase tracking-widest text-primary mb-3">Pitch & Conditions</h3>
-                    <p className="text-sm">{m.pitchReport || `Data from ${m.venue} indicates that ${m.homeTeam} has a significantly higher win rate when batting first on this pitch.`}</p>
+                    <p className="text-sm">{m.pitchReport || (m.sport === 'Football' ? `The technical committee reports that the surface at ${m.venue} is optimal for high-speed transitions, which suits ${m.homeTeam}'s attacking style.` : `Data from ${m.venue} indicates that ${m.homeTeam} has a significantly higher win rate when batting first on this pitch.`)}</p>
                   </div>
                   <div className="p-6 rounded-2xl bg-accent/5 border border-accent/10">
                     <h3 className="text-sm font-black uppercase tracking-widest text-accent mb-3">Tactical Strategy</h3>
-                    <p className="text-sm">{m.tacticalPreview || `${m.awayTeam}'s recent success has come from aggressive early plays, forcing opponents onto the defensive quickly.`}</p>
+                    <p className="text-sm">{m.tacticalPreview || (m.sport === 'Football' ? `${m.awayTeam} is likely to deploy a medium block to soak up pressure before hitting on the counter through their clinical wingers.` : `${m.awayTeam}'s recent success has come from aggressive early plays, forcing opponents onto the defensive quickly.`)}</p>
                   </div>
                 </div>
               </div>
@@ -344,14 +344,14 @@ function MatchDetailPage() {
                     <div className="p-8 rounded-2xl bg-accent/5 border border-accent/10 flex flex-col items-center justify-center text-center">
                       <span className="text-xs font-black uppercase text-accent mb-2">{m.sport === 'Football' ? 'Correct Scoreline' : 'Estimated 1st Innings Score'}</span>
                       <span className="text-5xl font-black text-white">{m.projectedScoreHome || (m.sport === 'Cricket' ? "175 - 190" : "2 - 1")}</span>
-                      <p className="mt-4 text-xs text-foreground/50 italic">Based on {m.sport === 'Football' ? 'defensive metrics' : 'pitch behavior'} at {m.venue} and {m.homeTeam}'s recent {m.sport === 'Football' ? 'home conversion rates' : 'strike rates'}.</p>
+                      <p className="mt-4 text-xs text-foreground/50 italic">Based on {m.sport === 'Football' ? 'offensive efficiency' : 'pitch behavior'} at {m.venue} and {m.homeTeam}'s recent {m.sport === 'Football' ? 'scoring frequency' : 'strike rates'}.</p>
                     </div>
                    <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
                      <h4 className="text-sm font-black mb-2 flex items-center gap-2">
                        <Globe className="h-4 w-4 text-primary" /> Market Sentiment
                      </h4>
                      <p className="text-xs text-foreground/60">
-                       Cricbet99 traders are currently backing a {m.sport === 'Football' ? 'tactical battle' : 'high-scoring game'}. {m.sport === 'Football' ? 'Handicap markets' : 'Fancy markets for "Total Sixes"'} are seeing significant upward pressure.
+                       Cricbet99 traders are currently backing a {m.sport === 'Football' ? 'tactical stalemate or late winner' : 'high-scoring game'}. {m.sport === 'Football' ? 'Goal line markets' : 'Fancy markets for "Total Sixes"'} are seeing significant upward pressure.
                      </p>
                    </div>
                 </div>
