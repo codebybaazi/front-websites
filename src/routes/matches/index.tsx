@@ -114,7 +114,7 @@ function MatchesPage() {
 
         {/* Matches Grid */}
         {filteredMatches.length > 0 ? (
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {filteredMatches.map((m: MatchFixture) => (
               <Link
                 key={m.slug}
@@ -147,9 +147,9 @@ function MatchesPage() {
 
                   <div className="flex flex-col gap-4">
                     <div className="flex items-center justify-between gap-4">
-                      <span className="text-2xl font-black uppercase tracking-tighter truncate">{m.homeTeam}</span>
-                      <span className="text-[10px] font-bold bg-primary/10 text-primary px-2 py-1 rounded border border-primary/20">VS</span>
-                      <span className="text-2xl font-black uppercase tracking-tighter truncate text-right">{m.awayTeam}</span>
+                      <span className="text-xl sm:text-2xl font-black uppercase tracking-tighter truncate">{m.homeTeam}</span>
+                      <span className="text-[9px] sm:text-[10px] font-bold bg-primary/10 text-primary px-1.5 sm:px-2 py-1 rounded border border-primary/20 shrink-0">VS</span>
+                      <span className="text-xl sm:text-2xl font-black uppercase tracking-tighter truncate text-right">{m.awayTeam}</span>
                     </div>
 
                     <div className="flex items-center gap-2 text-[10px] font-bold text-foreground/40 uppercase tracking-widest mt-2">
@@ -200,7 +200,7 @@ function MatchesPage() {
 
       {/* Analytical Features */}
       <section className="mx-auto max-w-7xl px-6 pb-24">
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-3">
           {[
             {
               icon: BrainCircuit,
