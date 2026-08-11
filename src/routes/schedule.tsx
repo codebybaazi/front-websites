@@ -520,3 +520,5 @@ function Schedule() {
     </SiteLayout>
   );
 }
+
+export default Schedule;
