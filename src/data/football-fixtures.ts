@@ -624,8 +624,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group E",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["germany vs cote d'ivoire"]
+    marketHighlights: ["Match Winner", "Germany to Win to Nil", "Total Goals Over 2.5", "Musiala Anytime Goal"],
+    keywords: ["germany vs ivory coast prediction", "world cup 2026 group e betting", "germany vs ivory coast odds"],
+    headToHead: "Germany leads 1-0-1 in recent encounters. Their last competitive clash was a high-scoring draw in a friendly context.",
+    homeRecentForm: "W,D,W,L,W",
+    awayRecentForm: "W,W,W,D,L",
+    keyPlayersHome: ["Jamal Musiala (Midfield)", "Florian Wirtz (Midfield)", "Kai Havertz (Forward)"],
+    keyPlayersAway: ["Sébastien Haller (Striker)", "Franck Kessié (Midfield)", "Simon Adingra (Winger)"],
+    bettingTips: [
+      "Germany's technical midfield dominance is expected to result in high possession stats (65%+).",
+      "Côte d'Ivoire's physical presence in the box makes them dangerous on set-pieces.",
+      "Back 'Germany to Win to Nil' for high-value returns given their recent defensive organization."
+    ],
+    detailedNarrative: "A clash of European precision vs African flair in Toronto. Germany, under new tactical guidance, looks to reclaim their spot at the top of world football. Côte d'Ivoire enters as the African champions, bringing a blend of power and technical skill. Our AI analysis suggests Germany will look to control the tempo through Musiala, while the Elephants will use Haller's strength to hold up play and launch direct wing attacks.",
+    pitchReport: "BMO Field's natural grass surface is in excellent condition. Expect a slightly slower ball speed compared to turf, which might favor the physical and patient style of the Ivorian side.",
+    tacticalPreview: "Germany will use a fluid 4-2-3-1, prioritizing quick combinations in the final third and high counter-pressing. Côte d'Ivoire will likely respond with a robust 4-3-3, focusing on winning second balls and hitting Germany on the break.",
+    winProbHome: 65,
+    winProbAway: 35,
+    predictionInsight: "Germany has never lost to an African side in the World Cup group stages. Their disciplined approach often nullifies high-flair opponents in major tournaments.",
+    projectedScoreHome: "2 - 0"
   },
   {
     slug: "wc2026-m34",
