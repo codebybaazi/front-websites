@@ -108,8 +108,8 @@ export const tennisFixtures: TennisFixture[] = [
     category: "ATP 250",
     surface: "Hard",
     tour: "ATP",
-    marketHighlights: ["Match Winner", "Correct Score"],
-    keywords: ["adelaide international 2026 betting", "machac adelaide odds", "tennis betting strategy", "atp adelaide picks"]
+    marketHighlights: ["Match Winner", "Correct Score", "Total Games O/U", "Set Betting"],
+    keywords: ["adelaide international 2026 betting", "machac adelaide odds", "tennis betting strategy", "atp adelaide picks", "tennis prediction today", "tennis matches today"]
   },
   {
     slug: "australian-open-2026",
