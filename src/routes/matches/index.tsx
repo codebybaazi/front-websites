@@ -16,19 +16,20 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/matches/")({
   head: () => ({
     meta: [
-      { title: "Live Matches, Betting Odds & IPL 2026 Schedule | Cricbet99" },
-      { name: "description", content: "Track all live cricket, football, and tennis matches on Cricbet99. Get real-time IPL 2026 schedule, AI-driven match analysis, and expert betting tips." },
-      { property: "og:title", content: "Live Match Dashboard & Predictions | Cricbet99" },
-      { property: "og:description", content: "Real-time match index for cricket, football, and tennis. AI predictions, live exchange odds, and instant WhatsApp betting IDs." },
+      { title: "Live Matches, Betting Odds & Schedule 2026 | Cricbet99" },
+      { name: "description", content: "Get real-time match updates, expert betting predictions, and live exchange odds for Cricket, Football, and Tennis. Access your Cricbet99 ID for the best sports betting experience." },
+      { property: "og:title", content: "Live Match Dashboard & Predictions 2026 | Cricbet99" },
+      { property: "og:description", content: "Explore real-time match analysis for IPL 2026, World Cup Football, and WTA Tennis. Get AI-driven insights and premium betting IDs instantly." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://cricbet99.co.in/matches" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "keywords", content: "cricbet99 matches, live cricket betting, football match predictions, tennis betting tips, IPL 2026 schedule, sports exchange odds" },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/matches" }],
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/matches", "All Matches")),
+        children: JSON.stringify(buildBreadcrumbJsonLd("/matches", "Live Matches")),
       },
     ],
   }),
@@ -67,7 +68,7 @@ function MatchesPage() {
       <section className="mx-auto max-w-7xl px-6 pb-24 relative z-10 -mt-12">
         {/* Premium Filter & Search Bar */}
         <div className="rounded-[2.5rem] border border-primary/30 bg-background/80 backdrop-blur-xl p-8 shadow-[0_20px_50px_rgba(0,0,0,0.5),0_0_20px_rgba(212,175,55,0.1)] mb-12">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-center">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-center overflow-hidden">
             {/* Search */}
             <div className="relative group">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-primary/40 group-focus-within:text-primary transition-colors" />
@@ -80,7 +81,7 @@ function MatchesPage() {
             </div>
 
             {/* Category Filter */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 justify-center md:justify-start">
               {categories.map((cat) => (
                 <button
                   key={cat}
@@ -113,7 +114,7 @@ function MatchesPage() {
 
         {/* Matches Grid */}
         {filteredMatches.length > 0 ? (
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {filteredMatches.map((m: MatchFixture) => (
               <Link
                 key={m.slug}
@@ -146,9 +147,9 @@ function MatchesPage() {
 
                   <div className="flex flex-col gap-4">
                     <div className="flex items-center justify-between gap-4">
-                      <span className="text-2xl font-black uppercase tracking-tighter truncate">{m.homeTeam}</span>
-                      <span className="text-[10px] font-bold bg-primary/10 text-primary px-2 py-1 rounded border border-primary/20">VS</span>
-                      <span className="text-2xl font-black uppercase tracking-tighter truncate text-right">{m.awayTeam}</span>
+                      <span className="text-xl sm:text-2xl font-black uppercase tracking-tighter truncate">{m.homeTeam}</span>
+                      <span className="text-[9px] sm:text-[10px] font-bold bg-primary/10 text-primary px-1.5 sm:px-2 py-1 rounded border border-primary/20 shrink-0">VS</span>
+                      <span className="text-xl sm:text-2xl font-black uppercase tracking-tighter truncate text-right">{m.awayTeam}</span>
                     </div>
 
                     <div className="flex items-center gap-2 text-[10px] font-bold text-foreground/40 uppercase tracking-widest mt-2">
@@ -199,7 +200,7 @@ function MatchesPage() {
 
       {/* Analytical Features */}
       <section className="mx-auto max-w-7xl px-6 pb-24">
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-3">
           {[
             {
               icon: BrainCircuit,
