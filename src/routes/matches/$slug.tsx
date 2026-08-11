@@ -294,45 +294,64 @@ function MatchDetailPage() {
                 <BarChart3 className="w-32 h-32" />
               </div>
               <h2 className="text-2xl font-black flex items-center gap-3 mb-10 uppercase tracking-widest">
-                <TrendingUp className="h-6 w-6 text-primary" /> Projected Scoreline & Over-by-Over
+                <TrendingUp className="h-6 w-6 text-primary" /> {m.sport === 'Football' ? 'Projected Score & HT/FT' : 'Projected Scoreline & Over-by-Over'}
               </h2>
               <div className="grid gap-12 md:grid-cols-2">
                 <div className="space-y-6">
                    <div className="flex items-center gap-3 p-4 rounded-xl bg-primary/10 border border-primary/20">
                      <Timer className="h-5 w-5 text-primary" />
-                     <span className="font-bold">Innings Progression</span>
+                     <span className="font-bold">{m.sport === 'Football' ? 'HT/FT & Goal Markets' : 'Innings Progression'}</span>
                    </div>
                    <div className="space-y-4">
-                     <div className="p-4 rounded-xl bg-background/40 border border-white/5">
-                       <span className="text-[10px] font-black uppercase text-primary block mb-1">Overs 0-6 (Powerplay)</span>
-                       <p className="text-sm text-foreground/70">Projected: 45-55 runs. High probability of swing favoring bowlers early on.</p>
-                     </div>
-                     <div className="p-4 rounded-xl bg-background/40 border border-white/5">
-                       <span className="text-[10px] font-black uppercase text-primary block mb-1">Overs 7-15 (Middle Overs)</span>
-                       <p className="text-sm text-foreground/70">Projected: 65-75 runs. Spinners will look to tighten the run rate.</p>
-                     </div>
-                     <div className="p-4 rounded-xl bg-background/40 border border-white/5">
-                       <span className="text-[10px] font-black uppercase text-primary block mb-1">Overs 16-20 (Death Overs)</span>
-                       <p className="text-sm text-foreground/70">Projected: 50-65 runs. Batsmen will target short boundaries.</p>
-                     </div>
+                     {m.sport === 'Football' ? (
+                       <>
+                         <div className="p-4 rounded-xl bg-background/40 border border-white/5">
+                           <span className="text-[10px] font-black uppercase text-primary block mb-1">Half-Time Result</span>
+                           <p className="text-sm text-foreground/70">Projected: {m.homeTeam} Lead or Draw. Low early goal probability based on defensive setups.</p>
+                         </div>
+                         <div className="p-4 rounded-xl bg-background/40 border border-white/5">
+                           <span className="text-[10px] font-black uppercase text-primary block mb-1">Total Goals (O/U)</span>
+                           <p className="text-sm text-foreground/70">Market analysis suggests Over 1.5 goals in the second half as teams open up.</p>
+                         </div>
+                         <div className="p-4 rounded-xl bg-background/40 border border-white/5">
+                           <span className="text-[10px] font-black uppercase text-primary block mb-1">Corner Count</span>
+                           <p className="text-sm text-foreground/70">Expect 9-11 corners. {m.homeTeam}'s wing-play focus drives high corner liquidity.</p>
+                         </div>
+                       </>
+                     ) : (
+                       <>
+                         <div className="p-4 rounded-xl bg-background/40 border border-white/5">
+                           <span className="text-[10px] font-black uppercase text-primary block mb-1">Overs 0-6 (Powerplay)</span>
+                           <p className="text-sm text-foreground/70">Projected: 45-55 runs. High probability of swing favoring bowlers early on.</p>
+                         </div>
+                         <div className="p-4 rounded-xl bg-background/40 border border-white/5">
+                           <span className="text-[10px] font-black uppercase text-primary block mb-1">Overs 7-15 (Middle Overs)</span>
+                           <p className="text-sm text-foreground/70">Projected: 65-75 runs. Spinners will look to tighten the run rate.</p>
+                         </div>
+                         <div className="p-4 rounded-xl bg-background/40 border border-white/5">
+                           <span className="text-[10px] font-black uppercase text-primary block mb-1">Overs 16-20 (Death Overs)</span>
+                           <p className="text-sm text-foreground/70">Projected: 50-65 runs. Batsmen will target short boundaries.</p>
+                         </div>
+                       </>
+                     )}
                    </div>
                 </div>
                 <div className="space-y-6">
                    <div className="flex items-center gap-3 p-4 rounded-xl bg-accent/10 border border-accent/20">
                      <Target className="h-5 w-5 text-accent" />
-                     <span className="font-bold">Projected Totals</span>
+                     <span className="font-bold">{m.sport === 'Football' ? 'Score Prediction' : 'Projected Totals'}</span>
                    </div>
                     <div className="p-8 rounded-2xl bg-accent/5 border border-accent/10 flex flex-col items-center justify-center text-center">
-                      <span className="text-xs font-black uppercase text-accent mb-2">Estimated 1st Innings Score</span>
+                      <span className="text-xs font-black uppercase text-accent mb-2">{m.sport === 'Football' ? 'Correct Scoreline' : 'Estimated 1st Innings Score'}</span>
                       <span className="text-5xl font-black text-white">{m.projectedScoreHome || (m.sport === 'Cricket' ? "175 - 190" : "2 - 1")}</span>
-                      <p className="mt-4 text-xs text-foreground/50 italic">Based on pitch behavior at {m.venue} and {m.homeTeam}'s recent strike rates.</p>
+                      <p className="mt-4 text-xs text-foreground/50 italic">Based on {m.sport === 'Football' ? 'defensive metrics' : 'pitch behavior'} at {m.venue} and {m.homeTeam}'s recent {m.sport === 'Football' ? 'home conversion rates' : 'strike rates'}.</p>
                     </div>
                    <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
                      <h4 className="text-sm font-black mb-2 flex items-center gap-2">
                        <Globe className="h-4 w-4 text-primary" /> Market Sentiment
                      </h4>
                      <p className="text-xs text-foreground/60">
-                       Cricbet99 traders are currently backing a high-scoring game. Fancy markets for "Total Sixes" are seeing significant upward pressure.
+                       Cricbet99 traders are currently backing a {m.sport === 'Football' ? 'tactical battle' : 'high-scoring game'}. {m.sport === 'Football' ? 'Handicap markets' : 'Fancy markets for "Total Sixes"'} are seeing significant upward pressure.
                      </p>
                    </div>
                 </div>

@@ -76,7 +76,21 @@ const transformedFootball: MatchFixture[] = footballFixtures.map(f => ({
   startDate: f.startDate,
   status: f.status,
   marketHighlights: f.marketHighlights,
-  keywords: f.keywords
+  keywords: f.keywords,
+  headToHead: f.headToHead,
+  homeRecentForm: f.homeRecentForm,
+  awayRecentForm: f.awayRecentForm,
+  keyPlayersHome: f.keyPlayersHome,
+  keyPlayersAway: f.keyPlayersAway,
+  bettingTips: f.bettingTips,
+  detailedNarrative: f.detailedNarrative,
+  pitchReport: f.pitchReport,
+  tacticalPreview: f.tacticalPreview,
+  winProbHome: f.winProbHome,
+  winProbAway: f.winProbAway,
+  predictionInsight: f.predictionInsight,
+  projectedScoreHome: f.projectedScoreHome,
+  projectedScoreAway: f.projectedScoreAway,
 }));
 
 // Transform tennis fixtures
