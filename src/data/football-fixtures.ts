@@ -572,8 +572,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group I",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["france vs senegal"]
+    marketHighlights: ["Match Winner", "Total Goals Over 2.5", "Kylian Mbappé Anytime Goal", "Senegal Over 3.5 Cards"],
+    keywords: ["france vs senegal prediction", "metlife stadium world cup betting", "les bleus vs lions of teranga"],
+    headToHead: "Senegal famously upset France 1-0 in the 2002 World Cup opening match. France will be determined to avoid a repeat in New York.",
+    homeRecentForm: "W,W,W,L,W",
+    awayRecentForm: "W,D,W,W,L",
+    keyPlayersHome: ["Kylian Mbappé (Forward)", "Antoine Griezmann (Midfield)", "Aurélien Tchouaméni (Midfield)"],
+    keyPlayersAway: ["Sadio Mané (Forward)", "Kalidou Koulibaly (Defender)", "Nicolas Jackson (Striker)"],
+    bettingTips: [
+      "Mbappé's speed against a physical Senegal defense is the primary tactical battle.",
+      "Senegal's physicality in midfield is a major factor in the 'Over Cards' market.",
+      "Back 'France to Win and Over 2.5 Goals' for premium value."
+    ],
+    detailedNarrative: "A clash of champions at MetLife Stadium. France looks to exert their authority against a powerful Senegal side. The tactical focus will be on France's creative midfield vs Senegal's defensive organization led by Koulibaly. Our AI models predict a high-quality encounter with Mbappé expected to be the difference-maker.",
+    pitchReport: "MetLife Stadium features a top-tier hybrid surface. The mild weather will favor the high-tempo passing game of both sides.",
+    tacticalPreview: "France will use a fluid 4-2-3-1, prioritizing creative freedom for Mbappé and Griezmann. Senegal is expected to set up in a robust 4-3-3, focusing on winning second balls and hitting France on the break.",
+    winProbHome: 70,
+    winProbAway: 30,
+    predictionInsight: "France has never lost consecutive competitive games to African nations. Their depth and technical quality give them a significant edge.",
+    projectedScoreHome: "3 - 1"
   },
   {
     slug: "wc2026-m18",
@@ -588,8 +605,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group I",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["iraq vs norway"]
+    marketHighlights: ["Match Winner", "Erling Haaland Anytime Goal", "Total Goals Over 2.5", "Norway Clean Sheet - No"],
+    keywords: ["iraq vs norway prediction", "gillette stadium world cup odds", "haaland world cup betting"],
+    headToHead: "First competitive meeting. The physical duel between Erling Haaland and Iraq's defensive unit will be the central theme.",
+    homeRecentForm: "W,W,D,L,W",
+    awayRecentForm: "W,L,W,W,D",
+    keyPlayersHome: ["Aymen Hussein (Striker)", "Zidane Iqbal (Midfield)", "Jalal Hassan (Goalkeeper)"],
+    keyPlayersAway: ["Erling Haaland (Striker)", "Martin Ødegaard (Midfield)", "Oscar Bobb (Winger)"],
+    bettingTips: [
+      "Erling Haaland's presence makes 'Norway Total Goals Over 1.5' a high-confidence play.",
+      "Iraq's technical quality in midfield, led by Iqbal, could cause problems in transition.",
+      "Back 'Haaland First Goalscorer' for high-yield returns."
+    ],
+    detailedNarrative: "A fascinating clash in Boston. Iraq looks to stifle the world's most potent striker, Erling Haaland, and his creative partner Martin Ødegaard. Iraq's passionate fans in the US will create a hostile atmosphere. Our AI analysis suggests Norway will dominate possession, but Iraq's counter-attacking threat is statistically significant.",
+    pitchReport: "Gillette Stadium features a hybrid surface. The Boston weather is expected to be cool, favoring the high-energy running game of both teams.",
+    tacticalPreview: "Norway will deploy a 4-3-3 with Ødegaard dictating play. Iraq is expected to respond with a compact 5-4-1, focusing on doubling up on Haaland and hitting Norway on the break through Hussein.",
+    winProbHome: 15,
+    winProbAway: 85,
+    predictionInsight: "Erling Haaland has a high scoring rate against teams ranked outside the top 50. The technical and physical gap is significant.",
+    projectedScoreHome: "1 - 3"
   },
   {
     slug: "wc2026-m19",
