@@ -2818,8 +2818,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["switzerland vs algeria r32"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Breel Embolo Anytime Goal", "Total Goals Under 2.5"],
+    keywords: ["switzerland vs algeria prediction", "r32 world cup betting", "rossocrociati vs fennecs betting"],
+    headToHead: "First competitive meeting. Switzerland's technical precision vs Algeria's flair and high-intensity energy.",
+    homeRecentForm: "W,D,W,D,W",
+    awayRecentForm: "W,D,W,L,D",
+    keyPlayersHome: ["Granit Xhaka (Midfield)", "Manuel Akanji (Defender)", "Breel Embolo (Forward)"],
+    keyPlayersAway: ["Riyad Mahrez (Winger)", "Said Benrahma (Winger)", "Ismaël Bennacer (Midfield)"],
+    bettingTips: [
+      "Granit Xhaka's creative leadership is the primary engine for the Swiss midfield.",
+      "Algeria's Riyad Mahrez is a clinical finisher on the break; back 'Algeria to Score Anytime'.",
+      "Back 'Total Goals Under 2.5' as both sides are expected to prioritize defensive shape in a knockout."
+    ],
+    detailedNarrative: "A clash of tactical discipline in Vancouver. The technical precision of Switzerland faces the flair of Algeria. Xhaka's creative genius will be tested by Algeria's disciplined mid-block and energy. Our AI match overview predicts a high-quality encounter where a single moment of magic could decide it at BC Place.",
+    pitchReport: "BC Place features a fast synthetic surface. This will suit the rapid ball-movement favored by the Swiss midfield.",
+    tacticalPreview: "Switzerland will deploy their fluid 3-4-2-1. Algeria is expected to respond with a compact 4-3-3, focusing on wide counters through Mahrez.",
+    winProbHome: 58,
+    winProbAway: 42,
+    predictionInsight: "Switzerland has a strong record in opening knockout matches against non-European opposition. Their technical organization is a major advantage.",
+    projectedScoreHome: "1 - 1"
   },
   {
     slug: "wc2026-r32-14",
@@ -2834,8 +2851,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["argentina vs cabo verde r32"]
+    marketHighlights: ["To qualify", "Argentina to Win", "Lionel Messi Anytime Goal", "Total Goals Over 3.5"],
+    keywords: ["argentina vs cabo verde prediction", "r32 world cup betting", "messi vs cabo verde odds"],
+    headToHead: "First competitive meeting. The world champions face the rising flair of Cabo Verde.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "W,L,D,W,L",
+    keyPlayersHome: ["Lionel Messi (Forward)", "Julián Álvarez (Striker)", "Alexis Mac Allister (Midfield)"],
+    keyPlayersAway: ["Ryan Mendes (Forward)", "Bebé (Striker)", "Logan Costa (Defender)"],
+    bettingTips: [
+      "Lionel Messi's scoring record in knockout stages is unparalleled; back him for anytime scorer.",
+      "Cabo Verde's Ryan Mendes is a potent threat on the counter.",
+      "Back 'Argentina to Win and Over 2.5 Goals' given the significant quality differential."
+    ],
+    detailedNarrative: "The world champions look to exert their authority in Miami against a resilient Cabo Verde side. Lionel Messi's creative genius will be the focal point against a defense led by Costa. Our AI models predict a masterclass in control from the Albiceleste. Expect a vibrant atmosphere at Hard Rock Stadium.",
+    pitchReport: "Hard Rock Stadium features a top-tier grass surface. The warm Miami weather will suit the high-energy running game favored by Argentina.",
+    tacticalPreview: "Argentina will deploy their fluid 4-3-3. Cabo Verde is expected to respond with a compact 5-4-1, prioritizing spatial compression.",
+    winProbHome: 92,
+    winProbAway: 8,
+    predictionInsight: "Argentina has a 100% win rate against African nations in recent World Cups. Their individual brilliance and experience provide a significant edge.",
+    projectedScoreHome: "4 - 0"
   },
   {
     slug: "wc2026-r32-15",
@@ -2850,8 +2884,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["colombia vs ghana r32"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Luis Díaz Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["colombia vs ghana prediction", "r32 world cup odds", "los cafeteros vs black stars betting"],
+    headToHead: "First competitive meeting. Colombia's high-intensity pressing vs Ghana's vertical pace and physical intensity.",
+    homeRecentForm: "W,W,D,W,W",
+    awayRecentForm: "W,L,W,D,W",
+    keyPlayersHome: ["Luis Díaz (Winger)", "James Rodríguez (Midfield)", "Luis Sinisterra (Winger)"],
+    keyPlayersAway: ["Mohammed Kudus (Midfield)", "Iñaki Williams (Forward)", "Jordan Ayew (Striker)"],
+    bettingTips: [
+      "Luis Díaz's explosive pace is the primary market variable to watch.",
+      "Ghana's Mohammed Kudus is a clinical finisher on the break; back him for 1+ shots on target.",
+      "Back 'Both Teams to Score' given the elite attacking quality and high-intensity style of both sides."
+    ],
+    detailedNarrative: "A clash of styles in Kansas City. The technical flair of Colombia faces the physical power of Ghana. James Rodríguez's creative genius will be tested by Kudus's offensive energy. Our AI match overview predicts a high-scoring encounter where individual brilliance could decide it at Arrowhead Stadium.",
+    pitchReport: "Arrowhead Stadium features a top-tier grass surface. The warm Kansas City environment will favor the high-energy running game favored by both sides.",
+    tacticalPreview: "Colombia will deploy their fluid 4-2-3-1. Ghana is expected to respond with a robust 4-4-2, focusing on winning second balls and quick transitions.",
+    winProbHome: 60,
+    winProbAway: 40,
+    predictionInsight: "Colombia has a strong record in early knockout stages against non-European opposition. Their tactical organization provides a significant edge.",
+    projectedScoreHome: "2 - 1"
   },
   {
     slug: "wc2026-r32-16",
@@ -2866,8 +2917,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 32",
     category: "Round of 32",
-    marketHighlights: ["To qualify"],
-    keywords: ["australia vs egypt r32"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Mohamed Salah Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["australia vs egypt prediction", "r32 world cup betting", "socceroos vs pharaohs betting"],
+    headToHead: "First competitive meeting. Australia's physical set-piece dominance vs Egypt's technical flair and Salah's clinical brilliance.",
+    homeRecentForm: "W,W,L,D,W",
+    awayRecentForm: "W,D,W,W,D",
+    keyPlayersHome: ["Harry Souttar (Defender)", "Jackson Irvine (Midfield)", "Craig Goodwin (Winger)"],
+    keyPlayersAway: ["Mohamed Salah (Forward)", "Mostafa Mohamed (Striker)", "Omar Marmoush (Forward)"],
+    bettingTips: [
+      "Mohamed Salah's individual brilliance is the primary route to breaking the Australian block.",
+      "Australia's Harry Souttar is a major aerial threat; monitor 'Australia Total Corners Over 5.5'.",
+      "Back 'Both Teams to Score' as both sides have elite attacking quality and tactical flexibility."
+    ],
+    detailedNarrative: "A clash of tactical philosophies in Dallas. The physical set-piece dominance of Australia faces the technical flair of Egypt's golden generation. Mohamed Salah's individual brilliance will be tested by the clinical organization of the Socceroos. Our AI match overview predicts a high-intensity encounter at AT&T Stadium.",
+    pitchReport: "AT&T Stadium features a fast-paced synthetic surface. This will suit the rapid transitions favored by both Salah and Goodwin.",
+    tacticalPreview: "Australia will deploy their robust 4-4-2. Egypt is expected to respond with an aggressive 4-3-3, prioritizing Salah's freedom on the right.",
+    winProbHome: 45,
+    winProbAway: 55,
+    predictionInsight: "Egypt has a strong record in knockout tournaments. However, Australia's physical profile makes this a high-variance fixture.",
+    projectedScoreHome: "1 - 2"
   },
 
 
