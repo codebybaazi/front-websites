@@ -119,7 +119,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersAway: ["Edin Džeko (Striker)", "Miralem Pjanić (Midfield)", "Sead Kolašinac (Defender)"],
     bettingTips: [
       "Canada's home crowd at BMO Field provides a +0.5 goal tactical xG superiority.",
-      "Edin Džeko remains a potent threat in the air; monitor 'dominance in 'Total Corners' and 'Aerial Duel' markets' markets.",
+      "Edin Džeko remains a potent threat in the air; monitor dominance in 'Total Corners' and 'Aerial Duel' markets.",
       "Canada's high-line defense could be vulnerable to Džeko's intelligent movement."
     ],
     detailedNarrative: "Canada makes their home debut in the 2026 World Cup at a sold-out BMO Field. The pace of Alphonso Davies will be the primary weapon against a veteran Bosnian defense. Our AI models indicate Canada will push for an early goal to leverage the home atmosphere. Bosnia will rely on Džeko's hold-up play to release their technical midfielders into the half-spaces.",
