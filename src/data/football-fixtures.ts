@@ -13,6 +13,20 @@ export interface FootballFixture {
   category: "Group Stage" | "Round of 32" | "Round of 16" | "Quarter-finals" | "Semi-finals" | "Final";
   marketHighlights: string[];
   keywords: string[];
+  headToHead?: string;
+  homeRecentForm?: string;
+  awayRecentForm?: string;
+  keyPlayersHome?: string[];
+  keyPlayersAway?: string[];
+  bettingTips?: string[];
+  detailedNarrative?: string;
+  pitchReport?: string;
+  tacticalPreview?: string;
+  winProbHome?: number;
+  winProbAway?: number;
+  predictionInsight?: string;
+  projectedScoreHome?: string;
+  projectedScoreAway?: string;
 }
 
 export const footballFixtures: FootballFixture[] = [
