@@ -1006,7 +1006,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
             <span className="inline-flex items-center gap-2 rounded-full border border-accent/50 bg-accent/10 px-3.5 py-1 text-[10px] font-black uppercase tracking-[0.28em] text-accent">
               <Gamepad2 className="h-3 w-3" /> Player Favourites
             </span>
-            <h2 className="mt-4 text-3xl font-black leading-[1.1] tracking-tight md:text-5xl">
+            <h2 className="mt-4 text-3xl font-black leading-[1.1] tracking-tight md:text-5xl uppercase tracking-tighter">
               <span className="text-foreground/90">Popular </span>
               <span
                 className="bg-clip-text text-transparent"
@@ -1016,6 +1016,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               </span>
               <span className="text-foreground/90"> on Cricbet99</span>
             </h2>
+            <h3 className="mt-2 text-xs font-black text-accent/60 uppercase tracking-[0.4em]">High-RTP Exchange Tables & Live Dealers</h3>
             <p className="mt-3 max-w-xl text-sm text-foreground/70 md:text-base">
               Six all-time hits played daily by our members — smooth gameplay, fair odds and instant payouts on every table.
             </p>
