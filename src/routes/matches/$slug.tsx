@@ -375,7 +375,7 @@ function MatchDetailPage() {
                     <div className="p-8 rounded-2xl bg-accent/5 border border-accent/10 flex flex-col items-center justify-center text-center">
                       <span className="text-xs font-black uppercase text-accent mb-2">{m.sport === 'Football' ? 'Correct Scoreline' : m.sport === 'Tennis' ? 'Correct Set Score' : 'Estimated 1st Innings Score'}</span>
                       <span className="text-5xl font-black text-white">{m.projectedScoreHome || (m.sport === 'Cricket' ? "175 - 190" : m.sport === 'Tennis' ? "2 - 0" : "2 - 1")}</span>
-                      <p className="mt-4 text-xs text-foreground/50 italic">Based on {m.sport === 'Football' ? 'offensive efficiency' : 'pitch behavior'} at {m.venue} and {m.homeTeam}'s recent {m.sport === 'Football' ? 'scoring frequency' : 'strike rates'}.</p>
+                      <p className="mt-4 text-xs text-foreground/50 italic">Based on {m.sport === 'Football' ? 'offensive efficiency' : m.sport === 'Tennis' ? 'service dominance' : 'pitch behavior'} at {m.venue} and {m.homeTeam}'s recent {m.sport === 'Football' ? 'scoring frequency' : m.sport === 'Tennis' ? 'set-winning streak' : 'strike rates'}.</p>
                     </div>
                    <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
                      <h4 className="text-sm font-black mb-2 flex items-center gap-2">
