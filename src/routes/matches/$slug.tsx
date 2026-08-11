@@ -138,7 +138,7 @@ function MatchDetailPage() {
             </div>
           )
         }
-        subtitle={m.sport === 'Tennis' ? "" : `Live AI Analysis, Pitch Reports, Head-to-Head Stats, and Professional Betting Tips for the ${m.tournament} Clash.`}
+        subtitle={m.sport === 'Tennis' ? undefined : `Live AI Analysis, Pitch Reports, Head-to-Head Stats, and Professional Betting Tips for the ${m.tournament} Clash.`}
       />
 
       <section className="mx-auto max-w-7xl px-6 pb-24">

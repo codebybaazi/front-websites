@@ -198,7 +198,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
 
 
-export function PageHero({ eyebrow, title, subtitle, wide = false }: { eyebrow: string; title: ReactNode; subtitle: string; wide?: boolean }) {
+export function PageHero({ eyebrow, title, subtitle, wide = false }: { eyebrow: string; title: ReactNode; subtitle?: string; wide?: boolean }) {
   return (
     <section className={`mx-auto px-4 pt-8 pb-8 sm:px-6 sm:pt-14 sm:pb-12 lg:pt-28 ${wide ? 'max-w-none' : 'max-w-7xl'}`}>
       <div className={wide ? 'mx-auto px-4 sm:px-6 lg:px-12 w-full' : ''}>
@@ -208,7 +208,7 @@ export function PageHero({ eyebrow, title, subtitle, wide = false }: { eyebrow: 
         <h1 className={`mt-4 font-black leading-[1.08] tracking-tight sm:mt-6 sm:text-4xl md:text-5xl lg:text-6xl ${wide ? 'w-full text-4xl' : 'max-w-4xl text-3xl'}`}>
           {title}
         </h1>
-        <p className={`mt-4 text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-lg ${wide ? 'w-full max-w-4xl' : 'max-w-2xl'}`}>{subtitle}</p>
+        {subtitle && <p className={`mt-4 text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-lg ${wide ? 'w-full max-w-4xl' : 'max-w-2xl'}`}>{subtitle}</p>}
       </div>
     </section>
   );
