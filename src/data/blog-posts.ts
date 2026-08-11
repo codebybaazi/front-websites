@@ -3942,6 +3942,6 @@ export const blogPosts: BlogPost[] = [
 
 blogPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-export function getPostBySlug( "author": "Cricbet99 Editorial", "tag": "Insights", slug: string): BlogPost | undefined {
+export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
 }
