@@ -2024,8 +2024,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group I",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["norway vs france"]
+    marketHighlights: ["Match Winner", "Kylian Mbappé Anytime Goal", "Both Teams to Score", "Total Goals Over 2.5"],
+    keywords: ["norway vs france prediction", "boston world cup odds", "haaland vs mbappe betting"],
+    headToHead: "First competitive meeting. The showdown between Erling Haaland and Kylian Mbappé—the world's most lethal strikers.",
+    homeRecentForm: "W,L,W,W,D",
+    awayRecentForm: "W,W,W,W,D",
+    keyPlayersHome: ["Erling Haaland (Striker)", "Martin Ødegaard (Midfield)", "Oscar Bobb (Forward)"],
+    keyPlayersAway: ["Kylian Mbappé (Forward)", "Antoine Griezmann (Midfield)", "Aurélien Tchouaméni (Midfield)"],
+    bettingTips: [
+      "Kylian Mbappé's scoring record in tournaments is elite; back him for anytime scorer.",
+      "Erling Haaland will be the primary target for Ødegaard's through-balls; monitor 'Norway Total Shots Over 10.5'.",
+      "Back 'Both Teams to Score' given the generational talent present in both attacks."
+    ],
+    detailedNarrative: "A generational clash in Boston. The technical mastery of France faces the raw power of Norway's Haaland-led attack. Mbappé's individual brilliance will be the primary threat, while Martin Ødegaard will look to orchestrate the Norwegian transitions. Our AI match overview predicts a high-quality encounter with plenty of offensive action.",
+    pitchReport: "Gillette Stadium features a fast-paced synthetic surface. This will suit the rapid transitions favored by both Mbappé and Haaland.",
+    tacticalPreview: "France will deploy their fluid 4-2-3-1, prioritizing creative freedom for Griezmann. Norway is expected to respond with a robust 4-3-3, focusing on feed- Haaland in the central channel.",
+    winProbHome: 35,
+    winProbAway: 65,
+    predictionInsight: "France has a strong record in tournament openers. Their depth and experience at the highest level provide a significant edge.",
+    projectedScoreHome: "1 - 3"
   },
   {
     slug: "wc2026-m62",
@@ -2040,8 +2057,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group I",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["senegal vs iraq"]
+    marketHighlights: ["Match Winner", "Senegal to Win", "Total Goals Over 2.5", "Nicolas Jackson Anytime Goal"],
+    keywords: ["senegal vs iraq prediction", "toronto world cup odds", "lions of teranga vs iraq betting"],
+    headToHead: "First competitive meeting. Senegal's physical intensity and technical depth vs Iraq's defensive resilience and discipline.",
+    homeRecentForm: "W,W,D,W,W",
+    awayRecentForm: "L,W,D,L,W",
+    keyPlayersHome: ["Nicolas Jackson (Striker)", "Sadio Mané (Forward)", "Kalidou Koulibaly (Defender)"],
+    keyPlayersAway: ["Aymen Hussein (Striker)", "Ali Jasim (Forward)", "Jalal Hassan (Goalkeeper)"],
+    bettingTips: [
+      "Nicolas Jackson's physicality in the box is a major tactical asset for Senegal.",
+      "Iraq's Aymen Hussein remains a potent threat on the counter.",
+      "Back 'Senegal to Win' given their overall squad quality and physical profile."
+    ],
+    detailedNarrative: "A battle for dominance in Toronto. Senegal's Lions of Teranga look to assert their authority against a disciplined Iraq side. Sadio Mané's creative leadership will be the focal point against an Iraqi defense led by Jasim. Our AI models predict a dominant performance from the West Africans.",
+    pitchReport: "BMO Field features a fast-paced grass surface. The temperate Toronto weather will suit the high-energy passing game favored by Senegal.",
+    tacticalPreview: "Senegal will deploy a robust 4-3-3, prioritizing physical presence in the midfield. Iraq is expected to respond with a compact 5-4-1, focusing on neutralizing the wings.",
+    winProbHome: 75,
+    winProbAway: 25,
+    predictionInsight: "Senegal has a high win rate against non-European opposition in neutral venues. Their technical and physical organization is a major data point.",
+    projectedScoreHome: "2 - 0"
   },
   {
     slug: "wc2026-m63",
@@ -2056,8 +2090,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group G",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["egypt vs iran"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Mohamed Salah Anytime Goal", "Total Goals Under 2.5"],
+    keywords: ["egypt vs iran prediction", "seattle world cup odds", "pharaohs vs team melli betting"],
+    headToHead: "First competitive meeting. Egypt's technical flair vs Iran's legendary defensive organization.",
+    homeRecentForm: "W,D,W,W,D",
+    awayRecentForm: "W,D,W,W,L",
+    keyPlayersHome: ["Mohamed Salah (Forward)", "Mostafa Mohamed (Striker)", "Omar Marmoush (Forward)"],
+    keyPlayersAway: ["Mehdi Taremi (Striker)", "Sardar Azmoun (Forward)", "Alireza Beiranvand (Goalkeeper)"],
+    bettingTips: [
+      "Mohamed Salah's individual brilliance is the primary market variable to watch.",
+      "Iran's defensive discipline under pressure makes 'Under 2.5 Goals' a strong play.",
+      "Back 'Both Teams to Score' as both sides have elite attacking options."
+    ],
+    detailedNarrative: "A clash of tactical philosophies in Seattle. Egypt's Pharaohs, led by Mohamed Salah, take on the defensive block of Iran. Salah's individual brilliance will be tested by the clinical organization of Team Melli. Our AI match overview predicts a high-intensity encounter where a single moment of magic could decide it.",
+    pitchReport: "Lumen Field features a fast-paced synthetic surface. This will suit the rapid transitions favored by Mohamed Salah and Mehdi Taremi.",
+    tacticalPreview: "Egypt will deploy their fluid 4-3-3, prioritizing Salah's freedom. Iran is expected to respond with a compact 4-4-2, focusing on defensive solidity and quick counters.",
+    winProbHome: 55,
+    winProbAway: 45,
+    predictionInsight: "Egypt has a strong record against non-European opposition in neutral venues. The quality differential in the final third is the primary data point.",
+    projectedScoreHome: "1 - 1"
   },
   {
     slug: "wc2026-m64",
