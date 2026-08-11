@@ -130,7 +130,7 @@ function Casino() {
       </section>
 
       <section className="mx-auto max-w-4xl px-6 py-16">
-        <h2 className="text-3xl font-black md:text-4xl">Casino FAQs</h2>
+        <h2 className="text-3xl font-black md:text-4xl">Live Dealer FAQ</h2>
         <div className="mt-10 space-y-4">
           {casinoFaqs.map((f, i) => (
             <details key={i} className="group rounded-2xl border border-primary/20 bg-background/60 p-6 open:bg-background/80">

@@ -170,7 +170,7 @@ function Compare() {
       </section>
 
       <section className="mx-auto max-w-5xl px-6 py-10">
-        <h2 className="text-xl font-black text-foreground sm:text-2xl">Bettor FAQ</h2>
+        <h2 className="text-xl font-black text-foreground sm:text-2xl">Bettor Comparison FAQ</h2>
         <div className="mt-5 space-y-3">
           {faqs.map((f) => (
             <details key={f.q} className="group rounded-xl border border-primary/20 bg-background/60 p-4 open:border-primary/40">

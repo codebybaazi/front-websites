@@ -305,7 +305,7 @@ function MatchesPage() {
 
         {/* FAQ Section */}
         <div className="mt-24 space-y-12">
-          <h2 className="text-3xl font-black text-center uppercase tracking-tighter">Matches FAQ</h2>
+          <h2 className="text-3xl font-black text-center uppercase tracking-tighter">Match Prediction FAQ</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="p-8 rounded-[2rem] border border-white/5 bg-white/[0.02] space-y-4">
               <h3 className="text-xl font-bold text-primary">How do I find live cricket matches today?</h3>
