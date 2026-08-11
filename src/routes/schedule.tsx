@@ -65,7 +65,7 @@ function Schedule() {
         subtitle="The definitive guide to the IPL 2026 fixtures, T20 World Cup 2026 schedule, and international football/tennis events. Track every live match and betting market on Cricbet99."
       />
 
-      <section className="mx-auto max-w-7xl px-6 py-8 border-b border-primary/10">
+      <section className="mx-auto w-full px-6 py-8 border-b border-primary/10">
         <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4">
           {tabs.map((tab) => (
             <button
