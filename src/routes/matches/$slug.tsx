@@ -287,7 +287,7 @@ function MatchDetailPage() {
                 <div className="h-10 w-10 flex items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary/20 shadow-[0_0_15px_rgba(212,175,55,0.15)]">
                   <BrainCircuit className="h-6 w-6" />
                 </div>
-                <h2 className="text-3xl font-black tracking-tight">Intelligence Hub</h2>
+                <h2 className="text-3xl font-black tracking-tight">Improve internal linking</h2>
               </div>
               <AiOverview 
                 summary={aiAnalysis.summary}
