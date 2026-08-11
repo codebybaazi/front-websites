@@ -50,10 +50,12 @@ function AppPage() {
         subtitle="Take the arena with you. The official Cricbet99 app delivers a high-performance betting experience with sub-second odds updates, biometric security, and streamlined UPI withdrawals — optimized for 5G connectivity."
       />
       <section className="mx-auto max-w-7xl px-6 py-12">
+        <h2 className="text-3xl font-black mb-2 uppercase tracking-tighter">Premium App Features</h2>
+        <h3 className="text-xs font-black text-primary/60 uppercase tracking-[0.3em] mb-10">Advanced Mobile Betting Architecture</h3>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((f) => (
-            <div key={f.t} className="rounded-2xl border border-primary/20 bg-background/60 p-7">
-              <h2 className="text-lg font-bold">{f.t}</h2>
+            <div key={f.t} className="rounded-2xl border border-primary/20 bg-background/60 p-7 group hover:border-primary/50 transition-colors">
+              <h4 className="text-lg font-bold group-hover:text-primary transition-colors">{f.t}</h4>
               <p className="mt-2 text-sm text-foreground/75">{f.d}</p>
             </div>
           ))}
