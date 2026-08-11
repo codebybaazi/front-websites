@@ -15,7 +15,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "india-vs-afghanistan-2026-complete-series-guide-schedule-and-live-updates",
     "title": "India vs Afghanistan 2026: Complete Series Guide, Schedule, and Live Updates",
-    "author": "Cricbet99 Editorial", "tag": "Guide",
     "date": "2026-06-06", "dateModified": "2026-06-06",
     "excerpt": "The Afghanistan cricket team's tour of India has begun with the one-off Test match underway at the Maharaja Yadavindra Singh International Cricket Stadium in New Chandigarh.",
     "hero": "/blog-heroes/ind-vs-afg-2026-series-hero.webp",
@@ -51,7 +50,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "ipl-2026-winner-awards-and-stats-complete-season-recap",
     "title": "IPL 2026 Winner, Awards and Stats: Complete Season Recap",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2026-06-02", "dateModified": "2026-06-02",
     "excerpt": "The IPL 2026 season concluded on May 31, 2026 at the Narendra Modi Stadium in Ahmedabad with Royal Challengers Bengaluru defeating Gujarat Titans by five wickets to lift their second consecutive IPL trophy.",
     "hero": "/blog-heroes/ipl-2026-recap-hero.webp",
@@ -87,7 +85,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "vaibhav-suryavanshi-hits-jasprit-bumrah-for-a-six-on-the-very-first-ball",
     "title": "Vaibhav Suryavanshi Hits Jasprit Bumrah for a Six on the Very First Ball",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2026-04-09", "dateModified": "2026-04-09",
     "excerpt": "The date is etched in cricket history. A teenage prodigy walks to the crease. The bowler waiting for him: Jasprit Bumrah, the most feared fast bowler on the planet.",
     "hero": "/blog-heroes/suryavanshi-six-first-ball-hero.webp",
@@ -123,7 +120,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "ultimate-guide-to-casino-games-and-their-types",
     "title": "Ultimate Guide to Casino Games and Their Types",
-    "author": "Cricbet99 Editorial", "tag": "Casino",
     "date": "2026-02-22", "dateModified": "2026-02-22",
     "excerpt": "Casino games offer a thrilling mix of chance, strategy, and entertainment. Whether you are a beginner or an experienced player, understanding the different types of casino games can enhance your experience and improve your chances of winning.",
     "hero": "/blog-heroes/casino-games-guide-hero.webp",
@@ -159,7 +155,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "india-2026-cricket-fixtures-series-and-tournament-schedule",
     "title": "India's Complete 2026 Cricket Fixtures: Series and Tournament Schedule",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2026-02-22", "dateModified": "2026-02-22",
     "excerpt": "India's cricket calendar for 2026 promises an exciting year packed with international series, high-stakes tournaments, and opportunities for emerging talents to shine.",
     "hero": "/blog-heroes/india-2026-fixtures-hero.webp",
@@ -195,7 +190,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "sprinters-dissects-shubman-gill-and-co-face-brutal-criticism-over-bowling-tactic-against-england",
     "title": "Shubman Gill And Co Face Brutal Criticism Over Bowling Tactic Against England",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2025-07-04", "dateModified": "2025-07-04",
     "excerpt": "Shubman Gill and the Indian bowling unit faced a barrage of criticism for their short-ball strategy during the second Test of the Anderson-Tendulkar Trophy at Edgbaston.",
     "hero": "/blog-heroes/gill-short-ball-criticism-hero.webp",
@@ -231,7 +225,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "sprinters-analysis-kookaburra-conundrum-can-county-cricket-have-too-many-runs",
     "title": "Analysis: Kookaburra Conundrum – Can County Cricket Have Too Many Runs?",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2025-07-03", "dateModified": "2025-07-03",
     "excerpt": "County cricket has always been a testing ground for both emerging and seasoned cricketers, but recent seasons have seen scores soar and bowlers struggle for relevance. A key factor behind this shift is the growing use of the Kookaburra ball.",
     "hero": "/blog-heroes/kookaburra-conundrum-hero.webp",
@@ -253,7 +246,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "skipper-gills-magnificent-269-powers-dominant-india-to-victory",
     "title": "Skipper Gill's Magnificent 269 Powers Dominant India to Victory",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2025-07-03", "dateModified": "2025-07-03",
     "excerpt": "In a breathtaking display of batting excellence, India's young sensation and skipper Shubman Gill slammed a remarkable 269-run innings that left cricket fans across the globe in awe.",
     "hero": "/blog-heroes/gill-269-victory-hero.webp",
@@ -275,7 +267,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "stokes-in-awe-of-indian-cricket-star",
     "title": "Stokes in Awe of Indian Cricket Star – 'Love Watching Him Play'",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2025-07-02", "dateModified": "2025-07-02",
     "excerpt": "England Test captain Ben Stokes recently made headlines for his high praise of an Indian cricket sensation, expressing 'love watching him play.'",
     "hero": "/blog-heroes/stokes-in-awe-hero.webp",
@@ -297,7 +288,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "kohli-dravid-step-aside-a-new-king-rises-as-india-rules-england",
     "title": "Kohli, Dravid Step Aside – A New King Rises as India Rules England",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2025-07-02", "dateModified": "2025-07-02",
     "excerpt": "The cricketing world is witnessing a changing of the guard. With Virat Kohli stepping away from the current England tour and Rahul Dravid's tenure ending, a new leader has emerged.",
     "hero": "/blog-heroes/new-king-india-rules-england-hero.webp",
@@ -320,7 +310,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "r-ashwin-throws-down-a-mega-challenge-to-gautam-gambhir-shubman-gill-before-2nd-test-vs-england",
     "hero": "/blog-heroes/ashwin-challenge-gambhir-gill-hero.webp",
     "title": "R Ashwin Throws Down a Mega Challenge to Gautam Gambhir and Shubman Gill Before the 2nd Test vs England",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2025-07-01", "dateModified": "2025-07-01",
     "excerpt": "With the second Test between India and England approaching, Ravichandran Ashwin has made headlines with a thought-provoking challenge directed at Gautam Gambhir and Shubman Gill, questioning their commitment to red-ball cricket.",
     "sections": [
@@ -342,7 +331,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "injuries-trouble-pakistan-ahead-of-bangladesh-t20i-series",
     "hero": "/blog-heroes/pakistan-injuries-bangladesh-t20i-hero.webp",
     "title": "Injuries Trouble Pakistan Ahead of Bangladesh T20I Series",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2025-07-01", "dateModified": "2025-07-01",
     "excerpt": "As the much-anticipated T20I series between Pakistan and Bangladesh draws near, Pakistan faces a wave of injury concerns that could significantly affect their performance.",
     "sections": [
@@ -364,7 +352,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "england-vs-india-at-edgbaston-bazballs-birthplace-beckons-again",
     "hero": "/blog-heroes/edgbaston-bazball-birthplace-hero.webp",
     "title": "England vs India at Edgbaston: Bazball's Birthplace Beckons Again",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2025-06-30", "dateModified": "2025-06-30",
     "excerpt": "Cricket fans around the globe are in for a riveting spectacle as England take on India at Edgbaston, the venue where Bazball first came to life under Ben Stokes and Brendon McCullum.",
     "sections": [
@@ -386,7 +373,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "kuldeep-yadav-is-ready-are-india-a-deep-dive-into-the-spinners-future",
     "hero": "/blog-heroes/kuldeep-yadav-spinner-future-hero.webp",
     "title": "Kuldeep Yadav Is Ready. Are India? A Deep Dive Into the Spinner's Future",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2025-06-30", "dateModified": "2025-06-30",
     "excerpt": "Kuldeep Yadav, India's talented left-arm wrist spinner, has long been considered one of the most exciting prospects in Indian cricket, known for his deceptive wrist spin.",
     "sections": [
@@ -408,7 +394,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "lhuan-dre-pretorius-makes-history-with-record-150-in-test-cricket",
     "hero": "/blog-heroes/pretorius-record-150-test-hero.webp",
     "title": "Lhuan-dre Pretorius Makes History with Record 150 in Test Cricket",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2025-06-30", "dateModified": "2025-06-30",
     "excerpt": "In a landmark moment for South African cricket, Lhuan-dre Pretorius has become the youngest man in history to score 150 runs in a Test match, eclipsing Javed Miandad's four-decade-old record.",
     "sections": [
@@ -430,7 +415,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "india-suffer-humbling-defeat-analyzes-the-rise-and-fall-of-fighting-spirit",
     "hero": "/blog-heroes/india-humbling-defeat-hero.webp",
     "title": "India Suffer Humbling Defeat: The Rise and Fall of Fighting Spirit",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2025-06-30", "dateModified": "2025-06-30",
     "excerpt": "India's recent defeat in a crucial match has sent shockwaves through the cricketing world, but it's the rise and fall in fighting spirit that remains the biggest concern for the national team.",
     "sections": [
@@ -452,7 +436,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "pcb-appoints-new-acting-head-coach-for-pakistans-red-ball-team",
     "hero": "/blog-heroes/pcb-new-red-ball-coach-hero.webp",
     "title": "PCB Appoints New Acting Head Coach for Pakistan's Red-Ball Team",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2025-06-30", "dateModified": "2025-06-30",
     "excerpt": "Pakistan Cricket Board has announced a new acting head coach for the red-ball squad, a significant leadership move ahead of a busy Test calendar.",
     "sections": [
@@ -474,7 +457,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "fir-filed-against-virat-kohli-after-rcb-stampede",
     "hero": "/blog-heroes/fir-kohli-rcb-stampede-hero.webp",
     "title": "FIR Filed Against Virat Kohli After RCB Stampede: Full Report",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2025-06-09", "dateModified": "2025-06-09",
     "excerpt": "On June 4, 2025, a tragic incident occurred outside M. Chinnaswamy Stadium in Bengaluru during the celebration for RCB's maiden IPL title.",
     "sections": [
@@ -496,7 +478,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "ipl-discrimination-why-sudharshan-isnt-getting-the-spotlight",
     "hero": "/blog-heroes/sudharsan-ipl-spotlight-hero.webp",
     "title": "IPL Discrimination? Why Sai Sudharsan Isn't Getting the Spotlight",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2025-06-09", "dateModified": "2025-06-09",
     "excerpt": "The IPL has long been a platform for young talent, yet certain players consistently get overlooked. One such player is Sai Sudharsan.",
     "sections": [
@@ -518,7 +499,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "hes-going-to-go-after-him-exclusive-take-on-virat-kohli",
     "hero": "/blog-heroes/exclusive-take-kohli-hero.webp",
     "title": "'He's Going to Go After Him' – Exclusive Take on Virat Kohli",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2025-06-05", "dateModified": "2025-06-05",
     "excerpt": "As the IPL 2025 final approaches, a former India cricketer has made a significant statement regarding Virat Kohli's role in this high-stakes match.",
     "sections": [
@@ -540,7 +520,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "ipl-2025-final-rcb-vs-pbks-where-to-watch-live-streaming",
     "hero": "/blog-heroes/ipl-2025-final-rcb-vs-pbks-hero.webp",
     "title": "IPL 2025 Final: RCB vs PBKS – Where to Watch, Live Streaming, and More",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2025-06-05", "dateModified": "2025-06-05",
     "excerpt": "The IPL 2025 final is set to be an exhilarating showdown between Royal Challengers Bengaluru and Punjab Kings at the Narendra Modi Stadium, Ahmedabad.",
     "sections": [
@@ -562,7 +541,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "former-mi-star-slams-coaching-staff-for-telling-a-bowler-like-bumrah-what-to-do",
     "hero": "/blog-heroes/mi-star-slams-bumrah-coaching-hero.webp",
     "title": "Former MI Star Slams Coaching Staff for 'Telling a Bowler Like Bumrah What to Do'",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2025-06-02", "dateModified": "2025-06-02",
     "excerpt": "Mumbai Indians' dreams of clinching another IPL title were shattered in IPL 2025 Qualifier 2, and post-match analysis has stirred massive debate.",
     "sections": [
@@ -584,7 +562,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "rcbs-birthday-bash-cake-facials-and-camaraderie-before-ipl-2025-final",
     "hero": "/blog-heroes/rcb-birthday-bash-ipl-final-hero.webp",
     "title": "RCB's Birthday Bash: Cake Facials and Camaraderie Before IPL 2025 Final",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2025-06-02", "dateModified": "2025-06-02",
     "excerpt": "As the Royal Challengers Bangalore gear up for the IPL 2025 final, the team took a moment to celebrate the birthdays of Rajat Patidar and Dinesh Karthik.",
     "sections": [
@@ -606,7 +583,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "shreyas-iyer-vs-suresh-raina-ipl-playoff-stats-comparison",
     "hero": "/blog-heroes/iyer-vs-raina-playoff-stats-hero.webp",
     "title": "Shreyas Iyer vs Suresh Raina: IPL Playoff Stats Comparison",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2025-06-02", "dateModified": "2025-06-02",
     "excerpt": "The IPL 2025 final between RCB and PBKS features a key subplot: the performance of two prolific Indian batsmen, Shreyas Iyer and Suresh Raina, in playoff cricket.",
     "sections": [
@@ -628,7 +604,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "i-cant-figure-out-who-is-the-captain-today-huge-statement-on-virat-kohli",
     "hero": "/blog-heroes/captain-statement-kohli-hero.webp",
     "title": "'I Can't Figure Out Who Is the Captain Today' – Huge Statement on Virat Kohli",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2025-05-30", "dateModified": "2025-05-30",
     "excerpt": "The IPL 2025 Qualifier 1 match between RCB and PBKS became a battleground for leadership narratives, with Virat Kohli at the centre of a captaincy controversy.",
     "sections": [
@@ -650,7 +625,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "ipl-2025-eliminator-gt-vs-mi-match-prediction",
     "hero": "/blog-heroes/ipl-eliminator-gt-vs-mi-hero.webp",
     "title": "IPL 2025 Eliminator – GT vs MI Match Prediction",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2025-05-30", "dateModified": "2025-05-30",
     "excerpt": "The high-stakes IPL 2025 Eliminator sees Gujarat Titans take on Mumbai Indians at the Maharaja Yadavindra Singh Stadium, Mullanpur.",
     "sections": [
@@ -672,7 +646,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "rcb-vs-pbks-ipl-2025-qualifier-1-preview",
     "hero": "/blog-heroes/rcb-vs-pbks-qualifier1-hero.webp",
     "title": "RCB vs PBKS IPL 2025 Qualifier 1: Preview and Analysis",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2025-05-29", "dateModified": "2025-05-29",
     "excerpt": "As the IPL 2025 playoffs commence, all eyes are on the highly anticipated Qualifier 1 clash between Royal Challengers Bengaluru and Punjab Kings.",
     "sections": [
@@ -694,7 +667,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "r-ashwins-bold-prediction-ahead-of-pbks-vs-rcb-ipl-2025",
     "hero": "/blog-heroes/ashwin-bold-prediction-pbks-rcb-hero.webp",
     "title": "R Ashwin's Bold Prediction Ahead of PBKS vs RCB IPL 2025 Qualifier 1",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2025-05-29", "dateModified": "2025-05-29",
     "excerpt": "As the IPL 2025 Qualifier 1 approaches, veteran spinner Ravichandran Ashwin has stirred discussions with his bold prediction: 'I might not be surprised.'",
     "sections": [
@@ -716,7 +688,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "nicholas-pooran-pummels-sunrisers-hyderabad-bowlers",
     "hero": "/blog-heroes/pooran-pummels-srh-hero.webp",
     "title": "Nicholas Pooran Pummels Sunrisers Hyderabad Bowlers: Power-Hitting Recap",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2025-03-28", "dateModified": "2025-03-28",
     "excerpt": "The IPL delivered another thrilling night of cricket as Nicholas Pooran's explosive performance left Sunrisers Hyderabad bowlers clueless.",
     "sections": [
@@ -738,7 +709,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "rohit-sharma-to-lead-indian-cricket-team-in-upcoming-test-series-against-england",
     "hero": "/blog-heroes/rohit-leads-india-test-england-hero.webp",
     "title": "Rohit Sharma to Lead Indian Cricket Team in Upcoming Test Series Against England",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2025-03-27", "dateModified": "2025-03-27",
     "excerpt": "Despite a challenging series in Australia, Rohit Sharma will lead the Indian cricket team in the upcoming Test series against England.",
     "sections": [
@@ -760,7 +730,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "lsg-owner-goenka-focuses-on-positives-powerplay-performance",
     "hero": "/blog-heroes/lsg-powerplay-positives-hero.webp",
     "title": "LSG Owner Goenka Focuses on Positives, Impressed with Lucknow's Powerplay Performance",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2025-03-26", "dateModified": "2025-03-26",
     "excerpt": "LSG owner Sanjiv Goenka has expressed belief in focusing on the positives, especially the team's stellar powerplay performances with both bat and ball.",
     "sections": [
@@ -782,7 +751,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "gujarat-titans-vs-punjab-kings-ipl-2025-season-opener",
     "hero": "/blog-heroes/gt-vs-pbks-ipl2025-opener-hero.webp",
     "title": "Gujarat Titans vs Punjab Kings IPL 2025: Season Opener Preview",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2025-03-26", "dateModified": "2025-03-26",
     "excerpt": "The IPL 2025 season kicks off with Gujarat Titans facing Punjab Kings at the Narendra Modi Stadium in Ahmedabad.",
     "sections": [
@@ -804,7 +772,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "rajasthan-royals-vs-kolkata-knight-riders-iplt20-match-prediction",
     "hero": "/blog-heroes/rr-vs-kkr-prediction-hero.webp",
     "title": "Rajasthan Royals vs Kolkata Knight Riders: IPL T20 Match Prediction",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2025-03-26", "dateModified": "2025-03-26",
     "excerpt": "The Rajasthan Royals and Kolkata Knight Riders clash in a must-win IPL T20 2025 encounter after losing their opening matches.",
     "sections": [
@@ -826,7 +793,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "ipl-2025-dc-vs-lsg-ashutosh-to-be-delhi-capitals-lower-order-enforcer",
     "hero": "/blog-heroes/ashutosh-dc-enforcer-hero.webp",
     "title": "IPL 2025: DC vs LSG – Ashutosh Sharma to Be Delhi's Lower-Order Enforcer",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2025-03-26", "dateModified": "2025-03-26",
     "excerpt": "Delhi Capitals rely on Ashutosh Sharma to become the lower-order enforcer in their high-stakes IPL 2025 clash against Lucknow Super Giants.",
     "sections": [
@@ -848,7 +814,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "pakistans-efforts-to-emulate-multans-success-in-rawalpindi",
     "hero": "/blog-heroes/pakistan-rawalpindi-multan-hero.webp",
     "title": "Pakistan's Efforts to Emulate Multan's Success in Rawalpindi",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-23", "dateModified": "2024-10-23",
     "excerpt": "Following a humiliating defeat in the first Test in Multan, Pakistan have made seismic changes and are now determined to stick to their new template.",
     "sections": [
@@ -870,7 +835,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "acc-emerging-teams-asia-cup-2024-pakistan-a-vs-uae-india-a-vs-oman",
     "hero": "/blog-heroes/acc-emerging-asia-cup-2024-hero.webp",
     "title": "ACC Emerging Teams Asia Cup 2024: Pakistan A vs UAE and India A vs Oman",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-23", "dateModified": "2024-10-23",
     "excerpt": "Match previews and betting tips for the October 23 fixtures of the ACC Emerging Teams Asia Cup 2024 in Oman.",
     "sections": [
@@ -892,7 +856,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "hasan-mahmud-confident-of-bangladeshs-second-innings-comeback",
     "hero": "/blog-heroes/hasan-mahmud-comeback-hero.webp",
     "title": "Hasan Mahmud Confident of Bangladesh's Second Innings Comeback",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-23", "dateModified": "2024-10-23",
     "excerpt": "Bangladesh show signs of resilience in the second innings of the first Test against South Africa, with Hasan Mahmud backing a fightback.",
     "sections": [
@@ -914,7 +877,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "decision-review-system-drs-in-cricket-revolutionizing-fair-play",
     "hero": "/blog-heroes/drs-cricket-fair-play-hero.webp",
     "title": "Decision Review System (DRS) in Cricket: Revolutionizing Fair Play",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-22", "dateModified": "2024-10-22",
     "excerpt": "Cricket, often regarded as a gentleman's game, has evolved significantly. The introduction of DRS is one of the most impactful modern changes.",
     "sections": [
@@ -936,7 +898,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "sophie-devine-reveals-key-win-against-india-set-up-nz-t20-world-cup-triumph",
     "hero": "/blog-heroes/sophie-devine-nz-t20wc-hero.webp",
     "title": "Sophie Devine Reveals Key Win Against India Set Up NZ's T20 World Cup Triumph",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-21", "dateModified": "2024-10-21",
     "excerpt": "New Zealand captain Sophie Devine credited their opening victory over India as the moment that set the tone for their T20 World Cup 2024 title.",
     "sections": [
@@ -958,7 +919,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "sarfaraz-khans-first-test-century-powers-indias-comeback",
     "hero": "/blog-heroes/sarfaraz-first-test-century-hero.webp",
     "title": "Sarfaraz Khan's First Test Century Powers India's Comeback",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-19", "dateModified": "2024-10-19",
     "excerpt": "Sarfaraz Khan's maiden Test hundred, supported by Rishabh Pant's blazing fifty, helped India close in on New Zealand's lead.",
     "sections": [
@@ -980,7 +940,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "baccarat-the-elegant-card-game-of-chance",
     "hero": "/blog-heroes/baccarat-elegant-card-game-hero.webp",
     "title": "Baccarat: The Elegant Card Game of Chance",
-    "author": "Cricbet99 Editorial", "tag": "Casino",
     "date": "2024-10-18", "dateModified": "2024-10-18",
     "excerpt": "Baccarat is a straightforward card game that attracts players with its simplicity and elegance. Players bet on three outcomes: player, banker, or tie.",
     "sections": [
@@ -1002,7 +961,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "alyssa-healys-foot-injury-ends-australias-t20-world-cup-run",
     "hero": "/blog-heroes/alyssa-healy-injury-hero.webp",
     "title": "Alyssa Healy's Foot Injury Ends Australia's T20 World Cup Run",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-18", "dateModified": "2024-10-18",
     "excerpt": "Australia captain Alyssa Healy revealed that a ruptured plantar fascia left her with only 'one game in her' for the 2024 T20 World Cup.",
     "sections": [
@@ -1024,7 +982,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "australia-women-vs-south-africa-women-icc-t20-world-cup-2024",
     "hero": "/blog-heroes/ausw-vs-saw-t20wc-2024-hero.webp",
     "title": "Australia Women vs South Africa Women: ICC T20 World Cup 2024 Semifinal",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-17", "dateModified": "2024-10-17",
     "excerpt": "Australia Women take on South Africa Women in the first semifinal of the ICC Women's T20 World Cup 2024, with the defending champions in top form.",
     "sections": [
@@ -1046,7 +1003,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "sajid-khans-7-wicket-masterclass-puts-pakistan-in-command",
     "hero": "/blog-heroes/sajid-khan-7-wicket-hero.webp",
     "title": "Sajid Khan's 7-Wicket Masterclass Puts Pakistan in Command",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-17", "dateModified": "2024-10-17",
     "excerpt": "Sajid Khan's stellar 7 for 111 led Pakistan to a commanding position over England, with a 75-run first-innings lead on Day 3.",
     "sections": [
@@ -1068,7 +1024,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "west-indies-stun-england-to-secure-t20-world-cup-semifinal-spot",
     "hero": "/blog-heroes/wi-stun-england-t20wc-hero.webp",
     "title": "West Indies Stun England to Secure T20 World Cup Semifinal Spot",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-16", "dateModified": "2024-10-16",
     "excerpt": "Hayley Matthews's West Indies defeated England by six wickets to advance to the Women's T20 World Cup 2024 semifinals for the first time since 2018.",
     "sections": [
@@ -1090,7 +1045,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "india-vs-bangladesh-t20-2024-match-prediction",
     "hero": "/blog-heroes/ind-vs-ban-t20-2024-hero.webp",
     "title": "India vs Bangladesh, T20I 2024: Match Prediction",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-12", "dateModified": "2024-10-12",
     "excerpt": "India face Bangladesh in the final match of the T20I series, aiming for a 3-0 whitewash on home soil.",
     "sections": [
@@ -1112,7 +1066,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "todays-cricket-match-predictions-october-11-2024",
     "hero": "/blog-heroes/predictions-oct-11-2024-hero.webp",
     "title": "Today's Cricket Match Predictions – October 11, 2024",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-11", "dateModified": "2024-10-11",
     "excerpt": "A roundup of match predictions for the day, covering Women's T20 World Cup and Legends League fixtures.",
     "sections": [
@@ -1134,7 +1087,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "shakib-al-hasan-issues-apology-farewell-test",
     "hero": "/blog-heroes/shakib-farewell-test-hero.webp",
     "title": "Shakib Al Hasan Issues Apology, Requests Support for His Farewell Test",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-10", "dateModified": "2024-10-10",
     "excerpt": "Bangladesh's star all-rounder Shakib Al Hasan addressed his silence during the student protests, offering an apology ahead of his farewell Test.",
     "sections": [
@@ -1156,7 +1108,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "indias-power-trio-lead-to-crushing-win-over-sri-lanka",
     "hero": "/blog-heroes/india-power-trio-sl-hero.webp",
     "title": "India's Power Trio Lead a Crushing Win Over Sri Lanka",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-10", "dateModified": "2024-10-10",
     "excerpt": "India Women showcased dominant batting to avenge their Asia Cup loss to Sri Lanka, securing an 82-run victory in the Women's T20 World Cup.",
     "sections": [
@@ -1178,7 +1129,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "india-vs-sri-lanka-icc-womens-t20-world-cup-2024",
     "hero": "/blog-heroes/indw-vs-slw-t20wc-2024-hero.webp",
     "title": "India vs Sri Lanka: ICC Women's T20 World Cup 2024 Match Preview",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-09", "dateModified": "2024-10-09",
     "excerpt": "India Women face Sri Lanka in a crucial ICC Women's T20 World Cup 2024 match at the Dubai International Cricket Stadium.",
     "sections": [
@@ -1200,7 +1150,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "ireland-vs-south-africa-match-prediction-for-odi-clash",
     "hero": "/blog-heroes/ire-vs-sa-odi-hero.webp",
     "title": "Ireland vs South Africa: Match Prediction for ODI Clash",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-07", "dateModified": "2024-10-07",
     "excerpt": "Ireland face South Africa in an ODI encounter in the UAE, and we break down what to expect from both sides at the Zayed Cricket Stadium.",
     "sections": [
@@ -1222,7 +1171,6 @@ export const blogPosts: BlogPost[] = [
     "slug": "england-vs-south-africa-women-icc-t20-world-cup-2024",
     "hero": "/blog-heroes/engw-vs-saw-t20wc-2024-hero.webp",
     "title": "England vs South Africa Women: Match Preview for ICC T20 World Cup 2024",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-07", "dateModified": "2024-10-07",
     "excerpt": "South Africa Women face a formidable challenge against England Women in the ICC Women's T20 World Cup 2024 at Sharjah.",
     "sections": [
@@ -1243,7 +1191,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "pakistan-vs-england-2024-test-betting-tips",
     "title": "Pakistan vs England 2024: Test Series Match Prediction and Betting Tips",
-    "author": "Cricbet99 Editorial", "tag": "Guide",
     "date": "2024-10-07", "dateModified": "2024-10-07",
     "excerpt": "England return to Pakistan for a Test series, having dominated their previous 2022 tour. Full match preview and betting analysis.",
     "hero": "/blog-heroes/pak-vs-eng-test-tips-hero.webp",
@@ -1265,7 +1212,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "west-indies-crush-scotland-to-kickstart-world-cup",
     "title": "West Indies Crush Scotland to Kickstart Women's T20 World Cup",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-07", "dateModified": "2024-10-07",
     "excerpt": "The West Indies began their Women's T20 World Cup campaign in emphatic fashion, crushing Scotland with a well-rounded team performance.",
     "hero": "/blog-heroes/wi-crush-sco-t20wc-hero.webp",
@@ -1287,7 +1233,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "sanath-jayasuriya-named-full-time-head-coach-of-sri-lanka",
     "title": "Sanath Jayasuriya Named Full-Time Head Coach of Sri Lanka",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-07", "dateModified": "2024-10-07",
     "excerpt": "Sanath Jayasuriya, the iconic former Sri Lankan cricketer, has officially been appointed full-time head coach of the Sri Lankan men's team.",
     "hero": "/blog-heroes/jayasuriya-sl-coach-hero.webp",
@@ -1309,7 +1254,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "arundhati-reddys-inspirational-comeback",
     "title": "Arundhati Reddy's Inspirational Comeback into the Indian Women's Team",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-07", "dateModified": "2024-10-07",
     "excerpt": "Arundhati Reddy has scripted a stunning comeback into the Indian women's cricket team following a strong WPL 2024 season.",
     "hero": "/blog-heroes/arundhati-reddy-comeback-hero.webp",
@@ -1331,7 +1275,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "india-vs-pakistan-women-icc-t20-world-cup-2024-match-prediction",
     "title": "India vs Pakistan Women: ICC T20 World Cup 2024 Match Prediction",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-06", "dateModified": "2024-10-06",
     "excerpt": "India Women enter their Women's T20 World Cup 2024 fixture against Pakistan Women as favourites despite a recent setback against New Zealand.",
     "hero": "/blog-heroes/ind-vs-pak-women-t20wc-hero.webp",
@@ -1353,7 +1296,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "bcci-exploring-saudi-arabia-for-ipl-mega-auction",
     "title": "BCCI Exploring Saudi Arabia for IPL Mega Auction, Dhoni's CSK Future Unclear",
-    "author": "Cricbet99 Editorial", "tag": "IPL",
     "date": "2024-10-05", "dateModified": "2024-10-05",
     "excerpt": "BCCI is exploring the possibility of hosting the upcoming IPL mega auction in Saudi Arabia, with Riyadh and Jeddah high on the list.",
     "hero": "/blog-heroes/bcci-saudi-ipl-auction-hero.webp",
@@ -1375,7 +1317,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "amazon-warriors-secure-spot-in-cpl-2024-final",
     "title": "Amazon Warriors Secure Spot in CPL 2024 Final With Dominant Win",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-05", "dateModified": "2024-10-05",
     "excerpt": "The Guyana Amazon Warriors stormed into the CPL 2024 final with a commanding eight-wicket win over Barbados Royals in Qualifier 2.",
     "hero": "/blog-heroes/amazon-warriors-cpl-final-hero.webp",
@@ -1397,7 +1338,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "br-vs-gaw-match-prediction-cpl-2024",
     "title": "BR vs GAW Match Prediction – CPL 2024 Qualifier 2",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-05", "dateModified": "2024-10-05",
     "excerpt": "Guyana Amazon Warriors face Barbados Royals in the second qualifier of the Caribbean Premier League 2024.",
     "hero": "/blog-heroes/br-vs-gaw-cpl-qualifier-hero.webp",
@@ -1419,7 +1359,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "ind-w-vs-nz-w-match-prediction-icc-womens-t20-world-cup-2024",
     "title": "IND-W vs NZ-W Match Prediction: ICC Women's T20 World Cup 2024",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-04", "dateModified": "2024-10-04",
     "excerpt": "India Women take on New Zealand Women at the Dubai International Cricket Stadium in a key ICC Women's T20 World Cup 2024 fixture.",
     "hero": "/blog-heroes/ind-w-vs-nz-w-t20wc-hero.webp",
@@ -1441,7 +1380,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "gmr-groups-historic-acquisition-of-hampshire-county-cricket",
     "title": "GMR Group's Historic Acquisition of Hampshire County Cricket",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-01", "dateModified": "2024-10-01",
     "excerpt": "GMR Group, co-owners of Delhi Capitals, have acquired Hampshire County Cricket, becoming the first international company to fully own a county side.",
     "hero": "/blog-heroes/gmr-hampshire-acquisition-hero.webp",
@@ -1463,7 +1401,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "ind-vs-ban-2nd-test-2024-india-set-to-win-series",
     "title": "India vs Bangladesh 2nd Test 2024: India Set to Win Series",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-10-01", "dateModified": "2024-10-01",
     "excerpt": "India look to dominate Bangladesh in the second Test at Green Park, Kanpur, after a 280-run first-Test win.",
     "hero": "/blog-heroes/ind-vs-ban-2nd-test-hero.webp",
@@ -1485,7 +1422,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "sri-lanka-vs-new-zealand-2024-2nd-test-preview",
     "title": "Sri Lanka vs New Zealand 2024, 2nd Test: Preview and Prediction",
-    "author": "Cricbet99 Editorial", "tag": "Cricket",
     "date": "2024-09-28", "dateModified": "2024-09-28",
     "excerpt": "New Zealand aim to level the series against Sri Lanka at Galle, but the hosts hold a strong home record.",
     "hero": "/blog-heroes/sl-vs-nz-2nd-test-hero.webp",
@@ -1507,7 +1443,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "royal-ascot-complete-guide-to-horse-racing-events",
     "title": "Royal Ascot: Complete Guide to One of the World's Most Prestigious Horse Racing Events",
-    "author": "Cricbet99 Editorial", "tag": "Horse Racing",
     "date": "2024-09-26", "dateModified": "2024-09-26",
     "excerpt": "Royal Ascot is one of the most famous horse racing events in the world, held annually at Ascot Racecourse in Berkshire, England.",
     "hero": "/blog-heroes/royal-ascot-guide-hero.webp",
@@ -1529,7 +1464,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "mastering-the-art-of-cricket-betting-comprehensive-guide",
     "title": "Mastering the Art of Cricket Betting: A Comprehensive Guide",
-    "author": "Cricbet99 Editorial", "tag": "Guide",
     "date": "2024-09-26", "dateModified": "2024-09-26",
     "excerpt": "Cricket betting has evolved into a nuanced discipline. Learn the markets, the pitfalls, and the strategies that separate winners from losers.",
     "hero": "/blog-heroes/mastering-cricket-betting-hero.webp",
@@ -1551,7 +1485,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "the-kentucky-derby-a-complete-guide",
     "title": "The Kentucky Derby: A Complete Guide",
-    "author": "Cricbet99 Editorial", "tag": "Horse Racing",
     "date": "2024-09-26", "dateModified": "2024-09-26",
     "excerpt": "The Kentucky Derby is one of the most prestigious horse races in the world, often called 'The Most Exciting Two Minutes in Sports.'",
     "hero": "/blog-heroes/kentucky-derby-guide-hero.webp",
@@ -1573,7 +1506,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "thoroughbred-racing-the-pinnacle-of-speed-and-prestige",
     "title": "Thoroughbred Racing: The Pinnacle of Speed and Prestige",
-    "author": "Cricbet99 Editorial", "tag": "Horse Racing",
     "date": "2024-09-26", "dateModified": "2024-09-26",
     "excerpt": "Thoroughbred racing, often called 'The Sport of Kings,' is one of the most iconic forms of horse racing worldwide.",
     "hero": "/blog-heroes/thoroughbred-racing-hero.webp",
@@ -1595,7 +1527,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "mobile-betting-experience-on-cricbet99",
     "title": "Mobile Betting Experience on Cricbet99: Bet Anywhere, Anytime",
-    "author": "Cricbet99 Editorial", "tag": "Guide",
     "date": "2024-09-25", "dateModified": "2024-09-25",
     "excerpt": "Cricbet99's mobile-first design ensures you get the same rich betting experience on your phone as on desktop.",
     "hero": "/blog-heroes/mobile-betting-experience-hero.webp",
@@ -1617,7 +1548,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "roulette-wheel-and-table-layout-types",
     "title": "Roulette Wheel and Table Layout Types: A Comprehensive Guide",
-    "author": "Cricbet99 Editorial", "tag": "Casino",
     "date": "2024-09-24", "dateModified": "2024-09-24",
     "excerpt": "Roulette is one of the most iconic casino games. This guide covers the wheel variations and table layouts every player should know.",
     "hero": "/blog-heroes/roulette-wheel-layout-hero.webp",
@@ -1639,7 +1569,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "avoiding-emotions-while-online-betting",
     "title": "Avoiding Emotions While Online Betting: A Case Study on Betting Rationally",
-    "author": "Cricbet99 Editorial", "tag": "Guide",
     "date": "2024-09-22", "dateModified": "2024-09-22",
     "excerpt": "Emotional decision-making is one of the most common pitfalls bettors face. Here's how to keep your head clear at Cricbet99.",
     "hero": "/blog-heroes/avoiding-emotions-betting-hero.webp",
@@ -1661,7 +1590,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "what-is-sports-betting-comprehensive-guide",
     "title": "What Is Sports Betting? A Comprehensive Guide to Areas, Positives, and Negatives",
-    "author": "Cricbet99 Editorial", "tag": "Guide",
     "date": "2024-09-22", "dateModified": "2024-09-22",
     "excerpt": "Sports betting is one of the most popular forms of gambling worldwide. Here's a full look at the practice, its upside, and its risks.",
     "hero": "/blog-heroes/what-is-sports-betting-hero.webp",
@@ -1683,7 +1611,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "bet-with-confidence-cricbet99s-commitment-to-security-and-trust",
     "title": "Bet With Confidence: Cricbet99's Commitment to Security and Trust",
-    "author": "Cricbet99 Editorial", "tag": "Guide",
     "date": "2024-09-21", "dateModified": "2024-09-21",
     "excerpt": "Security is paramount in online sports betting. Cricbet99 implements cutting-edge measures so users can bet with confidence.",
     "hero": "/blog-heroes/security-trust-hero.webp",
@@ -1705,7 +1632,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "responsible-betting-tips-for-enjoying-cricbet99-without-risks",
     "title": "Responsible Betting: Tips for Enjoying Cricbet99 Without Risks",
-    "author": "Cricbet99 Editorial", "tag": "Guide",
     "date": "2024-09-21", "dateModified": "2024-09-21",
     "excerpt": "Sports betting can be exciting and rewarding when done responsibly. Here's how to keep it that way on Cricbet99.",
     "hero": "/blog-heroes/responsible-betting-tips-hero.webp",
@@ -1727,7 +1653,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "exploring-football-betting-markets-odds-and-tips",
     "title": "Exploring Football Betting on Cricbet99: Markets, Odds, and Tips",
-    "author": "Cricbet99 Editorial", "tag": "Football",
     "date": "2024-09-21", "dateModified": "2024-09-21",
     "excerpt": "Football betting has gained immense popularity due to the wide variety of markets and opportunities offered on Cricbet99.",
     "hero": "/blog-heroes/football-betting-markets-hero.webp",
@@ -1749,7 +1674,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "evolution-of-sports-betting-how-cricbet99-is-shaping-the-future",
     "title": "The Evolution of Sports Betting: How Cricbet99 Is Shaping the Future",
-    "author": "Cricbet99 Editorial", "tag": "Guide",
     "date": "2024-09-21", "dateModified": "2024-09-21",
     "excerpt": "The sports betting industry has been transformed by technology. Cricbet99 stands at the forefront of that evolution.",
     "hero": "/blog-heroes/evolution-sports-betting-hero.webp",
@@ -1771,7 +1695,6 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "diverse-betting-opportunities-at-cricbet99",
     "title": "Diverse Betting Opportunities at Cricbet99: From Global Events to Local Leagues",
-    "author": "Cricbet99 Editorial", "tag": "Guide",
     "date": "2024-09-21", "dateModified": "2024-09-21",
     "excerpt": "Modern bettors want access to global tournaments and local leagues alike. Cricbet99 delivers on both fronts.",
     "hero": "/blog-heroes/diverse-betting-opportunities-hero.webp",
