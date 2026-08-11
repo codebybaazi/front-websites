@@ -92,6 +92,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as MatchesIndexRouteImport } from './routes/matches/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as SitemapXmlRouteImport } from './routes/sitemap.xml'
 import { Route as MatchesSlugRouteImport } from './routes/matches/$slug'
 import { Route as CaseStudiesTossMarket10MinuteProfitRouteImport } from './routes/case-studies.toss-market-10-minute-profit'
 import { Route as CaseStudiesSmallBudgetBettingStrategyRouteImport } from './routes/case-studies.small-budget-betting-strategy'
@@ -523,6 +524,11 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapXmlRoute = SitemapXmlRouteImport.update({
+  id: '/sitemap/xml',
+  path: '/sitemap/xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MatchesSlugRoute = MatchesSlugRouteImport.update({
   id: '/matches/$slug',
   path: '/matches/$slug',
@@ -688,6 +694,7 @@ export interface FileRoutesByFullPath {
   '/case-studies/small-budget-betting-strategy': typeof CaseStudiesSmallBudgetBettingStrategyRoute
   '/case-studies/toss-market-10-minute-profit': typeof CaseStudiesTossMarket10MinuteProfitRoute
   '/matches/$slug': typeof MatchesSlugRoute
+  '/sitemap/xml': typeof SitemapXmlRoute
   '/blog/': typeof BlogIndexRoute
   '/matches/': typeof MatchesIndexRoute
 }
@@ -785,6 +792,7 @@ export interface FileRoutesByTo {
   '/case-studies/small-budget-betting-strategy': typeof CaseStudiesSmallBudgetBettingStrategyRoute
   '/case-studies/toss-market-10-minute-profit': typeof CaseStudiesTossMarket10MinuteProfitRoute
   '/matches/$slug': typeof MatchesSlugRoute
+  '/sitemap/xml': typeof SitemapXmlRoute
   '/blog': typeof BlogIndexRoute
   '/matches': typeof MatchesIndexRoute
 }
@@ -883,6 +891,7 @@ export interface FileRoutesById {
   '/case-studies/small-budget-betting-strategy': typeof CaseStudiesSmallBudgetBettingStrategyRoute
   '/case-studies/toss-market-10-minute-profit': typeof CaseStudiesTossMarket10MinuteProfitRoute
   '/matches/$slug': typeof MatchesSlugRoute
+  '/sitemap/xml': typeof SitemapXmlRoute
   '/blog/': typeof BlogIndexRoute
   '/matches/': typeof MatchesIndexRoute
 }
@@ -982,6 +991,7 @@ export interface FileRouteTypes {
     | '/case-studies/small-budget-betting-strategy'
     | '/case-studies/toss-market-10-minute-profit'
     | '/matches/$slug'
+    | '/sitemap/xml'
     | '/blog/'
     | '/matches/'
   fileRoutesByTo: FileRoutesByTo
@@ -1079,6 +1089,7 @@ export interface FileRouteTypes {
     | '/case-studies/small-budget-betting-strategy'
     | '/case-studies/toss-market-10-minute-profit'
     | '/matches/$slug'
+    | '/sitemap/xml'
     | '/blog'
     | '/matches'
   id:
@@ -1176,6 +1187,7 @@ export interface FileRouteTypes {
     | '/case-studies/small-budget-betting-strategy'
     | '/case-studies/toss-market-10-minute-profit'
     | '/matches/$slug'
+    | '/sitemap/xml'
     | '/blog/'
     | '/matches/'
   fileRoutesById: FileRoutesById
@@ -1264,6 +1276,7 @@ export interface RootRouteChildren {
   Wpl2026BettingRoute: typeof Wpl2026BettingRoute
   BlogSlugRoute: typeof BlogSlugRoute
   MatchesSlugRoute: typeof MatchesSlugRoute
+  SitemapXmlRoute: typeof SitemapXmlRoute
   BlogIndexRoute: typeof BlogIndexRoute
   MatchesIndexRoute: typeof MatchesIndexRoute
 }
@@ -1851,6 +1864,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap/xml': {
+      id: '/sitemap/xml'
+      path: '/sitemap/xml'
+      fullPath: '/sitemap/xml'
+      preLoaderRoute: typeof SitemapXmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/matches/$slug': {
       id: '/matches/$slug'
       path: '/matches/$slug'
@@ -2069,9 +2089,20 @@ const rootRouteChildren: RootRouteChildren = {
   Wpl2026BettingRoute: Wpl2026BettingRoute,
   BlogSlugRoute: BlogSlugRoute,
   MatchesSlugRoute: MatchesSlugRoute,
+  SitemapXmlRoute: SitemapXmlRoute,
   BlogIndexRoute: BlogIndexRoute,
   MatchesIndexRoute: MatchesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
