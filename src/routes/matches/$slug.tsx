@@ -614,9 +614,10 @@ function MatchDetailPage() {
                <div className="absolute top-0 right-0 p-8 opacity-5">
                  <History className="w-32 h-32" />
                </div>
-               <h2 className="text-3xl font-black flex items-center gap-3 uppercase tracking-tighter">
+               <h2 className="text-3xl font-black flex items-center gap-3 uppercase tracking-tighter mb-1">
                 <Lightbulb className="h-8 w-8 text-primary" /> {m.sport === 'Tennis' ? 'Match Betting Strategy' : 'Betting Strategy'}
               </h2>
+              <h3 className="text-xs font-black text-accent/60 uppercase tracking-[0.4em] mb-8">Professional Tactical Guidance</h3>
               <div className="grid gap-6">
                 {(m.bettingTips || [
                    m.sport === 'Football' ? `Analyze the starting lineups carefully; injuries to key defenders in ${m.homeTeam}'s squad could shift the odds toward over 2.5 goals.` : 
