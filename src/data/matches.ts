@@ -29,6 +29,8 @@ export interface MatchFixture {
   predictionInsight?: string;
   projectedScoreHome?: string;
   projectedScoreAway?: string;
+  surface?: string;
+  category?: string;
 }
 
 // Transform cricket fixtures
@@ -106,7 +108,13 @@ const transformedTennis: MatchFixture[] = tennisFixtures.map(t => ({
   startDate: t.startDate,
   status: t.status,
   marketHighlights: t.marketHighlights,
-  keywords: t.keywords
+  keywords: t.keywords,
+  winProbHome: t.prediction?.confidence,
+  winProbAway: t.prediction?.confidence ? 100 - t.prediction.confidence : undefined,
+  predictionInsight: t.prediction?.analysis,
+  projectedScoreHome: t.prediction?.score,
+  surface: t.surface,
+  category: t.category,
 }));
 
 export const matches: MatchFixture[] = [
