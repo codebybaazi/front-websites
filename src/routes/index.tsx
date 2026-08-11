@@ -457,7 +457,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
         >
           <img
             src={heroBanner}
-            alt="Cricbet99 — India's #1 online cricket ID with 100% welcome bonus up to ₹10,000"
+            alt="Cricbet99 Official Hero Banner — India's Most Trusted Online Cricket ID Platform with 100% Welcome Bonus"
             width={1920}
             height={784}
             fetchPriority="high"
@@ -1480,7 +1480,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                     {post.hero ? (
                       <img
                         src={post.hero}
-                        alt={post.title}
+                        alt={`${post.title} — Official Cricbet99 Analysis & Betting Guide`}
                         loading="lazy"
                         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
