@@ -1,6 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
+import { ChevronRight } from "lucide-react";
 
 export const Route = createFileRoute("/tennis")({
   head: () => ({

@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { Trophy, Radio, Target, Flag, Users, ChevronRight } from "lucide-react";
 import { AiOverview } from "@/components/ai-overview";
