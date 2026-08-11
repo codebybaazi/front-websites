@@ -211,7 +211,7 @@ function Schedule() {
                             {tennisFixtures
                               .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
                               .map((match) => (
-                                <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap">
+                                <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap xl:text-wrap">
                                   <td className="p-4 text-sm text-foreground/60 whitespace-nowrap">
                                     {match.endDate ? (
                                       <>
