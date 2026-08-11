@@ -20,6 +20,7 @@ import { Route as TrustedBettingAgentRouteImport } from './routes/trusted-bettin
 import { Route as TransactionLimitsRouteImport } from './routes/transaction-limits'
 import { Route as TodaysBestOddsRouteImport } from './routes/todays-best-odds'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as TennisScheduleRouteImport } from './routes/tennis-schedule'
 import { Route as TennisRouteImport } from './routes/tennis'
 import { Route as TelegramChannelRouteImport } from './routes/telegram-channel'
 import { Route as T20WorldCupBettingRouteImport } from './routes/t20-world-cup-betting'
@@ -56,6 +57,7 @@ import { Route as HowToDepositRouteImport } from './routes/how-to-deposit'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as HorseRacingRouteImport } from './routes/horse-racing'
 import { Route as HighOddsBettingStrategyRouteImport } from './routes/high-odds-betting-strategy'
+import { Route as FootballScheduleRouteImport } from './routes/football-schedule'
 import { Route as FootballRouteImport } from './routes/football'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ExchangeRouteImport } from './routes/exchange'
@@ -63,6 +65,7 @@ import { Route as EsportsRouteImport } from './routes/esports'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as DepositIssuesRouteImport } from './routes/deposit-issues'
 import { Route as DemoIdRouteImport } from './routes/demo-id'
+import { Route as CricketScheduleRouteImport } from './routes/cricket-schedule'
 import { Route as CricketRouteImport } from './routes/cricket'
 import { Route as Cricbet99VsSkyexchange247RouteImport } from './routes/cricbet99-vs-skyexchange247'
 import { Route as Cricbet99VsReddybookRouteImport } from './routes/cricbet99-vs-reddybook'
@@ -160,6 +163,11 @@ const TodaysBestOddsRoute = TodaysBestOddsRouteImport.update({
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TennisScheduleRoute = TennisScheduleRouteImport.update({
+  id: '/tennis-schedule',
+  path: '/tennis-schedule',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TennisRoute = TennisRouteImport.update({
@@ -342,6 +350,11 @@ const HighOddsBettingStrategyRoute = HighOddsBettingStrategyRouteImport.update({
   path: '/high-odds-betting-strategy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FootballScheduleRoute = FootballScheduleRouteImport.update({
+  id: '/football-schedule',
+  path: '/football-schedule',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FootballRoute = FootballRouteImport.update({
   id: '/football',
   path: '/football',
@@ -375,6 +388,11 @@ const DepositIssuesRoute = DepositIssuesRouteImport.update({
 const DemoIdRoute = DemoIdRouteImport.update({
   id: '/demo-id',
   path: '/demo-id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CricketScheduleRoute = CricketScheduleRouteImport.update({
+  id: '/cricket-schedule',
+  path: '/cricket-schedule',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CricketRoute = CricketRouteImport.update({
@@ -628,6 +646,7 @@ export interface FileRoutesByFullPath {
   '/cricbet99-vs-reddybook': typeof Cricbet99VsReddybookRoute
   '/cricbet99-vs-skyexchange247': typeof Cricbet99VsSkyexchange247Route
   '/cricket': typeof CricketRoute
+  '/cricket-schedule': typeof CricketScheduleRoute
   '/demo-id': typeof DemoIdRoute
   '/deposit-issues': typeof DepositIssuesRoute
   '/disclaimer': typeof DisclaimerRoute
@@ -635,6 +654,7 @@ export interface FileRoutesByFullPath {
   '/exchange': typeof ExchangeRoute
   '/faq': typeof FaqRoute
   '/football': typeof FootballRoute
+  '/football-schedule': typeof FootballScheduleRoute
   '/high-odds-betting-strategy': typeof HighOddsBettingStrategyRoute
   '/horse-racing': typeof HorseRacingRoute
   '/how-it-works': typeof HowItWorksRoute
@@ -671,6 +691,7 @@ export interface FileRoutesByFullPath {
   '/t20-world-cup-betting': typeof T20WorldCupBettingRoute
   '/telegram-channel': typeof TelegramChannelRoute
   '/tennis': typeof TennisRoute
+  '/tennis-schedule': typeof TennisScheduleRoute
   '/terms': typeof TermsRoute
   '/todays-best-odds': typeof TodaysBestOddsRoute
   '/transaction-limits': typeof TransactionLimitsRoute
@@ -726,6 +747,7 @@ export interface FileRoutesByTo {
   '/cricbet99-vs-reddybook': typeof Cricbet99VsReddybookRoute
   '/cricbet99-vs-skyexchange247': typeof Cricbet99VsSkyexchange247Route
   '/cricket': typeof CricketRoute
+  '/cricket-schedule': typeof CricketScheduleRoute
   '/demo-id': typeof DemoIdRoute
   '/deposit-issues': typeof DepositIssuesRoute
   '/disclaimer': typeof DisclaimerRoute
@@ -733,6 +755,7 @@ export interface FileRoutesByTo {
   '/exchange': typeof ExchangeRoute
   '/faq': typeof FaqRoute
   '/football': typeof FootballRoute
+  '/football-schedule': typeof FootballScheduleRoute
   '/high-odds-betting-strategy': typeof HighOddsBettingStrategyRoute
   '/horse-racing': typeof HorseRacingRoute
   '/how-it-works': typeof HowItWorksRoute
@@ -769,6 +792,7 @@ export interface FileRoutesByTo {
   '/t20-world-cup-betting': typeof T20WorldCupBettingRoute
   '/telegram-channel': typeof TelegramChannelRoute
   '/tennis': typeof TennisRoute
+  '/tennis-schedule': typeof TennisScheduleRoute
   '/terms': typeof TermsRoute
   '/todays-best-odds': typeof TodaysBestOddsRoute
   '/transaction-limits': typeof TransactionLimitsRoute
@@ -825,6 +849,7 @@ export interface FileRoutesById {
   '/cricbet99-vs-reddybook': typeof Cricbet99VsReddybookRoute
   '/cricbet99-vs-skyexchange247': typeof Cricbet99VsSkyexchange247Route
   '/cricket': typeof CricketRoute
+  '/cricket-schedule': typeof CricketScheduleRoute
   '/demo-id': typeof DemoIdRoute
   '/deposit-issues': typeof DepositIssuesRoute
   '/disclaimer': typeof DisclaimerRoute
@@ -832,6 +857,7 @@ export interface FileRoutesById {
   '/exchange': typeof ExchangeRoute
   '/faq': typeof FaqRoute
   '/football': typeof FootballRoute
+  '/football-schedule': typeof FootballScheduleRoute
   '/high-odds-betting-strategy': typeof HighOddsBettingStrategyRoute
   '/horse-racing': typeof HorseRacingRoute
   '/how-it-works': typeof HowItWorksRoute
@@ -868,6 +894,7 @@ export interface FileRoutesById {
   '/t20-world-cup-betting': typeof T20WorldCupBettingRoute
   '/telegram-channel': typeof TelegramChannelRoute
   '/tennis': typeof TennisRoute
+  '/tennis-schedule': typeof TennisScheduleRoute
   '/terms': typeof TermsRoute
   '/todays-best-odds': typeof TodaysBestOddsRoute
   '/transaction-limits': typeof TransactionLimitsRoute
@@ -925,6 +952,7 @@ export interface FileRouteTypes {
     | '/cricbet99-vs-reddybook'
     | '/cricbet99-vs-skyexchange247'
     | '/cricket'
+    | '/cricket-schedule'
     | '/demo-id'
     | '/deposit-issues'
     | '/disclaimer'
@@ -932,6 +960,7 @@ export interface FileRouteTypes {
     | '/exchange'
     | '/faq'
     | '/football'
+    | '/football-schedule'
     | '/high-odds-betting-strategy'
     | '/horse-racing'
     | '/how-it-works'
@@ -968,6 +997,7 @@ export interface FileRouteTypes {
     | '/t20-world-cup-betting'
     | '/telegram-channel'
     | '/tennis'
+    | '/tennis-schedule'
     | '/terms'
     | '/todays-best-odds'
     | '/transaction-limits'
@@ -1023,6 +1053,7 @@ export interface FileRouteTypes {
     | '/cricbet99-vs-reddybook'
     | '/cricbet99-vs-skyexchange247'
     | '/cricket'
+    | '/cricket-schedule'
     | '/demo-id'
     | '/deposit-issues'
     | '/disclaimer'
@@ -1030,6 +1061,7 @@ export interface FileRouteTypes {
     | '/exchange'
     | '/faq'
     | '/football'
+    | '/football-schedule'
     | '/high-odds-betting-strategy'
     | '/horse-racing'
     | '/how-it-works'
@@ -1066,6 +1098,7 @@ export interface FileRouteTypes {
     | '/t20-world-cup-betting'
     | '/telegram-channel'
     | '/tennis'
+    | '/tennis-schedule'
     | '/terms'
     | '/todays-best-odds'
     | '/transaction-limits'
@@ -1121,6 +1154,7 @@ export interface FileRouteTypes {
     | '/cricbet99-vs-reddybook'
     | '/cricbet99-vs-skyexchange247'
     | '/cricket'
+    | '/cricket-schedule'
     | '/demo-id'
     | '/deposit-issues'
     | '/disclaimer'
@@ -1128,6 +1162,7 @@ export interface FileRouteTypes {
     | '/exchange'
     | '/faq'
     | '/football'
+    | '/football-schedule'
     | '/high-odds-betting-strategy'
     | '/horse-racing'
     | '/how-it-works'
@@ -1164,6 +1199,7 @@ export interface FileRouteTypes {
     | '/t20-world-cup-betting'
     | '/telegram-channel'
     | '/tennis'
+    | '/tennis-schedule'
     | '/terms'
     | '/todays-best-odds'
     | '/transaction-limits'
@@ -1220,6 +1256,7 @@ export interface RootRouteChildren {
   Cricbet99VsReddybookRoute: typeof Cricbet99VsReddybookRoute
   Cricbet99VsSkyexchange247Route: typeof Cricbet99VsSkyexchange247Route
   CricketRoute: typeof CricketRoute
+  CricketScheduleRoute: typeof CricketScheduleRoute
   DemoIdRoute: typeof DemoIdRoute
   DepositIssuesRoute: typeof DepositIssuesRoute
   DisclaimerRoute: typeof DisclaimerRoute
@@ -1227,6 +1264,7 @@ export interface RootRouteChildren {
   ExchangeRoute: typeof ExchangeRoute
   FaqRoute: typeof FaqRoute
   FootballRoute: typeof FootballRoute
+  FootballScheduleRoute: typeof FootballScheduleRoute
   HighOddsBettingStrategyRoute: typeof HighOddsBettingStrategyRoute
   HorseRacingRoute: typeof HorseRacingRoute
   HowItWorksRoute: typeof HowItWorksRoute
@@ -1263,6 +1301,7 @@ export interface RootRouteChildren {
   T20WorldCupBettingRoute: typeof T20WorldCupBettingRoute
   TelegramChannelRoute: typeof TelegramChannelRoute
   TennisRoute: typeof TennisRoute
+  TennisScheduleRoute: typeof TennisScheduleRoute
   TermsRoute: typeof TermsRoute
   TodaysBestOddsRoute: typeof TodaysBestOddsRoute
   TransactionLimitsRoute: typeof TransactionLimitsRoute
@@ -1358,6 +1397,13 @@ declare module '@tanstack/react-router' {
       path: '/terms'
       fullPath: '/terms'
       preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tennis-schedule': {
+      id: '/tennis-schedule'
+      path: '/tennis-schedule'
+      fullPath: '/tennis-schedule'
+      preLoaderRoute: typeof TennisScheduleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tennis': {
@@ -1612,6 +1658,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HighOddsBettingStrategyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/football-schedule': {
+      id: '/football-schedule'
+      path: '/football-schedule'
+      fullPath: '/football-schedule'
+      preLoaderRoute: typeof FootballScheduleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/football': {
       id: '/football'
       path: '/football'
@@ -1659,6 +1712,13 @@ declare module '@tanstack/react-router' {
       path: '/demo-id'
       fullPath: '/demo-id'
       preLoaderRoute: typeof DemoIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricket-schedule': {
+      id: '/cricket-schedule'
+      path: '/cricket-schedule'
+      fullPath: '/cricket-schedule'
+      preLoaderRoute: typeof CricketScheduleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cricket': {
@@ -2033,6 +2093,7 @@ const rootRouteChildren: RootRouteChildren = {
   Cricbet99VsReddybookRoute: Cricbet99VsReddybookRoute,
   Cricbet99VsSkyexchange247Route: Cricbet99VsSkyexchange247Route,
   CricketRoute: CricketRoute,
+  CricketScheduleRoute: CricketScheduleRoute,
   DemoIdRoute: DemoIdRoute,
   DepositIssuesRoute: DepositIssuesRoute,
   DisclaimerRoute: DisclaimerRoute,
@@ -2040,6 +2101,7 @@ const rootRouteChildren: RootRouteChildren = {
   ExchangeRoute: ExchangeRoute,
   FaqRoute: FaqRoute,
   FootballRoute: FootballRoute,
+  FootballScheduleRoute: FootballScheduleRoute,
   HighOddsBettingStrategyRoute: HighOddsBettingStrategyRoute,
   HorseRacingRoute: HorseRacingRoute,
   HowItWorksRoute: HowItWorksRoute,
@@ -2076,6 +2138,7 @@ const rootRouteChildren: RootRouteChildren = {
   T20WorldCupBettingRoute: T20WorldCupBettingRoute,
   TelegramChannelRoute: TelegramChannelRoute,
   TennisRoute: TennisRoute,
+  TennisScheduleRoute: TennisScheduleRoute,
   TermsRoute: TermsRoute,
   TodaysBestOddsRoute: TodaysBestOddsRoute,
   TransactionLimitsRoute: TransactionLimitsRoute,

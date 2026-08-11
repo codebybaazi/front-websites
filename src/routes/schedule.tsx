@@ -73,8 +73,14 @@ const majorEvents = [
   { m: "Aug–Sep 2026", e: "US Open 2026", v: "New York", cat: "Tennis" },
 ];
 
-function Schedule() {
-  const [activeTab, setActiveTab] = useState<"Cricket" | "Football" | "Tennis">("Cricket");
+interface ScheduleProps {
+  initialTab?: "Cricket" | "Football" | "Tennis";
+}
+
+function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
+  const [activeTab, setActiveTab] = useState<"Cricket" | "Football" | "Tennis">(
+    initialTab.charAt(0).toUpperCase() + initialTab.slice(1) as any
+  );
   
   const filteredEvents = majorEvents.filter(e => e.cat === activeTab);
   
@@ -520,3 +526,5 @@ function Schedule() {
     </SiteLayout>
   );
 }
+
+export default Schedule;
