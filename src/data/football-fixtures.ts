@@ -119,7 +119,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersAway: ["Edin Džeko (Striker)", "Miralem Pjanić (Midfield)", "Sead Kolašinac (Defender)"],
     bettingTips: [
       "Canada's home crowd at BMO Field provides a +0.5 goal tactical xG superiority.",
-      "Edin Džeko remains a potent threat in the air; monitor 'dominance in 'Total Corners' and 'Aerial Duel' markets' markets.",
+      "Edin Džeko remains a potent threat in the air; monitor dominance in 'Total Corners' and 'Aerial Duel' markets.",
       "Canada's high-line defense could be vulnerable to Džeko's intelligent movement."
     ],
     detailedNarrative: "Canada makes their home debut in the 2026 World Cup at a sold-out BMO Field. The pace of Alphonso Davies will be the primary weapon against a veteran Bosnian defense. Our AI models indicate Canada will push for an early goal to leverage the home atmosphere. Bosnia will rely on Džeko's hold-up play to release their technical midfielders into the half-spaces.",
@@ -218,7 +218,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersAway: ["Hakan Çalhanoğlu (Midfield)", "Arda Güler (Forward)", "Barış Alper Yılmaz (Winger)"],
     bettingTips: [
       "Türkiye's technical midfield quality gives them a distinct edge in ball retention markets.",
-      "Australia's threat from set-pieces remains their best route to goal; back 'Souttar dominance in 'Total Corners' and 'Aerial Duel' markets'.",
+      "Australia's threat from set-pieces remains their best route to goal; back Harry Souttar's dominance in 'Total Corners' and 'Aerial Duel' markets.",
       "The 'Both Teams to Score' market is statistically favored given both teams' recent defensive lapses."
     ],
     detailedNarrative: "A fascinating intercontinental clash in Vancouver. Australia's physical, direct approach meets the technical flair and high-pressing style of Türkiye. Arda Güler is the one to watch for the Turkish side, while Australia will look to exploit their height advantage at every dead-ball situation. Our AI analysis predicts a high xG (Expected Goals) outcome with significant market liquidity with plenty of action in both boxes.",
@@ -878,7 +878,7 @@ export const footballFixtures: FootballFixture[] = [
     keyPlayersAway: ["Edin Džeko (Striker)", "Miralem Pjanić (Midfield)", "Sead Kolašinac (Defender)"],
     bettingTips: [
       "Granit Xhaka's pass completion rate will dictate the tempo; back 'Xhaka Over 75 Passes'.",
-      "Edin Džeko remains a potent threat in the air; monitor 'dominance in 'Total Corners' and 'Aerial Duel' markets' markets.",
+      "Edin Džeko remains a potent threat in the air; monitor dominance in 'Total Corners' and 'Aerial Duel' markets.",
       "Back 'Switzerland to Win' given their consistent record in major tournament group stages."
     ],
     detailedNarrative: "A disciplined tactical battle in Los Angeles. The Swiss precision meets Bosnian resilience. Granit Xhaka's creative leadership will be the focal point against a veteran Bosnian side led by Džeko. Our AI match overview predicts a low-scoring encounter where defensive organization will be the deciding factor.",
