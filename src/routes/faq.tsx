@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
+import { AiOverview } from "@/components/ai-overview";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export const Route = createFileRoute("/faq")({
@@ -90,6 +91,17 @@ function FAQ() {
           </Accordion>
         </div>
       </section>
+
+      <AiOverview 
+        summary="Cricbet99 Support Hub: Get instant answers to your most common questions and learn how to secure your betting journey today."
+        highlights={[
+          "Official ID registration and activation guide",
+          "Step-by-step deposit and withdrawal instructions",
+          "Verified human support available via WhatsApp",
+          "Secure account management and safety tips"
+        ]}
+      />
+
       <CTABand heading="Still have questions?" sub="Our WhatsApp team is online 24/7 — send us a message and we'll get right back." />
     </SiteLayout>
   );

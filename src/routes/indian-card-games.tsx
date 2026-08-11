@@ -82,7 +82,18 @@ function IndianCardGames() {
         </div>
       </section>
 
+      <AiOverview 
+        summary="Play the best of Indian card games live on Cricbet99. Experience real dealers and instant payouts on Teen Patti, Andar Bahar, and more."
+        highlights={[
+          "Live HD streaming of classic Indian card games",
+          "Hindi-speaking dealers for a local experience",
+          "Instant UPI payouts for every winning session",
+          "24/7 access to high-stakes card game tables"
+        ]}
+      />
+
       <CTABand 
+
         heading="Join the Live Dealer Table." 
         sub="Your Teen Patti seat is waiting. Message our verified WhatsApp number to get your Cricbet99 ID and start winning on India's favorite card games today." 
       />

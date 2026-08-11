@@ -77,6 +77,16 @@ function Football() {
         </div>
       </section>
 
+      <AiOverview 
+        summary="Cricbet99 offers elite football betting with real-time markets on every major league. From the Premier League to the ISL, get sharp odds and instant payouts."
+        highlights={[
+          "Live in-play markets on all major global leagues",
+          "Competitive odds for match winners and goal totals",
+          "Instant settlement and fast UPI withdrawals",
+          "24/7 support for all your football betting needs"
+        ]}
+      />
+
       <section className="mx-auto max-w-4xl px-6 py-16 border-t border-primary/10">
         <h2 className="text-3xl font-black md:text-4xl">Football Betting FAQs</h2>
         <div className="mt-10 space-y-4">

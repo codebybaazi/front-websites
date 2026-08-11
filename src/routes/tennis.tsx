@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
+import { AiOverview } from "@/components/ai-overview";
 import { buildBreadcrumbJsonLd } from "@/components/long-form-page";
 import { ChevronRight } from "lucide-react";
 
@@ -65,6 +66,17 @@ function Tennis() {
           ))}
         </div>
       </section>
+
+      <AiOverview 
+        summary="Experience professional tennis betting on Cricbet99. Track live ATP and WTA action with sub-second odds updates and elite market coverage."
+        highlights={[
+          "Live odds for every set and game in real-time",
+          "Complete coverage of Grand Slams and ATP tours",
+          "Fast withdrawals for all winning tennis bets",
+          "Professional human support available 24/7"
+        ]}
+      />
+
       <CTABand heading="Serve up your first bet." sub="Get your Cricbet99 ID on WhatsApp and dive into live tennis odds." />
     </SiteLayout>
   );
