@@ -38,7 +38,7 @@ function SEOAuditReport() {
   const technicalIssues = [
     { title: 'Mobile Responsiveness', status: 'Excellent', severity: 'green', desc: 'Tailwind-driven adaptive layouts verified for all major Indian mobile screen sizes.' },
     { title: 'Sitemap.xml', status: 'Valid', severity: 'green', desc: 'Dynamic sitemap includes matches, blogs, and static routes with correct priorities.' },
-    { title: 'Robots.txt', status: 'Optimized', severity: 'green', desc: 'Custom directives for Intelligence Hub and SEO signals implemented.' },
+    { title: 'Robots.txt & Meta', status: 'Optimized', severity: 'green', desc: 'Custom directives for Intelligence Hub and SEO signals implemented; zero stuffing.' },
     { title: 'Page Load Speed', status: 'Fast', severity: 'green', desc: 'React 19 + TanStack Start SSR ensures low Time to First Byte (TTFB) in India.' },
   ];
 
