@@ -231,15 +231,13 @@ function Schedule() {
                                   </td>
                                   <td className="p-4">
                                     <div className="text-sm font-bold text-foreground">{match.tournament}</div>
-                                    <div className="text-[10px] uppercase text-primary font-bold opacity-70 tracking-widest">{match.category}</div>
-                                  </td>
-                                  <td className="p-4">
-                                    <div className="flex flex-col gap-1">
-                                      <span className="text-[10px] px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 w-fit font-bold">
+                                    <div className="flex flex-wrap items-center gap-2 mt-1">
+                                      <span className="text-[10px] uppercase text-primary font-bold opacity-70 tracking-widest">{match.category}</span>
+                                      <span className="w-1 h-1 rounded-full bg-primary/30" />
+                                      <span className="text-[10px] font-bold text-foreground/50 uppercase tracking-tighter">{match.surface}</span>
+                                      <span className="w-1 h-1 rounded-full bg-primary/30" />
+                                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 font-bold leading-none">
                                         {match.tour}
-                                      </span>
-                                      <span className="text-[10px] px-2 py-0.5 rounded bg-background/60 text-foreground/60 border border-primary/10 w-fit">
-                                        {match.surface}
                                       </span>
                                     </div>
                                   </td>
