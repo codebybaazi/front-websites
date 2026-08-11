@@ -140,9 +140,9 @@ const FormMessage = React.forwardRef<
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, children, ...props }, ref) => {
   const { error, formMessageId } = useFormField();
-  const improveInternalLinkingOnAllPagesSoThatSiteWillScoreMoreOnSeoAndRankEasilySoImproveInternalLinkingStructure = error ? String(error?.message ?? "") : children;
+  const fixBrokenInternalLinks = error ? String(error?.message ?? "") : children;
 
-  if (!improveInternalLinkingOnAllPagesSoThatSiteWillScoreMoreOnSeoAndRankEasilySoImproveInternalLinkingStructure) {
+  if (!fixBrokenInternalLinks) {
     return null;
   }
 
@@ -153,7 +153,7 @@ const FormMessage = React.forwardRef<
       className={cn("text-[0.8rem] font-medium text-destructive", className)}
       {...props}
     >
-      {improveInternalLinkingOnAllPagesSoThatSiteWillScoreMoreOnSeoAndRankEasilySoImproveInternalLinkingStructure}
+      {fixBrokenInternalLinks}
     </p>
   );
 });
