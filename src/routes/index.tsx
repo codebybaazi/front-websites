@@ -596,7 +596,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                   </div>
                 </div>
 
-                <h2 className="mt-5 text-2xl font-black tracking-tight">
+                <h3 className="mt-5 text-2xl font-black tracking-tight uppercase tracking-tighter">
                   Your ID, ready in
                   <span
                     className="ml-1.5 bg-clip-text text-transparent"
@@ -604,7 +604,8 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                   >
                     3 quick steps.
                   </span>
-                </h2>
+                </h3>
+                <h4 className="mt-1 text-[10px] font-black text-primary/60 uppercase tracking-[0.3em]">Instant Platform Integration</h4>
                 <p className="mt-2 text-sm text-foreground/70">
                   No forms. No wait. Just message us on WhatsApp and start playing on India's most trusted platform.
                 </p>
