@@ -20,13 +20,41 @@ export const Route = createFileRoute("/schedule")({
       { property: "og:description", content: "Your definitive guide to the 2026 sports calendar. IPL fixtures, T20 World Cup 2026, and major tennis/football events with live betting analytics." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://cricbet99.co.in/schedule" },
+      { property: "og:image", content: "https://cricbet99.co.in/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "2026 Cricket Schedule & Live Sports Calendar | Cricbet99" },
+      { name: "twitter:description", content: "Official 2026 cricket schedule and live sports calendar. IPL 2026, T20 World Cup, and major events with live betting insights." },
+      { name: "twitter:image", content: "https://cricbet99.co.in/og-image.jpg" },
+      { name: "keywords", content: "cricket schedule 2026, IPL 2026 fixtures, T20 World Cup 2026 dates, football schedule 2026, tennis calendar 2026, sports betting schedule, live cricket matches 2026" },
     ],
-    links: [{ rel: "canonical", href: "https://cricbet99.co.in/schedule" }],
+    links: [
+      { rel: "canonical", href: "https://cricbet99.co.in/schedule" },
+      { rel: "alternate", hreflang: "en-in", href: "https://cricbet99.co.in/schedule" },
+    ],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/schedule", "2026 Cricket Schedule & Sports Calendar")),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SportsEvent",
+          "name": "2026 Global Sports Calendar",
+          "description": "Comprehensive schedule for 2026 major sports events including IPL, T20 World Cup, and FIFA World Cup.",
+          "startDate": "2026-01-01T00:00:00Z",
+          "endDate": "2026-12-31T23:59:59Z",
+          "location": {
+            "@type": "Place",
+            "name": "Global Venues"
+          },
+          "organizer": {
+            "@type": "Organization",
+            "name": "Cricbet99",
+            "url": "https://cricbet99.co.in"
+          }
+        }),
       },
     ],
   }),
@@ -88,13 +116,24 @@ function Schedule() {
         <div className="space-y-12">
           {/* Main Schedule Column */}
           <div className="space-y-12">
+            <div className="prose prose-invert max-w-none mb-12">
+              <h1 className="text-4xl md:text-5xl font-black mb-6">
+                2026 Cricket Schedule, <span className="text-primary">IPL Fixtures</span> & Sports Calendar
+              </h1>
+              <p className="text-lg text-foreground/70 leading-relaxed">
+                Stay ahead of the game with the most comprehensive 2026 sports calendar. Whether you're tracking the <strong>IPL 2026 schedule</strong>, 
+                planning for the <strong>T20 World Cup 2026</strong>, or looking for <strong>FIFA World Cup 2026</strong> kickoff times, Cricbet99 
+                provides real-time updates and AI-driven betting intelligence for every major tournament.
+              </p>
+            </div>
+            
             <div>
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
                   <Trophy className="w-5 h-5 text-primary" />
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight">
-                  {`${activeTab} Fixtures 2026`}
+                  {`${activeTab} Fixtures & Betting Schedule 2026`}
                 </h2>
               </div>
               
@@ -438,6 +477,28 @@ function Schedule() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16 bg-primary/5 rounded-3xl mb-16 border border-primary/10">
+        <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions — 2026 Sports Schedule</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-primary">Where can I find the IPL 2026 full schedule?</h3>
+            <p className="text-foreground/70 leading-relaxed">The IPL 2026 full schedule is updated live on Cricbet99. The tournament is expected to run from March to May 2026, featuring a 74-match format with the final in late May.</p>
+          </div>
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-primary">When is the T20 World Cup 2026 starting?</h3>
+            <p className="text-foreground/70 leading-relaxed">The ICC T20 World Cup 2026 is scheduled to be co-hosted by India and Sri Lanka in October and November 2026, capturing massive search intent for cricket fans worldwide.</p>
+          </div>
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-primary">How to track FIFA World Cup 2026 match timings in IST?</h3>
+            <p className="text-foreground/70 leading-relaxed">Our football tab converts all North American match times to Indian Standard Time (IST), ensuring you never miss a kickoff for the FIFA World Cup 2026 league stage or final.</p>
+          </div>
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-primary">Are tennis tournament dates for 2026 confirmed?</h3>
+            <p className="text-foreground/70 leading-relaxed">Yes, all major Grand Slams—Wimbledon, US Open, and WTA events—are listed in our Tennis calendar with surface details and defending champion insights.</p>
           </div>
         </div>
       </section>
