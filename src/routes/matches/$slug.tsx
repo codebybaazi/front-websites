@@ -42,21 +42,26 @@ export const Route = createFileRoute("/matches/$slug")({
     const matchName = isTennis ? m.tournament : `${m.homeTeam} vs ${m.awayTeam}`;
     
     // SEO Optimized title with high-volume keywords
-    const title = `${matchName} Prediction, Betting Tips & Live Odds | ${m.tournament} 2026 | Cricbet99`;
+    const title = isTennis 
+      ? `${m.tournament} 2026 Prediction, Winner Odds & Betting Tips | Cricbet99`
+      : `${m.homeTeam} vs ${m.awayTeam} Prediction, Betting Tips & Live Odds | ${m.tournament} 2026 | Cricbet99`;
     
     // Rich meta description for better CTR
-    const description = `Get expert ${m.sport.toLowerCase()} analysis for ${matchName} at ${m.venue}. ${m.winProbHome}% vs ${m.winProbAway}% win probability. Discover AI-driven betting tips, pitch reports, and live exchange odds on Cricbet99.`;
+    const description = isTennis
+      ? `Get expert ${m.sport.toLowerCase()} analysis for ${m.tournament} at ${m.venue}. ${m.homeTeam} confidence: ${m.winProbHome}%. Discover AI-driven tennis betting tips, surface analysis, and live exchange odds on Cricbet99.`
+      : `Get expert ${m.sport.toLowerCase()} analysis for ${matchName} at ${m.venue}. ${m.winProbHome}% vs ${m.winProbAway}% win probability. Discover AI-driven betting tips, pitch reports, and live exchange odds on Cricbet99.`;
     
     // Dynamic keywords based on match data
     const keywords = [
-      `${m.homeTeam} vs ${m.awayTeam} live`,
-      `${m.homeTeam} vs ${m.awayTeam} prediction`,
+      isTennis ? `${m.tournament} prediction` : `${m.homeTeam} vs ${m.awayTeam} live`,
+      isTennis ? `${m.tournament} betting tips` : `${m.homeTeam} vs ${m.awayTeam} prediction`,
       `${m.sport.toLowerCase()} betting tips`,
       `${m.tournament} fixtures 2026`,
       "online cricket id",
       "sports betting exchange",
       `live ${m.sport.toLowerCase()} odds`,
-      `${m.city} ${m.sport.toLowerCase()} matches`
+      `${m.city} ${m.sport.toLowerCase()} matches`,
+      `cricbet99 ${m.sport.toLowerCase()} login`
     ].join(", ");
 
     return {
@@ -91,6 +96,8 @@ export const Route = createFileRoute("/matches/$slug")({
             "name": matchName,
             "description": description,
             "startDate": m.startDate,
+            "endDate": m.endDate || undefined,
+            "eventStatus": "https://schema.org/EventScheduled",
             "location": {
               "@type": "Place",
               "name": m.venue,
@@ -101,15 +108,29 @@ export const Route = createFileRoute("/matches/$slug")({
               }
             },
             "competitor": [
-              { "@type": "SportsTeam", "name": m.homeTeam },
-              { "@type": "SportsTeam", "name": m.awayTeam }
+              { 
+                "@type": "SportsTeam", 
+                "name": m.homeTeam,
+                "url": `https://cricbet99.co.in/matches/${m.slug}#analysis`
+              },
+              { 
+                "@type": "SportsTeam", 
+                "name": m.awayTeam,
+                "url": `https://cricbet99.co.in/matches/${m.slug}#analysis`
+              }
             ],
             "offers": {
               "@type": "Offer",
               "url": "https://cricbet99.co.in/register",
               "price": "0",
               "priceCurrency": "INR",
-              "availability": "https://schema.org/InStock"
+              "availability": "https://schema.org/InStock",
+              "validFrom": new Date().toISOString()
+            },
+            "organizer": {
+              "@type": "Organization",
+              "name": "Cricbet99",
+              "url": "https://cricbet99.co.in"
             }
           }),
         },
@@ -121,18 +142,28 @@ export const Route = createFileRoute("/matches/$slug")({
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": `Who will win ${m.homeTeam} vs ${m.awayTeam}?`,
+                "name": isTennis ? `Who is favored to win the ${m.tournament}?` : `Who will win ${m.homeTeam} vs ${m.awayTeam}?`,
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": `According to our AI models, ${m.homeTeam} has a ${m.winProbHome}% win probability while ${m.awayTeam} stands at ${m.winProbAway}%.`
+                  "text": isTennis 
+                    ? `Based on Cricbet99's AI evaluation, ${m.homeTeam} enters the ${m.tournament} with a ${m.winProbHome}% confidence rating on the ${m.surface} surface.`
+                    : `According to our AI models, ${m.homeTeam} has a ${m.winProbHome}% win probability while ${m.awayTeam} stands at ${m.winProbAway}%. Prediction factors include recent form and venue history.`
                 }
               },
               {
                 "@type": "Question",
-                "name": `Where is the ${m.homeTeam} vs ${m.awayTeam} match being played?`,
+                "name": `How to get a Cricbet99 ID for ${m.sport} betting?`,
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": `The match is scheduled at ${m.venue} in ${m.city}.`
+                  "text": `You can get your official Cricbet99 ID instantly by clicking the WhatsApp button on our site. Register now for a 100% bonus on your first deposit for ${m.tournament} matches.`
+                }
+              },
+              {
+                "@type": "Question",
+                "name": `Where is the ${isTennis ? m.tournament : `${m.homeTeam} vs ${m.awayTeam}`} match being played?`,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": `The event is scheduled at ${m.venue} in ${m.city}, ${m.country || 'India'}.`
                 }
               }
             ]
