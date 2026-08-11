@@ -64,7 +64,8 @@ function HowItWorks() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <h2 className="text-3xl font-black md:text-4xl">Why the WhatsApp-first flow works</h2>
+        <h2 className="text-3xl font-black md:text-4xl mb-2 uppercase tracking-tighter">Why the WhatsApp-first flow works</h2>
+        <h3 className="text-xs font-black text-primary/60 uppercase tracking-[0.4em] mb-10">Advanced Communication Architecture</h3>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {perks.map((p) => (
             <div key={p.title} className="rounded-2xl border border-primary/20 bg-background/60 p-7">
