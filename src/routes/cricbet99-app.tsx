@@ -62,7 +62,8 @@ function AppPage() {
         </div>
       </section>
       <section className="mx-auto max-w-4xl px-6 py-8">
-        <h2 className="text-3xl font-black md:text-4xl">Safe install in 4 steps</h2>
+        <h2 className="text-3xl font-black md:text-4xl mb-2 uppercase tracking-tighter">Safe install in 4 steps</h2>
+        <h3 className="text-xs font-black text-accent/60 uppercase tracking-[0.4em] mb-8">Official APK Setup Procedure</h3>
         <ol className="mt-8 space-y-4">
           {steps.map((s, i) => (
             <li key={s} className="flex gap-4 rounded-2xl border border-primary/20 bg-background/60 p-5">
