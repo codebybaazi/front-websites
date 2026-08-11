@@ -94,7 +94,7 @@ function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
     <SiteLayout>
       <PageHero
         wide
-        eyebrow="2026 Sports Internal Linking"
+        eyebrow="2026 Sports Intelligence Hub"
         title={<>2026 Cricket Schedule & <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Live Sports Calendar.</span></>}
         subtitle="The definitive guide to the IPL 2026 fixtures, T20 World Cup 2026 schedule, and international football/tennis events. Track every live match and betting market on Cricbet99."
       />
