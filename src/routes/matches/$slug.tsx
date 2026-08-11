@@ -491,9 +491,10 @@ function MatchDetailPage() {
               <div className="absolute top-0 right-0 p-8 opacity-5">
                 <BarChart3 className="w-32 h-32" />
               </div>
-              <h2 className="text-2xl font-black flex items-center gap-3 mb-10 uppercase tracking-widest">
+              <h2 className="text-2xl font-black flex items-center gap-3 mb-2 uppercase tracking-widest">
                 <TrendingUp className="h-6 w-6 text-primary" /> {m.sport === 'Football' ? 'Projected Score & HT/FT' : m.sport === 'Tennis' ? 'Predicted score & set markets' : 'Projected Scoreline & Over-by-Over'}
               </h2>
+              <h3 className="text-xs font-black text-foreground/40 uppercase tracking-[0.25em] mb-10">Real-time Performance Metrics</h3>
               <div className="grid gap-12 md:grid-cols-2">
                 <div className="space-y-6">
                    <div className="flex items-center gap-3 p-4 rounded-xl bg-primary/10 border border-primary/20">
