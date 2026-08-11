@@ -3086,8 +3086,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 16",
     category: "Round of 16",
-    marketHighlights: ["To qualify"],
-    keywords: ["portugal vs spain r16"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Cristiano Ronaldo Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["portugal vs spain prediction", "r16 world cup odds", "iberian derby betting"],
+    headToHead: "Spain won their last competitive meeting 1-0 in 2022. The Iberian Derby returns to the world stage.",
+    homeRecentForm: "W,W,W,L,W",
+    awayRecentForm: "W,W,W,W,D",
+    keyPlayersHome: ["Cristiano Ronaldo (Striker)", "Bruno Fernandes (Midfield)", "Rafael Leão (Winger)"],
+    keyPlayersAway: ["Lamine Yamal (Winger)", "Rodri (Midfield)", "Nico Williams (Winger)"],
+    bettingTips: [
+      "Cristiano Ronaldo's scoring record in tournament knockouts is elite; back him for anytime scorer.",
+      "Spain's Lamine Yamal is the primary threat on the wing; monitor 'Spain Total Take-ons Over 8.5'.",
+      "Back 'Both Teams to Score' given the elite attacking quality and high-intensity rivalry."
+    ],
+    detailedNarrative: "The Iberian Derby headlines the Round of 16 in Dallas. Portugal's technical mastery, led by Cristiano Ronaldo, faces the tactical dominance of Spain's new generation. Our AI match overview predicts a masterclass in ball-control from both sides, where a single moment of individual magic will decide it at AT&T Stadium.",
+    pitchReport: "AT&T Stadium features a fast-paced synthetic surface. This will suit the rapid passing game favored by both sides.",
+    tacticalPreview: "Portugal will deploy their fluid 4-3-3. Spain is expected to respond with a compact 4-3-3, prioritizing ball retention and high pressing.",
+    winProbHome: 50,
+    winProbAway: 50,
+    predictionInsight: "This fixture has a high rate of draws in 90 minutes. Tactical discipline and game management in extra time will be the deciding factors.",
+    projectedScoreHome: "2 - 2"
   },
   {
     slug: "wc2026-r16-6",
@@ -3102,8 +3119,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 16",
     category: "Round of 16",
-    marketHighlights: ["To qualify"],
-    keywords: ["usa vs belgium r16"]
+    marketHighlights: ["To qualify", "USA to Win", "Christian Pulisic Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["usa vs belgium prediction", "r16 world cup betting", "usmnt vs red devils betting"],
+    headToHead: "Belgium famously defeated the USA 2-1 in the 2014 World Cup Round of 16. USA's home-continent intensity vs Belgium's technical brilliance.",
+    homeRecentForm: "W,D,W,W,L",
+    awayRecentForm: "W,W,D,L,W",
+    keyPlayersHome: ["Christian Pulisic (Forward)", "Gio Reyna (Midfield)", "Tyler Adams (Midfield)"],
+    keyPlayersAway: ["Kevin De Bruyne (Midfield)", "Romelu Lukaku (Striker)", "Jérémy Doku (Winger)"],
+    bettingTips: [
+      "Christian Pulisic's performance at Lumen Field is a major tactical weapon; back him for anytime scorer.",
+      "Kevin De Bruyne's creative depth in midfield is the primary threat for Belgium.",
+      "Back 'USA to Win (to qualify)' given the significant home advantage and vertical pace."
+    ],
+    detailedNarrative: "A high-stakes rematch of 2014 in Seattle. The USA's home-continent intensity faces the technical brilliance of Belgium's golden generation. Our AI match overview predicts a high-energy transition game where the home crowd will be the 12th man. Expect a vibrant atmosphere at Lumen Field.",
+    pitchReport: "Lumen Field features a fast-paced synthetic surface. This will suit the rapid transitions favored by both Pulisic and Doku.",
+    tacticalPreview: "USA will deploy their fluid 4-3-3 with high pressing. Belgium is expected to respond with a fluid 3-4-2-1, prioritizing ball retention.",
+    winProbHome: 48,
+    winProbAway: 52,
+    predictionInsight: "USA has a strong record in home tournaments. However, Belgium's technical depth and experience provide a significant edge in knockout football.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-r16-7",
@@ -3118,8 +3152,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 16",
     category: "Round of 16",
-    marketHighlights: ["To qualify"],
-    keywords: ["argentina vs egypt r16"]
+    marketHighlights: ["To qualify", "Lionel Messi Anytime Goal", "Argentina to Win to Nil", "Total Goals Over 2.5"],
+    keywords: ["argentina vs egypt prediction", "r16 world cup betting", "messi vs salah betting"],
+    headToHead: "First competitive meeting between Lionel Messi and Mohamed Salah at international level. The world champions vs the Pharaohs.",
+    homeRecentForm: "W,W,W,W,D",
+    awayRecentForm: "W,D,W,W,D",
+    keyPlayersHome: ["Lionel Messi (Forward)", "Julián Álvarez (Striker)", "Alexis Mac Allister (Midfield)"],
+    keyPlayersAway: ["Mohamed Salah (Forward)", "Mostafa Mohamed (Striker)", "Omar Marmoush (Forward)"],
+    bettingTips: [
+      "Lionel Messi's performance in tournament knockouts is elite; back him for anytime scorer.",
+      "Mohamed Salah's individual brilliance is the primary creative outlet for Egypt.",
+      "Back 'Argentina to Win' given their tactical depth and superior ball-control."
+    ],
+    detailedNarrative: "A clash of icons in Atlanta. The world champions face the clinical excellence of Egypt's Pharaohs. Messi's creative genius will be tested by Egypt's disciplined mid-block and Salah's individual brilliance. Our AI match overview predicts a masterclass in control from the Albiceleste. Expect a dominant performance from Argentina.",
+    pitchReport: "Mercedes-Benz Stadium features a fast-paced synthetic surface. This will suit the rapid passing game favored by Argentina.",
+    tacticalPreview: "Argentina will deploy their fluid 4-3-3. Egypt is expected to respond with a robust 4-3-3, prioritizing Salah's freedom on the right.",
+    winProbHome: 78,
+    winProbAway: 22,
+    predictionInsight: "Argentina has a 100% win rate against African nations in recent World Cups. Their experience and individual quality are too strong for the debutants.",
+    projectedScoreHome: "3 - 0"
   },
   {
     slug: "wc2026-r16-8",
@@ -3134,8 +3185,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Round of 16",
     category: "Round of 16",
-    marketHighlights: ["To qualify"],
-    keywords: ["switzerland vs colombia r16"]
+    marketHighlights: ["To qualify", "Both Teams to Score", "Breel Embolo Anytime Goal", "Total Goals Over 2.5"],
+    keywords: ["switzerland vs colombia prediction", "r16 world cup betting", "rossocrociati vs los cafeteros betting"],
+    headToHead: "Colombia won their last competitive meeting 2-0 in 1994. Switzerland's technical precision vs Colombia's high-intensity pressing.",
+    homeRecentForm: "W,D,W,D,W",
+    awayRecentForm: "W,W,D,W,W",
+    keyPlayersHome: ["Granit Xhaka (Midfield)", "Manuel Akanji (Defender)", "Breel Embolo (Forward)"],
+    keyPlayersAway: ["Luis Díaz (Winger)", "James Rodríguez (Midfield)", "Luis Sinisterra (Winger)"],
+    bettingTips: [
+      "Granit Xhaka's creative leadership is the primary engine for the Swiss midfield.",
+      "Colombia's Luis Díaz is a potent threat on the break; back him for anytime scorer.",
+      "Back 'Both Teams to Score' given the elite attacking quality and vertical pace on both sides."
+    ],
+    detailedNarrative: "A clash of tactical discipline in Vancouver. The technical precision of Switzerland faces the high-intensity energy of Colombia. Our AI match overview predicts a high-quality encounter where a single moment of magic will decide it. Expect a tense knockout battle at BC Place.",
+    pitchReport: "BC Place features a fast synthetic surface. This will suit the rapid ball-movement favored by both sides.",
+    tacticalPreview: "Switzerland will deploy their fluid 3-4-2-1. Colombia is expected to respond with a robust 4-2-3-1, focusing on winning second balls and quick transitions.",
+    winProbHome: 48,
+    winProbAway: 52,
+    predictionInsight: "Colombia has a strong record in early knockout stages against European opposition. Their tactical organization provides a significant edge.",
+    projectedScoreHome: "1 - 2"
   },
 
 
