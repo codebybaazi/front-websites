@@ -84,7 +84,7 @@ function Schedule() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16">
+      <section className="mx-auto max-w-[90rem] px-6 py-16">
         <div className="space-y-12">
           {/* Main Schedule Column */}
           <div className="space-y-12">
