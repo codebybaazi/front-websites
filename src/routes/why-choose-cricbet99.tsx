@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LongFormPage, buildFaqJsonLd, buildBreadcrumbJsonLd } from "@/components/long-form-page";
+import { AiOverview } from "@/components/ai-overview";
 import content from "@/data/pages/why-choose-cricbet99.json";
 
 export const Route = createFileRoute("/why-choose-cricbet99")({
@@ -28,5 +29,15 @@ export const Route = createFileRoute("/why-choose-cricbet99")({
 });
 
 function Page_why_choose_cricbet99() {
-  return <LongFormPage content={content} />;
+  return (
+    <LongFormPage 
+      content={content} 
+      extra={
+        <AiOverview 
+          summary={content.subtitle} 
+          highlights={content.features.slice(0, 4).map(f => f.desc)} 
+        />
+      } 
+    />
+  );
 }

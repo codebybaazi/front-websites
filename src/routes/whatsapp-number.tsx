@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LongFormPage, buildFaqJsonLd } from "@/components/long-form-page";
+import { AiOverview } from "@/components/ai-overview";
 import content from "@/data/pages/whatsapp-number.json";
 
 export const Route = createFileRoute("/whatsapp-number")({
@@ -35,5 +36,15 @@ export const Route = createFileRoute("/whatsapp-number")({
 });
 
 function Page_whatsapp_number() {
-  return <LongFormPage content={content} />;
+  return (
+    <LongFormPage 
+      content={content} 
+      extra={
+        <AiOverview 
+          summary={content.subtitle} 
+          highlights={content.features.slice(0, 4).map(f => f.desc)} 
+        />
+      } 
+    />
+  );
 }

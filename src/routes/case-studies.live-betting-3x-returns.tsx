@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LongFormPage, buildFaqJsonLd, buildBreadcrumbJsonLd } from "@/components/long-form-page";
+import { AiOverview } from "@/components/ai-overview";
 import content from "@/data/pages/case-studies__live-betting-3x-returns.json";
 
 export const Route = createFileRoute("/case-studies/live-betting-3x-returns")({
@@ -28,5 +29,15 @@ export const Route = createFileRoute("/case-studies/live-betting-3x-returns")({
 });
 
 function Page_case_studies_live_betting_3x_returns() {
-  return <LongFormPage content={content} />;
+  return (
+    <LongFormPage 
+      content={content} 
+      extra={
+        <AiOverview 
+          summary={content.subtitle} 
+          highlights={content.features.slice(0, 4).map(f => f.desc)} 
+        />
+      } 
+    />
+  );
 }
