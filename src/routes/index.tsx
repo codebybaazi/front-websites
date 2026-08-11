@@ -706,7 +706,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
             >
               <Trophy className="h-3.5 w-3.5" /> Why Indian Players Trust Cricbet99
             </div>
-            <h2 className="mt-6 text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
+            <h2 className="mt-6 text-4xl font-black leading-[1.05] tracking-tight md:text-6xl uppercase tracking-tighter">
               A premium, secure & rewarding
               <br className="hidden sm:block" />
               <span
@@ -716,6 +716,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                 online betting experience.
               </span>
             </h2>
+            <h3 className="mt-3 text-sm font-black text-primary/60 uppercase tracking-[0.5em]">Industry-Leading Security & Market Liquidity</h3>
             <p className="mx-auto mt-5 max-w-2xl text-base text-foreground/70 md:text-lg">
               Sharper odds. Faster payouts. A support team that actually picks up — every single time. Here's what 1 lakh+ Indian bettors already know.
             </p>
