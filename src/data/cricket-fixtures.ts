@@ -1440,13 +1440,14 @@ export const cricketFixtures: CricketSeries[] = [
         keyPlayersHome: ["Quinton de Kock", "Kagiso Rabada"],
         keyPlayersAway: ["Travis Head", "Adam Zampa"],
         bettingTips: [
-          "Quinton de Kock to score 50+ runs.",
-          "Rabada to pick early wickets under the lights.",
-          "Durban's sea breeze to help the swing bowlers."
+          "Quinton de Kock to score 50+ runs in this high-profile aus vs sa clash.",
+          "Rabada to pick early wickets under the lights, a key for south africa vs australia cricket analysis.",
+          "Durban's sea breeze to help the swing bowlers.",
+          "Check live 'aus vs sa live score' updates for in-play market shifts."
         ],
-        detailedNarrative: "The tour of Australia in South Africa begins in Durban. Kingsmead is famous for its swing and seam, especially under the lights. Quinton de Kock's aggressive start and Rabada's opening spell will be crucial for the Proteas. Australia's middle order led by Travis Head will look to counter-attack.",
-        pitchReport: "Good bounce and carry. Sea breeze will aid swing bowlers in the second innings.",
-        tacticalPreview: "South Africa will look to bowl first. Australia needs Zampa to be effective in the middle overs.",
+        detailedNarrative: "The tour of Australia in South Africa 2026 begins in Durban. Kingsmead is famous for its swing and seam, especially under the lights. Fans tracking the australia national cricket team vs south africa national cricket team records will note the intensity of this rivalry. Quinton de Kock's aggressive start and Rabada's opening spell will be crucial for the Proteas. Australia's middle order led by Travis Head will look to counter-attack.",
+        pitchReport: "Good bounce and carry. Sea breeze will aid swing bowlers in the second innings. Ideal for 'aus vs sa' tactical betting strategies.",
+        tacticalPreview: "South Africa will look to bowl first. Australia needs Zampa to be effective in the middle overs, a recurring theme in sa vs aus odi matches.",
         winProbHome: 52,
         winProbAway: 48,
         predictionInsight: "A close contest, but South Africa's familiarity with Kingsmead gives them a slight edge.",
@@ -1536,13 +1537,14 @@ export const cricketFixtures: CricketSeries[] = [
         keyPlayersHome: ["Temba Bavuma", "Kagiso Rabada"],
         keyPlayersAway: ["Steve Smith", "Pat Cummins"],
         bettingTips: [
-          "Seam movement will be significant in the first two days.",
+          "Seam movement will be significant in the first two days of this sa vs aus test.",
           "Steve Smith to be the most critical wicket for South Africa.",
-          "Draw is unlikely unless weather intervenes."
+          "Draw is unlikely unless weather intervenes, making it a hot topic for 'australia vs south africa' predictions.",
+          "Kagiso Rabada to target the top order in the first session."
         ],
-        detailedNarrative: "The Test series begins in Durban. Kingsmead's unique conditions, including the coastal breeze and local humidity, will test the techniques of the world's best. South Africa's pace battery is ready to challenge the Australian middle order. A battle of endurance and tactical discipline.",
-        pitchReport: "Green top expected. Significant help for seamers early on, flattening out for batting on Days 3 and 4.",
-        tacticalPreview: "High-pressure Test cricket. Australia will rely on their world-class pace trio.",
+        detailedNarrative: "The Test series begins in Durban. Kingsmead's unique conditions, including the coastal breeze and local humidity, will test the techniques of the world's best. The australia national cricket team vs south africa national cricket team history at this venue is legendary. South Africa's pace battery is ready to challenge the Australian middle order. A battle of endurance and tactical discipline for every south africa vs australia cricket fan.",
+        pitchReport: "Green top expected. Significant help for seamers early on, flattening out for batting on Days 3 and 4. Watch for 'aus vs sa' reverse swing trends.",
+        tacticalPreview: "High-pressure Test cricket. Australia will rely on their world-class pace trio. Key focus on the sa vs aus test championship standings.",
         winProbHome: 45,
         winProbAway: 55,
         predictionInsight: "Australia's superior Test experience gives them a slight advantage.",
@@ -1896,13 +1898,14 @@ export const cricketFixtures: CricketSeries[] = [
         keyPlayersHome: ["Prabath Jayasuriya", "Dimuth Karunaratne"],
         keyPlayersAway: ["Rohit Sharma", "Ravindra Jadeja"],
         bettingTips: [
-          "Prabath Jayasuriya to take a 5-wicket haul.",
-          "Ravindra Jadeja to be India's most effective bowler.",
-          "First innings total will be crucial; 300+ is a winning score."
+          "Prabath Jayasuriya to take a 5-wicket haul, a key pick for ind vs sl 2026 fantasy teams.",
+          "Ravindra Jadeja to be India's most effective bowler on this turning track.",
+          "First innings total will be crucial; 300+ is a winning score in this india srilanka cricket match.",
+          "Follow the india national cricket team vs sri lanka national cricket team live updates for session breaks."
         ],
-        detailedNarrative: "India's Test series in Sri Lanka begins in the scenic Galle. The pitch here is notorious for its turn from Day 1. India's world-class spinners vs Sri Lanka's local masters will be the tactical highlight. Rohit Sharma's leadership and ability to handle spin will be key for India's start.",
-        pitchReport: "Classic Galle deck. Dry and abrasive; will turn sharply from the afternoon of Day 1.",
-        tacticalPreview: "Spin will dominate. Both teams will likely play three specialist spinners.",
+        detailedNarrative: "India's Test series in Sri Lanka begins in the scenic Galle. The pitch here is notorious for its turn from Day 1. The india national cricket team vs sri lanka national cricket team rivalry in Galle is legendary. Rohit Sharma's leadership and ability to handle spin will be key for India's start. Fans looking for the India tour of Sri Lanka 2026 schedule will see this as the definitive spin test.",
+        pitchReport: "Classic Galle deck. Dry and abrasive; will turn sharply from the afternoon of Day 1. Essential for 'sl vs ind' tactical planning.",
+        tacticalPreview: "Spin will dominate. Both teams will likely play three specialist spinners, a common feature in india and sri lanka cricket match history.",
         winProbHome: 48,
         winProbAway: 52,
         predictionInsight: "India's superior spin variety (Ashwin/Jadeja/Kuldeep) gives them a slight edge even in Galle.",
@@ -1928,13 +1931,14 @@ export const cricketFixtures: CricketSeries[] = [
         keyPlayersHome: ["Angelo Mathews", "Maheesh Theekshana"],
         keyPlayersAway: ["Yashasvi Jaiswal", "Jasprit Bumrah"],
         bettingTips: [
-          "Yashasvi Jaiswal to score a century.",
-          "Jasprit Bumrah to be effective with reverse swing.",
-          "High intensity series finale expected."
+          "Yashasvi Jaiswal to score a century, continuing his india srilanka cricket match dominance.",
+          "Jasprit Bumrah to be effective with reverse swing in this India tour of Sri Lanka 2026 finale.",
+          "High intensity series finale expected with 'ind vs sl' rankings at stake.",
+          "Angelo Mathews to be the key anchor for the hosts."
         ],
-        detailedNarrative: "The 2nd Test at the SSC in Colombo. Traditionally a batting paradise, this ground tests the patience of bowlers. Yashasvi Jaiswal's aggressive intent will be India's tactical weapon. Sri Lanka will rely on the experience of Mathews and the mystery of Theekshana. A battle of endurance and skill.",
-        pitchReport: "Batting-friendly for the first three days. Will offer reverse swing and some turn later.",
-        tacticalPreview: "Teams will look to bat big in the first innings. Reverse swing will be a major weapon on Day 4.",
+        detailedNarrative: "The 2nd Test at the SSC in Colombo. Traditionally a batting paradise, this ground tests the patience of bowlers. The india national cricket team vs sri lanka national cricket team history at SSC suggests a high-scoring affair. Yashasvi Jaiswal's aggressive intent will be India's tactical weapon. Sri Lanka will rely on the experience of Mathews and the mystery of Theekshana.",
+        pitchReport: "Batting-friendly for the first three days. Will offer reverse swing and some turn later. Ideal for india and sri lanka cricket match betting enthusiasts.",
+        tacticalPreview: "Teams will look to bat big in the first innings. Reverse swing will be a major weapon on Day 4. Watch for 'sl vs ind' session transitions.",
         winProbHome: 45,
         winProbAway: 55,
         predictionInsight: "India's balanced attack makes them favorites on a more traditional pitch.",
