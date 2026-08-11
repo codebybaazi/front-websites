@@ -43,5 +43,15 @@ export const Route = createFileRoute("/register")({
 });
 
 function Page_register() {
-  return <LongFormPage content={content} />;
+  return (
+    <LongFormPage 
+      content={content} 
+      extra={
+        <AiOverview 
+          summary={content.subtitle} 
+          highlights={content.features.slice(0, 4).map(f => f.desc)} 
+        />
+      } 
+    />
+  );
 }

@@ -37,5 +37,15 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
-  return <LongFormPage content={content} />;
+  return (
+    <LongFormPage 
+      content={content} 
+      extra={
+        <AiOverview 
+          summary={content.subtitle} 
+          highlights={content.features.slice(0, 4).map(f => f.desc)} 
+        />
+      } 
+    />
+  );
 }

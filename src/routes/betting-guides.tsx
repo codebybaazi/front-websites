@@ -28,5 +28,15 @@ export const Route = createFileRoute("/betting-guides")({
 });
 
 function Page_betting_guides() {
-  return <LongFormPage content={content} />;
+  return (
+    <LongFormPage 
+      content={content} 
+      extra={
+        <AiOverview 
+          summary={content.subtitle} 
+          highlights={content.features.slice(0, 4).map(f => f.desc)} 
+        />
+      } 
+    />
+  );
 }

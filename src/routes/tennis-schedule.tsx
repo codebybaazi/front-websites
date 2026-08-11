@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import SchedulePage from './schedule'
 import { buildBreadcrumbJsonLd } from '@/components/long-form-page'
+import { AiOverview } from '@/components/ai-overview'
 
 export const Route = createFileRoute('/tennis-schedule')({
   head: () => ({
@@ -19,5 +20,18 @@ export const Route = createFileRoute('/tennis-schedule')({
       },
     ],
   }),
-  component: () => <SchedulePage initialTab="Tennis" />,
+  component: () => (
+    <>
+      <SchedulePage initialTab="Tennis" />
+      <AiOverview 
+        summary="ATP & WTA Tournament Hub: 2026 Grand Slam schedules and global tennis tour intelligence for professional traders."
+        highlights={[
+          "Grand Slam 2026 Key Dates",
+          "Surface-Specific Tour Data",
+          "ATP/WTA Tournament Calendar",
+          "Elite Tennis Event Tracking"
+        ]}
+      />
+    </>
+  ),
 })

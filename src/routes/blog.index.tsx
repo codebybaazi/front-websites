@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { blogPosts } from "@/data/blog-posts";
+import { AiOverview } from "@/components/ai-overview";
 import defaultHero from "@/assets/stadium.webp";
 
 const INITIAL_COUNT = 30;
@@ -107,6 +108,15 @@ function Blog() {
           </div>
         )}
       </section>
+      <AiOverview 
+        summary="Cricbet99 Intelligence Hub: Expert analysis, IPL 2026 betting tips, and market strategy guides from India's top traders."
+        highlights={[
+          "IPL 2026 Match Previews",
+          "Advanced Betting Strategies",
+          "Live Market Insight Reports",
+          "Responsible Gaming Resources"
+        ]}
+      />
       <CTABand heading="Read up, then bet smart." sub="Get your Cricbet99 ID on WhatsApp and put what you've learned into play." />
     </SiteLayout>
   );

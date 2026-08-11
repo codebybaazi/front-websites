@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MessageCircle } from "lucide-react";
 import { SiteLayout, PageHero, WA } from "@/components/site-layout";
+import { AiOverview } from "@/components/ai-overview";
 
 export const Route = createFileRoute("/login")({
   head: () => ({
@@ -80,6 +81,15 @@ function LoginPage() {
           ))}
         </div>
       </section>
+      <AiOverview 
+        summary="Cricbet99 Official Login Access: Securely manage your betting ID with 24/7 human oversight and bank-grade encryption."
+        highlights={[
+          "Verified WhatsApp Login Links",
+          "Instant Password Reset Service",
+          "256-bit Session Encryption",
+          "Anti-Phishing Security Protocols"
+        ]}
+      />
     </SiteLayout>
   );
 }

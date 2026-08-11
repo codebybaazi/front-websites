@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import SchedulePage from './schedule'
 import { buildBreadcrumbJsonLd } from '@/components/long-form-page'
+import { AiOverview } from '@/components/ai-overview'
 
 export const Route = createFileRoute('/cricket-schedule')({
   head: () => ({
@@ -19,5 +20,18 @@ export const Route = createFileRoute('/cricket-schedule')({
       },
     ],
   }),
-  component: () => <SchedulePage initialTab="Cricket" />,
+  component: () => (
+    <>
+      <SchedulePage initialTab="Cricket" />
+      <AiOverview 
+        summary="IPL 2026 & Cricket Schedule Hub: Real-time intelligence on upcoming fixtures, venue stats, and market movements."
+        highlights={[
+          "Live IPL 2026 Fixture Tracking",
+          "Venue-Specific Betting Data",
+          "T20 World Cup 2026 Previews",
+          "Ball-by-Ball Schedule Updates"
+        ]}
+      />
+    </>
+  ),
 })
