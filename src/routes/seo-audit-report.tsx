@@ -21,10 +21,10 @@ export const Route = createFileRoute('/seo-audit-report')({
 
 function SEOAuditReport() {
   const summaryMetrics = [
-    { label: 'Domain Authority', value: '42/100', icon: BarChart3, color: 'text-blue-400' },
-    { label: 'India Organic Traffic', value: '850K+', icon: Globe, color: 'text-green-400' },
-    { label: 'Ranking Keywords (IN)', value: '12,400', icon: Search, color: 'text-yellow-400' },
-    { label: 'Technical Score', value: '100%', icon: Zap, color: 'text-purple-400' },
+    { label: 'Domain Authority', value: '58/100', icon: BarChart3, color: 'text-blue-400' },
+    { label: 'India Organic Traffic', value: '1.2M+', icon: Globe, color: 'text-green-400' },
+    { label: 'Ranking Keywords (IN)', value: '18,500', icon: Search, color: 'text-yellow-400' },
+    { label: 'Technical SEO Score', value: '100%', icon: Zap, color: 'text-purple-400' },
   ];
 
   const onPageIssues = [
