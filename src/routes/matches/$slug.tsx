@@ -311,9 +311,10 @@ function MatchDetailPage() {
                <div className="absolute top-0 right-0 p-4 opacity-10">
                  <Timer className="w-24 h-24" />
                </div>
-               <h2 className="text-xl font-black uppercase tracking-[0.2em] text-primary mb-6 flex items-center gap-2">
+               <h2 className="text-xl font-black uppercase tracking-[0.2em] text-primary mb-2 flex items-center gap-2">
                  <Zap className="h-5 w-5" /> Quick Summary
                </h2>
+               <h3 className="text-sm font-bold text-foreground/60 mb-6 uppercase tracking-widest">Crucial Match Briefing</h3>
                <p className="text-lg font-medium leading-relaxed text-foreground/90">
                  {m.homeTeam} vs {m.awayTeam} is one of the most anticipated fixtures in the {m.tournament}. With {m.homeTeam} showing {(m.homeRecentForm?.split('W').length || 1) > 2 ? 'strong' : 'mixed'} recent form, this match at {m.venue} is set to be a high-scoring encounter with massive betting liquidity.
                </p>
