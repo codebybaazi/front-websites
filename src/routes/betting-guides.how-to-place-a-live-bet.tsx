@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LongFormPage, buildFaqJsonLd, buildBreadcrumbJsonLd } from "@/components/long-form-page";
+import { AiOverview } from "@/components/ai-overview";
 import content from "@/data/pages/betting-guides__how-to-place-a-live-bet.json";
 
 export const Route = createFileRoute("/betting-guides/how-to-place-a-live-bet")({
@@ -28,5 +29,15 @@ export const Route = createFileRoute("/betting-guides/how-to-place-a-live-bet")(
 });
 
 function Page_betting_guides_how_to_place_a_live_bet() {
-  return <LongFormPage content={content} />;
+  return (
+    <LongFormPage 
+      content={content} 
+      extra={
+        <AiOverview 
+          summary={content.subtitle} 
+          highlights={content.features.slice(0, 4).map(f => f.desc)} 
+        />
+      } 
+    />
+  );
 }

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LongFormPage, buildFaqJsonLd, buildBreadcrumbJsonLd } from "@/components/long-form-page";
+import { AiOverview } from "@/components/ai-overview";
 import content from "@/data/pages/big-win-stories.json";
 
 export const Route = createFileRoute("/big-win-stories")({
@@ -28,5 +29,15 @@ export const Route = createFileRoute("/big-win-stories")({
 });
 
 function Page_big_win_stories() {
-  return <LongFormPage content={content} />;
+  return (
+    <LongFormPage 
+      content={content} 
+      extra={
+        <AiOverview 
+          summary={content.subtitle} 
+          highlights={content.features.slice(0, 4).map(f => f.desc)} 
+        />
+      } 
+    />
+  );
 }
