@@ -1,19 +1,8 @@
-export type BlogPost = {
-   "author": "Cricbet99 Editorial", "tag": "Insights", slug: string;
-  title: string;
-  tag: string;
-  author: string;
-  date: string;
-  dateModified?: string;
-  excerpt: string;
-  hero?: string;
-  sections: { heading: string; body: string }[];
-  faqs?: { q: string; a: string }[];
-};
+import { BlogPost } from "./blog-posts-types";
 
 export const blogPosts: BlogPost[] = [
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "india-vs-afghanistan-2026-complete-series-guide-schedule-and-live-updates",
+     "slug": "india-vs-afghanistan-2026-complete-series-guide-schedule-and-live-updates",
     "title": "India vs Afghanistan 2026: Complete Series Guide, Schedule, and Live Updates",
     "date": "2026-06-06", "dateModified": "2026-06-06",
     "excerpt": "The Afghanistan cricket team's tour of India has begun with the one-off Test match underway at the Maharaja Yadavindra Singh International Cricket Stadium in New Chandigarh.",
@@ -48,7 +37,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "ipl-2026-winner-awards-and-stats-complete-season-recap",
+     "slug": "ipl-2026-winner-awards-and-stats-complete-season-recap",
     "title": "IPL 2026 Winner, Awards and Stats: Complete Season Recap",
     "date": "2026-06-02", "dateModified": "2026-06-02",
     "excerpt": "The IPL 2026 season concluded on May 31, 2026 at the Narendra Modi Stadium in Ahmedabad with Royal Challengers Bengaluru defeating Gujarat Titans by five wickets to lift their second consecutive IPL trophy.",
@@ -83,7 +72,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "vaibhav-suryavanshi-hits-jasprit-bumrah-for-a-six-on-the-very-first-ball",
+     "slug": "vaibhav-suryavanshi-hits-jasprit-bumrah-for-a-six-on-the-very-first-ball",
     "title": "Vaibhav Suryavanshi Hits Jasprit Bumrah for a Six on the Very First Ball",
     "date": "2026-04-09", "dateModified": "2026-04-09",
     "excerpt": "The date is etched in cricket history. A teenage prodigy walks to the crease. The bowler waiting for him: Jasprit Bumrah, the most feared fast bowler on the planet.",
@@ -118,7 +107,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "ultimate-guide-to-casino-games-and-their-types",
+     "slug": "ultimate-guide-to-casino-games-and-their-types",
     "title": "Ultimate Guide to Casino Games and Their Types",
     "date": "2026-02-22", "dateModified": "2026-02-22",
     "excerpt": "Casino games offer a thrilling mix of chance, strategy, and entertainment. Whether you are a beginner or an experienced player, understanding the different types of casino games can enhance your experience and improve your chances of winning.",
@@ -153,7 +142,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "india-2026-cricket-fixtures-series-and-tournament-schedule",
+     "slug": "india-2026-cricket-fixtures-series-and-tournament-schedule",
     "title": "India's Complete 2026 Cricket Fixtures: Series and Tournament Schedule",
     "date": "2026-02-22", "dateModified": "2026-02-22",
     "excerpt": "India's cricket calendar for 2026 promises an exciting year packed with international series, high-stakes tournaments, and opportunities for emerging talents to shine.",
@@ -188,7 +177,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "sprinters-dissects-shubman-gill-and-co-face-brutal-criticism-over-bowling-tactic-against-england",
+     "slug": "sprinters-dissects-shubman-gill-and-co-face-brutal-criticism-over-bowling-tactic-against-england",
     "title": "Shubman Gill And Co Face Brutal Criticism Over Bowling Tactic Against England",
     "date": "2025-07-04", "dateModified": "2025-07-04",
     "excerpt": "Shubman Gill and the Indian bowling unit faced a barrage of criticism for their short-ball strategy during the second Test of the Anderson-Tendulkar Trophy at Edgbaston.",
@@ -223,7 +212,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "sprinters-analysis-kookaburra-conundrum-can-county-cricket-have-too-many-runs",
+     "slug": "sprinters-analysis-kookaburra-conundrum-can-county-cricket-have-too-many-runs",
     "title": "Analysis: Kookaburra Conundrum – Can County Cricket Have Too Many Runs?",
     "date": "2025-07-03", "dateModified": "2025-07-03",
     "excerpt": "County cricket has always been a testing ground for both emerging and seasoned cricketers, but recent seasons have seen scores soar and bowlers struggle for relevance. A key factor behind this shift is the growing use of the Kookaburra ball.",
@@ -244,7 +233,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "skipper-gills-magnificent-269-powers-dominant-india-to-victory",
+     "slug": "skipper-gills-magnificent-269-powers-dominant-india-to-victory",
     "title": "Skipper Gill's Magnificent 269 Powers Dominant India to Victory",
     "date": "2025-07-03", "dateModified": "2025-07-03",
     "excerpt": "In a breathtaking display of batting excellence, India's young sensation and skipper Shubman Gill slammed a remarkable 269-run innings that left cricket fans across the globe in awe.",
@@ -265,7 +254,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "stokes-in-awe-of-indian-cricket-star",
+     "slug": "stokes-in-awe-of-indian-cricket-star",
     "title": "Stokes in Awe of Indian Cricket Star – 'Love Watching Him Play'",
     "date": "2025-07-02", "dateModified": "2025-07-02",
     "excerpt": "England Test captain Ben Stokes recently made headlines for his high praise of an Indian cricket sensation, expressing 'love watching him play.'",
@@ -286,7 +275,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "kohli-dravid-step-aside-a-new-king-rises-as-india-rules-england",
+     "slug": "kohli-dravid-step-aside-a-new-king-rises-as-india-rules-england",
     "title": "Kohli, Dravid Step Aside – A New King Rises as India Rules England",
     "date": "2025-07-02", "dateModified": "2025-07-02",
     "excerpt": "The cricketing world is witnessing a changing of the guard. With Virat Kohli stepping away from the current England tour and Rahul Dravid's tenure ending, a new leader has emerged.",
@@ -307,7 +296,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "r-ashwin-throws-down-a-mega-challenge-to-gautam-gambhir-shubman-gill-before-2nd-test-vs-england",
+     "slug": "r-ashwin-throws-down-a-mega-challenge-to-gautam-gambhir-shubman-gill-before-2nd-test-vs-england",
     "hero": "/blog-heroes/ashwin-challenge-gambhir-gill-hero.webp",
     "title": "R Ashwin Throws Down a Mega Challenge to Gautam Gambhir and Shubman Gill Before the 2nd Test vs England",
     "date": "2025-07-01", "dateModified": "2025-07-01",
@@ -328,7 +317,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "injuries-trouble-pakistan-ahead-of-bangladesh-t20i-series",
+     "slug": "injuries-trouble-pakistan-ahead-of-bangladesh-t20i-series",
     "hero": "/blog-heroes/pakistan-injuries-bangladesh-t20i-hero.webp",
     "title": "Injuries Trouble Pakistan Ahead of Bangladesh T20I Series",
     "date": "2025-07-01", "dateModified": "2025-07-01",
@@ -349,7 +338,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "england-vs-india-at-edgbaston-bazballs-birthplace-beckons-again",
+     "slug": "england-vs-india-at-edgbaston-bazballs-birthplace-beckons-again",
     "hero": "/blog-heroes/edgbaston-bazball-birthplace-hero.webp",
     "title": "England vs India at Edgbaston: Bazball's Birthplace Beckons Again",
     "date": "2025-06-30", "dateModified": "2025-06-30",
@@ -370,7 +359,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "kuldeep-yadav-is-ready-are-india-a-deep-dive-into-the-spinners-future",
+     "slug": "kuldeep-yadav-is-ready-are-india-a-deep-dive-into-the-spinners-future",
     "hero": "/blog-heroes/kuldeep-yadav-spinner-future-hero.webp",
     "title": "Kuldeep Yadav Is Ready. Are India? A Deep Dive Into the Spinner's Future",
     "date": "2025-06-30", "dateModified": "2025-06-30",
@@ -391,7 +380,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "lhuan-dre-pretorius-makes-history-with-record-150-in-test-cricket",
+     "slug": "lhuan-dre-pretorius-makes-history-with-record-150-in-test-cricket",
     "hero": "/blog-heroes/pretorius-record-150-test-hero.webp",
     "title": "Lhuan-dre Pretorius Makes History with Record 150 in Test Cricket",
     "date": "2025-06-30", "dateModified": "2025-06-30",
@@ -412,7 +401,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "india-suffer-humbling-defeat-analyzes-the-rise-and-fall-of-fighting-spirit",
+     "slug": "india-suffer-humbling-defeat-analyzes-the-rise-and-fall-of-fighting-spirit",
     "hero": "/blog-heroes/india-humbling-defeat-hero.webp",
     "title": "India Suffer Humbling Defeat: The Rise and Fall of Fighting Spirit",
     "date": "2025-06-30", "dateModified": "2025-06-30",
@@ -433,7 +422,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "pcb-appoints-new-acting-head-coach-for-pakistans-red-ball-team",
+     "slug": "pcb-appoints-new-acting-head-coach-for-pakistans-red-ball-team",
     "hero": "/blog-heroes/pcb-new-red-ball-coach-hero.webp",
     "title": "PCB Appoints New Acting Head Coach for Pakistan's Red-Ball Team",
     "date": "2025-06-30", "dateModified": "2025-06-30",
@@ -454,7 +443,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "fir-filed-against-virat-kohli-after-rcb-stampede",
+     "slug": "fir-filed-against-virat-kohli-after-rcb-stampede",
     "hero": "/blog-heroes/fir-kohli-rcb-stampede-hero.webp",
     "title": "FIR Filed Against Virat Kohli After RCB Stampede: Full Report",
     "date": "2025-06-09", "dateModified": "2025-06-09",
@@ -475,7 +464,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "ipl-discrimination-why-sudharshan-isnt-getting-the-spotlight",
+     "slug": "ipl-discrimination-why-sudharshan-isnt-getting-the-spotlight",
     "hero": "/blog-heroes/sudharsan-ipl-spotlight-hero.webp",
     "title": "IPL Discrimination? Why Sai Sudharsan Isn't Getting the Spotlight",
     "date": "2025-06-09", "dateModified": "2025-06-09",
@@ -496,7 +485,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "hes-going-to-go-after-him-exclusive-take-on-virat-kohli",
+     "slug": "hes-going-to-go-after-him-exclusive-take-on-virat-kohli",
     "hero": "/blog-heroes/exclusive-take-kohli-hero.webp",
     "title": "'He's Going to Go After Him' – Exclusive Take on Virat Kohli",
     "date": "2025-06-05", "dateModified": "2025-06-05",
@@ -517,7 +506,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "ipl-2025-final-rcb-vs-pbks-where-to-watch-live-streaming",
+     "slug": "ipl-2025-final-rcb-vs-pbks-where-to-watch-live-streaming",
     "hero": "/blog-heroes/ipl-2025-final-rcb-vs-pbks-hero.webp",
     "title": "IPL 2025 Final: RCB vs PBKS – Where to Watch, Live Streaming, and More",
     "date": "2025-06-05", "dateModified": "2025-06-05",
@@ -538,7 +527,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "former-mi-star-slams-coaching-staff-for-telling-a-bowler-like-bumrah-what-to-do",
+     "slug": "former-mi-star-slams-coaching-staff-for-telling-a-bowler-like-bumrah-what-to-do",
     "hero": "/blog-heroes/mi-star-slams-bumrah-coaching-hero.webp",
     "title": "Former MI Star Slams Coaching Staff for 'Telling a Bowler Like Bumrah What to Do'",
     "date": "2025-06-02", "dateModified": "2025-06-02",
@@ -559,7 +548,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "rcbs-birthday-bash-cake-facials-and-camaraderie-before-ipl-2025-final",
+     "slug": "rcbs-birthday-bash-cake-facials-and-camaraderie-before-ipl-2025-final",
     "hero": "/blog-heroes/rcb-birthday-bash-ipl-final-hero.webp",
     "title": "RCB's Birthday Bash: Cake Facials and Camaraderie Before IPL 2025 Final",
     "date": "2025-06-02", "dateModified": "2025-06-02",
@@ -580,7 +569,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "shreyas-iyer-vs-suresh-raina-ipl-playoff-stats-comparison",
+     "slug": "shreyas-iyer-vs-suresh-raina-ipl-playoff-stats-comparison",
     "hero": "/blog-heroes/iyer-vs-raina-playoff-stats-hero.webp",
     "title": "Shreyas Iyer vs Suresh Raina: IPL Playoff Stats Comparison",
     "date": "2025-06-02", "dateModified": "2025-06-02",
@@ -601,7 +590,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "i-cant-figure-out-who-is-the-captain-today-huge-statement-on-virat-kohli",
+     "slug": "i-cant-figure-out-who-is-the-captain-today-huge-statement-on-virat-kohli",
     "hero": "/blog-heroes/captain-statement-kohli-hero.webp",
     "title": "'I Can't Figure Out Who Is the Captain Today' – Huge Statement on Virat Kohli",
     "date": "2025-05-30", "dateModified": "2025-05-30",
@@ -622,7 +611,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "ipl-2025-eliminator-gt-vs-mi-match-prediction",
+     "slug": "ipl-2025-eliminator-gt-vs-mi-match-prediction",
     "hero": "/blog-heroes/ipl-eliminator-gt-vs-mi-hero.webp",
     "title": "IPL 2025 Eliminator – GT vs MI Match Prediction",
     "date": "2025-05-30", "dateModified": "2025-05-30",
@@ -643,7 +632,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "rcb-vs-pbks-ipl-2025-qualifier-1-preview",
+     "slug": "rcb-vs-pbks-ipl-2025-qualifier-1-preview",
     "hero": "/blog-heroes/rcb-vs-pbks-qualifier1-hero.webp",
     "title": "RCB vs PBKS IPL 2025 Qualifier 1: Preview and Analysis",
     "date": "2025-05-29", "dateModified": "2025-05-29",
@@ -664,7 +653,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "r-ashwins-bold-prediction-ahead-of-pbks-vs-rcb-ipl-2025",
+     "slug": "r-ashwins-bold-prediction-ahead-of-pbks-vs-rcb-ipl-2025",
     "hero": "/blog-heroes/ashwin-bold-prediction-pbks-rcb-hero.webp",
     "title": "R Ashwin's Bold Prediction Ahead of PBKS vs RCB IPL 2025 Qualifier 1",
     "date": "2025-05-29", "dateModified": "2025-05-29",
@@ -685,7 +674,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "nicholas-pooran-pummels-sunrisers-hyderabad-bowlers",
+     "slug": "nicholas-pooran-pummels-sunrisers-hyderabad-bowlers",
     "hero": "/blog-heroes/pooran-pummels-srh-hero.webp",
     "title": "Nicholas Pooran Pummels Sunrisers Hyderabad Bowlers: Power-Hitting Recap",
     "date": "2025-03-28", "dateModified": "2025-03-28",
@@ -706,7 +695,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "rohit-sharma-to-lead-indian-cricket-team-in-upcoming-test-series-against-england",
+     "slug": "rohit-sharma-to-lead-indian-cricket-team-in-upcoming-test-series-against-england",
     "hero": "/blog-heroes/rohit-leads-india-test-england-hero.webp",
     "title": "Rohit Sharma to Lead Indian Cricket Team in Upcoming Test Series Against England",
     "date": "2025-03-27", "dateModified": "2025-03-27",
@@ -727,7 +716,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "lsg-owner-goenka-focuses-on-positives-powerplay-performance",
+     "slug": "lsg-owner-goenka-focuses-on-positives-powerplay-performance",
     "hero": "/blog-heroes/lsg-powerplay-positives-hero.webp",
     "title": "LSG Owner Goenka Focuses on Positives, Impressed with Lucknow's Powerplay Performance",
     "date": "2025-03-26", "dateModified": "2025-03-26",
@@ -748,7 +737,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "gujarat-titans-vs-punjab-kings-ipl-2025-season-opener",
+     "slug": "gujarat-titans-vs-punjab-kings-ipl-2025-season-opener",
     "hero": "/blog-heroes/gt-vs-pbks-ipl2025-opener-hero.webp",
     "title": "Gujarat Titans vs Punjab Kings IPL 2025: Season Opener Preview",
     "date": "2025-03-26", "dateModified": "2025-03-26",
@@ -769,7 +758,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "rajasthan-royals-vs-kolkata-knight-riders-iplt20-match-prediction",
+     "slug": "rajasthan-royals-vs-kolkata-knight-riders-iplt20-match-prediction",
     "hero": "/blog-heroes/rr-vs-kkr-prediction-hero.webp",
     "title": "Rajasthan Royals vs Kolkata Knight Riders: IPL T20 Match Prediction",
     "date": "2025-03-26", "dateModified": "2025-03-26",
@@ -790,7 +779,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "ipl-2025-dc-vs-lsg-ashutosh-to-be-delhi-capitals-lower-order-enforcer",
+     "slug": "ipl-2025-dc-vs-lsg-ashutosh-to-be-delhi-capitals-lower-order-enforcer",
     "hero": "/blog-heroes/ashutosh-dc-enforcer-hero.webp",
     "title": "IPL 2025: DC vs LSG – Ashutosh Sharma to Be Delhi's Lower-Order Enforcer",
     "date": "2025-03-26", "dateModified": "2025-03-26",
@@ -811,7 +800,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "pakistans-efforts-to-emulate-multans-success-in-rawalpindi",
+     "slug": "pakistans-efforts-to-emulate-multans-success-in-rawalpindi",
     "hero": "/blog-heroes/pakistan-rawalpindi-multan-hero.webp",
     "title": "Pakistan's Efforts to Emulate Multan's Success in Rawalpindi",
     "date": "2024-10-23", "dateModified": "2024-10-23",
@@ -832,7 +821,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "acc-emerging-teams-asia-cup-2024-pakistan-a-vs-uae-india-a-vs-oman",
+     "slug": "acc-emerging-teams-asia-cup-2024-pakistan-a-vs-uae-india-a-vs-oman",
     "hero": "/blog-heroes/acc-emerging-asia-cup-2024-hero.webp",
     "title": "ACC Emerging Teams Asia Cup 2024: Pakistan A vs UAE and India A vs Oman",
     "date": "2024-10-23", "dateModified": "2024-10-23",
@@ -853,7 +842,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "hasan-mahmud-confident-of-bangladeshs-second-innings-comeback",
+     "slug": "hasan-mahmud-confident-of-bangladeshs-second-innings-comeback",
     "hero": "/blog-heroes/hasan-mahmud-comeback-hero.webp",
     "title": "Hasan Mahmud Confident of Bangladesh's Second Innings Comeback",
     "date": "2024-10-23", "dateModified": "2024-10-23",
@@ -874,7 +863,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "decision-review-system-drs-in-cricket-revolutionizing-fair-play",
+     "slug": "decision-review-system-drs-in-cricket-revolutionizing-fair-play",
     "hero": "/blog-heroes/drs-cricket-fair-play-hero.webp",
     "title": "Decision Review System (DRS) in Cricket: Revolutionizing Fair Play",
     "date": "2024-10-22", "dateModified": "2024-10-22",
@@ -895,7 +884,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "sophie-devine-reveals-key-win-against-india-set-up-nz-t20-world-cup-triumph",
+     "slug": "sophie-devine-reveals-key-win-against-india-set-up-nz-t20-world-cup-triumph",
     "hero": "/blog-heroes/sophie-devine-nz-t20wc-hero.webp",
     "title": "Sophie Devine Reveals Key Win Against India Set Up NZ's T20 World Cup Triumph",
     "date": "2024-10-21", "dateModified": "2024-10-21",
@@ -916,7 +905,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "sarfaraz-khans-first-test-century-powers-indias-comeback",
+     "slug": "sarfaraz-khans-first-test-century-powers-indias-comeback",
     "hero": "/blog-heroes/sarfaraz-first-test-century-hero.webp",
     "title": "Sarfaraz Khan's First Test Century Powers India's Comeback",
     "date": "2024-10-19", "dateModified": "2024-10-19",
@@ -937,7 +926,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "baccarat-the-elegant-card-game-of-chance",
+     "slug": "baccarat-the-elegant-card-game-of-chance",
     "hero": "/blog-heroes/baccarat-elegant-card-game-hero.webp",
     "title": "Baccarat: The Elegant Card Game of Chance",
     "date": "2024-10-18", "dateModified": "2024-10-18",
@@ -958,7 +947,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "alyssa-healys-foot-injury-ends-australias-t20-world-cup-run",
+     "slug": "alyssa-healys-foot-injury-ends-australias-t20-world-cup-run",
     "hero": "/blog-heroes/alyssa-healy-injury-hero.webp",
     "title": "Alyssa Healy's Foot Injury Ends Australia's T20 World Cup Run",
     "date": "2024-10-18", "dateModified": "2024-10-18",
@@ -979,7 +968,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "australia-women-vs-south-africa-women-icc-t20-world-cup-2024",
+     "slug": "australia-women-vs-south-africa-women-icc-t20-world-cup-2024",
     "hero": "/blog-heroes/ausw-vs-saw-t20wc-2024-hero.webp",
     "title": "Australia Women vs South Africa Women: ICC T20 World Cup 2024 Semifinal",
     "date": "2024-10-17", "dateModified": "2024-10-17",
@@ -1000,7 +989,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "sajid-khans-7-wicket-masterclass-puts-pakistan-in-command",
+     "slug": "sajid-khans-7-wicket-masterclass-puts-pakistan-in-command",
     "hero": "/blog-heroes/sajid-khan-7-wicket-hero.webp",
     "title": "Sajid Khan's 7-Wicket Masterclass Puts Pakistan in Command",
     "date": "2024-10-17", "dateModified": "2024-10-17",
@@ -1021,7 +1010,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "west-indies-stun-england-to-secure-t20-world-cup-semifinal-spot",
+     "slug": "west-indies-stun-england-to-secure-t20-world-cup-semifinal-spot",
     "hero": "/blog-heroes/wi-stun-england-t20wc-hero.webp",
     "title": "West Indies Stun England to Secure T20 World Cup Semifinal Spot",
     "date": "2024-10-16", "dateModified": "2024-10-16",
@@ -1042,7 +1031,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "india-vs-bangladesh-t20-2024-match-prediction",
+     "slug": "india-vs-bangladesh-t20-2024-match-prediction",
     "hero": "/blog-heroes/ind-vs-ban-t20-2024-hero.webp",
     "title": "India vs Bangladesh, T20I 2024: Match Prediction",
     "date": "2024-10-12", "dateModified": "2024-10-12",
@@ -1063,7 +1052,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "todays-cricket-match-predictions-october-11-2024",
+     "slug": "todays-cricket-match-predictions-october-11-2024",
     "hero": "/blog-heroes/predictions-oct-11-2024-hero.webp",
     "title": "Today's Cricket Match Predictions – October 11, 2024",
     "date": "2024-10-11", "dateModified": "2024-10-11",
@@ -1084,7 +1073,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "shakib-al-hasan-issues-apology-farewell-test",
+     "slug": "shakib-al-hasan-issues-apology-farewell-test",
     "hero": "/blog-heroes/shakib-farewell-test-hero.webp",
     "title": "Shakib Al Hasan Issues Apology, Requests Support for His Farewell Test",
     "date": "2024-10-10", "dateModified": "2024-10-10",
@@ -1105,7 +1094,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "indias-power-trio-lead-to-crushing-win-over-sri-lanka",
+     "slug": "indias-power-trio-lead-to-crushing-win-over-sri-lanka",
     "hero": "/blog-heroes/india-power-trio-sl-hero.webp",
     "title": "India's Power Trio Lead a Crushing Win Over Sri Lanka",
     "date": "2024-10-10", "dateModified": "2024-10-10",
@@ -1126,7 +1115,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "india-vs-sri-lanka-icc-womens-t20-world-cup-2024",
+     "slug": "india-vs-sri-lanka-icc-womens-t20-world-cup-2024",
     "hero": "/blog-heroes/indw-vs-slw-t20wc-2024-hero.webp",
     "title": "India vs Sri Lanka: ICC Women's T20 World Cup 2024 Match Preview",
     "date": "2024-10-09", "dateModified": "2024-10-09",
@@ -1147,7 +1136,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "ireland-vs-south-africa-match-prediction-for-odi-clash",
+     "slug": "ireland-vs-south-africa-match-prediction-for-odi-clash",
     "hero": "/blog-heroes/ire-vs-sa-odi-hero.webp",
     "title": "Ireland vs South Africa: Match Prediction for ODI Clash",
     "date": "2024-10-07", "dateModified": "2024-10-07",
@@ -1168,7 +1157,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "england-vs-south-africa-women-icc-t20-world-cup-2024",
+     "slug": "england-vs-south-africa-women-icc-t20-world-cup-2024",
     "hero": "/blog-heroes/engw-vs-saw-t20wc-2024-hero.webp",
     "title": "England vs South Africa Women: Match Preview for ICC T20 World Cup 2024",
     "date": "2024-10-07", "dateModified": "2024-10-07",
@@ -1189,7 +1178,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "pakistan-vs-england-2024-test-betting-tips",
+     "slug": "pakistan-vs-england-2024-test-betting-tips",
     "title": "Pakistan vs England 2024: Test Series Match Prediction and Betting Tips",
     "date": "2024-10-07", "dateModified": "2024-10-07",
     "excerpt": "England return to Pakistan for a Test series, having dominated their previous 2022 tour. Full match preview and betting analysis.",
@@ -1210,7 +1199,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "west-indies-crush-scotland-to-kickstart-world-cup",
+     "slug": "west-indies-crush-scotland-to-kickstart-world-cup",
     "title": "West Indies Crush Scotland to Kickstart Women's T20 World Cup",
     "date": "2024-10-07", "dateModified": "2024-10-07",
     "excerpt": "The West Indies began their Women's T20 World Cup campaign in emphatic fashion, crushing Scotland with a well-rounded team performance.",
@@ -1231,7 +1220,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "sanath-jayasuriya-named-full-time-head-coach-of-sri-lanka",
+     "slug": "sanath-jayasuriya-named-full-time-head-coach-of-sri-lanka",
     "title": "Sanath Jayasuriya Named Full-Time Head Coach of Sri Lanka",
     "date": "2024-10-07", "dateModified": "2024-10-07",
     "excerpt": "Sanath Jayasuriya, the iconic former Sri Lankan cricketer, has officially been appointed full-time head coach of the Sri Lankan men's team.",
@@ -1252,7 +1241,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "arundhati-reddys-inspirational-comeback",
+     "slug": "arundhati-reddys-inspirational-comeback",
     "title": "Arundhati Reddy's Inspirational Comeback into the Indian Women's Team",
     "date": "2024-10-07", "dateModified": "2024-10-07",
     "excerpt": "Arundhati Reddy has scripted a stunning comeback into the Indian women's cricket team following a strong WPL 2024 season.",
@@ -1273,7 +1262,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "india-vs-pakistan-women-icc-t20-world-cup-2024-match-prediction",
+     "slug": "india-vs-pakistan-women-icc-t20-world-cup-2024-match-prediction",
     "title": "India vs Pakistan Women: ICC T20 World Cup 2024 Match Prediction",
     "date": "2024-10-06", "dateModified": "2024-10-06",
     "excerpt": "India Women enter their Women's T20 World Cup 2024 fixture against Pakistan Women as favourites despite a recent setback against New Zealand.",
@@ -1294,7 +1283,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "bcci-exploring-saudi-arabia-for-ipl-mega-auction",
+     "slug": "bcci-exploring-saudi-arabia-for-ipl-mega-auction",
     "title": "BCCI Exploring Saudi Arabia for IPL Mega Auction, Dhoni's CSK Future Unclear",
     "date": "2024-10-05", "dateModified": "2024-10-05",
     "excerpt": "BCCI is exploring the possibility of hosting the upcoming IPL mega auction in Saudi Arabia, with Riyadh and Jeddah high on the list.",
@@ -1315,7 +1304,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "amazon-warriors-secure-spot-in-cpl-2024-final",
+     "slug": "amazon-warriors-secure-spot-in-cpl-2024-final",
     "title": "Amazon Warriors Secure Spot in CPL 2024 Final With Dominant Win",
     "date": "2024-10-05", "dateModified": "2024-10-05",
     "excerpt": "The Guyana Amazon Warriors stormed into the CPL 2024 final with a commanding eight-wicket win over Barbados Royals in Qualifier 2.",
@@ -1336,7 +1325,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "br-vs-gaw-match-prediction-cpl-2024",
+     "slug": "br-vs-gaw-match-prediction-cpl-2024",
     "title": "BR vs GAW Match Prediction – CPL 2024 Qualifier 2",
     "date": "2024-10-05", "dateModified": "2024-10-05",
     "excerpt": "Guyana Amazon Warriors face Barbados Royals in the second qualifier of the Caribbean Premier League 2024.",
@@ -1357,7 +1346,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "ind-w-vs-nz-w-match-prediction-icc-womens-t20-world-cup-2024",
+     "slug": "ind-w-vs-nz-w-match-prediction-icc-womens-t20-world-cup-2024",
     "title": "IND-W vs NZ-W Match Prediction: ICC Women's T20 World Cup 2024",
     "date": "2024-10-04", "dateModified": "2024-10-04",
     "excerpt": "India Women take on New Zealand Women at the Dubai International Cricket Stadium in a key ICC Women's T20 World Cup 2024 fixture.",
@@ -1378,7 +1367,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "gmr-groups-historic-acquisition-of-hampshire-county-cricket",
+     "slug": "gmr-groups-historic-acquisition-of-hampshire-county-cricket",
     "title": "GMR Group's Historic Acquisition of Hampshire County Cricket",
     "date": "2024-10-01", "dateModified": "2024-10-01",
     "excerpt": "GMR Group, co-owners of Delhi Capitals, have acquired Hampshire County Cricket, becoming the first international company to fully own a county side.",
@@ -1399,7 +1388,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "ind-vs-ban-2nd-test-2024-india-set-to-win-series",
+     "slug": "ind-vs-ban-2nd-test-2024-india-set-to-win-series",
     "title": "India vs Bangladesh 2nd Test 2024: India Set to Win Series",
     "date": "2024-10-01", "dateModified": "2024-10-01",
     "excerpt": "India look to dominate Bangladesh in the second Test at Green Park, Kanpur, after a 280-run first-Test win.",
@@ -1420,7 +1409,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "sri-lanka-vs-new-zealand-2024-2nd-test-preview",
+     "slug": "sri-lanka-vs-new-zealand-2024-2nd-test-preview",
     "title": "Sri Lanka vs New Zealand 2024, 2nd Test: Preview and Prediction",
     "date": "2024-09-28", "dateModified": "2024-09-28",
     "excerpt": "New Zealand aim to level the series against Sri Lanka at Galle, but the hosts hold a strong home record.",
@@ -1441,7 +1430,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "royal-ascot-complete-guide-to-horse-racing-events",
+     "slug": "royal-ascot-complete-guide-to-horse-racing-events",
     "title": "Royal Ascot: Complete Guide to One of the World's Most Prestigious Horse Racing Events",
     "date": "2024-09-26", "dateModified": "2024-09-26",
     "excerpt": "Royal Ascot is one of the most famous horse racing events in the world, held annually at Ascot Racecourse in Berkshire, England.",
@@ -1462,7 +1451,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "mastering-the-art-of-cricket-betting-comprehensive-guide",
+     "slug": "mastering-the-art-of-cricket-betting-comprehensive-guide",
     "title": "Mastering the Art of Cricket Betting: A Comprehensive Guide",
     "date": "2024-09-26", "dateModified": "2024-09-26",
     "excerpt": "Cricket betting has evolved into a nuanced discipline. Learn the markets, the pitfalls, and the strategies that separate winners from losers.",
@@ -1483,7 +1472,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "the-kentucky-derby-a-complete-guide",
+     "slug": "the-kentucky-derby-a-complete-guide",
     "title": "The Kentucky Derby: A Complete Guide",
     "date": "2024-09-26", "dateModified": "2024-09-26",
     "excerpt": "The Kentucky Derby is one of the most prestigious horse races in the world, often called 'The Most Exciting Two Minutes in Sports.'",
@@ -1504,7 +1493,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "thoroughbred-racing-the-pinnacle-of-speed-and-prestige",
+     "slug": "thoroughbred-racing-the-pinnacle-of-speed-and-prestige",
     "title": "Thoroughbred Racing: The Pinnacle of Speed and Prestige",
     "date": "2024-09-26", "dateModified": "2024-09-26",
     "excerpt": "Thoroughbred racing, often called 'The Sport of Kings,' is one of the most iconic forms of horse racing worldwide.",
@@ -1525,7 +1514,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "mobile-betting-experience-on-cricbet99",
+     "slug": "mobile-betting-experience-on-cricbet99",
     "title": "Mobile Betting Experience on Cricbet99: Bet Anywhere, Anytime",
     "date": "2024-09-25", "dateModified": "2024-09-25",
     "excerpt": "Cricbet99's mobile-first design ensures you get the same rich betting experience on your phone as on desktop.",
@@ -1546,7 +1535,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "roulette-wheel-and-table-layout-types",
+     "slug": "roulette-wheel-and-table-layout-types",
     "title": "Roulette Wheel and Table Layout Types: A Comprehensive Guide",
     "date": "2024-09-24", "dateModified": "2024-09-24",
     "excerpt": "Roulette is one of the most iconic casino games. This guide covers the wheel variations and table layouts every player should know.",
@@ -1567,7 +1556,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "avoiding-emotions-while-online-betting",
+     "slug": "avoiding-emotions-while-online-betting",
     "title": "Avoiding Emotions While Online Betting: A Case Study on Betting Rationally",
     "date": "2024-09-22", "dateModified": "2024-09-22",
     "excerpt": "Emotional decision-making is one of the most common pitfalls bettors face. Here's how to keep your head clear at Cricbet99.",
@@ -1588,7 +1577,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "what-is-sports-betting-comprehensive-guide",
+     "slug": "what-is-sports-betting-comprehensive-guide",
     "title": "What Is Sports Betting? A Comprehensive Guide to Areas, Positives, and Negatives",
     "date": "2024-09-22", "dateModified": "2024-09-22",
     "excerpt": "Sports betting is one of the most popular forms of gambling worldwide. Here's a full look at the practice, its upside, and its risks.",
@@ -1609,7 +1598,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "bet-with-confidence-cricbet99s-commitment-to-security-and-trust",
+     "slug": "bet-with-confidence-cricbet99s-commitment-to-security-and-trust",
     "title": "Bet With Confidence: Cricbet99's Commitment to Security and Trust",
     "date": "2024-09-21", "dateModified": "2024-09-21",
     "excerpt": "Security is paramount in online sports betting. Cricbet99 implements cutting-edge measures so users can bet with confidence.",
@@ -1630,7 +1619,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "responsible-betting-tips-for-enjoying-cricbet99-without-risks",
+     "slug": "responsible-betting-tips-for-enjoying-cricbet99-without-risks",
     "title": "Responsible Betting: Tips for Enjoying Cricbet99 Without Risks",
     "date": "2024-09-21", "dateModified": "2024-09-21",
     "excerpt": "Sports betting can be exciting and rewarding when done responsibly. Here's how to keep it that way on Cricbet99.",
@@ -1651,7 +1640,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "exploring-football-betting-markets-odds-and-tips",
+     "slug": "exploring-football-betting-markets-odds-and-tips",
     "title": "Exploring Football Betting on Cricbet99: Markets, Odds, and Tips",
     "date": "2024-09-21", "dateModified": "2024-09-21",
     "excerpt": "Football betting has gained immense popularity due to the wide variety of markets and opportunities offered on Cricbet99.",
@@ -1672,7 +1661,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "evolution-of-sports-betting-how-cricbet99-is-shaping-the-future",
+     "slug": "evolution-of-sports-betting-how-cricbet99-is-shaping-the-future",
     "title": "The Evolution of Sports Betting: How Cricbet99 Is Shaping the Future",
     "date": "2024-09-21", "dateModified": "2024-09-21",
     "excerpt": "The sports betting industry has been transformed by technology. Cricbet99 stands at the forefront of that evolution.",
@@ -1693,7 +1682,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", "slug": "diverse-betting-opportunities-at-cricbet99",
+     "slug": "diverse-betting-opportunities-at-cricbet99",
     "title": "Diverse Betting Opportunities at Cricbet99: From Global Events to Local Leagues",
     "date": "2024-09-21", "dateModified": "2024-09-21",
     "excerpt": "Modern bettors want access to global tournaments and local leagues alike. Cricbet99 delivers on both fronts.",
@@ -1714,7 +1703,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "commonwealth-games-2026-glasgow-complete-betting-guide-live-markets-cricbet99",
+     slug: "commonwealth-games-2026-glasgow-complete-betting-guide-live-markets-cricbet99",
     title: "Commonwealth Games 2026 Glasgow — Complete Betting Guide & Live Markets on Cricbet99",
     tag: "Guide",
     date: "2026-07-25T05:00:00+05:30",
@@ -1727,7 +1716,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "sri-lanka-vs-bangladesh-2026-t20i-series-preview-odds-session-tips-cricbet99",
+     slug: "sri-lanka-vs-bangladesh-2026-t20i-series-preview-odds-session-tips-cricbet99",
     title: "Sri Lanka vs Bangladesh 2026 T20I Series — Preview, Odds & Session Betting Tips",
     tag: "Cricket",
     date: "2026-07-24T05:00:00+05:30",
@@ -1740,7 +1729,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-to-read-cricket-betting-odds-like-a-pro-2026-beginners-masterclass",
+     slug: "how-to-read-cricket-betting-odds-like-a-pro-2026-beginners-masterclass",
     title: "How to Read Cricket Betting Odds Like a Pro — 2026 Beginner's Masterclass",
     tag: "Guide",
     date: "2026-07-23T05:00:00+05:30",
@@ -1753,7 +1742,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "the-open-championship-2026-final-round-golf-betting-preview-cricbet99",
+     slug: "the-open-championship-2026-final-round-golf-betting-preview-cricbet99",
     title: "The Open Championship 2026 Final Round — Golf Betting Preview on Cricbet99",
     tag: "Guide",
     date: "2026-07-22T05:00:00+05:30",
@@ -1766,7 +1755,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "tour-de-france-2026-final-week-stage-betting-gc-winner-odds-guide",
+     slug: "tour-de-france-2026-final-week-stage-betting-gc-winner-odds-guide",
     title: "Tour de France 2026 Final Week — Stage Betting & GC Winner Odds Guide",
     tag: "Guide",
     date: "2026-07-21T05:00:00+05:30",
@@ -1779,7 +1768,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-mobile-app-vs-website-which-is-faster-for-live-cricket-betting-2026",
+     slug: "cricbet99-mobile-app-vs-website-which-is-faster-for-live-cricket-betting-2026",
     title: "Cricbet99 Mobile App vs Website — Which Is Faster for Live Cricket Betting in 2026?",
     tag: "Guide",
     date: "2026-07-20T05:00:00+05:30",
@@ -1792,7 +1781,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "fastest-upi-withdrawals-on-cricbet99-2026-complete-guide",
+     slug: "fastest-upi-withdrawals-on-cricbet99-2026-complete-guide",
     title: "Fastest UPI Withdrawals on Cricbet99 in 2026 — Complete Payout Speed Guide",
     tag: "Guide",
     date: "2026-07-19T05:00:00+05:30",
@@ -1805,7 +1794,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "live-streaming-and-in-play-betting-on-cricbet99-2026-guide",
+     slug: "live-streaming-and-in-play-betting-on-cricbet99-2026-guide",
     title: "Live Streaming & In-Play Betting on Cricbet99 — The 2026 Player's Guide",
     tag: "Guide",
     date: "2026-07-18T05:00:00+05:30",
@@ -1818,7 +1807,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "fantasy-cricket-vs-real-money-betting-which-is-better-in-2026",
+     slug: "fantasy-cricket-vs-real-money-betting-which-is-better-in-2026",
     title: "Fantasy Cricket vs Real-Money Betting — Which Is Better for Indian Players in 2026?",
     tag: "Guide",
     date: "2026-07-17T05:00:00+05:30",
@@ -1831,7 +1820,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "the-hundred-2026-complete-betting-guide-on-cricbet99",
+     slug: "the-hundred-2026-complete-betting-guide-on-cricbet99",
     title: "The Hundred 2026 — Complete Betting Guide, Team Analysis & Cricbet99 Markets",
     tag: "Cricket",
     date: "2026-07-16T05:00:00+05:30",
@@ -1844,7 +1833,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricket-session-betting-complete-2026-guide-cricbet99",
+     slug: "cricket-session-betting-complete-2026-guide-cricbet99",
     title: "Cricket Session Betting Explained — Complete 2026 Guide on Cricbet99",
     tag: "Guide",
     date: "2026-07-15T05:00:00+05:30",
@@ -1858,7 +1847,7 @@ export const blogPosts: BlogPost[] = [
   },
 
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "top-football-betting-markets-guide-2026-cricbet99",
+     slug: "top-football-betting-markets-guide-2026-cricbet99",
     title: "Top 10 Football Betting Markets Every Indian Player Should Know in 2026",
     tag: "Football",
     date: "2026-07-14T05:00:00+05:30",
@@ -1871,7 +1860,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "mlc-2026-playoff-predictions-major-league-cricket-betting-guide",
+     slug: "mlc-2026-playoff-predictions-major-league-cricket-betting-guide",
     title: "MLC 2026 Playoff Predictions — Major League Cricket Betting Guide on Cricbet99",
     tag: "Cricket",
     date: "2026-07-13T05:00:00+05:30",
@@ -1884,7 +1873,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "wimbledon-final-2026-live-in-play-markets-on-cricbet99",
+     slug: "wimbledon-final-2026-live-in-play-markets-on-cricbet99",
     title: "Wimbledon Final 2026 — Live In-Play Markets, Set Betting & Cricbet99 Odds",
     tag: "Guide",
     date: "2026-07-12T05:00:00+05:30",
@@ -1897,7 +1886,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "wimbledon-2026-mens-semifinal-betting-guide-cricbet99",
+     slug: "wimbledon-2026-mens-semifinal-betting-guide-cricbet99",
     title: "Wimbledon 2026 Men's Semifinal Betting Guide — Form, Odds & Live Markets",
     tag: "Guide",
     date: "2026-07-11T05:00:00+05:30",
@@ -1910,7 +1899,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "vitality-blast-2026-finals-day-betting-preview-cricbet99",
+     slug: "vitality-blast-2026-finals-day-betting-preview-cricbet99",
     title: "Vitality Blast 2026 Finals Day — Betting Preview & Cricbet99 Markets",
     tag: "Cricket",
     date: "2026-07-10T05:00:00+05:30",
@@ -1924,7 +1913,7 @@ export const blogPosts: BlogPost[] = [
   },
 
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-explains-probability-in-sports-betting",
+     slug: "cricbet99-book-explains-probability-in-sports-betting",
     title: "How Cricbet99 Explains Probability in Sports Betting for Beginners",
     tag: "Football",
     date: "2026-07-09T05:20:00+05:30",
@@ -1937,7 +1926,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-to-get-started-with-cricbet99-book-apk-for-android",
+     slug: "how-to-get-started-with-cricbet99-book-apk-for-android",
     title: "How to Get Started with the Cricbet99 APK for Android",
     tag: "Guide",
     date: "2026-07-08T05:00:00+05:30",
@@ -1950,7 +1939,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-cricket-id-vs-traditional-online-account-access-difference",
+     slug: "cricbet99-cricket-id-vs-traditional-online-account-access-difference",
     title: "Cricbet99 Cricket ID vs Traditional Online Account — What's Different",
     tag: "Cricket",
     date: "2026-07-07T05:00:00+05:30",
@@ -1963,7 +1952,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-stop-cricket-betting-losses-using-smart-strategies",
+     slug: "cricbet99-book-stop-cricket-betting-losses-using-smart-strategies",
     title: "Stop Cricket Betting Losses Using Smart Strategies",
     tag: "IPL",
     date: "2026-07-06T05:00:00+05:30",
@@ -1976,7 +1965,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-cricket-betting-id-and-how-does-it-work",
+     slug: "cricbet99-book-cricket-betting-id-and-how-does-it-work",
     title: "Cricbet99 Cricket Betting ID — Official Usage Guide",
     tag: "Cricket",
     date: "2026-07-03T05:00:00+05:30",
@@ -1989,7 +1978,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "create-a-cricbet99-book-account-for-sports-betting",
+     slug: "create-a-cricbet99-book-account-for-sports-betting",
     title: "How to Create a Cricbet99 Account for Sports Betting",
     tag: "Guide",
     date: "2026-07-02T05:00:00+05:30",
@@ -2002,7 +1991,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-id-fast-verified-id-for-online-sports-betting",
+     slug: "cricbet99-id-fast-verified-id-for-online-sports-betting",
     title: "Cricbet99 ID — Fast & Verified ID for Online Sports Betting",
     tag: "Football",
     date: "2026-06-26T05:00:00+05:30",
@@ -2015,7 +2004,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-football-world-cup-odds-work-cricbet99-book",
+     slug: "how-football-world-cup-odds-work-cricbet99-book",
     title: "How Football World Cup Odds Work — A Cricbet99 Guide",
     tag: "Football",
     date: "2026-06-25T05:00:00+05:30",
@@ -2028,7 +2017,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-helps-new-users-navigate-online-sports-platforms",
+     slug: "cricbet99-book-helps-new-users-navigate-online-sports-platforms",
     title: "How Cricbet99 Helps New Users Navigate Online Sports Platforms",
     tag: "Guide",
     date: "2026-06-24T05:00:00+05:30",
@@ -2041,7 +2030,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-mobile-features-for-t20-cricket-betting",
+     slug: "cricbet99-book-mobile-features-for-t20-cricket-betting",
     title: "Cricbet99 — Mobile Features for T20 Cricket Betting",
     tag: "Cricket",
     date: "2026-06-22T05:00:00+05:30",
@@ -2054,7 +2043,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-app-indias-trusted-mobile-betting-platform",
+     slug: "cricbet99-book-app-indias-trusted-mobile-betting-platform",
     title: "Cricbet99 App — India's Trusted Mobile Betting Platform",
     tag: "Casino",
     date: "2026-06-20T05:00:00+05:30",
@@ -2067,7 +2056,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-online-betting-id-and-services",
+     slug: "cricbet99-book-online-betting-id-and-services",
     title: "Cricbet99 Online Betting ID & Services",
     tag: "Casino",
     date: "2026-06-19T05:41:00+05:30",
@@ -2080,7 +2069,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-best-platforms-fifa-world-cup-2026-betting-in-india",
+     slug: "cricbet99-book-best-platforms-fifa-world-cup-2026-betting-in-india",
     title: "Best Platforms for FIFA World Cup 2026 Betting in India",
     tag: "Football",
     date: "2026-06-18T06:06:00+05:30",
@@ -2093,7 +2082,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-to-play-roulette-on-cricbet99-book",
+     slug: "how-to-play-roulette-on-cricbet99-book",
     title: "How to Play Roulette on Cricbet99",
     tag: "Casino",
     date: "2026-06-17T04:45:00+05:30",
@@ -2106,7 +2095,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-casino-slots-guide-rtp-free-spins-winning-tips-2026",
+     slug: "cricbet99-book-casino-slots-guide-rtp-free-spins-winning-tips-2026",
     title: "Casino Slots Guide 2026 — RTP, Free Spins & Winning Tips",
     tag: "Casino",
     date: "2026-06-16T04:47:00+05:30",
@@ -2119,7 +2108,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "bet-on-ipl-t20-odi-and-test-cricket-with-cricbet99-book",
+     slug: "bet-on-ipl-t20-odi-and-test-cricket-with-cricbet99-book",
     title: "Bet on IPL, T20, ODI and Test Cricket with Cricbet99",
     tag: "IPL",
     date: "2026-06-15T05:00:00+05:30",
@@ -2132,7 +2121,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "fifa-world-cup-and-womens-t20-world-cup-2026-guide",
+     slug: "fifa-world-cup-and-womens-t20-world-cup-2026-guide",
     title: "FIFA World Cup & Women's T20 World Cup 2026 — Complete Guide",
     tag: "Football",
     date: "2026-06-13T05:04:00+05:30",
@@ -2145,7 +2134,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "fifa-world-cup-2026-cricbet99-book-live-betting-id-guide",
+     slug: "fifa-world-cup-2026-cricbet99-book-live-betting-id-guide",
     title: "FIFA World Cup 2026 — Live Betting ID Guide",
     tag: "Football",
     date: "2026-06-12T05:24:00+05:30",
@@ -2158,7 +2147,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "online-casino-vs-sports-betting-guide",
+     slug: "online-casino-vs-sports-betting-guide",
     title: "Online Casino vs Sports Betting — 2026 Comparison Guide",
     tag: "Casino",
     date: "2026-06-11T04:35:00+05:30",
@@ -2171,7 +2160,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-ball-by-ball-betting-works-on-cricbet99-book",
+     slug: "how-ball-by-ball-betting-works-on-cricbet99-book",
     title: "How Ball-by-Ball Betting Works on Cricbet99",
     tag: "IPL",
     date: "2026-06-10T05:09:00+05:30",
@@ -2184,7 +2173,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "womens-t20-world-cup-2026-betting-guide-cricbet99-book-expert-analysis",
+     slug: "womens-t20-world-cup-2026-betting-guide-cricbet99-book-expert-analysis",
     title: "Women's T20 World Cup 2026 Betting Guide — Expert Analysis",
     tag: "World Cup",
     date: "2026-06-09T04:57:00+05:30",
@@ -2197,7 +2186,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-card-game-zone-gaming-fan",
+     slug: "cricbet99-book-card-game-zone-gaming-fan",
     title: "Cricbet99 Card Game Zone — A Hub for Every Gaming Fan",
     tag: "Casino",
     date: "2026-06-08T05:33:00+05:30",
@@ -2210,7 +2199,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-fifa-world-cup-2026-complete-tournament-guide",
+     slug: "cricbet99-book-fifa-world-cup-2026-complete-tournament-guide",
     title: "FIFA World Cup 2026 — Complete Tournament Guide",
     tag: "Football",
     date: "2026-06-05T04:49:00+05:30",
@@ -2223,7 +2212,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-casino-best-online-casino-sports-betting-platform",
+     slug: "cricbet99-casino-best-online-casino-sports-betting-platform",
     title: "Cricbet99 Casino — Best Online Casino & Sports Betting Platform",
     tag: "Casino",
     date: "2026-06-04T04:42:00+05:30",
@@ -2236,7 +2225,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "fifa-world-cup-2026-cricbet99-book-betting-tips",
+     slug: "fifa-world-cup-2026-cricbet99-book-betting-tips",
     title: "FIFA World Cup 2026 — Football Betting Tips & Markets",
     tag: "Football",
     date: "2026-06-03T04:57:00+05:30",
@@ -2249,7 +2238,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "enjoy-real-casino-gaming-on-cricbet99-book",
+     slug: "enjoy-real-casino-gaming-on-cricbet99-book",
     title: "Enjoy Real Casino Gaming on Cricbet99",
     tag: "Casino",
     date: "2026-06-02T05:00:00+05:30",
@@ -2262,7 +2251,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-fifa-world-cup-2026-football-fan-betting-guide",
+     slug: "cricbet99-book-fifa-world-cup-2026-football-fan-betting-guide",
     title: "FIFA World Cup 2026 — Football Fan Betting Guide",
     tag: "Football",
     date: "2026-06-01T04:47:00+05:30",
@@ -2275,7 +2264,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-rcb-continue-title-defense-in-ipl-2026-final",
+     slug: "cricbet99-book-rcb-continue-title-defense-in-ipl-2026-final",
     title: "RCB Continue Title Defense in the IPL 2026 Final",
     tag: "IPL",
     date: "2026-05-30T05:46:00+05:30",
@@ -2288,7 +2277,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "why-ipl-cricket-fans-prefer-cricbet99-book-for-mobile-cricket-updates",
+     slug: "why-ipl-cricket-fans-prefer-cricbet99-book-for-mobile-cricket-updates",
     title: "Why IPL Cricket Fans Prefer Cricbet99 for Mobile Cricket Updates",
     tag: "IPL",
     date: "2026-05-29T10:25:54+05:30",
@@ -2301,7 +2290,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "india-top-mobile-betting-features-on-cricbet99-book",
+     slug: "india-top-mobile-betting-features-on-cricbet99-book",
     title: "India's Top Mobile Betting Features on Cricbet99",
     tag: "Guide",
     date: "2026-05-28T10:22:22+05:30",
@@ -2314,7 +2303,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-teen-patti-rules-and-gameplay-explained",
+     slug: "cricbet99-book-teen-patti-rules-and-gameplay-explained",
     title: "Teen Patti Rules and Gameplay Explained",
     tag: "Casino",
     date: "2026-05-27T10:14:56+05:30",
@@ -2327,7 +2316,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-to-add-funds-to-your-cricbet99-book-id",
+     slug: "how-to-add-funds-to-your-cricbet99-book-id",
     title: "How to Add Funds to Your Cricbet99 ID",
     tag: "Guide",
     date: "2026-05-26T10:34:31+05:30",
@@ -2340,7 +2329,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-account-a-quick-guide-to-kyc",
+     slug: "cricbet99-account-a-quick-guide-to-kyc",
     title: "Cricbet99 Account — A Quick Guide to KYC",
     tag: "Guide",
     date: "2026-05-25T10:30:56+05:30",
@@ -2353,7 +2342,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "why-choose-cricbet99-book-for-ipl-betting",
+     slug: "why-choose-cricbet99-book-for-ipl-betting",
     title: "Why Choose Cricbet99 for IPL Betting",
     tag: "IPL",
     date: "2026-05-23T11:07:21+05:30",
@@ -2366,7 +2355,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-top-features-and-benefits-of-ipl-betting-id-in-india",
+     slug: "cricbet99-book-top-features-and-benefits-of-ipl-betting-id-in-india",
     title: "Top Features & Benefits of IPL Betting ID in India — Cricbet99",
     tag: "IPL",
     date: "2026-05-21T10:28:48+05:30",
@@ -2379,7 +2368,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-works-behind-the-scenes-during-ipl-2026",
+     slug: "cricbet99-book-works-behind-the-scenes-during-ipl-2026",
     title: "How Cricbet99 Works Behind The Scenes During IPL 2026",
     tag: "IPL",
     date: "2026-05-20T10:20:10+05:30",
@@ -2392,7 +2381,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-login-not-working-fix-guide",
+     slug: "cricbet99-book-login-not-working-fix-guide",
     title: "Cricbet99 Login Not Working — Quick Fix Guide",
     tag: "Guide",
     date: "2026-05-19T10:54:50+05:30",
@@ -2405,7 +2394,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "top-mobile-betting-features-on-cricbet99-book",
+     slug: "top-mobile-betting-features-on-cricbet99-book",
     title: "Top Mobile Betting Features on Cricbet99",
     tag: "IPL",
     date: "2026-05-18T10:55:05+05:30",
@@ -2418,7 +2407,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-2026-online-cricket-gaming-features",
+     slug: "cricbet99-book-2026-online-cricket-gaming-features",
     title: "Cricbet99 2026 — Online Cricket Gaming Features",
     tag: "Cricket",
     date: "2026-05-16T11:12:49+05:30",
@@ -2431,7 +2420,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "why-ipl-fans-are-looking-for-cricbet99-book-id",
+     slug: "why-ipl-fans-are-looking-for-cricbet99-book-id",
     title: "Why IPL Fans Are Looking for a Cricbet99 ID",
     tag: "IPL",
     date: "2026-05-15T10:33:17+05:30",
@@ -2444,7 +2433,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-growing-craze-for-cricket-platforms-ipl-2026",
+     slug: "cricbet99-book-growing-craze-for-cricket-platforms-ipl-2026",
     title: "Cricbet99 — Growing Craze for Cricket Platforms in IPL 2026",
     tag: "IPL",
     date: "2026-05-14T13:37:05+05:30",
@@ -2457,7 +2446,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-id-not-working-quick-solutions-guide",
+     slug: "cricbet99-book-id-not-working-quick-solutions-guide",
     title: "Cricbet99 ID Not Working — Quick Solutions Guide",
     tag: "Guide",
     date: "2026-05-14T13:30:00+05:30",
@@ -2470,7 +2459,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "mi-vs-pbks-dream11-prediction-today-match",
+     slug: "mi-vs-pbks-dream11-prediction-today-match",
     title: "MI vs PBKS Dream11 Prediction — Today's Match IPL 2026",
     tag: "IPL",
     date: "2026-05-13T11:49:40+05:30",
@@ -2483,7 +2472,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "rcb-vs-kkr-ipl-2026-dream11-prediction-today-match57",
+     slug: "rcb-vs-kkr-ipl-2026-dream11-prediction-today-match57",
     title: "RCB vs KKR Dream11 Prediction — Match 57 IPL 2026",
     tag: "IPL",
     date: "2026-05-12T14:10:11+05:30",
@@ -2496,7 +2485,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "srh-vs-gt-dream11-prediction-today-match-56-ipl-2026",
+     slug: "srh-vs-gt-dream11-prediction-today-match-56-ipl-2026",
     title: "SRH vs GT Dream11 Prediction — Match 56 IPL 2026",
     tag: "IPL",
     date: "2026-05-11T17:39:33+05:30",
@@ -2509,7 +2498,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "rcb-vs-mi-dream11-prediction-today-match54-ipl-2026",
+     slug: "rcb-vs-mi-dream11-prediction-today-match54-ipl-2026",
     title: "RCB vs MI Dream11 Prediction — Match 54 IPL 2026",
     tag: "IPL",
     date: "2026-05-09T15:18:28+05:30",
@@ -2522,7 +2511,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "rr-vs-gt-dream11-prediction-today-match-52st-ipl-2026",
+     slug: "rr-vs-gt-dream11-prediction-today-match-52st-ipl-2026",
     title: "RR vs GT Dream11 Prediction — Match 52 IPL 2026",
     tag: "IPL",
     date: "2026-05-08T18:03:09+05:30",
@@ -2535,7 +2524,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-explains-popular-ipl-2026-betting-markets",
+     slug: "cricbet99-book-explains-popular-ipl-2026-betting-markets",
     title: "Cricbet99 — Popular IPL 2026 Betting Markets",
     tag: "IPL",
     date: "2026-05-07T11:30:15+05:30",
@@ -2548,7 +2537,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-apk-fast-stable-low-end-phones",
+     slug: "cricbet99-apk-fast-stable-low-end-phones",
     title: "Cricbet99 APK — Fast & Stable on Low-End Phones",
     tag: "Guide",
     date: "2026-05-05T11:13:13+05:30",
@@ -2561,7 +2550,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "analyze-ipl-teams-before-betting-on-cricbet99-book",
+     slug: "analyze-ipl-teams-before-betting-on-cricbet99-book",
     title: "Analyze IPL Teams Before Betting on Cricbet99",
     tag: "IPL",
     date: "2026-05-04T05:00:00+05:30",
@@ -2574,7 +2563,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "ipl-2026-orange-cap-and-purple-cap-race-cricbet99",
+     slug: "ipl-2026-orange-cap-and-purple-cap-race-cricbet99",
     title: "IPL 2026 Orange Cap and Purple Cap Race — Cricbet99",
     tag: "IPL",
     date: "2026-05-02T15:55:47+05:30",
@@ -2587,7 +2576,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-trends-in-ipl-2026",
+     slug: "cricbet99-book-trends-in-ipl-2026",
     title: "Cricbet99 Trends in IPL 2026",
     tag: "IPL",
     date: "2026-04-29T10:50:28+05:30",
@@ -2600,7 +2589,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-to-deposit-funds-on-cricbet99-book-using-upi",
+     slug: "how-to-deposit-funds-on-cricbet99-book-using-upi",
     title: "How to Deposit Funds on Cricbet99 Using UPI",
     tag: "Guide",
     date: "2026-04-27T11:09:44+05:30",
@@ -2613,7 +2602,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-cricbet99-is-becoming-popular-during-ipl-season",
+     slug: "how-cricbet99-is-becoming-popular-during-ipl-season",
     title: "How Cricbet99 Is Becoming Popular During IPL Season",
     tag: "IPL",
     date: "2026-04-25T14:33:41+05:30",
@@ -2626,7 +2615,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-app-guide-simple-ipl-betting-anytime-anywhere",
+     slug: "cricbet99-app-guide-simple-ipl-betting-anytime-anywhere",
     title: "Cricbet99 App Guide — Simple IPL Betting Anytime, Anywhere",
     tag: "IPL",
     date: "2026-04-22T11:44:33+05:30",
@@ -2639,7 +2628,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "understanding-cricbet99-book-online-betting-id-guide",
+     slug: "understanding-cricbet99-book-online-betting-id-guide",
     title: "Understanding the Cricbet99 Online Betting ID",
     tag: "Guide",
     date: "2026-04-20T14:03:30+05:30",
@@ -2652,7 +2641,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "rcb-vs-dc-dream11-team-prediction-match-26th-ipl-2026",
+     slug: "rcb-vs-dc-dream11-team-prediction-match-26th-ipl-2026",
     title: "RCB vs DC Dream11 Team Prediction — 26th Match IPL 2026",
     tag: "IPL",
     date: "2026-04-17T12:46:47+05:30",
@@ -2665,7 +2654,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-to-win-live-bets-in-ipl-2026-on-cricbet99",
+     slug: "how-to-win-live-bets-in-ipl-2026-on-cricbet99",
     title: "How to Win Live Bets in IPL 2026 on Cricbet99",
     tag: "IPL",
     date: "2026-04-15T12:37:11+05:30",
@@ -2678,7 +2667,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "mi-vs-pbks-toss-and-match-prediction-24th-match-ipl-2026",
+     slug: "mi-vs-pbks-toss-and-match-prediction-24th-match-ipl-2026",
     title: "MI vs PBKS Toss & Match Prediction — 24th Match IPL 2026",
     tag: "IPL",
     date: "2026-04-13T15:57:59+05:30",
@@ -2691,7 +2680,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "rr-vs-rcb-toss-match-prediction-15th-match-ipl-2026",
+     slug: "rr-vs-rcb-toss-match-prediction-15th-match-ipl-2026",
     title: "RR vs RCB Toss & Match Prediction — 15th Match IPL 2026",
     tag: "IPL",
     date: "2026-04-10T14:23:21+05:30",
@@ -2704,7 +2693,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-match-tips-and-betting-prediction",
+     slug: "cricbet99-match-tips-and-betting-prediction",
     title: "Cricbet99 Match Tips and Betting Prediction",
     tag: "Guide",
     date: "2026-04-07T05:00:00+05:30",
@@ -2717,7 +2706,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "ipl-2026-season-guide-cricbet99-strategies",
+     slug: "ipl-2026-season-guide-cricbet99-strategies",
     title: "IPL 2026 Season Guide: Cricbet99 Strategies",
     tag: "IPL",
     date: "2026-04-04T05:00:00+05:30",
@@ -2730,7 +2719,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-ipl-match-day-strategy-to-win-more",
+     slug: "cricbet99-ipl-match-day-strategy-to-win-more",
     title: "Cricbet99 IPL Match-Day Strategy to Win More",
     tag: "IPL",
     date: "2026-04-02T05:00:00+05:30",
@@ -2743,7 +2732,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-id-ipl-2026-betting-guide",
+     slug: "cricbet99-id-ipl-2026-betting-guide",
     title: "Cricbet99 ID: IPL 2026 Betting Guide",
     tag: "IPL",
     date: "2026-03-30T05:00:00+05:30",
@@ -2756,7 +2745,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "ipl-2026-betting-tips-on-cricbet99-smart-strategies",
+     slug: "ipl-2026-betting-tips-on-cricbet99-smart-strategies",
     title: "IPL 2026 Betting Tips on Cricbet99: Smart Strategies",
     tag: "IPL",
     date: "2026-03-25T05:00:00+05:30",
@@ -2769,7 +2758,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-to-contact-cricbet99-whatsapp-for-ipl-id",
+     slug: "how-to-contact-cricbet99-whatsapp-for-ipl-id",
     title: "How to Contact Cricbet99 WhatsApp for IPL ID",
     tag: "IPL",
     date: "2026-03-24T08:00:00+05:30",
@@ -2782,7 +2771,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "complete-cricbet99-guide-2026-login-id-features-how-it-works",
+     slug: "complete-cricbet99-guide-2026-login-id-features-how-it-works",
     title: "Complete Cricbet99 Guide 2026: Login, ID, Features, Full Walkthrough",
     tag: "Casino",
     date: "2026-03-23T05:00:00+05:30",
@@ -2795,7 +2784,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "ipl-2026-betting-avoid-mistakes-cricbet99",
+     slug: "ipl-2026-betting-avoid-mistakes-cricbet99",
     title: "IPL 2026 Betting: Avoid These Mistakes on Cricbet99",
     tag: "IPL",
     date: "2026-03-23T05:00:00+05:30",
@@ -2808,7 +2797,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "why-users-prefer-cricbet99-book-app-for-ipl-betting",
+     slug: "why-users-prefer-cricbet99-book-app-for-ipl-betting",
     title: "Why Users Prefer Cricbet99 App for IPL Betting",
     tag: "IPL",
     date: "2026-03-22T07:30:00+05:30",
@@ -2821,7 +2810,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-to-play-cricket-games-on-cricbet99-book",
+     slug: "how-to-play-cricket-games-on-cricbet99-book",
     title: "How to Play Cricket Games on Cricbet99",
     tag: "Cricket",
     date: "2026-03-21T05:00:00+05:30",
@@ -2834,7 +2823,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-live-casino-works-cricbet99-book-guide",
+     slug: "how-live-casino-works-cricbet99-book-guide",
     title: "How Live Casino Works on Cricbet99",
     tag: "Casino",
     date: "2026-03-20T07:00:00+05:30",
@@ -2847,7 +2836,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-ipl-2026-betting-guide-every-match",
+     slug: "cricbet99-ipl-2026-betting-guide-every-match",
     title: "Cricbet99 IPL 2026 Betting Guide: Bet on Every Match",
     tag: "IPL",
     date: "2026-03-19T04:30:00+05:30",
@@ -2860,7 +2849,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-security-account-safety-guide",
+     slug: "cricbet99-book-security-account-safety-guide",
     title: "Cricbet99 Security: Account Safety Guide",
     tag: "Guide",
     date: "2026-03-18T05:15:00+05:30",
@@ -2873,7 +2862,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-scam-or-real-full-review",
+     slug: "cricbet99-book-scam-or-real-full-review",
     title: "Cricbet99 Scam or Real? Full Review",
     tag: "Guide",
     date: "2026-03-17T06:30:00+05:30",
@@ -2886,7 +2875,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-login-problems-solutions",
+     slug: "cricbet99-book-login-problems-solutions",
     title: "Cricbet99 Login Problems: Easy Solutions for Users",
     tag: "Guide",
     date: "2026-03-16T05:00:00+05:30",
@@ -2899,7 +2888,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-to-download-the-cricbet99-book-app-safely",
+     slug: "how-to-download-the-cricbet99-book-app-safely",
     title: "How to Download the Cricbet99 App Safely",
     tag: "Guide",
     date: "2026-03-14T04:35:00+05:30",
@@ -2912,7 +2901,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-to-deposit-money-on-cricbet99-book",
+     slug: "how-to-deposit-money-on-cricbet99-book",
     title: "How to Deposit Money on Cricbet99",
     tag: "Guide",
     date: "2026-03-13T04:19:00+05:30",
@@ -2925,7 +2914,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-how-to-withdraw-guide-money",
+     slug: "cricbet99-book-how-to-withdraw-guide-money",
     title: "Cricbet99 Withdrawal Guide: How Users Withdraw Money Easily",
     tag: "Guide",
     date: "2026-03-12T04:55:00+05:30",
@@ -2938,7 +2927,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-vs-competitors-online-cricket-platform",
+     slug: "cricbet99-book-vs-competitors-online-cricket-platform",
     title: "Cricbet99 vs Competitors: Which Online Cricket Platform Is Better?",
     tag: "Cricket",
     date: "2026-03-11T05:23:00+05:30",
@@ -2951,7 +2940,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-live-match-betting-works-cricbet99-book",
+     slug: "how-live-match-betting-works-cricbet99-book",
     title: "How Live Match Betting Works on Cricbet99",
     tag: "IPL",
     date: "2026-03-10T05:33:00+05:30",
@@ -2964,7 +2953,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-ipl-betting-id-2026-prediction-guide",
+     slug: "cricbet99-ipl-betting-id-2026-prediction-guide",
     title: "Cricbet99 IPL Betting ID 2026: Daily Match Prediction and Betting Strategy Guide",
     tag: "IPL",
     date: "2026-03-09T04:26:00+05:30",
@@ -2977,7 +2966,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "india-vs-new-zealand-t20-world-cup-final-cricbet99-match-prediction",
+     slug: "india-vs-new-zealand-t20-world-cup-final-cricbet99-match-prediction",
     title: "Cricbet99 Match Prediction: India vs New Zealand T20 World Cup Final",
     tag: "World Cup",
     date: "2026-03-08T10:00:00+05:30",
@@ -2990,7 +2979,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-betting-id-guide-for-india-vs-new-zealand-final",
+     slug: "cricbet99-betting-id-guide-for-india-vs-new-zealand-final",
     title: "Cricbet99 Betting ID Guide for India vs New Zealand T20 World Cup Final",
     tag: "World Cup",
     date: "2026-03-07T04:37:00+05:30",
@@ -3003,7 +2992,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-t20-world-cup-final-betting-markets-odds-predictions",
+     slug: "cricbet99-t20-world-cup-final-betting-markets-odds-predictions",
     title: "Cricbet99 T20 World Cup Final Betting Markets — Best Odds and Smart Predictions",
     tag: "World Cup",
     date: "2026-03-06T04:59:00+05:30",
@@ -3016,7 +3005,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-india-vs-england-semifinal-match-prediction",
+     slug: "cricbet99-india-vs-england-semifinal-match-prediction",
     title: "Cricbet99 India vs England Semifinal Match Prediction — Who Reaches the Final?",
     tag: "World Cup",
     date: "2026-03-05T05:00:00+05:30",
@@ -3029,7 +3018,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-app-guide-best-markets-1st-semi-final-2026",
+     slug: "cricbet99-app-guide-best-markets-1st-semi-final-2026",
     title: "Cricbet99 App Guide: Advanced Betting Options for 1st Semi-Final 2026",
     tag: "World Cup",
     date: "2026-03-04T04:27:00+05:30",
@@ -3042,7 +3031,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-id-for-sa-vs-nz-semi-final-live-betting",
+     slug: "cricbet99-id-for-sa-vs-nz-semi-final-live-betting",
     title: "How to Use Cricbet99 ID for SA vs NZ Semi-Final Live Betting",
     tag: "Guide",
     date: "2026-03-03T07:46:00+05:30",
@@ -3055,7 +3044,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-sa-vs-nz-semifinal-prediction",
+     slug: "cricbet99-sa-vs-nz-semifinal-prediction",
     title: "Cricbet99 South Africa vs New Zealand Semifinal Match Prediction and Analysis Inside",
     tag: "World Cup",
     date: "2026-03-02T05:26:00+05:30",
@@ -3068,7 +3057,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-wi-vs-ind-elimination-match-today-prediction",
+     slug: "cricbet99-wi-vs-ind-elimination-match-today-prediction",
     title: "Cricbet99 WI vs IND Elimination Match Today – Full Match Prediction and Head-to-Head Analysis",
     tag: "Guide",
     date: "2026-03-01T09:00:00+05:30",
@@ -3081,7 +3070,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "ipl-betting-feels-different-from-regular-cricket-betting-on-cricbet99",
+     slug: "ipl-betting-feels-different-from-regular-cricket-betting-on-cricbet99",
     title: "Why IPL Betting Feels Different From Regular Cricket Betting on Cricbet99",
     tag: "IPL",
     date: "2026-02-28T04:25:00+05:30",
@@ -3094,7 +3083,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-customer-support-24-7-help-for-betting-and-withdrawal-issues",
+     slug: "cricbet99-customer-support-24-7-help-for-betting-and-withdrawal-issues",
     title: "Cricbet99 Customer Support – 24/7 Help for Betting and Withdrawal Issues",
     tag: "Guide",
     date: "2026-02-27T04:45:00+05:30",
@@ -3107,7 +3096,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-whatsapp-vs-direct-login-withdrawals",
+     slug: "cricbet99-whatsapp-vs-direct-login-withdrawals",
     title: "Cricbet99 WhatsApp ID vs. Direct Website Login: Which Is Faster for Withdrawals?",
     tag: "Guide",
     date: "2026-02-26T08:23:00+05:30",
@@ -3120,7 +3109,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "why-verification-matters-ipl-betting-id-cricbet99-guide",
+     slug: "why-verification-matters-ipl-betting-id-cricbet99-guide",
     title: "Why Verification Matters for a Better IPL Betting ID Experience on Cricbet99",
     tag: "IPL",
     date: "2026-02-25T04:37:00+05:30",
@@ -3133,7 +3122,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-football-betting-bet-live-predict-smart-big-win",
+     slug: "cricbet99-football-betting-bet-live-predict-smart-big-win",
     title: "Cricbet99 Football Betting – Bet Live, Predict Smart & Big Win",
     tag: "Football",
     date: "2026-02-24T04:22:00+05:30",
@@ -3146,7 +3135,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-tds-betting-winnings-guide-2026",
+     slug: "cricbet99-tds-betting-winnings-guide-2026",
     title: "Cricbet99 Understanding TDS on Betting Winnings in 2026: A Guide for Indian Players",
     tag: "Guide",
     date: "2026-02-23T04:34:00+05:30",
@@ -3159,7 +3148,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-ind-vs-sa-match-prediction-who-will-win-today",
+     slug: "cricbet99-ind-vs-sa-match-prediction-who-will-win-today",
     title: "Cricbet99 IND vs SA Prediction Super 8 Match: Who Will Win Today? ICC T20 World Cup 2026",
     tag: "World Cup",
     date: "2026-02-22T10:00:00+05:30",
@@ -3172,7 +3161,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "new-zealand-vs-pakistan-super-8-match-prediction",
+     slug: "new-zealand-vs-pakistan-super-8-match-prediction",
     title: "Cricbet99 Super 8 Showdown – New Zealand vs Pakistan Match Prediction",
     tag: "World Cup",
     date: "2026-02-21T04:40:00+05:30",
@@ -3185,7 +3174,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "popular-cricket-football-prediction-markets-cricbet99",
+     slug: "popular-cricket-football-prediction-markets-cricbet99",
     title: "Popular Cricket and Football Prediction Markets on Cricbet99",
     tag: "Football",
     date: "2026-02-20T04:54:00+05:30",
@@ -3198,7 +3187,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-icc-t20-world-cup-2026-points-table-analysis",
+     slug: "cricbet99-icc-t20-world-cup-2026-points-table-analysis",
     title: "Cricbet99 ICC T20 World Cup 2026 Points Table Analysis & Semi-Final Predictions",
     tag: "World Cup",
     date: "2026-02-19T10:11:00+05:30",
@@ -3211,7 +3200,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-super-8-betting-strategy-t20-world-cup",
+     slug: "cricbet99-super-8-betting-strategy-t20-world-cup",
     title: "Cricbet99 Super 8 Match Preview & Betting Strategy – T20 World Cup 2026",
     tag: "World Cup",
     date: "2026-02-18T04:23:00+05:30",
@@ -3224,7 +3213,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "best-ipl-betting-tips-cricbet99-users-2026",
+     slug: "best-ipl-betting-tips-cricbet99-users-2026",
     title: "Best IPL Betting Tips to Increase Winning Chances for Cricbet99 Users",
     tag: "IPL",
     date: "2026-02-17T04:22:00+05:30",
@@ -3237,7 +3226,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-safe-verified-ipl-online-cricket-id-2026",
+     slug: "cricbet99-safe-verified-ipl-online-cricket-id-2026",
     title: "Cricbet99 Safe & Verified IPL Online Cricket ID 2026 – Everything You Need to Know",
     tag: "IPL",
     date: "2026-02-16T04:28:00+05:30",
@@ -3250,7 +3239,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "live-match-betting-cricbet99-winning-plan-t20-world-cup",
+     slug: "live-match-betting-cricbet99-winning-plan-t20-world-cup",
     title: "Cricket Live Match Betting with Cricbet99 Online Winning Plan in T20 World Cup",
     tag: "World Cup",
     date: "2026-02-15T10:00:00+05:30",
@@ -3263,7 +3252,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-india-vs-pakistan-today-match-prediction",
+     slug: "cricbet99-india-vs-pakistan-today-match-prediction",
     title: "Cricbet99 India vs Pakistan Big Clash Today – Match Preview & Prediction",
     tag: "Guide",
     date: "2026-02-14T05:03:00+05:30",
@@ -3276,7 +3265,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-t20-world-cup-predictions-betting-strategies",
+     slug: "cricbet99-t20-world-cup-predictions-betting-strategies",
     title: "T20 World Cup Predictions and Betting Strategies on Cricbet99",
     tag: "Horse Racing",
     date: "2026-02-13T05:07:00+05:30",
@@ -3289,7 +3278,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "casino-games-types-on-cricbet99",
+     slug: "casino-games-types-on-cricbet99",
     title: "Casino Games on Cricbet99: Features, Game Types, and Experience",
     tag: "Casino",
     date: "2026-02-12T07:05:00+05:30",
@@ -3302,7 +3291,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-best-time-to-place-bets",
+     slug: "cricbet99-best-time-to-place-bets",
     title: "Best Time to Place Bets on Cricbet99 for Higher Wins",
     tag: "Guide",
     date: "2026-02-10T10:00:00+05:30",
@@ -3315,7 +3304,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-online-cricket-platform-india",
+     slug: "cricbet99-online-cricket-platform-india",
     title: "Cricbet99 Online Cricket Platform: A Reliable Option for Indian Users",
     tag: "Cricket",
     date: "2026-02-09T05:06:00+05:30",
@@ -3328,7 +3317,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-ipl-t20-world-cup-betting-guide",
+     slug: "cricbet99-ipl-t20-world-cup-betting-guide",
     title: "Cricbet99 IPL & T20 World Cup: Cricket Markets, Platform Dynamics, and How to Bet Responsibly",
     tag: "IPL",
     date: "2026-02-08T03:58:00+05:30",
@@ -3341,7 +3330,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-india-vs-usa-match-prediction-icc-t20-world-cup",
+     slug: "cricbet99-india-vs-usa-match-prediction-icc-t20-world-cup",
     title: "India vs USA Match Prediction Today: ICC T20 World Cup Betting Guide for Smart Players Cricbet99",
     tag: "World Cup",
     date: "2026-02-07T04:55:00+05:30",
@@ -3354,7 +3343,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "why-indian-gamers-prefer-cricbet99",
+     slug: "why-indian-gamers-prefer-cricbet99",
     title: "Cricbet99 Platform Review: Why Indian Gamers Prefer It Over Others",
     tag: "Casino",
     date: "2026-02-06T05:32:00+05:30",
@@ -3367,7 +3356,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-vs-other-betting-ids-2026",
+     slug: "cricbet99-vs-other-betting-ids-2026",
     title: "Cricbet99 vs Other Betting IDs: Which One Is Better in 2026?",
     tag: "Guide",
     date: "2026-02-05T04:26:00+05:30",
@@ -3380,7 +3369,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "ipl-betting-id-safe-signup-cricbet99",
+     slug: "ipl-betting-id-safe-signup-cricbet99",
     title: "IPL Betting ID Cricbet99 – Complete Guide to Safe Signup and Responsible Play",
     tag: "IPL",
     date: "2026-02-04T06:06:00+05:30",
@@ -3393,7 +3382,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-online-betting-features-game-types",
+     slug: "cricbet99-online-betting-features-game-types",
     title: "Cricbet99 Online Betting: Features, Game Types, and How to Play",
     tag: "Casino",
     date: "2026-02-03T05:00:00+05:30",
@@ -3406,7 +3395,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "icc-t20-world-cup-2026-match-prediction-cricbet99",
+     slug: "icc-t20-world-cup-2026-match-prediction-cricbet99",
     title: "ICC T20 World Cup 2026 Pitch Report and Match Prediction: Cricbet99 Guide",
     tag: "World Cup",
     date: "2026-02-02T06:37:00+05:30",
@@ -3419,7 +3408,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-gaming-online-cricket-id",
+     slug: "cricbet99-gaming-online-cricket-id",
     title: "Cricbet99 Responsible Gaming with an Online Cricket ID: Safety, Limits, and Smart Play",
     tag: "Cricket",
     date: "2026-02-01T09:06:00+05:30",
@@ -3432,7 +3421,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "ipl-live-match-betting-cricbet99",
+     slug: "ipl-live-match-betting-cricbet99",
     title: "IPL Live Match Betting: How Cricbet99 Mobile Platform Supports Indian Players",
     tag: "IPL",
     date: "2026-01-31T06:19:00+05:30",
@@ -3445,7 +3434,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-money-transfer-guide",
+     slug: "cricbet99-money-transfer-guide",
     title: "Cricbet99 Money Transfer Guide: Simple Deposit and Fast Withdrawal Process",
     tag: "Guide",
     date: "2026-01-30T05:29:00+05:30",
@@ -3458,7 +3447,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-to-use-cricbet99-on-mobile-india",
+     slug: "how-to-use-cricbet99-on-mobile-india",
     title: "How to Use Cricbet99 on Mobile in India: Betting App Features Explained",
     tag: "Casino",
     date: "2026-01-29T05:01:00+05:30",
@@ -3471,7 +3460,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-features-games-safe-betting",
+     slug: "cricbet99-features-games-safe-betting",
     title: "Understanding Cricbet99: Features, Games, and Safe Betting Options",
     tag: "Casino",
     date: "2026-01-28T05:14:00+05:30",
@@ -3484,7 +3473,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-india-vs-new-zealand-4th-t20-match-prediction",
+     slug: "cricbet99-india-vs-new-zealand-4th-t20-match-prediction",
     title: "Cricbet99 India vs New Zealand 4th T20: Can India Continue Its Dominance Over NZ?",
     tag: "Guide",
     date: "2026-01-27T06:17:00+05:30",
@@ -3497,7 +3486,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "exclusive-bonuses-rewards-cricbet99-id",
+     slug: "exclusive-bonuses-rewards-cricbet99-id",
     title: "Exclusive Bonuses & Rewards for Cricbet99 ID Holders",
     tag: "Guide",
     date: "2026-01-24T08:16:00+05:30",
@@ -3510,7 +3499,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "betting-history-using-cricbet99-id",
+     slug: "betting-history-using-cricbet99-id",
     title: "How to Track Your Betting History Using Cricbet99 ID",
     tag: "Guide",
     date: "2026-01-24T06:38:00+05:30",
@@ -3523,7 +3512,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-id-for-online-betting",
+     slug: "cricbet99-id-for-online-betting",
     title: "Why You Need a Cricbet99 ID for Online Betting",
     tag: "Casino",
     date: "2026-01-23T09:15:00+05:30",
@@ -3536,7 +3525,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-id-in-5-easy-steps",
+     slug: "cricbet99-id-in-5-easy-steps",
     title: "How to Create a Cricbet99 ID in 5 Easy Steps",
     tag: "Casino",
     date: "2026-01-23T06:49:00+05:30",
@@ -3549,7 +3538,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-online-gaming-guide",
+     slug: "cricbet99-book-online-gaming-guide",
     title: "Bet Anytime, Anywhere with Cricbet99: A Complete Guide",
     tag: "Casino",
     date: "2026-01-23T05:44:00+05:30",
@@ -3562,7 +3551,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-ind-vs-nz-2nd-t20-match-prediction",
+     slug: "cricbet99-book-ind-vs-nz-2nd-t20-match-prediction",
     title: "Cricbet99 IND vs NZ 2nd T20 Match Prediction",
     tag: "Guide",
     date: "2026-01-22T06:15:00+05:30",
@@ -3575,7 +3564,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "why-cricbet99-book-trusted-ipl-t20-live-betting-india",
+     slug: "why-cricbet99-book-trusted-ipl-t20-live-betting-india",
     title: "Why Cricbet99 Has Become a Trusted Name for IPL and T20 Live Betting",
     tag: "IPL",
     date: "2026-01-21T05:23:00+05:30",
@@ -3588,7 +3577,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-ind-vs-nz-t20-live-betting-strategy",
+     slug: "cricbet99-book-ind-vs-nz-t20-live-betting-strategy",
     title: "India vs New Zealand T20 Live Match Insights and Betting Strategy",
     tag: "Guide",
     date: "2026-01-20T05:33:00+05:30",
@@ -3601,7 +3590,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-gg-w-vs-rcb-w-ipl-match-prediction",
+     slug: "cricbet99-book-gg-w-vs-rcb-w-ipl-match-prediction",
     title: "Cricbet99 Gujarat Giants vs RCB Women IPL Match Prediction",
     tag: "IPL",
     date: "2026-01-19T05:35:00+05:30",
@@ -3614,7 +3603,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-whatsapp-support-service",
+     slug: "cricbet99-book-whatsapp-support-service",
     title: "Cricbet99 WhatsApp Support Service: Reliable Help for Every User",
     tag: "Guide",
     date: "2026-01-18T10:00:00+05:30",
@@ -3627,7 +3616,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-india-vs-new-zealand-3rd-odi-prediction",
+     slug: "cricbet99-book-india-vs-new-zealand-3rd-odi-prediction",
     title: "Cricbet99 India vs New Zealand 3rd ODI Prediction",
     tag: "Cricket",
     date: "2026-01-17T06:36:00+05:30",
@@ -3640,7 +3629,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-ipl-wpl-bbl-guide",
+     slug: "cricbet99-book-ipl-wpl-bbl-guide",
     title: "Cricbet99 Cricket Betting Strategy Guide: IPL, WPL, BBL",
     tag: "IPL",
     date: "2026-01-16T05:08:00+05:30",
@@ -3653,7 +3642,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-mumbai-vs-up-warriors-women-match-prediction",
+     slug: "cricbet99-book-mumbai-vs-up-warriors-women-match-prediction",
     title: "Cricbet99 Mumbai vs UP Warriorz Women: Who Will Win Today? Betting Prediction",
     tag: "Women's Cricket",
     date: "2026-01-15T06:15:00+05:30",
@@ -3666,7 +3655,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-delhi-vs-up-warriors-women-match-analysis",
+     slug: "cricbet99-book-delhi-vs-up-warriors-women-match-analysis",
     title: "Delhi vs UP Warriors Women Match Analysis with Cricbet99 Betting View",
     tag: "Women's Cricket",
     date: "2026-01-14T05:57:00+05:30",
@@ -3679,7 +3668,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-betting-options-bonuses-benefits",
+     slug: "cricbet99-book-betting-options-bonuses-benefits",
     title: "Cricbet99 Explained: Betting Options, Bonuses, and User Benefits",
     tag: "Casino",
     date: "2026-01-13T07:12:00+05:30",
@@ -3692,7 +3681,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-app-vs-website",
+     slug: "cricbet99-book-app-vs-website",
     title: "Cricbet99 App vs Website – Where Should You Bet in 2026?",
     tag: "Guide",
     date: "2026-01-12T08:01:00+05:30",
@@ -3705,7 +3694,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-cricbet99-book-works-login-id-creation-betting-process",
+     slug: "how-cricbet99-book-works-login-id-creation-betting-process",
     title: "How Cricbet99 Works: Login, ID Creation & Betting Process",
     tag: "Cricket",
     date: "2026-01-11T10:22:00+05:30",
@@ -3718,7 +3707,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "top-5-safe-betting-strategies-for-wpl-matches-on-cricbet99-book",
+     slug: "top-5-safe-betting-strategies-for-wpl-matches-on-cricbet99-book",
     title: "Top 5 Safe Betting Strategies for WPL Matches on Cricbet99",
     tag: "Women's Cricket",
     date: "2026-01-10T05:44:00+05:30",
@@ -3731,7 +3720,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "cricbet99-book-agent-system-explained",
+     slug: "cricbet99-book-agent-system-explained",
     title: "Cricbet99 Agent System Explained",
     tag: "Guide",
     date: "2026-01-09T06:01:00+05:30",
@@ -3744,7 +3733,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "icc-mens-t20-world-cup-2026-betting-strategy-for-cricbet99-book-users",
+     slug: "icc-mens-t20-world-cup-2026-betting-strategy-for-cricbet99-book-users",
     title: "ICC Men's T20 World Cup 2026 Betting Strategy: A Complete Guide for Cricbet99 Users",
     tag: "World Cup",
     date: "2026-01-08T05:43:00+05:30",
@@ -3757,7 +3746,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-to-withdraw-money-from-cricbet99-book-using-upi",
+     slug: "how-to-withdraw-money-from-cricbet99-book-using-upi",
     title: "How to Withdraw Money from Cricbet99 Using UPI",
     tag: "Guide",
     date: "2026-01-07T12:40:00+05:30",
@@ -3770,7 +3759,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-to-verify-your-cricbet99-book-account",
+     slug: "how-to-verify-your-cricbet99-book-account",
     title: "How to Verify Your Cricbet99 Account – Complete Guide",
     tag: "Guide",
     date: "2026-01-06T12:22:00+05:30",
@@ -3783,7 +3772,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "football-betting-guide-on-cricbet99-book",
+     slug: "football-betting-guide-on-cricbet99-book",
     title: "Football Betting Guide on Cricbet99 – Complete Beginner to Pro Guide",
     tag: "Football",
     date: "2026-01-06T04:53:00+05:30",
@@ -3796,7 +3785,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "things-to-check-before-buying-a-cricbet99-id",
+     slug: "things-to-check-before-buying-a-cricbet99-id",
     title: "Things to Check Before Buying a Cricbet99 ID",
     tag: "Cricket",
     date: "2026-01-05T05:15:00+05:30",
@@ -3809,7 +3798,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-cricbet99-became-a-trusted-name-in-online-betting",
+     slug: "how-cricbet99-became-a-trusted-name-in-online-betting",
     title: "How Cricbet99 Became a Trusted Name in Online Betting",
     tag: "Guide",
     date: "2026-01-04T10:12:00+05:30",
@@ -3822,7 +3811,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "why-cricbet99-book-is-a-top-choice-for-cricket-betting-in-india",
+     slug: "why-cricbet99-book-is-a-top-choice-for-cricket-betting-in-india",
     title: "Why Cricbet99 Is a Top Choice for Cricket Betting in India",
     tag: "IPL",
     date: "2026-01-04T09:56:00+05:30",
@@ -3835,7 +3824,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "step-by-step-guide-to-bet-on-icc-t20-world-cup-2026-with-cricbet99-id",
+     slug: "step-by-step-guide-to-bet-on-icc-t20-world-cup-2026-with-cricbet99-id",
     title: "Step-by-Step Guide to Bet on ICC T20 World Cup 2026 with Cricbet99 ID",
     tag: "World Cup",
     date: "2026-01-03T06:08:00+05:30",
@@ -3848,7 +3837,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-to-check-bet-history-on-cricbet99-book",
+     slug: "how-to-check-bet-history-on-cricbet99-book",
     title: "How to Check Bet History on Cricbet99 – Complete User Guide",
     tag: "Guide",
     date: "2026-01-02T12:39:00+05:30",
@@ -3861,7 +3850,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-to-bet-on-live-ipl-matches-using-cricbet99-book-id",
+     slug: "how-to-bet-on-live-ipl-matches-using-cricbet99-book-id",
     title: "How to Bet on Live IPL Matches Using Cricbet99 ID – Step-by-Step Guide",
     tag: "IPL",
     date: "2026-01-01T06:26:00+05:30",
@@ -3874,7 +3863,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-to-add-money-in-cricbet99-book-wallet-complete-beginner-guide",
+     slug: "how-to-add-money-in-cricbet99-book-wallet-complete-beginner-guide",
     title: "How to Add Money in Cricbet99 Wallet – Complete Beginner Guide",
     tag: "Guide",
     date: "2025-12-31T12:45:00+05:30",
@@ -3887,7 +3876,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "common-cricbet99-book-login-id-issues-and-how-to-fix-them-easily",
+     slug: "common-cricbet99-book-login-id-issues-and-how-to-fix-them-easily",
     title: "Common Cricbet99 Login & ID Issues and How to Fix Them Easily",
     tag: "Guide",
     date: "2025-12-30T05:54:00+05:30",
@@ -3900,7 +3889,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "why-cricbet99-book-is-indias-most-popular-choice",
+     slug: "why-cricbet99-book-is-indias-most-popular-choice",
     title: "Why Cricbet99 Is India's Most Popular Choice",
     tag: "Cricket",
     date: "2025-12-30T05:54:01+05:30",
@@ -3913,7 +3902,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "how-to-login-to-cricbet99-book-a-step-by-step-beginners-guide",
+     slug: "how-to-login-to-cricbet99-book-a-step-by-step-beginners-guide",
     title: "How to Login to Cricbet99: Beginner's Guide",
     tag: "Guide",
     date: "2025-12-29T12:56:00+05:30",
@@ -3926,7 +3915,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-     "author": "Cricbet99 Editorial", "tag": "Insights", slug: "what-is-cricbet99-book-a-complete-beginners-guide",
+     slug: "what-is-cricbet99-book-a-complete-beginners-guide",
     title: "What Is Cricbet99? Complete Beginner's Guide 2026",
     tag: "Guide",
     date: "2025-12-26T12:43:00+05:30",
