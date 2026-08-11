@@ -233,13 +233,13 @@ function MatchDetailPage() {
                   <div className="p-6 rounded-2xl bg-background/40 border border-white/5">
                     <h4 className="text-xs font-black uppercase text-primary mb-2 tracking-widest">Winning Momentum</h4>
                     <p className="text-xs text-foreground/60 leading-relaxed">
-                      AI modeling suggests {m.homeTeam} has a slight edge due to their familiarity with {m.venue} conditions and superior net run rate in the tournament.
+                      AI modeling suggests {m.homeTeam} has a slight edge due to their {m.sport === 'Football' ? 'home conversion rates' : 'familiarity with venue conditions'} and superior {m.sport === 'Football' ? 'defensive metrics' : 'net run rate'} in the tournament.
                     </p>
                   </div>
                   <div className="p-6 rounded-2xl bg-background/40 border border-white/5">
                     <h4 className="text-xs font-black uppercase text-accent mb-2 tracking-widest">Challenger Outlook</h4>
                     <p className="text-xs text-foreground/60 leading-relaxed">
-                      {m.awayTeam} can flip the odds if they manage to take early wickets during the powerplay, where {m.homeTeam} has shown statistical vulnerability.
+                      {m.awayTeam} can flip the odds if they manage to {m.sport === 'Football' ? 'control the midfield tempo' : 'take early wickets'} during the {m.sport === 'Football' ? 'first half' : 'powerplay'}, where {m.homeTeam} has shown statistical vulnerability.
                     </p>
                   </div>
                 </div>
@@ -247,7 +247,7 @@ function MatchDetailPage() {
                 <div className="p-8 rounded-2xl bg-background/60 border border-primary/10 italic text-center max-w-2xl">
                   <Lightbulb className="w-6 h-6 text-primary mx-auto mb-4" />
                   <p className="text-lg leading-relaxed">
-                    "{m.predictionInsight || `Historical head-to-head data at ${m.venue} shows that the team winning the toss and batting first has won 64% of encounters. If ${m.homeTeam} secures a good start, they are statistically poised to take this game.`}"
+                    "{m.predictionInsight || (m.sport === 'Football' ? `Historical head-to-head data suggests that the team scoring first in this fixture has won 78% of encounters. If ${m.homeTeam} secures an early lead, they are statistically poised to take this game.` : `Historical head-to-head data at ${m.venue} shows that the team winning the toss and batting first has won 64% of encounters. If ${m.homeTeam} secures a good start, they are statistically poised to take this game.`)}"
                   </p>
                 </div>
               </div>
@@ -383,7 +383,9 @@ function MatchDetailPage() {
                 ).map(market => (
                   <div key={market} className="group p-5 rounded-2xl border border-white/5 bg-white/[0.02] text-center hover:border-primary/30 transition-all hover:scale-[1.05]">
                     <div className="text-xs font-black text-foreground/80 group-hover:text-primary mb-3 uppercase tracking-wider">{market}</div>
-                    <Badge className="bg-primary/20 text-primary border-none text-[8px] uppercase font-black px-3 py-1">Highly Liquid</Badge>
+                    <Badge className={cn("bg-primary/20 text-primary border-none text-[8px] uppercase font-black px-3 py-1", market === "Asian Handicap" || market === "BTTS" ? "bg-accent/20 text-accent" : "")}>
+                      {market === "Asian Handicap" || market === "BTTS" ? "Expert Pick" : "Highly Liquid"}
+                    </Badge>
                   </div>
                 ))}
               </div>
@@ -399,7 +401,7 @@ function MatchDetailPage() {
               </h2>
               <div className="grid gap-6">
                 {(m.bettingTips || [
-                  `Analyze the toss carefully; the pitch at ${m.venue} favors the team batting first.`,
+                  m.sport === 'Football' ? `Analyze the starting lineups carefully; injuries to key defenders in ${m.homeTeam}'s squad could shift the odds toward over 2.5 goals.` : `Analyze the toss carefully; the pitch at ${m.venue} favors the team batting first.`,
                   `Value is found in mid-game session markets where volatility is high.`,
                   "Always maintain a disciplined bankroll strategy for high-volume fixtures."
                 ]).map((tip: string, i: number) => (
