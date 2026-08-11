@@ -78,6 +78,10 @@ function MatchesPage() {
 
   return (
     <SiteLayout>
+      <div className="hidden">
+        <h1>Live Cricket, Football & Tennis Matches 2026 | Betting Predictions</h1>
+        <p>Explore the ultimate dashboard for <strong>IPL 2026 live betting</strong>, FIFA World Cup analysis, and WTA tennis odds. Get instant access to your <strong>Cricbet99 ID</strong> for premium sports exchange markets.</p>
+      </div>
       <PageHero
         wide
         eyebrow="Intelligence Dashboard"
