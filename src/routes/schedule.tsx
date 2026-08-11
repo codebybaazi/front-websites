@@ -333,7 +333,7 @@ function Schedule() {
                         </div>
                         
                         <div className="rounded-2xl border border-primary/10 bg-background/40 overflow-hidden">
-                          <div className="overflow-x-auto">
+                          <div className="overflow-x-auto xl:overflow-x-visible">
                             {/* Desktop Table View */}
                             <table className="w-full text-left border-collapse hidden md:table">
                               <thead>
