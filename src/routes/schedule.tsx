@@ -112,7 +112,7 @@ function Schedule() {
                         </div>
                         
                         <div className="rounded-2xl border border-primary/10 bg-background/40 overflow-hidden">
-                          <div className="overflow-x-auto lg:overflow-x-visible">
+                          <div className="overflow-x-auto md:overflow-x-visible">
                             {/* Desktop Table View */}
                             <table className="w-full text-left border-collapse hidden md:table">
                               <thead>
@@ -129,11 +129,11 @@ function Schedule() {
                                   .filter(m => m.sport === "Football" && (m as any).category === category)
                                   .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
                                   .map((match) => (
-                                    <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap lg:text-wrap">
+                                    <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap md:text-wrap">
                                       <td className="p-4 text-sm font-medium text-foreground/80">{match.stage}</td>
                                       <td className="p-4 font-bold text-foreground">{match.homeTeam} vs {match.awayTeam}</td>
                                       <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'eee, dd MMM yyyy · HH:mm')}</td>
-                                      <td className="p-4 text-sm text-foreground/60 lg:text-wrap">{match.venue}, {match.city}</td>
+                                      <td className="p-4 text-sm text-foreground/60 md:text-wrap">{match.venue}, {match.city}</td>
                                       <td className="p-4">
                                         <Link 
                                           to="/matches/$slug"
@@ -194,7 +194,7 @@ function Schedule() {
                 ) : activeTab === "Tennis" ? (
                   <div className="space-y-6">
                     <div className="rounded-2xl border border-primary/10 bg-background/40 overflow-hidden">
-                      <div className="overflow-x-auto lg:overflow-x-visible">
+                      <div className="overflow-x-auto md:overflow-x-visible">
                         {/* Desktop Table View */}
                         <table className="w-full text-left border-collapse hidden md:table">
                           <thead>
@@ -211,8 +211,8 @@ function Schedule() {
                             {tennisFixtures
                               .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
                               .map((match) => (
-                                <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap lg:text-wrap">
-                                  <td className="p-4 text-sm text-foreground/60 whitespace-nowrap">
+                                <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap md:text-wrap">
+                                  <td className="p-4 text-sm text-foreground/60 md:text-wrap">
                                     {match.endDate ? (
                                       <>
                                         {(() => {
@@ -248,7 +248,7 @@ function Schedule() {
                                     <div className="text-sm font-bold text-foreground">{match.player1}</div>
                                     <div className="text-[10px] text-foreground/40 italic">Prev: {match.player1}</div>
                                   </td>
-                                  <td className="p-4 text-sm text-foreground/60 lg:text-wrap">{match.venue}, {match.city}</td>
+                                  <td className="p-4 text-sm text-foreground/60 md:text-wrap">{match.venue}, {match.city}</td>
                                   <td className="p-4">
                                     <div className="flex flex-col gap-2">
                                       <Link 
@@ -333,7 +333,7 @@ function Schedule() {
                         </div>
                         
                         <div className="rounded-2xl border border-primary/10 bg-background/40 overflow-hidden">
-                          <div className="overflow-x-auto lg:overflow-x-visible">
+                          <div className="overflow-x-auto md:overflow-x-visible">
                             {/* Desktop Table View */}
                             <table className="w-full text-left border-collapse hidden md:table">
                               <thead>
@@ -347,11 +347,11 @@ function Schedule() {
                               </thead>
                               <tbody>
                                 {series.matches.map((match) => (
-                                  <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap lg:text-wrap">
+                                  <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap md:text-wrap">
                                     <td className="p-4 text-sm font-medium text-foreground/80">{match.match}</td>
                                     <td className="p-4 font-bold text-foreground">{match.teams}</td>
-                                    <td className="p-4 text-sm text-foreground/60 whitespace-nowrap">{match.date}</td>
-                                    <td className="p-4 text-sm text-foreground/60 lg:text-wrap">{match.venue}</td>
+                                    <td className="p-4 text-sm text-foreground/60 md:text-wrap">{match.date}</td>
+                                    <td className="p-4 text-sm text-foreground/60 md:text-wrap">{match.venue}</td>
                                     <td className="p-4">
                                       <Link 
                                         to="/matches/$slug"
