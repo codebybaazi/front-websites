@@ -1628,8 +1628,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group C",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["scotland vs brazil"]
+    marketHighlights: ["Match Winner", "Brazil to Win", "Both Teams to Score", "Vinícius Júnior Anytime Goal"],
+    keywords: ["scotland vs brazil prediction", "miami world cup betting", "tartan army vs selecao odds"],
+    headToHead: "Brazil has a dominant historical record against Scotland, but the Tartan Army's high-intensity pressing has troubled top-tier teams recently.",
+    homeRecentForm: "W,W,D,L,W",
+    awayRecentForm: "W,W,W,W,W",
+    keyPlayersHome: ["John McGinn (Midfield)", "Scott McTominay (Midfield)", "Andrew Robertson (Defender)"],
+    keyPlayersAway: ["Vinícius Júnior (Winger)", "Rodrygo (Forward)", "Lucas Paquetá (Midfield)"],
+    bettingTips: [
+      "Brazil's offensive fluidity vs Scotland's organized high press is the primary tactical duel.",
+      "John McGinn's late runs into the box are a consistent threat; back 'Scotland Total Shots Over 8.5'.",
+      "Back 'Both Teams to Score' given Scotland's home-like support and Brazil's defensive lapses."
+    ],
+    detailedNarrative: "A fascinating clash in Miami. Scotland's Three Lions face the technical brilliance of Brazil's Seleção. With a massive Scottish diaspora in Florida, Hard Rock Stadium will be a hostile environment for the Brazilians. Our AI match overview predicts a high-tempo game where Scotland's energy will test Brazil's composure.",
+    pitchReport: "Hard Rock Stadium features a top-tier grass surface. The Miami heat will favor the high-stamina Brazilian side in the final quarter.",
+    tacticalPreview: "Brazil will deploy their fluid 4-2-3-1, prioritizing creative freedom for Vinícius Jr. Scotland is expected to respond with a robust 3-4-2-1, focusing on neutralizing the central areas.",
+    winProbHome: 25,
+    winProbAway: 75,
+    predictionInsight: "Brazil hasn't lost a World Cup group match to European opposition in neutral venues since 1998. Their technical quality is a major data point.",
+    projectedScoreHome: "1 - 3"
   },
   {
     slug: "wc2026-m50",
@@ -1644,8 +1661,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group C",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["morocco vs haiti"]
+    marketHighlights: ["Match Winner", "Morocco to Win to Nil", "Total Goals Under 2.5", "Achraf Hakimi Anytime Goal"],
+    keywords: ["morocco vs haiti prediction", "atlanta world cup betting", "morocco national team odds"],
+    headToHead: "First competitive meeting. Morocco's legendary defensive organization vs Haiti's physical resilience and direct play.",
+    homeRecentForm: "W,L,W,D,W",
+    awayRecentForm: "L,D,L,W,L",
+    keyPlayersHome: ["Achraf Hakimi (Right Back)", "Hakim Ziyech (Winger)", "Yassine Bounou (Goalkeeper)"],
+    keyPlayersAway: ["Duckens Nazon (Striker)", "Frantzdy Pierrot (Forward)", "Ricardo Adé (Defender)"],
+    bettingTips: [
+      "Achraf Hakimi's marauding runs are Morocco's primary offensive weapon; back him for anytime scorer.",
+      "Morocco's defensive discipline under Regragui makes 'Haiti Total Goals Under 0.5' a strong play.",
+      "Back 'Morocco to Win to Nil' as the technical and physical gap is significant."
+    ],
+    detailedNarrative: "Morocco looks to secure their knockout spot in Atlanta against a Haiti side looking for their first World Cup point. The tactical focus will be on Morocco's defensive organization vs Haiti's damage limitation. Our AI models predict a masterclass in control from the North Africans.",
+    pitchReport: "Mercedes-Benz Stadium features a fast synthetic turf. This will suit Morocco's quick-passing and technical movement.",
+    tacticalPreview: "Morocco will deploy their compact 4-1-4-1, prioritizing a low block and quick counters. Haiti will likely set up in a defensive 5-4-1, focusing on closing gaps.",
+    winProbHome: 88,
+    winProbAway: 12,
+    predictionInsight: "Morocco has a high win rate against non-European opposition in neutral venues. Their defensive resilience was a hallmark of their 2022 campaign.",
+    projectedScoreHome: "2 - 0"
   },
   {
     slug: "wc2026-m51",
@@ -1660,8 +1694,25 @@ export const footballFixtures: FootballFixture[] = [
     status: "upcoming",
     stage: "Group B",
     category: "Group Stage",
-    marketHighlights: ["Match odds"],
-    keywords: ["switzerland vs canada"]
+    marketHighlights: ["Match Winner", "Both Teams to Score", "Total Goals Over 2.5", "Alphonso Davies Anytime Goal"],
+    keywords: ["switzerland vs canada prediction", "bc place world cup odds", "swiss vs canada betting"],
+    headToHead: "First competitive meeting. Switzerland's technical precision vs Canada's high-intensity home support and pace.",
+    homeRecentForm: "W,D,W,D,W",
+    awayRecentForm: "W,W,D,L,W",
+    keyPlayersHome: ["Granit Xhaka (Midfield)", "Manuel Akanji (Defender)", "Breel Embolo (Forward)"],
+    keyPlayersAway: ["Alphonso Davies (Winger)", "Jonathan David (Striker)", "Stephen Eustáquio (Midfield)"],
+    bettingTips: [
+      "Alphonso Davies's speed on the artificial turf of BC Place is a major tactical weapon.",
+      "Granit Xhaka's creative leadership will be the focal point for the Swiss transitions.",
+      "Back 'Both Teams to Score' given the high-energy home support for Canada."
+    ],
+    detailedNarrative: "A high-stakes Group B decider in Vancouver. The Swiss precision meets Canada's high-intensity home crowd. Alphonso Davies's speed will be the primary weapon against a disciplined Swiss defense led by Akanji. Our AI match overview predicts a high-energy game with both teams expected to find the net.",
+    pitchReport: "BC Place features a fast synthetic surface. This will suit the rapid transitions favored by Canada's wingers.",
+    tacticalPreview: "Switzerland will deploy their standard 3-4-2-1, prioritizing ball retention. Canada is expected to respond with a fluid 4-4-2, focusing on neutralizing the wings.",
+    winProbHome: 48,
+    winProbAway: 52,
+    predictionInsight: "Canada has a high win rate at BC Place in competitive fixtures. The psychological edge of playing at home is a major factor.",
+    projectedScoreHome: "1 - 2"
   },
   {
     slug: "wc2026-m52",
