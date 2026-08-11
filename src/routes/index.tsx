@@ -1378,12 +1378,13 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
               Live Casino · HD Streaming
             </div>
-            <h2 className="mt-6 text-4xl font-black tracking-tight md:text-6xl">
+            <h2 className="mt-6 text-4xl font-black tracking-tight md:text-6xl uppercase tracking-tighter">
               India's most-loved{" "}
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>casino tables</span>
               <br />
               <span className="text-foreground/90">— streaming live, 24/7.</span>
             </h2>
+            <h3 className="mt-3 text-sm font-black text-accent/60 uppercase tracking-[0.5em]">Global Professional Gaming Standards</h3>
             <p className="mx-auto mt-5 max-w-2xl text-foreground/70 md:text-lg">
               Real dealers. Real stakes. Real wins. Every table is broadcast in crystal-clear HD with certified fair-play RNG and near-zero latency — one Cricbet99 wallet, endless action.
             </p>
