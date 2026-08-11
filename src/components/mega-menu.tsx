@@ -167,8 +167,8 @@ const MENUS: MenuDef[] = [
         { label: "Live 3x Returns", to: "/case-studies/live-betting-3x-returns" },
       ]},
       { title: "Help & Fixes", items: [
-        { label: "FAQ", to: "/faq" },
-        { label: "How It Works", to: "/how-it-works" },
+        { label: "Common Questions", to: "/faq" },
+        { label: "Activation Guide", to: "/how-it-works" },
         { label: "Login Issues", to: "/login-issues" },
         { label: "Deposit Issues", to: "/deposit-issues" },
         { label: "Withdrawal Delay", to: "/withdrawal-delay" },
