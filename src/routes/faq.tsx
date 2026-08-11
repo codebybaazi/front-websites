@@ -34,8 +34,8 @@ export const Route = createFileRoute("/faq")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cricbet99.co.in/" },
-            { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://cricbet99.co.in/faq" }
+            { "@type": "ListItem", "position": 1, "name": "Cricbet99 Official", "item": "https://cricbet99.co.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Help Center FAQ", "item": "https://cricbet99.co.in/faq" }
           ]
         })
       }

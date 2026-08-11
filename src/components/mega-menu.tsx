@@ -31,7 +31,7 @@ const MENUS: MenuDef[] = [
     tagline: "12+ live markets, in-play odds",
     groups: [
       { title: "Cricket", items: [
-        { label: "Cricket Home", to: "/cricket" },
+        { label: "Cricket Central", to: "/cricket" },
         { label: "IPL Betting", to: "/ipl-betting" },
         { label: "WPL 2026", to: "/wpl-2026-betting" },
         { label: "T20 World Cup", to: "/t20-world-cup-betting" },
@@ -63,7 +63,7 @@ const MENUS: MenuDef[] = [
     tagline: "Live dealers, 500+ slots",
     groups: [
       { title: "Live Casino", items: [
-        { label: "Casino Home", to: "/casino" },
+        { label: "Live Casino Lobby", to: "/casino" },
         { label: "Indian Card Games", to: "/indian-card-games" },
       ]},
       { title: "Platforms", items: [
@@ -81,11 +81,11 @@ const MENUS: MenuDef[] = [
     tagline: "Instant ID on WhatsApp",
     groups: [
       { title: "Get Started", items: [
-        { label: "Cricbet99 ID", to: "/cricbet99-id" },
+        { label: "Cricbet99 Official ID", to: "/cricbet99-id" },
         { label: "Sports ID", to: "/sports-id" },
         { label: "Demo ID", to: "/demo-id" },
-        { label: "Register", to: "/register" },
-        { label: "Login", to: "/login" },
+        { label: "Account Registration", to: "/register" },
+        { label: "Account Login", to: "/login" },
       ]},
       { title: "Money", items: [
         { label: "How to Deposit", to: "/how-to-deposit" },
@@ -167,8 +167,8 @@ const MENUS: MenuDef[] = [
         { label: "Live 3x Returns", to: "/case-studies/live-betting-3x-returns" },
       ]},
       { title: "Help & Fixes", items: [
-        { label: "FAQ", to: "/faq" },
-        { label: "How It Works", to: "/how-it-works" },
+        { label: "Bettor FAQ Hub", to: "/faq" },
+        { label: "Getting Started Guide", to: "/how-it-works" },
         { label: "Login Issues", to: "/login-issues" },
         { label: "Deposit Issues", to: "/deposit-issues" },
         { label: "Withdrawal Delay", to: "/withdrawal-delay" },
@@ -185,7 +185,7 @@ const MENUS: MenuDef[] = [
     tagline: "About Cricbet99",
     groups: [
       { title: "Cricbet99", items: [
-        { label: "About Us", to: "/about" },
+        { label: "Who We Are", to: "/about" },
         { label: "What is Cricbet99", to: "/what-is-cricbet99" },
         { label: "Is Cricbet99 Real?", to: "/is-cricbet99-real" },
         { label: "Is Cricbet99 Safe?", to: "/is-cricbet99-safe" },

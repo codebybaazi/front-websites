@@ -106,7 +106,7 @@ export function LongFormPage({ content, extra }: { content: PageContent; extra?:
           <Link to="/ipl-betting" className="text-sm font-bold text-primary hover:underline">IPL Betting</Link>
           <Link to="/casino" className="text-sm font-bold text-primary hover:underline">Live Casino</Link>
           <Link to="/cricbet99-app" className="text-sm font-bold text-primary hover:underline">APK Download</Link>
-          <Link to="/how-it-works" className="text-sm font-bold text-primary hover:underline">How It Works</Link>
+          <Link to="/how-it-works" className="text-sm font-bold text-primary hover:underline">Activation Process</Link>
           <Link to="/login" className="text-sm font-bold text-primary hover:underline">Secure Login</Link>
           <Link to="/register" className="text-sm font-bold text-primary hover:underline">Get New ID</Link>
           <Link to="/whatsapp-number" className="text-sm font-bold text-primary hover:underline">WhatsApp Support</Link>

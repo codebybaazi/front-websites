@@ -295,7 +295,7 @@ const steps = [
   { icon: Wallet, title: "Make your first deposit", desc: <>Add funds via UPI or bank transfer. Check <Link to="/how-to-deposit" className="text-primary font-bold hover:underline">Deposit Guide</Link> and <Link to="/bonus" className="text-primary font-bold hover:underline">Bonus Offers</Link> for step-by-step help.</> },
   { icon: BadgeCheck, title: "Receive your ID", desc: <>Your verified <Link to="/cricbet99-id" className="text-primary font-bold hover:underline">Cricbet99 ID</Link> username and password land on WhatsApp instantly. New to the platform? Read our <Link to="/what-is-cricbet99" className="text-primary font-bold hover:underline">intro guide</Link>.</> },
   { icon: Gift, title: "Claim your welcome bonus", desc: <>Activate your 100% bonus up to ₹10,000. View all <Link to="/bonus" className="text-primary font-bold hover:underline">Promotions</Link> here or check <Link to="/bonus-issues" className="text-primary font-bold hover:underline">Help</Link> if you have questions.</> },
-  { icon: TrendingUp, title: "Log in & start winning", desc: <>Sign in and dive into live markets. Having trouble? Visit <Link to="/login-issues" className="text-primary font-bold hover:underline">Login Help</Link> or the <Link to="/faq" className="text-primary font-bold hover:underline">FAQ</Link> for instant troubleshooting.</> },
+  { icon: TrendingUp, title: "Log in & start winning", desc: <>Sign in and dive into live markets. Having trouble? Visit <Link to="/login-issues" className="text-primary font-bold hover:underline">Login Help</Link> or the <Link to="/faq" className="text-primary font-bold hover:underline">Support FAQ</Link> for instant troubleshooting.</> },
 ];
 
 function Index() {
@@ -517,7 +517,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                 <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <Link to="/how-it-works" className="group/link text-sm font-bold text-foreground/80 transition-colors hover:text-primary">
-                See how it works <ChevronRight className="inline h-3.5 w-3.5 transition-transform group-hover/link:translate-x-0.5" />
+                Official Setup Guide <ChevronRight className="inline h-3.5 w-3.5 transition-transform group-hover/link:translate-x-0.5" />
               </Link>
             </div>
 
@@ -1241,7 +1241,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                       Live markets
                     </span>
                     <span className="inline-flex items-center gap-1 text-xs font-bold text-primary transition-transform group-hover:translate-x-1">
-                      Explore
+                      View Market Details
                       <span aria-hidden>→</span>
                     </span>
                   </div>

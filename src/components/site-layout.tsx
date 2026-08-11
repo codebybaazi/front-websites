@@ -12,7 +12,7 @@ export const WA = "https://wa.me/919999999999";
 
 
 export const navLinks = [
-  { label: "Home", to: "/" },
+  { label: "Official Home", to: "/" },
   { label: "Cricket", to: "/cricket" },
   { label: "Football", to: "/football" },
   { label: "Casino", to: "/casino" },
@@ -108,7 +108,7 @@ export function SiteFooter() {
             <li><Link to="/football" className="hover:text-primary">Football</Link></li>
             <li><Link to="/tennis" className="hover:text-primary">Tennis</Link></li>
             <li><Link to="/horse-racing" className="hover:text-primary">Horse Racing</Link></li>
-            <li><Link to="/casino" className="hover:text-primary">Live Casino</Link></li>
+            <li><Link to="/casino" className="hover:text-primary">Live Betting Casino</Link></li>
             <li><Link to="/schedule" className="hover:text-primary">2026–27 Match Schedule</Link></li>
             <li><Link to="/matches" className="hover:text-primary">All Matches & Predictions</Link></li>
             <li><Link to="/indian-card-games" className="hover:text-primary">Indian Card Games</Link></li>
@@ -117,13 +117,13 @@ export function SiteFooter() {
         <div>
           <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Company</h4>
           <ul className="mt-4 space-y-2 text-sm text-foreground/75">
-            <li><Link to="/about" className="hover:text-primary">About Us</Link></li>
+            <li><Link to="/about" className="hover:text-primary">Our Story</Link></li>
             <li><Link to="/services" className="hover:text-primary">Services</Link></li>
             <li><Link to="/platforms" className="hover:text-primary">Platforms</Link></li>
             <li><Link to="/sports-id" className="hover:text-primary">Sports ID</Link></li>
-            <li><Link to="/how-it-works" className="hover:text-primary">How It Works</Link></li>
+            <li><Link to="/how-it-works" className="hover:text-primary">Getting Started Guide</Link></li>
             <li><Link to="/blog" className="hover:text-primary">Blog</Link></li>
-            <li><Link to="/faq" className="hover:text-primary">FAQ</Link></li>
+            <li><Link to="/faq" className="hover:text-primary">Help Center FAQ</Link></li>
             <li><Link to="/contact" className="hover:text-primary">Contact</Link></li>
             <li><Link to="/all-links" className="hover:text-primary">All Links</Link></li>
           </ul>

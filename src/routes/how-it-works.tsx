@@ -54,7 +54,7 @@ function HowItWorks() {
           {steps.map((s, i) => (
             <div key={s.title} className="rounded-2xl border border-primary/20 bg-background/60 p-7">
               <div className="text-5xl font-black" style={{ background: "var(--gradient-gold)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                Step {i + 1}
+                Phase {i + 1}
               </div>
               <h3 className="mt-3 text-xl font-bold">{s.title}</h3>
               <p className="mt-2 text-foreground/75">{s.desc}</p>

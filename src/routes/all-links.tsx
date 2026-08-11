@@ -107,7 +107,7 @@ const groups: { title: string; items: { l: string; to: string }[] }[] = [
     items: [
       { l: "WhatsApp Support", to: "/whatsapp-support" },
       { l: "Contact Us", to: "/contact" },
-      { l: "FAQ Hub", to: "/faq" },
+      { l: "FAQ Knowledge Base", to: "/faq" },
       { l: "Login Issues", to: "/login-issues" },
       { l: "Deposit Issues", to: "/deposit-issues" },
       { l: "Withdrawal Delays", to: "/withdrawal-delay" },
@@ -119,7 +119,7 @@ const groups: { title: string; items: { l: string; to: string }[] }[] = [
     items: [
       { l: "About Cricbet99", to: "/about" },
       { l: "Latest News & Blog", to: "/blog" },
-      { l: "FAQ Hub", to: "/faq" },
+      { l: "Support Questions", to: "/faq" },
       { l: "Contact Us", to: "/contact" },
       ...blogPosts.slice(0, 10).map(post => ({
         l: `Blog: ${post.title}`,

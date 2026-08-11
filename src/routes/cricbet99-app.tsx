@@ -73,13 +73,13 @@ function AppPage() {
       <section className="mx-auto max-w-4xl px-6 py-12 border-t border-primary/10">
         <h2 className="text-2xl font-black">Learn more about Cricbet99</h2>
         <div className="mt-6 flex flex-wrap gap-4">
-          <Link to="/how-it-works" className="text-sm font-bold text-primary hover:underline">How It Works</Link>
+          <Link to="/how-it-works" className="text-sm font-bold text-primary hover:underline">Onboarding Steps</Link>
           <span className="text-foreground/20">|</span>
           <Link to="/is-cricbet99-legal" className="text-sm font-bold text-primary hover:underline">Is Cricbet99 Legal?</Link>
           <span className="text-foreground/20">|</span>
           <Link to="/about" className="text-sm font-bold text-primary hover:underline">About Us</Link>
           <span className="text-foreground/20">|</span>
-          <Link to="/faq" className="text-sm font-bold text-primary hover:underline">Cricbet99 FAQ</Link>
+          <Link to="/faq" className="text-sm font-bold text-primary hover:underline">Support Hub FAQ</Link>
           <span className="text-foreground/20">|</span>
           <Link to="/trusted-betting-id-provider" className="text-sm font-bold text-primary hover:underline">Trusted Provider</Link>
           <span className="text-foreground/20">|</span>
