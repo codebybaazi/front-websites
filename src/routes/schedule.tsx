@@ -395,14 +395,14 @@ function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
                                       <div className="flex items-center gap-3">
                                         <img 
                                           src={`https://cricbet99.co.in/images/teams/${match.homeTeam?.toLowerCase().replace(/\s+/g, '-')}.png`} 
-                                          alt={`${match.homeTeam} logo - Official Match Fixture`}
+                                          alt={`${match.homeTeam} official logo — Official Cricbet99 Match Fixture 2026`}
                                           className="w-6 h-6 object-contain"
                                           onError={(e) => { e.currentTarget.style.display = 'none'; }}
                                         />
                                         <span className="font-bold text-foreground">{match.teams}</span>
                                         <img 
                                           src={`https://cricbet99.co.in/images/teams/${match.awayTeam?.toLowerCase().replace(/\s+/g, '-')}.png`} 
-                                          alt={`${match.awayTeam} logo - Official Match Fixture`}
+                                          alt={`${match.awayTeam} official logo — Official Cricbet99 Match Fixture 2026`}
                                           className="w-6 h-6 object-contain"
                                           onError={(e) => { e.currentTarget.style.display = 'none'; }}
                                         />
@@ -439,7 +439,7 @@ function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
                                   <div className="flex items-center gap-3">
                                     <img 
                                       src={`https://cricbet99.co.in/images/teams/${match.homeTeam?.toLowerCase().replace(/\s+/g, '-')}.png`} 
-                                      alt={`${match.homeTeam} logo - Official Match Fixture`}
+                                      alt={`${match.homeTeam} official logo — Official Cricbet99 Match Fixture 2026`}
                                       className="w-6 h-6 object-contain"
                                       onError={(e) => { e.currentTarget.style.display = 'none'; }}
                                     />
@@ -448,7 +448,7 @@ function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
                                     </div>
                                     <img 
                                       src={`https://cricbet99.co.in/images/teams/${match.awayTeam?.toLowerCase().replace(/\s+/g, '-')}.png`} 
-                                      alt={`${match.awayTeam} logo - Official Match Fixture`}
+                                      alt={`${match.awayTeam} official logo — Official Cricbet99 Match Fixture 2026`}
                                       className="w-6 h-6 object-contain"
                                       onError={(e) => { e.currentTarget.style.display = 'none'; }}
                                     />
@@ -489,14 +489,14 @@ function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
                             <div className="flex items-center gap-3">
                               <img 
                                 src={`https://cricbet99.co.in/images/teams/${(event.e.split(' vs ')[0] || '').toLowerCase().replace(/\s+/g, '-')}.png`} 
-                                alt={`${event.e.split(' vs ')[0]} logo - Official Match Fixture`}
+                                alt={`${event.e.split(' vs ')[0]} official logo — Official Cricbet99 Match Fixture 2026`}
                                 className="w-8 h-8 object-contain"
                                 onError={(e) => { e.currentTarget.style.display = 'none'; }}
                               />
                               <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{event.e}</h3>
                               <img 
                                 src={`https://cricbet99.co.in/images/teams/${(event.e.split(' vs ')[1] || '').toLowerCase().replace(/\s+/g, '-')}.png`} 
-                                alt={`${event.e.split(' vs ')[1]} logo - Official Match Fixture`}
+                                alt={`${event.e.split(' vs ')[1]} official logo — Official Cricbet99 Match Fixture 2026`}
                                 className="w-8 h-8 object-contain"
                                 onError={(e) => { e.currentTarget.style.display = 'none'; }}
                               />

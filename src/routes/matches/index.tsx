@@ -174,7 +174,7 @@ function MatchesPage() {
                       <div className="flex items-center gap-3 truncate">
                         <img 
                           src={`https://cricbet99.co.in/images/teams/${m.homeTeam.toLowerCase().replace(/\s+/g, '-')}.png`} 
-                          alt={`${m.homeTeam} official logo - Today match prediction`}
+                          alt={`${m.homeTeam} official team logo — Official Cricbet99 today's match prediction and betting odds`}
                           className="w-8 h-8 object-contain shrink-0"
                           onError={(e) => { e.currentTarget.style.display = 'none'; }}
                         />
@@ -185,7 +185,7 @@ function MatchesPage() {
                         <span className="text-lg sm:text-xl font-black uppercase tracking-tighter truncate text-right">{m.awayTeam}</span>
                         <img 
                           src={`https://cricbet99.co.in/images/teams/${m.awayTeam.toLowerCase().replace(/\s+/g, '-')}.png`} 
-                          alt={`${m.awayTeam} official logo - Today match prediction`}
+                          alt={`${m.awayTeam} official team logo — Official Cricbet99 today's match prediction and betting odds`}
                           className="w-8 h-8 object-contain shrink-0"
                           onError={(e) => { e.currentTarget.style.display = 'none'; }}
                         />

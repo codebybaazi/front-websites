@@ -230,7 +230,7 @@ function MatchDetailPage() {
                   <div className="flex flex-col items-center gap-4 group">
                     <img 
                       src={`https://cricbet99.co.in/images/teams/${m.homeTeam.toLowerCase().replace(/\s+/g, '-')}.png`} 
-                      alt={`${m.homeTeam} official team logo - ${m.sport} match analysis`}
+                      alt={`${m.homeTeam} official team logo — Official Cricbet99 ${m.sport} match analysis and betting prediction`}
                       className="w-16 h-16 md:w-24 md:h-24 object-contain filter drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-transform hover:scale-110"
                       onError={(e) => { e.currentTarget.style.display = 'none'; }}
                     />
@@ -242,7 +242,7 @@ function MatchDetailPage() {
                   <div className="flex flex-col items-center gap-4 group">
                     <img 
                       src={`https://cricbet99.co.in/images/teams/${m.awayTeam.toLowerCase().replace(/\s+/g, '-')}.png`} 
-                      alt={`${m.awayTeam} official team logo - ${m.sport} match analysis`}
+                      alt={`${m.awayTeam} official team logo — Official Cricbet99 ${m.sport} match analysis and betting prediction`}
                       className="w-16 h-16 md:w-24 md:h-24 object-contain filter drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-transform hover:scale-110"
                       onError={(e) => { e.currentTarget.style.display = 'none'; }}
                     />
@@ -256,7 +256,7 @@ function MatchDetailPage() {
               <div className="flex flex-col items-center gap-4 group">
                 <img 
                   src={`https://cricbet99.co.in/images/teams/${m.homeTeam.toLowerCase().replace(/\s+/g, '-')}.png`} 
-                  alt={`${m.homeTeam} official team logo - ${m.sport} match analysis`}
+                  alt={`${m.homeTeam} official team logo — Official Cricbet99 ${m.sport} match analysis and betting prediction`}
                   className="w-20 h-20 md:w-32 md:h-32 object-contain filter drop-shadow-[0_0_20px_rgba(255,255,255,0.15)] transition-transform hover:scale-110"
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 />
@@ -279,7 +279,7 @@ function MatchDetailPage() {
               <div className="flex flex-col items-center gap-4 group">
                 <img 
                   src={`https://cricbet99.co.in/images/teams/${m.awayTeam.toLowerCase().replace(/\s+/g, '-')}.png`} 
-                  alt={`${m.awayTeam} official team logo - ${m.sport} match analysis`}
+                  alt={`${m.awayTeam} official team logo — Official Cricbet99 ${m.sport} match analysis and betting prediction`}
                   className="w-20 h-20 md:w-32 md:h-32 object-contain filter drop-shadow-[0_0_20px_rgba(255,255,255,0.15)] transition-transform hover:scale-110"
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 />
