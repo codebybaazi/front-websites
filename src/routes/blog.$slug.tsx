@@ -108,7 +108,7 @@ function PostPage() {
 
   return (
     <SiteLayout>
-      <article className="mx-auto max-w-7xl px-6 pt-16 pb-8">
+      <article className="mx-auto max-w-5xl px-6 pt-16 pb-8">
         <div className="flex flex-wrap items-center gap-y-2 gap-x-4 text-[10px] font-bold uppercase tracking-widest text-foreground/50">
           <span className="inline-flex rounded-full bg-accent/20 px-3 py-1 text-accent-foreground">{post.tag}</span>
           <div className="flex items-center gap-1.5">
@@ -169,7 +169,7 @@ function PostPage() {
         highlights={post.sections.map((s: any) => s.heading).slice(0, 4)}
       />
 
-      <section className="mx-auto max-w-7xl px-6 pb-16">
+      <section className="mx-auto max-w-5xl px-6 pb-16">
 
         <h3 className="text-sm font-bold uppercase tracking-widest text-foreground/60">More from the blog</h3>
         <div className="mt-4 grid gap-6 md:grid-cols-3">
