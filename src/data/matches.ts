@@ -31,6 +31,7 @@ export interface MatchFixture {
   projectedScoreAway?: string;
   surface?: string;
   category?: string;
+  showPlayerMatchup?: boolean;
 }
 
 // Transform cricket fixtures
@@ -115,6 +116,7 @@ const transformedTennis: MatchFixture[] = tennisFixtures.map(t => ({
   projectedScoreHome: t.prediction?.score,
   surface: t.surface,
   category: t.category,
+  showPlayerMatchup: t.showPlayerMatchup ?? false,
 }));
 
 export const matches: MatchFixture[] = [
