@@ -14,6 +14,21 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 
+function formatTournamentDateRange(startDate: string, endDate?: string) {
+  const start = new Date(startDate);
+  const end = endDate ? new Date(endDate) : undefined;
+  const dateOptions: Intl.DateTimeFormatOptions = { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" };
+
+  if (!end) return new Intl.DateTimeFormat("en-GB", dateOptions).format(start);
+
+  const sameMonth = start.getUTCMonth() === end.getUTCMonth() && start.getUTCFullYear() === end.getUTCFullYear();
+  const startOptions: Intl.DateTimeFormatOptions = sameMonth
+    ? { day: "numeric", timeZone: "UTC" }
+    : { day: "numeric", month: "short", timeZone: "UTC" };
+
+  return `${new Intl.DateTimeFormat("en-GB", startOptions).format(start)} – ${new Intl.DateTimeFormat("en-GB", dateOptions).format(end)}`;
+}
+
 export const Route = createFileRoute("/matches/$slug")({
   loader: ({ params }) => {
     const match = getMatch(params.slug);
@@ -217,8 +232,8 @@ function MatchDetailPage() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {[
-                  { label: "Fixture", value: `${m.homeTeam} vs ${m.awayTeam}`, icon: Users },
-                  { label: "Match Date", value: m.startDate, icon: Calendar },
+                  ...(m.sport === "Tennis" ? [] : [{ label: "Fixture", value: `${m.homeTeam} vs ${m.awayTeam}`, icon: Users }]),
+                  { label: m.sport === "Tennis" ? "Tournament Dates" : "Match Date", value: m.sport === "Tennis" ? formatTournamentDateRange(m.startDate, m.endDate) : m.startDate, icon: Calendar },
                   { label: "Venue & City", value: `${m.venue}, ${m.city}`, icon: MapPin },
                   { label: "Tournament", value: m.tournament, icon: Trophy },
                   { label: "Sport Category", value: m.sport, icon: Target },

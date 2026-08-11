@@ -12,6 +12,7 @@ export interface MatchFixture {
   city: string;
   country: string;
   startDate: string;
+  endDate?: string;
   status: "live" | "upcoming";
   marketHighlights: string[];
   keywords: string[];
@@ -107,6 +108,7 @@ const transformedTennis: MatchFixture[] = tennisFixtures.map(t => ({
   city: t.city,
   country: t.country,
   startDate: t.startDate,
+  endDate: t.endDate,
   status: t.status,
   marketHighlights: t.marketHighlights,
   keywords: t.keywords,
