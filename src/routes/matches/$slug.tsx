@@ -636,7 +636,8 @@ function MatchDetailPage() {
 
             {/* Why Bet on... */}
             <div className="space-y-8">
-              <h2 className="text-2xl font-black uppercase tracking-widest text-center">Why bet on {m.homeTeam} vs {m.awayTeam} with Cricbet99?</h2>
+              <h2 className="text-2xl font-black uppercase tracking-widest text-center mb-1">Why bet on {m.homeTeam} vs {m.awayTeam} with Cricbet99?</h2>
+              <h3 className="text-[10px] font-black text-foreground/30 uppercase tracking-[0.5em] text-center mb-10">India's Most Professional Exchange Experience</h3>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {[
                   { t: "Fastest Withdrawals", d: "15-minute guaranteed payouts via UPI.", i: Zap },
