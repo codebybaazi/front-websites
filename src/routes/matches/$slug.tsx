@@ -676,9 +676,12 @@ function MatchDetailPage() {
 
             {/* FAQs */}
             <div className="pt-20 border-t border-white/10">
-              <div className="flex items-center gap-3 mb-10">
-                <HelpCircle className="h-8 w-8 text-primary" />
-                <h2 className="text-3xl font-black uppercase tracking-tighter">Analytical FAQ</h2>
+              <div className="flex flex-col gap-1 mb-10">
+                <div className="flex items-center gap-3">
+                  <HelpCircle className="h-8 w-8 text-primary" />
+                  <h2 className="text-3xl font-black uppercase tracking-tighter">Analytical FAQ</h2>
+                </div>
+                <h3 className="text-xs font-black text-foreground/40 uppercase tracking-[0.3em] ml-11">Expert Answers to Critical Match Questions</h3>
               </div>
               <Accordion type="single" collapsible className="w-full space-y-4">
                 {faqs.map((faq, i) => (
