@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { ChevronRight } from "lucide-react";
 import { buildBreadcrumbJsonLd, buildFaqJsonLd } from "@/components/long-form-page";
@@ -48,6 +48,18 @@ const footballFaqs = [
 function Football() {
   return (
     <SiteLayout>
+      <nav className="mx-auto max-w-7xl px-6 py-3" aria-label="Breadcrumb">
+        <ol className="flex items-center gap-2 text-xs font-medium text-foreground/60">
+          <li>
+            <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+          </li>
+          <ChevronRight className="h-3 w-3 shrink-0" />
+          <li className="text-primary font-bold" aria-current="page">
+            Football Betting
+          </li>
+        </ol>
+      </nav>
+
       <PageHero
         wide
         eyebrow="Football"
