@@ -824,7 +824,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               <Sparkles className="h-3.5 w-3.5" /> Just Launched
             </span>
 
-            <h2 className="mt-6 text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
+            <h2 className="mt-6 text-4xl font-black leading-[1.05] tracking-tight md:text-6xl uppercase tracking-tighter">
               <span
                 className="bg-clip-text text-transparent"
                 style={{ backgroundImage: "var(--gradient-gold)" }}
@@ -834,6 +834,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               <br className="hidden sm:block" />
               <span className="text-foreground/90">Games on Cricbet99.</span>
             </h2>
+            <h3 className="mt-2 text-xs font-black text-primary/60 uppercase tracking-[0.4em]">Exclusive 2026 Table & Crash Game Releases</h3>
             <p className="mt-4 max-w-2xl text-base text-foreground/70 md:text-lg">
               Fresh titles, live dealers and instant-win crash favourites — the hottest tables on the platform, all playable from your existing Cricbet99 ID.
             </p>
