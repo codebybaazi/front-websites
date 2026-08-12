@@ -439,7 +439,7 @@ export function MegaMenuHeader() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Get your Cricbet99 ID on WhatsApp"
-              className="cta-pulse group relative inline-flex items-center gap-2 overflow-hidden rounded-lg px-4 py-2.5 text-sm font-extrabold uppercase tracking-wider text-accent-foreground transition-transform hover:scale-[1.04] sm:px-5 sm:py-3"
+              className="cta-pulse group relative inline-flex items-center gap-2 overflow-hidden rounded-lg px-3 py-2 text-[11px] font-extrabold uppercase tracking-wider text-accent-foreground transition-transform hover:scale-[1.04] sm:px-5 sm:py-3 sm:text-sm"
               style={{
                 background:
                   "linear-gradient(135deg, oklch(0.82 0.21 148) 0%, oklch(0.6 0.19 150) 55%, oklch(0.82 0.21 148) 100%)",
@@ -452,8 +452,8 @@ export function MegaMenuHeader() {
                 aria-hidden
                 className="pointer-events-none absolute inset-0 -translate-x-full bg-[linear-gradient(110deg,transparent_35%,oklch(1_0_0/0.55)_50%,transparent_65%)] transition-transform duration-700 ease-out group-hover:translate-x-full"
               />
-              <span className="relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/95 shadow-inner">
-                <MessageCircle className="h-3.5 w-3.5 text-[oklch(0.42_0.15_150)]" />
+              <span className="relative flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/95 shadow-inner sm:h-6 sm:w-6">
+                <MessageCircle className="h-3 w-3 text-[oklch(0.42_0.15_150)] sm:h-3.5 sm:w-3.5" />
               </span>
               <span className="relative">
                 <span className="hidden sm:inline">Get Your ID</span>
