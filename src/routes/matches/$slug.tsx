@@ -24,9 +24,9 @@ export const Route = createFileRoute('/matches/$slug')({
     if (!match) throw new Error('Match not found')
     return { match }
   },
-  head: ({ loaderData }) => {
+  head: ({ loaderData }: { loaderData: { match: any } }) => {
     const { match } = loaderData
-    const title = `${match.homeTeam} vs ${match.awayTeam} | ${match.tournament} Live Betting Odds`
+    if (!match) return {}
     const description = `Live betting analysis for ${match.homeTeam} vs ${match.awayTeam} in ${match.tournament}. Get expert predictions, tactical previews, and top markets on Cricbet99.`
     
     return {

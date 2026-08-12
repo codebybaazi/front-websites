@@ -98,6 +98,7 @@ import { Route as MatchesIndexRouteImport } from './routes/matches/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as SitemapXmlRouteImport } from './routes/sitemap.xml'
 import { Route as RobotsTxtRouteImport } from './routes/robots.txt'
+import { Route as MatchesSlugRouteImport } from './routes/matches/$slug'
 import { Route as CaseStudiesTossMarket10MinuteProfitRouteImport } from './routes/case-studies.toss-market-10-minute-profit'
 import { Route as CaseStudiesSmallBudgetBettingStrategyRouteImport } from './routes/case-studies.small-budget-betting-strategy'
 import { Route as CaseStudiesLiveBetting3xReturnsRouteImport } from './routes/case-studies.live-betting-3x-returns'
@@ -558,6 +559,11 @@ const RobotsTxtRoute = RobotsTxtRouteImport.update({
   path: '/robots/txt',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MatchesSlugRoute = MatchesSlugRouteImport.update({
+  id: '/matches/$slug',
+  path: '/matches/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CaseStudiesTossMarket10MinuteProfitRoute =
   CaseStudiesTossMarket10MinuteProfitRouteImport.update({
     id: '/toss-market-10-minute-profit',
@@ -721,6 +727,7 @@ export interface FileRoutesByFullPath {
   '/case-studies/live-betting-3x-returns': typeof CaseStudiesLiveBetting3xReturnsRoute
   '/case-studies/small-budget-betting-strategy': typeof CaseStudiesSmallBudgetBettingStrategyRoute
   '/case-studies/toss-market-10-minute-profit': typeof CaseStudiesTossMarket10MinuteProfitRoute
+  '/matches/$slug': typeof MatchesSlugRoute
   '/robots/txt': typeof RobotsTxtRoute
   '/sitemap/xml': typeof SitemapXmlRoute
   '/blog/': typeof BlogIndexRoute
@@ -823,6 +830,7 @@ export interface FileRoutesByTo {
   '/case-studies/live-betting-3x-returns': typeof CaseStudiesLiveBetting3xReturnsRoute
   '/case-studies/small-budget-betting-strategy': typeof CaseStudiesSmallBudgetBettingStrategyRoute
   '/case-studies/toss-market-10-minute-profit': typeof CaseStudiesTossMarket10MinuteProfitRoute
+  '/matches/$slug': typeof MatchesSlugRoute
   '/robots/txt': typeof RobotsTxtRoute
   '/sitemap/xml': typeof SitemapXmlRoute
   '/blog': typeof BlogIndexRoute
@@ -926,6 +934,7 @@ export interface FileRoutesById {
   '/case-studies/live-betting-3x-returns': typeof CaseStudiesLiveBetting3xReturnsRoute
   '/case-studies/small-budget-betting-strategy': typeof CaseStudiesSmallBudgetBettingStrategyRoute
   '/case-studies/toss-market-10-minute-profit': typeof CaseStudiesTossMarket10MinuteProfitRoute
+  '/matches/$slug': typeof MatchesSlugRoute
   '/robots/txt': typeof RobotsTxtRoute
   '/sitemap/xml': typeof SitemapXmlRoute
   '/blog/': typeof BlogIndexRoute
@@ -1030,6 +1039,7 @@ export interface FileRouteTypes {
     | '/case-studies/live-betting-3x-returns'
     | '/case-studies/small-budget-betting-strategy'
     | '/case-studies/toss-market-10-minute-profit'
+    | '/matches/$slug'
     | '/robots/txt'
     | '/sitemap/xml'
     | '/blog/'
@@ -1132,6 +1142,7 @@ export interface FileRouteTypes {
     | '/case-studies/live-betting-3x-returns'
     | '/case-studies/small-budget-betting-strategy'
     | '/case-studies/toss-market-10-minute-profit'
+    | '/matches/$slug'
     | '/robots/txt'
     | '/sitemap/xml'
     | '/blog'
@@ -1234,6 +1245,7 @@ export interface FileRouteTypes {
     | '/case-studies/live-betting-3x-returns'
     | '/case-studies/small-budget-betting-strategy'
     | '/case-studies/toss-market-10-minute-profit'
+    | '/matches/$slug'
     | '/robots/txt'
     | '/sitemap/xml'
     | '/blog/'
@@ -1327,6 +1339,7 @@ export interface RootRouteChildren {
   WithdrawalDelayRoute: typeof WithdrawalDelayRoute
   Wpl2026BettingRoute: typeof Wpl2026BettingRoute
   BlogSlugRoute: typeof BlogSlugRoute
+  MatchesSlugRoute: typeof MatchesSlugRoute
   RobotsTxtRoute: typeof RobotsTxtRoute
   SitemapXmlRoute: typeof SitemapXmlRoute
   BlogIndexRoute: typeof BlogIndexRoute
@@ -1958,6 +1971,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RobotsTxtRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/matches/$slug': {
+      id: '/matches/$slug'
+      path: '/matches/$slug'
+      fullPath: '/matches/$slug'
+      preLoaderRoute: typeof MatchesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/case-studies/toss-market-10-minute-profit': {
       id: '/case-studies/toss-market-10-minute-profit'
       path: '/toss-market-10-minute-profit'
@@ -2172,6 +2192,7 @@ const rootRouteChildren: RootRouteChildren = {
   WithdrawalDelayRoute: WithdrawalDelayRoute,
   Wpl2026BettingRoute: Wpl2026BettingRoute,
   BlogSlugRoute: BlogSlugRoute,
+  MatchesSlugRoute: MatchesSlugRoute,
   RobotsTxtRoute: RobotsTxtRoute,
   SitemapXmlRoute: SitemapXmlRoute,
   BlogIndexRoute: BlogIndexRoute,
