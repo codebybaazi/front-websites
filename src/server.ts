@@ -81,8 +81,9 @@ export default {
       if (url.pathname === "/.well-known/api-catalog") {
         const text = await response.text();
         const headers = new Headers(response.headers);
-        headers.set("Content-Type", "application/linkset+json");
-        headers.set("Cache-Control", "no-store, no-cache, must-revalidate");
+        // FORCE application/linkset+json for RFC 9727 compliance
+        headers.set("content-type", "application/linkset+json");
+        headers.set("cache-control", "no-store, no-cache, must-revalidate");
         return new Response(text, {
           status: response.status,
           statusText: response.statusText,
