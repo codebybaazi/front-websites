@@ -5,28 +5,14 @@ export const Route = createFileRoute('/api/public/agent-skills-index')({
     handlers: {
       GET: async () => {
         const skillsIndex = {
-          "$schema": "https://agent-skills.org/schemas/v0.2.0/index.json",
+          "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
           "skills": [
             {
-              "name": "Cricket Betting Intelligence",
-              "type": "tool",
-              "description": "Provides real-time analytics and predictive insights for cricket matches, specializing in IPL 2026.",
-              "url": "https://cricbet99.co.in/api/public/mcp-server-card",
-              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" 
-            },
-            {
-              "name": "Real-time Odds Analysis",
-              "type": "resource",
-              "description": "A live stream of betting odds and market movements across major sports exchanges.",
-              "url": "https://cricbet99.co.in/matches",
-              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            },
-            {
-              "name": "Market Sentiment",
-              "type": "prompt",
-              "description": "Analyzes public sentiment and betting volume to identify market trends and value bets.",
-              "url": "https://cricbet99.co.in/blog",
-              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              "name": "cricket-betting-intel",
+              "type": "skill-md",
+              "description": "Real-time analytics and predictive insights for cricket matches, specializing in IPL 2026.",
+              "url": "https://cricbet99.co.in/.well-known/agent-skills/cricket-betting.md",
+              "digest": "sha256:3f3affbb9706dfadc7b7fdd8b79dc900f80d41b303e63b9f1784cd529c74b87e"
             }
           ]
         };
