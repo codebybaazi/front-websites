@@ -9,7 +9,8 @@ export const Route = createFileRoute('/api/public/api-catalog')({
         const content = {
           "linkset": [
             {
-              "anchor": "https://cricbet99.co.in/api/public/match-data",
+              "anchor": "https://cricbet99.co.in/",
+              "rel": "api-catalog",
               "service-desc": [
                 {
                   "href": "https://cricbet99.co.in/.well-known/oauth-protected-resource",
@@ -18,14 +19,29 @@ export const Route = createFileRoute('/api/public/api-catalog')({
               ],
               "service-doc": [
                 {
-                  "href": "https://cricbet99.co.in/guides",
-                  "type": "text/html"
+                  "href": "https://cricbet99.co.in/auth.md",
+                  "type": "text/markdown"
                 }
               ],
               "status": [
                 {
                   "href": "https://cricbet99.co.in/api/public/health",
                   "type": "application/json"
+                }
+              ]
+            },
+            {
+              "anchor": "https://cricbet99.co.in/matches",
+              "service-desc": [
+                {
+                  "href": "https://cricbet99.co.in/api/public/match-data",
+                  "type": "application/json"
+                }
+              ],
+              "service-doc": [
+                {
+                  "href": "https://cricbet99.co.in/schedule",
+                  "type": "text/html"
                 }
               ]
             },
