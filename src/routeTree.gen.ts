@@ -110,6 +110,8 @@ import { Route as BettingGuidesHowToPlaceACricketBetRouteImport } from './routes
 import { Route as BettingGuidesHowToBetOnTossMarketRouteImport } from './routes/betting-guides.how-to-bet-on-toss-market'
 import { Route as BettingGuidesHowToBetOnSessionBettingRouteImport } from './routes/betting-guides.how-to-bet-on-session-betting'
 import { Route as BettingGuidesHowBookmakersMakeMoneyRouteImport } from './routes/betting-guides.how-bookmakers-make-money'
+import { Route as ApiPublicHealthRouteImport } from './routes/api/public/health'
+import { Route as ApiPublicApiCatalogRouteImport } from './routes/api/public/api-catalog'
 
 const Wpl2026BettingRoute = Wpl2026BettingRouteImport.update({
   id: '/wpl-2026-betting',
@@ -629,6 +631,16 @@ const BettingGuidesHowBookmakersMakeMoneyRoute =
     path: '/how-bookmakers-make-money',
     getParentRoute: () => BettingGuidesRoute,
   } as any)
+const ApiPublicHealthRoute = ApiPublicHealthRouteImport.update({
+  id: '/api/public/health',
+  path: '/api/public/health',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicApiCatalogRoute = ApiPublicApiCatalogRouteImport.update({
+  id: '/api/public/api-catalog',
+  path: '/api/public/api-catalog',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -732,6 +744,8 @@ export interface FileRoutesByFullPath {
   '/sitemap/xml': typeof SitemapXmlRoute
   '/blog/': typeof BlogIndexRoute
   '/matches/': typeof MatchesIndexRoute
+  '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
+  '/api/public/health': typeof ApiPublicHealthRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -835,6 +849,8 @@ export interface FileRoutesByTo {
   '/sitemap/xml': typeof SitemapXmlRoute
   '/blog': typeof BlogIndexRoute
   '/matches': typeof MatchesIndexRoute
+  '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
+  '/api/public/health': typeof ApiPublicHealthRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -939,6 +955,8 @@ export interface FileRoutesById {
   '/sitemap/xml': typeof SitemapXmlRoute
   '/blog/': typeof BlogIndexRoute
   '/matches/': typeof MatchesIndexRoute
+  '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
+  '/api/public/health': typeof ApiPublicHealthRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -1044,6 +1062,8 @@ export interface FileRouteTypes {
     | '/sitemap/xml'
     | '/blog/'
     | '/matches/'
+    | '/api/public/api-catalog'
+    | '/api/public/health'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -1147,6 +1167,8 @@ export interface FileRouteTypes {
     | '/sitemap/xml'
     | '/blog'
     | '/matches'
+    | '/api/public/api-catalog'
+    | '/api/public/health'
   id:
     | '__root__'
     | '/'
@@ -1250,6 +1272,8 @@ export interface FileRouteTypes {
     | '/sitemap/xml'
     | '/blog/'
     | '/matches/'
+    | '/api/public/api-catalog'
+    | '/api/public/health'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -1344,6 +1368,8 @@ export interface RootRouteChildren {
   SitemapXmlRoute: typeof SitemapXmlRoute
   BlogIndexRoute: typeof BlogIndexRoute
   MatchesIndexRoute: typeof MatchesIndexRoute
+  ApiPublicApiCatalogRoute: typeof ApiPublicApiCatalogRoute
+  ApiPublicHealthRoute: typeof ApiPublicHealthRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -2055,6 +2081,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BettingGuidesHowBookmakersMakeMoneyRouteImport
       parentRoute: typeof BettingGuidesRoute
     }
+    '/api/public/health': {
+      id: '/api/public/health'
+      path: '/api/public/health'
+      fullPath: '/api/public/health'
+      preLoaderRoute: typeof ApiPublicHealthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/api-catalog': {
+      id: '/api/public/api-catalog'
+      path: '/api/public/api-catalog'
+      fullPath: '/api/public/api-catalog'
+      preLoaderRoute: typeof ApiPublicApiCatalogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -2197,6 +2237,8 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapXmlRoute: SitemapXmlRoute,
   BlogIndexRoute: BlogIndexRoute,
   MatchesIndexRoute: MatchesIndexRoute,
+  ApiPublicApiCatalogRoute: ApiPublicApiCatalogRoute,
+  ApiPublicHealthRoute: ApiPublicHealthRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

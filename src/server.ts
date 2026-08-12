@@ -1,10 +1,8 @@
 import "./lib/error-capture";
-
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
 
 let turndownService: any;
-
 async function getTurndownService() {
   if (!turndownService) {
     try {
@@ -24,7 +22,6 @@ type ServerEntry = {
 };
 
 let serverEntryPromise: Promise<ServerEntry> | undefined;
-
 async function getServerEntry(): Promise<ServerEntry> {
   if (!serverEntryPromise) {
     serverEntryPromise = import("@tanstack/react-start/server-entry").then(
@@ -34,16 +31,12 @@ async function getServerEntry(): Promise<ServerEntry> {
   return serverEntryPromise;
 }
 
-// h3 swallows in-handler throws into a normal 500 Response with body
-// {"unhandled":true,"message":"HTTPError"} — try/catch alone never fires for those.
 async function normalizeCatastrophicSsrResponse(response: Response): Promise<Response> {
   if (response.status < 500) return response;
   const contentType = response.headers.get("content-type") ?? "";
   if (!contentType.includes("application/json")) return response;
-
   const body = await response.clone().text();
   if (!isH3SwallowedErrorBody(body)) return response;
-
   console.error(consumeLastCapturedError() ?? new Error(`h3 swallowed SSR error: ${body}`));
   return new Response(renderErrorPage(), {
     status: 500,
@@ -64,29 +57,13 @@ export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
       const handler = await getServerEntry();
-      
       const url = new URL(request.url);
-      const isHome = url.pathname === "/";
-      const isApiCatalog = url.pathname === "/.well-known/api-catalog";
+      
       const acceptHeader = request.headers.get("accept") || "";
       const isMarkdownRequested = acceptHeader.includes("text/markdown");
-
-      // Direct response for API catalog to ensure correct Content-Type without interference
-      if (isApiCatalog) {
-        const response = await handler.fetch(request, env, ctx);
-        const text = await response.text();
-        const headers = new Headers(response.headers);
-        headers.set("Content-Type", "application/linkset+json");
-        return new Response(text, {
-          status: response.status,
-          statusText: response.statusText,
-          headers
-        });
-      }
       
       let internalRequest = request;
       if (isMarkdownRequested) {
-        // Clone request and modify headers to avoid 406/500 in internal handler
         const headers = new Headers(request.headers);
         headers.set("Accept", "text/html");
         internalRequest = new Request(request.url, {
@@ -98,21 +75,34 @@ export default {
         });
       }
 
+      // Special handling for discovery routes to override static asset behavior
+      if (url.pathname === "/.well-known/api-catalog") {
+        const apiReq = new Request(new URL("/api/public/api-catalog", request.url).toString(), {
+          method: "GET",
+          headers: request.headers
+        });
+        const res = await handler.fetch(apiReq, env, ctx);
+        const text = await res.text();
+        return new Response(text, {
+          status: res.status,
+          headers: {
+            "Content-Type": "application/linkset+json",
+            "Cache-Control": "no-store, no-cache, must-revalidate"
+          }
+        });
+      }
+
       const response = await handler.fetch(internalRequest, env, ctx);
       let finalResponse = response;
 
-      // Handle Markdown request
       if (isMarkdownRequested && response.headers.get("content-type")?.includes("text/html")) {
         try {
           const html = await response.text();
           const service = await getTurndownService();
           const markdown = service ? service.turndown(html) : html;
-          
           const headers = new Headers(response.headers);
           headers.set("Content-Type", "text/markdown; charset=utf-8");
-          // Optional tracking header for tokens if needed
           headers.set("x-markdown-tokens", markdown.split(/\s+/).length.toString());
-          
           finalResponse = new Response(markdown, {
             status: response.status,
             statusText: response.statusText,
@@ -123,8 +113,7 @@ export default {
         }
       }
 
-      // Add Link headers to homepage if not already a markdown response
-      if (isHome && !isMarkdownRequested) {
+      if (url.pathname === "/" && !isMarkdownRequested) {
         const headers = new Headers(finalResponse.headers);
         const linkHeaders = [
           '</.well-known/api-catalog>; rel="api-catalog"',
@@ -134,7 +123,6 @@ export default {
           '</about>; rel="describedby"'
         ];
         headers.append("Link", linkHeaders.join(", "));
-        
         finalResponse = new Response(finalResponse.body, {
           status: finalResponse.status,
           statusText: finalResponse.statusText,
