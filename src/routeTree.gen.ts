@@ -113,6 +113,7 @@ import { Route as BettingGuidesHowBookmakersMakeMoneyRouteImport } from './route
 import { Route as ApiPublicOpenidConfigurationRouteImport } from './routes/api/public/openid-configuration'
 import { Route as ApiPublicOauthProtectedResourceRouteImport } from './routes/api/public/oauth-protected-resource'
 import { Route as ApiPublicHealthRouteImport } from './routes/api/public/health'
+import { Route as ApiPublicAuthMdRouteImport } from './routes/api/public/auth-md'
 import { Route as ApiPublicApiCatalogRouteImport } from './routes/api/public/api-catalog'
 
 const Wpl2026BettingRoute = Wpl2026BettingRouteImport.update({
@@ -650,6 +651,11 @@ const ApiPublicHealthRoute = ApiPublicHealthRouteImport.update({
   path: '/api/public/health',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicAuthMdRoute = ApiPublicAuthMdRouteImport.update({
+  id: '/api/public/auth-md',
+  path: '/api/public/auth-md',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiPublicApiCatalogRoute = ApiPublicApiCatalogRouteImport.update({
   id: '/api/public/api-catalog',
   path: '/api/public/api-catalog',
@@ -759,6 +765,7 @@ export interface FileRoutesByFullPath {
   '/blog/': typeof BlogIndexRoute
   '/matches/': typeof MatchesIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
+  '/api/public/auth-md': typeof ApiPublicAuthMdRoute
   '/api/public/health': typeof ApiPublicHealthRoute
   '/api/public/oauth-protected-resource': typeof ApiPublicOauthProtectedResourceRoute
   '/api/public/openid-configuration': typeof ApiPublicOpenidConfigurationRoute
@@ -866,6 +873,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogIndexRoute
   '/matches': typeof MatchesIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
+  '/api/public/auth-md': typeof ApiPublicAuthMdRoute
   '/api/public/health': typeof ApiPublicHealthRoute
   '/api/public/oauth-protected-resource': typeof ApiPublicOauthProtectedResourceRoute
   '/api/public/openid-configuration': typeof ApiPublicOpenidConfigurationRoute
@@ -974,6 +982,7 @@ export interface FileRoutesById {
   '/blog/': typeof BlogIndexRoute
   '/matches/': typeof MatchesIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
+  '/api/public/auth-md': typeof ApiPublicAuthMdRoute
   '/api/public/health': typeof ApiPublicHealthRoute
   '/api/public/oauth-protected-resource': typeof ApiPublicOauthProtectedResourceRoute
   '/api/public/openid-configuration': typeof ApiPublicOpenidConfigurationRoute
@@ -1083,6 +1092,7 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/matches/'
     | '/api/public/api-catalog'
+    | '/api/public/auth-md'
     | '/api/public/health'
     | '/api/public/oauth-protected-resource'
     | '/api/public/openid-configuration'
@@ -1190,6 +1200,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/matches'
     | '/api/public/api-catalog'
+    | '/api/public/auth-md'
     | '/api/public/health'
     | '/api/public/oauth-protected-resource'
     | '/api/public/openid-configuration'
@@ -1297,6 +1308,7 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/matches/'
     | '/api/public/api-catalog'
+    | '/api/public/auth-md'
     | '/api/public/health'
     | '/api/public/oauth-protected-resource'
     | '/api/public/openid-configuration'
@@ -1395,6 +1407,7 @@ export interface RootRouteChildren {
   BlogIndexRoute: typeof BlogIndexRoute
   MatchesIndexRoute: typeof MatchesIndexRoute
   ApiPublicApiCatalogRoute: typeof ApiPublicApiCatalogRoute
+  ApiPublicAuthMdRoute: typeof ApiPublicAuthMdRoute
   ApiPublicHealthRoute: typeof ApiPublicHealthRoute
   ApiPublicOauthProtectedResourceRoute: typeof ApiPublicOauthProtectedResourceRoute
   ApiPublicOpenidConfigurationRoute: typeof ApiPublicOpenidConfigurationRoute
@@ -2130,6 +2143,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHealthRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/auth-md': {
+      id: '/api/public/auth-md'
+      path: '/api/public/auth-md'
+      fullPath: '/api/public/auth-md'
+      preLoaderRoute: typeof ApiPublicAuthMdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/api-catalog': {
       id: '/api/public/api-catalog'
       path: '/api/public/api-catalog'
@@ -2280,6 +2300,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogIndexRoute: BlogIndexRoute,
   MatchesIndexRoute: MatchesIndexRoute,
   ApiPublicApiCatalogRoute: ApiPublicApiCatalogRoute,
+  ApiPublicAuthMdRoute: ApiPublicAuthMdRoute,
   ApiPublicHealthRoute: ApiPublicHealthRoute,
   ApiPublicOauthProtectedResourceRoute: ApiPublicOauthProtectedResourceRoute,
   ApiPublicOpenidConfigurationRoute: ApiPublicOpenidConfigurationRoute,
