@@ -65,8 +65,24 @@ export default {
     try {
       const handler = await getServerEntry();
       
+      const url = new URL(request.url);
+      const isHome = url.pathname === "/";
+      const isApiCatalog = url.pathname === "/.well-known/api-catalog";
       const acceptHeader = request.headers.get("accept") || "";
       const isMarkdownRequested = acceptHeader.includes("text/markdown");
+
+      // Direct response for API catalog to ensure correct Content-Type without interference
+      if (isApiCatalog) {
+        const response = await handler.fetch(request, env, ctx);
+        const text = await response.text();
+        const headers = new Headers(response.headers);
+        headers.set("Content-Type", "application/linkset+json");
+        return new Response(text, {
+          status: response.status,
+          statusText: response.statusText,
+          headers
+        });
+      }
       
       let internalRequest = request;
       if (isMarkdownRequested) {
@@ -83,10 +99,6 @@ export default {
       }
 
       const response = await handler.fetch(internalRequest, env, ctx);
-      
-      const url = new URL(request.url);
-      const isHome = url.pathname === "/";
-      
       let finalResponse = response;
 
       // Handle Markdown request
@@ -108,7 +120,6 @@ export default {
           });
         } catch (error) {
           console.error("Markdown conversion failed:", error);
-          // Fallback occurs as finalResponse remains the original response
         }
       }
 
