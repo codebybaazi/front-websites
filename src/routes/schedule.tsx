@@ -160,7 +160,7 @@ function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
                           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
                         </div>
                         
-                        <div className="rounded-2xl border border-primary/10 bg-background/40 overflow-hidden">
+                        <div className="rounded-2xl border border-primary/10 bg-background/40 overflow-hidden content-visibility-auto contain-intrinsic-size-[0_400px]">
                           <div className="overflow-x-auto md:overflow-x-visible">
                             {/* Desktop Table View */}
                             <table className="w-full text-left border-collapse hidden md:table">

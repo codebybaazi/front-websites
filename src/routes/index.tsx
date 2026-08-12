@@ -326,7 +326,7 @@ function FaqSection() {
   const [open, setOpen] = useState<number | null>(0);
   const IconMap = { ShieldCheck, Zap, Wallet, Trophy, Gift, Smartphone } as const;
   return (
-    <section className="relative overflow-hidden py-28">
+    <section className="relative overflow-hidden py-28 content-visibility-auto contain-intrinsic-size-[0_800px]">
       <div
         className="pointer-events-none absolute inset-0"
         style={{

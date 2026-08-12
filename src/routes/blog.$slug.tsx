@@ -140,7 +140,7 @@ function PostPage() {
         </div>
 
         {post.faqs && post.faqs.length > 0 && (
-          <div className="mt-16 rounded-3xl border border-primary/20 bg-background/40 p-8 backdrop-blur-sm">
+          <div className="mt-16 rounded-3xl border border-primary/20 bg-background/40 p-8 backdrop-blur-sm content-visibility-auto contain-intrinsic-size-[0_500px]">
             <h2 className="mb-8 text-3xl break-words font-black italic tracking-tighter text-primary uppercase">
               Insights & <span className="text-white text-stroke-primary">FAQ</span>
             </h2>

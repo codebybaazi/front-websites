@@ -159,7 +159,7 @@ function MatchDetail() {
               </div>
             </section>
 
-            <section className="bg-zinc-900/50 rounded-3xl p-8 border border-zinc-800">
+            <section className="bg-zinc-900/50 rounded-3xl p-8 border border-zinc-800 content-visibility-auto contain-intrinsic-size-[0_300px]">
               <h3 className="text-xl font-black mb-6 flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-[#D4AF37]" />
                 Tactical Preview & Head-to-Head
