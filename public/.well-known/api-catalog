@@ -1,9 +1,11 @@
 {
-  "api-catalog-version": "1.0",
+  "name": "Cricbet99 Public API",
+  "description": "Public endpoints for Cricbet99 platform integration.",
   "endpoints": [
     {
-      "link-rel": "sitemap",
-      "href": "https://cricbet99.co.in/sitemap.xml"
+      "path": "/api/public/sitemap",
+      "method": "GET",
+      "description": "Dynamic sitemap generation"
     }
   ]
 }
