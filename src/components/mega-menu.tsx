@@ -507,6 +507,7 @@ export function MegaMenuHeader() {
                 <X className="h-5 w-5" />
               </button>
             </div>
+
             <div aria-hidden className="gold-underline h-px w-full" />
 
             {/* Utility strip */}
