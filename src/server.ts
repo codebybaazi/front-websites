@@ -92,7 +92,7 @@ export default {
         });
       }
       
-      if (url.pathname === "/.well-known/openid-configuration") {
+      if (url.pathname === "/.well-known/openid-configuration" || url.pathname === "/.well-known/oauth-authorization-server") {
         const oidcReq = new Request(new URL("/api/public/openid-configuration", request.url).toString(), {
           method: "GET",
           headers: request.headers
