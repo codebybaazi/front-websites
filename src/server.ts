@@ -106,6 +106,7 @@ export default {
             "Cache-Control": "public, max-age=3600"
           }
         });
+      }
 
       const response = await handler.fetch(internalRequest, env, ctx);
       let finalResponse = response;
