@@ -25,7 +25,7 @@ export const Route = createFileRoute("/schedule")({
       { name: "twitter:title", content: "2026 Cricket Schedule & Live Sports Calendar | Cricbet99" },
       { name: "twitter:description", content: "Official 2026 cricket schedule and live sports calendar. IPL 2026, T20 World Cup, and major events with live betting insights." },
       { name: "twitter:image", content: "https://cricbet99.co.in/og-image.jpg" },
-      { name: "keywords", content: "cricket schedule 2026, IPL 2026 fixtures, T20 World Cup 2026 dates, football schedule 2026, tennis calendar 2026, sports betting schedule, live cricket matches 2026" },
+      { name: "keywords", content: "cricbet99 green, cricbet99 black, cricbet99 club, cricket schedule 2026, IPL 2026 fixtures, T20 World Cup 2026 dates, football schedule 2026, tennis calendar 2026, sports betting schedule, live cricket matches 2026" },
     ],
     links: [
       { rel: "canonical", href: "https://cricbet99.co.in/schedule" },
