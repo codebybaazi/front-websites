@@ -4,30 +4,34 @@ export const Route = createFileRoute('/api/public/oauth-protected-resource')({
   server: {
     handlers: {
       GET: async ({ request }) => {
+        // OAuth Protected Resource Metadata (RFC 9470 / Draft)
+        // Helps agents discover how to authenticate to this site's APIs
         const url = new URL(request.url)
-        const baseUrl = `${url.protocol}//${url.host}`
+        const baseUrl = 'https://cricbet99.co.in'
         
         const metadata = {
-          resource: baseUrl,
-          authorization_servers: [
+          "resource": baseUrl,
+          "authorization_servers": [
             baseUrl
           ],
-          scopes_supported: [
+          "scopes_supported": [
             "openid",
             "profile",
             "email",
-            "api:read",
-            "api:write"
+            "agent:identity",
+            "api:read"
           ],
-          bearer_methods_supported: ["header"],
-          resource_documentation: `${baseUrl}/all-links`
+          "bearer_methods_supported": ["header"],
+          "resource_documentation": `${baseUrl}/auth.md`,
+          "ui_locales_supported": ["en-IN", "hi-IN"]
         }
 
         return new Response(JSON.stringify(metadata, null, 2), {
           status: 200,
           headers: {
             'Content-Type': 'application/json',
-            'Cache-Control': 'public, max-age=3600'
+            'Cache-Control': 'public, max-age=3600',
+            'Access-Control-Allow-Origin': '*'
           }
         })
       }
