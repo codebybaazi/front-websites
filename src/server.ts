@@ -59,15 +59,6 @@ export default {
       const handler = await getServerEntry();
       const url = new URL(request.url);
       
-      // Handle /.well-known/api-catalog by routing to the internal API handler
-      if (url.pathname === "/.well-known/api-catalog") {
-        const apiReq = new Request(new URL("/api/public/api-catalog", request.url).toString(), {
-          method: "GET",
-          headers: request.headers
-        });
-        return handler.fetch(apiReq, env, ctx);
-      }
-
       const acceptHeader = request.headers.get("accept") || "";
       const isMarkdownRequested = acceptHeader.includes("text/markdown");
       
@@ -85,6 +76,20 @@ export default {
       }
 
       const response = await handler.fetch(internalRequest, env, ctx);
+      
+      // Handle /.well-known/api-catalog discovery route to force RFC-compliant Content-Type
+      if (url.pathname === "/.well-known/api-catalog") {
+        const text = await response.text();
+        const headers = new Headers(response.headers);
+        headers.set("Content-Type", "application/linkset+json");
+        headers.set("Cache-Control", "no-store, no-cache, must-revalidate");
+        return new Response(text, {
+          status: response.status,
+          statusText: response.statusText,
+          headers
+        });
+      }
+
       let finalResponse = response;
 
       if (isMarkdownRequested && response.headers.get("content-type")?.includes("text/html")) {
