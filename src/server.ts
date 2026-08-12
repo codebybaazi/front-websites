@@ -1,10 +1,10 @@
 import "./lib/error-capture";
-import { createMarkitdown } from "markitdown";
+import TurndownService from "turndown";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
 
-const md = createMarkitdown();
+const turndownService = new TurndownService();
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
