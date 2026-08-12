@@ -1,3 +1,8 @@
+---
+agent_auth: true
+register_uri: https://cricbet99.co.in/api/public/agent-registration
+identity_types_supported: ["identity_assertion", "anonymous"]
+---
 # auth.md
 
 Machine-readable registration and authentication guide for autonomous agents using Cricbet99.
