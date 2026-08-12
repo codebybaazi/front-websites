@@ -150,6 +150,7 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "canonical", href: "https://cricbet99.co.in/" },
       { rel: "preload", as: "image", href: heroBanner, fetchPriority: "high" },
+      { rel: "preload", as: "image", href: logo, fetchPriority: "high" },
       { rel: "api-catalog", href: "https://cricbet99.co.in/.well-known/api-catalog" },
       { rel: "service-doc", href: "https://cricbet99.co.in/all-links" },
       { rel: "openid-configuration", href: "https://cricbet99.co.in/.well-known/openid-configuration" },
@@ -336,7 +337,7 @@ function FaqSection() {
       />
       <div className="relative mx-auto max-w-3xl px-6">
         <div className="text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
+          <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent content-visibility-auto">
             <HelpCircle className="h-3.5 w-3.5" /> Support · 24/7 on WhatsApp
           </div>
           <h2 className="mt-5 text-4xl break-words font-black tracking-tight md:text-5xl break-words uppercase tracking-tighter">

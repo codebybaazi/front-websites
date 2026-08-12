@@ -193,7 +193,7 @@ export function LiveDashboard() {
   const upcomingCount = events.length - liveCount;
 
   return (
-    <section className="relative overflow-hidden py-24 md:py-28 min-h-[600px]">
+    <section className="relative overflow-hidden py-24 md:py-28 min-h-[600px] content-visibility-auto">
       {/* Base gradient wash */}
       <div
         className="pointer-events-none absolute inset-0"

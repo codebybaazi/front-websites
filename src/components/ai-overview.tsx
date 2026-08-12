@@ -7,7 +7,7 @@ interface AiOverviewProps {
 
 export function AiOverview({ summary, highlights }: AiOverviewProps) {
   return (
-    <section className="relative w-full py-20 overflow-hidden bg-[oklch(0.08_0.01_260)] min-h-[400px]">
+    <section className="relative w-full py-20 overflow-hidden bg-[oklch(0.08_0.01_260)] min-h-[400px] content-visibility-auto">
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] animate-pulse" />
