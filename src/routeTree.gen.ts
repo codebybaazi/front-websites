@@ -110,6 +110,7 @@ import { Route as BettingGuidesHowToPlaceACricketBetRouteImport } from './routes
 import { Route as BettingGuidesHowToBetOnTossMarketRouteImport } from './routes/betting-guides.how-to-bet-on-toss-market'
 import { Route as BettingGuidesHowToBetOnSessionBettingRouteImport } from './routes/betting-guides.how-to-bet-on-session-betting'
 import { Route as BettingGuidesHowBookmakersMakeMoneyRouteImport } from './routes/betting-guides.how-bookmakers-make-money'
+import { Route as ApiPublicOpenidConfigurationRouteImport } from './routes/api/public/openid-configuration'
 import { Route as ApiPublicHealthRouteImport } from './routes/api/public/health'
 import { Route as ApiPublicApiCatalogRouteImport } from './routes/api/public/api-catalog'
 
@@ -631,6 +632,12 @@ const BettingGuidesHowBookmakersMakeMoneyRoute =
     path: '/how-bookmakers-make-money',
     getParentRoute: () => BettingGuidesRoute,
   } as any)
+const ApiPublicOpenidConfigurationRoute =
+  ApiPublicOpenidConfigurationRouteImport.update({
+    id: '/api/public/openid-configuration',
+    path: '/api/public/openid-configuration',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHealthRoute = ApiPublicHealthRouteImport.update({
   id: '/api/public/health',
   path: '/api/public/health',
@@ -746,6 +753,7 @@ export interface FileRoutesByFullPath {
   '/matches/': typeof MatchesIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/health': typeof ApiPublicHealthRoute
+  '/api/public/openid-configuration': typeof ApiPublicOpenidConfigurationRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -851,6 +859,7 @@ export interface FileRoutesByTo {
   '/matches': typeof MatchesIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/health': typeof ApiPublicHealthRoute
+  '/api/public/openid-configuration': typeof ApiPublicOpenidConfigurationRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -957,6 +966,7 @@ export interface FileRoutesById {
   '/matches/': typeof MatchesIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/health': typeof ApiPublicHealthRoute
+  '/api/public/openid-configuration': typeof ApiPublicOpenidConfigurationRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -1064,6 +1074,7 @@ export interface FileRouteTypes {
     | '/matches/'
     | '/api/public/api-catalog'
     | '/api/public/health'
+    | '/api/public/openid-configuration'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -1169,6 +1180,7 @@ export interface FileRouteTypes {
     | '/matches'
     | '/api/public/api-catalog'
     | '/api/public/health'
+    | '/api/public/openid-configuration'
   id:
     | '__root__'
     | '/'
@@ -1274,6 +1286,7 @@ export interface FileRouteTypes {
     | '/matches/'
     | '/api/public/api-catalog'
     | '/api/public/health'
+    | '/api/public/openid-configuration'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -1370,6 +1383,7 @@ export interface RootRouteChildren {
   MatchesIndexRoute: typeof MatchesIndexRoute
   ApiPublicApiCatalogRoute: typeof ApiPublicApiCatalogRoute
   ApiPublicHealthRoute: typeof ApiPublicHealthRoute
+  ApiPublicOpenidConfigurationRoute: typeof ApiPublicOpenidConfigurationRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -2081,6 +2095,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BettingGuidesHowBookmakersMakeMoneyRouteImport
       parentRoute: typeof BettingGuidesRoute
     }
+    '/api/public/openid-configuration': {
+      id: '/api/public/openid-configuration'
+      path: '/api/public/openid-configuration'
+      fullPath: '/api/public/openid-configuration'
+      preLoaderRoute: typeof ApiPublicOpenidConfigurationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/health': {
       id: '/api/public/health'
       path: '/api/public/health'
@@ -2239,7 +2260,18 @@ const rootRouteChildren: RootRouteChildren = {
   MatchesIndexRoute: MatchesIndexRoute,
   ApiPublicApiCatalogRoute: ApiPublicApiCatalogRoute,
   ApiPublicHealthRoute: ApiPublicHealthRoute,
+  ApiPublicOpenidConfigurationRoute: ApiPublicOpenidConfigurationRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
