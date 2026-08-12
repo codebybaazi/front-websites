@@ -18,15 +18,22 @@ export const Route = createFileRoute('/api/public/openid-configuration')({
           "token_endpoint_auth_methods_supported": ["client_secret_post", "client_secret_basic"],
           "claims_supported": ["aud", "exp", "iat", "iss", "sub", "email", "name"],
           "agent_auth": {
+            "skill": "Implement Auth.md Agent Registration Discovery",
             "register_uri": `${domain}/api/public/agent-registration`,
-            "identity_types_supported": ["organization", "independent-agent"],
+            "identity_types_supported": ["identity_assertion", "anonymous"],
+            "identity_assertion": {
+              "assertion_types_supported": ["urn:ietf:params:oauth:token-type:id-jag", "verified_email"]
+            },
+            "anonymous": {
+              "credential_types_supported": ["bearer"]
+            },
             "credential_types_supported": ["oauth-client-secret", "jwt-bearer"],
             "revocation_uri": `${domain}/api/public/revoke`,
-            "claims_uri": `${domain}/api/public/claims`
+            "claims_uri": `${domain}/api/public/claims`,
+            "events_supported": ["revocation"]
           }
         };
 
-        
         return new Response(JSON.stringify(config, null, 2), {
           headers: {
             'Content-Type': 'application/json',

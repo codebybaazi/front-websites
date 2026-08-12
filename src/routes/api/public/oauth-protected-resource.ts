@@ -20,7 +20,7 @@ export const Route = createFileRoute('/api/public/oauth-protected-resource')({
             "api:write"
           ],
           bearer_methods_supported: ["header"],
-          resource_documentation: `${baseUrl}/docs/api`
+          resource_documentation: `${baseUrl}/all-links`
         }
 
         return new Response(JSON.stringify(metadata, null, 2), {
