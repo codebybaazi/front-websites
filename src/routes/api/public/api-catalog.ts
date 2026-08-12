@@ -4,10 +4,12 @@ export const Route = createFileRoute('/api/public/api-catalog')({
   server: {
     handlers: {
       GET: async () => {
+        // RFC 9727: API Catalog for automated discovery
+        // RFC 9264: application/linkset+json format
         const content = {
           "linkset": [
             {
-              "anchor": "https://cricbet99.co.in/",
+              "anchor": "https://cricbet99.co.in/api/public/match-data",
               "service-desc": [
                 {
                   "href": "https://cricbet99.co.in/.well-known/oauth-protected-resource",
@@ -16,7 +18,7 @@ export const Route = createFileRoute('/api/public/api-catalog')({
               ],
               "service-doc": [
                 {
-                  "href": "https://cricbet99.co.in/all-links",
+                  "href": "https://cricbet99.co.in/guides",
                   "type": "text/html"
                 }
               ],
@@ -26,6 +28,21 @@ export const Route = createFileRoute('/api/public/api-catalog')({
                   "type": "application/json"
                 }
               ]
+            },
+            {
+              "anchor": "https://cricbet99.co.in/api/public/agent-skills-index",
+              "service-desc": [
+                {
+                  "href": "https://cricbet99.co.in/.well-known/agent-skills/index.json",
+                  "type": "application/json"
+                }
+              ],
+              "service-doc": [
+                {
+                  "href": "https://cricbet99.co.in/all-links",
+                  "type": "text/html"
+                }
+              ]
             }
           ]
         };
@@ -33,7 +50,8 @@ export const Route = createFileRoute('/api/public/api-catalog')({
         return new Response(JSON.stringify(content, null, 2), {
           headers: {
             'Content-Type': 'application/linkset+json',
-            'Cache-Control': 'no-store, no-cache, must-revalidate'
+            'Cache-Control': 'public, max-age=3600, must-revalidate',
+            'Access-Control-Allow-Origin': '*'
           }
         });
       }
