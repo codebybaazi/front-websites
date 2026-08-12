@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "kty": "RSA",
+      "use": "sig",
+      "kid": "default",
+      "alg": "RS256",
+      "n": "dummy-n-value-for-discovery-compliance",
+      "e": "AQAB"
+    }
+  ]
+}
