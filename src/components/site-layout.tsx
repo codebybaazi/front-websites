@@ -27,7 +27,6 @@ export const navLinks = [
   { label: "About", to: "/about" },
   { label: "Contact", to: "/contact" },
   { label: "Login", to: "/login" },
-  { label: "All Links", to: "/all-links" },
 ] as const;
 
 export function SiteHeader() {
@@ -125,7 +124,6 @@ export function SiteFooter() {
             <li><Link to="/blog" className="hover:text-primary">Blog</Link></li>
             <li><Link to="/faq" className="hover:text-primary">Help Center FAQ</Link></li>
             <li><Link to="/contact" className="hover:text-primary">Contact</Link></li>
-            <li><Link to="/all-links" className="hover:text-primary">All Links</Link></li>
           </ul>
         </div>
         <div>
