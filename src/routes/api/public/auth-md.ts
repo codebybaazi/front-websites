@@ -36,7 +36,7 @@ We support OAuth 2.0 and OpenID Connect with Agent Registration support.
         return new Response(content, {
           headers: {
             'Content-Type': 'text/markdown; charset=utf-8',
-            'Cache-Control': 'public, max-age=3600'
+            'Cache-Control': 'no-store, no-cache, must-revalidate'
           }
         });
       }
