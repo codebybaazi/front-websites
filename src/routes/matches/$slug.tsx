@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { getMatch } from '@/data/matches'
-import { SiteLayout, PageHero, CTABand } from '@/components/site-layout'
+import { getMatch, type MatchFixture } from '@/data/matches'
+import { SiteLayout, CTABand } from '@/components/site-layout'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { 
@@ -12,10 +12,9 @@ import {
   Users, 
   ShieldCheck, 
   ChevronRight,
-  Info,
-  Clock
+  Info
 } from 'lucide-react'
-import { buildBreadcrumbJsonLd, buildFaqJsonLd } from '@/components/long-form-page'
+import { buildBreadcrumbJsonLd } from '@/components/long-form-page'
 import { AiOverview } from '@/components/ai-overview'
 
 export const Route = createFileRoute('/matches/$slug')({
@@ -24,9 +23,10 @@ export const Route = createFileRoute('/matches/$slug')({
     if (!match) throw new Error('Match not found')
     return { match }
   },
-  head: ({ loaderData }: { loaderData: { match: any } }) => {
+  head: ({ loaderData }) => {
+    if (!loaderData?.match) return {}
     const { match } = loaderData
-    if (!match) return {}
+    const title = `${match.homeTeam} vs ${match.awayTeam} | ${match.tournament} Live Betting Odds`
     const description = `Live betting analysis for ${match.homeTeam} vs ${match.awayTeam} in ${match.tournament}. Get expert predictions, tactical previews, and top markets on Cricbet99.`
     
     return {
@@ -72,7 +72,7 @@ export const Route = createFileRoute('/matches/$slug')({
 })
 
 function MatchDetail() {
-  const { match } = Route.useLoaderData()
+  const { match } = Route.useLoaderData() as { match: MatchFixture }
 
   return (
     <SiteLayout>
@@ -179,7 +179,7 @@ function MatchDetail() {
             <section>
               <h3 className="text-xl font-black mb-6">Popular Betting Markets</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {match.marketHighlights.map((market, idx) => (
+                {match.marketHighlights.map((market: string, idx: number) => (
                   <div key={idx} className="p-4 bg-zinc-900/30 border border-zinc-800 rounded-xl text-center hover:border-[#D4AF37]/50 transition-colors">
                     <div className="text-xs text-[#D4AF37] font-bold mb-1">Available</div>
                     <div className="text-sm font-medium">{market}</div>
@@ -197,7 +197,7 @@ function MatchDetail() {
                 Betting Tips
               </h3>
               <ul className="space-y-4">
-                {(match.bettingTips || ["Back the chasing team under lights", "Watch the first 10 overs before trading"]).map((tip, idx) => (
+                {(match.bettingTips || ["Back the chasing team under lights", "Watch the first 10 overs before trading"]).map((tip: string, idx: number) => (
                   <li key={idx} className="flex gap-3 text-sm text-zinc-400">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] mt-1.5 shrink-0" />
                     {tip}
@@ -215,7 +215,7 @@ function MatchDetail() {
                 <div>
                   <div className="text-[10px] text-zinc-500 uppercase mb-2 font-bold">{match.homeTeam}</div>
                   <div className="flex flex-wrap gap-2">
-                    {(match.keyPlayersHome || ["TBA"]).map((p, i) => (
+                    {(match.keyPlayersHome || ["TBA"]).map((p: string, i: number) => (
                       <Badge key={i} variant="secondary" className="bg-zinc-800 text-zinc-300">{p}</Badge>
                     ))}
                   </div>
@@ -224,7 +224,7 @@ function MatchDetail() {
                 <div>
                   <div className="text-[10px] text-zinc-500 uppercase mb-2 font-bold">{match.awayTeam}</div>
                   <div className="flex flex-wrap gap-2">
-                    {(match.keyPlayersAway || ["TBA"]).map((p, i) => (
+                    {(match.keyPlayersAway || ["TBA"]).map((p: string, i: number) => (
                       <Badge key={i} variant="secondary" className="bg-zinc-800 text-zinc-300">{p}</Badge>
                     ))}
                   </div>
