@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "domain": "cricbet99.co.in",
+  "records": [
+    {
+      "name": "_index._agents.cricbet99.co.in",
+      "type": "HTTPS",
+      "value": "1 . alpn=\"h2,h3\" endpoint=\"https://cricbet99.co.in/.well-known/ai-skills.json\""
+    },
+    {
+      "name": "_a2a._agents.cricbet99.co.in",
+      "type": "HTTPS",
+      "value": "1 . alpn=\"h2,h3\" endpoint=\"https://cricbet99.co.in/api/public/ai-agent\""
+    }
+  ],
+  "note": "This file documents the DNS-AID records that should be configured at the DNS provider level (e.g., Cloudflare) to enable DNS-based agent discovery per emerging standards."
+}

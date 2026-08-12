@@ -102,6 +102,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "api-catalog", href: "https://cricbet99.co.in/.well-known/api-catalog" },
       { rel: "service-doc", href: "https://cricbet99.co.in/all-links" },
       { rel: "ai-skills", href: "https://cricbet99.co.in/.well-known/ai-skills.json" },
+      { rel: "dns-aid", href: "https://cricbet99.co.in/.well-known/dns-aid.json" },
     ],
 
     scripts: [
