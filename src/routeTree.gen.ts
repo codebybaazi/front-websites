@@ -94,11 +94,9 @@ import { Route as AllLinksRouteImport } from './routes/all-links'
 import { Route as AccountBlockedRouteImport } from './routes/account-blocked'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as MatchesIndexRouteImport } from './routes/matches/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as SitemapXmlRouteImport } from './routes/sitemap.xml'
 import { Route as RobotsTxtRouteImport } from './routes/robots.txt'
-import { Route as MatchesSlugRouteImport } from './routes/matches/$slug'
 import { Route as CaseStudiesTossMarket10MinuteProfitRouteImport } from './routes/case-studies.toss-market-10-minute-profit'
 import { Route as CaseStudiesSmallBudgetBettingStrategyRouteImport } from './routes/case-studies.small-budget-betting-strategy'
 import { Route as CaseStudiesLiveBetting3xReturnsRouteImport } from './routes/case-studies.live-betting-3x-returns'
@@ -539,11 +537,6 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const MatchesIndexRoute = MatchesIndexRouteImport.update({
-  id: '/matches/',
-  path: '/matches/',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
@@ -557,11 +550,6 @@ const SitemapXmlRoute = SitemapXmlRouteImport.update({
 const RobotsTxtRoute = RobotsTxtRouteImport.update({
   id: '/robots/txt',
   path: '/robots/txt',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MatchesSlugRoute = MatchesSlugRouteImport.update({
-  id: '/matches/$slug',
-  path: '/matches/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CaseStudiesTossMarket10MinuteProfitRoute =
@@ -727,11 +715,9 @@ export interface FileRoutesByFullPath {
   '/case-studies/live-betting-3x-returns': typeof CaseStudiesLiveBetting3xReturnsRoute
   '/case-studies/small-budget-betting-strategy': typeof CaseStudiesSmallBudgetBettingStrategyRoute
   '/case-studies/toss-market-10-minute-profit': typeof CaseStudiesTossMarket10MinuteProfitRoute
-  '/matches/$slug': typeof MatchesSlugRoute
   '/robots/txt': typeof RobotsTxtRoute
   '/sitemap/xml': typeof SitemapXmlRoute
   '/blog/': typeof BlogIndexRoute
-  '/matches/': typeof MatchesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -830,11 +816,9 @@ export interface FileRoutesByTo {
   '/case-studies/live-betting-3x-returns': typeof CaseStudiesLiveBetting3xReturnsRoute
   '/case-studies/small-budget-betting-strategy': typeof CaseStudiesSmallBudgetBettingStrategyRoute
   '/case-studies/toss-market-10-minute-profit': typeof CaseStudiesTossMarket10MinuteProfitRoute
-  '/matches/$slug': typeof MatchesSlugRoute
   '/robots/txt': typeof RobotsTxtRoute
   '/sitemap/xml': typeof SitemapXmlRoute
   '/blog': typeof BlogIndexRoute
-  '/matches': typeof MatchesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -934,11 +918,9 @@ export interface FileRoutesById {
   '/case-studies/live-betting-3x-returns': typeof CaseStudiesLiveBetting3xReturnsRoute
   '/case-studies/small-budget-betting-strategy': typeof CaseStudiesSmallBudgetBettingStrategyRoute
   '/case-studies/toss-market-10-minute-profit': typeof CaseStudiesTossMarket10MinuteProfitRoute
-  '/matches/$slug': typeof MatchesSlugRoute
   '/robots/txt': typeof RobotsTxtRoute
   '/sitemap/xml': typeof SitemapXmlRoute
   '/blog/': typeof BlogIndexRoute
-  '/matches/': typeof MatchesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -1039,11 +1021,9 @@ export interface FileRouteTypes {
     | '/case-studies/live-betting-3x-returns'
     | '/case-studies/small-budget-betting-strategy'
     | '/case-studies/toss-market-10-minute-profit'
-    | '/matches/$slug'
     | '/robots/txt'
     | '/sitemap/xml'
     | '/blog/'
-    | '/matches/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -1142,11 +1122,9 @@ export interface FileRouteTypes {
     | '/case-studies/live-betting-3x-returns'
     | '/case-studies/small-budget-betting-strategy'
     | '/case-studies/toss-market-10-minute-profit'
-    | '/matches/$slug'
     | '/robots/txt'
     | '/sitemap/xml'
     | '/blog'
-    | '/matches'
   id:
     | '__root__'
     | '/'
@@ -1245,11 +1223,9 @@ export interface FileRouteTypes {
     | '/case-studies/live-betting-3x-returns'
     | '/case-studies/small-budget-betting-strategy'
     | '/case-studies/toss-market-10-minute-profit'
-    | '/matches/$slug'
     | '/robots/txt'
     | '/sitemap/xml'
     | '/blog/'
-    | '/matches/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -1339,11 +1315,9 @@ export interface RootRouteChildren {
   WithdrawalDelayRoute: typeof WithdrawalDelayRoute
   Wpl2026BettingRoute: typeof Wpl2026BettingRoute
   BlogSlugRoute: typeof BlogSlugRoute
-  MatchesSlugRoute: typeof MatchesSlugRoute
   RobotsTxtRoute: typeof RobotsTxtRoute
   SitemapXmlRoute: typeof SitemapXmlRoute
   BlogIndexRoute: typeof BlogIndexRoute
-  MatchesIndexRoute: typeof MatchesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -1943,13 +1917,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/matches/': {
-      id: '/matches/'
-      path: '/matches'
-      fullPath: '/matches/'
-      preLoaderRoute: typeof MatchesIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/blog/': {
       id: '/blog/'
       path: '/blog'
@@ -1969,13 +1936,6 @@ declare module '@tanstack/react-router' {
       path: '/robots/txt'
       fullPath: '/robots/txt'
       preLoaderRoute: typeof RobotsTxtRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/matches/$slug': {
-      id: '/matches/$slug'
-      path: '/matches/$slug'
-      fullPath: '/matches/$slug'
-      preLoaderRoute: typeof MatchesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/case-studies/toss-market-10-minute-profit': {
@@ -2192,11 +2152,9 @@ const rootRouteChildren: RootRouteChildren = {
   WithdrawalDelayRoute: WithdrawalDelayRoute,
   Wpl2026BettingRoute: Wpl2026BettingRoute,
   BlogSlugRoute: BlogSlugRoute,
-  MatchesSlugRoute: MatchesSlugRoute,
   RobotsTxtRoute: RobotsTxtRoute,
   SitemapXmlRoute: SitemapXmlRoute,
   BlogIndexRoute: BlogIndexRoute,
-  MatchesIndexRoute: MatchesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
