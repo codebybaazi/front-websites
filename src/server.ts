@@ -3,6 +3,22 @@ import "./lib/error-capture";
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
 
+let turndownService: any;
+
+async function getTurndownService() {
+  if (!turndownService) {
+    try {
+      // @ts-ignore
+      const module = await import("turndown/lib/turndown.cjs.js");
+      const TurndownService = module.default || module;
+      turndownService = new TurndownService();
+    } catch (e) {
+      console.error("Failed to initialize TurndownService:", e);
+    }
+  }
+  return turndownService;
+}
+
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
 };
@@ -48,11 +64,57 @@ export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
       const handler = await getServerEntry();
-      const response = await handler.fetch(request, env, ctx);
+      
+      const acceptHeader = request.headers.get("accept") || "";
+      const isMarkdownRequested = acceptHeader.includes("text/markdown");
+      
+      let internalRequest = request;
+      if (isMarkdownRequested) {
+        // Clone request and modify headers to avoid 406/500 in internal handler
+        const headers = new Headers(request.headers);
+        headers.set("Accept", "text/html");
+        internalRequest = new Request(request.url, {
+          method: request.method,
+          headers,
+          body: request.body,
+          // @ts-ignore
+          duplex: request.body ? 'half' : undefined
+        });
+      }
+
+      const response = await handler.fetch(internalRequest, env, ctx);
       
       const url = new URL(request.url);
-      if (url.pathname === "/") {
-        const headers = new Headers(response.headers);
+      const isHome = url.pathname === "/";
+      
+      let finalResponse = response;
+
+      // Handle Markdown request
+      if (isMarkdownRequested && response.headers.get("content-type")?.includes("text/html")) {
+        try {
+          const html = await response.text();
+          const service = await getTurndownService();
+          const markdown = service ? service.turndown(html) : html;
+          
+          const headers = new Headers(response.headers);
+          headers.set("Content-Type", "text/markdown; charset=utf-8");
+          // Optional tracking header for tokens if needed
+          headers.set("x-markdown-tokens", markdown.split(/\s+/).length.toString());
+          
+          finalResponse = new Response(markdown, {
+            status: response.status,
+            statusText: response.statusText,
+            headers
+          });
+        } catch (error) {
+          console.error("Markdown conversion failed:", error);
+          // Fallback occurs as finalResponse remains the original response
+        }
+      }
+
+      // Add Link headers to homepage if not already a markdown response
+      if (isHome && !isMarkdownRequested) {
+        const headers = new Headers(finalResponse.headers);
         const linkHeaders = [
           '</.well-known/api-catalog>; rel="api-catalog"',
           '</all-links>; rel="service-doc"',
@@ -62,14 +124,14 @@ export default {
         ];
         headers.append("Link", linkHeaders.join(", "));
         
-        return new Response(response.body, {
-          status: response.status,
-          statusText: response.statusText,
+        finalResponse = new Response(finalResponse.body, {
+          status: finalResponse.status,
+          statusText: finalResponse.statusText,
           headers
         });
       }
 
-      return await normalizeCatastrophicSsrResponse(response);
+      return await normalizeCatastrophicSsrResponse(finalResponse);
     } catch (error) {
       console.error(error);
       return new Response(renderErrorPage(), {
