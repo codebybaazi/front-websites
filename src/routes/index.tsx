@@ -152,7 +152,9 @@ export const Route = createFileRoute("/")({
       { rel: "preload", as: "image", href: heroBanner, fetchPriority: "high" },
       { rel: "api-catalog", href: "https://cricbet99.co.in/.well-known/api-catalog" },
       { rel: "service-doc", href: "https://cricbet99.co.in/all-links" },
-      { rel: "openid-configuration", href: "https://cricbet99.co.in/.well-known/openid-configuration" }
+      { rel: "openid-configuration", href: "https://cricbet99.co.in/.well-known/openid-configuration" },
+      { rel: "service-desc", href: "https://cricbet99.co.in/.well-known/oauth-protected-resource" }
+
     ],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(faqLd) },
