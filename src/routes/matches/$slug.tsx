@@ -103,7 +103,7 @@ function MatchDetail() {
               <Badge variant="outline" className="text-[#D4AF37] border-[#D4AF37] mb-4">
                 {match.tournament}
               </Badge>
-              <h1 className="text-4xl md:text-6xl font-black mb-4">
+              <h1 className="text-4xl break-words md:text-6xl break-words font-black mb-4">
                 {match.homeTeam} <span className="text-zinc-600">vs</span> {match.awayTeam}
               </h1>
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-zinc-400">
