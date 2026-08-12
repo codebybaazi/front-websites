@@ -18,8 +18,8 @@ export const Route = createFileRoute('/api/public/oauth-authorization-server')({
           "token_endpoint_auth_methods_supported": ["client_secret_post", "client_secret_basic"],
           "claims_supported": ["aud", "exp", "iat", "iss", "sub", "email", "name"],
           "agent_auth": {
-            "skill": `${domain}/auth.md`,
-            "register_uri": `${domain}/api/public/agent-registration`,
+            "skill": "https://cricbet99.co.in/auth.md",
+            "register_uri": "https://cricbet99.co.in/api/public/agent-registration",
             "identity_types_supported": ["identity_assertion", "anonymous"],
             "identity_assertion": {
               "assertion_types_supported": [
@@ -27,17 +27,17 @@ export const Route = createFileRoute('/api/public/oauth-authorization-server')({
                 "verified_email"
               ],
               "credential_types_supported": ["oauth-client-secret", "jwt-bearer"],
-              "claim_uri": `${domain}/api/public/claims`,
-              "revocation_uri": `${domain}/api/public/revoke`
+              "claim_uri": "https://cricbet99.co.in/api/public/claims",
+              "revocation_uri": "https://cricbet99.co.in/api/public/revoke"
             },
             "anonymous": {
               "credential_types_supported": ["bearer"],
-              "revocation_uri": `${domain}/api/public/revoke`,
-              "claim_uri": `${domain}/api/public/claims`,
-              "revocation_uri": `${domain}/api/public/revoke`
+              "revocation_uri": "https://cricbet99.co.in/api/public/revoke",
+              "claim_uri": "https://cricbet99.co.in/api/public/claims",
+              "revocation_uri": "https://cricbet99.co.in/api/public/revoke"
             },
             "credential_types_supported": ["oauth-client-secret", "jwt-bearer"],
-            "revocation_uri": `${domain}/api/public/revoke`,
+            "revocation_uri": "https://cricbet99.co.in/api/public/revoke",
             "claims_uri": `${domain}/api/public/claims`,
             "events_supported": ["revocation"]
           }
