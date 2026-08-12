@@ -171,9 +171,7 @@ export default {
           }
         });
       }
-
-
-
+      const response = await handler.fetch(internalRequest, env, ctx);
       let finalResponse = response;
 
       if (isMarkdownRequested && response.headers.get("content-type")?.includes("text/html")) {
