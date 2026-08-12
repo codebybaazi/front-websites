@@ -110,11 +110,13 @@ import { Route as BettingGuidesHowToPlaceACricketBetRouteImport } from './routes
 import { Route as BettingGuidesHowToBetOnTossMarketRouteImport } from './routes/betting-guides.how-to-bet-on-toss-market'
 import { Route as BettingGuidesHowToBetOnSessionBettingRouteImport } from './routes/betting-guides.how-to-bet-on-session-betting'
 import { Route as BettingGuidesHowBookmakersMakeMoneyRouteImport } from './routes/betting-guides.how-bookmakers-make-money'
+import { Route as ApiPublicRevokeRouteImport } from './routes/api/public/revoke'
 import { Route as ApiPublicOpenidConfigurationRouteImport } from './routes/api/public/openid-configuration'
 import { Route as ApiPublicOauthProtectedResourceRouteImport } from './routes/api/public/oauth-protected-resource'
 import { Route as ApiPublicOauthAuthorizationServerRouteImport } from './routes/api/public/oauth-authorization-server'
 import { Route as ApiPublicMcpServerCardRouteImport } from './routes/api/public/mcp-server-card'
 import { Route as ApiPublicHealthRouteImport } from './routes/api/public/health'
+import { Route as ApiPublicClaimsRouteImport } from './routes/api/public/claims'
 import { Route as ApiPublicAuthMdRouteImport } from './routes/api/public/auth-md'
 import { Route as ApiPublicApiCatalogRouteImport } from './routes/api/public/api-catalog'
 import { Route as ApiPublicAgentSkillsIndexRouteImport } from './routes/api/public/agent-skills-index'
@@ -638,6 +640,11 @@ const BettingGuidesHowBookmakersMakeMoneyRoute =
     path: '/how-bookmakers-make-money',
     getParentRoute: () => BettingGuidesRoute,
   } as any)
+const ApiPublicRevokeRoute = ApiPublicRevokeRouteImport.update({
+  id: '/api/public/revoke',
+  path: '/api/public/revoke',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiPublicOpenidConfigurationRoute =
   ApiPublicOpenidConfigurationRouteImport.update({
     id: '/api/public/openid-configuration',
@@ -664,6 +671,11 @@ const ApiPublicMcpServerCardRoute = ApiPublicMcpServerCardRouteImport.update({
 const ApiPublicHealthRoute = ApiPublicHealthRouteImport.update({
   id: '/api/public/health',
   path: '/api/public/health',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicClaimsRoute = ApiPublicClaimsRouteImport.update({
+  id: '/api/public/claims',
+  path: '/api/public/claims',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiPublicAuthMdRoute = ApiPublicAuthMdRouteImport.update({
@@ -795,11 +807,13 @@ export interface FileRoutesByFullPath {
   '/api/public/agent-skills-index': typeof ApiPublicAgentSkillsIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/auth-md': typeof ApiPublicAuthMdRoute
+  '/api/public/claims': typeof ApiPublicClaimsRoute
   '/api/public/health': typeof ApiPublicHealthRoute
   '/api/public/mcp-server-card': typeof ApiPublicMcpServerCardRoute
   '/api/public/oauth-authorization-server': typeof ApiPublicOauthAuthorizationServerRoute
   '/api/public/oauth-protected-resource': typeof ApiPublicOauthProtectedResourceRoute
   '/api/public/openid-configuration': typeof ApiPublicOpenidConfigurationRoute
+  '/api/public/revoke': typeof ApiPublicRevokeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -907,11 +921,13 @@ export interface FileRoutesByTo {
   '/api/public/agent-skills-index': typeof ApiPublicAgentSkillsIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/auth-md': typeof ApiPublicAuthMdRoute
+  '/api/public/claims': typeof ApiPublicClaimsRoute
   '/api/public/health': typeof ApiPublicHealthRoute
   '/api/public/mcp-server-card': typeof ApiPublicMcpServerCardRoute
   '/api/public/oauth-authorization-server': typeof ApiPublicOauthAuthorizationServerRoute
   '/api/public/oauth-protected-resource': typeof ApiPublicOauthProtectedResourceRoute
   '/api/public/openid-configuration': typeof ApiPublicOpenidConfigurationRoute
+  '/api/public/revoke': typeof ApiPublicRevokeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -1020,11 +1036,13 @@ export interface FileRoutesById {
   '/api/public/agent-skills-index': typeof ApiPublicAgentSkillsIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/auth-md': typeof ApiPublicAuthMdRoute
+  '/api/public/claims': typeof ApiPublicClaimsRoute
   '/api/public/health': typeof ApiPublicHealthRoute
   '/api/public/mcp-server-card': typeof ApiPublicMcpServerCardRoute
   '/api/public/oauth-authorization-server': typeof ApiPublicOauthAuthorizationServerRoute
   '/api/public/oauth-protected-resource': typeof ApiPublicOauthProtectedResourceRoute
   '/api/public/openid-configuration': typeof ApiPublicOpenidConfigurationRoute
+  '/api/public/revoke': typeof ApiPublicRevokeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -1134,11 +1152,13 @@ export interface FileRouteTypes {
     | '/api/public/agent-skills-index'
     | '/api/public/api-catalog'
     | '/api/public/auth-md'
+    | '/api/public/claims'
     | '/api/public/health'
     | '/api/public/mcp-server-card'
     | '/api/public/oauth-authorization-server'
     | '/api/public/oauth-protected-resource'
     | '/api/public/openid-configuration'
+    | '/api/public/revoke'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -1246,11 +1266,13 @@ export interface FileRouteTypes {
     | '/api/public/agent-skills-index'
     | '/api/public/api-catalog'
     | '/api/public/auth-md'
+    | '/api/public/claims'
     | '/api/public/health'
     | '/api/public/mcp-server-card'
     | '/api/public/oauth-authorization-server'
     | '/api/public/oauth-protected-resource'
     | '/api/public/openid-configuration'
+    | '/api/public/revoke'
   id:
     | '__root__'
     | '/'
@@ -1358,11 +1380,13 @@ export interface FileRouteTypes {
     | '/api/public/agent-skills-index'
     | '/api/public/api-catalog'
     | '/api/public/auth-md'
+    | '/api/public/claims'
     | '/api/public/health'
     | '/api/public/mcp-server-card'
     | '/api/public/oauth-authorization-server'
     | '/api/public/oauth-protected-resource'
     | '/api/public/openid-configuration'
+    | '/api/public/revoke'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -1461,11 +1485,13 @@ export interface RootRouteChildren {
   ApiPublicAgentSkillsIndexRoute: typeof ApiPublicAgentSkillsIndexRoute
   ApiPublicApiCatalogRoute: typeof ApiPublicApiCatalogRoute
   ApiPublicAuthMdRoute: typeof ApiPublicAuthMdRoute
+  ApiPublicClaimsRoute: typeof ApiPublicClaimsRoute
   ApiPublicHealthRoute: typeof ApiPublicHealthRoute
   ApiPublicMcpServerCardRoute: typeof ApiPublicMcpServerCardRoute
   ApiPublicOauthAuthorizationServerRoute: typeof ApiPublicOauthAuthorizationServerRoute
   ApiPublicOauthProtectedResourceRoute: typeof ApiPublicOauthProtectedResourceRoute
   ApiPublicOpenidConfigurationRoute: typeof ApiPublicOpenidConfigurationRoute
+  ApiPublicRevokeRoute: typeof ApiPublicRevokeRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -2177,6 +2203,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BettingGuidesHowBookmakersMakeMoneyRouteImport
       parentRoute: typeof BettingGuidesRoute
     }
+    '/api/public/revoke': {
+      id: '/api/public/revoke'
+      path: '/api/public/revoke'
+      fullPath: '/api/public/revoke'
+      preLoaderRoute: typeof ApiPublicRevokeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/openid-configuration': {
       id: '/api/public/openid-configuration'
       path: '/api/public/openid-configuration'
@@ -2210,6 +2243,13 @@ declare module '@tanstack/react-router' {
       path: '/api/public/health'
       fullPath: '/api/public/health'
       preLoaderRoute: typeof ApiPublicHealthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/claims': {
+      id: '/api/public/claims'
+      path: '/api/public/claims'
+      fullPath: '/api/public/claims'
+      preLoaderRoute: typeof ApiPublicClaimsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/auth-md': {
@@ -2386,12 +2426,14 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicAgentSkillsIndexRoute: ApiPublicAgentSkillsIndexRoute,
   ApiPublicApiCatalogRoute: ApiPublicApiCatalogRoute,
   ApiPublicAuthMdRoute: ApiPublicAuthMdRoute,
+  ApiPublicClaimsRoute: ApiPublicClaimsRoute,
   ApiPublicHealthRoute: ApiPublicHealthRoute,
   ApiPublicMcpServerCardRoute: ApiPublicMcpServerCardRoute,
   ApiPublicOauthAuthorizationServerRoute:
     ApiPublicOauthAuthorizationServerRoute,
   ApiPublicOauthProtectedResourceRoute: ApiPublicOauthProtectedResourceRoute,
   ApiPublicOpenidConfigurationRoute: ApiPublicOpenidConfigurationRoute,
+  ApiPublicRevokeRoute: ApiPublicRevokeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
