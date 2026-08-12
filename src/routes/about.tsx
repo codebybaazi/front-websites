@@ -24,6 +24,10 @@ export const Route = createFileRoute("/about")({
       ],
       links: [{ rel: "canonical", href: canonical }],
       scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/about", "About Cricbet99")),
+      },
         {
           type: "application/ld+json",
           children: JSON.stringify(buildBreadcrumbJsonLd("/about", "About Cricbet99")),

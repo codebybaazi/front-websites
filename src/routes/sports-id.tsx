@@ -20,6 +20,10 @@ export const Route = createFileRoute("/sports-id")({
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/sports-id", "Get Your Official Cricbet99 Sports ID")),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/sports-id", "Get Your Official Cricbet99 Sports ID")),
+      },
     ],
   }),
   component: SportsID,

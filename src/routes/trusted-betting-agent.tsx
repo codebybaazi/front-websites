@@ -17,6 +17,10 @@ export const Route = createFileRoute("/trusted-betting-agent")({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/trusted-betting-agent", "Official Trusted Cricbet99 Betting Agent")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/trusted-betting-agent", "Official Trusted Cricbet99 Betting Agent — 24/7 WhatsApp Service")),
       },
       ...(content.faqs && content.faqs.length ? [{

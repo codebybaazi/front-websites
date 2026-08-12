@@ -17,6 +17,10 @@ export const Route = createFileRoute("/betting-guides/how-to-place-a-live-bet")(
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/betting-guides/how-to-place-a-live-bet", "Master Live In-Play Betting on Cricbet99")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/betting-guides/how-to-place-a-live-bet", "Master Live In-Play Betting on Cricbet99 | 2026 Guide")),
       },
       ...(content.faqs && content.faqs.length ? [{

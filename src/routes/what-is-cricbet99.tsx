@@ -19,6 +19,10 @@ export const Route = createFileRoute("/what-is-cricbet99")({
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/what-is-cricbet99", "What is Cricbet99? Official Guide & Platform Overview 2026")),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/what-is-cricbet99", "What is Cricbet99? Official Guide & Platform Overview 2026")),
+      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),

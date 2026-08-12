@@ -19,6 +19,10 @@ export const Route = createFileRoute("/kyc-policy")({
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/kyc-policy", "Cricbet99 KYC Verification Policy")),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/kyc-policy", "Cricbet99 KYC Verification Policy")),
+      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),

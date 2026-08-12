@@ -17,6 +17,10 @@ export const Route = createFileRoute("/referral-code")({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/referral-code", "Cricbet99 Referral Program")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/referral-code", "Cricbet99 Referral Program | Invite Friends & Earn")),
       },
       ...(content.faqs && content.faqs.length ? [{

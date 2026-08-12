@@ -17,6 +17,10 @@ export const Route = createFileRoute("/case-studies")({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/case-studies", "Cricbet99 Case Studies")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/case-studies", "Cricbet99 Case Studies | Real Member Success Stories")),
       },
       ...(content.faqs && content.faqs.length ? [{

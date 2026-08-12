@@ -17,6 +17,10 @@ export const Route = createFileRoute("/refund-policy")({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/refund-policy", "Refund & Cancellation Policy")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/refund-policy", "Refund & Cancellation Policy — Official Cricbet99 Banking")),
       },
       ...(content.faqs && content.faqs.length ? [{

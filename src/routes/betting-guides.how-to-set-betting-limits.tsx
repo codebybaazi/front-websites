@@ -19,6 +19,10 @@ export const Route = createFileRoute("/betting-guides/how-to-set-betting-limits"
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/betting-guides/how-to-set-betting-limits", "How to Set Betting Limits")),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/betting-guides/how-to-set-betting-limits", "How to Set Betting Limits")),
+      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),

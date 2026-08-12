@@ -18,6 +18,10 @@ export const Route = createFileRoute("/is-cricbet99-legal")({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/is-cricbet99-legal", "Is Cricbet99 Legal in India?")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/is-cricbet99-legal", "Is Cricbet99 Legal in India? — Law, Regulations & Facts")),
       },
       ...(content.faqs && content.faqs.length ? [{

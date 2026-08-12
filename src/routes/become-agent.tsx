@@ -17,6 +17,10 @@ export const Route = createFileRoute("/become-agent")({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/become-agent", "Become a Cricbet99 Agent")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/become-agent", "Become a Cricbet99 Agent | Earn High Commissions")),
       },
       ...(content.faqs && content.faqs.length ? [{

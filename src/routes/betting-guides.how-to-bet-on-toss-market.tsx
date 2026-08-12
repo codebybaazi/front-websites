@@ -17,6 +17,10 @@ export const Route = createFileRoute("/betting-guides/how-to-bet-on-toss-market"
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/betting-guides/how-to-bet-on-toss-market", "Cricket Toss Market Betting Strategy")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/betting-guides/how-to-bet-on-toss-market", "Cricket Toss Market Betting Strategy Official")),
       },
       ...(content.faqs && content.faqs.length ? [{

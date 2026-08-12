@@ -17,6 +17,10 @@ export const Route = createFileRoute("/betting-guides")({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/betting-guides", "Cricbet99 Betting Guides")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/betting-guides", "Cricbet99 Betting Guides | Official 2026 Strategy Center")),
       },
       ...(content.faqs && content.faqs.length ? [{

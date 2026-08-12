@@ -25,6 +25,10 @@ export const Route = createFileRoute("/casino")({
       ],
       links: [{ rel: "canonical", href: canonical }],
       scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/casino", "Cricbet99 Live Casino")),
+      },
         {
           type: "application/ld+json",
           children: JSON.stringify(buildBreadcrumbJsonLd("/casino", "Live Casino")),

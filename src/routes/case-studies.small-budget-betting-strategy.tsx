@@ -17,6 +17,10 @@ export const Route = createFileRoute("/case-studies/small-budget-betting-strateg
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/case-studies/small-budget-betting-strategy", "Small Budget Betting Strategy")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/case-studies/small-budget-betting-strategy", "Small Budget Betting Strategy | Grow Your Balance from ₹500")),
       },
       ...(content.faqs && content.faqs.length ? [{

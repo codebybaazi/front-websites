@@ -19,6 +19,10 @@ export const Route = createFileRoute("/basketball")({
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/basketball", "Basketball Betting on Cricbet99")),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/basketball", "Basketball Betting on Cricbet99")),
+      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),

@@ -19,6 +19,10 @@ export const Route = createFileRoute("/betting-guides/how-bookmakers-make-money"
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/betting-guides/how-bookmakers-make-money", "How Bookmakers Make Money")),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/betting-guides/how-bookmakers-make-money", "How Bookmakers Make Money")),
+      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),
