@@ -35,7 +35,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-primary/20 bg-background/70 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-6">
         <Link to="/" className="flex items-center gap-3 shrink-0">
-          <img src={logo} alt="Cricbet99 Official Logo - India's Most Trusted Online Cricket ID Platform" className="h-11 w-auto drop-shadow-[0_4px_14px_rgba(0,0,0,0.4)]" />
+          <img src={logo} alt="Cricbet99 Official Logo - India's Most Trusted Online Cricket ID Platform" width={176} height={48} className="h-11 w-auto drop-shadow-[0_4px_14px_rgba(0,0,0,0.4)]" />
         </Link>
         <nav className="hidden flex-wrap items-center gap-6 xl:flex">
           {navLinks.map((l) => (
@@ -68,7 +68,7 @@ export function SiteFooter() {
     <footer className="border-t border-primary/20 bg-background/60 backdrop-blur-xl">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:grid-cols-2 sm:gap-10 sm:px-6 sm:py-12 md:grid-cols-4 md:py-16">
         <div>
-          <img src={logo} alt="Cricbet99 Official Logo - Secure Login and Registration" className="h-12 w-auto" />
+          <img src={logo} alt="Cricbet99 Official Logo - Secure Login and Registration" width={176} height={48} className="h-12 w-auto" loading="lazy" />
           <p className="mt-4 text-sm text-foreground/70">
             India's premium cricket ID platform. Live in-play odds, instant UPI
             payouts and 24/7 human support — all from one verified account.
@@ -177,8 +177,9 @@ export function SiteBackdrop() {
         className="fixed inset-0 -z-10 opacity-[0.05] mix-blend-overlay"
         style={{
           backgroundImage:
-            "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>\")",
+            "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='1' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>\")",
         }}
+        loading="lazy"
       />
     </>
   );
