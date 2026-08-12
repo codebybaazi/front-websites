@@ -81,6 +81,8 @@ export default {
       
       let finalResponse = response;
 
+      // Handle Markdown request
+      if (isMarkdownRequested && response.headers.get("content-type")?.includes("text/html")) {
         try {
           const html = await response.text();
           const service = await getTurndownService();
@@ -98,7 +100,7 @@ export default {
           });
         } catch (error) {
           console.error("Markdown conversion failed:", error);
-          // Fallback to original response or handled 500
+          // Fallback occurs as finalResponse remains the original response
         }
       }
 
