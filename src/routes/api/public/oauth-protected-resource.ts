@@ -6,7 +6,6 @@ export const Route = createFileRoute('/api/public/oauth-protected-resource')({
       GET: async ({ request }) => {
         // OAuth Protected Resource Metadata (RFC 9470 / Draft)
         // Helps agents discover how to authenticate to this site's APIs
-        const url = new URL(request.url)
         const baseUrl = 'https://cricbet99.co.in'
         
         const metadata = {
@@ -23,7 +22,11 @@ export const Route = createFileRoute('/api/public/oauth-protected-resource')({
           ],
           "bearer_methods_supported": ["header"],
           "resource_documentation": `${baseUrl}/auth.md`,
-          "ui_locales_supported": ["en-IN", "hi-IN"]
+          "ui_locales_supported": ["en-IN", "hi-IN"],
+          "agent_auth": {
+            "register_uri": `${baseUrl}/api/public/agent-registration`,
+            "identity_types_supported": ["identity_assertion", "anonymous"]
+          }
         }
 
         return new Response(JSON.stringify(metadata, null, 2), {
