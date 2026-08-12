@@ -149,7 +149,9 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://cricbet99.co.in/" },
-      { rel: "preload", as: "image", href: heroBanner, fetchPriority: "high" }
+      { rel: "preload", as: "image", href: heroBanner, fetchPriority: "high" },
+      { rel: "api-catalog", href: "https://cricbet99.co.in/.well-known/api-catalog" },
+      { rel: "service-doc", href: "https://cricbet99.co.in/all-links" }
     ],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(faqLd) },
