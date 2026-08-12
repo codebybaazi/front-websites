@@ -4,25 +4,35 @@
       "anchor": "https://cricbet99.co.in/api/public/sitemap",
       "service-doc": [
         {
-          "href": "https://cricbet99.co.in/all-links"
+          "href": "https://cricbet99.co.in/all-links",
+          "type": "text/html"
         }
       ],
       "status": [
         {
-          "href": "https://cricbet99.co.in/api/public/health"
+          "href": "https://cricbet99.co.in/api/public/health",
+          "type": "application/json"
         }
       ]
     },
     {
       "anchor": "https://cricbet99.co.in/",
+      "service-desc": [
+        {
+          "href": "https://cricbet99.co.in/.well-known/api-catalog",
+          "type": "application/linkset+json"
+        }
+      ],
       "service-doc": [
         {
-          "href": "https://cricbet99.co.in/guides"
+          "href": "https://cricbet99.co.in/guides",
+          "type": "text/html"
         }
       ],
       "describedby": [
         {
-          "href": "https://cricbet99.co.in/about"
+          "href": "https://cricbet99.co.in/about",
+          "type": "text/html"
         }
       ]
     }
