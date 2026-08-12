@@ -339,7 +339,7 @@ function FaqSection() {
           <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
             <HelpCircle className="h-3.5 w-3.5" /> Support · 24/7 on WhatsApp
           </div>
-          <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl uppercase tracking-tighter">
+          <h2 className="mt-5 text-4xl break-words font-black tracking-tight md:text-5xl break-words uppercase tracking-tighter">
             Everything about
             <span className="ml-2 bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>
               your Cricbet99 ID.
@@ -510,7 +510,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               </span>
               India's #1 Cricket ID · Live Since 2020
             </span>
-            <h1 className="mt-6 text-3xl font-black leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-6xl">
+            <h1 className="mt-6 text-3xl break-words font-black leading-[1.05] tracking-tight sm:text-5xl break-words md:text-6xl break-words lg:text-6xl break-words">
               <span className="block">Cricbet99 —</span>
               <span
                 className="gradient-pan block bg-clip-text text-transparent"
@@ -716,7 +716,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
             >
               <Trophy className="h-3.5 w-3.5" /> Why Indian Players Trust Cricbet99
             </div>
-            <h2 className="mt-6 text-4xl font-black leading-[1.05] tracking-tight md:text-6xl uppercase tracking-tighter">
+            <h2 className="mt-6 text-4xl break-words font-black leading-[1.05] tracking-tight md:text-6xl break-words uppercase tracking-tighter">
               A premium, secure & rewarding
               <br className="hidden sm:block" />
               <span
@@ -836,7 +836,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               <Sparkles className="h-3.5 w-3.5" /> Just Launched
             </span>
 
-            <h2 className="mt-6 text-4xl font-black leading-[1.05] tracking-tight md:text-6xl uppercase tracking-tighter">
+            <h2 className="mt-6 text-4xl break-words font-black leading-[1.05] tracking-tight md:text-6xl break-words uppercase tracking-tighter">
               <span
                 className="bg-clip-text text-transparent"
                 style={{ backgroundImage: "var(--gradient-gold)" }}
@@ -1018,7 +1018,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
             <span className="inline-flex items-center gap-2 rounded-full border border-accent/50 bg-accent/10 px-3.5 py-1 text-[10px] font-black uppercase tracking-[0.28em] text-accent">
               <Gamepad2 className="h-3 w-3" /> Player Favourites
             </span>
-            <h2 className="mt-4 text-3xl font-black leading-[1.1] tracking-tight md:text-5xl uppercase tracking-tighter">
+            <h2 className="mt-4 text-3xl break-words font-black leading-[1.1] tracking-tight md:text-5xl break-words uppercase tracking-tighter">
               <span className="text-foreground/90">Popular </span>
               <span
                 className="bg-clip-text text-transparent"
@@ -1136,7 +1136,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                       </div>
                       <h3
                         className={`mt-0.5 font-black leading-tight text-white drop-shadow-md ${
-                          featured ? "text-2xl md:text-3xl" : "text-base sm:text-lg"
+                          featured ? "text-2xl md:text-3xl break-words" : "text-base sm:text-lg"
                         }`}
                       >
                         {g.name}
@@ -1215,7 +1215,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
               30+ Sports · 100+ Live Markets
             </div>
-            <h2 className="mt-6 text-4xl font-black tracking-tight md:text-6xl uppercase tracking-tighter">
+            <h2 className="mt-6 text-4xl break-words font-black tracking-tight md:text-6xl break-words uppercase tracking-tighter">
               Comprehensive
               <br className="hidden sm:block" />
               <span
@@ -1297,7 +1297,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
               How To Start
             </div>
-            <h2 className="mt-6 text-4xl font-black tracking-tight md:text-6xl uppercase tracking-tighter">
+            <h2 className="mt-6 text-4xl break-words font-black tracking-tight md:text-6xl break-words uppercase tracking-tighter">
               Your Cricbet99 ID in{" "}
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>six easy steps.</span>
             </h2>
@@ -1336,7 +1336,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                       </div>
                       <div className="text-right">
                         <div className="text-[11px] font-bold uppercase tracking-[0.25em] text-foreground/40">Step</div>
-                        <div className="-mt-1 text-5xl font-black leading-none tracking-tighter" style={{ background: "var(--gradient-gold)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+                        <div className="-mt-1 text-5xl break-words font-black leading-none tracking-tighter" style={{ background: "var(--gradient-gold)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
                           {String(i + 1).padStart(2, "0")}
                         </div>
                       </div>
@@ -1392,7 +1392,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
               Live Casino · HD Streaming
             </div>
-            <h2 className="mt-6 text-4xl font-black tracking-tight md:text-6xl uppercase tracking-tighter">
+            <h2 className="mt-6 text-4xl break-words font-black tracking-tight md:text-6xl break-words uppercase tracking-tighter">
               India's most-loved{" "}
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>casino tables</span>
               <br />
@@ -1433,7 +1433,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                     Top {i + 1}
                   </div>
 
-                  <div className="text-6xl font-black leading-none tracking-tighter" style={{ background: "var(--gradient-gold)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", filter: "drop-shadow(0 4px 12px color-mix(in oklab, var(--accent) 30%, transparent))" }}>
+                  <div className="text-6xl break-words font-black leading-none tracking-tighter" style={{ background: "var(--gradient-gold)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", filter: "drop-shadow(0 4px 12px color-mix(in oklab, var(--accent) 30%, transparent))" }}>
                     {g.rank}
                   </div>
 
@@ -1478,7 +1478,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary">
                 <Flame className="h-3.5 w-3.5" /> Cricbet99 Journal
               </div>
-              <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl uppercase tracking-tighter">
+              <h2 className="mt-5 text-4xl break-words font-black tracking-tight md:text-5xl break-words uppercase tracking-tighter">
                 Recent
                 <span className="ml-2 bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>posts & analysis.</span>
               </h2>
@@ -1569,7 +1569,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
             <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
               <ClipboardCheck className="h-3.5 w-3.5" /> Verified Winners · Real Payouts
             </div>
-            <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl uppercase tracking-tighter">
+            <h2 className="mt-5 text-4xl break-words font-black tracking-tight md:text-5xl break-words uppercase tracking-tighter">
               Trusted by punters who
               <span className="ml-2 bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>actually win.</span>
             </h2>

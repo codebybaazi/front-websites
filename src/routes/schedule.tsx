@@ -127,7 +127,7 @@ function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
           {/* Main Schedule Column */}
           <div className="space-y-12">
             <div className="prose prose-invert max-w-none mb-12">
-              <h1 className="text-4xl md:text-5xl font-black mb-6">
+              <h1 className="text-4xl break-words md:text-5xl break-words font-black mb-6">
                 2026 Cricket Schedule, <span className="text-primary">IPL Fixtures</span> & Sports Calendar
               </h1>
               <p className="text-lg text-foreground/70 leading-relaxed">
@@ -142,7 +142,7 @@ function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
                   <Trophy className="w-5 h-5 text-primary" />
                 </div>
-                <h2 className="text-3xl font-bold tracking-tight">
+                <h2 className="text-3xl break-words font-bold tracking-tight">
                   {`${activeTab} Fixtures & Betting Schedule 2026`}
                 </h2>
               </div>
@@ -536,7 +536,7 @@ function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 bg-primary/5 rounded-3xl mb-16 border border-primary/10">
-        <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions — 2026 Sports Schedule</h2>
+        <h2 className="text-3xl break-words font-bold mb-8 text-center">Frequently Asked Questions — 2026 Sports Schedule</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-primary">Where can I find the IPL 2026 full schedule?</h3>

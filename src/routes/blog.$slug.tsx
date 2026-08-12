@@ -85,7 +85,7 @@ export const Route = createFileRoute("/blog/$slug")({
   notFoundComponent: () => (
     <SiteLayout>
       <div className="mx-auto max-w-3xl px-6 py-24 text-center">
-        <h1 className="text-3xl font-bold">Post not found</h1>
+        <h1 className="text-3xl break-words font-bold">Post not found</h1>
         <p className="mt-4 text-foreground/70">The blog post you're looking for isn't here. Head back to the blog to browse the latest.</p>
         <Link to="/blog" className="mt-6 inline-block rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground">Back to blog</Link>
       </div>
@@ -94,7 +94,7 @@ export const Route = createFileRoute("/blog/$slug")({
   errorComponent: ({ reset }) => (
     <SiteLayout>
       <div className="mx-auto max-w-3xl px-6 py-24 text-center">
-        <h1 className="text-3xl font-bold">Something went wrong</h1>
+        <h1 className="text-3xl break-words font-bold">Something went wrong</h1>
         <button onClick={reset} className="mt-6 inline-block rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground">Try again</button>
       </div>
     </SiteLayout>
@@ -126,7 +126,7 @@ function PostPage() {
             </div>
           )}
         </div>
-        <h1 className="mt-4 text-4xl font-black leading-tight md:text-5xl">{post.title}</h1>
+        <h1 className="mt-4 text-4xl break-words font-black leading-tight md:text-5xl break-words">{post.title}</h1>
         <p className="mt-4 text-lg text-foreground/70">{post.excerpt}</p>
         <img src={post.hero ?? defaultHero} alt={post.title} className="mt-8 aspect-[16/9] w-full rounded-2xl object-cover shadow-[var(--shadow-gold)]" />
 
@@ -141,7 +141,7 @@ function PostPage() {
 
         {post.faqs && post.faqs.length > 0 && (
           <div className="mt-16 rounded-3xl border border-primary/20 bg-background/40 p-8 backdrop-blur-sm">
-            <h2 className="mb-8 text-3xl font-black italic tracking-tighter text-primary uppercase">
+            <h2 className="mb-8 text-3xl break-words font-black italic tracking-tighter text-primary uppercase">
               Insights & <span className="text-white text-stroke-primary">FAQ</span>
             </h2>
             <Accordion type="single" collapsible className="w-full space-y-4">

@@ -43,7 +43,7 @@ function MatchesDashboard() {
             <Badge variant="outline" className="text-[#D4AF37] border-[#D4AF37] mb-2">
               <Play className="w-3 h-3 mr-1 fill-current animate-pulse" /> Live & Upcoming
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
+            <h1 className="text-4xl break-words md:text-5xl break-words font-bold text-white mb-2">
               Sports Betting <span className="text-[#D4AF37]">Intelligence</span>
             </h1>
             <p className="text-zinc-400 max-w-2xl text-lg">
