@@ -41,9 +41,9 @@ export const Route = createFileRoute('/api/public/oauth-protected-resource')({
               "revocation_uri": "https://cricbet99.co.in/api/public/revoke",
               "claim_uri": "https://cricbet99.co.in/api/public/claims"
             },
-            "credential_types_supported": ["oauth-client-secret", "jwt-bearer"],
+            "credential_types_supported": ["oauth-client-secret", "jwt-bearer", "bearer"],
+            "claim_uri": "https://cricbet99.co.in/api/public/claims",
             "revocation_uri": "https://cricbet99.co.in/api/public/revoke",
-            "claims_uri": `${baseUrl}/api/public/claims`,
             "events_supported": ["revocation"]
           }
         }
