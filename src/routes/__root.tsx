@@ -111,8 +111,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Organization",
           name: "Cricbet99",
           url: "https://cricbet99.co.in/",
+          logo: "https://cricbet99.co.in/favicon.png",
           description:
             "India's trusted online cricket ID platform since 2020 — cricket, football, tennis and live casino with instant UPI payouts and 24/7 WhatsApp support.",
+          sameAs: [
+            "https://cricbet99.co.in/whatsapp-support",
+            "https://cricbet99.co.in/telegram-channel"
+          ]
         }),
       },
       {
@@ -122,6 +127,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "WebSite",
           name: "Cricbet99",
           url: "https://cricbet99.co.in/",
+          potentialAction: {
+            "@type": "SearchAction",
+            "target": "https://cricbet99.co.in/blog?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
         }),
       },
     ],
