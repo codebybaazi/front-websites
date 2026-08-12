@@ -63,11 +63,11 @@ function MatchesDashboard() {
                   </Badge>
                   <div className="flex items-center text-xs text-zinc-500">
                     <Calendar className="w-3 h-3 mr-1" />
-                    {match.date}
+                    {match.startDate}
                   </div>
                 </div>
                 <CardTitle className="text-xl text-white group-hover:text-[#D4AF37] transition-colors line-clamp-2">
-                  {match.match}
+                  {match.homeTeam} vs {match.awayTeam}
                 </CardTitle>
                 <div className="text-sm text-zinc-500 font-medium">
                   {match.tournament}
