@@ -103,7 +103,7 @@ function SEOAuditReport() {
                 <div className="bg-black/40 p-4 rounded-lg border border-red-500/30 font-mono text-xs break-all w-full text-zinc-400">
                   https://pagespeed.web.dev/analysis/https-cricbet99-co-in/mh2n26n490?hl=en&form_factor=mobile
                 </div>
-                <p className="text-zinc-400 text-sm italic">
+                <p className="text-zinc-400 text-sm italic text-left w-full">
                   so check this link and analyse issue mentioned on this report so find the issue and solve in running entire project to make mobile core web vital also score 100 like desktop...fix this completely in entire project
                 </p>
                 <a 
