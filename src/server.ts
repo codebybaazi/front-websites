@@ -108,7 +108,24 @@ export default {
         });
       }
 
+      if (url.pathname === "/auth.md") {
+        const authMdReq = new Request(new URL("/api/public/auth-md", request.url).toString(), {
+          method: "GET",
+          headers: request.headers
+        });
+        const res = await handler.fetch(authMdReq, env, ctx);
+        const text = await res.text();
+        return new Response(text, {
+          status: res.status,
+          headers: {
+            "Content-Type": "text/markdown; charset=utf-8",
+            "Cache-Control": "public, max-age=3600"
+          }
+        });
+      }
+
       if (url.pathname === "/.well-known/oauth-protected-resource") {
+
         const resourceReq = new Request(new URL("/api/public/oauth-protected-resource", request.url).toString(), {
           method: "GET",
           headers: request.headers
