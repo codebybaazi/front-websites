@@ -1,17 +1,21 @@
 import "./lib/error-capture";
-// @ts-ignore
-import TurndownService from "turndown/lib/turndown.cjs.js";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
 
 let turndownService: any;
-try {
-  turndownService = (typeof TurndownService === 'function') 
-    ? new (TurndownService as any)() 
-    : new ((TurndownService as any).default)();
-} catch (e) {
-  console.error("Failed to initialize TurndownService:", e);
+
+async function getTurndownService() {
+  if (!turndownService) {
+    try {
+      // @ts-ignore
+      const TurndownService = (await import("turndown/lib/turndown.cjs.js")).default || await import("turndown/lib/turndown.cjs.js");
+      turndownService = new TurndownService();
+    } catch (e) {
+      console.error("Failed to initialize TurndownService:", e);
+    }
+  }
+  return turndownService;
 }
 
 type ServerEntry = {
