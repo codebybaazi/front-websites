@@ -92,12 +92,28 @@ export default {
         });
       }
       
-      if (url.pathname === "/.well-known/openid-configuration" || url.pathname === "/.well-known/oauth-authorization-server") {
+      if (url.pathname === "/.well-known/openid-configuration") {
         const oidcReq = new Request(new URL("/api/public/openid-configuration", request.url).toString(), {
           method: "GET",
           headers: request.headers
         });
         const res = await handler.fetch(oidcReq, env, ctx);
+        const text = await res.text();
+        return new Response(text, {
+          status: res.status,
+          headers: {
+            "Content-Type": "application/json",
+            "Cache-Control": "public, max-age=3600"
+          }
+        });
+      }
+
+      if (url.pathname === "/.well-known/oauth-authorization-server") {
+        const oauthReq = new Request(new URL("/api/public/oauth-authorization-server", request.url).toString(), {
+          method: "GET",
+          headers: request.headers
+        });
+        const res = await handler.fetch(oauthReq, env, ctx);
         const text = await res.text();
         return new Response(text, {
           status: res.status,
