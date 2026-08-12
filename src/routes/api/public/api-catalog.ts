@@ -9,7 +9,6 @@ export const Route = createFileRoute('/api/public/api-catalog')({
         const content = {
           "linkset": [
             {
-            {
               "anchor": "https://cricbet99.co.in/",
               "rel": "api-catalog",
               "service-desc": [
@@ -60,7 +59,6 @@ export const Route = createFileRoute('/api/public/api-catalog')({
                   "type": "text/html"
                 }
               ]
-            }
             }
           ]
         };
