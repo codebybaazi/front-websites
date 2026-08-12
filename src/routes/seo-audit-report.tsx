@@ -91,29 +91,6 @@ function SEOAuditReport() {
               ))}
             </div>
 
-            <Card className="bg-red-500/5 border-red-500/20 p-8 text-center max-w-4xl mx-auto">
-              <div className="flex flex-col items-center gap-4">
-                <AlertTriangle className="w-12 h-12 text-red-500" />
-                <h3 className="text-2xl font-bold text-red-500">Urgent Mobile Performance Fix Required</h3>
-                <p className="text-lg text-zinc-300 leading-relaxed mb-4">
-                  Fix mobile Core Web Vitals and see and analyse this report
-                </p>
-                <div className="bg-black/40 p-4 rounded-lg border border-red-500/30 font-mono text-sm break-all w-full mb-4 text-zinc-300">
-                  https://pagespeed.web.dev/analysis/https-cricbet99-co-in/mh2n26n490?hl=en&form_factor=mobile
-                </div>
-                <p className="text-zinc-400 max-w-2xl mx-auto">
-                  still have the core web vital issue on mobile so recheck the entire project and fix this completely so it will not come again
-                </p>
-                <a 
-                  href="https://pagespeed.web.dev/analysis/https-cricbet99-co-in/mh2n26n490?hl=en&form_factor=mobile" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="mt-4 px-8 py-3 bg-red-600 hover:bg-red-700 text-white rounded-full font-bold transition-all"
-                >
-                  View Full Report
-                </a>
-              </div>
-            </Card>
           </div>
 
           <div className="space-y-12">
