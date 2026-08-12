@@ -34,7 +34,6 @@ export const Route = createFileRoute('/api/public/openid-configuration')({
               "credential_types_supported": ["bearer"],
               "revocation_uri": "https://cricbet99.co.in/api/public/revoke",
               "claim_uri": "https://cricbet99.co.in/api/public/claims",
-              "revocation_uri": "https://cricbet99.co.in/api/public/revoke"
             },
             "credential_types_supported": ["oauth-client-secret", "jwt-bearer"],
             "revocation_uri": "https://cricbet99.co.in/api/public/revoke",
