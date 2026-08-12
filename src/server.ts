@@ -9,7 +9,8 @@ async function getTurndownService() {
   if (!turndownService) {
     try {
       // @ts-ignore
-      const TurndownService = (await import("turndown/lib/turndown.cjs.js")).default || await import("turndown/lib/turndown.cjs.js");
+      const module = await import("turndown/lib/turndown.cjs.js");
+      const TurndownService = module.default || module;
       turndownService = new TurndownService();
     } catch (e) {
       console.error("Failed to initialize TurndownService:", e);
