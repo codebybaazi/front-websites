@@ -127,6 +127,7 @@ export function LiveDashboard() {
   useEffect(() => {
     let cancel = false;
     async function tick() {
+      if (document.hidden) return; // Skip fetch if tab is hidden
       try {
         const res = await fetch(
           "https://b2b.max247.co/api/public/exchange/odds/inPlayAndPopularEvents",
@@ -146,10 +147,14 @@ export function LiveDashboard() {
         if (!cancel) setLoading(false);
       }
     }
-    tick();
+    
+    // Initial fetch after a short delay to prioritize LCP
+    const initialTimer = setTimeout(tick, 100);
     const t = setInterval(tick, 30000);
+    
     return () => {
       cancel = true;
+      clearTimeout(initialTimer);
       clearInterval(t);
     };
   }, []);
@@ -193,7 +198,7 @@ export function LiveDashboard() {
   const upcomingCount = events.length - liveCount;
 
   return (
-    <section className="relative overflow-hidden py-24 md:py-28 min-h-[600px] content-visibility-auto">
+    <section className="relative overflow-hidden py-24 md:py-28 min-h-[600px] content-visibility-auto contain-intrinsic-size-[0_600px]">
       {/* Base gradient wash */}
       <div
         className="pointer-events-none absolute inset-0"
@@ -309,7 +314,7 @@ export function LiveDashboard() {
 
         {/* Filter bar */}
         <div
-          className="mt-10 overflow-hidden rounded-2xl border border-primary/25 p-4 shadow-xl shadow-primary/5 backdrop-blur-md"
+          className="mt-10 overflow-hidden rounded-2xl border border-primary/25 p-4 shadow-xl shadow-primary/5 backdrop-blur-md contain-layout"
           style={{
             background:
               "linear-gradient(135deg, oklch(0.15 0.03 155 / 0.7), oklch(0.1 0.02 155 / 0.55))",

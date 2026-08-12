@@ -151,13 +151,12 @@ export const Route = createFileRoute("/")({
       { rel: "canonical", href: "https://cricbet99.co.in/" },
       { rel: "preload", as: "image", href: heroBanner, fetchPriority: "high" },
       { rel: "preload", as: "image", href: logo, fetchPriority: "high" },
+      { rel: "preconnect", href: "https://wa.me" },
       { rel: "api-catalog", href: "https://cricbet99.co.in/.well-known/api-catalog" },
       { rel: "service-doc", href: "https://cricbet99.co.in/all-links" },
       { rel: "openid-configuration", href: "https://cricbet99.co.in/.well-known/openid-configuration" },
       { rel: "service-desc", href: "https://cricbet99.co.in/.well-known/oauth-protected-resource" },
       { rel: "agent-skills", href: "https://cricbet99.co.in/.well-known/agent-skills/index.json" }
-
-
     ],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(faqLd) },
@@ -327,7 +326,7 @@ function FaqSection() {
   const [open, setOpen] = useState<number | null>(0);
   const IconMap = { ShieldCheck, Zap, Wallet, Trophy, Gift, Smartphone } as const;
   return (
-    <section className="relative overflow-hidden py-28">
+    <section className="relative overflow-hidden py-28 content-visibility-auto contain-intrinsic-size-[0_800px]">
       <div
         className="pointer-events-none absolute inset-0"
         style={{
@@ -337,7 +336,7 @@ function FaqSection() {
       />
       <div className="relative mx-auto max-w-3xl px-6">
         <div className="text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent content-visibility-auto">
+          <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
             <HelpCircle className="h-3.5 w-3.5" /> Support · 24/7 on WhatsApp
           </div>
           <h2 className="mt-5 text-4xl break-words font-black tracking-tight md:text-5xl break-words uppercase tracking-tighter">
