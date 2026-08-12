@@ -78,16 +78,16 @@ function MatchesDashboard() {
                 <div className="flex items-center gap-4 mb-6 p-3 bg-black/40 rounded-xl border border-zinc-800/50">
                   <div className="flex-1 text-center">
                     <div className="w-12 h-12 bg-zinc-800 rounded-full mx-auto mb-2 flex items-center justify-center text-[#D4AF37] font-bold border border-zinc-700">
-                      {match.teams[0].charAt(0)}
+                      {match.homeTeam.charAt(0)}
                     </div>
-                    <div className="text-xs text-zinc-300 font-medium truncate">{match.teams[0]}</div>
+                    <div className="text-xs text-zinc-300 font-medium truncate">{match.homeTeam}</div>
                   </div>
                   <div className="text-[#D4AF37] font-bold text-lg italic">VS</div>
                   <div className="flex-1 text-center">
                     <div className="w-12 h-12 bg-zinc-800 rounded-full mx-auto mb-2 flex items-center justify-center text-[#D4AF37] font-bold border border-zinc-700">
-                      {match.teams[1].charAt(0)}
+                      {match.awayTeam.charAt(0)}
                     </div>
-                    <div className="text-xs text-zinc-300 font-medium truncate">{match.teams[1]}</div>
+                    <div className="text-xs text-zinc-300 font-medium truncate">{match.awayTeam}</div>
                   </div>
                 </div>
 
@@ -95,7 +95,7 @@ function MatchesDashboard() {
                   <div className="flex items-start gap-2">
                     <TrendingUp className="w-4 h-4 text-[#D4AF37] mt-0.5 shrink-0" />
                     <p className="text-sm text-zinc-400 italic line-clamp-2">
-                      "{match.preview.substring(0, 100)}..."
+                      "{match.predictionInsight || "Expert tactical preview available..."}"
                     </p>
                   </div>
                 </div>
