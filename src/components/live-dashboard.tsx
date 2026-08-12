@@ -309,7 +309,7 @@ export function LiveDashboard() {
 
         {/* Filter bar */}
         <div
-          className="mt-10 overflow-hidden rounded-2xl border border-primary/25 p-4 shadow-xl shadow-primary/5 backdrop-blur-md"
+          className="mt-10 overflow-hidden rounded-2xl border border-primary/25 p-4 shadow-xl shadow-primary/5 backdrop-blur-md contain-layout"
           style={{
             background:
               "linear-gradient(135deg, oklch(0.15 0.03 155 / 0.7), oklch(0.1 0.02 155 / 0.55))",

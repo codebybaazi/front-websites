@@ -151,13 +151,12 @@ export const Route = createFileRoute("/")({
       { rel: "canonical", href: "https://cricbet99.co.in/" },
       { rel: "preload", as: "image", href: heroBanner, fetchPriority: "high" },
       { rel: "preload", as: "image", href: logo, fetchPriority: "high" },
+      { rel: "preconnect", href: "https://wa.me" },
       { rel: "api-catalog", href: "https://cricbet99.co.in/.well-known/api-catalog" },
       { rel: "service-doc", href: "https://cricbet99.co.in/all-links" },
       { rel: "openid-configuration", href: "https://cricbet99.co.in/.well-known/openid-configuration" },
       { rel: "service-desc", href: "https://cricbet99.co.in/.well-known/oauth-protected-resource" },
       { rel: "agent-skills", href: "https://cricbet99.co.in/.well-known/agent-skills/index.json" }
-
-
     ],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(faqLd) },

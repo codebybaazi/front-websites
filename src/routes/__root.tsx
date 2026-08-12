@@ -95,6 +95,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "preconnect", href: "https://wa.me" },
+      { rel: "preconnect", href: "https://b2b.max247.co" },
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/png", href: "https://cricbet99.co.in/favicon.png" },
       { rel: "apple-touch-icon", sizes: "180x180", href: "https://cricbet99.co.in/apple-touch-icon.png" },
@@ -105,13 +107,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "dns-aid", href: "https://cricbet99.co.in/.well-known/dns-aid.json" },
       { rel: "openid-configuration", href: "https://cricbet99.co.in/.well-known/openid-configuration" },
       { rel: "oauth-authorization-server", href: "https://cricbet99.co.in/.well-known/oauth-authorization-server" },
-      { rel: "oauth-authorization-server", href: "https://cricbet99.co.in/.well-known/oauth-authorization-server" },
       { rel: "service-desc", href: "https://cricbet99.co.in/.well-known/oauth-protected-resource" },
       { rel: "describedby", href: "https://cricbet99.co.in/about" },
       { rel: "mcp-server-card", href: "https://cricbet99.co.in/.well-known/mcp/server-card.json" },
       { rel: "agent-skills", href: "https://cricbet99.co.in/.well-known/agent-skills/index.json" }
-
-
     ],
 
     scripts: [
