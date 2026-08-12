@@ -156,7 +156,23 @@ export default {
         });
       }
 
-      const response = await handler.fetch(internalRequest, env, ctx);
+      if (url.pathname === "/.well-known/agent-skills/index.json") {
+        const skillsReq = new Request(new URL("/api/public/agent-skills-index", request.url).toString(), {
+          method: "GET",
+          headers: request.headers
+        });
+        const res = await handler.fetch(skillsReq, env, ctx);
+        const text = await res.text();
+        return new Response(text, {
+          status: res.status,
+          headers: {
+            "Content-Type": "application/json",
+            "Cache-Control": "public, max-age=3600"
+          }
+        });
+      }
+
+
 
       let finalResponse = response;
 
@@ -188,6 +204,7 @@ export default {
           '</.well-known/openid-configuration>; rel="openid-configuration"',
           '</.well-known/oauth-protected-resource>; rel="service-desc"',
           '</.well-known/mcp/server-card.json>; rel="mcp-server-card"',
+          '</.well-known/agent-skills/index.json>; rel="agent-skills"',
           '</about>; rel="describedby"'
         ];
         headers.append("Link", linkHeaders.join(", "));
