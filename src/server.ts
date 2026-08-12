@@ -53,9 +53,34 @@ export default {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
       
+      const acceptHeader = request.headers.get("accept") || "";
+      const isMarkdownRequested = acceptHeader.includes("text/markdown");
+      
       const url = new URL(request.url);
-      if (url.pathname === "/") {
+      const isHome = url.pathname === "/";
+      
+      let finalResponse = response;
+
+      // Handle Markdown request
+      if (isMarkdownRequested && response.headers.get("content-type")?.includes("text/html")) {
+        const html = await response.text();
+        const markdown = turndownService.turndown(html);
+        
         const headers = new Headers(response.headers);
+        headers.set("Content-Type", "text/markdown; charset=utf-8");
+        // Optional tracking header for tokens if needed, but not required by spec unless providing it
+        headers.set("x-markdown-tokens", markdown.split(/\s+/).length.toString());
+        
+        finalResponse = new Response(markdown, {
+          status: response.status,
+          statusText: response.statusText,
+          headers
+        });
+      }
+
+      // Add Link headers to homepage if not already a markdown response
+      if (isHome && !isMarkdownRequested) {
+        const headers = new Headers(finalResponse.headers);
         const linkHeaders = [
           '</.well-known/api-catalog>; rel="api-catalog"',
           '</all-links>; rel="service-doc"',
@@ -65,14 +90,14 @@ export default {
         ];
         headers.append("Link", linkHeaders.join(", "));
         
-        return new Response(response.body, {
-          status: response.status,
-          statusText: response.statusText,
+        finalResponse = new Response(finalResponse.body, {
+          status: finalResponse.status,
+          statusText: finalResponse.statusText,
           headers
         });
       }
 
-      return await normalizeCatastrophicSsrResponse(response);
+      return await normalizeCatastrophicSsrResponse(finalResponse);
     } catch (error) {
       console.error(error);
       return new Response(renderErrorPage(), {
