@@ -64,29 +64,27 @@ export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
       const handler = await getServerEntry();
-      
       const url = new URL(request.url);
-      const isHome = url.pathname === "/";
-      const isApiCatalog = url.pathname === "/.well-known/api-catalog";
-      const acceptHeader = request.headers.get("accept") || "";
-      const isMarkdownRequested = acceptHeader.includes("text/markdown");
-
-      // Direct response for API catalog to ensure correct Content-Type without interference
-      if (isApiCatalog) {
+      
+      // 1. Intercept API Catalog early to avoid Nitro/Vite static asset defaults
+      if (url.pathname === "/.well-known/api-catalog") {
         const response = await handler.fetch(request, env, ctx);
         const text = await response.text();
         const headers = new Headers(response.headers);
         headers.set("Content-Type", "application/linkset+json");
+        // Ensure no cache for the catalog to allow rapid updates
+        headers.set("Cache-Control", "no-store, no-cache, must-revalidate");
         return new Response(text, {
           status: response.status,
-          statusText: response.statusText,
           headers
         });
       }
+
+      const acceptHeader = request.headers.get("accept") || "";
+      const isMarkdownRequested = acceptHeader.includes("text/markdown");
       
       let internalRequest = request;
       if (isMarkdownRequested) {
-        // Clone request and modify headers to avoid 406/500 in internal handler
         const headers = new Headers(request.headers);
         headers.set("Accept", "text/html");
         internalRequest = new Request(request.url, {
@@ -101,7 +99,7 @@ export default {
       const response = await handler.fetch(internalRequest, env, ctx);
       let finalResponse = response;
 
-      // Handle Markdown request
+      // 2. Handle Markdown request
       if (isMarkdownRequested && response.headers.get("content-type")?.includes("text/html")) {
         try {
           const html = await response.text();
@@ -110,7 +108,6 @@ export default {
           
           const headers = new Headers(response.headers);
           headers.set("Content-Type", "text/markdown; charset=utf-8");
-          // Optional tracking header for tokens if needed
           headers.set("x-markdown-tokens", markdown.split(/\s+/).length.toString());
           
           finalResponse = new Response(markdown, {
@@ -123,8 +120,8 @@ export default {
         }
       }
 
-      // Add Link headers to homepage if not already a markdown response
-      if (isHome && !isMarkdownRequested) {
+      // 3. Add Link headers to homepage for discovery
+      if (url.pathname === "/" && !isMarkdownRequested) {
         const headers = new Headers(finalResponse.headers);
         const linkHeaders = [
           '</.well-known/api-catalog>; rel="api-catalog"',
