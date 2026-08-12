@@ -19,6 +19,10 @@ export const Route = createFileRoute("/support")({
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/support", "Cricbet99 Support Center")),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/support", "Cricbet99 Support Center")),
+      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),

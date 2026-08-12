@@ -40,6 +40,10 @@ export const Route = createFileRoute('/matches/$slug')({
       ],
       links: [{ rel: "canonical", href: `https://cricbet99.co.in/matches/${match.slug}` }],
       scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/$slug", "Cricbet99")),
+      },
         {
           type: "application/ld+json",
           children: JSON.stringify(buildBreadcrumbJsonLd(`/matches/${match.slug}`, `${match.homeTeam} vs ${match.awayTeam}`)),

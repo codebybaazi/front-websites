@@ -19,6 +19,10 @@ export const Route = createFileRoute("/all-links")({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/all-links", "All Links (Sitemap)")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/all-links", "All Links")),
       },
     ],

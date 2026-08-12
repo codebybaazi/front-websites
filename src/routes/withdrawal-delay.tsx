@@ -17,6 +17,10 @@ export const Route = createFileRoute("/withdrawal-delay")({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/withdrawal-delay", "Cricbet99 Withdrawal Delay")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/withdrawal-delay", "Cricbet99 Withdrawal Delay | Tracking Your Payouts")),
       },
       ...(content.faqs && content.faqs.length ? [{

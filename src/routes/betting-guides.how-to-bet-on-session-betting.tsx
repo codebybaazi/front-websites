@@ -17,6 +17,10 @@ export const Route = createFileRoute("/betting-guides/how-to-bet-on-session-bett
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/betting-guides/how-to-bet-on-session-betting", "Cricket Session & Fancy Betting Guide")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/betting-guides/how-to-bet-on-session-betting", "Cricket Session & Fancy Betting Guide Strategy")),
       },
       ...(content.faqs && content.faqs.length ? [{

@@ -23,6 +23,10 @@ export const Route = createFileRoute("/contact")({
       ],
       links: [{ rel: "canonical", href: canonical }],
       scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/contact", "Contact Cricbet99 Official")),
+      },
         {
           type: "application/ld+json",
           children: JSON.stringify(buildBreadcrumbJsonLd("/contact", "Contact Us")),

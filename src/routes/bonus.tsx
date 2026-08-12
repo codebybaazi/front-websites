@@ -17,6 +17,10 @@ export const Route = createFileRoute("/bonus")({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/bonus", "Cricbet99 Bonuses & Promotions 2026")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/bonus", "Cricbet99 Bonuses & Promotions 2026 | New User Offers")),
       },
       ...(content.faqs && content.faqs.length ? [{

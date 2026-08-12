@@ -16,6 +16,10 @@ export const Route = createFileRoute('/cricket-schedule')({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/cricket-schedule", "2026 Cricket Schedule & Live Match Calendar")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/cricket-schedule", "2026 Cricket Schedule")),
       },
     ],

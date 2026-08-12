@@ -26,6 +26,10 @@ export const Route = createFileRoute("/indian-card-games")({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/indian-card-games", "Indian Card Games on Cricbet99")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/indian-card-games", "Indian Card Games on Cricbet99 — Teen Patti & Andar Bahar")),
       },
     ],

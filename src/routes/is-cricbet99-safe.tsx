@@ -19,6 +19,10 @@ export const Route = createFileRoute("/is-cricbet99-safe")({
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/is-cricbet99-safe", "Is Cricbet99 Safe? Official Security & Trust Verification 2026")),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/is-cricbet99-safe", "Is Cricbet99 Safe? Official Security & Trust Verification 2026")),
+      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),

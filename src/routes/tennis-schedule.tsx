@@ -16,6 +16,10 @@ export const Route = createFileRoute('/tennis-schedule')({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/tennis-schedule", "2026 Tennis Schedule & Live Tournament Calendar")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/tennis-schedule", "2026 Tennis Schedule")),
       },
     ],

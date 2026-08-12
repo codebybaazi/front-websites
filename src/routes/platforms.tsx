@@ -25,6 +25,10 @@ export const Route = createFileRoute("/platforms")({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/platforms", "Cricbet99 Platforms")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/platforms", "Cricbet99 Platforms — Official Betting App & Web Exchange")),
       },
     ],

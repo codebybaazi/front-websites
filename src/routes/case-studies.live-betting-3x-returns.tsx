@@ -17,6 +17,10 @@ export const Route = createFileRoute("/case-studies/live-betting-3x-returns")({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/case-studies/live-betting-3x-returns", "In-Play Trading Case Study")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/case-studies/live-betting-3x-returns", "In-Play Trading Case Study | 3x Live Betting Returns")),
       },
       ...(content.faqs && content.faqs.length ? [{

@@ -17,6 +17,10 @@ export const Route = createFileRoute("/todays-best-odds")({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/todays-best-odds", "Today")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/todays-best-odds", "Today's Best Cricbet99 Odds")),
       },
       ...(content.faqs && content.faqs.length ? [{

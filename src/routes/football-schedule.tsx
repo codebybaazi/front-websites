@@ -16,6 +16,10 @@ export const Route = createFileRoute('/football-schedule')({
     scripts: [
       {
         type: "application/ld+json",
+        children: JSON.stringify(buildBreadcrumbJsonLd("/football-schedule", "2026 Football Schedule & Live Soccer Calendar")),
+      },
+      {
+        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/football-schedule", "2026 Football Schedule")),
       },
     ],
