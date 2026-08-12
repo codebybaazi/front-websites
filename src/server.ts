@@ -84,9 +84,6 @@ export default {
 
       const response = await handler.fetch(internalRequest, env, ctx);
       
-      const acceptHeader = request.headers.get("accept") || "";
-      const isMarkdownRequested = acceptHeader.includes("text/markdown");
-      
       const url = new URL(request.url);
       const isHome = url.pathname === "/";
       
