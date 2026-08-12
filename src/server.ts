@@ -89,10 +89,10 @@ export default {
       const isApiCatalog = url.pathname === "/.well-known/api-catalog";
       
       if (isApiCatalog) {
-        const response = await handler.fetch(request, env, ctx);
+        const text = await response.text();
         const headers = new Headers(response.headers);
         headers.set("Content-Type", "application/linkset+json");
-        return new Response(await response.text(), {
+        return new Response(text, {
           status: response.status,
           headers
         });
