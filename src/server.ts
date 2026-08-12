@@ -5,9 +5,14 @@ import TurndownService from "turndown/lib/turndown.cjs.js";
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
 
-const turndownService = (typeof TurndownService === 'function') 
-  ? new (TurndownService as any)() 
-  : new ((TurndownService as any).default)();
+let turndownService: any;
+try {
+  turndownService = (typeof TurndownService === 'function') 
+    ? new (TurndownService as any)() 
+    : new ((TurndownService as any).default)();
+} catch (e) {
+  console.error("Failed to initialize TurndownService:", e);
+}
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
