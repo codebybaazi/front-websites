@@ -24,17 +24,21 @@ export const Route = createFileRoute('/api/public/oauth-protected-resource')({
           "resource_documentation": `${baseUrl}/auth.md`,
           "ui_locales_supported": ["en-IN", "hi-IN"],
           "agent_auth": {
-            "skill": "cricbet99-betting-assistant",
+            "skill": `${baseUrl}/auth.md`,
             "register_uri": `${baseUrl}/api/public/agent-registration`,
             "identity_types_supported": ["identity_assertion", "anonymous"],
             "identity_assertion": {
               "assertion_types_supported": [
-                "urn:ietf:params:oauth:token-type:id-jag", 
+                "urn:ietf:params:oauth:token-type:id-jag",
                 "verified_email"
-              ]
+              ],
+              "credential_types_supported": ["oauth-client-secret", "jwt-bearer"],
+              "claim_uri": `${baseUrl}/api/public/claims`,
+              "revocation_uri": `${baseUrl}/api/public/revoke`
             },
             "anonymous": {
               "credential_types_supported": ["bearer"],
+              "revocation_uri": `${baseUrl}/api/public/revoke`,
               "claim_uri": `${baseUrl}/api/public/claims`
             },
             "credential_types_supported": ["oauth-client-secret", "jwt-bearer"],

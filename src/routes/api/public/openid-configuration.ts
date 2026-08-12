@@ -18,17 +18,21 @@ export const Route = createFileRoute('/api/public/openid-configuration')({
           "token_endpoint_auth_methods_supported": ["client_secret_post", "client_secret_basic"],
           "claims_supported": ["aud", "exp", "iat", "iss", "sub", "email", "name"],
           "agent_auth": {
-            "skill": "cricbet99-betting-assistant",
+            "skill": `${domain}/auth.md`,
             "register_uri": `${domain}/api/public/agent-registration`,
             "identity_types_supported": ["identity_assertion", "anonymous"],
             "identity_assertion": {
               "assertion_types_supported": [
-                "urn:ietf:params:oauth:token-type:id-jag", 
+                "urn:ietf:params:oauth:token-type:id-jag",
                 "verified_email"
-              ]
+              ],
+              "credential_types_supported": ["oauth-client-secret", "jwt-bearer"],
+              "claim_uri": `${domain}/api/public/claims`,
+              "revocation_uri": `${domain}/api/public/revoke`
             },
             "anonymous": {
               "credential_types_supported": ["bearer"],
+              "revocation_uri": `${domain}/api/public/revoke`,
               "claim_uri": `${domain}/api/public/claims`,
               "revocation_uri": `${domain}/api/public/revoke`
             },
