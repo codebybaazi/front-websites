@@ -116,6 +116,7 @@ import { Route as ApiPublicMcpServerCardRouteImport } from './routes/api/public/
 import { Route as ApiPublicHealthRouteImport } from './routes/api/public/health'
 import { Route as ApiPublicAuthMdRouteImport } from './routes/api/public/auth-md'
 import { Route as ApiPublicApiCatalogRouteImport } from './routes/api/public/api-catalog'
+import { Route as ApiPublicAgentSkillsIndexRouteImport } from './routes/api/public/agent-skills-index'
 
 const Wpl2026BettingRoute = Wpl2026BettingRouteImport.update({
   id: '/wpl-2026-betting',
@@ -667,6 +668,12 @@ const ApiPublicApiCatalogRoute = ApiPublicApiCatalogRouteImport.update({
   path: '/api/public/api-catalog',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicAgentSkillsIndexRoute =
+  ApiPublicAgentSkillsIndexRouteImport.update({
+    id: '/api/public/agent-skills-index',
+    path: '/api/public/agent-skills-index',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -770,6 +777,7 @@ export interface FileRoutesByFullPath {
   '/sitemap/xml': typeof SitemapXmlRoute
   '/blog/': typeof BlogIndexRoute
   '/matches/': typeof MatchesIndexRoute
+  '/api/public/agent-skills-index': typeof ApiPublicAgentSkillsIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/auth-md': typeof ApiPublicAuthMdRoute
   '/api/public/health': typeof ApiPublicHealthRoute
@@ -879,6 +887,7 @@ export interface FileRoutesByTo {
   '/sitemap/xml': typeof SitemapXmlRoute
   '/blog': typeof BlogIndexRoute
   '/matches': typeof MatchesIndexRoute
+  '/api/public/agent-skills-index': typeof ApiPublicAgentSkillsIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/auth-md': typeof ApiPublicAuthMdRoute
   '/api/public/health': typeof ApiPublicHealthRoute
@@ -989,6 +998,7 @@ export interface FileRoutesById {
   '/sitemap/xml': typeof SitemapXmlRoute
   '/blog/': typeof BlogIndexRoute
   '/matches/': typeof MatchesIndexRoute
+  '/api/public/agent-skills-index': typeof ApiPublicAgentSkillsIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/auth-md': typeof ApiPublicAuthMdRoute
   '/api/public/health': typeof ApiPublicHealthRoute
@@ -1100,6 +1110,7 @@ export interface FileRouteTypes {
     | '/sitemap/xml'
     | '/blog/'
     | '/matches/'
+    | '/api/public/agent-skills-index'
     | '/api/public/api-catalog'
     | '/api/public/auth-md'
     | '/api/public/health'
@@ -1209,6 +1220,7 @@ export interface FileRouteTypes {
     | '/sitemap/xml'
     | '/blog'
     | '/matches'
+    | '/api/public/agent-skills-index'
     | '/api/public/api-catalog'
     | '/api/public/auth-md'
     | '/api/public/health'
@@ -1318,6 +1330,7 @@ export interface FileRouteTypes {
     | '/sitemap/xml'
     | '/blog/'
     | '/matches/'
+    | '/api/public/agent-skills-index'
     | '/api/public/api-catalog'
     | '/api/public/auth-md'
     | '/api/public/health'
@@ -1418,6 +1431,7 @@ export interface RootRouteChildren {
   SitemapXmlRoute: typeof SitemapXmlRoute
   BlogIndexRoute: typeof BlogIndexRoute
   MatchesIndexRoute: typeof MatchesIndexRoute
+  ApiPublicAgentSkillsIndexRoute: typeof ApiPublicAgentSkillsIndexRoute
   ApiPublicApiCatalogRoute: typeof ApiPublicApiCatalogRoute
   ApiPublicAuthMdRoute: typeof ApiPublicAuthMdRoute
   ApiPublicHealthRoute: typeof ApiPublicHealthRoute
@@ -2177,6 +2191,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicApiCatalogRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/agent-skills-index': {
+      id: '/api/public/agent-skills-index'
+      path: '/api/public/agent-skills-index'
+      fullPath: '/api/public/agent-skills-index'
+      preLoaderRoute: typeof ApiPublicAgentSkillsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -2319,6 +2340,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapXmlRoute: SitemapXmlRoute,
   BlogIndexRoute: BlogIndexRoute,
   MatchesIndexRoute: MatchesIndexRoute,
+  ApiPublicAgentSkillsIndexRoute: ApiPublicAgentSkillsIndexRoute,
   ApiPublicApiCatalogRoute: ApiPublicApiCatalogRoute,
   ApiPublicAuthMdRoute: ApiPublicAuthMdRoute,
   ApiPublicHealthRoute: ApiPublicHealthRoute,

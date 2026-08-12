@@ -153,7 +153,9 @@ export const Route = createFileRoute("/")({
       { rel: "api-catalog", href: "https://cricbet99.co.in/.well-known/api-catalog" },
       { rel: "service-doc", href: "https://cricbet99.co.in/all-links" },
       { rel: "openid-configuration", href: "https://cricbet99.co.in/.well-known/openid-configuration" },
-      { rel: "service-desc", href: "https://cricbet99.co.in/.well-known/oauth-protected-resource" }
+      { rel: "service-desc", href: "https://cricbet99.co.in/.well-known/oauth-protected-resource" },
+      { rel: "agent-skills", href: "https://cricbet99.co.in/.well-known/agent-skills/index.json" }
+
 
     ],
     scripts: [
