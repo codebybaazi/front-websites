@@ -402,7 +402,7 @@ export function MegaMenuHeader() {
               className="absolute -inset-2 -z-10 rounded-full opacity-60 blur-lg transition-opacity group-hover:opacity-100"
               style={{ background: "radial-gradient(closest-side, oklch(0.85 0.17 88 / 0.4), transparent 70%)" }}
             />
-            <img src={logo} alt="Cricbet99 — Online Cricket ID" width={176} height={48} className="h-11 w-auto drop-shadow-[0_4px_14px_rgba(0,0,0,0.55)] sm:h-12" fetchPriority="high" />
+            <img src={logo} alt="Cricbet99 — Online Cricket ID" width={176} height={48} className="h-9 w-auto drop-shadow-[0_4px_14px_rgba(0,0,0,0.55)] sm:h-12" fetchPriority="high" />
           </Link>
 
           {/* Vertical divider */}
