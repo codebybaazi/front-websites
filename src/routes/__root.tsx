@@ -106,6 +106,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "openid-configuration", href: "https://cricbet99.co.in/.well-known/openid-configuration" },
       { rel: "service-desc", href: "https://cricbet99.co.in/.well-known/oauth-protected-resource" },
       { rel: "describedby", href: "https://cricbet99.co.in/about" },
+      { rel: "mcp-server-card", href: "https://cricbet99.co.in/.well-known/mcp/server-card.json" },
+      { rel: "agent-skills", href: "https://cricbet99.co.in/.well-known/agent-skills/index.json" }
+
 
     ],
 
