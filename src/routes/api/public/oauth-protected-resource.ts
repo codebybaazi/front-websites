@@ -24,6 +24,7 @@ export const Route = createFileRoute('/api/public/oauth-protected-resource')({
           "resource_documentation": `${baseUrl}/auth.md`,
           "ui_locales_supported": ["en-IN", "hi-IN"],
           "agent_auth": {
+            "skill": "cricbet99-betting-assistant",
             "register_uri": `${baseUrl}/api/public/agent-registration`,
             "identity_types_supported": ["identity_assertion", "anonymous"]
           }

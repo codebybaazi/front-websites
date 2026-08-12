@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/api/public/openid-configuration')({
+export const Route = createFileRoute('/api/public/oauth-authorization-server')({
   server: {
     handlers: {
       GET: async () => {
@@ -14,7 +14,7 @@ export const Route = createFileRoute('/api/public/openid-configuration')({
           "response_types_supported": ["code", "token", "id_token"],
           "subject_types_supported": ["public"],
           "id_token_signing_alg_values_supported": ["RS256"],
-          "scopes_supported": ["openid", "profile", "email", "api:read"],
+          "scopes_supported": ["openid", "profile", "email", "api:read", "agent:identity"],
           "token_endpoint_auth_methods_supported": ["client_secret_post", "client_secret_basic"],
           "claims_supported": ["aud", "exp", "iat", "iss", "sub", "email", "name"],
           "agent_auth": {
@@ -38,7 +38,8 @@ export const Route = createFileRoute('/api/public/openid-configuration')({
         return new Response(JSON.stringify(config, null, 2), {
           headers: {
             'Content-Type': 'application/json',
-            'Cache-Control': 'public, max-age=3600'
+            'Cache-Control': 'public, max-age=3600',
+            'Access-Control-Allow-Origin': '*'
           }
         });
       }
