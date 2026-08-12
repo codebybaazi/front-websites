@@ -1533,11 +1533,11 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                   <div className="relative flex flex-1 flex-col p-6">
                     <div className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-primary/90">
                       <span className="h-px w-6 bg-gradient-to-r from-primary to-transparent" />
-                      {new Date(post.date).toLocaleDateString("en-IN", {
+                      {new Date(post.date).toLocaleDateString("en-IN", { timeZone: "Asia/Kolkata", 
                         day: "2-digit",
                         month: "short",
                         year: "numeric",
-                      })}
+                       })}
                     </div>
                     <h3 className="mt-3 text-lg font-black leading-snug text-foreground transition-colors group-hover:text-primary">
                       {post.title}
