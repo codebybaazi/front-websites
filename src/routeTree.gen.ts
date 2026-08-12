@@ -112,6 +112,7 @@ import { Route as BettingGuidesHowToBetOnSessionBettingRouteImport } from './rou
 import { Route as BettingGuidesHowBookmakersMakeMoneyRouteImport } from './routes/betting-guides.how-bookmakers-make-money'
 import { Route as ApiPublicOpenidConfigurationRouteImport } from './routes/api/public/openid-configuration'
 import { Route as ApiPublicOauthProtectedResourceRouteImport } from './routes/api/public/oauth-protected-resource'
+import { Route as ApiPublicMcpServerCardRouteImport } from './routes/api/public/mcp-server-card'
 import { Route as ApiPublicHealthRouteImport } from './routes/api/public/health'
 import { Route as ApiPublicAuthMdRouteImport } from './routes/api/public/auth-md'
 import { Route as ApiPublicApiCatalogRouteImport } from './routes/api/public/api-catalog'
@@ -646,6 +647,11 @@ const ApiPublicOauthProtectedResourceRoute =
     path: '/api/public/oauth-protected-resource',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicMcpServerCardRoute = ApiPublicMcpServerCardRouteImport.update({
+  id: '/api/public/mcp-server-card',
+  path: '/api/public/mcp-server-card',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiPublicHealthRoute = ApiPublicHealthRouteImport.update({
   id: '/api/public/health',
   path: '/api/public/health',
@@ -767,6 +773,7 @@ export interface FileRoutesByFullPath {
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/auth-md': typeof ApiPublicAuthMdRoute
   '/api/public/health': typeof ApiPublicHealthRoute
+  '/api/public/mcp-server-card': typeof ApiPublicMcpServerCardRoute
   '/api/public/oauth-protected-resource': typeof ApiPublicOauthProtectedResourceRoute
   '/api/public/openid-configuration': typeof ApiPublicOpenidConfigurationRoute
 }
@@ -875,6 +882,7 @@ export interface FileRoutesByTo {
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/auth-md': typeof ApiPublicAuthMdRoute
   '/api/public/health': typeof ApiPublicHealthRoute
+  '/api/public/mcp-server-card': typeof ApiPublicMcpServerCardRoute
   '/api/public/oauth-protected-resource': typeof ApiPublicOauthProtectedResourceRoute
   '/api/public/openid-configuration': typeof ApiPublicOpenidConfigurationRoute
 }
@@ -984,6 +992,7 @@ export interface FileRoutesById {
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/auth-md': typeof ApiPublicAuthMdRoute
   '/api/public/health': typeof ApiPublicHealthRoute
+  '/api/public/mcp-server-card': typeof ApiPublicMcpServerCardRoute
   '/api/public/oauth-protected-resource': typeof ApiPublicOauthProtectedResourceRoute
   '/api/public/openid-configuration': typeof ApiPublicOpenidConfigurationRoute
 }
@@ -1094,6 +1103,7 @@ export interface FileRouteTypes {
     | '/api/public/api-catalog'
     | '/api/public/auth-md'
     | '/api/public/health'
+    | '/api/public/mcp-server-card'
     | '/api/public/oauth-protected-resource'
     | '/api/public/openid-configuration'
   fileRoutesByTo: FileRoutesByTo
@@ -1202,6 +1212,7 @@ export interface FileRouteTypes {
     | '/api/public/api-catalog'
     | '/api/public/auth-md'
     | '/api/public/health'
+    | '/api/public/mcp-server-card'
     | '/api/public/oauth-protected-resource'
     | '/api/public/openid-configuration'
   id:
@@ -1310,6 +1321,7 @@ export interface FileRouteTypes {
     | '/api/public/api-catalog'
     | '/api/public/auth-md'
     | '/api/public/health'
+    | '/api/public/mcp-server-card'
     | '/api/public/oauth-protected-resource'
     | '/api/public/openid-configuration'
   fileRoutesById: FileRoutesById
@@ -1409,6 +1421,7 @@ export interface RootRouteChildren {
   ApiPublicApiCatalogRoute: typeof ApiPublicApiCatalogRoute
   ApiPublicAuthMdRoute: typeof ApiPublicAuthMdRoute
   ApiPublicHealthRoute: typeof ApiPublicHealthRoute
+  ApiPublicMcpServerCardRoute: typeof ApiPublicMcpServerCardRoute
   ApiPublicOauthProtectedResourceRoute: typeof ApiPublicOauthProtectedResourceRoute
   ApiPublicOpenidConfigurationRoute: typeof ApiPublicOpenidConfigurationRoute
 }
@@ -2136,6 +2149,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicOauthProtectedResourceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/mcp-server-card': {
+      id: '/api/public/mcp-server-card'
+      path: '/api/public/mcp-server-card'
+      fullPath: '/api/public/mcp-server-card'
+      preLoaderRoute: typeof ApiPublicMcpServerCardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/health': {
       id: '/api/public/health'
       path: '/api/public/health'
@@ -2302,9 +2322,20 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicApiCatalogRoute: ApiPublicApiCatalogRoute,
   ApiPublicAuthMdRoute: ApiPublicAuthMdRoute,
   ApiPublicHealthRoute: ApiPublicHealthRoute,
+  ApiPublicMcpServerCardRoute: ApiPublicMcpServerCardRoute,
   ApiPublicOauthProtectedResourceRoute: ApiPublicOauthProtectedResourceRoute,
   ApiPublicOpenidConfigurationRoute: ApiPublicOpenidConfigurationRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
