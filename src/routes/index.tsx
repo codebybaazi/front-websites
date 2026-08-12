@@ -1186,8 +1186,6 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
       </section>
 
 
-      {/* LIVE MATCH DASHBOARD — dynamic, sport-grouped, filterable */}
-      <LiveDashboard />
 
       {/* SPORTS — premium redesign */}
       <section className="relative overflow-hidden border-t border-primary/15 py-24">
