@@ -91,6 +91,22 @@ export default {
           }
         });
       }
+      
+      if (url.pathname === "/.well-known/openid-configuration") {
+        const oidcReq = new Request(new URL("/api/public/openid-configuration", request.url).toString(), {
+          method: "GET",
+          headers: request.headers
+        });
+        const res = await handler.fetch(oidcReq, env, ctx);
+        const text = await res.text();
+        return new Response(text, {
+          status: res.status,
+          headers: {
+            "Content-Type": "application/json",
+            "Cache-Control": "public, max-age=3600"
+          }
+        });
+      }
 
       const response = await handler.fetch(internalRequest, env, ctx);
       let finalResponse = response;
@@ -120,6 +136,7 @@ export default {
           '</all-links>; rel="service-doc"',
           '</.well-known/ai-skills.json>; rel="ai-skills"',
           '</.well-known/dns-aid.json>; rel="dns-aid"',
+          '</.well-known/openid-configuration>; rel="openid-configuration"',
           '</about>; rel="describedby"'
         ];
         headers.append("Link", linkHeaders.join(", "));
