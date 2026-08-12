@@ -57,6 +57,7 @@ export default {
           '</.well-known/api-catalog>; rel="api-catalog"',
           '</all-links>; rel="service-doc"',
           '</.well-known/ai-skills.json>; rel="ai-skills"',
+          '</.well-known/dns-aid.json>; rel="dns-aid"',
           '</about>; rel="describedby"'
         ];
         headers.append("Link", linkHeaders.join(", "));
