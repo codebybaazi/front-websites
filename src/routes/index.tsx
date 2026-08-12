@@ -147,7 +147,10 @@ export const Route = createFileRoute("/")({
       { name: "twitter:description", content: "IPL, T20, football, tennis, kabaddi & live casino. Instant UPI payouts, 24/7 WhatsApp support." },
       { name: "twitter:image", content: image },
     ],
-    links: [{ rel: "canonical", href: "https://cricbet99.co.in/" }],
+    links: [
+      { rel: "canonical", href: "https://cricbet99.co.in/" },
+      { rel: "preload", as: "image", href: heroBanner, fetchPriority: "high" }
+    ],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(faqLd) },
       {
