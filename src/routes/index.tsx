@@ -130,7 +130,7 @@ export const Route = createFileRoute("/")({
         content:
           "Get your official Cricbet99 ID in 5 minutes on WhatsApp. India's most trusted exchange for IPL 2026, live casino, and sports betting with instant UPI payouts.",
       },
-      { name: "keywords", content: "Cricbet99, cricbet99 id, online cricket id, ipl betting id, cricbet99 official app, live cricket betting india, cricket betting whatsapp number, cricbet99 login" },
+      { name: "keywords", content: "Cricbet99, cricbet99 id, cricbet99 green, cricbet99 black, cricbet99 club, online cricket id, ipl betting id, cricbet99 official app, live cricket betting india, cricket betting whatsapp number, cricbet99 login, cricbet99 registration" },
       { property: "og:title", content: "Cricbet99 — India's #1 Online Cricket ID Since 2020" },
       {
         property: "og:description",
