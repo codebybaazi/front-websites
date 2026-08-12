@@ -29,7 +29,8 @@ export const Route = createFileRoute('/api/public/oauth-authorization-server')({
             },
             "anonymous": {
               "credential_types_supported": ["bearer"],
-              "claim_uri": `${domain}/api/public/claims`
+              "claim_uri": `${domain}/api/public/claims`,
+              "revocation_uri": `${domain}/api/public/revoke`
             },
             "credential_types_supported": ["oauth-client-secret", "jwt-bearer"],
             "revocation_uri": `${domain}/api/public/revoke`,
