@@ -118,6 +118,7 @@ import { Route as ApiPublicHealthRouteImport } from './routes/api/public/health'
 import { Route as ApiPublicAuthMdRouteImport } from './routes/api/public/auth-md'
 import { Route as ApiPublicApiCatalogRouteImport } from './routes/api/public/api-catalog'
 import { Route as ApiPublicAgentSkillsIndexRouteImport } from './routes/api/public/agent-skills-index'
+import { Route as ApiPublicAgentRegistrationRouteImport } from './routes/api/public/agent-registration'
 
 const Wpl2026BettingRoute = Wpl2026BettingRouteImport.update({
   id: '/wpl-2026-betting',
@@ -681,6 +682,12 @@ const ApiPublicAgentSkillsIndexRoute =
     path: '/api/public/agent-skills-index',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicAgentRegistrationRoute =
+  ApiPublicAgentRegistrationRouteImport.update({
+    id: '/api/public/agent-registration',
+    path: '/api/public/agent-registration',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -784,6 +791,7 @@ export interface FileRoutesByFullPath {
   '/sitemap/xml': typeof SitemapXmlRoute
   '/blog/': typeof BlogIndexRoute
   '/matches/': typeof MatchesIndexRoute
+  '/api/public/agent-registration': typeof ApiPublicAgentRegistrationRoute
   '/api/public/agent-skills-index': typeof ApiPublicAgentSkillsIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/auth-md': typeof ApiPublicAuthMdRoute
@@ -895,6 +903,7 @@ export interface FileRoutesByTo {
   '/sitemap/xml': typeof SitemapXmlRoute
   '/blog': typeof BlogIndexRoute
   '/matches': typeof MatchesIndexRoute
+  '/api/public/agent-registration': typeof ApiPublicAgentRegistrationRoute
   '/api/public/agent-skills-index': typeof ApiPublicAgentSkillsIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/auth-md': typeof ApiPublicAuthMdRoute
@@ -1007,6 +1016,7 @@ export interface FileRoutesById {
   '/sitemap/xml': typeof SitemapXmlRoute
   '/blog/': typeof BlogIndexRoute
   '/matches/': typeof MatchesIndexRoute
+  '/api/public/agent-registration': typeof ApiPublicAgentRegistrationRoute
   '/api/public/agent-skills-index': typeof ApiPublicAgentSkillsIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/auth-md': typeof ApiPublicAuthMdRoute
@@ -1120,6 +1130,7 @@ export interface FileRouteTypes {
     | '/sitemap/xml'
     | '/blog/'
     | '/matches/'
+    | '/api/public/agent-registration'
     | '/api/public/agent-skills-index'
     | '/api/public/api-catalog'
     | '/api/public/auth-md'
@@ -1231,6 +1242,7 @@ export interface FileRouteTypes {
     | '/sitemap/xml'
     | '/blog'
     | '/matches'
+    | '/api/public/agent-registration'
     | '/api/public/agent-skills-index'
     | '/api/public/api-catalog'
     | '/api/public/auth-md'
@@ -1342,6 +1354,7 @@ export interface FileRouteTypes {
     | '/sitemap/xml'
     | '/blog/'
     | '/matches/'
+    | '/api/public/agent-registration'
     | '/api/public/agent-skills-index'
     | '/api/public/api-catalog'
     | '/api/public/auth-md'
@@ -1444,6 +1457,7 @@ export interface RootRouteChildren {
   SitemapXmlRoute: typeof SitemapXmlRoute
   BlogIndexRoute: typeof BlogIndexRoute
   MatchesIndexRoute: typeof MatchesIndexRoute
+  ApiPublicAgentRegistrationRoute: typeof ApiPublicAgentRegistrationRoute
   ApiPublicAgentSkillsIndexRoute: typeof ApiPublicAgentSkillsIndexRoute
   ApiPublicApiCatalogRoute: typeof ApiPublicApiCatalogRoute
   ApiPublicAuthMdRoute: typeof ApiPublicAuthMdRoute
@@ -2219,6 +2233,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicAgentSkillsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/agent-registration': {
+      id: '/api/public/agent-registration'
+      path: '/api/public/agent-registration'
+      fullPath: '/api/public/agent-registration'
+      preLoaderRoute: typeof ApiPublicAgentRegistrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -2361,6 +2382,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapXmlRoute: SitemapXmlRoute,
   BlogIndexRoute: BlogIndexRoute,
   MatchesIndexRoute: MatchesIndexRoute,
+  ApiPublicAgentRegistrationRoute: ApiPublicAgentRegistrationRoute,
   ApiPublicAgentSkillsIndexRoute: ApiPublicAgentSkillsIndexRoute,
   ApiPublicApiCatalogRoute: ApiPublicApiCatalogRoute,
   ApiPublicAuthMdRoute: ApiPublicAuthMdRoute,
