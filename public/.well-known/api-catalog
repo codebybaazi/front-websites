@@ -1,11 +1,30 @@
 {
-  "name": "Cricbet99 Public API",
-  "description": "Public endpoints for Cricbet99 platform integration.",
-  "endpoints": [
+  "linkset": [
     {
-      "path": "/api/public/sitemap",
-      "method": "GET",
-      "description": "Dynamic sitemap generation"
+      "anchor": "https://cricbet99.co.in/api/public/sitemap",
+      "service-doc": [
+        {
+          "href": "https://cricbet99.co.in/all-links"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://cricbet99.co.in/api/public/health"
+        }
+      ]
+    },
+    {
+      "anchor": "https://cricbet99.co.in/",
+      "service-doc": [
+        {
+          "href": "https://cricbet99.co.in/guides"
+        }
+      ],
+      "describedby": [
+        {
+          "href": "https://cricbet99.co.in/about"
+        }
+      ]
     }
   ]
 }
