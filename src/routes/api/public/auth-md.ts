@@ -6,6 +6,8 @@ export const Route = createFileRoute('/api/public/auth-md')({
       GET: async () => {
         const content = `# auth.md
 
+agent_auth: true
+
 Cricbet99 supports autonomous agent registration and authentication for programmatic access to sports data and betting APIs.
 
 ## Registration
