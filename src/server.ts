@@ -216,6 +216,7 @@ export default {
           '</.well-known/ai-skills.json>; rel="ai-skills"',
           '</.well-known/dns-aid.json>; rel="dns-aid"',
           '</.well-known/openid-configuration>; rel="openid-configuration"',
+          '</.well-known/oauth-authorization-server>; rel="oauth-authorization-server"',
           '</.well-known/oauth-protected-resource>; rel="service-desc"',
           '</.well-known/mcp/server-card.json>; rel="mcp-server-card"',
           '</.well-known/agent-skills/index.json>; rel="agent-skills"',
