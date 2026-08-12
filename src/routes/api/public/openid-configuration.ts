@@ -29,7 +29,8 @@ export const Route = createFileRoute('/api/public/openid-configuration')({
             },
             "anonymous": {
               "credential_types_supported": ["bearer"],
-              "claim_uri": `${domain}/api/public/claims`
+              "claim_uri": `${domain}/api/public/claims`,
+              "revocation_uri": `${domain}/api/public/revoke`
             },
             "credential_types_supported": ["oauth-client-secret", "jwt-bearer"],
             "revocation_uri": `${domain}/api/public/revoke`,
@@ -41,7 +42,8 @@ export const Route = createFileRoute('/api/public/openid-configuration')({
         return new Response(JSON.stringify(config, null, 2), {
           headers: {
             'Content-Type': 'application/json',
-            'Cache-Control': 'public, max-age=3600'
+            'Cache-Control': 'public, max-age=3600',
+            'Access-Control-Allow-Origin': '*'
           }
         });
       }
