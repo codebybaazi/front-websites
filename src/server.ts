@@ -1,5 +1,6 @@
 import "./lib/error-capture";
-import TurndownService from "turndown";
+// @ts-ignore - turndown may not have type declarations in all environments
+import TurndownService from "turndown/lib/turndown.cjs.js";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
