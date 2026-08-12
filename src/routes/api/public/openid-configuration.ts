@@ -18,7 +18,6 @@ export const Route = createFileRoute('/api/public/openid-configuration')({
           "token_endpoint_auth_methods_supported": ["client_secret_post", "client_secret_basic"],
           "claims_supported": ["aud", "exp", "iat", "iss", "sub", "email", "name"],
           "agent_auth": {
-            "skill": "Implement Auth.md Agent Registration Discovery",
             "register_uri": `${domain}/api/public/agent-registration`,
             "identity_types_supported": ["identity_assertion", "anonymous"],
             "identity_assertion": {
