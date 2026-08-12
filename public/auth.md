@@ -1,23 +1,25 @@
-# Agent Registration & Authentication
+# auth.md
 
 Cricbet99 supports autonomous agent registration and authentication for programmatic access to sports data and betting APIs.
 
 ## Registration
-Agents can register for credentials at:
-`https://cricbet99.co.in/api/public/agent-registration`
+Agents can register for credentials via the `register_uri` advertised in our OAuth Authorization Server metadata.
+
+**Registration Endpoint**: `https://cricbet99.co.in/api/public/agent-registration`
 
 Supported Identity Types:
-- `organization`
-- `independent-agent`
+- `identity_assertion` (ID-JAG, verified_email)
+- `anonymous`
 
 ## Authentication
-We support OAuth 2.0 and OpenID Connect.
+We support OAuth 2.0 and OpenID Connect with Agent Registration support.
 - **Issuer**: `https://cricbet99.co.in`
-- **Token Endpoint**: `https://cricbet99.co.in/api/public/token`
+- **Token Endpoint**: `https://cricbet99.co.in/api/public/auth/token`
 - **JWKS URI**: `https://cricbet99.co.in/.well-known/jwks.json`
 
-## Metadata
+## Discovery Metadata
 - **OIDC Configuration**: `/.well-known/openid-configuration`
+- **OAuth Authorization Server**: `/.well-known/oauth-authorization-server`
 - **Protected Resources**: `/.well-known/oauth-protected-resource`
 
 ## Claims & Revocation
