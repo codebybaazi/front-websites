@@ -145,6 +145,14 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior-y: none;
+  }
+
+  /* Reduce forced reflows by containing paint */
+  section, .card {
+    contain: paint;
   }
 }
 
