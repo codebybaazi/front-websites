@@ -22,7 +22,10 @@ export const Route = createFileRoute('/api/public/openid-configuration')({
             "register_uri": `${domain}/api/public/agent-registration`,
             "identity_types_supported": ["identity_assertion", "anonymous"],
             "identity_assertion": {
-              "assertion_types_supported": ["urn:ietf:params:oauth:token-type:id-jag", "verified_email"]
+              "assertion_types_supported": [
+                "urn:ietf:params:oauth:token-type:id-jag", 
+                "verified_email"
+              ]
             },
             "anonymous": {
               "credential_types_supported": ["bearer"],
