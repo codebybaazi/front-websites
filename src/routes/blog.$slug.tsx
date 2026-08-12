@@ -117,12 +117,12 @@ function PostPage() {
           </div>
           <div className="flex items-center gap-1.5 border-l border-white/10 pl-4">
             <span className="text-primary/60">Published</span>
-            <span className="text-foreground/90">{new Date(post.date).toLocaleDateString("en-IN", { timeZone: "Asia/Kolkata",  year: "numeric", month: "short", day: "numeric"  })}</span>
+            <span className="text-foreground/90">{new Date(post.date).toLocaleDateString("en-GB", { timeZone: "Asia/Kolkata",  timeZone: "Asia/Kolkata",  year: "numeric", month: "short", day: "numeric"   })}</span>
           </div>
           {post.dateModified && post.dateModified !== post.date && (
             <div className="flex items-center gap-1.5 border-l border-white/10 pl-4">
               <span className="text-primary/60">Updated</span>
-              <span className="text-foreground/90">{new Date(post.dateModified).toLocaleDateString("en-IN", { timeZone: "Asia/Kolkata",  year: "numeric", month: "short", day: "numeric"  })}</span>
+              <span className="text-foreground/90">{new Date(post.dateModified).toLocaleDateString("en-GB", { timeZone: "Asia/Kolkata",  timeZone: "Asia/Kolkata",  year: "numeric", month: "short", day: "numeric"   })}</span>
             </div>
           )}
         </div>
