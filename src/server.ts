@@ -81,11 +81,10 @@ export default {
       
       let finalResponse = response;
 
-      // Handle Markdown request
-      if (isMarkdownRequested && response.headers.get("content-type")?.includes("text/html")) {
         try {
           const html = await response.text();
-          const markdown = turndownService ? turndownService.turndown(html) : html;
+          const service = await getTurndownService();
+          const markdown = service ? service.turndown(html) : html;
           
           const headers = new Headers(response.headers);
           headers.set("Content-Type", "text/markdown; charset=utf-8");
