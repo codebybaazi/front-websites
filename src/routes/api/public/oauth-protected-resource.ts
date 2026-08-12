@@ -26,7 +26,18 @@ export const Route = createFileRoute('/api/public/oauth-protected-resource')({
           "agent_auth": {
             "skill": "cricbet99-betting-assistant",
             "register_uri": `${baseUrl}/api/public/agent-registration`,
-            "identity_types_supported": ["identity_assertion", "anonymous"]
+            "identity_types_supported": ["identity_assertion", "anonymous"],
+            "identity_assertion": {
+              "assertion_types_supported": ["urn:ietf:params:oauth:token-type:id-jag", "verified_email"]
+            },
+            "anonymous": {
+              "credential_types_supported": ["bearer"],
+              "claim_uri": `${baseUrl}/api/public/claims`
+            },
+            "credential_types_supported": ["oauth-client-secret", "jwt-bearer"],
+            "revocation_uri": `${baseUrl}/api/public/revoke`,
+            "claims_uri": `${baseUrl}/api/public/claims`,
+            "events_supported": ["revocation"]
           }
         }
 
