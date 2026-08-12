@@ -1,11 +1,13 @@
 import "./lib/error-capture";
-// @ts-ignore - turndown may not have type declarations in all environments
+// @ts-ignore
 import TurndownService from "turndown/lib/turndown.cjs.js";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
 
-const turndownService = new TurndownService();
+const turndownService = (typeof TurndownService === 'function') 
+  ? new (TurndownService as any)() 
+  : new ((TurndownService as any).default)();
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
