@@ -108,7 +108,24 @@ export default {
         });
       }
 
+      if (url.pathname === "/.well-known/oauth-protected-resource") {
+        const resourceReq = new Request(new URL("/api/public/oauth-protected-resource", request.url).toString(), {
+          method: "GET",
+          headers: request.headers
+        });
+        const res = await handler.fetch(resourceReq, env, ctx);
+        const text = await res.text();
+        return new Response(text, {
+          status: res.status,
+          headers: {
+            "Content-Type": "application/json",
+            "Cache-Control": "public, max-age=3600"
+          }
+        });
+      }
+
       const response = await handler.fetch(internalRequest, env, ctx);
+
       let finalResponse = response;
 
       if (isMarkdownRequested && response.headers.get("content-type")?.includes("text/html")) {
@@ -137,7 +154,9 @@ export default {
           '</.well-known/ai-skills.json>; rel="ai-skills"',
           '</.well-known/dns-aid.json>; rel="dns-aid"',
           '</.well-known/openid-configuration>; rel="openid-configuration"',
+          '</.well-known/oauth-protected-resource>; rel="service-desc"',
           '</about>; rel="describedby"'
+
         ];
         headers.append("Link", linkHeaders.join(", "));
         finalResponse = new Response(finalResponse.body, {

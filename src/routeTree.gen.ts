@@ -111,6 +111,7 @@ import { Route as BettingGuidesHowToBetOnTossMarketRouteImport } from './routes/
 import { Route as BettingGuidesHowToBetOnSessionBettingRouteImport } from './routes/betting-guides.how-to-bet-on-session-betting'
 import { Route as BettingGuidesHowBookmakersMakeMoneyRouteImport } from './routes/betting-guides.how-bookmakers-make-money'
 import { Route as ApiPublicOpenidConfigurationRouteImport } from './routes/api/public/openid-configuration'
+import { Route as ApiPublicOauthProtectedResourceRouteImport } from './routes/api/public/oauth-protected-resource'
 import { Route as ApiPublicHealthRouteImport } from './routes/api/public/health'
 import { Route as ApiPublicApiCatalogRouteImport } from './routes/api/public/api-catalog'
 
@@ -638,6 +639,12 @@ const ApiPublicOpenidConfigurationRoute =
     path: '/api/public/openid-configuration',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicOauthProtectedResourceRoute =
+  ApiPublicOauthProtectedResourceRouteImport.update({
+    id: '/api/public/oauth-protected-resource',
+    path: '/api/public/oauth-protected-resource',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHealthRoute = ApiPublicHealthRouteImport.update({
   id: '/api/public/health',
   path: '/api/public/health',
@@ -753,6 +760,7 @@ export interface FileRoutesByFullPath {
   '/matches/': typeof MatchesIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/health': typeof ApiPublicHealthRoute
+  '/api/public/oauth-protected-resource': typeof ApiPublicOauthProtectedResourceRoute
   '/api/public/openid-configuration': typeof ApiPublicOpenidConfigurationRoute
 }
 export interface FileRoutesByTo {
@@ -859,6 +867,7 @@ export interface FileRoutesByTo {
   '/matches': typeof MatchesIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/health': typeof ApiPublicHealthRoute
+  '/api/public/oauth-protected-resource': typeof ApiPublicOauthProtectedResourceRoute
   '/api/public/openid-configuration': typeof ApiPublicOpenidConfigurationRoute
 }
 export interface FileRoutesById {
@@ -966,6 +975,7 @@ export interface FileRoutesById {
   '/matches/': typeof MatchesIndexRoute
   '/api/public/api-catalog': typeof ApiPublicApiCatalogRoute
   '/api/public/health': typeof ApiPublicHealthRoute
+  '/api/public/oauth-protected-resource': typeof ApiPublicOauthProtectedResourceRoute
   '/api/public/openid-configuration': typeof ApiPublicOpenidConfigurationRoute
 }
 export interface FileRouteTypes {
@@ -1074,6 +1084,7 @@ export interface FileRouteTypes {
     | '/matches/'
     | '/api/public/api-catalog'
     | '/api/public/health'
+    | '/api/public/oauth-protected-resource'
     | '/api/public/openid-configuration'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -1180,6 +1191,7 @@ export interface FileRouteTypes {
     | '/matches'
     | '/api/public/api-catalog'
     | '/api/public/health'
+    | '/api/public/oauth-protected-resource'
     | '/api/public/openid-configuration'
   id:
     | '__root__'
@@ -1286,6 +1298,7 @@ export interface FileRouteTypes {
     | '/matches/'
     | '/api/public/api-catalog'
     | '/api/public/health'
+    | '/api/public/oauth-protected-resource'
     | '/api/public/openid-configuration'
   fileRoutesById: FileRoutesById
 }
@@ -1383,6 +1396,7 @@ export interface RootRouteChildren {
   MatchesIndexRoute: typeof MatchesIndexRoute
   ApiPublicApiCatalogRoute: typeof ApiPublicApiCatalogRoute
   ApiPublicHealthRoute: typeof ApiPublicHealthRoute
+  ApiPublicOauthProtectedResourceRoute: typeof ApiPublicOauthProtectedResourceRoute
   ApiPublicOpenidConfigurationRoute: typeof ApiPublicOpenidConfigurationRoute
 }
 
@@ -2102,6 +2116,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicOpenidConfigurationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/oauth-protected-resource': {
+      id: '/api/public/oauth-protected-resource'
+      path: '/api/public/oauth-protected-resource'
+      fullPath: '/api/public/oauth-protected-resource'
+      preLoaderRoute: typeof ApiPublicOauthProtectedResourceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/health': {
       id: '/api/public/health'
       path: '/api/public/health'
@@ -2260,6 +2281,7 @@ const rootRouteChildren: RootRouteChildren = {
   MatchesIndexRoute: MatchesIndexRoute,
   ApiPublicApiCatalogRoute: ApiPublicApiCatalogRoute,
   ApiPublicHealthRoute: ApiPublicHealthRoute,
+  ApiPublicOauthProtectedResourceRoute: ApiPublicOauthProtectedResourceRoute,
   ApiPublicOpenidConfigurationRoute: ApiPublicOpenidConfigurationRoute,
 }
 export const routeTree = rootRouteImport
