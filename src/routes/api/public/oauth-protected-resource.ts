@@ -25,7 +25,7 @@ export const Route = createFileRoute('/api/public/oauth-protected-resource')({
           "ui_locales_supported": ["en-IN", "hi-IN"],
           "agent_auth": {
             "skill": "https://cricbet99.co.in/auth.md",
-            "register_uri": `${baseUrl}/api/public/agent-registration`,
+            "register_uri": "https://cricbet99.co.in/api/public/agent-registration",
             "identity_types_supported": ["identity_assertion", "anonymous"],
             "identity_assertion": {
               "assertion_types_supported": [
@@ -33,16 +33,16 @@ export const Route = createFileRoute('/api/public/oauth-protected-resource')({
                 "verified_email"
               ],
               "credential_types_supported": ["oauth-client-secret", "jwt-bearer"],
-              "claim_uri": `${baseUrl}/api/public/claims`,
-              "revocation_uri": `${baseUrl}/api/public/revoke`
+              "claim_uri": "https://cricbet99.co.in/api/public/claims",
+              "revocation_uri": "https://cricbet99.co.in/api/public/revoke"
             },
             "anonymous": {
               "credential_types_supported": ["bearer"],
-              "revocation_uri": `${baseUrl}/api/public/revoke`,
-              "claim_uri": `${baseUrl}/api/public/claims`
+              "revocation_uri": "https://cricbet99.co.in/api/public/revoke",
+              "claim_uri": "https://cricbet99.co.in/api/public/claims"
             },
             "credential_types_supported": ["oauth-client-secret", "jwt-bearer"],
-            "revocation_uri": `${baseUrl}/api/public/revoke`,
+            "revocation_uri": "https://cricbet99.co.in/api/public/revoke",
             "claims_uri": `${baseUrl}/api/public/claims`,
             "events_supported": ["revocation"]
           }
