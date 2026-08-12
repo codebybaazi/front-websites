@@ -93,6 +93,30 @@ function SEOAuditReport() {
 
           </div>
 
+            <Card className="mb-12 bg-red-500/5 border-red-500/20 p-8 text-center max-w-4xl mx-auto">
+              <div className="flex flex-col items-center gap-4">
+                <AlertTriangle className="w-12 h-12 text-red-500" />
+                <h3 className="text-2xl font-bold text-red-500">Mobile Core Web Vitals Analysis</h3>
+                <p className="text-sm text-zinc-300 leading-relaxed text-left">
+                  i have updated the latest code on server and run the latest build and after that when i check core web vital on google search console in desktop it score 100 but in mobeil it score 73 have some issue still in mobile view so i am sharing this report link
+                </p>
+                <div className="bg-black/40 p-4 rounded-lg border border-red-500/30 font-mono text-xs break-all w-full text-zinc-400">
+                  https://pagespeed.web.dev/analysis/https-cricbet99-co-in/mh2n26n490?hl=en&form_factor=mobile
+                </div>
+                <p className="text-zinc-400 text-sm italic">
+                  so check this link and analyse issue mentioned on this report so find the issue and solve in running entire project to make mobile core web vital also score 100 like desktop...fix this completely in entire project
+                </p>
+                <a 
+                  href="https://pagespeed.web.dev/analysis/https-cricbet99-co-in/mh2n26n490?hl=en&form_factor=mobile" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="mt-4 px-8 py-3 bg-red-600 hover:bg-red-700 text-white rounded-full font-bold transition-all text-sm"
+                >
+                  Open PageSpeed Report
+                </a>
+              </div>
+            </Card>
+
           <div className="space-y-12">
             <Accordion type="multiple" defaultValue={["on-page", "technical"]} className="w-full space-y-6">
               <AccordionItem value="on-page" className="border-none">
