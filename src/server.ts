@@ -51,7 +51,15 @@ export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
       const handler = await getServerEntry();
-      const response = await handler.fetch(request, env, ctx);
+      
+      // Clone request to modify headers for TanStack Start internal handler
+      // If we don't do this, the handler might see Accept: text/markdown and 406/500
+      const internalRequest = new Request(request, {
+        headers: new Headers(request.headers)
+      });
+      internalRequest.headers.set("Accept", "text/html");
+
+      const response = await handler.fetch(internalRequest, env, ctx);
       
       const acceptHeader = request.headers.get("accept") || "";
       const isMarkdownRequested = acceptHeader.includes("text/markdown");
