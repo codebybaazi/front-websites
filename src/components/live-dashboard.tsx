@@ -127,6 +127,7 @@ export function LiveDashboard() {
   useEffect(() => {
     let cancel = false;
     async function tick() {
+      if (document.hidden) return; // Skip fetch if tab is hidden
       try {
         const res = await fetch(
           "https://b2b.max247.co/api/public/exchange/odds/inPlayAndPopularEvents",
@@ -146,10 +147,14 @@ export function LiveDashboard() {
         if (!cancel) setLoading(false);
       }
     }
-    tick();
+    
+    // Initial fetch after a short delay to prioritize LCP
+    const initialTimer = setTimeout(tick, 100);
     const t = setInterval(tick, 30000);
+    
     return () => {
       cancel = true;
+      clearTimeout(initialTimer);
       clearInterval(t);
     };
   }, []);
