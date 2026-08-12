@@ -29,7 +29,6 @@ import { Route as SportsIdRouteImport } from './routes/sports-id'
 import { Route as SportsBettingRouteImport } from './routes/sports-betting'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
-import { Route as SeoAuditReportRouteImport } from './routes/seo-audit-report'
 import { Route as SecurityRouteImport } from './routes/security'
 import { Route as ScheduleRouteImport } from './routes/schedule'
 import { Route as RulesRouteImport } from './routes/rules'
@@ -221,11 +220,6 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SeoAuditReportRoute = SeoAuditReportRouteImport.update({
-  id: '/seo-audit-report',
-  path: '/seo-audit-report',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SecurityRoute = SecurityRouteImport.update({
@@ -766,7 +760,6 @@ export interface FileRoutesByFullPath {
   '/rules': typeof RulesRoute
   '/schedule': typeof ScheduleRoute
   '/security': typeof SecurityRoute
-  '/seo-audit-report': typeof SeoAuditReportRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sports-betting': typeof SportsBettingRoute
@@ -880,7 +873,6 @@ export interface FileRoutesByTo {
   '/rules': typeof RulesRoute
   '/schedule': typeof ScheduleRoute
   '/security': typeof SecurityRoute
-  '/seo-audit-report': typeof SeoAuditReportRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sports-betting': typeof SportsBettingRoute
@@ -995,7 +987,6 @@ export interface FileRoutesById {
   '/rules': typeof RulesRoute
   '/schedule': typeof ScheduleRoute
   '/security': typeof SecurityRoute
-  '/seo-audit-report': typeof SeoAuditReportRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sports-betting': typeof SportsBettingRoute
@@ -1111,7 +1102,6 @@ export interface FileRouteTypes {
     | '/rules'
     | '/schedule'
     | '/security'
-    | '/seo-audit-report'
     | '/services'
     | '/sitemap.xml'
     | '/sports-betting'
@@ -1225,7 +1215,6 @@ export interface FileRouteTypes {
     | '/rules'
     | '/schedule'
     | '/security'
-    | '/seo-audit-report'
     | '/services'
     | '/sitemap.xml'
     | '/sports-betting'
@@ -1339,7 +1328,6 @@ export interface FileRouteTypes {
     | '/rules'
     | '/schedule'
     | '/security'
-    | '/seo-audit-report'
     | '/services'
     | '/sitemap.xml'
     | '/sports-betting'
@@ -1454,7 +1442,6 @@ export interface RootRouteChildren {
   RulesRoute: typeof RulesRoute
   ScheduleRoute: typeof ScheduleRoute
   SecurityRoute: typeof SecurityRoute
-  SeoAuditReportRoute: typeof SeoAuditReportRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SportsBettingRoute: typeof SportsBettingRoute
@@ -1634,13 +1621,6 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/seo-audit-report': {
-      id: '/seo-audit-report'
-      path: '/seo-audit-report'
-      fullPath: '/seo-audit-report'
-      preLoaderRoute: typeof SeoAuditReportRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/security': {
@@ -2395,7 +2375,6 @@ const rootRouteChildren: RootRouteChildren = {
   RulesRoute: RulesRoute,
   ScheduleRoute: ScheduleRoute,
   SecurityRoute: SecurityRoute,
-  SeoAuditReportRoute: SeoAuditReportRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SportsBettingRoute: SportsBettingRoute,

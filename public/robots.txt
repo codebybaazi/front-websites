@@ -3,5 +3,6 @@ Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
+Disallow: /seo-audit-report
 
 Sitemap: https://cricbet99.co.in/sitemap.xml

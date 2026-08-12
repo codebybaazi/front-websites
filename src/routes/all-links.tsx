@@ -14,6 +14,7 @@ export const Route = createFileRoute("/all-links")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://cricbet99.co.in/all-links" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "robots", content: "noindex, nofollow" },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/all-links" }],
     scripts: [

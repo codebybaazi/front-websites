@@ -26,7 +26,7 @@ export function generateScheduleSitemap(
     { path: "/football", changefreq: "daily", priority: "0.8" },
     { path: "/tennis", changefreq: "daily", priority: "0.8" },
     { path: "/horse-racing", changefreq: "daily", priority: "0.7" },
-    { path: "/all-links", changefreq: "weekly", priority: "0.5" },
+    
     
     { path: "/faq", changefreq: "monthly", priority: "0.4" },
     { path: "/about", changefreq: "monthly", priority: "0.3" },
