@@ -16,6 +16,8 @@ export const Route = createFileRoute('/matches/')({
       { property: "og:title", content: "Live Matches & Betting Predictions — Cricbet99" },
       { property: "og:description", content: "Expert match analysis and live betting predictions for today's top sports events." },
       { property: "og:url", content: "https://cricbet99.co.in/matches" },
+      { name: "keywords", content: "cricbet99, cricbet99 green, cricbet99 black, cricbet99 club, live cricket betting, ipl 2026 predictions, football betting today, tennis betting tips" },
+
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/matches" }],
     scripts: [
