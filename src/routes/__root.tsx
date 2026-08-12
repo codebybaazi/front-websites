@@ -169,51 +169,59 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   useEffect(() => {
-    // Implement WebMCP API to expose site tools to AI agents
-    if (typeof window !== 'undefined' && (navigator as any).modelContext?.provideContext) {
+    // Implement WebMCP API to expose site tools to AI agents via the browser
+    // Ref: https://webmachinelearning.github.io/webmcp/
+    if (typeof window !== 'undefined' && (navigator as any).modelContext?.registerTool) {
+      const controller = new AbortController();
+      const signal = controller.signal;
+
       try {
-        (navigator as any).modelContext.provideContext({
-          tools: [
-            {
-              name: "get_official_id",
-              description: "Provides instructions and a direct link to get an official Cricbet99 ID on WhatsApp.",
-              inputSchema: {
-                type: "object",
-                properties: {
-                  userName: { type: "string", description: "Optional name of the user" }
-                }
-              },
-              execute: async (args: any) => {
-                const waLink = "https://wa.me/919999999999";
-                return {
-                  message: `Hello ${args.userName || 'there'}! To get your official Cricbet99 ID, please message our support team on WhatsApp.`,
-                  action_url: waLink,
-                  cta: "Chat on WhatsApp"
-                };
+        const tools = [
+          {
+            name: "get_official_id",
+            description: "Get the official Cricbet99 ID on WhatsApp",
+            inputSchema: {
+              type: "object",
+              properties: {
+                userName: { type: "string", description: "Name of the user" }
               }
             },
-            {
-              name: "check_match_schedule",
-              description: "Exposes the latest sports match schedule for 2026-27.",
-              inputSchema: {
-                type: "object",
-                properties: {
-                  sport: { type: "string", enum: ["cricket", "football", "tennis"], description: "The sport to check schedule for" }
-                }
-              },
-              execute: async (args: any) => {
-                return {
-                  message: `Viewing the 2026-27 ${args.sport || 'sports'} schedule.`,
-                  action_url: `https://cricbet99.co.in/schedule?sport=${args.sport || ''}`,
-                  cta: "View Full Schedule"
-                };
-              }
+            execute: async (args: any) => {
+              const waLink = "https://wa.me/919999999999";
+              return {
+                message: `Hello ${args.userName || 'there'}! Redirecting you to get your official Cricbet99 ID.`,
+                action_url: waLink,
+                cta: "Chat on WhatsApp"
+              };
             }
-          ]
+          },
+          {
+            name: "check_match_schedule",
+            description: "View the 2026-27 sports match schedule",
+            inputSchema: {
+              type: "object",
+              properties: {
+                sport: { type: "string", enum: ["cricket", "football", "tennis"], description: "The sport to check" }
+              }
+            },
+            execute: async (args: any) => {
+              return {
+                message: `Navigating to the 2026-27 ${args.sport || 'sports'} schedule.`,
+                action_url: `https://cricbet99.co.in/schedule?sport=${args.sport || ''}`,
+                cta: "View Schedule"
+              };
+            }
+          }
+        ];
+
+        tools.forEach(tool => {
+          (navigator as any).modelContext.registerTool(tool, { signal });
         });
       } catch (error) {
-        console.error("WebMCP initialization failed:", error);
+        console.warn("WebMCP tool registration failed:", error);
       }
+
+      return () => controller.abort();
     }
   }, []);
 
