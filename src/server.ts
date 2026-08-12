@@ -88,17 +88,19 @@ export default {
       const isHome = url.pathname === "/";
       const isApiCatalog = url.pathname === "/.well-known/api-catalog";
       
+      let finalResponse = response;
+
+      // Force content-type for API Catalog to meet RFC 9727 requirements
       if (isApiCatalog) {
         const text = await response.text();
         const headers = new Headers(response.headers);
         headers.set("Content-Type", "application/linkset+json");
         return new Response(text, {
           status: response.status,
+          statusText: response.statusText,
           headers
         });
       }
-      
-      let finalResponse = response;
 
       // Handle Markdown request
       if (isMarkdownRequested && response.headers.get("content-type")?.includes("text/html")) {
@@ -119,7 +121,6 @@ export default {
           });
         } catch (error) {
           console.error("Markdown conversion failed:", error);
-          // Fallback occurs as finalResponse remains the original response
         }
       }
 
