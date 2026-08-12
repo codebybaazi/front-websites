@@ -49,6 +49,25 @@ export default {
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
+      
+      const url = new URL(request.url);
+      if (url.pathname === "/") {
+        const headers = new Headers(response.headers);
+        const linkHeaders = [
+          '</.well-known/api-catalog>; rel="api-catalog"',
+          '</all-links>; rel="service-doc"',
+          '</.well-known/ai-skills.json>; rel="ai-skills"',
+          '</about>; rel="describedby"'
+        ];
+        headers.append("Link", linkHeaders.join(", "));
+        
+        return new Response(response.body, {
+          status: response.status,
+          statusText: response.statusText,
+          headers
+        });
+      }
+
       return await normalizeCatastrophicSsrResponse(response);
     } catch (error) {
       console.error(error);
