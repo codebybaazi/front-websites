@@ -75,22 +75,24 @@ export default {
         });
       }
 
-      const response = await handler.fetch(internalRequest, env, ctx);
-      
-      // Handle /.well-known/api-catalog discovery route to force RFC-compliant Content-Type
+      // Special handling for discovery routes to override static asset behavior
       if (url.pathname === "/.well-known/api-catalog") {
-        const text = await response.text();
-        const headers = new Headers(response.headers);
-        // FORCE application/linkset+json for RFC 9727 compliance
-        headers.set("content-type", "application/linkset+json");
-        headers.set("cache-control", "no-store, no-cache, must-revalidate");
+        const apiReq = new Request(new URL("/api/public/api-catalog", request.url).toString(), {
+          method: "GET",
+          headers: request.headers
+        });
+        const res = await handler.fetch(apiReq, env, ctx);
+        const text = await res.text();
         return new Response(text, {
-          status: response.status,
-          statusText: response.statusText,
-          headers
+          status: res.status,
+          headers: {
+            "Content-Type": "application/linkset+json",
+            "Cache-Control": "no-store, no-cache, must-revalidate"
+          }
         });
       }
 
+      const response = await handler.fetch(internalRequest, env, ctx);
       let finalResponse = response;
 
       if (isMarkdownRequested && response.headers.get("content-type")?.includes("text/html")) {
