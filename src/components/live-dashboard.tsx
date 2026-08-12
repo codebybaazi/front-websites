@@ -556,7 +556,7 @@ export function LiveDashboard() {
             Odds refresh automatically every 30 seconds
           </div>
         )}
-        <SeoMatchIndex />
+        
       </div>
     </section>
   );
