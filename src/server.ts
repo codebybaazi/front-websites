@@ -125,12 +125,27 @@ export default {
       }
 
       if (url.pathname === "/.well-known/oauth-protected-resource") {
-
         const resourceReq = new Request(new URL("/api/public/oauth-protected-resource", request.url).toString(), {
           method: "GET",
           headers: request.headers
         });
         const res = await handler.fetch(resourceReq, env, ctx);
+        const text = await res.text();
+        return new Response(text, {
+          status: res.status,
+          headers: {
+            "Content-Type": "application/json",
+            "Cache-Control": "public, max-age=3600"
+          }
+        });
+      }
+
+      if (url.pathname === "/.well-known/mcp/server-card.json") {
+        const mcpReq = new Request(new URL("/api/public/mcp-server-card", request.url).toString(), {
+          method: "GET",
+          headers: request.headers
+        });
+        const res = await handler.fetch(mcpReq, env, ctx);
         const text = await res.text();
         return new Response(text, {
           status: res.status,
@@ -172,8 +187,8 @@ export default {
           '</.well-known/dns-aid.json>; rel="dns-aid"',
           '</.well-known/openid-configuration>; rel="openid-configuration"',
           '</.well-known/oauth-protected-resource>; rel="service-desc"',
+          '</.well-known/mcp/server-card.json>; rel="mcp-server-card"',
           '</about>; rel="describedby"'
-
         ];
         headers.append("Link", linkHeaders.join(", "));
         finalResponse = new Response(finalResponse.body, {
