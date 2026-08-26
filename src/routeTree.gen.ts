@@ -32,6 +32,7 @@ import { Route as Lotus365WinRouteImport } from './routes/lotus365-win'
 import { Route as MatchesRouteImport } from './routes/matches'
 import { Route as ScheduleRouteImport } from './routes/schedule'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as WaNumbersDotjsonRouteImport } from './routes/wa-numbers[.]json'
 import { Route as DotwellKnownOauthAuthorizationServerRouteImport } from './routes/[.]well-known.oauth-authorization-server'
 import { Route as DotwellKnownOauthProtectedResourceRouteImport } from './routes/[.]well-known.oauth-protected-resource'
 import { Route as DotwellKnownOpenidConfigurationRouteImport } from './routes/[.]well-known.openid-configuration'
@@ -162,6 +163,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WaNumbersDotjsonRoute = WaNumbersDotjsonRouteImport.update({
+  id: '/wa-numbers.json',
+  path: '/wa-numbers.json',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DotwellKnownOauthAuthorizationServerRoute =
   DotwellKnownOauthAuthorizationServerRouteImport.update({
     id: '/.well-known/oauth-authorization-server',
@@ -265,6 +271,7 @@ export interface FileRoutesByFullPath {
   '/matches': typeof MatchesRoute
   '/schedule': typeof ScheduleRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/wa-numbers.json': typeof WaNumbersDotjsonRoute
   '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
   '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
   '/.well-known/openid-configuration': typeof DotwellKnownOpenidConfigurationRoute
@@ -303,6 +310,7 @@ export interface FileRoutesByTo {
   '/matches': typeof MatchesRoute
   '/schedule': typeof ScheduleRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/wa-numbers.json': typeof WaNumbersDotjsonRoute
   '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
   '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
   '/.well-known/openid-configuration': typeof DotwellKnownOpenidConfigurationRoute
@@ -343,6 +351,7 @@ export interface FileRoutesById {
   '/matches': typeof MatchesRoute
   '/schedule': typeof ScheduleRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/wa-numbers.json': typeof WaNumbersDotjsonRoute
   '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
   '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
   '/.well-known/openid-configuration': typeof DotwellKnownOpenidConfigurationRoute
@@ -384,6 +393,7 @@ export interface FileRouteTypes {
     | '/matches'
     | '/schedule'
     | '/sitemap.xml'
+    | '/wa-numbers.json'
     | '/.well-known/oauth-authorization-server'
     | '/.well-known/oauth-protected-resource'
     | '/.well-known/openid-configuration'
@@ -422,6 +432,7 @@ export interface FileRouteTypes {
     | '/matches'
     | '/schedule'
     | '/sitemap.xml'
+    | '/wa-numbers.json'
     | '/.well-known/oauth-authorization-server'
     | '/.well-known/oauth-protected-resource'
     | '/.well-known/openid-configuration'
@@ -461,6 +472,7 @@ export interface FileRouteTypes {
     | '/matches'
     | '/schedule'
     | '/sitemap.xml'
+    | '/wa-numbers.json'
     | '/.well-known/oauth-authorization-server'
     | '/.well-known/oauth-protected-resource'
     | '/.well-known/openid-configuration'
@@ -501,6 +513,7 @@ export interface RootRouteChildren {
   MatchesRoute: typeof MatchesRoute
   ScheduleRoute: typeof ScheduleRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  WaNumbersDotjsonRoute: typeof WaNumbersDotjsonRoute
   DotwellKnownOauthAuthorizationServerRoute: typeof DotwellKnownOauthAuthorizationServerRoute
   DotwellKnownOauthProtectedResourceRoute: typeof DotwellKnownOauthProtectedResourceRoute
   DotwellKnownOpenidConfigurationRoute: typeof DotwellKnownOpenidConfigurationRoute
@@ -675,6 +688,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/wa-numbers.json': {
+      id: '/wa-numbers.json'
+      path: '/wa-numbers.json'
+      fullPath: '/wa-numbers.json'
+      preLoaderRoute: typeof WaNumbersDotjsonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/.well-known/oauth-authorization-server': {
       id: '/.well-known/oauth-authorization-server'
       path: '/.well-known/oauth-authorization-server'
@@ -838,6 +858,7 @@ const rootRouteChildren: RootRouteChildren = {
   MatchesRoute: MatchesRoute,
   ScheduleRoute: ScheduleRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  WaNumbersDotjsonRoute: WaNumbersDotjsonRoute,
   DotwellKnownOauthAuthorizationServerRoute:
     DotwellKnownOauthAuthorizationServerRoute,
   DotwellKnownOauthProtectedResourceRoute:

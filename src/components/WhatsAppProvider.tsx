@@ -37,16 +37,23 @@ export function WhatsAppProvider({
 
   useEffect(() => {
     let cancelled = false;
-    const host = window.location.hostname;
-    fetchWhatsAppNumber(host)
-      .then((n) => {
-        if (!cancelled && n) setRaw(n);
-      })
-      .catch(() => {
-        /* keep SSR / fallback number */
-      });
+    const load = () => {
+      fetchWhatsAppNumber(window.location.hostname)
+        .then((n) => {
+          if (!cancelled && n) setRaw(n);
+        })
+        .catch(() => {
+          /* keep SSR / fallback number */
+        });
+    };
+    load();
+    const onVis = () => {
+      if (document.visibilityState === "visible") load();
+    };
+    document.addEventListener("visibilitychange", onVis);
     return () => {
       cancelled = true;
+      document.removeEventListener("visibilitychange", onVis);
     };
   }, []);
 

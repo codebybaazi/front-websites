@@ -7,12 +7,13 @@ export const FALLBACK_WA_DIGITS = "8294924767";
 export const DEFAULT_WA_MESSAGE = "Hi Lotus365, I want to get started.";
 
 const THIS_SITE_HOST = "lotus365id.com";
-const CACHE_MS = 60_000;
-const FETCH_TIMEOUT_MS = 4_000;
+/** Same-origin proxy — Spaces CDN caches the raw JSON for 1h and varies by Origin. */
+export const WA_NUMBERS_PROXY_PATH = "/wa-numbers.json";
+const FETCH_TIMEOUT_MS = 8_000;
 
 type NumbersMap = Record<string, string>;
 
-let memoryCache: { host: string; number: string; at: number } | null = null;
+let inflight: Promise<NumbersMap> | null = null;
 
 export function hostKey(hostname: string): string {
   return hostname.replace(/^www\./i, "").toLowerCase();
@@ -65,39 +66,57 @@ export function resolveNumberFromMap(
   return FALLBACK_WA_DIGITS;
 }
 
-async function fetchNumbersMap(): Promise<NumbersMap> {
+function parseNumbersMap(json: unknown): NumbersMap {
+  if (!json || typeof json !== "object" || Array.isArray(json)) {
+    throw new Error("WhatsApp numbers JSON is not an object");
+  }
+  return json as NumbersMap;
+}
+
+/** Pulls the Spaces file. Query-bust so Cloudflare/Spaces cannot serve a stale Origin variant. */
+export async function fetchNumbersMapFromSource(): Promise<NumbersMap> {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
   try {
     // Do not pass `cache` — Node/undici used by Nitro throws on RequestInit.cache.
-    const res = await fetch(NUMBERS_URL, { signal: ctrl.signal });
+    const res = await fetch(`${NUMBERS_URL}?t=${Date.now()}`, { signal: ctrl.signal });
     if (!res.ok) throw new Error(`WhatsApp numbers JSON ${res.status}`);
-    const json = (await res.json()) as unknown;
-    if (!json || typeof json !== "object" || Array.isArray(json)) {
-      throw new Error("WhatsApp numbers JSON is not an object");
-    }
-    return json as NumbersMap;
+    return parseNumbersMap(await res.json());
   } finally {
     clearTimeout(timer);
   }
 }
 
+async function fetchNumbersMapInBrowser(): Promise<NumbersMap> {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
+  try {
+    const res = await fetch(`${WA_NUMBERS_PROXY_PATH}?t=${Date.now()}`, {
+      signal: ctrl.signal,
+    });
+    if (!res.ok) throw new Error(`WhatsApp numbers proxy ${res.status}`);
+    return parseNumbersMap(await res.json());
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function fetchNumbersMap(): Promise<NumbersMap> {
+  if (inflight) return inflight;
+  inflight = (typeof window === "undefined"
+    ? fetchNumbersMapFromSource()
+    : fetchNumbersMapInBrowser()
+  ).finally(() => {
+    inflight = null;
+  });
+  return inflight;
+}
+
 export async function fetchWhatsAppNumber(hostname: string): Promise<string> {
   if (typeof window === "undefined") return FALLBACK_WA_DIGITS;
-  const host = hostKey(hostname);
-  if (
-    memoryCache &&
-    memoryCache.host === host &&
-    Date.now() - memoryCache.at < CACHE_MS
-  ) {
-    return memoryCache.number;
-  }
-
   try {
     const map = await fetchNumbersMap();
-    const number = resolveNumberFromMap(map, hostname);
-    memoryCache = { host, number, at: Date.now() };
-    return number;
+    return resolveNumberFromMap(map, hostname);
   } catch {
     return FALLBACK_WA_DIGITS;
   }
