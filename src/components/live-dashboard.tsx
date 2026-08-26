@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Flame, ChevronRight, Radio, CalendarClock, Trophy, Zap, TrendingUp } from "lucide-react";
-import { WA } from "@/components/site-layout";
+import { useWhatsApp } from "@/hooks/use-whatsapp";
 import { Link } from "@tanstack/react-router";
 import { matches as curatedMatches } from "@/data/matches";
 
@@ -118,6 +118,7 @@ function fmtOdd(value?: number) {
 type Filter = "all" | "live" | "upcoming";
 
 export function LiveDashboard() {
+  const { wa } = useWhatsApp();
   const [events, setEvents] = useState<LiveEvent[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -525,7 +526,7 @@ export function LiveDashboard() {
                               </td>
                               <td className="px-4 py-3 align-middle text-right">
                                 <a
-                                  href={WA}
+                                  href={wa}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="inline-flex items-center justify-center gap-1.5 rounded-lg px-3 py-2 text-[11px] font-black uppercase tracking-widest text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-[1.03]"

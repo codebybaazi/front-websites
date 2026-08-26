@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MessageCircle } from "lucide-react";
-import { SiteLayout, PageHero, WA } from "@/components/site-layout";
+import { SiteLayout, PageHero } from "@/components/site-layout";
 import { AiOverview } from "@/components/ai-overview";
+import { useWhatsApp } from "@/hooks/use-whatsapp";
 
 export const Route = createFileRoute("/login")({
   head: () => ({
@@ -47,6 +48,7 @@ const tips = [
 ];
 
 function LoginPage() {
+  const { wa } = useWhatsApp();
   return (
     <SiteLayout>
       <PageHero
@@ -62,7 +64,7 @@ function LoginPage() {
             Our support team provides the verified Cricbet99 login URL, your unique username, and password help directly on WhatsApp to protect you from phishing and fake sites.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4">
-            <a href={WA} className="inline-flex items-center gap-2 rounded-full px-10 py-5 text-lg font-bold text-primary-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-[1.04]" style={{ background: "var(--gradient-gold)" }}>
+            <a href={wa} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full px-10 py-5 text-lg font-bold text-primary-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-[1.04]" style={{ background: "var(--gradient-gold)" }}>
               <MessageCircle className="h-6 w-6" /> Get Your Official Login Link
             </a>
             <p className="text-xs text-foreground/50">⚡ Instant response · 🔒 Secure & Private · 🕒 Open 24/7</p>

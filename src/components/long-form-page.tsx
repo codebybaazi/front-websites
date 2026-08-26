@@ -1,8 +1,9 @@
-import { SiteLayout, PageHero, CTABand, WA } from "./site-layout";
+import { SiteLayout, PageHero, CTABand } from "./site-layout";
 import { CheckCircle2, MessageCircle, ChevronRight } from "lucide-react";
 import { AiOverview } from "./ai-overview";
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+import { useWhatsApp } from "@/hooks/use-whatsapp";
 
 export interface PageContent {
   eyebrow: string;
@@ -18,6 +19,7 @@ export interface PageContent {
 }
 
 export function LongFormPage({ content, extra }: { content: PageContent; extra?: ReactNode }) {
+  const { wa } = useWhatsApp();
   const { eyebrow, title, titleAccent, subtitle, intro, features, sections, faqs, ctaHeading, ctaSub } = content;
   return (
     <SiteLayout>
@@ -60,7 +62,7 @@ export function LongFormPage({ content, extra }: { content: PageContent; extra?:
           <p key={i} className="text-base sm:text-lg" dangerouslySetInnerHTML={{ __html: p }} />
         ))}
         <a
-          href={WA}
+          href={wa}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-bold text-primary-foreground shadow-lg transition-transform hover:scale-105"

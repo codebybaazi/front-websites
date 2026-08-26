@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { X, Sparkles, Gift } from "lucide-react";
-import { WA } from "./site-layout";
+import { useWhatsApp } from "@/hooks/use-whatsapp";
 
 export function WhatsAppFloat() {
+  const { wa } = useWhatsApp();
   return (
     <a
-      href={WA}
+      href={wa}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
@@ -24,6 +25,7 @@ export function WhatsAppFloat() {
 }
 
 export function GetIdSlider() {
+  const { wa } = useWhatsApp();
   const [open, setOpen] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const [seconds, setSeconds] = useState(600); // 10-min urgency clock
@@ -125,7 +127,7 @@ export function GetIdSlider() {
             </div>
 
             <a
-              href={WA}
+              href={wa}
               target="_blank"
               rel="noopener noreferrer"
               className="relative mt-2.5 flex items-center justify-center gap-1.5 overflow-hidden rounded-lg px-3 py-2 text-[12px] font-black uppercase tracking-wide text-primary-foreground shadow-lg transition-transform hover:scale-[1.03] active:scale-[0.98]"

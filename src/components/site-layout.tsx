@@ -5,10 +5,7 @@ import logo from "@/assets/logo.png";
 
 import { WhatsAppFloat, GetIdSlider } from "./floating-widgets";
 import { MegaMenuHeader } from "./mega-menu";
-
-
-
-export const WA = "https://wa.me/919999999999";
+import { useWhatsApp } from "@/hooks/use-whatsapp";
 
 
 export const navLinks = [
@@ -30,6 +27,7 @@ export const navLinks = [
 ] as const;
 
 export function SiteHeader() {
+  const { wa } = useWhatsApp();
   return (
     <header className="sticky top-0 z-40 border-b border-primary/20 bg-background/70 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-6">
@@ -50,7 +48,9 @@ export function SiteHeader() {
           ))}
         </nav>
         <a
-          href={WA}
+          href={wa}
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="WhatsApp Now"
           className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/30 transition-transform hover:scale-105"
         >
@@ -63,6 +63,7 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
+  const { display } = useWhatsApp();
   return (
     <footer className="border-t border-primary/20 bg-background/60 backdrop-blur-xl">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:grid-cols-2 sm:gap-10 sm:px-6 sm:py-12 md:grid-cols-4 md:py-16">
@@ -134,7 +135,7 @@ export function SiteFooter() {
             <li><Link to="/terms" className="hover:text-primary">Terms & Conditions</Link></li>
             <li><Link to="/disclaimer" className="hover:text-primary">Disclaimer</Link></li>
             <li className="flex items-center gap-2 pt-2"><MessageCircle className="h-4 w-4 text-accent" /> WhatsApp 24/7</li>
-            <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-accent" /> +91 99999 99999</li>
+            <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-accent" /> {display}</li>
             <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-accent" /> support@cricbet99.co.in</li>
           </ul>
         </div>
@@ -216,6 +217,7 @@ export function PageHero({ eyebrow, title, subtitle, wide = false }: { eyebrow: 
 
 
 export function CTABand({ heading, sub }: { heading: string; sub: string }) {
+  const { wa, tel } = useWhatsApp();
   return (
     <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:py-20">
       <div
@@ -260,7 +262,9 @@ export function CTABand({ heading, sub }: { heading: string; sub: string }) {
 
               <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center md:justify-start">
                 <a
-                  href={WA}
+                  href={wa}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-bold text-primary-foreground shadow-2xl transition-transform hover:scale-[1.04] sm:text-base"
                   style={{ background: "var(--gradient-gold)" }}
                 >
@@ -269,7 +273,7 @@ export function CTABand({ heading, sub }: { heading: string; sub: string }) {
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
                 <a
-                  href="tel:+919999999999"
+                  href={tel}
                   className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/40 px-6 py-4 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:border-primary hover:bg-background/60"
                 >
                   <Phone className="h-4 w-4 text-primary" /> Call an Expert

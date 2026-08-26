@@ -11,6 +11,9 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { WhatsAppProvider } from "../hooks/use-whatsapp";
+import { getWhatsAppContact } from "../lib/whatsapp.functions";
+import { fetchWhatsAppContact } from "../lib/whatsapp";
 
 function NotFoundComponent() {
   return (
@@ -73,6 +76,9 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  loader: async () => ({
+    whatsapp: await getWhatsAppContact(),
+  }),
   head: () => ({
     meta: [
       { charSet: "utf-8" },
@@ -96,6 +102,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "preconnect", href: "https://wa.me" },
+      { rel: "preconnect", href: "https://frontwebsite.sgp1.cdn.digitaloceanspaces.com" },
       { rel: "preconnect", href: "https://b2b.max247.co" },
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/png", href: "https://cricbet99.co.in/favicon.png" },
@@ -168,6 +175,7 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const loaderData = Route.useLoaderData();
 
   useEffect(() => {
     // Implement WebMCP API to expose site tools to AI agents via the browser
@@ -188,10 +196,12 @@ function RootComponent() {
               }
             },
             execute: async (args: any) => {
-              const waLink = "https://wa.me/919999999999";
+              const contact =
+                (await fetchWhatsAppContact(window.location.hostname)) ??
+                loaderData?.whatsapp;
               return {
                 message: `Hello ${args.userName || 'there'}! Redirecting you to get your official Cricbet99 ID.`,
-                action_url: waLink,
+                action_url: contact?.wa ?? "https://wa.me/919999999999",
                 cta: "Chat on WhatsApp"
               };
             }
@@ -224,11 +234,13 @@ function RootComponent() {
 
       return () => controller.abort();
     }
-  }, []);
+  }, [loaderData?.whatsapp]);
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <WhatsAppProvider initial={loaderData?.whatsapp}>
+        <Outlet />
+      </WhatsAppProvider>
     </QueryClientProvider>
   );
 }

@@ -6,7 +6,7 @@ import {
   Swords, BookOpen, Building2, Sparkles, MessageCircle, Phone, Zap, ShieldCheck, Radio,
 } from "lucide-react";
 import logo from "@/assets/logo.png";
-import { WA } from "./site-layout";
+import { useWhatsApp } from "@/hooks/use-whatsapp";
 
 type Item = { label: string; to: string; desc?: string };
 type Group = { title: string; items: Item[] };
@@ -347,6 +347,7 @@ function Panel({ menu, onNavigate, anchorRef, onPanelEnter, onPanelLeave }: { me
 
 
 export function MegaMenuHeader() {
+  const { wa } = useWhatsApp();
   const [open, setOpen] = useState<MenuKey | null>(null);
   const [mobile, setMobile] = useState(false);
   const [mobileOpen, setMobileOpen] = useState<MenuKey | null>(null);
@@ -378,7 +379,7 @@ export function MegaMenuHeader() {
             </span>
           </div>
           <div className="flex items-center gap-4">
-            <a href={WA} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 transition-colors hover:text-accent">
+            <a href={wa} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 transition-colors hover:text-accent">
               <Phone className="h-3 w-3" /> 24/7 WhatsApp Support
             </a>
             <Link to="/login" className="hidden transition-colors hover:text-accent sm:inline">Login</Link>
@@ -435,7 +436,7 @@ export function MegaMenuHeader() {
 
             {/* Premium Get ID CTA */}
             <a
-              href={WA}
+              href={wa}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Get your Cricbet99 ID on WhatsApp"
@@ -611,7 +612,7 @@ export function MegaMenuHeader() {
             {/* Sticky footer CTA */}
             <div className="relative border-t border-primary/25 bg-[linear-gradient(180deg,oklch(0.10_0.02_260/0.9),oklch(0.08_0.02_260/0.95))] p-3">
               <a
-                href={WA}
+                href={wa}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobile(false)}

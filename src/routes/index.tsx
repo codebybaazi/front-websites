@@ -29,11 +29,12 @@ import {
   HelpCircle,
   Plus,
 } from "lucide-react";
-import { SiteLayout, WA, CTABand } from "@/components/site-layout";
+import { SiteLayout, CTABand } from "@/components/site-layout";
 import { LiveDashboard } from "@/components/live-dashboard";
 import { blogPosts } from "@/data/blog-posts";
 import { getRequestOrigin } from "@/lib/origin.functions";
 import { getAiOverview } from "@/lib/ai-overview.functions";
+import { useWhatsApp } from "@/hooks/use-whatsapp";
 import logo from "@/assets/logo.png";
 import heroBanner from "@/assets/hero-banner.jpg";
 import launchAviator from "@/assets/launch/aviator.jpg";
@@ -323,6 +324,7 @@ function Index() {
 
 
 function FaqSection() {
+  const { wa } = useWhatsApp();
   const [open, setOpen] = useState<number | null>(0);
   const IconMap = { ShieldCheck, Zap, Wallet, Trophy, Gift, Smartphone } as const;
   return (
@@ -443,7 +445,7 @@ function FaqSection() {
             </div>
           </div>
           <a
-            href={WA}
+            href={wa}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex shrink-0 items-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold text-background shadow-lg transition-transform hover:scale-[1.03]"
@@ -460,13 +462,14 @@ function FaqSection() {
 import { AiOverview } from "@/components/ai-overview";
 
 function IndexInner({ aiOverview }: { aiOverview: any }) {
+  const { wa } = useWhatsApp();
 
   return (
     <SiteLayout>
       {/* HERO BANNER */}
       <section className="relative w-full overflow-hidden border-b border-primary/20">
         <a
-          href={WA}
+          href={wa}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Get your Cricbet99 ID on WhatsApp"
@@ -525,7 +528,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
-                href={WA}
+                href={wa}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-pulse group inline-flex items-center gap-2 rounded-full px-7 py-4 text-base font-bold text-accent-foreground shadow-2xl transition-transform hover:scale-[1.03]"
@@ -651,7 +654,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
 
                 {/* CTA */}
                 <a
-                  href={WA}
+                  href={wa}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cta-pulse group relative mt-6 flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl px-5 py-3.5 text-sm font-extrabold uppercase tracking-wider text-accent-foreground"
@@ -884,7 +887,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
             {launchGames.map((g, i) => (
               <a
                 key={g.name}
-                href={WA}
+                href={wa}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`group relative block overflow-hidden rounded-2xl border border-primary/25 bg-background/40 shadow-[0_20px_50px_-30px_oklch(0_0_0/0.9)] transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/70 ${i % 2 === 0 ? "float-slow" : "float-slower"}`}
@@ -961,7 +964,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
           {/* CTA */}
           <div className="mt-12 flex flex-col items-center gap-4">
             <a
-              href={WA}
+              href={wa}
               target="_blank"
               rel="noopener noreferrer"
               className="cta-pulse inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm font-black uppercase tracking-widest text-primary-foreground shadow-2xl transition-transform hover:scale-[1.04] sm:text-base"
@@ -1042,7 +1045,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
               return (
                 <a
                   key={g.name}
-                  href={WA}
+                  href={wa}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`group relative block overflow-hidden bg-background/40 transition-all duration-500 hover:-translate-y-1 ${
@@ -1180,7 +1183,7 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
           {/* CTA row */}
           <div className="mt-10 flex flex-col items-center gap-2">
             <a
-              href={WA}
+              href={wa}
               target="_blank"
               rel="noopener noreferrer"
               className="cta-pulse inline-flex items-center gap-2 rounded-full px-6 py-3 text-xs font-black uppercase tracking-widest text-accent-foreground shadow-xl transition-transform hover:scale-[1.04] sm:text-sm"

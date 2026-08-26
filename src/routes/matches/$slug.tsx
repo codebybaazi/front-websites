@@ -16,6 +16,7 @@ import {
 } from 'lucide-react'
 import { buildBreadcrumbJsonLd } from '@/components/long-form-page'
 import { AiOverview } from '@/components/ai-overview'
+import { useWhatsApp } from '@/hooks/use-whatsapp'
 
 export const Route = createFileRoute('/matches/$slug')({
   loader: ({ params }) => {
@@ -77,6 +78,7 @@ export const Route = createFileRoute('/matches/$slug')({
 
 function MatchDetail() {
   const { match } = Route.useLoaderData() as { match: MatchFixture }
+  const { wa } = useWhatsApp()
 
   return (
     <SiteLayout>
@@ -133,7 +135,7 @@ function MatchDetail() {
                 </div>
               </div>
               <Button asChild className="w-full bg-[#D4AF37] hover:bg-[#B8962E] text-black font-bold mt-2">
-                <a href="https://wa.me/918000000000" target="_blank" rel="noopener noreferrer">Place Your Bet</a>
+                <a href={wa} target="_blank" rel="noopener noreferrer">Place Your Bet</a>
               </Button>
             </div>
           </div>
