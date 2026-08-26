@@ -234,9 +234,3 @@ export const navItems: NavItem[] = [
 
 export const siteName = "Mahadev Book";
 export const supportLine = "Verified. Instant. Trusted 24/7.";
-
-const WA_NUMBER = "919000012345";
-const REF_ID = `REF${Math.floor(100000 + Math.random() * 900000)}`;
-export const whatsappUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
-  `Hi, I want to get started. Ref: ${REF_ID}`
-)}`;

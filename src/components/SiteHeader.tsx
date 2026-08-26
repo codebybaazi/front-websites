@@ -8,12 +8,14 @@ import {
   ChevronDown,
   Sparkles,
 } from "lucide-react";
-import { navItems, supportLine, siteName, whatsappUrl } from "@/data/site";
+import { navItems, supportLine, siteName } from "@/data/site";
+import { useWhatsApp } from "@/components/WhatsAppProvider";
 import logoUrl from "@/assets/mahadev-logo.gif";
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState<string | null>(null);
+  const { whatsappUrl } = useWhatsApp();
 
   return (
     <header className="sticky top-0 z-40">

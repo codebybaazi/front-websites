@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { AIOverview } from "@/components/AIOverview";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
-import { whatsappUrl } from "@/data/site";
+import { useWhatsApp } from "@/components/WhatsAppProvider";
 import { posts } from "@/data/posts";
 import { BlogHeroBanner } from "@/components/BlogHeroBanner";
 
@@ -225,6 +225,7 @@ const info: [string, string][] = [
 
 function Index() {
   const { inPlayEvents } = Route.useLoaderData();
+  const { whatsappUrl } = useWhatsApp();
 
   return (
     <>

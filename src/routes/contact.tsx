@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { MessageCircle, Send, Phone, Mail, Clock, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { useWhatsApp } from "@/components/WhatsAppProvider";
+import { formatWhatsAppDisplay } from "@/lib/whatsapp";
 import { AIOverview } from "@/components/AIOverview";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
@@ -50,6 +52,8 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
+  const { whatsappUrl, number } = useWhatsApp();
+  const phoneDisplay = formatWhatsAppDisplay(number) || "+91 —";
 
   return (
     <>
@@ -84,18 +88,28 @@ function ContactPage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 py-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { icon: MessageCircle, t: "WhatsApp", d: "+91 00000 00000", cta: "Chat now" },
-            { icon: Send, t: "Telegram", d: "@mahadevbook_official", cta: "Open Telegram" },
-            { icon: Phone, t: "Phone", d: "+91 00000 00000", cta: "Call us" },
-            { icon: Mail, t: "Email", d: "support@mahadevbook.example", cta: "Send email" },
-          ].map((c) => (
-            <div key={c.t} className="rounded-2xl border border-border bg-card p-6">
-              <div className="h-11 w-11 rounded-lg bg-primary/15 text-primary grid place-items-center"><c.icon className="h-5 w-5" /></div>
-              <div className="mt-4 font-semibold">{c.t}</div>
-              <div className="text-sm text-muted-foreground mt-1 break-all">{c.d}</div>
-              <div className="mt-4 text-xs uppercase tracking-widest text-primary font-semibold">{c.cta} →</div>
-            </div>
-          ))}
+            { icon: MessageCircle, t: "WhatsApp", d: phoneDisplay, cta: "Chat now", href: whatsappUrl },
+            { icon: Send, t: "Telegram", d: "@mahadevbook_official", cta: "Open Telegram", href: "https://t.me/" },
+            { icon: Phone, t: "Phone", d: phoneDisplay, cta: "Call us", href: number ? `tel:+${number}` : undefined },
+            { icon: Mail, t: "Email", d: "support@mahadevbook.example", cta: "Send email", href: "mailto:support@mahadevbook.example" },
+          ].map((c) => {
+            const inner = (
+              <>
+                <div className="h-11 w-11 rounded-lg bg-primary/15 text-primary grid place-items-center"><c.icon className="h-5 w-5" /></div>
+                <div className="mt-4 font-semibold">{c.t}</div>
+                <div className="text-sm text-muted-foreground mt-1 break-all">{c.d}</div>
+                <div className="mt-4 text-xs uppercase tracking-widest text-primary font-semibold">{c.cta} →</div>
+              </>
+            );
+            const className = "rounded-2xl border border-border bg-card p-6 block hover:border-primary/40 transition";
+            return c.href ? (
+              <a key={c.t} href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined} className={className}>
+                {inner}
+              </a>
+            ) : (
+              <div key={c.t} className={className}>{inner}</div>
+            );
+          })}
         </div>
       </section>
 

@@ -3,7 +3,8 @@ import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
 import { AIOverview } from "@/components/AIOverview";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { fetchInPlayEvents, type ApiEvent } from "@/components/InPlayEvents";
-import { whatsappUrl } from "@/data/site";
+import { useWhatsApp } from "@/components/WhatsAppProvider";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import {
   MessageCircle,
   ShieldCheck,
@@ -84,13 +85,13 @@ function tipMessage(e: ApiEvent) {
   const league = e.competition?.name ?? e.eventType;
   return `Hi Mahadev desk, send me today's prediction for ${e.event.name} (${league}).`;
 }
-function whatsappFor(e: ApiEvent) {
-  const base = whatsappUrl.split("?")[0];
-  return `${base}?text=${encodeURIComponent(tipMessage(e))}`;
+function whatsappFor(number: string, e: ApiEvent) {
+  return buildWhatsAppUrl(number, tipMessage(e));
 }
 
 // ---------- page ----------
 function PredictionsPage() {
+  const { whatsappUrl } = useWhatsApp();
   const { inPlayEvents } = Route.useLoaderData() as { inPlayEvents: ApiEvent[] };
   const cricket = inPlayEvents.filter((e: ApiEvent) => e.eventType === "Cricket");
   const others = inPlayEvents.filter((e: ApiEvent) => e.eventType !== "Cricket");
@@ -411,11 +412,12 @@ function OddsPill({ label, back, lay }: { label: string; back?: number | null; l
 }
 
 function MatchCard({ e, live, compact }: { e: ApiEvent; live?: boolean; compact?: boolean }) {
+  const { number, whatsappUrl } = useWhatsApp();
   const backs = (e.market?.consolidatedRunner?.back ?? []).filter((r) => r?.runner);
   const lays = e.market?.consolidatedRunner?.lay ?? [];
   const [t1, t2] = splitTeams(e.event.name);
   const league = e.competition?.name ?? e.market?.name ?? e.eventType;
-  const link = whatsappFor(e);
+  const link = whatsappFor(number, e);
   const seoTitle = `${e.event.name} — ${league} ${live ? "live" : "upcoming"} ${e.eventType} prediction`;
 
   return (
@@ -483,12 +485,13 @@ function MatchCard({ e, live, compact }: { e: ApiEvent; live?: boolean; compact?
 }
 
 function FeaturedCard({ e }: { e: ApiEvent }) {
+  const { number, whatsappUrl } = useWhatsApp();
   const [t1, t2] = splitTeams(e.event.name);
   const league = e.competition?.name ?? e.eventType;
   const backs = (e.market?.consolidatedRunner?.back ?? []).filter((r) => r?.runner);
   const lays = e.market?.consolidatedRunner?.lay ?? [];
   const live = isLive(e);
-  const link = whatsappFor(e);
+  const link = whatsappFor(number, e);
   return (
     <div className="relative overflow-hidden rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/[0.08] via-background to-background p-6 sm:p-8">
       <div aria-hidden className="absolute -top-24 -right-16 h-64 w-64 rounded-full bg-primary/20 blur-3xl" />

@@ -1,18 +1,19 @@
-import { siteName, whatsappUrl } from "@/data/site";
+import { siteName } from "@/data/site";
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Twitter, Youtube, Send, MessageCircle } from "lucide-react";
 import logoUrl from "@/assets/mahadev-logo.gif";
-
-const socials = [
-  { label: "WhatsApp", href: whatsappUrl, Icon: MessageCircle },
-  { label: "Telegram", href: "https://t.me/", Icon: Send },
-  { label: "Instagram", href: "https://instagram.com/", Icon: Instagram },
-  { label: "Facebook", href: "https://facebook.com/", Icon: Facebook },
-  { label: "Twitter", href: "https://twitter.com/", Icon: Twitter },
-  { label: "YouTube", href: "https://youtube.com/", Icon: Youtube },
-];
+import { useWhatsApp } from "@/components/WhatsAppProvider";
 
 export function SiteFooter() {
+  const { whatsappUrl } = useWhatsApp();
+  const socials = [
+    { label: "WhatsApp", href: whatsappUrl, Icon: MessageCircle },
+    { label: "Telegram", href: "https://t.me/", Icon: Send },
+    { label: "Instagram", href: "https://instagram.com/", Icon: Instagram },
+    { label: "Facebook", href: "https://facebook.com/", Icon: Facebook },
+    { label: "Twitter", href: "https://twitter.com/", Icon: Twitter },
+    { label: "YouTube", href: "https://youtube.com/", Icon: Youtube },
+  ];
   return (
     <footer className="border-t border-border">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10 sm:py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">

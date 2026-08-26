@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { X, ArrowUpRight, Zap } from "lucide-react";
-import { whatsappUrl as WHATSAPP_URL, siteName } from "@/data/site";
+import { siteName } from "@/data/site";
+import { useWhatsApp } from "@/components/WhatsAppProvider";
 
 export function FloatingWhatsApp() {
   const [showPopup, setShowPopup] = useState(false);
   const [dismissed, setDismissed] = useState(false);
+  const { whatsappUrl: WHATSAPP_URL } = useWhatsApp();
 
   useEffect(() => {
     if (dismissed) return;

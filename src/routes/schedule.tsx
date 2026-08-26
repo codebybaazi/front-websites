@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
 import { AIOverview } from "@/components/AIOverview";
 import { RelatedLinks } from "@/components/RelatedLinks";
-import { whatsappUrl } from "@/data/site";
+import { useWhatsApp } from "@/components/WhatsAppProvider";
 import {
   Calendar,
   MapPin,
@@ -135,6 +135,7 @@ const SPORT_ICON: Record<Sport, typeof Trophy> = {
 };
 
 function SchedulePage() {
+  const { whatsappUrl } = useWhatsApp();
   const [tab, setTab] = useState<Sport | "all">("all");
   const seriesList = getSeriesBySport(tab);
 

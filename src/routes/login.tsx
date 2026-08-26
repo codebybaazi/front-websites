@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ShieldCheck, Smartphone, Lock, MessageCircle, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useWhatsApp } from "@/components/WhatsAppProvider";
 import { AIOverview } from "@/components/AIOverview";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, type FAQItem } from "@/components/FAQSection";
@@ -96,6 +97,7 @@ export const Route = createFileRoute("/login")({
 });
 
 function LoginPage() {
+  const { whatsappUrl } = useWhatsApp();
   return (
     <>
       <section className="mx-auto max-w-7xl px-4 sm:px-6 pt-14 sm:pt-20 pb-8">
@@ -112,7 +114,7 @@ function LoginPage() {
 
         <div className="mt-8 flex flex-col sm:flex-row gap-3">
           <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white">
-            <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="h-5 w-5 mr-2" /> Get Login on WhatsApp
             </a>
           </Button>

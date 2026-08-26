@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
 import { RelatedLinks } from "@/components/RelatedLinks";
-import { whatsappUrl } from "@/data/site";
+import { useWhatsApp } from "@/components/WhatsAppProvider";
 import { posts } from "@/data/posts";
 import {
   Calendar,
@@ -135,6 +135,7 @@ const matchFaqs = (title: string, seriesName: string, isFootball: boolean): FAQI
 
 function MatchPage() {
   const { match, series } = Route.useLoaderData();
+  const { whatsappUrl } = useWhatsApp();
   const isFootball = series.sport === "football" && hasRealTeams(match.home, match.away);
   const isTennis = series.sport === "tennis";
   const isCricket = series.sport === "cricket" && hasKnownCricketTeams(match.home, match.away);

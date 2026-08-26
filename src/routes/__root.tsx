@@ -15,6 +15,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { WebMCPProvider } from "@/components/WebMCPProvider";
+import { WhatsAppProvider } from "@/components/WhatsAppProvider";
 
 function NotFoundComponent() {
   return (
@@ -160,15 +161,17 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="min-h-screen bg-background text-foreground flex flex-col">
-        <SiteHeader />
-        <main className="flex-1">
-          <Outlet />
-        </main>
-        <SiteFooter />
-        <FloatingWhatsApp />
-        <WebMCPProvider />
-      </div>
+      <WhatsAppProvider>
+        <div className="min-h-screen bg-background text-foreground flex flex-col">
+          <SiteHeader />
+          <main className="flex-1">
+            <Outlet />
+          </main>
+          <SiteFooter />
+          <FloatingWhatsApp />
+          <WebMCPProvider />
+        </div>
+      </WhatsAppProvider>
     </QueryClientProvider>
   );
 }

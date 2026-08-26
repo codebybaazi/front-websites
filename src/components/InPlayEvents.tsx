@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Radio, Clock, Trophy } from "lucide-react";
-import { whatsappUrl } from "@/data/site";
+import { useWhatsApp } from "@/components/WhatsAppProvider";
 
 type Runner = { runner: { id: number; name: string }; price: number | null; size: number | null };
 export type ApiEvent = {
@@ -91,6 +91,7 @@ function OddCell({ label, back, lay }: { label: string; back?: number | null; la
 }
 
 function EventRow({ e }: { e: ApiEvent }) {
+  const { whatsappUrl } = useWhatsApp();
   const backs = (e.market?.consolidatedRunner?.back ?? []).filter((r) => r?.runner);
   const lays = e.market?.consolidatedRunner?.lay ?? [];
   const live = isLiveNow(e);
@@ -184,6 +185,7 @@ function EventRow({ e }: { e: ApiEvent }) {
 }
 
 export default function InPlayEvents({ initialEvents = [] }: { initialEvents?: ApiEvent[] } = {}) {
+  const { whatsappUrl } = useWhatsApp();
   const [data, setData] = useState<ApiEvent[]>(initialEvents);
   const [loading, setLoading] = useState(initialEvents.length === 0);
   const [error, setError] = useState<string | null>(null);

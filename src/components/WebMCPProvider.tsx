@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { buildWhatsAppUrl, fetchWhatsAppNumber, getCachedWhatsAppNumber } from "@/lib/whatsapp";
 
 type ToolDef = {
   name: string;
@@ -8,9 +9,10 @@ type ToolDef = {
   execute: (input: any) => Promise<{ content: Array<{ type: string; text: string }> }>;
 };
 
-const WHATSAPP_URL = "https://wa.me/919999999999";
-const openWA = (msg: string) => {
-  const url = `${WHATSAPP_URL}?text=${encodeURIComponent(msg)}`;
+const openWA = async (msg: string) => {
+  let number = getCachedWhatsAppNumber();
+  if (!number) number = await fetchWhatsAppNumber();
+  const url = buildWhatsAppUrl(number, msg);
   if (typeof window !== "undefined") window.open(url, "_blank", "noopener,noreferrer");
   return url;
 };

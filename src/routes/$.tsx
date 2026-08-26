@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { pagesByPath, pages, type SitePage } from "@/data/pages";
-import { whatsappUrl } from "@/data/site";
+import { useWhatsApp } from "@/components/WhatsAppProvider";
 import { QuickLinks } from "@/components/QuickLinks";
 import heroCricket from "@/assets/hero-cricket.jpg";
 import heroSports from "@/assets/hero-sports.jpg";
@@ -78,6 +78,7 @@ function NotFoundView() {
 
 function SitePageView() {
   const { page } = Route.useLoaderData();
+  const { whatsappUrl } = useWhatsApp();
   const hero = heroMap[page.hero] ?? heroGeneral;
   const related = pages.filter((p) => p.category === page.category && p.path !== page.path).slice(0, 4);
 

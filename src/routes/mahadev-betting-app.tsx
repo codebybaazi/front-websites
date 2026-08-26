@@ -3,7 +3,7 @@ import { Download, ShieldCheck, Zap, Wallet, Trophy, MessageCircle, BadgeCheck, 
 import { AIOverview } from "@/components/AIOverview";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, type FAQItem } from "@/components/FAQSection";
-import { whatsappUrl } from "@/data/site";
+import { useWhatsApp } from "@/components/WhatsAppProvider";
 
 const appFaqs: FAQItem[] = [
   { q: "What is the Mahadev betting app?", a: "The Mahadev betting app is India's trusted online betting and gaming platform — cricket, football, tennis, live casino, Aviator and Teen Patti under a single verified Mahadev ID." },
@@ -113,6 +113,7 @@ const steps = [
 ];
 
 function Page() {
+  const { whatsappUrl } = useWhatsApp();
   return (
     <>
       <section className="relative pt-4 pb-16">

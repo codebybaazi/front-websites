@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { createHash } from 'crypto'
+import { buildWhatsAppUrl, FALLBACK_HOST, fetchWhatsAppNumber, hostnameFromValue } from '@/lib/whatsapp'
 
 const ISSUER = 'https://mahadevbookss.com'
 const UPDATED_AT = '2026-07-23T00:00:00.000Z'
@@ -373,14 +374,26 @@ const index = {
 export const Route = createFileRoute('/.well-known/agent-skills/index.json')({
   server: {
     handlers: {
-      GET: async () =>
-        new Response(JSON.stringify(index, null, 2), {
+      GET: async ({ request }) => {
+        const host = hostnameFromValue(
+          request?.headers?.get('x-forwarded-host') ?? request?.headers?.get('host') ?? FALLBACK_HOST,
+        )
+        const number = await fetchWhatsAppNumber(host)
+        const body = {
+          ...index,
+          contact: {
+            ...index.contact,
+            whatsapp: number ? buildWhatsAppUrl(number, 'Hi, I want to get started.') : index.contact.whatsapp,
+          },
+        }
+        return new Response(JSON.stringify(body, null, 2), {
           headers: {
             'Content-Type': 'application/json; charset=utf-8',
-            'Cache-Control': 'public, max-age=3600',
+            'Cache-Control': 'no-store',
             'Access-Control-Allow-Origin': '*',
           },
-        }),
+        })
+      },
     },
   },
 })
