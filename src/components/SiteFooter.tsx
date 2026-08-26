@@ -1,4 +1,5 @@
-import { siteName, whatsappUrl } from "@/data/site";
+import { siteName } from "@/data/site";
+import { useWhatsAppUrl } from "@/components/WhatsAppProvider";
 import {
   Instagram,
   Send,
@@ -11,54 +12,6 @@ import {
 import lotusLogo from "@/assets/lotus365-main-logo.png";
 import { PageFaq } from "@/components/PageFaq";
 
-
-const socials = [
-  { label: "WhatsApp", href: whatsappUrl, Icon: MessageCircle },
-  { label: "Telegram", href: "https://t.me/", Icon: Send },
-  { label: "Instagram", href: "https://instagram.com/", Icon: Instagram },
-  { label: "YouTube", href: "https://youtube.com/", Icon: Youtube },
-  { label: "Twitter", href: "https://twitter.com/", Icon: Twitter },
-];
-
-const cols: [string, [string, string, boolean?][]][] = [
-  [
-    "Bet & Play",
-    [
-      ["IPL 2026 Betting", "/ipl-betting"],
-      ["2026–27 Match Schedule", "/schedule"],
-      ["All Matches", "/matches"],
-      ["Cricket Exchange", "/lotus365-exchange"],
-      ["Live Casino", "/casino"],
-      ["Teen Patti & Andar Bahar", "/indian-card-games"],
-      ["Football & Tennis", "/football-betting"],
-    ],
-  ],
-  [
-    "Your Lotus ID",
-    [
-      ["Get Instant ID", "/lotus365-id"],
-      ["VIP Program", "#vip"],
-      ["Bonuses & Cashback", "/lotus365-book-bonus"],
-      ["Big Win Stories", "/lotus365-big-win-stories"],
-      ["Lotus365 App", "/lotus365-book-app"],
-      ["Lotus365 vs Skyexchange", "/lotus365-vs-skyexchange"],
-      ["Blog & Tips", "/blog"],
-    ],
-  ],
-  [
-    "Wallet & Support",
-    [
-      ["WhatsApp Concierge", whatsappUrl, true],
-      ["UPI Deposits", "/how-to-deposit"],
-      ["Instant Withdrawals", "/how-to-withdraw-safely"],
-      ["KYC & Security", "/kyc-verification-policy"],
-      ["Responsible Gaming", "/responsible-gaming"],
-      ["All Links", "/all-links"],
-    ],
-  ],
-
-];
-
 const marqueeTags = [
   "Instant UPI Payouts",
   "Cricket · Casino · Exchange",
@@ -68,7 +21,56 @@ const marqueeTags = [
   "Play Responsibly · 18+",
 ];
 
+
 export function SiteFooter() {
+  const whatsappUrl = useWhatsAppUrl();
+
+  const socials = [
+    { label: "WhatsApp", href: whatsappUrl, Icon: MessageCircle },
+    { label: "Telegram", href: "https://t.me/", Icon: Send },
+    { label: "Instagram", href: "https://instagram.com/", Icon: Instagram },
+    { label: "YouTube", href: "https://youtube.com/", Icon: Youtube },
+    { label: "Twitter", href: "https://twitter.com/", Icon: Twitter },
+  ];
+
+  const cols: [string, [string, string, boolean?][]][] = [
+    [
+      "Bet & Play",
+      [
+        ["IPL 2026 Betting", "/ipl-betting"],
+        ["2026–27 Match Schedule", "/schedule"],
+        ["All Matches", "/matches"],
+        ["Cricket Exchange", "/lotus365-exchange"],
+        ["Live Casino", "/casino"],
+        ["Teen Patti & Andar Bahar", "/indian-card-games"],
+        ["Football & Tennis", "/football-betting"],
+      ],
+    ],
+    [
+      "Your Lotus ID",
+      [
+        ["Get Instant ID", "/lotus365-id"],
+        ["VIP Program", "#vip"],
+        ["Bonuses & Cashback", "/lotus365-book-bonus"],
+        ["Big Win Stories", "/lotus365-big-win-stories"],
+        ["Lotus365 App", "/lotus365-book-app"],
+        ["Lotus365 vs Skyexchange", "/lotus365-vs-skyexchange"],
+        ["Blog & Tips", "/blog"],
+      ],
+    ],
+    [
+      "Wallet & Support",
+      [
+        ["WhatsApp Concierge", whatsappUrl, true],
+        ["UPI Deposits", "/how-to-deposit"],
+        ["Instant Withdrawals", "/how-to-withdraw-safely"],
+        ["KYC & Security", "/kyc-verification-policy"],
+        ["Responsible Gaming", "/responsible-gaming"],
+        ["All Links", "/all-links"],
+      ],
+    ],
+  ];
+
   return (
     <>
       <PageFaq />

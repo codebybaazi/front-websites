@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { QuickLinks } from "@/components/QuickLinks";
 import { AiOverview } from "@/components/AiOverview";
-import { whatsappUrl } from "@/data/site";
+import { useWhatsAppUrl } from "@/components/WhatsAppProvider";
 import {
   Check,
   X,
@@ -128,6 +128,7 @@ const HIGHLIGHTS = [
 ];
 
 function ComparePage() {
+  const whatsappUrl = useWhatsAppUrl();
   return (
     <div className="min-h-screen text-foreground">
       <SiteHeader />

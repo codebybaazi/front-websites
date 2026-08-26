@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
-import { navItems, siteName, whatsappUrl } from "@/data/site";
+import { navItems, siteName } from "@/data/site";
+import { WhatsAppLink } from "@/components/WhatsAppProvider";
 import lotusLogo from "@/assets/lotus365-main-logo.png";
 
 const staticTickers: [string, string][] = [
@@ -157,14 +158,9 @@ export function SiteHeader() {
           <div className="flex items-center gap-3 lg:gap-6 shrink-0">
             <Link to="/lotus365-login" className="hover:text-primary transition-colors">Log in</Link>
             <span className="opacity-30 hidden lg:inline">/</span>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="font-semibold text-primary hover:text-accent transition-colors"
-            >
+            <WhatsAppLink className="font-semibold text-primary hover:text-accent transition-colors">
               Concierge
-            </a>
+            </WhatsAppLink>
           </div>
         </div>
       </div>
@@ -299,10 +295,7 @@ export function SiteHeader() {
               >
                 Log in
               </Link>
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noreferrer"
+              <WhatsAppLink
                 className="btn-whatsapp group inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold text-emerald-deep transition-all hover:shadow-[0_10px_30px_-8px_oklch(0.82_0.15_88/0.6)] whitespace-nowrap"
                 style={{
                   background:
@@ -314,7 +307,7 @@ export function SiteHeader() {
                 <span className="inline-flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-emerald-deep/15 transition-transform group-hover:translate-x-0.5">
                   <ArrowUpRight className="h-3 w-3" />
                 </span>
-              </a>
+              </WhatsAppLink>
               <button
                 type="button"
                 aria-label="Toggle menu"
@@ -450,10 +443,7 @@ export function SiteHeader() {
             >
               Log in
             </Link>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noreferrer"
+            <WhatsAppLink
               onClick={closeMobile}
               className="btn-whatsapp text-center py-3 rounded-full text-sm font-semibold text-emerald-deep"
               style={{
@@ -462,7 +452,7 @@ export function SiteHeader() {
               }}
             >
               Play now
-            </a>
+            </WhatsAppLink>
           </div>
         </div>
       </div>

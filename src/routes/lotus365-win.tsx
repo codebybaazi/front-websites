@@ -4,7 +4,7 @@ import { AiOverview } from "@/components/AiOverview";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { QuickLinks } from "@/components/QuickLinks";
-import { whatsappUrl } from "@/data/site";
+import { useWhatsAppUrl } from "@/components/WhatsAppProvider";
 import { Trophy, Zap, MessageCircle } from "lucide-react";
 
 const URL = "https://lotus365id.com/lotus365-win";
@@ -79,6 +79,7 @@ export const Route = createFileRoute("/lotus365-win")({
 });
 
 function WinPage() {
+  const whatsappUrl = useWhatsAppUrl();
   return (
     <div className="min-h-screen text-foreground">
       <SiteHeader />

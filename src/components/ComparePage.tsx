@@ -3,7 +3,7 @@ import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { SiteFooter } from "@/components/SiteFooter";
 import { QuickLinks } from "@/components/QuickLinks";
 import { AiOverview } from "@/components/AiOverview";
-import { whatsappUrl } from "@/data/site";
+import { useWhatsAppUrl } from "@/components/WhatsAppProvider";
 import {
   Check,
   X,
@@ -35,6 +35,7 @@ const HIGHLIGHTS = [
 ];
 
 export function ComparePageView({ data }: { data: CompareData }) {
+  const whatsappUrl = useWhatsAppUrl();
   const url = `https://lotus365id.com/${data.slug}`;
   return (
     <div className="min-h-screen text-foreground">

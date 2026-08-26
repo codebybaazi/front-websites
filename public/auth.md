@@ -59,4 +59,4 @@ Dynamic Client Registration (RFC 7591) is supported. Include your
 
 ## Contact
 
-Concierge & support: https://wa.me/919000012345
+Concierge & support: https://wa.me/918294924767

@@ -2,7 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { QuickLinks } from "@/components/QuickLinks";
-import { siteName, whatsappUrl } from "@/data/site";
+import { siteName } from "@/data/site";
+import { useWhatsAppUrl } from "@/components/WhatsAppProvider";
 import { PAGES } from "@/data/pages";
 import { GUIDES } from "@/data/guides";
 import { CASES } from "@/data/cases";
@@ -77,10 +78,6 @@ const comparisonLinks: LinkItem[] = [
   { label: "Lotus365 vs Lords Exchange", href: "/lotus365-vs-lords-exchange" },
 ];
 
-const supportLinks: LinkItem[] = [
-  { label: "WhatsApp Concierge", href: whatsappUrl, external: true },
-];
-
 // -----------------------------
 // Humanize slug helper
 // -----------------------------
@@ -98,7 +95,7 @@ function short(label: string, max = 70): string {
 // -----------------------------
 // Build groups from data
 // -----------------------------
-function buildGroups(): Group[] {
+function buildGroups(whatsappUrl: string): Group[] {
   const pageLinks: LinkItem[] = Object.values(PAGES)
     .map((p) => ({ label: humanize(p.slug), href: `/${p.slug}` }))
     .sort((a, b) => a.label.localeCompare(b.label));
@@ -130,7 +127,9 @@ function buildGroups(): Group[] {
     { title: "Main Pages", eyebrow: "Start here", links: mainLinks },
     { title: "App & Download", eyebrow: "Mobile", links: appLinks },
     { title: "Comparisons", eyebrow: "Vs Others", links: comparisonLinks },
-    { title: "Support", eyebrow: "Talk to us", links: supportLinks },
+    { title: "Support", eyebrow: "Talk to us", links: [
+      { label: "WhatsApp Concierge", href: whatsappUrl, external: true },
+    ] },
     { title: "Content Pages", eyebrow: "Deep dives", links: pageLinks },
     { title: "Betting Guides", eyebrow: "How-to", links: guideLinks },
     { title: "Case Studies", eyebrow: "Real players", links: caseLinks },
@@ -139,7 +138,8 @@ function buildGroups(): Group[] {
 }
 
 function AllLinksPage() {
-  const groups = useMemo(buildGroups, []);
+  const whatsappUrl = useWhatsAppUrl();
+  const groups = useMemo(() => buildGroups(whatsappUrl), [whatsappUrl]);
   const [q, setQ] = useState("");
 
   const filtered = useMemo(() => {

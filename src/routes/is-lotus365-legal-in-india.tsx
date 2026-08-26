@@ -4,7 +4,7 @@ import { AiOverview } from "@/components/AiOverview";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { QuickLinks } from "@/components/QuickLinks";
-import { whatsappUrl } from "@/data/site";
+import { useWhatsAppUrl } from "@/components/WhatsAppProvider";
 import { Scale, ShieldCheck, MessageCircle } from "lucide-react";
 
 const URL = "https://lotus365id.com/is-lotus365-legal-in-india";
@@ -80,6 +80,7 @@ export const Route = createFileRoute("/is-lotus365-legal-in-india")({
 });
 
 function LegalPage() {
+  const whatsappUrl = useWhatsAppUrl();
   return (
     <div className="min-h-screen text-foreground">
       <SiteHeader />

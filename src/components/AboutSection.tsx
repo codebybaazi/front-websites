@@ -1,4 +1,5 @@
 import { ShieldCheck, Trophy, Users, Zap, Sparkles, ChevronRight } from "lucide-react";
+import { WhatsAppLink } from "@/components/WhatsAppProvider";
 
 function LotusMark({ className = "" }: { className?: string }) {
   return (
@@ -111,14 +112,12 @@ export function AboutSection() {
               >
                 Discover our story <ChevronRight className="h-4 w-4" />
               </a>
-              <a
-                href="https://wa.me/919000012345?text=Hi%20Lotus365%2C%20I%20want%20to%20get%20my%20Lotus%20ID."
-                target="_blank"
-                rel="noreferrer"
+              <WhatsAppLink
+                text="Hi Lotus365, I want to get my Lotus ID."
                 className="gold-border px-7 py-3.5 rounded-full inline-flex items-center gap-2 text-sm text-primary hover:bg-primary/5 transition-colors cursor-pointer"
               >
                 Get your Lotus ID
-              </a>
+              </WhatsAppLink>
             </div>
           </div>
 

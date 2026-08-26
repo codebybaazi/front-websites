@@ -12,4 +12,11 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Vite 8.2 / Rolldown splits the SSR server into circular chunks
+  // (`TypeError: __exportAll is not a function`) so every HTML route 500s
+  // while `vite build` still exits 0. Disabling Nitro code-splitting inlines
+  // the helpers. See https://github.com/TanStack/router/issues/8031
+  nitro: {
+    inlineDynamicImports: true,
+  } as { preset?: string },
 });

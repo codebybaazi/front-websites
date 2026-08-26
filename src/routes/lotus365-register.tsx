@@ -4,7 +4,7 @@ import { AiOverview } from "@/components/AiOverview";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { QuickLinks } from "@/components/QuickLinks";
-import { whatsappUrl } from "@/data/site";
+import { useWhatsAppUrl } from "@/components/WhatsAppProvider";
 import {
   UserPlus,
   ShieldCheck,
@@ -114,6 +114,7 @@ export const Route = createFileRoute("/lotus365-register")({
 });
 
 function RegisterPage() {
+  const whatsappUrl = useWhatsAppUrl();
   return (
     <div className="min-h-screen text-foreground">
       <SiteHeader />

@@ -253,7 +253,7 @@ export const siteName = "Lotus365";
 export const siteUrl = "https://lotus365id.com";
 export const supportLine = "Instant payouts · Verified · 24/7 concierge";
 
-const WA_NUMBER = "919000012345";
-export const whatsappUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
-  "Hi Lotus365, I want to get started."
-)}`;
+/** Static fallback until the live JSON number hydrates. Prefer `useWhatsAppUrl()`. */
+export const whatsappUrl =
+  "https://wa.me/918294924767?text=" +
+  encodeURIComponent("Hi Lotus365, I want to get started.");

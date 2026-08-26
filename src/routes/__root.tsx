@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { WebMCPProvider } from "@/components/WebMCPProvider";
+import { WhatsAppProvider } from "@/components/WhatsAppProvider";
 
 function NotFoundComponent() {
   return (
@@ -186,10 +187,12 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
-      <WhatsAppFloat />
-      <WebMCPProvider />
+      <WhatsAppProvider>
+        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        <Outlet />
+        <WhatsAppFloat />
+        <WebMCPProvider />
+      </WhatsAppProvider>
     </QueryClientProvider>
   );
 }

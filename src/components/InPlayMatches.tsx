@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { whatsappUrl } from "@/data/site";
+import { WhatsAppLink } from "@/components/WhatsAppProvider";
 import { Radio, Calendar, Sparkles, ChevronRight } from "lucide-react";
 
 type Runner = { runner: { id: number; name: string }; price: number; size: number };
@@ -144,10 +144,7 @@ function MatchRow({ ev }: { ev: ApiEvent }) {
 
 
       <td className="px-3 sm:px-4 py-3 align-top text-right">
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noreferrer"
+        <WhatsAppLink
           className="btn-whatsapp inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-emerald-deep"
           style={{
             background:
@@ -155,7 +152,7 @@ function MatchRow({ ev }: { ev: ApiEvent }) {
           }}
         >
           Bet <ChevronRight className="h-3 w-3" />
-        </a>
+        </WhatsAppLink>
       </td>
     </tr>
   );

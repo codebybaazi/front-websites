@@ -10,7 +10,7 @@ import { GameCategoriesMarquee } from "@/components/GameCategoriesMarquee";
 import { ExchangeGamesMarquee } from "@/components/ExchangeGamesMarquee";
 import { Reveal } from "@/components/Reveal";
 import { LiveTicker, AuroraBackdrop } from "@/components/LandingFx";
-import { whatsappUrl } from "@/data/site";
+import { useWhatsAppUrl } from "@/components/WhatsAppProvider";
 
 
 import {
@@ -117,6 +117,7 @@ function LotusMark({ className = "" }: { className?: string }) {
 }
 
 function Landing() {
+  const whatsappUrl = useWhatsAppUrl();
   return (
     <div className="min-h-screen text-foreground">
       <SiteHeader />

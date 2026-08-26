@@ -1,6 +1,6 @@
-import { whatsappUrl } from "@/data/site";
 import { Sparkles, Radio } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
+import { WhatsAppLink } from "@/components/WhatsAppProvider";
 import teenPattiImg from "@/assets/exchange/teen-patti.jpg";
 import teenPatti2020Img from "@/assets/exchange/teen-patti-2020.jpg";
 import andarBaharImg from "@/assets/exchange/andar-bahar.jpg";
@@ -48,10 +48,7 @@ const EXCHANGE: ExGame[] = [
 
 function ExchangeTile({ g }: { g: ExGame }) {
   return (
-    <a
-      href={whatsappUrl}
-      target="_blank"
-      rel="noreferrer"
+    <WhatsAppLink
       aria-label={`Trade ${g.name} on Lotus365 exchange`}
       className="group relative w-48 sm:w-52 md:w-56 flex-shrink-0"
     >
@@ -144,7 +141,7 @@ function ExchangeTile({ g }: { g: ExGame }) {
         {/* gold frame on hover */}
         <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-primary/0 group-hover:ring-2 group-hover:ring-primary/70 transition-all duration-500" />
       </div>
-    </a>
+    </WhatsAppLink>
   );
 }
 
@@ -225,15 +222,10 @@ export function ExchangeGamesMarquee() {
 
       {/* CTA */}
       <div className="relative mt-10 flex flex-col items-center gap-3">
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="btn-whatsapp-green cursor-pointer inline-flex items-center gap-2 px-8 py-3 rounded-full text-sm font-bold uppercase tracking-[0.2em]"
-        >
+        <WhatsAppLink className="btn-whatsapp-green cursor-pointer inline-flex items-center gap-2 px-8 py-3 rounded-full text-sm font-bold uppercase tracking-[0.2em]">
           <WhatsAppIcon className="h-4 w-4" />
           Get your Exchange ID on WhatsApp
-        </a>
+        </WhatsAppLink>
         <div className="flex items-center gap-3 opacity-50">
           <div className="w-8 h-px bg-primary" />
           <span className="text-primary text-[9px] tracking-[0.5em] uppercase">Instant Activation</span>
