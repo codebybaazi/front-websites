@@ -1,9 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { SiteHeader, WHATSAPP, TELEGRAM } from "@/components/SiteHeader";
+import { SiteHeader, TELEGRAM } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageFaqs } from "@/components/PageFaqs";
 import { matchByEventIdQueryOptions, type ApiEvent } from "@/lib/live-matches.functions";
+import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 import { MessageCircle, Send, MapPin, Clock, Trophy, Target, TrendingUp, Radio } from "lucide-react";
 
 function splitTeams(name: string): { a: string; b: string } {
@@ -119,7 +120,7 @@ function MatchPage() {
   const lay = e.market?.consolidatedRunner?.lay ?? [];
 
   const matchName = teamB ? `${teamA} vs ${teamB}` : teamA;
-  const waMsg = encodeURIComponent(`Hi Sprinters, send me the prediction and odds for ${matchName} (${league}).`);
+  const whatsapp = useWhatsAppHref(`Hi Sprinters, send me the prediction and odds for ${matchName} (${league}).`);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -147,7 +148,7 @@ function MatchPage() {
             <span className="inline-flex items-center gap-1.5"><Clock className="h-4 w-4" /> {formatDateTime(startTs)}</span>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <a href={`${WHATSAPP}?text=${waMsg}`} className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition hover:opacity-90">
+            <a href={whatsapp} className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition hover:opacity-90">
               <MessageCircle className="h-5 w-5" /> Get prediction on WhatsApp
             </a>
             <a href={TELEGRAM} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 font-semibold transition hover:border-primary">
@@ -235,7 +236,7 @@ function MatchPage() {
             Bet on {matchName} with a Sprinters ID — deposit and withdraw in minutes on WhatsApp.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <a href={`${WHATSAPP}?text=${waMsg}`} className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-primary transition hover:opacity-90">
+            <a href={whatsapp} className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-primary transition hover:opacity-90">
               <MessageCircle className="h-5 w-5" /> WhatsApp us
             </a>
             <Link to="/predictions" className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-6 py-3 font-semibold text-white transition hover:bg-white/20">

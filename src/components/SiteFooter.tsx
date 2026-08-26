@@ -1,10 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { MessageCircle, Send, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import logo from "@/assets/sprinters-logo.jpg?w=280&format=webp&quality=80";
-import { WHATSAPP, TELEGRAM } from "./SiteHeader";
+import { TELEGRAM } from "./SiteHeader";
 import { QuickLinks } from "./QuickLinks";
+import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 
 export function SiteFooter() {
+  const whatsapp = useWhatsAppHref();
   return (
     <>
     <QuickLinks />
@@ -38,7 +40,7 @@ export function SiteFooter() {
             ))}
           </div>
           <div className="mt-4 flex gap-3">
-            <a href={WHATSAPP} className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground">
+            <a href={whatsapp} className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground">
               <MessageCircle className="h-4 w-4" /> WhatsApp
             </a>
             <a href={TELEGRAM} className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground">

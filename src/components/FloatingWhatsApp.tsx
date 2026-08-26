@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { MessageCircle, X } from "lucide-react";
-import { WHATSAPP } from "@/components/SiteHeader";
+import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 
 export function FloatingWhatsApp() {
   const [showPopup, setShowPopup] = useState(false);
   const [dismissed, setDismissed] = useState(false);
+  const whatsapp = useWhatsAppHref();
 
   useEffect(() => {
     if (dismissed) return;
@@ -36,7 +37,7 @@ export function FloatingWhatsApp() {
               Get your verified Sprinters ID on WhatsApp — instant deposits, 24-hour withdrawals.
             </p>
             <a
-              href={WHATSAPP}
+              href={whatsapp}
               className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-primary hover:opacity-90"
             >
               <MessageCircle className="h-4 w-4" /> Get ID Now
@@ -47,7 +48,7 @@ export function FloatingWhatsApp() {
 
       {/* Floating WhatsApp button */}
       <a
-        href={WHATSAPP}
+        href={whatsapp}
         aria-label="Chat on WhatsApp"
         className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition hover:scale-110"
       >

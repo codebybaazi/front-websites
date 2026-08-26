@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight, Send, ChevronLeft, ChevronRight } from "lucide-react";
-import { WHATSAPP, TELEGRAM } from "@/components/SiteHeader";
+import { TELEGRAM } from "@/components/SiteHeader";
+import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 import slide1 from "@/assets/hero-slide-1.jpg?w=640;960;1280;1600&format=webp&quality=70&as=srcset";
 import slide2 from "@/assets/hero-slide-2.jpg?w=640;960;1280;1600&format=webp&quality=70&as=srcset";
 import slide3 from "@/assets/hero-slide-3.jpg?w=640;960;1280;1600&format=webp&quality=70&as=srcset";
@@ -64,6 +65,7 @@ const alignClass: Record<Align, string> = {
 export function HeroSlider() {
   const [i, setI] = useState(0);
   const n = slides.length;
+  const whatsapp = useWhatsAppHref();
 
   useEffect(() => {
     const id = setInterval(() => setI((v) => (v + 1) % n), 6500);
@@ -195,7 +197,7 @@ export function HeroSlider() {
                               style={{ animationDelay: "400ms" }}
                             >
                               <a
-                                href={WHATSAPP}
+                                href={whatsapp}
                                 className="group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-black transition hover:opacity-90 sm:text-base"
                                 style={{ background: "var(--gradient-hero)", boxShadow: "var(--shadow-glow-secondary)" }}
                               >

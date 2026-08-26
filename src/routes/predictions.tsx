@@ -1,10 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo } from "react";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { SiteHeader, WHATSAPP, TELEGRAM } from "@/components/SiteHeader";
+import { SiteHeader, TELEGRAM } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageFaqs } from "@/components/PageFaqs";
 import { liveMatchesQueryOptions, type ApiEvent } from "@/lib/live-matches.functions";
+import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 import { MessageCircle, Send, Trophy, Clock, MapPin, TrendingUp, Target, Zap, Radio } from "lucide-react";
 
 type CricketMatch = {
@@ -86,24 +87,28 @@ export const Route = createFileRoute("/predictions")({
       },
     ],
   }),
-  errorComponent: ({ error }) => (
+  errorComponent: function PredictionsError({ error }: { error: Error }) {
+    const whatsapp = useWhatsAppHref();
+    return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
       <section className="mx-auto max-w-3xl px-6 py-24 text-center">
         <h1 className="text-3xl font-bold">Couldn't load fixtures right now</h1>
         <p className="mt-4 text-muted-foreground">{error.message}</p>
-        <a href={WHATSAPP} className="mt-6 inline-block text-primary underline">
+        <a href={whatsapp} className="mt-6 inline-block text-primary underline">
           Message us for today's tips
         </a>
       </section>
       <SiteFooter />
     </div>
-  ),
+    );
+  },
   component: PredictionsPage,
 });
 
 function PredictionsPage() {
   const { data } = useSuspenseQuery({ ...liveMatchesQueryOptions, refetchInterval: 20_000 });
+  const whatsapp = useWhatsAppHref();
 
   const cricket = useMemo<CricketMatch[]>(() => {
     const now = Date.now();
@@ -219,7 +224,7 @@ function PredictionsPage() {
             Want the pick before the toss? Get your Sprinters ID and receive daily predictions on WhatsApp.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <a href={WHATSAPP} className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-primary transition hover:opacity-90">
+            <a href={whatsapp} className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-primary transition hover:opacity-90">
               <MessageCircle className="h-5 w-5" /> WhatsApp
             </a>
             <a href={TELEGRAM} className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-6 py-3 font-semibold text-white transition hover:bg-white/20">
@@ -264,7 +269,7 @@ function OddPill({ label, back, lay }: { label: string; back: number | null; lay
 }
 
 function MatchCard({ m }: { m: CricketMatch }) {
-  const waMsg = encodeURIComponent(
+  const whatsapp = useWhatsAppHref(
     `Hi Sprinters, send me today's prediction for ${m.teamA}${m.teamB ? ` vs ${m.teamB}` : ""} (${m.league}).`,
   );
   return (
@@ -312,7 +317,7 @@ function MatchCard({ m }: { m: CricketMatch }) {
             <Trophy className="h-4 w-4" /> View match
           </Link>
           <a
-            href={`${WHATSAPP}?text=${waMsg}`}
+            href={whatsapp}
             className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition hover:opacity-90"
           >
             <MessageCircle className="h-4 w-4" /> Get tip on WhatsApp

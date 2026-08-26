@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { Link } from "@tanstack/react-router";
 import { Radio, CalendarClock, Trophy, ChevronRight } from "lucide-react";
-import { WHATSAPP } from "@/components/SiteHeader";
+import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 import { liveMatchesQueryOptions, type ApiEvent } from "@/lib/live-matches.functions";
 
 const SPORT_LINKS: Record<string, { to: string; label: string }> = {
@@ -94,6 +94,7 @@ const ODD_LABELS = ["1", "X", "2"];
 
 export function InPlayMatches() {
   const [filter, setFilter] = useState<FilterKey>("all");
+  const whatsapp = useWhatsAppHref();
 
   const { data } = useSuspenseQuery({
     ...liveMatchesQueryOptions,
@@ -349,7 +350,7 @@ export function InPlayMatches() {
                           </td>
                           <td className="px-4 py-3 text-right align-middle">
                             <a
-                              href={WHATSAPP}
+                              href={whatsapp}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="inline-flex items-center gap-1 whitespace-nowrap font-bold text-primary hover:underline"

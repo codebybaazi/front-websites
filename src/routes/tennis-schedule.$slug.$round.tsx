@@ -1,10 +1,11 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { Sparkles, Trophy, Target, MapPin, Calendar, Activity } from "lucide-react";
-import { SiteHeader, WHATSAPP, TELEGRAM } from "@/components/SiteHeader";
+import { SiteHeader, TELEGRAM } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getTennisEvent, type TennisRound } from "@/data/tennis-2026";
 import { tennisPredictionQueryOptions } from "@/lib/tennis-prediction.functions";
+import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 
 export const Route = createFileRoute("/tennis-schedule/$slug/$round")({
   loader: ({ params, context }) => {
@@ -85,6 +86,7 @@ export const Route = createFileRoute("/tennis-schedule/$slug/$round")({
 
 function TennisRoundPage() {
   const { event, round, idx } = Route.useLoaderData();
+  const whatsapp = useWhatsAppHref();
   const { data: pred } = useSuspenseQuery(
     tennisPredictionQueryOptions({
       event: event.name,
@@ -145,7 +147,7 @@ function TennisRoundPage() {
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a
-              href={WHATSAPP}
+              href={whatsapp}
               className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg backdrop-blur"
             >
               Get Betting ID on WhatsApp

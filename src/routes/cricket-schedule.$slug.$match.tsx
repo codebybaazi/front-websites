@@ -1,10 +1,11 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { Sparkles, Trophy, Target, Users, MapPin, Calendar, TrendingUp, Check, ChevronRight } from "lucide-react";
-import { SiteHeader, WHATSAPP, TELEGRAM } from "@/components/SiteHeader";
+import { SiteHeader, TELEGRAM } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getCricketSeries, type CricketSeriesMatch } from "@/data/cricket-series-2026";
 import { matchPredictionQueryOptions } from "@/lib/match-prediction.functions";
+import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 
 export const Route = createFileRoute("/cricket-schedule/$slug/$match")({
   loader: ({ params, context }) => {
@@ -107,6 +108,7 @@ export const Route = createFileRoute("/cricket-schedule/$slug/$match")({
 function CricketMatchPage() {
   const { series, match, idx } = Route.useLoaderData();
   const others = (series.matches ?? []).filter((_: CricketSeriesMatch, i: number) => i !== idx);
+  const whatsapp = useWhatsAppHref();
   const { data: pred } = useSuspenseQuery(
     matchPredictionQueryOptions({
       seriesName: series.name,
@@ -167,7 +169,7 @@ function CricketMatchPage() {
             </span>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <a href={WHATSAPP} className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition hover:opacity-90">
+            <a href={whatsapp} className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition hover:opacity-90">
               Get Betting ID on WhatsApp
             </a>
             <a href={TELEGRAM} className="rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition hover:border-primary hover:text-primary">

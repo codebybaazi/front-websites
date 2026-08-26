@@ -25,7 +25,7 @@ import {
   BadgeCheck,
   Check,
 } from "lucide-react";
-import { SiteHeader, WHATSAPP, TELEGRAM } from "@/components/SiteHeader";
+import { SiteHeader, TELEGRAM } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { HeroSlider } from "@/components/HeroSlider";
 import { InPlayMatches } from "@/components/InPlayMatches";
@@ -70,6 +70,7 @@ import table3CardPoker from "@/assets/table-3cardpoker.jpg?w=400&format=webp&qua
 import tableWar from "@/assets/table-war.jpg?w=400&format=webp&quality=68";
 
 import { liveMatchesQueryOptions } from "@/lib/live-matches.functions";
+import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 
 
 
@@ -248,6 +249,7 @@ function buildFaqLd() {
 }
 
 function Index() {
+  const whatsapp = useWhatsAppHref();
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
@@ -358,7 +360,7 @@ function Index() {
                   {[...crashGames, ...crashGames].map((g, i) => (
                     <a
                       key={`${g.title}-${i}`}
-                      href={WHATSAPP}
+                      href={whatsapp}
                       className="group relative w-[170px] shrink-0 rounded-2xl p-[1.5px] transition hover:-translate-y-1 sm:w-[190px]"
                       style={{ background: "var(--gradient-hero)" }}
                     >
@@ -429,7 +431,7 @@ function Index() {
                   {[...instantGames, ...instantGames].map((g, i) => (
                     <a
                       key={`${g.title}-${i}`}
-                      href={WHATSAPP}
+                      href={whatsapp}
                       className="group relative w-[170px] shrink-0 rounded-2xl p-[1.5px] transition hover:-translate-y-1 sm:w-[190px]"
                       style={{ background: "var(--gradient-hero)" }}
                     >
@@ -498,7 +500,7 @@ function Index() {
                   {[...casinoGames, ...casinoGames].map((g, i) => (
                     <a
                       key={`${g.title}-${i}`}
-                      href={WHATSAPP}
+                      href={whatsapp}
                       className="group relative w-[170px] shrink-0 rounded-2xl p-[1.5px] transition hover:-translate-y-1 sm:w-[190px]"
                       style={{ background: "var(--gradient-hero)" }}
                     >
@@ -553,7 +555,7 @@ function Index() {
                   {[...tableGames, ...tableGames, ...tableGames].map((g, i) => (
                     <a
                       key={`${g.title}-${i}`}
-                      href={WHATSAPP}
+                      href={whatsapp}
                       className="group relative w-[170px] shrink-0 rounded-2xl p-[1.5px] transition hover:-translate-y-1 sm:w-[190px]"
                       style={{ background: "var(--gradient-hero)" }}
                     >
@@ -610,7 +612,7 @@ function Index() {
                   {[...slotGames, ...slotGames].map((g, i) => (
                     <a
                       key={`${g.title}-${i}`}
-                      href={WHATSAPP}
+                      href={whatsapp}
                       className="group relative w-[170px] shrink-0 rounded-2xl p-[1.5px] transition hover:-translate-y-1 sm:w-[190px]"
                       style={{ background: "var(--gradient-hero)" }}
                     >
@@ -670,7 +672,7 @@ function Index() {
             {markets.map(({ title, tag, icon: Icon }) => (
               <a
                 key={title}
-                href={WHATSAPP}
+                href={whatsapp}
                 className="group flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] p-4 transition hover:border-primary/60 hover:bg-white/[0.05]"
               >
                 <div className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-primary/15 text-primary">
@@ -876,7 +878,7 @@ function Index() {
                 ))}
               </ul>
               <a
-                href={WHATSAPP}
+                href={whatsapp}
                 className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground"
               >
                 <MessageCircle className="h-4 w-4" /> Get ID via WhatsApp
@@ -988,7 +990,7 @@ function Index() {
             </div>
             <div className="flex flex-wrap gap-3 md:justify-end">
               <a
-                href={WHATSAPP}
+                href={whatsapp}
                 className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-primary transition hover:opacity-90"
               >
                 <MessageCircle className="h-5 w-5" /> WhatsApp Now

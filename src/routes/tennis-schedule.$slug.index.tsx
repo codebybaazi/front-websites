@@ -1,7 +1,8 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { SiteHeader, WHATSAPP, TELEGRAM } from "@/components/SiteHeader";
+import { SiteHeader, TELEGRAM } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { tennis2026, getTennisEvent } from "@/data/tennis-2026";
+import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 
 export const Route = createFileRoute("/tennis-schedule/$slug/")({
   loader: ({ params }) => {
@@ -65,6 +66,7 @@ export const Route = createFileRoute("/tennis-schedule/$slug/")({
 function TennisEventPage() {
   const t = Route.useLoaderData();
   const others = tennis2026.filter((x) => x.slug !== t.slug);
+  const whatsapp = useWhatsAppHref();
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -84,7 +86,7 @@ function TennisEventPage() {
             {t.window} · {t.surface} · {t.venue}, {t.city}
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <a href={WHATSAPP} className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground">
+            <a href={whatsapp} className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground">
               Get Betting ID on WhatsApp
             </a>
             <a href={TELEGRAM} className="rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold">

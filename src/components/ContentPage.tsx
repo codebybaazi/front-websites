@@ -1,10 +1,11 @@
 import { Suspense, type ReactNode } from "react";
 import { MessageCircle, Send, Check, ArrowRight } from "lucide-react";
 import { Link, useRouterState } from "@tanstack/react-router";
-import { SiteHeader, WHATSAPP, TELEGRAM } from "@/components/SiteHeader";
+import { SiteHeader, TELEGRAM } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageFaqs } from "@/components/PageFaqs";
 import { AiOverviewSection } from "@/components/AiOverviewSection";
+import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 
 const RELATED_LINKS: { to: string; label: string; desc: string }[] = [
   { to: "/sprinters-club", label: "Sprinters Club", desc: "VIP membership perks" },
@@ -52,6 +53,7 @@ export function ContentPage({
   cta = "Ready to get your Sprinters ID? Message us on WhatsApp — verified in minutes.",
   extra,
 }: ContentPageProps) {
+  const whatsapp = useWhatsAppHref();
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
@@ -117,7 +119,7 @@ export function ContentPage({
           <p className="mx-auto max-w-xl text-lg font-semibold text-white">{cta}</p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <a
-              href={WHATSAPP}
+              href={whatsapp}
               className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-primary transition hover:opacity-90"
             >
               <MessageCircle className="h-5 w-5" /> WhatsApp

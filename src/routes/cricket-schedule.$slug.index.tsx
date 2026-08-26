@@ -1,7 +1,8 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { SiteHeader, WHATSAPP, TELEGRAM } from "@/components/SiteHeader";
+import { SiteHeader, TELEGRAM } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { cricketSeries2026, getCricketSeries, type CricketSeriesMatch } from "@/data/cricket-series-2026";
+import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 
 export const Route = createFileRoute("/cricket-schedule/$slug/")({
   loader: ({ params }) => {
@@ -93,6 +94,7 @@ export const Route = createFileRoute("/cricket-schedule/$slug/")({
 function SeriesPage() {
   const s = Route.useLoaderData();
   const others = cricketSeries2026.filter((x) => x.slug !== s.slug);
+  const whatsapp = useWhatsAppHref();
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
@@ -110,7 +112,7 @@ function SeriesPage() {
           <p className="mt-4 text-lg text-muted-foreground">{s.format}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a
-              href={WHATSAPP}
+              href={whatsapp}
               className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground"
             >
               Get Betting ID on WhatsApp

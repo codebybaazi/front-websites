@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
 import logo from "@/assets/sprinters-logo.jpg?w=280&format=webp&quality=80";
+import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 
-export const WHATSAPP = "https://wa.link/sprinters-id";
 export const TELEGRAM = "https://t.me/+fF-1at2eJJo3YjNl";
 
 type MenuItem = { to: string; label: string; description?: string };
@@ -90,6 +90,7 @@ const MENU: MenuGroup[] = [
 
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const whatsapp = useWhatsAppHref();
   const closeMobile = () => setMobileOpen(false);
 
   return (
@@ -168,7 +169,7 @@ export function SiteHeader() {
 
           <div className="flex shrink-0 items-center gap-2">
             <a
-              href={WHATSAPP}
+              href={whatsapp}
               className="group relative inline-flex shrink-0 items-center gap-2 rounded-full px-4 py-2 text-xs font-bold text-black transition hover:scale-[1.03] hover:opacity-95 sm:px-5 sm:py-2.5 sm:text-sm"
               style={{ background: "var(--gradient-hero)", boxShadow: "var(--shadow-glow-secondary)" }}
             >

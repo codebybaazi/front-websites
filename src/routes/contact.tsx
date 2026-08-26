@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MessageCircle, Send, Clock, ShieldCheck, Sparkles } from "lucide-react";
-import { SiteHeader, WHATSAPP, TELEGRAM } from "@/components/SiteHeader";
+import { SiteHeader, TELEGRAM } from "@/components/SiteHeader";
+import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageFaqs } from "@/components/PageFaqs";
 
@@ -28,6 +29,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
+  const whatsapp = useWhatsAppHref();
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
@@ -57,7 +59,7 @@ function ContactPage() {
       <section className="mx-auto max-w-5xl px-6 pt-16 pb-6 md:pt-24">
         <div className="grid gap-6 md:grid-cols-2">
           <a
-            href={WHATSAPP}
+            href={whatsapp}
             className="group relative overflow-hidden rounded-3xl border border-border bg-card p-8 transition hover:-translate-y-1 hover:border-secondary"
           >
             <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary/15 text-secondary">
@@ -125,7 +127,7 @@ function ContactPage() {
             One message. A few details. You're in — with the sharpest odds in the game.
           </p>
           <a
-            href={WHATSAPP}
+            href={whatsapp}
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 font-semibold text-primary transition hover:opacity-90"
           >
             <MessageCircle className="h-5 w-5" /> Start on WhatsApp

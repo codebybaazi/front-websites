@@ -12,10 +12,11 @@ import {
   ChevronRight,
   Goal,
 } from "lucide-react";
-import { SiteHeader, WHATSAPP, TELEGRAM } from "@/components/SiteHeader";
+import { SiteHeader, TELEGRAM } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { wc2026Matches, getWc2026Match } from "@/data/wc2026-matches";
 import { footballPredictionQueryOptions } from "@/lib/football-prediction.functions";
+import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 
 const TOURNAMENT = "FIFA World Cup 2026";
 
@@ -99,6 +100,7 @@ export const Route = createFileRoute("/schedule/$slug")({
 
 function MatchPage() {
   const m = Route.useLoaderData();
+  const whatsapp = useWhatsAppHref();
   const { data: pred } = useSuspenseQuery(
     footballPredictionQueryOptions({
       tournament: TOURNAMENT,
@@ -160,7 +162,7 @@ function MatchPage() {
             </span>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <a href={WHATSAPP} className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition hover:opacity-90">
+            <a href={whatsapp} className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition hover:opacity-90">
               Get Betting ID on WhatsApp
             </a>
             <a href={TELEGRAM} className="rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition hover:border-primary hover:text-primary">

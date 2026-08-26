@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Suspense } from "react";
 import { Shield, Zap, Headphones, Trophy, Sparkles, Wallet, MessageCircle, Send } from "lucide-react";
-import { SiteHeader, WHATSAPP, TELEGRAM } from "@/components/SiteHeader";
+import { SiteHeader, TELEGRAM } from "@/components/SiteHeader";
+import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageFaqs } from "@/components/PageFaqs";
 import { AiOverviewSection } from "@/components/AiOverviewSection";
@@ -39,6 +40,7 @@ const perks = [
 ];
 
 function AboutPage() {
+  const whatsapp = useWhatsAppHref();
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
@@ -138,7 +140,7 @@ function AboutPage() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
-              href={WHATSAPP}
+              href={whatsapp}
               className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-primary transition hover:opacity-90"
             >
               <MessageCircle className="h-5 w-5" /> Get Your ID

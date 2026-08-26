@@ -1,5 +1,6 @@
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
-import { SiteHeader, WHATSAPP, TELEGRAM } from "@/components/SiteHeader";
+import { SiteHeader, TELEGRAM } from "@/components/SiteHeader";
+import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 import { SiteFooter } from "@/components/SiteFooter";
 import { blogPosts } from "@/data/blog-posts";
 import { abs } from "@/lib/site-url";
@@ -136,6 +137,7 @@ function splitParagraphs(body: string): string[] {
 function PostPage() {
   const { post, related } = Route.useLoaderData();
   const paragraphs = splitParagraphs(post.body);
+  const whatsapp = useWhatsAppHref();
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -193,7 +195,7 @@ function PostPage() {
           </p>
           <div className="mt-4 flex flex-wrap justify-center gap-3">
             <a
-              href={WHATSAPP}
+              href={whatsapp}
               className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-primary hover:opacity-90"
             >
               <MessageCircle className="h-4 w-4" /> WhatsApp
