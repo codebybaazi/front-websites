@@ -202,14 +202,14 @@ function Index() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "CRICKET", sub: "IPL · T20 · ODI · Test", icon: Trophy, color: "text-primary", href: "/betting", img: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=800&auto=format&fit=crop" },
-              { title: "FOOTBALL", sub: "EPL · UCL · La Liga", icon: Swords, color: "text-blue-500", href: "/betting", img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800&auto=format&fit=crop" },
-              { title: "TENNIS", sub: "ATP · WTA · Grand Slams", icon: Zap, color: "text-green-500", href: "/betting", img: "https://images.pexels.com/photos/209977/pexels-photo-209977.jpeg?auto=compress&cs=tinysrgb&w=800" },
-              { title: "KABADDI", sub: "PKL & Internationals", icon: Trophy, color: "text-orange-500", href: "/betting", img: "https://images.unsplash.com/photo-1552667466-07770ae110d0?q=80&w=800&auto=format&fit=crop" },
-              { title: "HORSE RACING", sub: "Global Race Meets", icon: ArrowRight, color: "text-yellow-500", href: "/betting", img: "https://images.unsplash.com/photo-1599058917765-a780eda07a3e?q=80&w=800&auto=format&fit=crop" },
-              { title: "LIVE CASINO", sub: "Baccarat · Roulette · Dragon Tiger", icon: PlayCircle, color: "text-blue-400", href: "/casino", img: "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?q=80&w=800&auto=format&fit=crop" },
-              { title: "TEEN PATTI", sub: "Andar Bahar · Rummy", icon: Swords, color: "text-red-500", href: "/casino", img: "https://images.unsplash.com/photo-1541278107931-e006523892df?q=80&w=800&auto=format&fit=crop" },
-              { title: "FANCY BETS", sub: "Session · Over Markets", icon: Zap, color: "text-primary", href: "/betting", img: "https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?q=80&w=800&auto=format&fit=crop" },
+              { title: "CRICKET", sub: "IPL · T20 · ODI · Test", icon: Trophy, color: "text-primary", href: "/betting", img: cricketImg },
+              { title: "FOOTBALL", sub: "EPL · UCL · La Liga", icon: Flame, color: "text-blue-500", href: "/betting", img: footballImg },
+              { title: "TENNIS", sub: "ATP · WTA · Grand Slams", icon: Activity, color: "text-green-500", href: "/betting", img: tennisImg },
+              { title: "KABADDI", sub: "PKL & Internationals", icon: Swords, color: "text-orange-500", href: "/betting", img: kabaddiImg },
+              { title: "HORSE RACING", sub: "Global Race Meets", icon: Crown, color: "text-yellow-500", href: "/betting", img: horseRacingImg },
+              { title: "LIVE CASINO", sub: "Baccarat · Roulette · Dragon Tiger", icon: PlayCircle, color: "text-blue-400", href: "/casino", img: liveCasinoImg },
+              { title: "TEEN PATTI", sub: "Andar Bahar · Rummy", icon: Spade, color: "text-red-500", href: "/casino", img: teenPattiImg },
+              { title: "FANCY BETS", sub: "Session · Over Markets", icon: Dices, color: "text-primary", href: "/betting", img: fancyBetsImg },
             ].map((opt, i) => (
               <motion.div
                 key={opt.title}
