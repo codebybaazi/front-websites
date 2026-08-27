@@ -1,5 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Zap, ArrowRight, ShieldCheck, Smartphone, Gift, Trophy, Swords, PlayCircle, Star, TrendingUp, Clock, Users } from "lucide-react";
+import { Zap, ArrowRight, ShieldCheck, Smartphone, Gift, Trophy, Swords, PlayCircle, Star, TrendingUp, Clock, Users, Flame, Activity, Crown, Spade, Dices } from "lucide-react";
+import cricketImg from "@/assets/betting/cricket.jpg";
+import footballImg from "@/assets/betting/football.jpg";
+import tennisImg from "@/assets/betting/tennis.jpg";
+import kabaddiImg from "@/assets/betting/kabaddi.jpg";
+import horseRacingImg from "@/assets/betting/horse-racing.jpg";
+import liveCasinoImg from "@/assets/betting/live-casino.jpg";
+import teenPattiImg from "@/assets/betting/teen-patti.jpg";
+import fancyBetsImg from "@/assets/betting/fancy-bets.jpg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import { OverviewSection } from "@/components/OverviewSection";
