@@ -11,6 +11,8 @@ import fancyBetsImg from "@/assets/betting/fancy-bets.jpg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import { OverviewSection } from "@/components/OverviewSection";
+import { HeroBanner } from "@/components/HeroBanner";
+
 import { TrustedExchangesSection } from "@/components/TrustedExchangesSection";
 import { InPlaySection } from "@/components/InPlaySection";
 import { PlayOptionsSection } from "@/components/PlayOptionsSection";
@@ -78,8 +80,11 @@ const quickLinks = [
 function Index() {
   return (
     <div className="flex flex-col w-full overflow-hidden noise-bg">
+      <HeroBanner />
+
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-20 pb-12 px-4 overflow-hidden">
+
 
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10" />
