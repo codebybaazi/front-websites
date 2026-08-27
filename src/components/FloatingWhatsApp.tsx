@@ -132,7 +132,7 @@ export function FloatingWhatsApp() {
                 >
                   <div className="absolute inset-0 bg-[#25D366] rounded-xl blur-md opacity-20 group-hover:opacity-40 transition-opacity" />
                   <div className="relative flex items-center justify-center gap-2 w-full bg-[#25D366] text-white font-black py-3 px-4 rounded-xl transition-all shadow-lg">
-                    <MessageCircle className="h-4 w-4" />
+                    <img src={whatsappIcon} alt="WhatsApp" width={40} height={40} className="h-5 w-5" />
                     <span className="text-[11px] uppercase tracking-wider italic">GET VIP ID</span>
                     <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </div>
