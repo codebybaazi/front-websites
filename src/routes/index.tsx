@@ -78,8 +78,11 @@ const quickLinks = [
 function Index() {
   return (
     <div className="flex flex-col w-full overflow-hidden noise-bg">
+      <HeroBanner />
+
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-20 pb-12 px-4 overflow-hidden">
+
 
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10" />
