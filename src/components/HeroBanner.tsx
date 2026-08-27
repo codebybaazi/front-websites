@@ -22,8 +22,8 @@ export const HeroBanner = () => {
             <img
               src={banner}
               alt="Fairplay — get your cricket ID in just 2 minutes. IPL, casino, football, tennis. 100% secure, 180 minute payouts, 24x7 support."
-              width={1920}
-              height={820}
+              width={1600}
+              height={1000}
               className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02]"
             />
           </Link>
