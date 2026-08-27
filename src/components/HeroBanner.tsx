@@ -23,15 +23,14 @@ export const HeroBanner = () => {
         >
           {/* Banner artwork */}
           <picture>
-            <source media="(min-width: 768px)" srcSet={bannerDesktop} />
+            <source media="(min-width: 768px)" srcSet={bannerDesktop} width={1920} height={832} />
             <img
               src={bannerMobile}
               alt="Fairplay cricket ID banner — get your ID in 2 minutes and play and win big"
-              width={1920}
-              height={832}
-              className="w-full h-auto block"
+              className="w-full block aspect-[912/1104] md:aspect-[1920/832] object-cover"
             />
           </picture>
+
 
           {/* Animated shine sweep */}
 
