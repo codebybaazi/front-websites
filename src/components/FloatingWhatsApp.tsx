@@ -20,33 +20,27 @@ export function FloatingWhatsApp() {
 
   return (
     <>
-      {/* Premium Floating WhatsApp Button */}
+      {/* Floating WhatsApp Button — Sprintersbokk-style */}
       <motion.a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_8px_20px_rgba(37,211,102,0.3)] transition-all group"
+        whileHover={{ scale: 1.08 }}
+        whileTap={{ scale: 0.95 }}
+        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all group"
         aria-label="Contact us on WhatsApp"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="absolute inset-0 rounded-full animate-[ping_2s_infinite] bg-[#25D366] opacity-30 pointer-events-none" />
         <img
           src={whatsappIcon}
           alt="WhatsApp"
           width={56}
           height={56}
-          className="h-8 w-8 relative z-10 drop-shadow-lg"
+          className="h-7 w-7 relative z-10"
         />
-        
-        {/* Eye-catching Badge */}
-        <div className="absolute -top-1 -left-1 bg-primary text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow-lg border border-white/20 animate-bounce">
-          LIVE
-        </div>
 
         <AnimatePresence>
           {isHovered && (
