@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Zap, ArrowRight, ShieldCheck, Smartphone, Gift, Trophy, PlayCircle, Star, TrendingUp, Clock, Users, Flame, Activity, Crown, Spade, Dices } from "lucide-react";
+import { Zap, ArrowRight, ShieldCheck, Smartphone, Gift, Trophy, Swords, PlayCircle, Star, TrendingUp, Clock, Users, Flame, Activity, Crown, Spade, Dices } from "lucide-react";
 import cricketImg from "@/assets/betting/cricket.jpg";
 import footballImg from "@/assets/betting/football.jpg";
 import tennisImg from "@/assets/betting/tennis.jpg";
