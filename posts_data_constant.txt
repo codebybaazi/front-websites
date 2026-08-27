@@ -1,0 +1,1100 @@
+const POSTS_DATA: Record<string, any[]> = {
+  "common-fairplay-login-id-issues-and-how-to-fix-them-easily": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-add-money-in-fairplay-wallet-complete-beginner-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-bet-on-live-ipl-matches-using-fairplay-id": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-check-bet-history-on-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "step-by-step-guide-to-bet-on-icc-t20-world-cup-2026-with-fairplay-id": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "why-fairplay-is-a-top-choice-for-cricket-betting-in-india": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-fairplay-became-a-trusted-name-in-online-betting": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "things-to-check-before-buying-a-fairplay-id": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "football-betting-guide-on-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-verify-your-fairplay-account": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-withdraw-money-from-fairplay-using-upi": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "icc-mens-t20-world-cup-2026-betting-strategy-for-fairplay-users": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-agent-system-explained": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "top-5-safe-betting-strategies-for-wpl-matches-on-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-fairplay-works-login-id-creation-betting-process": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-app-vs-website": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-betting-options-bonuses-benefits": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-delhi-vs-up-warriors-women-match-analysis": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-mumbai-vs-up-warriors-women-match-prediction": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-ipl-wpl-bbl-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-india-vs-new-zealand-3rd-odi-prediction": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-whatsapp-support-service": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-gg-w-vs-rcb-w-ipl-match-prediction": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-ind-vs-nz-t20-live-betting-strategy": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "why-fairplay-trusted-ipl-t20-live-betting-india": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-ind-vs-nz-2nd-t20-match-prediction": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-online-gaming-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-id-in-5-easy-steps": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-id-for-online-betting": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "betting-history-using-fairplay-id": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "exclusive-bonuses-rewards-fairplay-id": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-india-vs-new-zealand-4th-t20-match-prediction": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-features-games-safe-betting": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-use-fairplay-on-mobile-india": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-money-transfer-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "ipl-live-match-betting-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-gaming-online-cricket-id": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "icc-t20-world-cup-2026-match-prediction-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-online-betting-features-game-types": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "ipl-betting-id-safe-signup-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-vs-other-betting-ids-2026": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "why-indian-gamers-prefer-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-india-vs-usa-match-prediction-icc-t20-world-cup": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-ipl-t20-world-cup-betting-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-best-time-to-place-bets": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-online-cricket-platform-india": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "casino-games-types-on-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-t20-world-cup-predictions-betting-strategies": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-india-vs-pakistan-today-match-prediction": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "live-match-betting-fairplay-winning-plan-t20-world-cup": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-safe-verified-ipl-online-cricket-id-2026": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "best-ipl-betting-tips-fairplay-users-2026": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-super-8-betting-strategy-t20-world-cup": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-icc-t20-world-cup-2026-points-table-analysis": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "popular-cricket-football-prediction-markets-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "new-zealand-vs-pakistan-super-8-match-prediction": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-ind-vs-sa-match-prediction-who-will-win-today": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-tds-betting-winnings-guide-2026": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-football-betting-bet-live-predict-smart-big-win": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "why-verification-matters-ipl-betting-id-fairplay-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-whatsapp-vs-direct-login-withdrawals": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-customer-support-24-7-help-for-betting-and-withdrawal-issues": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "what-is-fairplay-a-complete-beginners-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "why-fairplay-is-indias-most-popular-choice": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-login-to-fairplay-a-step-by-step-beginners-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "ipl-betting-feels-different-from-regular-cricket-betting-on-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-wi-vs-ind-elimination-match-today-prediction": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-sa-vs-nz-semifinal-prediction": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-id-for-sa-vs-nz-semi-final-live-betting": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-app-guide-best-markets-1st-semi-final-2026": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-india-vs-england-semifinal-match-prediction": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-t20-world-cup-final-betting-markets-odds-predictions": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-betting-id-guide-for-india-vs-new-zealand-final": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "india-vs-new-zealand-t20-world-cup-final-fairplay-match-prediction": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-ipl-betting-id-2026-prediction-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-live-match-betting-works-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-vs-competitors-online-cricket-platform": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-how-to-withdraw-guide-money": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-deposit-money-on-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-download-the-fairplay-app-safely": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-login-problems-solutions": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-scam-or-real-full-review": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-security-account-safety-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-ipl-2026-betting-guide-every-match": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-live-casino-works-fairplay-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-play-cricket-games-on-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "why-users-prefer-fairplay-app-for-ipl-betting": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "ipl-2026-betting-avoid-mistakes-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "complete-fairplay-guide-2026-login-id-features-how-it-works": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-contact-fairplay-whatsapp-for-ipl-id": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "ipl-2026-betting-tips-on-fairplay-smart-strategies": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-id-ipl-2026-betting-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-ipl-match-day-strategy-to-win-more": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "ipl-2026-season-guide-fairplay-strategies": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-match-tips-and-betting-prediction": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "rr-vs-rcb-toss-match-prediction-15th-match-ipl-2026": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "mi-vs-pbks-toss-and-match-prediction-24th-match-ipl-2026": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-win-live-bets-in-ipl-2026-on-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "rcb-vs-dc-dream11-team-prediction-match-26th-ipl-2026": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "understanding-fairplay-online-betting-id-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-app-guide-simple-ipl-betting-anytime-anywhere": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-fairplay-is-becoming-popular-during-ipl-season": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-deposit-funds-on-fairplay-using-upi": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-trends-in-ipl-2026": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "ipl-2026-orange-cap-and-purple-cap-race-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "analyze-ipl-teams-before-betting-on-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-apk-fast-stable-low-end-phones": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-explains-popular-ipl-2026-betting-markets": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "rr-vs-gt-dream11-prediction-today-match-52st-ipl-2026": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "rcb-vs-mi-dream11-prediction-today-match54-ipl-2026": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "srh-vs-gt-dream11-prediction-today-match-56-ipl-2026": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "rcb-vs-kkr-ipl-2026-dream11-prediction-today-match57": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "mi-vs-pbks-dream11-prediction-today-match": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-id-not-working-quick-solutions-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-growing-craze-for-cricket-platforms-ipl-2026": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "why-ipl-fans-are-looking-for-fairplay-id": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-2026-online-cricket-gaming-features": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "top-mobile-betting-features-on-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-login-not-working-fix-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-works-behind-the-scenes-during-ipl-2026": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-top-features-and-benefits-of-ipl-betting-id-in-india": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "why-choose-fairplay-for-ipl-betting": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-account-a-quick-guide-to-kyc": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-add-funds-to-your-fairplay-id": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-teen-patti-rules-and-gameplay-explained": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "india-top-mobile-betting-features-on-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "why-ipl-cricket-fans-prefer-fairplay-for-mobile-cricket-updates": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-rcb-continue-title-defense-in-ipl-2026-final": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-fifa-world-cup-2026-football-fan-betting-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "enjoy-real-casino-gaming-on-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fifa-world-cup-2026-fairplay-betting-tips": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-casino-best-online-casino-sports-betting-platform": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-fifa-world-cup-2026-complete-tournament-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-card-game-zone-gaming-fan": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "womens-t20-world-cup-2026-betting-guide-fairplay-expert-analysis": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-ball-by-ball-betting-works-on-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "online-casino-vs-sports-betting-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fifa-world-cup-2026-fairplay-live-betting-id-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fifa-world-cup-and-womens-t20-world-cup-2026-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "bet-on-ipl-t20-odi-and-test-cricket-with-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-casino-slots-guide-rtp-free-spins-winning-tips-2026": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-play-roulette-on-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-best-platforms-fifa-world-cup-2026-betting-in-india": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-online-betting-id-and-services": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-app-indias-trusted-mobile-betting-platform": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-mobile-features-for-t20-cricket-betting": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-helps-new-users-navigate-online-sports-platforms": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-football-world-cup-odds-work-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-id-fast-verified-id-for-online-sports-betting": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "create-a-fairplay-account-for-sports-betting": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-cricket-betting-id-and-how-does-it-work": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-stop-cricket-betting-losses-using-smart-strategies": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-cricket-id-vs-traditional-online-account-access-difference": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-get-started-with-fairplay-apk-for-android": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-explains-probability-in-sports-betting": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-free-demo-id": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-club-complete-features-benefits-security": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-safe-security-features-explained": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-fifa-world-cup-knockout-betting-tips-live-strategies": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-play-dream11-fantasy-cricket-with-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-best-dream11-fantasy-football-team-final": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "receive-fairplay-id-on-whatsapp": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-argentina-vs-spain-fifa-world-cup-final-2026": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-football-betting-id-features-benefits-how-it-works": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-access-your-fairplay-account-from-any-device": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-does-fairplay-login-work": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "how-to-download-latest-fairplay-app-apk": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "free-casino-gaming-experience-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "benefits-of-fairplay-sports-id-for-online": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-top-sports-tournaments-betting-opportunities": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "experience-safe-secure-horse-race-betting-with-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-safe-online-blackjack-casino-deposit-money-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "top-cricket-tournaments-to-bet-on-using-fairplay-in-2026": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "deposit-and-withdrawal-limits-on-fairplay-explained": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-customer-care-guide-contact-support-for-login": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "types-of-fairplay-cricket-betting-markets-explained": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-free-demo-id-step-by-step-registration": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-features-and-services-2026-explained": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "top-sports-to-bet-on-fairplay": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "reddy-anan-book-club-membership-features-benefits": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-how-to-play-andar-bahar-guide": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-live-casino-features-and-services": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ],
+  "fairplay-poker-guide-for-new-players": [
+    {
+      "t": "p",
+      "c": "Fairplay Poker Guide: Complete Guide for New Players"
+    }
+  ]
+};

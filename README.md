@@ -1,12 +1,12 @@
-# Fair Play India
+# Fair Play Hub (00)
 
-create blank project named FairPlayIndia
+Create new project named fairplay
 
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/788d5f2c-1cd5-4030-8794-bcd695b6c4e5).
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/9eb6aca8-ebd6-4560-88fb-caa1afa00e39).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
 - **Stay in sync**: every change made in Lovable is committed straight to this repository.
