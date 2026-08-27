@@ -35,7 +35,13 @@ export function FloatingWhatsApp() {
         onMouseLeave={() => setIsHovered(false)}
       >
         <div className="absolute inset-0 rounded-full animate-[ping_2s_infinite] bg-[#25D366] opacity-30 pointer-events-none" />
-        <MessageCircle className="h-7 w-7 relative z-10" />
+        <img
+          src={whatsappIcon}
+          alt="WhatsApp"
+          width={56}
+          height={56}
+          className="h-8 w-8 relative z-10 drop-shadow-lg"
+        />
         
         {/* Eye-catching Badge */}
         <div className="absolute -top-1 -left-1 bg-primary text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow-lg border border-white/20 animate-bounce">
