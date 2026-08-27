@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
-import { Zap } from "lucide-react";
-import { waLink } from "@/lib/whatsapp";
 import banner from "@/assets/hero-banner.jpg";
 
 export const HeroBanner = () => {
