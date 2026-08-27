@@ -11,6 +11,8 @@ import fancyBetsImg from "@/assets/betting/fancy-bets.jpg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import { OverviewSection } from "@/components/OverviewSection";
+import { HeroBanner } from "@/components/HeroBanner";
+
 import { TrustedExchangesSection } from "@/components/TrustedExchangesSection";
 import { InPlaySection } from "@/components/InPlaySection";
 import { PlayOptionsSection } from "@/components/PlayOptionsSection";
