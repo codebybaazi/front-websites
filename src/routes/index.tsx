@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Zap, ArrowRight, ShieldCheck, Smartphone, Gift, Trophy, Swords, PlayCircle, Flame, Activity, Crown, Spade, Dices } from "lucide-react";
+import { Zap, ArrowRight, ShieldCheck, Smartphone, Gift, Trophy, Sword, PlayCircle, Flame, Activity, Crown, Spade, Dices } from "lucide-react";
 import cricketImg from "@/assets/betting/cricket.jpg";
 import footballImg from "@/assets/betting/football.jpg";
 import tennisImg from "@/assets/betting/tennis.jpg";
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/")({
 
 const quickLinks = [
   { title: "Bonuses", desc: "Welcome offer and codes", icon: Gift, color: "text-orange-500", href: "/bonus" },
-  { title: "Casino", desc: "Teen Patti and live tables", icon: Swords, color: "text-blue-500", href: "/casino" },
+  { title: "Casino", desc: "Teen Patti and live tables", icon: Sword, color: "text-blue-500", href: "/casino" },
   { title: "Sports", desc: "Cricket, football, tennis", icon: Trophy, color: "text-green-500", href: "/betting" },
   { title: "Fairplay ID", desc: "Get a cricket ID", icon: ShieldCheck, color: "text-yellow-500", href: "/fairplay-id" },
 ];
@@ -127,7 +127,7 @@ function Index() {
               { title: "CRICKET", sub: "IPL · T20 · ODI · Test", icon: Trophy, color: "text-primary", href: "/betting", img: cricketImg },
               { title: "FOOTBALL", sub: "EPL · UCL · La Liga", icon: Flame, color: "text-blue-500", href: "/betting", img: footballImg },
               { title: "TENNIS", sub: "ATP · WTA · Grand Slams", icon: Activity, color: "text-green-500", href: "/betting", img: tennisImg },
-              { title: "KABADDI", sub: "PKL & Internationals", icon: Swords, color: "text-orange-500", href: "/betting", img: kabaddiImg },
+              { title: "KABADDI", sub: "PKL & Internationals", icon: Sword, color: "text-orange-500", href: "/betting", img: kabaddiImg },
               { title: "HORSE RACING", sub: "Global Race Meets", icon: Crown, color: "text-yellow-500", href: "/betting", img: horseRacingImg },
               { title: "LIVE CASINO", sub: "Baccarat · Roulette · Dragon Tiger", icon: PlayCircle, color: "text-blue-400", href: "/casino", img: liveCasinoImg },
               { title: "TEEN PATTI", sub: "Andar Bahar · Rummy", icon: Spade, color: "text-red-500", href: "/casino", img: teenPattiImg },
