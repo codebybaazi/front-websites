@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronRight, Zap, ShieldCheck, Trophy } from "lucide-react";
 import { waLink } from "@/lib/whatsapp";
-import whatsappIcon from "@/assets/whatsapp-icon.png";
+import whatsappIcon from "@/assets/whatsapp-icon-white.png";
 
 export function FloatingWhatsApp() {
   const [showSlider, setShowSlider] = useState(false);
