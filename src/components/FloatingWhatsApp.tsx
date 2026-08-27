@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, X, ChevronRight, Zap, ShieldCheck, Trophy } from "lucide-react";
+import { X, ChevronRight, Zap, ShieldCheck, Trophy } from "lucide-react";
 import { waLink } from "@/lib/whatsapp";
+import whatsappIcon from "@/assets/whatsapp-icon.png";
 
 export function FloatingWhatsApp() {
   const [showSlider, setShowSlider] = useState(false);
@@ -34,7 +35,13 @@ export function FloatingWhatsApp() {
         onMouseLeave={() => setIsHovered(false)}
       >
         <div className="absolute inset-0 rounded-full animate-[ping_2s_infinite] bg-[#25D366] opacity-30 pointer-events-none" />
-        <MessageCircle className="h-7 w-7 relative z-10" />
+        <img
+          src={whatsappIcon}
+          alt="WhatsApp"
+          width={56}
+          height={56}
+          className="h-8 w-8 relative z-10 drop-shadow-lg"
+        />
         
         {/* Eye-catching Badge */}
         <div className="absolute -top-1 -left-1 bg-primary text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow-lg border border-white/20 animate-bounce">
@@ -125,7 +132,7 @@ export function FloatingWhatsApp() {
                 >
                   <div className="absolute inset-0 bg-[#25D366] rounded-xl blur-md opacity-20 group-hover:opacity-40 transition-opacity" />
                   <div className="relative flex items-center justify-center gap-2 w-full bg-[#25D366] text-white font-black py-3 px-4 rounded-xl transition-all shadow-lg">
-                    <MessageCircle className="h-4 w-4" />
+                    <img src={whatsappIcon} alt="WhatsApp" width={40} height={40} className="h-5 w-5" />
                     <span className="text-[11px] uppercase tracking-wider italic">GET VIP ID</span>
                     <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </div>
