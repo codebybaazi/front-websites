@@ -84,7 +84,7 @@ export const TrustedExchangesSection = () => {
 
         {/* CTA Section */}
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-20 text-center">
-          <motion.a href={waLink("Hello Fairplay! I want to get my Verified Fairplay ID now.")} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05, boxShadow: "0 0 50px rgba(255,100,0,0.5)" }} whileTap={{ scale: 0.95 }} className="inline-flex items-center gap-4 px-12 py-6 bg-primary text-black font-black rounded-full transition-all italic uppercase tracking-tighter text-xl relative overflow-hidden group">
+          <motion.a href={waLink("Hello Fairplay! I want to get my Verified Fairplay ID now.")} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05, boxShadow: "0 0 50px rgba(255,100,0,0.5)" }} whileTap={{ scale: 0.95 }} className="inline-flex items-center gap-3 sm:gap-4 px-6 py-4 sm:px-12 sm:py-6 bg-primary text-black font-black rounded-full transition-all italic uppercase tracking-tighter text-xl relative overflow-hidden group">
             <span className="relative z-10">Get Your Verified ID</span>
             <Zap className="w-6 h-6 fill-current relative z-10 group-hover:scale-125 transition-transform"/>
             

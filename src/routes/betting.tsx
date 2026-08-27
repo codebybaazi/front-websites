@@ -165,7 +165,7 @@ function BettingPage() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-3 gap-3 text-center">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-center">
                     {Object.entries(match.odds).map(([key, value]) => (
                       <button 
                         key={key}
@@ -205,7 +205,7 @@ function BettingPage() {
         <div className="mt-8 space-y-4">
           <div className="p-4 bg-primary/5 rounded-xl border border-primary/20">
             <h4 className="text-xs font-black uppercase text-primary mb-2">Quick Deposit</h4>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
               {['₹500', '₹1000', '₹5000'].map(val => (
                 <button key={val} className="py-2 bg-background border border-border rounded text-[10px] font-bold hover:border-primary">{val}</button>
               ))}
