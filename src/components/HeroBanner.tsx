@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
-import { Zap } from "lucide-react";
-import { waLink } from "@/lib/whatsapp";
 import banner from "@/assets/hero-banner.jpg";
 
 export const HeroBanner = () => {
@@ -37,23 +35,7 @@ export const HeroBanner = () => {
           />
         </motion.div>
 
-        {/* CTAs below the artwork so nothing covers the design */}
-        <div className="mt-4 flex flex-col sm:flex-row gap-3 sm:justify-center">
-          <Link
-            to="/fairplay-id"
-            className="px-6 py-3.5 sm:px-8 sm:py-4 bg-primary text-primary-foreground font-black italic uppercase tracking-tight rounded-xl flex items-center justify-center gap-2 hover:scale-[1.03] transition-transform shadow-[0_0_30px_rgba(255,100,0,0.4)]"
-          >
-            Get your ID now <Zap className="w-4 h-4 fill-current" />
-          </Link>
-          <a
-            href={waLink("Hello Fairplay! I want to create my Cricket ID now.")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3.5 sm:px-8 sm:py-4 bg-card/80 backdrop-blur border border-white/15 text-foreground font-black italic uppercase tracking-tight rounded-xl text-center hover:bg-accent transition-colors"
-          >
-            WhatsApp us
-          </a>
-        </div>
+        {/* CTAs removed per request */}
       </div>
     </section>
   );

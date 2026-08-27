@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Zap, ArrowRight, ShieldCheck, Smartphone, Gift, Trophy, Swords, PlayCircle, Star, TrendingUp, Clock, Users, Flame, Activity, Crown, Spade, Dices } from "lucide-react";
+import { Zap, ArrowRight, ShieldCheck, Smartphone, Gift, Trophy, Swords, PlayCircle, Flame, Activity, Crown, Spade, Dices } from "lucide-react";
 import cricketImg from "@/assets/betting/cricket.jpg";
 import footballImg from "@/assets/betting/football.jpg";
 import tennisImg from "@/assets/betting/tennis.jpg";
@@ -8,10 +8,10 @@ import horseRacingImg from "@/assets/betting/horse-racing.jpg";
 import liveCasinoImg from "@/assets/betting/live-casino.jpg";
 import teenPattiImg from "@/assets/betting/teen-patti.jpg";
 import fancyBetsImg from "@/assets/betting/fancy-bets.jpg";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { OverviewSection } from "@/components/OverviewSection";
 import { HeroBanner } from "@/components/HeroBanner";
+
 
 import { TrustedExchangesSection } from "@/components/TrustedExchangesSection";
 import { InPlaySection } from "@/components/InPlaySection";
@@ -20,7 +20,6 @@ import { BettingStepsSection } from "@/components/BettingStepsSection";
 import { RecentPostsSection } from "@/components/RecentPostsSection";
 import { FAQSection } from "@/components/FAQSection";
 import { OG_IMAGE, SITE_ORIGIN } from "@/utils/page-seo";
-import { waLink } from "@/lib/whatsapp";
 
 
 
@@ -82,99 +81,9 @@ function Index() {
     <div className="flex flex-col w-full overflow-hidden noise-bg">
       <HeroBanner />
 
-      {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center pt-20 pb-12 px-4 overflow-hidden">
+      {/* Hero Section removed per request */}
 
-
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10" />
-          <motion.div 
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
-            className="w-full h-full bg-[url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center" 
-          />
-        </div>
-
-        {/* Floating decorative elements */}
-        <div className="absolute top-1/4 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl floating-element" />
-        <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl floating-element" style={{ animationDelay: '-3s' }} />
-
-
-        <div className="container max-w-7xl mx-auto relative z-20">
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }} 
-            animate={{ opacity: 1, x: 0 }} 
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-4xl relative"
-          >
-            <motion.div 
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest mb-6"
-            >
-              <Zap className="w-3 h-3 fill-current" /> Established 2017
-            </motion.div>
-            <h1 className="text-5xl sm:text-7xl md:text-8xl font-black leading-[0.9] tracking-tighter mb-8 italic overflow-hidden">
-              <motion.span
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="block"
-              >
-                Fairplay
-              </motion.span>
-              <motion.span 
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-                className="text-gradient-orange not-italic block py-2 relative"
-              >
-                Sports betting
-                <motion.div 
-                  initial={{ width: 0 }}
-                  animate={{ width: "100%" }}
-                  transition={{ delay: 1, duration: 1.5, ease: "easeInOut" }}
-                  className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-primary/0 via-primary to-primary/0"
-                />
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, y: -100 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.8 }}
-                className="block"
-              >
-                exchange
-              </motion.span>
-            </h1>
-
-            <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              className="text-lg sm:text-2xl text-muted-foreground mb-8 sm:mb-10 max-w-2xl leading-relaxed"
-            >
-              India's cricket ID, live football and tennis markets, plus HD casino — UPI deposits and withdrawals that settle in 180 minutes.
-            </motion.p>
-
-            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-8">
-              <a 
-                href={waLink("Hello Fairplay! I want to Sign Up and get my Verified ID.")} 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 sm:px-10 py-4 sm:py-5 bg-primary text-primary-foreground font-black rounded-xl electric-pulse hover:scale-105 transition-all flex items-center justify-center gap-2 text-base sm:text-lg group w-full sm:w-auto"
-              >
-                SIGN UP NOW
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <Link to="/fairplay-id" className="px-6 sm:px-10 py-4 sm:py-5 bg-card border border-border text-foreground font-black rounded-xl hover:bg-accent hover:scale-105 transition-all flex items-center justify-center gap-2 text-base sm:text-lg w-full sm:w-auto">
-              Get a Fairplay ID
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      {/* Quick Links REMOVED */}
 
       {/* Quick Links REMOVED */}
 
