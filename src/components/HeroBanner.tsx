@@ -43,6 +43,26 @@ export const HeroBanner = () => {
           />
         </motion.div>
 
+        {/* CTAs */}
+        <div className="mt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
+          <Link
+            to="/fairplay-id"
+            className="px-6 py-3.5 sm:px-9 sm:py-4 bg-primary text-primary-foreground font-black italic uppercase tracking-tight rounded-xl text-center flex items-center justify-center gap-2 hover:scale-[1.03] transition-transform shadow-[0_0_30px_rgba(255,100,0,0.4)]"
+          >
+            Get your ID now <Zap className="w-4 h-4 fill-current" />
+          </Link>
+          <a
+            href={waLink("Hello Fairplay! I want to create my Cricket ID now.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3.5 sm:px-9 sm:py-4 bg-card border border-white/15 text-foreground font-black italic uppercase tracking-tight rounded-xl text-center hover:bg-accent transition-colors"
+          >
+            WhatsApp us
+          </a>
+        </div>
+
+
+
         {/* Trust strip */}
         <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-4">
           {badges.map((b) => (
