@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
 import { Trophy, Swords, Zap, PlayCircle, Star, Target, ShieldCheck, TrendingUp } from "lucide-react";
+import cricketExchangeImg from "@/assets/play/cricket-exchange.jpg";
+import liveCasinoImg from "@/assets/play/live-casino.jpg";
+import tennisFootballImg from "@/assets/play/tennis-football.jpg";
+import virtualSportsImg from "@/assets/play/virtual-sports.jpg";
 
 const playOptions = [
   {
@@ -7,28 +11,28 @@ const playOptions = [
     desc: "Experience India's most liquid cricket exchange with unmatched market depth.",
     icon: Trophy,
     stat: "High Liquidity",
-    image: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=800&auto=format&fit=crop"
+    image: cricketExchangeImg
   },
   {
     title: "Live Casino",
     desc: "HD streaming with professional dealers. Teen Patti, Andar Bahar, and more.",
     icon: Swords,
     stat: "24/7 Live Dealers",
-    image: "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?q=80&w=800&auto=format&fit=crop"
+    image: liveCasinoImg
   },
   {
     title: "Tennis & Football",
     desc: "Global soccer leagues and Grand Slam tennis with premium odds and fancy markets.",
     icon: Zap,
     stat: "1000+ Daily Events",
-    image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800&auto=format&fit=crop"
+    image: tennisFootballImg
   },
   {
     title: "Virtual Sports",
     desc: "Non-stop virtual action. Instant results on simulated matches and races.",
     icon: PlayCircle,
     stat: "Instant Results",
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800&auto=format&fit=crop"
+    image: virtualSportsImg
   }
 ];
 
