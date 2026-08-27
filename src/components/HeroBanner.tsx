@@ -33,27 +33,8 @@ export const HeroBanner = () => {
             />
           </picture>
 
-          {/* Bottom gradient + CTAs */}
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/70 to-transparent pt-16 pb-4 px-4 sm:px-8">
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
-              <Link
-                to="/fairplay-id"
-                className="px-6 py-3.5 sm:px-9 sm:py-4 bg-primary text-primary-foreground font-black italic uppercase tracking-tight rounded-xl text-center flex items-center justify-center gap-2 hover:scale-[1.03] transition-transform shadow-[0_0_30px_rgba(255,100,0,0.4)]"
-              >
-                Get your ID now <Zap className="w-4 h-4 fill-current" />
-              </Link>
-              <a
-                href={waLink("Hello Fairplay! I want to create my Cricket ID now.")}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3.5 sm:px-9 sm:py-4 bg-card/80 backdrop-blur border border-white/15 text-foreground font-black italic uppercase tracking-tight rounded-xl text-center hover:bg-accent transition-colors"
-              >
-                WhatsApp us
-              </a>
-            </div>
-          </div>
-
           {/* Animated shine sweep */}
+
           <motion.div
             initial={{ x: "-120%" }}
             animate={{ x: "220%" }}
