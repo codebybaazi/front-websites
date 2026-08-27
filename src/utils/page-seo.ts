@@ -1,7 +1,8 @@
 /** Origin every canonical, og:url, sitemap <loc> and absolute schema URL is built from. */
 export const SITE_ORIGIN = "https://fairplayindia.com";
 
-export const OG_IMAGE = `${SITE_ORIGIN}/logo.png`;
+/** Shared link-preview image: the homepage hero banner. */
+export const OG_IMAGE = `${SITE_ORIGIN}/og-banner.jpg`;
 
 export interface PageSeo {
   title: string;
