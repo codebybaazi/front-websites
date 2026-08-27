@@ -148,22 +148,22 @@ function Index() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
-              className="text-2xl text-muted-foreground mb-10 max-w-2xl leading-relaxed"
+              className="text-lg sm:text-2xl text-muted-foreground mb-8 sm:mb-10 max-w-2xl leading-relaxed"
             >
               India's cricket ID, live football and tennis markets, plus HD casino — UPI deposits and withdrawals that settle in 180 minutes.
             </motion.p>
 
-            <div className="flex flex-wrap gap-8">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-8">
               <a 
                 href={waLink("Hello Fairplay! I want to Sign Up and get my Verified ID.")} 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-10 py-5 bg-primary text-primary-foreground font-black rounded-xl electric-pulse hover:scale-105 transition-all flex items-center gap-2 text-lg group"
+                className="px-6 sm:px-10 py-4 sm:py-5 bg-primary text-primary-foreground font-black rounded-xl electric-pulse hover:scale-105 transition-all flex items-center justify-center gap-2 text-base sm:text-lg group w-full sm:w-auto"
               >
                 SIGN UP NOW
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
-              <Link to="/fairplay-id" className="px-10 py-5 bg-card border border-border text-foreground font-black rounded-xl hover:bg-accent hover:scale-105 transition-all flex items-center gap-2 text-lg">
+              <Link to="/fairplay-id" className="px-6 sm:px-10 py-4 sm:py-5 bg-card border border-border text-foreground font-black rounded-xl hover:bg-accent hover:scale-105 transition-all flex items-center justify-center gap-2 text-base sm:text-lg w-full sm:w-auto">
               Get a Fairplay ID
               </Link>
             </div>
