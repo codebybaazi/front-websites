@@ -155,7 +155,30 @@ import fifaWomensT20Banner from "@/assets/blog/fairplay-fifa-womens-t20-guide.jp
 import allFormatsCricketBanner from "@/assets/blog/fairplay-all-formats-cricket-betting.jpg";
 import casinoSlotsGuideBanner from "@/assets/blog/fairplay-casino-slots-guide.jpg";
 
+import rouletteGuideBanner from "@/assets/blog/fairplay-roulette-guide.jpg";
+import bestPlatformsFifaBanner from "@/assets/blog/fairplay-best-platforms-fifa-2026.jpg";
+import onlineBettingIdServicesBanner from "@/assets/blog/fairplay-online-betting-id-services.jpg";
+import appTrustedMobileBanner from "@/assets/blog/fairplay-app-trusted-mobile-platform.jpg";
+import mobileFeaturesT20Banner from "@/assets/blog/fairplay-mobile-features-t20.jpg";
+import helpsNewUsersBanner from "@/assets/blog/fairplay-helps-new-users.jpg";
+import footballWcOddsBanner from "@/assets/blog/fairplay-football-wc-odds.jpg";
+import fastVerifiedIdBanner from "@/assets/blog/fairplay-fast-verified-id.jpg";
+import createAccountSportsBanner from "@/assets/blog/fairplay-create-account-sports.jpg";
+import cricketIdWorksBanner from "@/assets/blog/fairplay-cricket-betting-id-works.jpg";
+import stopBettingLossesBanner from "@/assets/blog/fairplay-stop-betting-losses.jpg";
+
 const POST_BANNERS: Record<string, string> = {
+  "how-to-play-roulette-on-fairplay": rouletteGuideBanner,
+  "fairplay-best-platforms-fifa-world-cup-2026-betting-in-india": bestPlatformsFifaBanner,
+  "fairplay-online-betting-id-and-services": onlineBettingIdServicesBanner,
+  "fairplay-app-indias-trusted-mobile-betting-platform": appTrustedMobileBanner,
+  "fairplay-mobile-features-for-t20-cricket-betting": mobileFeaturesT20Banner,
+  "fairplay-helps-new-users-navigate-online-sports-platforms": helpsNewUsersBanner,
+  "how-football-world-cup-odds-work-fairplay": footballWcOddsBanner,
+  "fairplay-id-fast-verified-id-for-online-sports-betting": fastVerifiedIdBanner,
+  "create-a-fairplay-account-for-sports-betting": createAccountSportsBanner,
+  "fairplay-cricket-betting-id-and-how-does-it-work": cricketIdWorksBanner,
+  "fairplay-stop-cricket-betting-losses-using-smart-strategies": stopBettingLossesBanner,
   "fairplay-casino-best-online-casino-sports-betting-platform": casinoSportsPlatformBanner,
   "fairplay-fifa-world-cup-2026-complete-tournament-guide": fifaTournamentGuideBanner,
   "fairplay-card-game-zone-gaming-fan": cardGameZoneBanner,
