@@ -198,8 +198,26 @@ import andarBaharGuideBanner from "@/assets/blog/fairplay-andar-bahar-guide.jpg"
 import liveCasinoServicesBanner from "@/assets/blog/fairplay-live-casino-features-services.jpg";
 import pokerGuideBanner from "@/assets/blog/fairplay-poker-guide-new-players.jpg";
 import welcomeBonusBanner from "@/assets/blog/fairplay-welcome-bonus-claim.jpg";
+import paymentMethodsGuideBanner from "@/assets/blog/fairplay-payment-methods-guide.jpg";
+import kabaddiBettingBanner from "@/assets/blog/fairplay-kabaddi-betting-guide.jpg";
+import cricketOddsExplainedBanner from "@/assets/blog/fairplay-cricket-odds-explained.jpg";
+import proApkNewVersionBanner from "@/assets/blog/fairplay-pro-apk-new-version.jpg";
+import indIntlCasinoGamesBanner from "@/assets/blog/fairplay-indian-international-casino-games.jpg";
+import paymentSecurityBanner from "@/assets/blog/fairplay-payment-security-protection.jpg";
+import platformTrends2026Banner from "@/assets/blog/fairplay-platform-trends-2026.jpg";
+import gamesIdTournamentsBanner from "@/assets/blog/fairplay-games-id-multiple-tournaments.jpg";
+import cricketIdVsBettingIdBanner from "@/assets/blog/fairplay-cricket-id-vs-betting-id.jpg";
 
 const POST_BANNERS: Record<string, string> = {
+  "fairplay-payment-methods-guide": paymentMethodsGuideBanner,
+  "how-kabaddi-betting-works-on-fairplay": kabaddiBettingBanner,
+  "fairplay-cricket-odds-explained-markets-and-predictions": cricketOddsExplainedBanner,
+  "fairplay-pro-apk-new-version-download-install": proApkNewVersionBanner,
+  "indian-and-international-casino-games-on-fairplay": indIntlCasinoGamesBanner,
+  "fairplay-payment-security-transaction-protection": paymentSecurityBanner,
+  "fairplay-platform-trends-2026": platformTrends2026Banner,
+  "fairplay-games-id-explore-multiple-tournaments-with-one-id": gamesIdTournamentsBanner,
+  "fairplay-online-cricket-id-vs-cricket-betting-id": cricketIdVsBettingIdBanner,
   "fairplay-cricket-id-vs-traditional-online-account-access-difference": idVsTraditionalBanner,
   "how-to-get-started-with-fairplay-apk-for-android": apkAndroidStartBanner,
   "fairplay-explains-probability-in-sports-betting": probabilityBettingBanner,
