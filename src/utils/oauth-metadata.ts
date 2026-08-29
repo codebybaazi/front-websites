@@ -44,10 +44,13 @@ function buildMetadata() {
       // `skill` is the canonical auth.md discovery pointer used by current
       // agent-registration clients. Keep register_uri as a compatibility alias.
       skill: `${SITE_ORIGIN}/auth.md`,
+      supported_flows: ["anonymous"],
+      registration_methods_supported: ["anonymous"],
       registration_required: false,
       register_uri: `${SITE_ORIGIN}/auth.md`,
+      registration_endpoint: `${SITE_ORIGIN}/auth.md`,
       documentation_uri: `${SITE_ORIGIN}/auth.md`,
-      identity_types_supported: ["none"],
+      identity_types_supported: ["anonymous"],
       credential_types_supported: ["none"],
       claims_supported: [] as string[],
       claim_uri: null,
@@ -140,15 +143,40 @@ registration and no protected API on this origin.
    machine-readable resource.
 4. Respect [robots.txt](${SITE_ORIGIN}/robots.txt) and a reasonable request rate.
 
+## Anonymous registration flow
+
+This is the complete registration flow for this public service:
+
+1. Select the \`anonymous\` identity type.
+2. Do not create an account and do not request or store credentials.
+3. Send a plain unauthenticated \`GET\` request to the chosen public resource.
+4. No claim, token exchange, refresh, or revocation step applies because no
+   credential is issued.
+
+Example:
+
+\`\`\`http
+GET /services HTTP/1.1
+Host: fairplayindia.com
+Accept: text/markdown
+\`\`\`
+
+The expected response is the requested public representation with HTTP 200. Agents
+must not send an \`Authorization\` header.
+
 ## agent_auth
 
 \`\`\`json
 {
   "agent_auth": {
+    "skill": "${SITE_ORIGIN}/auth.md",
+    "supported_flows": ["anonymous"],
+    "registration_methods_supported": ["anonymous"],
     "registration_required": false,
     "register_uri": "${SITE_ORIGIN}/auth.md",
+    "registration_endpoint": "${SITE_ORIGIN}/auth.md",
     "documentation_uri": "${SITE_ORIGIN}/auth.md",
-    "identity_types_supported": ["none"],
+    "identity_types_supported": ["anonymous"],
     "credential_types_supported": ["none"],
     "claims_supported": [],
     "claim_uri": null,
