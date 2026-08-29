@@ -32,6 +32,16 @@ import optionsBonusesBanner from "@/assets/blog/fairplay-options-bonuses.jpg";
 import dcVsUpwBanner from "@/assets/blog/fairplay-dc-vs-upw.jpg";
 import miVsUpwBanner from "@/assets/blog/fairplay-mi-vs-upw.jpg";
 import iplWplBblBanner from "@/assets/blog/fairplay-ipl-wpl-bbl.jpg";
+import whatsappSupportBanner from "@/assets/blog/fairplay-whatsapp-support.jpg";
+import ggwVsRcbwBanner from "@/assets/blog/fairplay-ggw-vs-rcbw.jpg";
+import indNzT20LiveBanner from "@/assets/blog/fairplay-indnz-t20-live.jpg";
+import trustedIplT20Banner from "@/assets/blog/fairplay-trusted-ipl-t20.jpg";
+import indNz2ndT20Banner from "@/assets/blog/fairplay-indnz-2nd-t20.jpg";
+import onlineGamingGuideBanner from "@/assets/blog/fairplay-online-gaming-guide.jpg";
+import id5StepsBanner from "@/assets/blog/fairplay-id-5-steps.jpg";
+import idOnlineBettingBanner from "@/assets/blog/fairplay-id-online-betting.jpg";
+import bettingHistoryIdBanner from "@/assets/blog/fairplay-betting-history-id.jpg";
+import bonusesRewardsIdBanner from "@/assets/blog/fairplay-bonuses-rewards-id.jpg";
 
 const POST_BANNERS: Record<string, string> = {
   "fairplay-id-security-tips-protect-your-id-login": idSecurityBanner,
