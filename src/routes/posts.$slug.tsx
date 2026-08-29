@@ -144,7 +144,28 @@ import fifaFanGuideBanner from "@/assets/blog/fairplay-fifa-2026-fan-guide.jpg";
 import realCasinoGamingBanner from "@/assets/blog/fairplay-real-casino-gaming.jpg";
 import fifaBettingTipsBanner from "@/assets/blog/fairplay-fifa-2026-betting-tips.jpg";
 
+import casinoSportsPlatformBanner from "@/assets/blog/fairplay-casino-sports-platform.jpg";
+import fifaTournamentGuideBanner from "@/assets/blog/fairplay-fifa-2026-tournament-guide.jpg";
+import cardGameZoneBanner from "@/assets/blog/fairplay-card-game-zone.jpg";
+import womensT20WcBanner from "@/assets/blog/fairplay-womens-t20-wc-guide.jpg";
+import ballByBallBanner from "@/assets/blog/fairplay-ball-by-ball-betting.jpg";
+import casinoVsSportsBanner from "@/assets/blog/fairplay-casino-vs-sports-betting.jpg";
+import fifaLiveBettingIdBanner from "@/assets/blog/fairplay-fifa-live-betting-id.jpg";
+import fifaWomensT20Banner from "@/assets/blog/fairplay-fifa-womens-t20-guide.jpg";
+import allFormatsCricketBanner from "@/assets/blog/fairplay-all-formats-cricket-betting.jpg";
+import casinoSlotsGuideBanner from "@/assets/blog/fairplay-casino-slots-guide.jpg";
+
 const POST_BANNERS: Record<string, string> = {
+  "fairplay-casino-best-online-casino-sports-betting-platform": casinoSportsPlatformBanner,
+  "fairplay-fifa-world-cup-2026-complete-tournament-guide": fifaTournamentGuideBanner,
+  "fairplay-card-game-zone-gaming-fan": cardGameZoneBanner,
+  "womens-t20-world-cup-2026-betting-guide-fairplay-expert-analysis": womensT20WcBanner,
+  "how-ball-by-ball-betting-works-on-fairplay": ballByBallBanner,
+  "online-casino-vs-sports-betting-guide": casinoVsSportsBanner,
+  "fifa-world-cup-2026-fairplay-live-betting-id-guide": fifaLiveBettingIdBanner,
+  "fifa-world-cup-and-womens-t20-world-cup-2026-guide": fifaWomensT20Banner,
+  "bet-on-ipl-t20-odi-and-test-cricket-with-fairplay": allFormatsCricketBanner,
+  "fairplay-casino-slots-guide-rtp-free-spins-winning-tips-2026": casinoSlotsGuideBanner,
   "why-choose-fairplay-for-ipl-betting": whyChooseIplBanner,
   "fairplay-account-a-quick-guide-to-kyc": kycQuickGuideBanner,
   "how-to-add-funds-to-your-fairplay-id": addFundsIdBanner,
