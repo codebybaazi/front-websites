@@ -101,9 +101,11 @@ export const AUTH_MD_CONTENT_TYPE = "text/markdown; charset=utf-8";
  * look for instead of a 404 they read as "unknown".
  */
 export function buildAuthMarkdown(): string {
-  return `# Agent Authentication — Fairplay India
+  return `# Auth.md
 
-## Summary
+> Agent authentication and registration metadata for Fairplay India.
+
+## Auth.md Summary
 
 No authentication is required. \`${SITE_ORIGIN}\` is a public, read-only content site.
 There is no agent registration step, no API key issuance, no OAuth client
