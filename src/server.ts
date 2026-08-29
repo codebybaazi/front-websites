@@ -154,6 +154,33 @@ export default {
         });
       }
 
+      if (url.pathname === "/.well-known/ai-catalog.json") {
+        if (request.method === "OPTIONS") {
+          return new Response(null, {
+            status: 204,
+            headers: {
+              "access-control-allow-origin": "*",
+              "access-control-allow-methods": "GET, HEAD, OPTIONS",
+              "access-control-allow-headers": "Content-Type, Accept",
+              "access-control-max-age": "86400",
+            },
+          });
+        }
+        if (isRead) {
+          const { AI_CATALOG_CONTENT_TYPE, buildAiCatalog } = await import(
+            "./utils/ai-catalog"
+          );
+          return new Response(bodyFor(buildAiCatalog()), {
+            status: 200,
+            headers: {
+              "content-type": AI_CATALOG_CONTENT_TYPE,
+              "access-control-allow-origin": "*",
+              "cache-control": "public, max-age=3600",
+            },
+          });
+        }
+      }
+
       if (isRead && url.pathname.startsWith("/.well-known/agent-skills/")) {
         const {
           AGENT_SKILLS_INDEX_PATH,
