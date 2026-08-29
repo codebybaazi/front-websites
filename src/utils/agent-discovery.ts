@@ -25,6 +25,11 @@ const DISCOVERY_LINKS: DiscoveryLink[] = [
   { path: "/services", rel: "service-doc", type: "text/html" },
   { path: "/auth.md", rel: "help", type: "text/markdown" },
   {
+    path: "/.well-known/agent-skills/index.json",
+    rel: "service-desc",
+    type: "application/json",
+  },
+  {
     path: "/.well-known/mcp/server-card.json",
     rel: "mcp-server-card",
     type: "application/json",
