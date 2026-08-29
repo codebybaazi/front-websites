@@ -52,6 +52,16 @@ import t20wcPredictionBanner from "@/assets/blog/fairplay-t20wc-prediction.jpg";
 import bettingFeaturesGameTypesBanner from "@/assets/blog/fairplay-betting-features-game-types.jpg";
 import iplIdSafeSignupBanner from "@/assets/blog/fairplay-ipl-id-safe-signup.jpg";
 import vsOtherIdsBanner from "@/assets/blog/fairplay-vs-other-ids-2026.jpg";
+import whyIndianGamersBanner from "@/assets/blog/fairplay-why-indian-gamers-prefer.jpg";
+import indVsUsaBanner from "@/assets/blog/fairplay-ind-vs-usa-t20wc.jpg";
+import iplT20wcGuideBanner from "@/assets/blog/fairplay-ipl-t20wc-betting-guide.jpg";
+import onlineCricketPlatformBanner from "@/assets/blog/fairplay-online-cricket-platform.jpg";
+import bestTimeToBetBanner from "@/assets/blog/fairplay-best-time-to-bet.jpg";
+import casinoGameTypesBanner from "@/assets/blog/fairplay-casino-game-types.jpg";
+import t20wcPredStrategiesBanner from "@/assets/blog/fairplay-t20wc-predictions-strategies.jpg";
+import indVsPakBanner from "@/assets/blog/fairplay-ind-vs-pak-prediction.jpg";
+import liveBettingPlanBanner from "@/assets/blog/fairplay-live-betting-winning-plan.jpg";
+import safeVerifiedIplIdBanner from "@/assets/blog/fairplay-safe-verified-ipl-id.jpg";
 
 const POST_BANNERS: Record<string, string> = {
   "fairplay-id-security-tips-protect-your-id-login": idSecurityBanner,
@@ -95,6 +105,16 @@ const POST_BANNERS: Record<string, string> = {
   "fairplay-online-betting-features-game-types": bettingFeaturesGameTypesBanner,
   "ipl-betting-id-safe-signup-fairplay": iplIdSafeSignupBanner,
   "fairplay-vs-other-betting-ids-2026": vsOtherIdsBanner,
+  "why-indian-gamers-prefer-fairplay": whyIndianGamersBanner,
+  "fairplay-india-vs-usa-match-prediction-icc-t20-world-cup": indVsUsaBanner,
+  "fairplay-ipl-t20-world-cup-betting-guide": iplT20wcGuideBanner,
+  "fairplay-online-cricket-platform-india": onlineCricketPlatformBanner,
+  "fairplay-best-time-to-place-bets": bestTimeToBetBanner,
+  "casino-games-types-on-fairplay": casinoGameTypesBanner,
+  "fairplay-t20-world-cup-predictions-betting-strategies": t20wcPredStrategiesBanner,
+  "fairplay-india-vs-pakistan-today-match-prediction": indVsPakBanner,
+  "live-match-betting-fairplay-winning-plan-t20-world-cup": liveBettingPlanBanner,
+  "fairplay-safe-verified-ipl-online-cricket-id-2026": safeVerifiedIplIdBanner,
 };
 
 
