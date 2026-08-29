@@ -20,6 +20,7 @@ import { FloatingWhatsApp } from "../components/FloatingWhatsApp";
 import { PageInternalLinks } from "../components/PageInternalLinks";
 import { PageBreadcrumbs } from "../components/PageBreadcrumbs";
 import { WhatsAppNumberSync } from "../components/WhatsAppNumberSync";
+import { WebMcpTools } from "../components/WebMcpTools";
 import { getWhatsAppNumber, WHATSAPP_NUMBER_META_NAME } from "../lib/whatsapp";
 
 function NotFoundComponent() {
@@ -598,6 +599,7 @@ function RootComponent() {
           <PageInternalLinks />
           <FloatingWhatsApp />
           <WhatsAppNumberSync />
+          <WebMcpTools />
         </main>
 
         {/* Ultra-Premium Cinematic Footer */}
