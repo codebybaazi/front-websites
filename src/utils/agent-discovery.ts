@@ -24,6 +24,12 @@ const DISCOVERY_LINKS: DiscoveryLink[] = [
   { path: "/all-links", rel: "index", type: "text/html" },
   { path: "/services", rel: "service-doc", type: "text/html" },
   { path: "/auth.md", rel: "help", type: "text/markdown" },
+  { path: "/auth.md", rel: "auth-md", type: "text/markdown" },
+  {
+    path: "/.well-known/oauth-protected-resource",
+    rel: "service-meta",
+    type: "application/json",
+  },
   {
     path: "/.well-known/ai-catalog.json",
     rel: "service-meta",
