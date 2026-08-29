@@ -113,51 +113,48 @@ function BlogPage() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="group relative w-full bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[3rem] p-1 overflow-hidden"
+            className="group relative w-full bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[2.5rem] overflow-hidden"
           >
-            <div className="relative z-10 grid lg:grid-cols-2 gap-0">
-              <Link
-                to="/posts/$slug"
-                params={{ slug: featuredPost.slug }}
-                className="aspect-[16/9] self-start bg-primary/10 relative overflow-hidden block rounded-[2.8rem] lg:rounded-r-none"
-                aria-label={featuredPost.title}
-              >
-                {POST_BANNERS[featuredPost.slug] ? (
-                  <img
-                    src={POST_BANNERS[featuredPost.slug]}
-                    alt={featuredPost.title}
-                    width={1600}
-                    height={900}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700"
-                  />
-                ) : (
-                  <BookOpen className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 text-primary/20 group-hover:scale-110 transition-transform duration-700" />
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              </Link>
-              <div className="p-10 md:p-16 flex flex-col justify-center">
-                <div className="flex items-center gap-4 mb-8">
-                  <span className="px-4 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-primary text-[10px] font-black uppercase tracking-widest">
+            <Link
+              to="/posts/$slug"
+              params={{ slug: featuredPost.slug }}
+              className="relative block aspect-[16/9] overflow-hidden"
+              aria-label={featuredPost.title}
+            >
+              {POST_BANNERS[featuredPost.slug] ? (
+                <img
+                  src={POST_BANNERS[featuredPost.slug]}
+                  alt={featuredPost.title}
+                  width={1600}
+                  height={900}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
+                />
+              ) : (
+                <BookOpen className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 text-primary/20 group-hover:scale-110 transition-transform duration-700" />
+              )}
+            </Link>
+            <div className="p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
+              <div className="flex-1 min-w-0">
+                <div className="flex flex-wrap items-center gap-3 mb-3">
+                  <span className="px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary text-[10px] font-black uppercase tracking-widest">
                     Featured Insight
                   </span>
                   <span className="text-white/30 text-[10px] font-bold uppercase tracking-widest">
                     {featuredPost.date}
                   </span>
                 </div>
-                <h2 className="text-4xl md:text-5xl font-black italic uppercase tracking-tighter leading-none mb-6 group-hover:text-primary transition-colors">
-                  {featuredPost.title}
-                </h2>
-                <p className="text-lg text-white/50 leading-relaxed mb-10 font-medium">
+                <h2 className="sr-only">{featuredPost.title}</h2>
+                <p className="text-white/60 leading-relaxed font-medium max-w-3xl">
                   {featuredPost.desc}
                 </p>
-                <Link
-                  to="/posts/$slug"
-                  params={{ slug: featuredPost.slug }}
-                  className="inline-flex items-center gap-4 px-8 py-4 bg-white text-black rounded-2xl font-black italic uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-all w-fit"
-                >
-                  Read Masterclass <ArrowRight className="w-4 h-4" />
-                </Link>
               </div>
+              <Link
+                to="/posts/$slug"
+                params={{ slug: featuredPost.slug }}
+                className="shrink-0 inline-flex items-center gap-3 px-6 py-3.5 bg-white text-black rounded-2xl font-black italic uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-all"
+              >
+                Read Masterclass <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </motion.div>
         </div>
