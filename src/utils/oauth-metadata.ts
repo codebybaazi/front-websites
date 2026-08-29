@@ -11,6 +11,7 @@ import { SITE_ORIGIN } from "./page-seo";
 
 export const OAUTH_AS_PATH = "/.well-known/oauth-authorization-server";
 export const OPENID_CONFIGURATION_PATH = "/.well-known/openid-configuration";
+export const OAUTH_PROTECTED_RESOURCE_PATH = "/.well-known/oauth-protected-resource";
 
 export const OAUTH_METADATA_CONTENT_TYPE = "application/json; charset=utf-8";
 
@@ -44,6 +45,29 @@ export function buildOAuthAuthorizationServerMetadata(): string {
 export function buildOpenIdConfigurationMetadata(): string {
   return JSON.stringify(
     { ...buildMetadata(), subject_types_supported: [], id_token_signing_alg_values_supported: [] },
+    null,
+    2,
+  );
+}
+
+export function buildOAuthProtectedResourceMetadata(): string {
+  return JSON.stringify(
+    {
+      resource: SITE_ORIGIN,
+      authorization_servers: [] as string[],
+      scopes_supported: [] as string[],
+      bearer_methods_supported: ["header"],
+      resource_documentation: `${SITE_ORIGIN}/services`,
+      "x-authentication-required": false,
+      "x-access-model": "public-read-only",
+      "x-notice":
+        "This site is a public read-only resource. No protected APIs or OAuth authorization servers are operated on this origin.",
+      "x-public-resources": {
+        api_catalog: `${SITE_ORIGIN}${API_CATALOG_PATH}`,
+        sitemap: `${SITE_ORIGIN}/sitemap.xml`,
+        index: `${SITE_ORIGIN}/all-links`,
+      },
+    },
     null,
     2,
   );

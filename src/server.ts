@@ -145,16 +145,24 @@ export default {
         const {
           OAUTH_AS_PATH,
           OPENID_CONFIGURATION_PATH,
+          OAUTH_PROTECTED_RESOURCE_PATH,
           OAUTH_METADATA_CONTENT_TYPE,
           buildOAuthAuthorizationServerMetadata,
           buildOpenIdConfigurationMetadata,
+          buildOAuthProtectedResourceMetadata,
         } = await import("./utils/oauth-metadata");
 
-        if (url.pathname === OAUTH_AS_PATH || url.pathname === OPENID_CONFIGURATION_PATH) {
+        if (
+          url.pathname === OAUTH_AS_PATH ||
+          url.pathname === OPENID_CONFIGURATION_PATH ||
+          url.pathname === OAUTH_PROTECTED_RESOURCE_PATH
+        ) {
           const body =
             url.pathname === OAUTH_AS_PATH
               ? buildOAuthAuthorizationServerMetadata()
-              : buildOpenIdConfigurationMetadata();
+              : url.pathname === OPENID_CONFIGURATION_PATH
+                ? buildOpenIdConfigurationMetadata()
+                : buildOAuthProtectedResourceMetadata();
           return new Response(bodyFor(body), {
             status: 200,
             headers: {

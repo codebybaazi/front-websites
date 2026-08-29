@@ -56,6 +56,11 @@ const CATALOG_ITEMS = [
     type: "application/json",
     title: "OpenID Connect metadata: this site is public, no authentication required",
   },
+  {
+    path: "/.well-known/oauth-protected-resource",
+    type: "application/json",
+    title: "OAuth 2.0 Protected Resource metadata: no protected APIs on this origin",
+  },
 ];
 
 function absolute(path: string) {
