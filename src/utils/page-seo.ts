@@ -222,11 +222,13 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "contact Fairplay, Fairplay support contact, Fairplay WhatsApp number",
   },
   "/app": {
-    title: "Cricket Betting App | Fairplay App for Android and iOS",
+    title: "Fairplay App Download | Fairplay APK for Android & iOS",
     description:
-      "Fairplay is a cricket betting app that uses the same online cricket ID as desktop. Live cricket, football, tennis, casino and UPI deposits on mobile.",
-    keywords: "cricket betting app, ipl betting app, Fairplay app, Fairplay APK, Fairplay Android, cricket id app",
+      "Fairplay app download for Android and iOS: install the Fairplay APK, log in with your Fairplay ID, and bet live cricket, football, tennis and casino on UPI.",
+    keywords:
+      "fairplay app, fairplay app download, fairplay download, fairplay apk, fair play apk, fairplay betting app, cricket betting app",
   },
+
   "/about": {
     title: "About Fairplay | Sports exchange since 2017",
     description:
