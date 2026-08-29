@@ -25,6 +25,11 @@ const DISCOVERY_LINKS: DiscoveryLink[] = [
   { path: "/services", rel: "service-doc", type: "text/html" },
   { path: "/auth.md", rel: "help", type: "text/markdown" },
   {
+    path: "/.well-known/ai-catalog.json",
+    rel: "service-meta",
+    type: "application/json",
+  },
+  {
     path: "/.well-known/agent-skills/index.json",
     rel: "service-desc",
     type: "application/json",
@@ -81,6 +86,11 @@ const CATALOG_ITEMS = [
     path: "/.well-known/mcp/server-card.json",
     type: "application/json",
     title: "MCP Server Card (SEP-1649): public read-only MCP server for this site",
+  },
+  {
+    path: "/.well-known/ai-catalog.json",
+    type: "application/json",
+    title: "ARD capability manifest (MCP server, agent skills, sitemap and policy resources)",
   },
   {
     path: "/.well-known/agent-skills/index.json",
