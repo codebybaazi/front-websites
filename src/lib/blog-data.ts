@@ -1664,6 +1664,105 @@ const RAW_BLOG_ARTICLES = [
     "date": "Jan 05, 2026",
     "icon": "Zap",
     "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "how-to-claim-your-fairplay-welcome-bonus",
+    "title": "How To Claim Your Fairplay Welcome Bonus",
+    "category": "Guide",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Aug 14, 2026",
+    "icon": "Star",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "fairplay-payment-methods-guide",
+    "title": "Fairplay Payment Methods Guide",
+    "category": "Guide",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Aug 15, 2026",
+    "icon": "Zap",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "how-kabaddi-betting-works-on-fairplay",
+    "title": "How Kabaddi Betting Works On Fairplay",
+    "category": "Strategy",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Aug 17, 2026",
+    "icon": "Target",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "fairplay-cricket-odds-explained-markets-and-predictions",
+    "title": "Fairplay Cricket Odds Explained Markets And Predictions",
+    "category": "Strategy",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Aug 18, 2026",
+    "icon": "TrendingUp",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "fairplay-pro-apk-new-version-download-install",
+    "title": "Fairplay Pro Apk New Version Download Install",
+    "category": "Guide",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Aug 19, 2026",
+    "icon": "Zap",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "indian-and-international-casino-games-on-fairplay",
+    "title": "Indian And International Casino Games On Fairplay",
+    "category": "Strategy",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Aug 20, 2026",
+    "icon": "Crown",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "fairplay-payment-security-transaction-protection",
+    "title": "Fairplay Payment Security Transaction Protection",
+    "category": "Support",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Aug 22, 2026",
+    "icon": "ShieldCheck",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "fairplay-platform-trends-2026",
+    "title": "Fairplay Platform Trends 2026",
+    "category": "Guide",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Aug 24, 2026",
+    "icon": "TrendingUp",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "fairplay-games-id-explore-multiple-tournaments-with-one-id",
+    "title": "Fairplay Games Id Explore Multiple Tournaments With One Id",
+    "category": "Guide",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Aug 26, 2026",
+    "icon": "BookOpen",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "fairplay-online-cricket-id-vs-cricket-betting-id",
+    "title": "Fairplay Online Cricket Id Vs Cricket Betting Id",
+    "category": "Guide",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Aug 28, 2026",
+    "icon": "Trophy",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "fairplay-id-security-tips-protect-your-id-login",
+    "title": "Fairplay Id Security Tips Protect Your Id Login",
+    "category": "Support",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Aug 29, 2026",
+    "icon": "ShieldCheck",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
   }
 ];
 
