@@ -92,6 +92,16 @@ import withdrawGuideMoneyBanner from "@/assets/blog/fairplay-withdraw-guide-mone
 import depositMoneyBanner from "@/assets/blog/fairplay-deposit-money.jpg";
 import downloadAppSafelyBanner from "@/assets/blog/fairplay-download-app-safely.jpg";
 import loginProblemsSolutionsBanner from "@/assets/blog/fairplay-login-problems-solutions.jpg";
+import scamOrRealBanner from "@/assets/blog/fairplay-scam-or-real-review.jpg";
+import securityAccountSafetyBanner from "@/assets/blog/fairplay-security-account-safety.jpg";
+import ipl2026EveryMatchBanner from "@/assets/blog/fairplay-ipl-2026-every-match.jpg";
+import liveCasinoWorksBanner from "@/assets/blog/fairplay-live-casino-works.jpg";
+import playCricketGamesBanner from "@/assets/blog/fairplay-play-cricket-games.jpg";
+import usersPreferAppIplBanner from "@/assets/blog/fairplay-users-prefer-app-ipl.jpg";
+import iplAvoidMistakesBanner from "@/assets/blog/fairplay-ipl-avoid-mistakes.jpg";
+import completeGuide2026Banner from "@/assets/blog/fairplay-complete-guide-2026.jpg";
+import contactWhatsappIplIdBanner from "@/assets/blog/fairplay-contact-whatsapp-ipl-id.jpg";
+import iplTipsSmartStrategiesBanner from "@/assets/blog/fairplay-ipl-tips-smart-strategies.jpg";
 
 const POST_BANNERS: Record<string, string> = {
   "fairplay-id-security-tips-protect-your-id-login": idSecurityBanner,
@@ -175,6 +185,16 @@ const POST_BANNERS: Record<string, string> = {
   "how-to-deposit-money-on-fairplay": depositMoneyBanner,
   "how-to-download-the-fairplay-app-safely": downloadAppSafelyBanner,
   "fairplay-login-problems-solutions": loginProblemsSolutionsBanner,
+  "fairplay-scam-or-real-full-review": scamOrRealBanner,
+  "fairplay-security-account-safety-guide": securityAccountSafetyBanner,
+  "fairplay-ipl-2026-betting-guide-every-match": ipl2026EveryMatchBanner,
+  "how-live-casino-works-fairplay-guide": liveCasinoWorksBanner,
+  "how-to-play-cricket-games-on-fairplay": playCricketGamesBanner,
+  "why-users-prefer-fairplay-app-for-ipl-betting": usersPreferAppIplBanner,
+  "ipl-2026-betting-avoid-mistakes-fairplay": iplAvoidMistakesBanner,
+  "complete-fairplay-guide-2026-login-id-features-how-it-works": completeGuide2026Banner,
+  "how-to-contact-fairplay-whatsapp-for-ipl-id": contactWhatsappIplIdBanner,
+  "ipl-2026-betting-tips-on-fairplay-smart-strategies": iplTipsSmartStrategiesBanner,
 };
 
 
