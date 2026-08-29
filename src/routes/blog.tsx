@@ -119,7 +119,7 @@ function BlogPage() {
               <Link
                 to="/posts/$slug"
                 params={{ slug: featuredPost.slug }}
-                className="aspect-[16/9] lg:aspect-auto bg-primary/10 relative overflow-hidden block rounded-[2.8rem] lg:rounded-r-none"
+                className="aspect-[16/9] self-start bg-primary/10 relative overflow-hidden block rounded-[2.8rem] lg:rounded-r-none"
                 aria-label={featuredPost.title}
               >
                 {POST_BANNERS[featuredPost.slug] ? (
