@@ -133,7 +133,28 @@ import loginNotWorkingFixBanner from "@/assets/blog/fairplay-login-not-working-f
 import behindTheScenesBanner from "@/assets/blog/fairplay-behind-the-scenes-ipl-2026.jpg";
 import iplIdBenefitsIndiaBanner from "@/assets/blog/fairplay-ipl-betting-id-benefits-india.jpg";
 
+import whyChooseIplBanner from "@/assets/blog/fairplay-why-choose-ipl-betting.jpg";
+import kycQuickGuideBanner from "@/assets/blog/fairplay-kyc-quick-guide.jpg";
+import addFundsIdBanner from "@/assets/blog/fairplay-add-funds-id.jpg";
+import teenPattiRulesBanner from "@/assets/blog/fairplay-teen-patti-rules.jpg";
+import indiaMobileFeaturesBanner from "@/assets/blog/fairplay-india-mobile-betting-features.jpg";
+import iplFansUpdatesBanner from "@/assets/blog/fairplay-ipl-fans-mobile-updates.jpg";
+import rcbIpl2026FinalBanner from "@/assets/blog/fairplay-rcb-ipl-2026-final.jpg";
+import fifaFanGuideBanner from "@/assets/blog/fairplay-fifa-2026-fan-guide.jpg";
+import realCasinoGamingBanner from "@/assets/blog/fairplay-real-casino-gaming.jpg";
+import fifaBettingTipsBanner from "@/assets/blog/fairplay-fifa-2026-betting-tips.jpg";
+
 const POST_BANNERS: Record<string, string> = {
+  "why-choose-fairplay-for-ipl-betting": whyChooseIplBanner,
+  "fairplay-account-a-quick-guide-to-kyc": kycQuickGuideBanner,
+  "how-to-add-funds-to-your-fairplay-id": addFundsIdBanner,
+  "fairplay-teen-patti-rules-and-gameplay-explained": teenPattiRulesBanner,
+  "india-top-mobile-betting-features-on-fairplay": indiaMobileFeaturesBanner,
+  "why-ipl-cricket-fans-prefer-fairplay-for-mobile-cricket-updates": iplFansUpdatesBanner,
+  "fairplay-rcb-continue-title-defense-in-ipl-2026-final": rcbIpl2026FinalBanner,
+  "fairplay-fifa-world-cup-2026-football-fan-betting-guide": fifaFanGuideBanner,
+  "enjoy-real-casino-gaming-on-fairplay": realCasinoGamingBanner,
+  "fifa-world-cup-2026-fairplay-betting-tips": fifaBettingTipsBanner,
   "fairplay-id-security-tips-protect-your-id-login": idSecurityBanner,
   "common-fairplay-login-id-issues-and-how-to-fix-them-easily": loginIssuesBanner,
   "how-to-add-money-in-fairplay-wallet-complete-beginner-guide": addMoneyBanner,
