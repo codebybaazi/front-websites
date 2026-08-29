@@ -27,10 +27,11 @@ export const Route = createFileRoute("/")({
   head: ({ loaderData }) => {
     const matches = loaderData?.matchKeywords || [];
     const liveBit = matches.length > 0 ? ` Live: ${matches.slice(0, 3).join(", ")}.` : "";
-    const title = "Online Cricket ID | Fairplay Betting ID India";
+    const title = "Fairplay | Login, App Download & Online Cricket ID India";
     const description = matches.length > 0
-      ? `Get an online cricket ID on Fairplay and bet live on ${matches.slice(0, 5).join(", ")}. Cricket betting ID with UPI deposits and payouts in about 180 minutes.${liveBit}`
-      : "Get an online cricket ID on Fairplay — a cricket betting ID for IPL, football, tennis and live casino, with UPI deposits and payouts in about 180 minutes.";
+      ? `Fairplay India: Fairplay login, Fairplay app download and an online cricket ID. Bet live on ${matches.slice(0, 4).join(", ")} with UPI deposits and payouts in about 180 minutes.${liveBit}`
+      : "Fairplay India — Fairplay login, Fairplay app download (APK), Fairplay club exchange and an online cricket ID for IPL, football, tennis and live casino, with UPI deposits.";
+
     return {
       title,
       meta: [
