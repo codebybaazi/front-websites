@@ -83,6 +83,11 @@ const CATALOG_ITEMS = [
     title: "MCP Server Card (SEP-1649): public read-only MCP server for this site",
   },
   {
+    path: "/.well-known/agent-skills/index.json",
+    type: "application/json",
+    title: "Agent Skills discovery index (RFC v0.2.0) with sha256-digested skill documents",
+  },
+  {
     path: "/mcp",
     type: "application/json",
     title: "MCP Streamable HTTP endpoint (public, no authentication required)",
