@@ -85,6 +85,16 @@ const POST_BANNERS: Record<string, string> = {
   "fairplay-id-for-online-betting": idOnlineBettingBanner,
   "betting-history-using-fairplay-id": bettingHistoryIdBanner,
   "exclusive-bonuses-rewards-fairplay-id": bonusesRewardsIdBanner,
+  "fairplay-india-vs-new-zealand-4th-t20-match-prediction": indNz4thT20Banner,
+  "fairplay-features-games-safe-betting": featuresGamesSafeBanner,
+  "how-to-use-fairplay-on-mobile-india": mobileIndiaBanner,
+  "fairplay-money-transfer-guide": moneyTransferBanner,
+  "ipl-live-match-betting-fairplay": iplLiveMatchBettingBanner,
+  "fairplay-gaming-online-cricket-id": gamingOnlineCricketIdBanner,
+  "icc-t20-world-cup-2026-match-prediction-fairplay": t20wcPredictionBanner,
+  "fairplay-online-betting-features-game-types": bettingFeaturesGameTypesBanner,
+  "ipl-betting-id-safe-signup-fairplay": iplIdSafeSignupBanner,
+  "fairplay-vs-other-betting-ids-2026": vsOtherIdsBanner,
 };
 
 
