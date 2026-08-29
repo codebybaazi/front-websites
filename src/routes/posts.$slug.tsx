@@ -82,6 +82,16 @@ import saVsNzSemifinalBanner from "@/assets/blog/fairplay-sa-vs-nz-semifinal.jpg
 import idSaVsNzLiveBanner from "@/assets/blog/fairplay-id-sa-vs-nz-live.jpg";
 import appGuide1stSemiBanner from "@/assets/blog/fairplay-app-guide-1st-semifinal.jpg";
 import indVsEngSemifinalBanner from "@/assets/blog/fairplay-ind-vs-eng-semifinal.jpg";
+import t20wcFinalMarketsBanner from "@/assets/blog/fairplay-t20wc-final-markets.jpg";
+import idGuideIndNzFinalBanner from "@/assets/blog/fairplay-id-guide-ind-nz-final.jpg";
+import indNzFinalPredictionBanner from "@/assets/blog/fairplay-ind-nz-final-prediction.jpg";
+import iplId2026PredictionBanner from "@/assets/blog/fairplay-ipl-id-2026-prediction.jpg";
+import liveMatchBettingWorksBanner from "@/assets/blog/fairplay-live-match-betting-works.jpg";
+import vsCompetitorsPlatformBanner from "@/assets/blog/fairplay-vs-competitors-platform.jpg";
+import withdrawGuideMoneyBanner from "@/assets/blog/fairplay-withdraw-guide-money.jpg";
+import depositMoneyBanner from "@/assets/blog/fairplay-deposit-money.jpg";
+import downloadAppSafelyBanner from "@/assets/blog/fairplay-download-app-safely.jpg";
+import loginProblemsSolutionsBanner from "@/assets/blog/fairplay-login-problems-solutions.jpg";
 
 const POST_BANNERS: Record<string, string> = {
   "fairplay-id-security-tips-protect-your-id-login": idSecurityBanner,
@@ -155,6 +165,16 @@ const POST_BANNERS: Record<string, string> = {
   "fairplay-id-for-sa-vs-nz-semi-final-live-betting": idSaVsNzLiveBanner,
   "fairplay-app-guide-best-markets-1st-semi-final-2026": appGuide1stSemiBanner,
   "fairplay-india-vs-england-semifinal-match-prediction": indVsEngSemifinalBanner,
+  "fairplay-t20-world-cup-final-betting-markets-odds-predictions": t20wcFinalMarketsBanner,
+  "fairplay-betting-id-guide-for-india-vs-new-zealand-final": idGuideIndNzFinalBanner,
+  "india-vs-new-zealand-t20-world-cup-final-fairplay-match-prediction": indNzFinalPredictionBanner,
+  "fairplay-ipl-betting-id-2026-prediction-guide": iplId2026PredictionBanner,
+  "how-live-match-betting-works-fairplay": liveMatchBettingWorksBanner,
+  "fairplay-vs-competitors-online-cricket-platform": vsCompetitorsPlatformBanner,
+  "fairplay-how-to-withdraw-guide-money": withdrawGuideMoneyBanner,
+  "how-to-deposit-money-on-fairplay": depositMoneyBanner,
+  "how-to-download-the-fairplay-app-safely": downloadAppSafelyBanner,
+  "fairplay-login-problems-solutions": loginProblemsSolutionsBanner,
 };
 
 
