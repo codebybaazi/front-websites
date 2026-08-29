@@ -167,7 +167,30 @@ import createAccountSportsBanner from "@/assets/blog/fairplay-create-account-spo
 import cricketIdWorksBanner from "@/assets/blog/fairplay-cricket-betting-id-works.jpg";
 import stopBettingLossesBanner from "@/assets/blog/fairplay-stop-betting-losses.jpg";
 
+import idVsTraditionalBanner from "@/assets/blog/fairplay-id-vs-traditional-account.jpg";
+import apkAndroidStartBanner from "@/assets/blog/fairplay-apk-android-start.jpg";
+import probabilityBettingBanner from "@/assets/blog/fairplay-probability-sports-betting.jpg";
+import freeDemoIdBanner from "@/assets/blog/fairplay-free-demo-id.jpg";
+import clubFeaturesBanner from "@/assets/blog/fairplay-club-features-security.jpg";
+import safeSecurityBanner from "@/assets/blog/fairplay-safe-security-explained.jpg";
+import fifaKnockoutBanner from "@/assets/blog/fairplay-fifa-knockout-tips.jpg";
+import argVsEspFinalBanner from "@/assets/blog/fairplay-arg-vs-esp-final.jpg";
+import dream11FootballBanner from "@/assets/blog/fairplay-dream11-football-final.jpg";
+import footballBettingIdBanner from "@/assets/blog/fairplay-football-betting-id.jpg";
+import dream11CricketBanner from "@/assets/blog/fairplay-dream11-fantasy-cricket.jpg";
+
 const POST_BANNERS: Record<string, string> = {
+  "fairplay-cricket-id-vs-traditional-online-account-access-difference": idVsTraditionalBanner,
+  "how-to-get-started-with-fairplay-apk-for-android": apkAndroidStartBanner,
+  "fairplay-explains-probability-in-sports-betting": probabilityBettingBanner,
+  "fairplay-free-demo-id": freeDemoIdBanner,
+  "fairplay-club-complete-features-benefits-security": clubFeaturesBanner,
+  "fairplay-safe-security-features-explained": safeSecurityBanner,
+  "fairplay-fifa-world-cup-knockout-betting-tips-live-strategies": fifaKnockoutBanner,
+  "fairplay-argentina-vs-spain-fifa-world-cup-final-2026": argVsEspFinalBanner,
+  "fairplay-best-dream11-fantasy-football-team-final": dream11FootballBanner,
+  "fairplay-football-betting-id-features-benefits-how-it-works": footballBettingIdBanner,
+  "how-to-play-dream11-fantasy-cricket-with-fairplay": dream11CricketBanner,
   "how-to-play-roulette-on-fairplay": rouletteGuideBanner,
   "fairplay-best-platforms-fifa-world-cup-2026-betting-in-india": bestPlatformsFifaBanner,
   "fairplay-online-betting-id-and-services": onlineBettingIdServicesBanner,
