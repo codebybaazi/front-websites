@@ -24,6 +24,11 @@ const DISCOVERY_LINKS: DiscoveryLink[] = [
   { path: "/all-links", rel: "index", type: "text/html" },
   { path: "/services", rel: "service-doc", type: "text/html" },
   { path: "/auth.md", rel: "help", type: "text/markdown" },
+  {
+    path: "/.well-known/mcp/server-card.json",
+    rel: "mcp-server-card",
+    type: "application/json",
+  },
   { path: "/support", rel: "help", type: "text/html" },
   { path: "/about", rel: "author", type: "text/html" },
   { path: "/terms-conditions", rel: "terms-of-service", type: "text/html" },
@@ -66,6 +71,16 @@ const CATALOG_ITEMS = [
     path: "/.well-known/oauth-protected-resource",
     type: "application/json",
     title: "OAuth 2.0 Protected Resource metadata: no protected APIs on this origin",
+  },
+  {
+    path: "/.well-known/mcp/server-card.json",
+    type: "application/json",
+    title: "MCP Server Card (SEP-1649): public read-only MCP server for this site",
+  },
+  {
+    path: "/mcp",
+    type: "application/json",
+    title: "MCP Streamable HTTP endpoint (public, no authentication required)",
   },
 ];
 
