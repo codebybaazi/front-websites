@@ -122,6 +122,16 @@ import ipl2026MarketsBanner from "@/assets/blog/fairplay-ipl-2026-betting-market
 import rrVsGtBanner from "@/assets/blog/fairplay-rr-vs-gt-match52.jpg";
 import rcbVsMiBanner from "@/assets/blog/fairplay-rcb-vs-mi-match54.jpg";
 import srhVsGtBanner from "@/assets/blog/fairplay-srh-vs-gt-match56.jpg";
+import rcbVsKkrBanner from "@/assets/blog/fairplay-rcb-vs-kkr-match57.jpg";
+import miVsPbksDreamBanner from "@/assets/blog/fairplay-mi-vs-pbks-dream11.jpg";
+import crazeCricketPlatformsBanner from "@/assets/blog/fairplay-craze-cricket-platforms.jpg";
+import idNotWorkingBanner from "@/assets/blog/fairplay-id-not-working-solutions.jpg";
+import iplFansLookingIdBanner from "@/assets/blog/fairplay-ipl-fans-looking-for-id.jpg";
+import cricketGamingFeatures2026Banner from "@/assets/blog/fairplay-2026-cricket-gaming-features.jpg";
+import topMobileFeaturesBanner from "@/assets/blog/fairplay-top-mobile-betting-features.jpg";
+import loginNotWorkingFixBanner from "@/assets/blog/fairplay-login-not-working-fix.jpg";
+import behindTheScenesBanner from "@/assets/blog/fairplay-behind-the-scenes-ipl-2026.jpg";
+import iplIdBenefitsIndiaBanner from "@/assets/blog/fairplay-ipl-betting-id-benefits-india.jpg";
 
 const POST_BANNERS: Record<string, string> = {
   "fairplay-id-security-tips-protect-your-id-login": idSecurityBanner,
@@ -235,6 +245,16 @@ const POST_BANNERS: Record<string, string> = {
   "rr-vs-gt-dream11-prediction-today-match-52st-ipl-2026": rrVsGtBanner,
   "rcb-vs-mi-dream11-prediction-today-match54-ipl-2026": rcbVsMiBanner,
   "srh-vs-gt-dream11-prediction-today-match-56-ipl-2026": srhVsGtBanner,
+  "rcb-vs-kkr-ipl-2026-dream11-prediction-today-match57": rcbVsKkrBanner,
+  "mi-vs-pbks-dream11-prediction-today-match": miVsPbksDreamBanner,
+  "fairplay-growing-craze-for-cricket-platforms-ipl-2026": crazeCricketPlatformsBanner,
+  "fairplay-id-not-working-quick-solutions-guide": idNotWorkingBanner,
+  "why-ipl-fans-are-looking-for-fairplay-id": iplFansLookingIdBanner,
+  "fairplay-2026-online-cricket-gaming-features": cricketGamingFeatures2026Banner,
+  "top-mobile-betting-features-on-fairplay": topMobileFeaturesBanner,
+  "fairplay-login-not-working-fix-guide": loginNotWorkingFixBanner,
+  "fairplay-works-behind-the-scenes-during-ipl-2026": behindTheScenesBanner,
+  "fairplay-top-features-and-benefits-of-ipl-betting-id-in-india": iplIdBenefitsIndiaBanner,
 };
 
 
