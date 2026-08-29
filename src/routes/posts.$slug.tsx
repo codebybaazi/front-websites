@@ -102,6 +102,16 @@ import iplAvoidMistakesBanner from "@/assets/blog/fairplay-ipl-avoid-mistakes.jp
 import completeGuide2026Banner from "@/assets/blog/fairplay-complete-guide-2026.jpg";
 import contactWhatsappIplIdBanner from "@/assets/blog/fairplay-contact-whatsapp-ipl-id.jpg";
 import iplTipsSmartStrategiesBanner from "@/assets/blog/fairplay-ipl-tips-smart-strategies.jpg";
+import idIpl2026GuideBanner from "@/assets/blog/fairplay-id-ipl-2026-guide.jpg";
+import matchDayStrategyBanner from "@/assets/blog/fairplay-match-day-strategy.jpg";
+import iplSeasonGuideBanner from "@/assets/blog/fairplay-ipl-season-guide.jpg";
+import matchTipsPredictionBanner from "@/assets/blog/fairplay-match-tips-prediction.jpg";
+import rrVsRcbTossBanner from "@/assets/blog/fairplay-rr-vs-rcb-toss.jpg";
+import miVsPbksTossBanner from "@/assets/blog/fairplay-mi-vs-pbks-toss.jpg";
+import winLiveBetsIplBanner from "@/assets/blog/fairplay-win-live-bets-ipl.jpg";
+import rcbVsDcDream11Banner from "@/assets/blog/fairplay-rcb-vs-dc-dream11.jpg";
+import understandingBettingIdBanner from "@/assets/blog/fairplay-understanding-betting-id.jpg";
+import appGuideAnytimeBanner from "@/assets/blog/fairplay-app-guide-anytime.jpg";
 
 const POST_BANNERS: Record<string, string> = {
   "fairplay-id-security-tips-protect-your-id-login": idSecurityBanner,
@@ -195,6 +205,16 @@ const POST_BANNERS: Record<string, string> = {
   "complete-fairplay-guide-2026-login-id-features-how-it-works": completeGuide2026Banner,
   "how-to-contact-fairplay-whatsapp-for-ipl-id": contactWhatsappIplIdBanner,
   "ipl-2026-betting-tips-on-fairplay-smart-strategies": iplTipsSmartStrategiesBanner,
+  "fairplay-id-ipl-2026-betting-guide": idIpl2026GuideBanner,
+  "fairplay-ipl-match-day-strategy-to-win-more": matchDayStrategyBanner,
+  "ipl-2026-season-guide-fairplay-strategies": iplSeasonGuideBanner,
+  "fairplay-match-tips-and-betting-prediction": matchTipsPredictionBanner,
+  "rr-vs-rcb-toss-match-prediction-15th-match-ipl-2026": rrVsRcbTossBanner,
+  "mi-vs-pbks-toss-and-match-prediction-24th-match-ipl-2026": miVsPbksTossBanner,
+  "how-to-win-live-bets-in-ipl-2026-on-fairplay": winLiveBetsIplBanner,
+  "rcb-vs-dc-dream11-team-prediction-match-26th-ipl-2026": rcbVsDcDream11Banner,
+  "understanding-fairplay-online-betting-id-guide": understandingBettingIdBanner,
+  "fairplay-app-guide-simple-ipl-betting-anytime-anywhere": appGuideAnytimeBanner,
 };
 
 
