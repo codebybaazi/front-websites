@@ -22,6 +22,7 @@ import {
 import { useState, useMemo } from 'react';
 import { parse, compareDesc } from 'date-fns';
 import { blogArticles as articles, ICON_MAP } from '@/lib/blog-data';
+import { POST_BANNERS } from '@/lib/blog-banners';
 import { AIOverview } from '@/components/AIOverview';
 import { FAQSection } from '@/components/FAQSection';
 
@@ -115,11 +116,26 @@ function BlogPage() {
             className="group relative w-full bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[3rem] p-1 overflow-hidden"
           >
             <div className="relative z-10 grid lg:grid-cols-2 gap-0">
-              <div className="aspect-[16/9] lg:aspect-auto bg-primary/10 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent mix-blend-overlay" />
-                <BookOpen className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 text-primary/20 group-hover:scale-110 transition-transform duration-700" />
-              </div>
-              <div className="p-12 md:p-20 flex flex-col justify-center">
+              <Link
+                to="/posts/$slug"
+                params={{ slug: featuredPost.slug }}
+                className="aspect-[16/9] lg:aspect-auto bg-primary/10 relative overflow-hidden block rounded-[2.8rem] lg:rounded-r-none"
+                aria-label={featuredPost.title}
+              >
+                {POST_BANNERS[featuredPost.slug] ? (
+                  <img
+                    src={POST_BANNERS[featuredPost.slug]}
+                    alt={featuredPost.title}
+                    width={1600}
+                    height={900}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700"
+                  />
+                ) : (
+                  <BookOpen className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 text-primary/20 group-hover:scale-110 transition-transform duration-700" />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              </Link>
+              <div className="p-10 md:p-16 flex flex-col justify-center">
                 <div className="flex items-center gap-4 mb-8">
                   <span className="px-4 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-primary text-[10px] font-black uppercase tracking-widest">
                     Featured Insight
@@ -200,10 +216,22 @@ function BlogPage() {
                       params={{ slug: post.slug }}
                       className="group block"
                     >
-                      <span className="text-primary text-[10px] font-black mb-2 block">0{idx + 1}</span>
-                      <h4 className="text-sm font-black italic uppercase leading-tight group-hover:text-primary transition-colors line-clamp-2">
-                        {post.title}
-                      </h4>
+                      <div className="flex gap-4 items-center">
+                        {POST_BANNERS[post.slug] && (
+                          <img
+                            src={POST_BANNERS[post.slug]}
+                            alt={post.title}
+                            loading="lazy"
+                            className="w-20 h-14 rounded-xl object-cover border border-white/10 shrink-0"
+                          />
+                        )}
+                        <div>
+                          <span className="text-primary text-[10px] font-black mb-1 block">0{idx + 1}</span>
+                          <h4 className="text-xs font-black italic uppercase leading-tight group-hover:text-primary transition-colors line-clamp-2">
+                            {post.title}
+                          </h4>
+                        </div>
+                      </div>
                     </Link>
                   ))}
                 </div>
