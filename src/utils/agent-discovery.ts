@@ -46,6 +46,16 @@ const CATALOG_ITEMS = [
     type: "text/plain",
     title: "Crawler and agent access rules",
   },
+  {
+    path: "/.well-known/oauth-authorization-server",
+    type: "application/json",
+    title: "OAuth 2.0 metadata: this site is public, no authentication required",
+  },
+  {
+    path: "/.well-known/openid-configuration",
+    type: "application/json",
+    title: "OpenID Connect metadata: this site is public, no authentication required",
+  },
 ];
 
 function absolute(path: string) {

@@ -141,6 +141,30 @@ export default {
         });
       }
 
+      if (isRead) {
+        const {
+          OAUTH_AS_PATH,
+          OPENID_CONFIGURATION_PATH,
+          OAUTH_METADATA_CONTENT_TYPE,
+          buildOAuthAuthorizationServerMetadata,
+          buildOpenIdConfigurationMetadata,
+        } = await import("./utils/oauth-metadata");
+
+        if (url.pathname === OAUTH_AS_PATH || url.pathname === OPENID_CONFIGURATION_PATH) {
+          const body =
+            url.pathname === OAUTH_AS_PATH
+              ? buildOAuthAuthorizationServerMetadata()
+              : buildOpenIdConfigurationMetadata();
+          return new Response(bodyFor(body), {
+            status: 200,
+            headers: {
+              "content-type": OAUTH_METADATA_CONTENT_TYPE,
+              "cache-control": "public, max-age=3600",
+            },
+          });
+        }
+      }
+
       if (isRead && prefersMarkdown(request.headers.get("accept"))) {
         return withDocumentHeaders(await renderMarkdown(request, env, ctx));
       }
