@@ -52,6 +52,16 @@ import t20wcPredictionBanner from "@/assets/blog/fairplay-t20wc-prediction.jpg";
 import bettingFeaturesGameTypesBanner from "@/assets/blog/fairplay-betting-features-game-types.jpg";
 import iplIdSafeSignupBanner from "@/assets/blog/fairplay-ipl-id-safe-signup.jpg";
 import vsOtherIdsBanner from "@/assets/blog/fairplay-vs-other-ids-2026.jpg";
+import whyIndianGamersBanner from "@/assets/blog/fairplay-why-indian-gamers-prefer.jpg";
+import indVsUsaBanner from "@/assets/blog/fairplay-ind-vs-usa-t20wc.jpg";
+import iplT20wcGuideBanner from "@/assets/blog/fairplay-ipl-t20wc-betting-guide.jpg";
+import onlineCricketPlatformBanner from "@/assets/blog/fairplay-online-cricket-platform.jpg";
+import bestTimeToBetBanner from "@/assets/blog/fairplay-best-time-to-bet.jpg";
+import casinoGameTypesBanner from "@/assets/blog/fairplay-casino-game-types.jpg";
+import t20wcPredStrategiesBanner from "@/assets/blog/fairplay-t20wc-predictions-strategies.jpg";
+import indVsPakBanner from "@/assets/blog/fairplay-ind-vs-pak-prediction.jpg";
+import liveBettingPlanBanner from "@/assets/blog/fairplay-live-betting-winning-plan.jpg";
+import safeVerifiedIplIdBanner from "@/assets/blog/fairplay-safe-verified-ipl-id.jpg";
 
 const POST_BANNERS: Record<string, string> = {
   "fairplay-id-security-tips-protect-your-id-login": idSecurityBanner,
