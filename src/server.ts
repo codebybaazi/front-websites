@@ -2,6 +2,12 @@ import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
+import {
+  AGENT_DISCOVERY_LINK_HEADER,
+  API_CATALOG_CONTENT_TYPE,
+  API_CATALOG_PATH,
+  buildApiCatalogLinkset,
+} from "./utils/agent-discovery";
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -35,6 +41,27 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
   });
 }
 
+// Agents that only issue a HEAD/GET on the document should not have to parse HTML to
+// find the sitemap, api-catalog or policy pages, so advertise them as RFC 8288 links.
+function withAgentDiscoveryLinks(response: Response): Response {
+  if (!(response.headers.get("content-type") ?? "").includes("text/html")) return response;
+
+  // Appending keeps any Link header the renderer already emitted (e.g. asset preloads).
+  try {
+    response.headers.append("link", AGENT_DISCOVERY_LINK_HEADER);
+    return response;
+  } catch {
+    // Some runtimes hand back responses with immutable headers.
+    const headers = new Headers(response.headers);
+    headers.append("link", AGENT_DISCOVERY_LINK_HEADER);
+    return new Response(response.body, {
+      status: response.status,
+      statusText: response.statusText,
+      headers,
+    });
+  }
+}
+
 function isH3SwallowedErrorBody(body: string): boolean {
   try {
     const payload = JSON.parse(body) as { unhandled?: unknown; message?: unknown };
@@ -48,9 +75,12 @@ export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
       const url = new URL(request.url);
-      if (request.method === "GET" && url.pathname === "/sitemap.xml") {
+      const isRead = request.method === "GET" || request.method === "HEAD";
+      const bodyFor = (body: string) => (request.method === "HEAD" ? null : body);
+
+      if (isRead && url.pathname === "/sitemap.xml") {
         const { buildSitemapXml } = await import("./utils/match-seo");
-        return new Response(buildSitemapXml(), {
+        return new Response(bodyFor(buildSitemapXml()), {
           status: 200,
           headers: {
             "content-type": "application/xml; charset=utf-8",
@@ -59,9 +89,20 @@ export default {
         });
       }
 
+      if (isRead && url.pathname === API_CATALOG_PATH) {
+        return new Response(bodyFor(buildApiCatalogLinkset()), {
+          status: 200,
+          headers: {
+            "content-type": API_CATALOG_CONTENT_TYPE,
+            "cache-control": "public, max-age=3600",
+            link: `<${API_CATALOG_PATH}>; rel="self"; type="application/linkset+json"`,
+          },
+        });
+      }
+
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
-      return await normalizeCatastrophicSsrResponse(response);
+      return withAgentDiscoveryLinks(await normalizeCatastrophicSsrResponse(response));
     } catch (error) {
       console.error(error);
       return new Response(renderErrorPage(), {
