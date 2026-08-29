@@ -75,23 +75,27 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "Fairplay schedule, cricket fixtures 2026, FIFA World Cup 2026, tennis schedule, IPL fixtures",
   },
   "/login-guide": {
-    title: "Fairplay login | OTP, 2FA and Fairplay ID access",
+    title: "Fairplay Login | Fairplay ID Sign Up, OTP & Password",
     description:
-      "Sign in to Fairplay with your mobile number and OTP. This guide covers 2FA, locked IDs, and how to open cricket, football and tennis books after login.",
-    keywords: "Fairplay login, Fairplay ID login, OTP login, Fairplay 2FA, cricket ID login",
+      "Fairplay login guide: sign in with your mobile number and OTP, recover a Fairplay login password, handle 2FA, and open cricket, football and tennis books.",
+    keywords:
+      "fairplay login, fair play login, fairplay login id sign up, fairplay login password, fairplay login download, fairplay id login",
   },
   "/login-issues": {
-    title: "Fairplay login issues | OTP, locked ID and cache loops",
+    title: "Fairplay Login Not Working | OTP & Locked ID Fixes",
     description:
-      "Can't open Fairplay? Fix OTP delays, a locked Fairplay ID, and login loops. WhatsApp support can reset access if the usual steps fail.",
-    keywords: "Fairplay login issues, Fairplay ID locked, OTP not received, Fairplay login not working",
+      "Fairplay login not working? Fix OTP delays, a locked Fairplay ID, wrong password errors and login loops. WhatsApp support can reset access.",
+    keywords:
+      "fairplay login not working, fairplay login issues, fairplay login password reset, fairplay id locked, otp not received",
   },
   "/register-guide": {
-    title: "How to register on Fairplay | Get a Fairplay ID",
+    title: "Fairplay Register | Fairplay Login ID Sign Up India",
     description:
-      "Create a Fairplay ID from WhatsApp in a few minutes. After registration you can deposit via UPI and bet cricket, football, tennis or live casino.",
-    keywords: "Fairplay registration, get Fairplay ID, Fairplay signup, cricket ID registration",
+      "Fairplay register and sign up: create a Fairplay login ID from WhatsApp in minutes, then deposit via UPI and bet cricket, football, tennis or live casino.",
+    keywords:
+      "fairplay register, fairplay login id sign up, fairplay sign up, fairplay registration, get fairplay id",
   },
+
   "/deposit-guide": {
     title: "Fairplay deposit | UPI wallet top-up guide",
     description:
@@ -117,11 +121,13 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "Fairplay withdrawal pending, Fairplay payout delayed, withdrawal not received",
   },
   "/fairplay-id": {
-    title: "Online Cricket ID | Get a Fairplay Cricket Betting ID",
+    title: "Fairplay ID | Online Cricket ID & Fairplay Club Login",
     description:
-      "Get an online cricket ID on Fairplay — a verified cricket betting ID for IPL, football, tennis and live casino. One login, UPI deposits, WhatsApp help.",
-    keywords: "online cricket id, cricket id, cricket betting id, Fairplay ID, get Fairplay ID, online cricket id India",
+      "Get a Fairplay ID — a verified online cricket ID for IPL, football, tennis and Fairplay club live casino. One login, UPI deposits, WhatsApp help.",
+    keywords:
+      "fairplay id, fairplay club, fair play online, online cricket id, cricket betting id, get fairplay id",
   },
+
   "/ipl-betting": {
     title: "IPL 2026 betting | Match winner, fancy and live odds | Fairplay",
     description:
@@ -129,17 +135,20 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "IPL betting, IPL 2026 betting, Fairplay IPL, cricket fancy betting, IPL live odds",
   },
   "/betting": {
-    title: "Cricket Betting ID | Fairplay Sports Exchange India",
+    title: "Fairplay Bet | Fair Play Exchange & Online Betting India",
     description:
-      "Use one cricket betting ID for cricket, football and tennis on the Fairplay exchange. Live odds, IPL and FIFA books, set betting and live casino.",
-    keywords: "cricket betting id, online cricket betting, Fairplay exchange, football betting, tennis betting, sports exchange India",
+      "Fairplay bet on the fair play exchange: cricket, football and tennis with live odds, IPL and FIFA books, fancy markets and one cricket betting ID.",
+    keywords:
+      "fairplay bet, fair play betting, fair play exchange, fairplay online, fair play cricket, cricket betting id, sports exchange India",
   },
   "/casino": {
-    title: "Fairplay live casino | Teen Patti, Andar Bahar and HD tables",
+    title: "Fairplay Club Casino | Teen Patti, Andar Bahar & HD Tables",
     description:
-      "Play Fairplay live casino with HD dealers: Teen Patti, Andar Bahar, roulette, blackjack and slots. Same Fairplay ID as your cricket wallet.",
-    keywords: "Fairplay casino, live casino India, Teen Patti Fairplay, Andar Bahar, HD live dealer",
+      "Fairplay club live casino with HD dealers: Teen Patti, Andar Bahar, roulette, blackjack and slots — same Fairplay login as your cricket wallet.",
+    keywords:
+      "fairplay club, fairplay casino, live casino India, teen patti fairplay, andar bahar, HD live dealer",
   },
+
   "/bonus": {
     title: "Fairplay bonus | Welcome offer and promo codes",
     description:
@@ -213,11 +222,13 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "contact Fairplay, Fairplay support contact, Fairplay WhatsApp number",
   },
   "/app": {
-    title: "Cricket Betting App | Fairplay App for Android and iOS",
+    title: "Fairplay App Download | Fairplay APK for Android & iOS",
     description:
-      "Fairplay is a cricket betting app that uses the same online cricket ID as desktop. Live cricket, football, tennis, casino and UPI deposits on mobile.",
-    keywords: "cricket betting app, ipl betting app, Fairplay app, Fairplay APK, Fairplay Android, cricket id app",
+      "Fairplay app download for Android and iOS: install the Fairplay APK, log in with your Fairplay ID, and bet live cricket, football, tennis and casino on UPI.",
+    keywords:
+      "fairplay app, fairplay app download, fairplay download, fairplay apk, fair play apk, fairplay betting app, cricket betting app",
   },
+
   "/about": {
     title: "About Fairplay | Sports exchange since 2017",
     description:
