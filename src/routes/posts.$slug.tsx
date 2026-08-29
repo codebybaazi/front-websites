@@ -353,6 +353,16 @@ const POST_BANNERS: Record<string, string> = {
   "fairplay-login-not-working-fix-guide": loginNotWorkingFixBanner,
   "fairplay-works-behind-the-scenes-during-ipl-2026": behindTheScenesBanner,
   "fairplay-top-features-and-benefits-of-ipl-betting-id-in-india": iplIdBenefitsIndiaBanner,
+  "how-to-access-your-fairplay-account-from-any-device": accessAnyDeviceBanner,
+  "how-does-fairplay-login-work": howLoginWorksBanner,
+  "how-to-download-latest-fairplay-app-apk": downloadLatestApkBanner,
+  "free-casino-gaming-experience-fairplay": freeCasinoExperienceBanner,
+  "benefits-of-fairplay-sports-id-for-online": sportsIdBenefitsBanner,
+  "fairplay-top-sports-tournaments-betting-opportunities": topSportsTournamentsBanner,
+  "experience-safe-secure-horse-race-betting-with-fairplay": horseRaceSecureBanner,
+  "fairplay-safe-online-blackjack-casino-deposit-money-guide": blackjackDepositBanner,
+  "top-cricket-tournaments-to-bet-on-using-fairplay-in-2026": topCricketTournaments2026Banner,
+  "deposit-and-withdrawal-limits-on-fairplay-explained": depositWithdrawalLimitsBanner,
 };
 
 
