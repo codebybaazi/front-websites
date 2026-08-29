@@ -190,7 +190,7 @@ import topCricketTournaments2026Banner from "@/assets/blog/fairplay-top-cricket-
 import depositWithdrawalLimitsBanner from "@/assets/blog/fairplay-deposit-withdrawal-limits.jpg";
 import customerCareGuideBanner from "@/assets/blog/fairplay-customer-care-guide.jpg";
 import cricketMarketsTypesBanner from "@/assets/blog/fairplay-cricket-betting-markets-types.jpg";
-import freeDemoIdBanner from "@/assets/blog/fairplay-free-demo-id-registration.jpg";
+import freeDemoIdRegBanner from "@/assets/blog/fairplay-free-demo-id-registration.jpg";
 import featuresServices2026Banner from "@/assets/blog/fairplay-features-services-2026.jpg";
 import topSportsToBetBanner from "@/assets/blog/fairplay-top-sports-to-bet.jpg";
 import clubMembershipBanner from "@/assets/blog/fairplay-club-membership-benefits.jpg";
