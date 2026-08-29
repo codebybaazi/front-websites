@@ -72,6 +72,16 @@ import tdsGuideBanner from "@/assets/blog/fairplay-tds-guide-2026.jpg";
 import footballWinBigBanner from "@/assets/blog/fairplay-football-bet-live-win-big.jpg";
 import verificationMattersBanner from "@/assets/blog/fairplay-verification-matters-ipl-id.jpg";
 import whatsappVsLoginBanner from "@/assets/blog/fairplay-whatsapp-vs-direct-login.jpg";
+import customerSupport247Banner from "@/assets/blog/fairplay-customer-support-247.jpg";
+import whatIsFairplayBanner from "@/assets/blog/fairplay-what-is-fairplay-guide.jpg";
+import indiasPopularChoiceBanner from "@/assets/blog/fairplay-indias-popular-choice.jpg";
+import loginStepByStepBanner from "@/assets/blog/fairplay-login-step-by-step.jpg";
+import iplVsRegularBanner from "@/assets/blog/fairplay-ipl-vs-regular-betting.jpg";
+import wiVsIndEliminationBanner from "@/assets/blog/fairplay-wi-vs-ind-elimination.jpg";
+import saVsNzSemifinalBanner from "@/assets/blog/fairplay-sa-vs-nz-semifinal.jpg";
+import idSaVsNzLiveBanner from "@/assets/blog/fairplay-id-sa-vs-nz-live.jpg";
+import appGuide1stSemiBanner from "@/assets/blog/fairplay-app-guide-1st-semifinal.jpg";
+import indVsEngSemifinalBanner from "@/assets/blog/fairplay-ind-vs-eng-semifinal.jpg";
 
 const POST_BANNERS: Record<string, string> = {
   "fairplay-id-security-tips-protect-your-id-login": idSecurityBanner,
