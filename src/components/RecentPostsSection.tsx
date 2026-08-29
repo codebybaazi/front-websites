@@ -4,6 +4,7 @@ import { ArrowRight, Calendar, Clock, TrendingUp, ChevronRight } from "lucide-re
 import { useMemo } from "react";
 import { parse, compareDesc } from "date-fns";
 import { blogArticles } from "@/lib/blog-data";
+import { POST_BANNERS } from "@/lib/blog-banners";
 
 export function RecentPostsSection() {
   const articles = useMemo(() => {
@@ -77,7 +78,7 @@ export function RecentPostsSection() {
                 {/* Image background */}
                 <div 
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-1000"
-                  style={{ backgroundImage: `url(${post.img})` }}
+                  style={{ backgroundImage: `url(${POST_BANNERS[post.slug] ?? post.img})` }}
                 />
                 
                 {/* Overlays */}
