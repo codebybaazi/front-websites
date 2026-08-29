@@ -207,8 +207,12 @@ import paymentSecurityBanner from "@/assets/blog/fairplay-payment-security-prote
 import platformTrends2026Banner from "@/assets/blog/fairplay-platform-trends-2026.jpg";
 import gamesIdTournamentsBanner from "@/assets/blog/fairplay-games-id-multiple-tournaments.jpg";
 import cricketIdVsBettingIdBanner from "@/assets/blog/fairplay-cricket-id-vs-betting-id.jpg";
+import indVsNz3rdOdiBanner from "@/assets/blog/fairplay-ind-vs-nz-3rd-odi-prediction.jpg";
+import receiveIdOnWhatsappBanner from "@/assets/blog/fairplay-receive-id-on-whatsapp.jpg";
 
 const POST_BANNERS: Record<string, string> = {
+  "fairplay-india-vs-new-zealand-3rd-odi-prediction": indVsNz3rdOdiBanner,
+  "receive-fairplay-id-on-whatsapp": receiveIdOnWhatsappBanner,
   "fairplay-payment-methods-guide": paymentMethodsGuideBanner,
   "how-kabaddi-betting-works-on-fairplay": kabaddiBettingBanner,
   "fairplay-cricket-odds-explained-markets-and-predictions": cricketOddsExplainedBanner,
