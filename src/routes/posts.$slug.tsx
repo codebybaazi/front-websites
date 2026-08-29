@@ -254,6 +254,7 @@ function PostDetail() {
         {/* Bottom Fade */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </section>
+      )}
 
 
       <article className="container max-w-4xl mx-auto px-4 py-10">
