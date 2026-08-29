@@ -65,6 +65,16 @@ const POST_BANNERS: Record<string, string> = {
   "fairplay-delhi-vs-up-warriors-women-match-analysis": dcVsUpwBanner,
   "fairplay-mumbai-vs-up-warriors-women-match-prediction": miVsUpwBanner,
   "fairplay-ipl-wpl-bbl-guide": iplWplBblBanner,
+  "fairplay-whatsapp-support-service": whatsappSupportBanner,
+  "fairplay-gg-w-vs-rcb-w-ipl-match-prediction": ggwVsRcbwBanner,
+  "fairplay-ind-vs-nz-t20-live-betting-strategy": indNzT20LiveBanner,
+  "why-fairplay-trusted-ipl-t20-live-betting-india": trustedIplT20Banner,
+  "fairplay-ind-vs-nz-2nd-t20-match-prediction": indNz2ndT20Banner,
+  "fairplay-online-gaming-guide": onlineGamingGuideBanner,
+  "fairplay-id-in-5-easy-steps": id5StepsBanner,
+  "fairplay-id-for-online-betting": idOnlineBettingBanner,
+  "betting-history-using-fairplay-id": bettingHistoryIdBanner,
+  "exclusive-bonuses-rewards-fairplay-id": bonusesRewardsIdBanner,
 };
 
 
