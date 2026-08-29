@@ -62,6 +62,16 @@ import t20wcPredStrategiesBanner from "@/assets/blog/fairplay-t20wc-predictions-
 import indVsPakBanner from "@/assets/blog/fairplay-ind-vs-pak-prediction.jpg";
 import liveBettingPlanBanner from "@/assets/blog/fairplay-live-betting-winning-plan.jpg";
 import safeVerifiedIplIdBanner from "@/assets/blog/fairplay-safe-verified-ipl-id.jpg";
+import bestIplTipsBanner from "@/assets/blog/fairplay-best-ipl-betting-tips-2026.jpg";
+import super8StrategyBanner from "@/assets/blog/fairplay-super-8-strategy.jpg";
+import pointsTableBanner from "@/assets/blog/fairplay-t20wc-points-table.jpg";
+import predictionMarketsBanner from "@/assets/blog/fairplay-prediction-markets.jpg";
+import nzVsPakBanner from "@/assets/blog/fairplay-nz-vs-pak-super8.jpg";
+import indVsSaBanner from "@/assets/blog/fairplay-ind-vs-sa-prediction.jpg";
+import tdsGuideBanner from "@/assets/blog/fairplay-tds-guide-2026.jpg";
+import footballWinBigBanner from "@/assets/blog/fairplay-football-bet-live-win-big.jpg";
+import verificationMattersBanner from "@/assets/blog/fairplay-verification-matters-ipl-id.jpg";
+import whatsappVsLoginBanner from "@/assets/blog/fairplay-whatsapp-vs-direct-login.jpg";
 
 const POST_BANNERS: Record<string, string> = {
   "fairplay-id-security-tips-protect-your-id-login": idSecurityBanner,
@@ -115,6 +125,16 @@ const POST_BANNERS: Record<string, string> = {
   "fairplay-india-vs-pakistan-today-match-prediction": indVsPakBanner,
   "live-match-betting-fairplay-winning-plan-t20-world-cup": liveBettingPlanBanner,
   "fairplay-safe-verified-ipl-online-cricket-id-2026": safeVerifiedIplIdBanner,
+  "best-ipl-betting-tips-fairplay-users-2026": bestIplTipsBanner,
+  "fairplay-super-8-betting-strategy-t20-world-cup": super8StrategyBanner,
+  "fairplay-icc-t20-world-cup-2026-points-table-analysis": pointsTableBanner,
+  "popular-cricket-football-prediction-markets-fairplay": predictionMarketsBanner,
+  "new-zealand-vs-pakistan-super-8-match-prediction": nzVsPakBanner,
+  "fairplay-ind-vs-sa-match-prediction-who-will-win-today": indVsSaBanner,
+  "fairplay-tds-betting-winnings-guide-2026": tdsGuideBanner,
+  "fairplay-football-betting-bet-live-predict-smart-big-win": footballWinBigBanner,
+  "why-verification-matters-ipl-betting-id-fairplay-guide": verificationMattersBanner,
+  "fairplay-whatsapp-vs-direct-login-withdrawals": whatsappVsLoginBanner,
 };
 
 
