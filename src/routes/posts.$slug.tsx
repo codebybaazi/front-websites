@@ -88,7 +88,38 @@ function PostDetail() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <JsonLd data={jsonLd} />
-      {/* Dynamic Hero Banner for All Posts */}
+      {/* Premium baked-artwork hero for posts that have a dedicated banner */}
+      {POST_BANNERS[slug] ? (
+      <section className="relative w-full overflow-hidden bg-[#070708] pt-32 pb-12 md:pt-40 md:pb-16">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(255,100,0,0.12)_0%,transparent_65%)]" />
+        <div className="container relative z-10 max-w-5xl mx-auto px-4">
+          <div className="flex flex-wrap items-center gap-3 mb-6 text-[10px] font-black uppercase tracking-[0.25em]">
+            <span className="px-3 py-1 rounded-full bg-primary/15 border border-primary/30 text-primary">Guide</span>
+            <span className="text-white/30">Published {postDate}</span>
+          </div>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black italic uppercase tracking-tighter leading-[0.9] text-white mb-5">
+            {title}
+          </h1>
+          <p className="text-base md:text-lg text-white/50 font-medium leading-relaxed mb-10 max-w-3xl">
+            {seo.description}
+          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_100px_rgba(255,100,0,0.15)]"
+          >
+            <img
+              src={POST_BANNERS[slug]}
+              alt={title}
+              width={1600}
+              height={900}
+              className="w-full h-auto block"
+            />
+          </motion.div>
+        </div>
+      </section>
+      ) : (
       <section className="relative min-h-[500px] md:h-[65vh] w-full overflow-hidden flex items-center justify-center">
         {/* Dynamic Background with Cinematic Depth */}
         <div className="absolute inset-0 bg-[#070708]">
