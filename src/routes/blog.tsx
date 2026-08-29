@@ -22,6 +22,7 @@ import {
 import { useState, useMemo } from 'react';
 import { parse, compareDesc } from 'date-fns';
 import { blogArticles as articles, ICON_MAP } from '@/lib/blog-data';
+import { POST_BANNERS } from '@/lib/blog-banners';
 import { AIOverview } from '@/components/AIOverview';
 import { FAQSection } from '@/components/FAQSection';
 
@@ -115,11 +116,26 @@ function BlogPage() {
             className="group relative w-full bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[3rem] p-1 overflow-hidden"
           >
             <div className="relative z-10 grid lg:grid-cols-2 gap-0">
-              <div className="aspect-[16/9] lg:aspect-auto bg-primary/10 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent mix-blend-overlay" />
-                <BookOpen className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 text-primary/20 group-hover:scale-110 transition-transform duration-700" />
-              </div>
-              <div className="p-12 md:p-20 flex flex-col justify-center">
+              <Link
+                to="/posts/$slug"
+                params={{ slug: featuredPost.slug }}
+                className="aspect-[16/9] lg:aspect-auto bg-primary/10 relative overflow-hidden block rounded-[2.8rem] lg:rounded-r-none"
+                aria-label={featuredPost.title}
+              >
+                {POST_BANNERS[featuredPost.slug] ? (
+                  <img
+                    src={POST_BANNERS[featuredPost.slug]}
+                    alt={featuredPost.title}
+                    width={1600}
+                    height={900}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700"
+                  />
+                ) : (
+                  <BookOpen className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 text-primary/20 group-hover:scale-110 transition-transform duration-700" />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              </Link>
+              <div className="p-10 md:p-16 flex flex-col justify-center">
                 <div className="flex items-center gap-4 mb-8">
                   <span className="px-4 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-primary text-[10px] font-black uppercase tracking-widest">
                     Featured Insight
@@ -200,10 +216,22 @@ function BlogPage() {
                       params={{ slug: post.slug }}
                       className="group block"
                     >
-                      <span className="text-primary text-[10px] font-black mb-2 block">0{idx + 1}</span>
-                      <h4 className="text-sm font-black italic uppercase leading-tight group-hover:text-primary transition-colors line-clamp-2">
-                        {post.title}
-                      </h4>
+                      <div className="flex gap-4 items-center">
+                        {POST_BANNERS[post.slug] && (
+                          <img
+                            src={POST_BANNERS[post.slug]}
+                            alt={post.title}
+                            loading="lazy"
+                            className="w-20 h-14 rounded-xl object-cover border border-white/10 shrink-0"
+                          />
+                        )}
+                        <div>
+                          <span className="text-primary text-[10px] font-black mb-1 block">0{idx + 1}</span>
+                          <h4 className="text-xs font-black italic uppercase leading-tight group-hover:text-primary transition-colors line-clamp-2">
+                            {post.title}
+                          </h4>
+                        </div>
+                      </div>
                     </Link>
                   ))}
                 </div>
@@ -220,9 +248,11 @@ function BlogPage() {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid sm:grid-cols-2 gap-8">
               {filteredArticles.slice(1).map((post, i) => {
                 const Icon = ICON_MAP[post.icon] || Star;
+                const banner = POST_BANNERS[post.slug];
+                const readMins = Math.max(4, Math.min(12, Math.round(post.desc.length / 40)));
                 return (
                   <motion.article 
                     key={post.slug}
@@ -230,47 +260,64 @@ function BlogPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: Math.min(i % 10 * 0.05, 0.4) }}
-                    className="group relative flex flex-col bg-white/[0.03] border border-white/5 rounded-[2.5rem] p-8 hover:bg-white/[0.07] hover:border-primary/30 transition-all duration-500"
+                    className="group relative flex flex-col bg-white/[0.03] border border-white/5 rounded-[2rem] overflow-hidden hover:bg-white/[0.07] hover:border-primary/30 transition-all duration-500"
                   >
-                    <div className="flex items-center justify-between mb-10">
-                      <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
-                        <Icon className="w-6 h-6" />
-                      </div>
-                      <div className="flex gap-2">
-                         <button className="p-2 rounded-full bg-white/5 hover:bg-primary/20 text-white/40 hover:text-primary transition-all">
-                           <Bookmark className="w-4 h-4" />
-                         </button>
-                      </div>
-                    </div>
-
-                    <div className="space-y-4 mb-10">
-                      <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary">
+                    <Link
+                      to="/posts/$slug"
+                      params={{ slug: post.slug }}
+                      className="block relative aspect-[16/9] overflow-hidden bg-primary/5"
+                      aria-label={post.title}
+                    >
+                      {banner ? (
+                        <img
+                          src={banner}
+                          alt={post.title}
+                          width={1600}
+                          height={900}
+                          loading="lazy"
+                          className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-transparent">
+                          <Icon className="w-14 h-14 text-primary/40" />
+                        </div>
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                      <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-primary text-white text-[9px] font-black uppercase tracking-[0.2em]">
                         {post.category}
                       </span>
-                      <h3 className="text-2xl font-black italic uppercase tracking-tight leading-none group-hover:text-primary transition-colors line-clamp-2">
-                        {post.title}
+                    </Link>
+
+                    <div className="flex flex-col flex-1 p-7">
+                      <div className="flex items-center gap-4 mb-4 text-[9px] font-black uppercase tracking-widest text-white/30">
+                        <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3" />{post.date}</span>
+                        <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" />{readMins} min read</span>
+                      </div>
+                      <h3 className="text-xl font-black italic uppercase tracking-tight leading-tight mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                        <Link to="/posts/$slug" params={{ slug: post.slug }}>{post.title}</Link>
                       </h3>
-                      <p className="text-white/40 text-sm leading-relaxed line-clamp-3 font-medium">
+                      <p className="text-white/40 text-sm leading-relaxed line-clamp-3 font-medium mb-6">
                         {post.desc}
                       </p>
-                    </div>
 
-                    <div className="mt-auto pt-8 border-t border-white/5 flex items-center justify-between">
-                      <Link 
-                        to="/posts/$slug"
-                        params={{ slug: post.slug }}
-                        className="text-[10px] font-black uppercase tracking-widest text-white/70 group-hover:text-primary transition-colors flex items-center gap-2"
-                      >
-                        ANALYZE DATA <ArrowRight className="w-3 h-3" />
-                      </Link>
-                      <span className="text-[9px] font-black text-white/20 uppercase tracking-widest">
-                        {post.date}
-                      </span>
+                      <div className="mt-auto pt-5 border-t border-white/5 flex items-center justify-between">
+                        <Link 
+                          to="/posts/$slug"
+                          params={{ slug: post.slug }}
+                          className="text-[10px] font-black uppercase tracking-widest text-white/70 group-hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          Read Full Guide <ArrowRight className="w-3 h-3" />
+                        </Link>
+                        <button className="p-2 rounded-full bg-white/5 hover:bg-primary/20 text-white/30 hover:text-primary transition-all" aria-label="Save for later">
+                          <Bookmark className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
                     </div>
                   </motion.article>
                 );
               })}
             </div>
+
 
             {filteredArticles.length === 0 && (
               <div className="text-center py-40 border-2 border-dashed border-white/5 rounded-[3rem]">
