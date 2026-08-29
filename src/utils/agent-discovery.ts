@@ -23,6 +23,7 @@ const DISCOVERY_LINKS: DiscoveryLink[] = [
   { path: "/sitemap.xml", rel: "describedby", type: "application/xml" },
   { path: "/all-links", rel: "index", type: "text/html" },
   { path: "/services", rel: "service-doc", type: "text/html" },
+  { path: "/auth.md", rel: "help", type: "text/markdown" },
   { path: "/support", rel: "help", type: "text/html" },
   { path: "/about", rel: "author", type: "text/html" },
   { path: "/terms-conditions", rel: "terms-of-service", type: "text/html" },
@@ -55,6 +56,11 @@ const CATALOG_ITEMS = [
     path: "/.well-known/openid-configuration",
     type: "application/json",
     title: "OpenID Connect metadata: this site is public, no authentication required",
+  },
+  {
+    path: "/auth.md",
+    type: "text/markdown",
+    title: "Agent authentication and registration instructions: none required",
   },
   {
     path: "/.well-known/oauth-protected-resource",

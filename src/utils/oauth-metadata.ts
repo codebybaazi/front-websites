@@ -35,6 +35,24 @@ function buildMetadata() {
       sitemap: `${SITE_ORIGIN}/sitemap.xml`,
       index: `${SITE_ORIGIN}/all-links`,
     },
+    /**
+     * Agent registration block. Registration is intentionally not offered: there is
+     * nothing to register for, so `register_uri` points at the human-readable auth.md
+     * that says so rather than at a non-existent endpoint.
+     */
+    agent_auth: {
+      registration_required: false,
+      register_uri: `${SITE_ORIGIN}/auth.md`,
+      documentation_uri: `${SITE_ORIGIN}/auth.md`,
+      identity_types_supported: ["none"],
+      credential_types_supported: ["none"],
+      claims_supported: [] as string[],
+      claim_uri: null,
+      revocation_uri: null,
+      access_model: "public-read-only",
+      notice:
+        "No agent registration, credentials or identity claims are required. Fetch any public URL without an Authorization header.",
+    },
   };
 }
 
@@ -62,6 +80,7 @@ export function buildOAuthProtectedResourceMetadata(): string {
       "x-access-model": "public-read-only",
       "x-notice":
         "This site is a public read-only resource. No protected APIs or OAuth authorization servers are operated on this origin.",
+      "x-agent-auth": `${SITE_ORIGIN}/auth.md`,
       "x-public-resources": {
         api_catalog: `${SITE_ORIGIN}${API_CATALOG_PATH}`,
         sitemap: `${SITE_ORIGIN}/sitemap.xml`,

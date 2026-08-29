@@ -141,6 +141,19 @@ export default {
         });
       }
 
+      if (isRead && url.pathname === "/auth.md") {
+        const { AUTH_MD_CONTENT_TYPE, buildAuthMarkdown } = await import(
+          "./utils/oauth-metadata"
+        );
+        return new Response(bodyFor(buildAuthMarkdown()), {
+          status: 200,
+          headers: {
+            "content-type": AUTH_MD_CONTENT_TYPE,
+            "cache-control": "public, max-age=3600",
+          },
+        });
+      }
+
       if (isRead) {
         const {
           OAUTH_AS_PATH,
