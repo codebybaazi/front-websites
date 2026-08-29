@@ -12,10 +12,31 @@ import { BLOG_POST_DATES, blogPostIsoDate } from '@/utils/blog-post-dates';
 import { OG_IMAGE, absolutePageUrl } from '@/utils/page-seo';
 import { waLink } from "@/lib/whatsapp";
 import idSecurityBanner from "@/assets/blog/fairplay-id-security-tips.jpg";
+import loginIssuesBanner from "@/assets/blog/fairplay-login-id-issues.jpg";
+import addMoneyBanner from "@/assets/blog/fairplay-add-money-wallet.jpg";
+import liveIplBanner from "@/assets/blog/fairplay-live-ipl-betting.jpg";
+import betHistoryBanner from "@/assets/blog/fairplay-bet-history.jpg";
+import t20WorldCupBanner from "@/assets/blog/fairplay-t20-world-cup-2026-guide.jpg";
+import topChoiceBanner from "@/assets/blog/fairplay-top-choice-cricket-betting.jpg";
+import trustedNameBanner from "@/assets/blog/fairplay-trusted-name.jpg";
+import beforeBuyingBanner from "@/assets/blog/fairplay-before-buying-id.jpg";
+import footballGuideBanner from "@/assets/blog/fairplay-football-betting-guide.jpg";
+import verifyAccountBanner from "@/assets/blog/fairplay-verify-account.jpg";
 
 const POST_BANNERS: Record<string, string> = {
   "fairplay-id-security-tips-protect-your-id-login": idSecurityBanner,
+  "common-fairplay-login-id-issues-and-how-to-fix-them-easily": loginIssuesBanner,
+  "how-to-add-money-in-fairplay-wallet-complete-beginner-guide": addMoneyBanner,
+  "how-to-bet-on-live-ipl-matches-using-fairplay-id": liveIplBanner,
+  "how-to-check-bet-history-on-fairplay": betHistoryBanner,
+  "step-by-step-guide-to-bet-on-icc-t20-world-cup-2026-with-fairplay-id": t20WorldCupBanner,
+  "why-fairplay-is-a-top-choice-for-cricket-betting-in-india": topChoiceBanner,
+  "how-fairplay-became-a-trusted-name-in-online-betting": trustedNameBanner,
+  "things-to-check-before-buying-a-fairplay-id": beforeBuyingBanner,
+  "football-betting-guide-on-fairplay": footballGuideBanner,
+  "how-to-verify-your-fairplay-account": verifyAccountBanner,
 };
+
 
 
 export const Route = createFileRoute('/posts/$slug')({
