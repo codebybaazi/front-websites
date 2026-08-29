@@ -75,23 +75,27 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "Fairplay schedule, cricket fixtures 2026, FIFA World Cup 2026, tennis schedule, IPL fixtures",
   },
   "/login-guide": {
-    title: "Fairplay login | OTP, 2FA and Fairplay ID access",
+    title: "Fairplay Login | Fairplay ID Sign Up, OTP & Password",
     description:
-      "Sign in to Fairplay with your mobile number and OTP. This guide covers 2FA, locked IDs, and how to open cricket, football and tennis books after login.",
-    keywords: "Fairplay login, Fairplay ID login, OTP login, Fairplay 2FA, cricket ID login",
+      "Fairplay login guide: sign in with your mobile number and OTP, recover a Fairplay login password, handle 2FA, and open cricket, football and tennis books.",
+    keywords:
+      "fairplay login, fair play login, fairplay login id sign up, fairplay login password, fairplay login download, fairplay id login",
   },
   "/login-issues": {
-    title: "Fairplay login issues | OTP, locked ID and cache loops",
+    title: "Fairplay Login Not Working | OTP & Locked ID Fixes",
     description:
-      "Can't open Fairplay? Fix OTP delays, a locked Fairplay ID, and login loops. WhatsApp support can reset access if the usual steps fail.",
-    keywords: "Fairplay login issues, Fairplay ID locked, OTP not received, Fairplay login not working",
+      "Fairplay login not working? Fix OTP delays, a locked Fairplay ID, wrong password errors and login loops. WhatsApp support can reset access.",
+    keywords:
+      "fairplay login not working, fairplay login issues, fairplay login password reset, fairplay id locked, otp not received",
   },
   "/register-guide": {
-    title: "How to register on Fairplay | Get a Fairplay ID",
+    title: "Fairplay Register | Fairplay Login ID Sign Up India",
     description:
-      "Create a Fairplay ID from WhatsApp in a few minutes. After registration you can deposit via UPI and bet cricket, football, tennis or live casino.",
-    keywords: "Fairplay registration, get Fairplay ID, Fairplay signup, cricket ID registration",
+      "Fairplay register and sign up: create a Fairplay login ID from WhatsApp in minutes, then deposit via UPI and bet cricket, football, tennis or live casino.",
+    keywords:
+      "fairplay register, fairplay login id sign up, fairplay sign up, fairplay registration, get fairplay id",
   },
+
   "/deposit-guide": {
     title: "Fairplay deposit | UPI wallet top-up guide",
     description:
