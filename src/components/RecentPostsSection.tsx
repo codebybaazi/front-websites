@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar, Clock, TrendingUp, ChevronRight } from "lucide-react";
+import { ArrowRight, Calendar, Clock, TrendingUp } from "lucide-react";
 import { useMemo } from "react";
 import { parse, compareDesc } from "date-fns";
 import { blogArticles } from "@/lib/blog-data";
