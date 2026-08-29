@@ -117,10 +117,10 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "Fairplay withdrawal pending, Fairplay payout delayed, withdrawal not received",
   },
   "/fairplay-id": {
-    title: "Get a Fairplay ID | Cricket ID for betting in India",
+    title: "Online Cricket ID | Get a Fairplay Cricket Betting ID",
     description:
-      "Get a verified Fairplay ID for cricket, IPL, football, tennis and live casino. One login, UPI deposits, and WhatsApp help if you are new.",
-    keywords: "Fairplay ID, get Fairplay ID, cricket ID, Fairplay cricket ID, online cricket ID India",
+      "Get an online cricket ID on Fairplay — a verified cricket betting ID for IPL, football, tennis and live casino. One login, UPI deposits, WhatsApp help.",
+    keywords: "online cricket id, cricket id, cricket betting id, Fairplay ID, get Fairplay ID, online cricket id India",
   },
   "/ipl-betting": {
     title: "IPL 2026 betting | Match winner, fancy and live odds | Fairplay",
@@ -129,10 +129,10 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "IPL betting, IPL 2026 betting, Fairplay IPL, cricket fancy betting, IPL live odds",
   },
   "/betting": {
-    title: "Fairplay sports exchange | Cricket, football and tennis betting",
+    title: "Cricket Betting ID | Fairplay Sports Exchange India",
     description:
-      "Trade cricket, football and tennis on the Fairplay exchange. Live odds, IPL and FIFA books, set betting, and the same Fairplay ID for casino.",
-    keywords: "Fairplay exchange, cricket betting, football betting, tennis betting, sports exchange India",
+      "Use one cricket betting ID for cricket, football and tennis on the Fairplay exchange. Live odds, IPL and FIFA books, set betting and live casino.",
+    keywords: "cricket betting id, online cricket betting, Fairplay exchange, football betting, tennis betting, sports exchange India",
   },
   "/casino": {
     title: "Fairplay live casino | Teen Patti, Andar Bahar and HD tables",
@@ -213,10 +213,10 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "contact Fairplay, Fairplay support contact, Fairplay WhatsApp number",
   },
   "/app": {
-    title: "Fairplay app | Android and iOS cricket ID",
+    title: "Cricket Betting App | Fairplay App for Android and iOS",
     description:
-      "Use the Fairplay app with the same ID as desktop. Live cricket, football, tennis and casino, plus UPI deposits on mobile.",
-    keywords: "Fairplay app, Fairplay APK, Fairplay Android, cricket ID app",
+      "Fairplay is a cricket betting app that uses the same online cricket ID as desktop. Live cricket, football, tennis, casino and UPI deposits on mobile.",
+    keywords: "cricket betting app, ipl betting app, Fairplay app, Fairplay APK, Fairplay Android, cricket id app",
   },
   "/about": {
     title: "About Fairplay | Sports exchange since 2017",

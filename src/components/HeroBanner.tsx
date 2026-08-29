@@ -6,7 +6,7 @@ export const HeroBanner = () => {
   return (
     <section className="relative px-3 sm:px-4 pt-2 pb-5" aria-label="Fairplay cricket ID banner">
       <h1 className="sr-only">
-        Fairplay — get your online cricket ID in just 2 minutes for IPL, casino, football and tennis
+        Online cricket ID on Fairplay — get a cricket betting ID in 2 minutes for IPL, casino, football and tennis
       </h1>
       <div className="container max-w-7xl mx-auto">
         <motion.div
