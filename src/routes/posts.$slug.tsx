@@ -105,6 +105,16 @@ const POST_BANNERS: Record<string, string> = {
   "fairplay-online-betting-features-game-types": bettingFeaturesGameTypesBanner,
   "ipl-betting-id-safe-signup-fairplay": iplIdSafeSignupBanner,
   "fairplay-vs-other-betting-ids-2026": vsOtherIdsBanner,
+  "why-indian-gamers-prefer-fairplay": whyIndianGamersBanner,
+  "fairplay-india-vs-usa-match-prediction-icc-t20-world-cup": indVsUsaBanner,
+  "fairplay-ipl-t20-world-cup-betting-guide": iplT20wcGuideBanner,
+  "fairplay-online-cricket-platform-india": onlineCricketPlatformBanner,
+  "fairplay-best-time-to-place-bets": bestTimeToBetBanner,
+  "casino-games-types-on-fairplay": casinoGameTypesBanner,
+  "fairplay-t20-world-cup-predictions-betting-strategies": t20wcPredStrategiesBanner,
+  "fairplay-india-vs-pakistan-today-match-prediction": indVsPakBanner,
+  "live-match-betting-fairplay-winning-plan-t20-world-cup": liveBettingPlanBanner,
+  "fairplay-safe-verified-ipl-online-cricket-id-2026": safeVerifiedIplIdBanner,
 };
 
 
