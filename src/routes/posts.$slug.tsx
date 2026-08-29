@@ -373,6 +373,16 @@ const POST_BANNERS: Record<string, string> = {
   "fairplay-safe-online-blackjack-casino-deposit-money-guide": blackjackDepositBanner,
   "top-cricket-tournaments-to-bet-on-using-fairplay-in-2026": topCricketTournaments2026Banner,
   "deposit-and-withdrawal-limits-on-fairplay-explained": depositWithdrawalLimitsBanner,
+  "fairplay-customer-care-guide-contact-support-for-login": customerCareGuideBanner,
+  "types-of-fairplay-cricket-betting-markets-explained": cricketMarketsTypesBanner,
+  "fairplay-free-demo-id-step-by-step-registration": freeDemoIdRegBanner,
+  "fairplay-features-and-services-2026-explained": featuresServices2026Banner,
+  "top-sports-to-bet-on-fairplay": topSportsToBetBanner,
+  "reddy-anan-book-club-membership-features-benefits": clubMembershipBanner,
+  "fairplay-how-to-play-andar-bahar-guide": andarBaharGuideBanner,
+  "fairplay-live-casino-features-and-services": liveCasinoServicesBanner,
+  "fairplay-poker-guide-for-new-players": pokerGuideBanner,
+  "how-to-claim-your-fairplay-welcome-bonus": welcomeBonusBanner,
 };
 
 
