@@ -11,6 +11,11 @@ import { getHubLinksForSlug, relatedBlogCards } from '@/utils/internal-links';
 import { BLOG_POST_DATES, blogPostIsoDate } from '@/utils/blog-post-dates';
 import { OG_IMAGE, absolutePageUrl } from '@/utils/page-seo';
 import { waLink } from "@/lib/whatsapp";
+import idSecurityBanner from "@/assets/blog/fairplay-id-security-tips.jpg";
+
+const POST_BANNERS: Record<string, string> = {
+  "fairplay-id-security-tips-protect-your-id-login": idSecurityBanner,
+};
 
 
 export const Route = createFileRoute('/posts/$slug')({
