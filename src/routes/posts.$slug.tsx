@@ -188,6 +188,16 @@ import horseRaceSecureBanner from "@/assets/blog/fairplay-horse-race-betting-sec
 import blackjackDepositBanner from "@/assets/blog/fairplay-blackjack-deposit-guide.jpg";
 import topCricketTournaments2026Banner from "@/assets/blog/fairplay-top-cricket-tournaments-2026.jpg";
 import depositWithdrawalLimitsBanner from "@/assets/blog/fairplay-deposit-withdrawal-limits.jpg";
+import customerCareGuideBanner from "@/assets/blog/fairplay-customer-care-guide.jpg";
+import cricketMarketsTypesBanner from "@/assets/blog/fairplay-cricket-betting-markets-types.jpg";
+import freeDemoIdRegBanner from "@/assets/blog/fairplay-free-demo-id-registration.jpg";
+import featuresServices2026Banner from "@/assets/blog/fairplay-features-services-2026.jpg";
+import topSportsToBetBanner from "@/assets/blog/fairplay-top-sports-to-bet.jpg";
+import clubMembershipBanner from "@/assets/blog/fairplay-club-membership-benefits.jpg";
+import andarBaharGuideBanner from "@/assets/blog/fairplay-andar-bahar-guide.jpg";
+import liveCasinoServicesBanner from "@/assets/blog/fairplay-live-casino-features-services.jpg";
+import pokerGuideBanner from "@/assets/blog/fairplay-poker-guide-new-players.jpg";
+import welcomeBonusBanner from "@/assets/blog/fairplay-welcome-bonus-claim.jpg";
 
 const POST_BANNERS: Record<string, string> = {
   "fairplay-cricket-id-vs-traditional-online-account-access-difference": idVsTraditionalBanner,
@@ -363,6 +373,16 @@ const POST_BANNERS: Record<string, string> = {
   "fairplay-safe-online-blackjack-casino-deposit-money-guide": blackjackDepositBanner,
   "top-cricket-tournaments-to-bet-on-using-fairplay-in-2026": topCricketTournaments2026Banner,
   "deposit-and-withdrawal-limits-on-fairplay-explained": depositWithdrawalLimitsBanner,
+  "fairplay-customer-care-guide-contact-support-for-login": customerCareGuideBanner,
+  "types-of-fairplay-cricket-betting-markets-explained": cricketMarketsTypesBanner,
+  "fairplay-free-demo-id-step-by-step-registration": freeDemoIdRegBanner,
+  "fairplay-features-and-services-2026-explained": featuresServices2026Banner,
+  "top-sports-to-bet-on-fairplay": topSportsToBetBanner,
+  "reddy-anan-book-club-membership-features-benefits": clubMembershipBanner,
+  "fairplay-how-to-play-andar-bahar-guide": andarBaharGuideBanner,
+  "fairplay-live-casino-features-and-services": liveCasinoServicesBanner,
+  "fairplay-poker-guide-for-new-players": pokerGuideBanner,
+  "how-to-claim-your-fairplay-welcome-bonus": welcomeBonusBanner,
 };
 
 
