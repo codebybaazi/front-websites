@@ -22,6 +22,16 @@ import trustedNameBanner from "@/assets/blog/fairplay-trusted-name.jpg";
 import beforeBuyingBanner from "@/assets/blog/fairplay-before-buying-id.jpg";
 import footballGuideBanner from "@/assets/blog/fairplay-football-betting-guide.jpg";
 import verifyAccountBanner from "@/assets/blog/fairplay-verify-account.jpg";
+import withdrawUpiBanner from "@/assets/blog/fairplay-withdraw-upi.jpg";
+import t20StrategyBanner from "@/assets/blog/fairplay-t20-strategy.jpg";
+import agentSystemBanner from "@/assets/blog/fairplay-agent-system.jpg";
+import wplStrategiesBanner from "@/assets/blog/fairplay-wpl-strategies.jpg";
+import howItWorksBanner from "@/assets/blog/fairplay-how-it-works.jpg";
+import appVsWebsiteBanner from "@/assets/blog/fairplay-app-vs-website.jpg";
+import optionsBonusesBanner from "@/assets/blog/fairplay-options-bonuses.jpg";
+import dcVsUpwBanner from "@/assets/blog/fairplay-dc-vs-upw.jpg";
+import miVsUpwBanner from "@/assets/blog/fairplay-mi-vs-upw.jpg";
+import iplWplBblBanner from "@/assets/blog/fairplay-ipl-wpl-bbl.jpg";
 
 const POST_BANNERS: Record<string, string> = {
   "fairplay-id-security-tips-protect-your-id-login": idSecurityBanner,
@@ -35,6 +45,16 @@ const POST_BANNERS: Record<string, string> = {
   "things-to-check-before-buying-a-fairplay-id": beforeBuyingBanner,
   "football-betting-guide-on-fairplay": footballGuideBanner,
   "how-to-verify-your-fairplay-account": verifyAccountBanner,
+  "how-to-withdraw-money-from-fairplay-using-upi": withdrawUpiBanner,
+  "icc-mens-t20-world-cup-2026-betting-strategy-for-fairplay-users": t20StrategyBanner,
+  "fairplay-agent-system-explained": agentSystemBanner,
+  "top-5-safe-betting-strategies-for-wpl-matches-on-fairplay": wplStrategiesBanner,
+  "how-fairplay-works-login-id-creation-betting-process": howItWorksBanner,
+  "fairplay-app-vs-website": appVsWebsiteBanner,
+  "fairplay-betting-options-bonuses-benefits": optionsBonusesBanner,
+  "fairplay-delhi-vs-up-warriors-women-match-analysis": dcVsUpwBanner,
+  "fairplay-mumbai-vs-up-warriors-women-match-prediction": miVsUpwBanner,
+  "fairplay-ipl-wpl-bbl-guide": iplWplBblBanner,
 };
 
 
