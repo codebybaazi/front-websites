@@ -42,6 +42,16 @@ import id5StepsBanner from "@/assets/blog/fairplay-id-5-steps.jpg";
 import idOnlineBettingBanner from "@/assets/blog/fairplay-id-online-betting.jpg";
 import bettingHistoryIdBanner from "@/assets/blog/fairplay-betting-history-id.jpg";
 import bonusesRewardsIdBanner from "@/assets/blog/fairplay-bonuses-rewards-id.jpg";
+import indNz4thT20Banner from "@/assets/blog/fairplay-indnz-4th-t20.jpg";
+import featuresGamesSafeBanner from "@/assets/blog/fairplay-features-games-safe.jpg";
+import mobileIndiaBanner from "@/assets/blog/fairplay-mobile-india.jpg";
+import moneyTransferBanner from "@/assets/blog/fairplay-money-transfer.jpg";
+import iplLiveMatchBettingBanner from "@/assets/blog/fairplay-ipl-live-match-betting.jpg";
+import gamingOnlineCricketIdBanner from "@/assets/blog/fairplay-gaming-online-cricket-id.jpg";
+import t20wcPredictionBanner from "@/assets/blog/fairplay-t20wc-prediction.jpg";
+import bettingFeaturesGameTypesBanner from "@/assets/blog/fairplay-betting-features-game-types.jpg";
+import iplIdSafeSignupBanner from "@/assets/blog/fairplay-ipl-id-safe-signup.jpg";
+import vsOtherIdsBanner from "@/assets/blog/fairplay-vs-other-ids-2026.jpg";
 
 const POST_BANNERS: Record<string, string> = {
   "fairplay-id-security-tips-protect-your-id-login": idSecurityBanner,
@@ -75,6 +85,16 @@ const POST_BANNERS: Record<string, string> = {
   "fairplay-id-for-online-betting": idOnlineBettingBanner,
   "betting-history-using-fairplay-id": bettingHistoryIdBanner,
   "exclusive-bonuses-rewards-fairplay-id": bonusesRewardsIdBanner,
+  "fairplay-india-vs-new-zealand-4th-t20-match-prediction": indNz4thT20Banner,
+  "fairplay-features-games-safe-betting": featuresGamesSafeBanner,
+  "how-to-use-fairplay-on-mobile-india": mobileIndiaBanner,
+  "fairplay-money-transfer-guide": moneyTransferBanner,
+  "ipl-live-match-betting-fairplay": iplLiveMatchBettingBanner,
+  "fairplay-gaming-online-cricket-id": gamingOnlineCricketIdBanner,
+  "icc-t20-world-cup-2026-match-prediction-fairplay": t20wcPredictionBanner,
+  "fairplay-online-betting-features-game-types": bettingFeaturesGameTypesBanner,
+  "ipl-betting-id-safe-signup-fairplay": iplIdSafeSignupBanner,
+  "fairplay-vs-other-betting-ids-2026": vsOtherIdsBanner,
 };
 
 
