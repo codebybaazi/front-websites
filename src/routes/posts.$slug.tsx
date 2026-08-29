@@ -125,6 +125,16 @@ const POST_BANNERS: Record<string, string> = {
   "fairplay-india-vs-pakistan-today-match-prediction": indVsPakBanner,
   "live-match-betting-fairplay-winning-plan-t20-world-cup": liveBettingPlanBanner,
   "fairplay-safe-verified-ipl-online-cricket-id-2026": safeVerifiedIplIdBanner,
+  "best-ipl-betting-tips-fairplay-users-2026": bestIplTipsBanner,
+  "fairplay-super-8-betting-strategy-t20-world-cup": super8StrategyBanner,
+  "fairplay-icc-t20-world-cup-2026-points-table-analysis": pointsTableBanner,
+  "popular-cricket-football-prediction-markets-fairplay": predictionMarketsBanner,
+  "new-zealand-vs-pakistan-super-8-match-prediction": nzVsPakBanner,
+  "fairplay-ind-vs-sa-match-prediction-who-will-win-today": indVsSaBanner,
+  "fairplay-tds-betting-winnings-guide-2026": tdsGuideBanner,
+  "fairplay-football-betting-bet-live-predict-smart-big-win": footballWinBigBanner,
+  "why-verification-matters-ipl-betting-id-fairplay-guide": verificationMattersBanner,
+  "fairplay-whatsapp-vs-direct-login-withdrawals": whatsappVsLoginBanner,
 };
 
 
