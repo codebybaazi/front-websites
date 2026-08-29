@@ -1,4 +1,5 @@
 import { enrichBlogArticle } from "@/utils/blog-seo";
+import { BLOG_POST_DATES } from "@/utils/blog-post-dates";
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { 
@@ -1666,7 +1667,12 @@ const RAW_BLOG_ARTICLES = [
   }
 ];
 
-export const blogArticles = RAW_BLOG_ARTICLES.map(enrichBlogArticle);
+export const blogArticles = RAW_BLOG_ARTICLES.map((article) =>
+  enrichBlogArticle({
+    ...article,
+    date: BLOG_POST_DATES[article.slug] ?? article.date,
+  })
+);
 
 export const ICON_MAP: Record<string, any> = {
   TrendingUp,
