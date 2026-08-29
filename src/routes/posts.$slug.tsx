@@ -112,6 +112,16 @@ import winLiveBetsIplBanner from "@/assets/blog/fairplay-win-live-bets-ipl.jpg";
 import rcbVsDcDream11Banner from "@/assets/blog/fairplay-rcb-vs-dc-dream11.jpg";
 import understandingBettingIdBanner from "@/assets/blog/fairplay-understanding-betting-id.jpg";
 import appGuideAnytimeBanner from "@/assets/blog/fairplay-app-guide-anytime.jpg";
+import popularDuringIplBanner from "@/assets/blog/fairplay-popular-during-ipl-season.jpg";
+import depositFundsUpiBanner from "@/assets/blog/fairplay-deposit-funds-upi.jpg";
+import trendsIpl2026Banner from "@/assets/blog/fairplay-trends-ipl-2026.jpg";
+import capRaceBanner from "@/assets/blog/fairplay-orange-purple-cap-race.jpg";
+import analyzeIplTeamsBanner from "@/assets/blog/fairplay-analyze-ipl-teams.jpg";
+import apkLowEndBanner from "@/assets/blog/fairplay-apk-low-end-phones.jpg";
+import ipl2026MarketsBanner from "@/assets/blog/fairplay-ipl-2026-betting-markets.jpg";
+import rrVsGtBanner from "@/assets/blog/fairplay-rr-vs-gt-match52.jpg";
+import rcbVsMiBanner from "@/assets/blog/fairplay-rcb-vs-mi-match54.jpg";
+import srhVsGtBanner from "@/assets/blog/fairplay-srh-vs-gt-match56.jpg";
 
 const POST_BANNERS: Record<string, string> = {
   "fairplay-id-security-tips-protect-your-id-login": idSecurityBanner,
@@ -215,6 +225,16 @@ const POST_BANNERS: Record<string, string> = {
   "rcb-vs-dc-dream11-team-prediction-match-26th-ipl-2026": rcbVsDcDream11Banner,
   "understanding-fairplay-online-betting-id-guide": understandingBettingIdBanner,
   "fairplay-app-guide-simple-ipl-betting-anytime-anywhere": appGuideAnytimeBanner,
+  "how-fairplay-is-becoming-popular-during-ipl-season": popularDuringIplBanner,
+  "how-to-deposit-funds-on-fairplay-using-upi": depositFundsUpiBanner,
+  "fairplay-trends-in-ipl-2026": trendsIpl2026Banner,
+  "ipl-2026-orange-cap-and-purple-cap-race-fairplay": capRaceBanner,
+  "analyze-ipl-teams-before-betting-on-fairplay": analyzeIplTeamsBanner,
+  "fairplay-apk-fast-stable-low-end-phones": apkLowEndBanner,
+  "fairplay-explains-popular-ipl-2026-betting-markets": ipl2026MarketsBanner,
+  "rr-vs-gt-dream11-prediction-today-match-52st-ipl-2026": rrVsGtBanner,
+  "rcb-vs-mi-dream11-prediction-today-match54-ipl-2026": rcbVsMiBanner,
+  "srh-vs-gt-dream11-prediction-today-match-56-ipl-2026": srhVsGtBanner,
 };
 
 
