@@ -150,11 +150,39 @@ export function WebMcpTools() {
       },
     ];
 
-    try {
-      void modelContext.provideContext({ tools });
-    } catch {
-      // Older or partial WebMCP implementations: nothing else to do.
-    }
+    const nav = navigator as Navigator & { modelContext?: ModelContext };
+    let registered = false;
+
+    const register = () => {
+      if (registered) return true;
+      const modelContext = nav.modelContext;
+      if (!modelContext?.provideContext) return false;
+      try {
+        void modelContext.provideContext({ tools });
+        registered = true;
+        // Lets probing agents/scanners detect registration without waiting further.
+        (window as Window & { __webmcpTools?: string[] }).__webmcpTools = tools.map((t) => t.name);
+        window.dispatchEvent(new CustomEvent("webmcp:ready", { detail: { tools: tools.map((t) => t.name) } }));
+        return true;
+      } catch {
+        // Older or partial WebMCP implementations: nothing else to do.
+        return false;
+      }
+    };
+
+    if (register()) return;
+
+    // Agents commonly inject navigator.modelContext after the document loads, so keep
+    // watching instead of giving up on the first miss (which looked like a timeout).
+    const interval = window.setInterval(() => {
+      if (register()) window.clearInterval(interval);
+    }, 200);
+    const timeout = window.setTimeout(() => window.clearInterval(interval), 30000);
+
+    return () => {
+      window.clearInterval(interval);
+      window.clearTimeout(timeout);
+    };
   }, [router]);
 
   return null;
