@@ -178,6 +178,16 @@ import argVsEspFinalBanner from "@/assets/blog/fairplay-arg-vs-esp-final.jpg";
 import dream11FootballBanner from "@/assets/blog/fairplay-dream11-football-final.jpg";
 import footballBettingIdBanner from "@/assets/blog/fairplay-football-betting-id.jpg";
 import dream11CricketBanner from "@/assets/blog/fairplay-dream11-fantasy-cricket.jpg";
+import accessAnyDeviceBanner from "@/assets/blog/fairplay-access-account-any-device.jpg";
+import howLoginWorksBanner from "@/assets/blog/fairplay-how-login-works.jpg";
+import downloadLatestApkBanner from "@/assets/blog/fairplay-download-latest-apk.jpg";
+import freeCasinoExperienceBanner from "@/assets/blog/fairplay-free-casino-experience.jpg";
+import sportsIdBenefitsBanner from "@/assets/blog/fairplay-sports-id-benefits-online.jpg";
+import topSportsTournamentsBanner from "@/assets/blog/fairplay-top-sports-tournaments.jpg";
+import horseRaceSecureBanner from "@/assets/blog/fairplay-horse-race-betting-secure.jpg";
+import blackjackDepositBanner from "@/assets/blog/fairplay-blackjack-deposit-guide.jpg";
+import topCricketTournaments2026Banner from "@/assets/blog/fairplay-top-cricket-tournaments-2026.jpg";
+import depositWithdrawalLimitsBanner from "@/assets/blog/fairplay-deposit-withdrawal-limits.jpg";
 
 const POST_BANNERS: Record<string, string> = {
   "fairplay-cricket-id-vs-traditional-online-account-access-difference": idVsTraditionalBanner,
