@@ -344,12 +344,14 @@ function PostDetail() {
             )}
           </nav>
           
-          <div className="aspect-video bg-card border border-border rounded-[2rem] overflow-hidden mb-12 relative group">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 group-hover:opacity-100 transition-opacity" />
-            <div className="w-full h-full flex items-center justify-center">
-              <Zap className="w-24 h-24 text-primary/20 group-hover:scale-110 transition-transform duration-500" />
+          {!POST_BANNERS[slug] && (
+            <div className="aspect-video bg-card border border-border rounded-[2rem] overflow-hidden mb-12 relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 group-hover:opacity-100 transition-opacity" />
+              <div className="w-full h-full flex items-center justify-center">
+                <Zap className="w-24 h-24 text-primary/20 group-hover:scale-110 transition-transform duration-500" />
+              </div>
             </div>
-          </div>
+          )}
         </motion.div>
 
         <motion.div 
