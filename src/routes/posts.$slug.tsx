@@ -145,6 +145,16 @@ const POST_BANNERS: Record<string, string> = {
   "fairplay-football-betting-bet-live-predict-smart-big-win": footballWinBigBanner,
   "why-verification-matters-ipl-betting-id-fairplay-guide": verificationMattersBanner,
   "fairplay-whatsapp-vs-direct-login-withdrawals": whatsappVsLoginBanner,
+  "fairplay-customer-support-24-7-help-for-betting-and-withdrawal-issues": customerSupport247Banner,
+  "what-is-fairplay-a-complete-beginners-guide": whatIsFairplayBanner,
+  "why-fairplay-is-indias-most-popular-choice": indiasPopularChoiceBanner,
+  "how-to-login-to-fairplay-a-step-by-step-beginners-guide": loginStepByStepBanner,
+  "ipl-betting-feels-different-from-regular-cricket-betting-on-fairplay": iplVsRegularBanner,
+  "fairplay-wi-vs-ind-elimination-match-today-prediction": wiVsIndEliminationBanner,
+  "fairplay-sa-vs-nz-semifinal-prediction": saVsNzSemifinalBanner,
+  "fairplay-id-for-sa-vs-nz-semi-final-live-betting": idSaVsNzLiveBanner,
+  "fairplay-app-guide-best-markets-1st-semi-final-2026": appGuide1stSemiBanner,
+  "fairplay-india-vs-england-semifinal-match-prediction": indVsEngSemifinalBanner,
 };
 
 
