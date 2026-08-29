@@ -41,6 +41,9 @@ function buildMetadata() {
      * that says so rather than at a non-existent endpoint.
      */
     agent_auth: {
+      // `skill` is the canonical auth.md discovery pointer used by current
+      // agent-registration clients. Keep register_uri as a compatibility alias.
+      skill: `${SITE_ORIGIN}/auth.md`,
       registration_required: false,
       register_uri: `${SITE_ORIGIN}/auth.md`,
       documentation_uri: `${SITE_ORIGIN}/auth.md`,
@@ -86,6 +89,16 @@ export function buildOAuthProtectedResourceMetadata(): string {
       "x-notice":
         "This site is a public read-only resource. No protected APIs or OAuth authorization servers are operated on this origin.",
       "x-agent-auth": `${SITE_ORIGIN}/auth.md`,
+      agent_auth: {
+        skill: `${SITE_ORIGIN}/auth.md`,
+        registration_required: false,
+        register_uri: `${SITE_ORIGIN}/auth.md`,
+        identity_types_supported: ["none"],
+        credential_types_supported: ["none"],
+        claims_supported: [] as string[],
+        claim_uri: null,
+        revocation_uri: null,
+      },
       "x-public-resources": {
         api_catalog: `${SITE_ORIGIN}${API_CATALOG_PATH}`,
         sitemap: `${SITE_ORIGIN}/sitemap.xml`,
