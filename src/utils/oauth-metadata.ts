@@ -89,16 +89,8 @@ export function buildOAuthProtectedResourceMetadata(): string {
       "x-notice":
         "This site is a public read-only resource. No protected APIs or OAuth authorization servers are operated on this origin.",
       "x-agent-auth": `${SITE_ORIGIN}/auth.md`,
-      agent_auth: {
-        skill: `${SITE_ORIGIN}/auth.md`,
-        registration_required: false,
-        register_uri: `${SITE_ORIGIN}/auth.md`,
-        identity_types_supported: ["none"],
-        credential_types_supported: ["none"],
-        claims_supported: [] as string[],
-        claim_uri: null,
-        revocation_uri: null,
-      },
+      agent_auth: buildMetadata().agent_auth,
+
       "x-public-resources": {
         api_catalog: `${SITE_ORIGIN}${API_CATALOG_PATH}`,
         sitemap: `${SITE_ORIGIN}/sitemap.xml`,
@@ -148,14 +140,37 @@ registration and no protected API on this origin.
    machine-readable resource.
 4. Respect [robots.txt](${SITE_ORIGIN}/robots.txt) and a reasonable request rate.
 
+## agent_auth
+
+\`\`\`json
+{
+  "agent_auth": {
+    "registration_required": false,
+    "register_uri": "${SITE_ORIGIN}/auth.md",
+    "documentation_uri": "${SITE_ORIGIN}/auth.md",
+    "identity_types_supported": ["none"],
+    "credential_types_supported": ["none"],
+    "claims_supported": [],
+    "claim_uri": null,
+    "revocation_uri": null,
+    "access_model": "public-read-only"
+  }
+}
+\`\`\`
+
+The same \`agent_auth\` block is published in the OAuth authorization-server, OpenID
+configuration and OAuth protected-resource metadata documents below.
+
 ## Discovery metadata
 
-- \`${SITE_ORIGIN}${OAUTH_AS_PATH}\`
-- \`${SITE_ORIGIN}${OPENID_CONFIGURATION_PATH}\`
-- \`${SITE_ORIGIN}${OAUTH_PROTECTED_RESOURCE_PATH}\`
+- [oauth-authorization-server](${SITE_ORIGIN}${OAUTH_AS_PATH})
+- [openid-configuration](${SITE_ORIGIN}${OPENID_CONFIGURATION_PATH})
+- [oauth-protected-resource](${SITE_ORIGIN}${OAUTH_PROTECTED_RESOURCE_PATH})
+- [a2a agent card](${SITE_ORIGIN}/.well-known/agent-card.json)
 
-All three declare \`"x-authentication-required": false\` and empty grant, scope and
-authorization-server lists.
+All three OAuth documents declare "x-authentication-required": false and empty grant,
+scope and authorization-server lists.
+
 
 ## Account help for humans
 

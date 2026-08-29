@@ -212,7 +212,23 @@ export default {
         }
       }
 
+      if (isRead && url.pathname.startsWith("/.well-known/agent")) {
+        const { A2A_AGENT_CARD_PATHS, A2A_AGENT_CARD_CONTENT_TYPE, buildA2aAgentCard } =
+          await import("./utils/a2a-agent-card");
+        if (A2A_AGENT_CARD_PATHS.includes(url.pathname)) {
+          return new Response(bodyFor(buildA2aAgentCard()), {
+            status: 200,
+            headers: {
+              "content-type": A2A_AGENT_CARD_CONTENT_TYPE,
+              "access-control-allow-origin": "*",
+              "cache-control": "public, max-age=3600",
+            },
+          });
+        }
+      }
+
       if (isRead && url.pathname === "/auth.md") {
+
         const { AUTH_MD_CONTENT_TYPE, buildAuthMarkdown } = await import(
           "./utils/oauth-metadata"
         );
