@@ -27,9 +27,6 @@ export function WebMcpTools() {
   const router = useRouter();
 
   useEffect(() => {
-    const modelContext = (navigator as Navigator & { modelContext?: ModelContext }).modelContext;
-    if (!modelContext?.provideContext) return;
-
     const loadPosts = async () => {
       const { blogArticles } = await import("@/lib/blog-data");
       return blogArticles as unknown as Array<{
