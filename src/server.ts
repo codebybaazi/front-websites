@@ -154,6 +154,37 @@ export default {
         });
       }
 
+      if (isRead && url.pathname.startsWith("/.well-known/agent-skills/")) {
+        const {
+          AGENT_SKILLS_INDEX_PATH,
+          AGENT_SKILLS_INDEX_CONTENT_TYPE,
+          AGENT_SKILL_CONTENT_TYPE,
+          buildAgentSkillsIndex,
+          getAgentSkillDocument,
+        } = await import("./utils/agent-skills");
+
+        if (url.pathname === AGENT_SKILLS_INDEX_PATH) {
+          return new Response(bodyFor(await buildAgentSkillsIndex()), {
+            status: 200,
+            headers: {
+              "content-type": AGENT_SKILLS_INDEX_CONTENT_TYPE,
+              "cache-control": "public, max-age=3600",
+            },
+          });
+        }
+
+        const document = getAgentSkillDocument(url.pathname);
+        if (document) {
+          return new Response(bodyFor(document), {
+            status: 200,
+            headers: {
+              "content-type": AGENT_SKILL_CONTENT_TYPE,
+              "cache-control": "public, max-age=3600",
+            },
+          });
+        }
+      }
+
       if (isRead && url.pathname === "/auth.md") {
         const { AUTH_MD_CONTENT_TYPE, buildAuthMarkdown } = await import(
           "./utils/oauth-metadata"

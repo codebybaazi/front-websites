@@ -25,6 +25,11 @@ const DISCOVERY_LINKS: DiscoveryLink[] = [
   { path: "/services", rel: "service-doc", type: "text/html" },
   { path: "/auth.md", rel: "help", type: "text/markdown" },
   {
+    path: "/.well-known/agent-skills/index.json",
+    rel: "service-desc",
+    type: "application/json",
+  },
+  {
     path: "/.well-known/mcp/server-card.json",
     rel: "mcp-server-card",
     type: "application/json",
@@ -76,6 +81,11 @@ const CATALOG_ITEMS = [
     path: "/.well-known/mcp/server-card.json",
     type: "application/json",
     title: "MCP Server Card (SEP-1649): public read-only MCP server for this site",
+  },
+  {
+    path: "/.well-known/agent-skills/index.json",
+    type: "application/json",
+    title: "Agent Skills discovery index (RFC v0.2.0) with sha256-digested skill documents",
   },
   {
     path: "/mcp",
