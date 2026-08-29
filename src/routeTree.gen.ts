@@ -52,6 +52,7 @@ import { Route as LegalStatusRouteImport } from './routes/legal-status'
 import { Route as LoginGuideRouteImport } from './routes/login-guide'
 import { Route as LoginIssuesRouteImport } from './routes/login-issues'
 import { Route as MatchesRouteImport } from './routes/matches'
+import { Route as McpRouteImport } from './routes/mcp'
 import { Route as PlatformsRouteImport } from './routes/platforms'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as RefundPolicyRouteImport } from './routes/refund-policy'
@@ -70,8 +71,11 @@ import { Route as WhatsappSupportRouteImport } from './routes/whatsapp-support'
 import { Route as WithdrawalGuideRouteImport } from './routes/withdrawal-guide'
 import { Route as WithdrawalIssuesRouteImport } from './routes/withdrawal-issues'
 import { Route as WplBettingRouteImport } from './routes/wpl-betting'
+import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
+import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as MatchSlugRouteImport } from './routes/match.$slug'
 import { Route as PostsSlugRouteImport } from './routes/posts.$slug'
+import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -290,6 +294,11 @@ const MatchesRoute = MatchesRouteImport.update({
   path: '/matches',
   getParentRoute: () => rootRouteImport,
 } as any)
+const McpRoute = McpRouteImport.update({
+  id: '/mcp',
+  path: '/mcp',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PlatformsRoute = PlatformsRouteImport.update({
   id: '/platforms',
   path: '/platforms',
@@ -380,6 +389,18 @@ const WplBettingRoute = WplBettingRouteImport.update({
   path: '/wpl-betting',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Char91DotmcpChar93ListToolsRoute =
+  Char91DotmcpChar93ListToolsRouteImport.update({
+    id: '/.mcp/list-tools',
+    path: '/.mcp/list-tools',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Char91DotwellKnownChar93OauthProtectedResourceRoute =
+  Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
+    id: '/.well-known/oauth-protected-resource',
+    path: '/.well-known/oauth-protected-resource',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const MatchSlugRoute = MatchSlugRouteImport.update({
   id: '/match/$slug',
   path: '/match/$slug',
@@ -390,6 +411,12 @@ const PostsSlugRoute = PostsSlugRouteImport.update({
   path: '/posts/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Char91DotmcpChar93InvokeToolToolRoute =
+  Char91DotmcpChar93InvokeToolToolRouteImport.update({
+    id: '/.mcp/invoke-tool/$tool',
+    path: '/.mcp/invoke-tool/$tool',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -435,6 +462,7 @@ export interface FileRoutesByFullPath {
   '/login-guide': typeof LoginGuideRoute
   '/login-issues': typeof LoginIssuesRoute
   '/matches': typeof MatchesRoute
+  '/mcp': typeof McpRoute
   '/platforms': typeof PlatformsRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/refund-policy': typeof RefundPolicyRoute
@@ -453,8 +481,11 @@ export interface FileRoutesByFullPath {
   '/withdrawal-guide': typeof WithdrawalGuideRoute
   '/withdrawal-issues': typeof WithdrawalIssuesRoute
   '/wpl-betting': typeof WplBettingRoute
+  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/match/$slug': typeof MatchSlugRoute
   '/posts/$slug': typeof PostsSlugRoute
+  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -500,6 +531,7 @@ export interface FileRoutesByTo {
   '/login-guide': typeof LoginGuideRoute
   '/login-issues': typeof LoginIssuesRoute
   '/matches': typeof MatchesRoute
+  '/mcp': typeof McpRoute
   '/platforms': typeof PlatformsRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/refund-policy': typeof RefundPolicyRoute
@@ -518,8 +550,11 @@ export interface FileRoutesByTo {
   '/withdrawal-guide': typeof WithdrawalGuideRoute
   '/withdrawal-issues': typeof WithdrawalIssuesRoute
   '/wpl-betting': typeof WplBettingRoute
+  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/match/$slug': typeof MatchSlugRoute
   '/posts/$slug': typeof PostsSlugRoute
+  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -566,6 +601,7 @@ export interface FileRoutesById {
   '/login-guide': typeof LoginGuideRoute
   '/login-issues': typeof LoginIssuesRoute
   '/matches': typeof MatchesRoute
+  '/mcp': typeof McpRoute
   '/platforms': typeof PlatformsRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/refund-policy': typeof RefundPolicyRoute
@@ -584,8 +620,11 @@ export interface FileRoutesById {
   '/withdrawal-guide': typeof WithdrawalGuideRoute
   '/withdrawal-issues': typeof WithdrawalIssuesRoute
   '/wpl-betting': typeof WplBettingRoute
+  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/match/$slug': typeof MatchSlugRoute
   '/posts/$slug': typeof PostsSlugRoute
+  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -633,6 +672,7 @@ export interface FileRouteTypes {
     | '/login-guide'
     | '/login-issues'
     | '/matches'
+    | '/mcp'
     | '/platforms'
     | '/privacy-policy'
     | '/refund-policy'
@@ -651,8 +691,11 @@ export interface FileRouteTypes {
     | '/withdrawal-guide'
     | '/withdrawal-issues'
     | '/wpl-betting'
+    | '/.mcp/list-tools'
+    | '/.well-known/oauth-protected-resource'
     | '/match/$slug'
     | '/posts/$slug'
+    | '/.mcp/invoke-tool/$tool'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -698,6 +741,7 @@ export interface FileRouteTypes {
     | '/login-guide'
     | '/login-issues'
     | '/matches'
+    | '/mcp'
     | '/platforms'
     | '/privacy-policy'
     | '/refund-policy'
@@ -716,8 +760,11 @@ export interface FileRouteTypes {
     | '/withdrawal-guide'
     | '/withdrawal-issues'
     | '/wpl-betting'
+    | '/.mcp/list-tools'
+    | '/.well-known/oauth-protected-resource'
     | '/match/$slug'
     | '/posts/$slug'
+    | '/.mcp/invoke-tool/$tool'
   id:
     | '__root__'
     | '/'
@@ -763,6 +810,7 @@ export interface FileRouteTypes {
     | '/login-guide'
     | '/login-issues'
     | '/matches'
+    | '/mcp'
     | '/platforms'
     | '/privacy-policy'
     | '/refund-policy'
@@ -781,8 +829,11 @@ export interface FileRouteTypes {
     | '/withdrawal-guide'
     | '/withdrawal-issues'
     | '/wpl-betting'
+    | '/.mcp/list-tools'
+    | '/.well-known/oauth-protected-resource'
     | '/match/$slug'
     | '/posts/$slug'
+    | '/.mcp/invoke-tool/$tool'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -829,6 +880,7 @@ export interface RootRouteChildren {
   LoginGuideRoute: typeof LoginGuideRoute
   LoginIssuesRoute: typeof LoginIssuesRoute
   MatchesRoute: typeof MatchesRoute
+  McpRoute: typeof McpRoute
   PlatformsRoute: typeof PlatformsRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   RefundPolicyRoute: typeof RefundPolicyRoute
@@ -847,8 +899,11 @@ export interface RootRouteChildren {
   WithdrawalGuideRoute: typeof WithdrawalGuideRoute
   WithdrawalIssuesRoute: typeof WithdrawalIssuesRoute
   WplBettingRoute: typeof WplBettingRoute
+  Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
+  Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   MatchSlugRoute: typeof MatchSlugRoute
   PostsSlugRoute: typeof PostsSlugRoute
+  Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -1154,6 +1209,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MatchesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/mcp': {
+      id: '/mcp'
+      path: '/mcp'
+      fullPath: '/mcp'
+      preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/platforms': {
       id: '/platforms'
       path: '/platforms'
@@ -1280,6 +1342,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WplBettingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/.mcp/list-tools': {
+      id: '/.mcp/list-tools'
+      path: '/.mcp/list-tools'
+      fullPath: '/.mcp/list-tools'
+      preLoaderRoute: typeof Char91DotmcpChar93ListToolsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.well-known/oauth-protected-resource': {
+      id: '/.well-known/oauth-protected-resource'
+      path: '/.well-known/oauth-protected-resource'
+      fullPath: '/.well-known/oauth-protected-resource'
+      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/match/$slug': {
       id: '/match/$slug'
       path: '/match/$slug'
@@ -1292,6 +1368,13 @@ declare module '@tanstack/react-router' {
       path: '/posts/$slug'
       fullPath: '/posts/$slug'
       preLoaderRoute: typeof PostsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.mcp/invoke-tool/$tool': {
+      id: '/.mcp/invoke-tool/$tool'
+      path: '/.mcp/invoke-tool/$tool'
+      fullPath: '/.mcp/invoke-tool/$tool'
+      preLoaderRoute: typeof Char91DotmcpChar93InvokeToolToolRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -1341,6 +1424,7 @@ const rootRouteChildren: RootRouteChildren = {
   LoginGuideRoute: LoginGuideRoute,
   LoginIssuesRoute: LoginIssuesRoute,
   MatchesRoute: MatchesRoute,
+  McpRoute: McpRoute,
   PlatformsRoute: PlatformsRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   RefundPolicyRoute: RefundPolicyRoute,
@@ -1359,8 +1443,12 @@ const rootRouteChildren: RootRouteChildren = {
   WithdrawalGuideRoute: WithdrawalGuideRoute,
   WithdrawalIssuesRoute: WithdrawalIssuesRoute,
   WplBettingRoute: WplBettingRoute,
+  Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
+  Char91DotwellKnownChar93OauthProtectedResourceRoute:
+    Char91DotwellKnownChar93OauthProtectedResourceRoute,
   MatchSlugRoute: MatchSlugRoute,
   PostsSlugRoute: PostsSlugRoute,
+  Char91DotmcpChar93InvokeToolToolRoute: Char91DotmcpChar93InvokeToolToolRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

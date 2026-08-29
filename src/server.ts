@@ -141,6 +141,19 @@ export default {
         });
       }
 
+      if (isRead && url.pathname === "/.well-known/mcp/server-card.json") {
+        const { MCP_SERVER_CARD_CONTENT_TYPE, buildMcpServerCard } = await import(
+          "./utils/mcp-server-card"
+        );
+        return new Response(bodyFor(buildMcpServerCard()), {
+          status: 200,
+          headers: {
+            "content-type": MCP_SERVER_CARD_CONTENT_TYPE,
+            "cache-control": "public, max-age=3600",
+          },
+        });
+      }
+
       if (isRead && url.pathname === "/auth.md") {
         const { AUTH_MD_CONTENT_TYPE, buildAuthMarkdown } = await import(
           "./utils/oauth-metadata"
