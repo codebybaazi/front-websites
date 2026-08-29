@@ -28,7 +28,7 @@ export function RecentPostsSection() {
       <div className="container max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -51,8 +51,8 @@ export function RecentPostsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <Link 
-              to="/blog" 
+            <Link
+              to="/blog"
               className="group flex items-center gap-3 px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl transition-all text-sm font-black tracking-widest uppercase"
             >
               Explore All Insights
@@ -61,7 +61,7 @@ export function RecentPostsSection() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.map((post, i) => (post && (
             <motion.article
               key={post.slug}
@@ -94,7 +94,7 @@ export function RecentPostsSection() {
               <div className="flex flex-col flex-1 p-7">
                 <div className="flex items-center gap-4 mb-4 text-[9px] font-black uppercase tracking-widest text-muted-foreground">
                   <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3 text-primary" />{post.date}</span>
-                  <span className="flex items-center gap-1.5"><Clock className="w-3 h-3 text-primary" />5 min read</span>
+                  <span className="flex items-center gap-1.5"><Clock className="w-3 h-3 text-primary" />{Math.max(4, Math.min(12, Math.round(post.desc.length / 40)))} min read</span>
                 </div>
                 <h3 className="text-xl font-black italic uppercase tracking-tight leading-tight mb-3 group-hover:text-primary transition-colors line-clamp-2">
                   <Link to="/posts/$slug" params={{ slug: post.slug }}>{post.title}</Link>
@@ -111,14 +111,13 @@ export function RecentPostsSection() {
                     params={{ slug: post.slug }}
                     className="text-[10px] font-black uppercase tracking-widest text-foreground/70 group-hover:text-primary transition-colors flex items-center gap-2"
                   >
-                    Read Analysis <ArrowRight className="w-3 h-3" />
+                    Read More <ArrowRight className="w-3 h-3" />
                   </Link>
                 </div>
               </div>
             </motion.article>
           )))}
         </div>
-
       </div>
     </section>
   );
