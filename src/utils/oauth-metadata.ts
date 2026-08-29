@@ -72,10 +72,15 @@ export function buildOAuthProtectedResourceMetadata(): string {
   return JSON.stringify(
     {
       resource: SITE_ORIGIN,
-      authorization_servers: [] as string[],
-      scopes_supported: [] as string[],
+      resource_name: "Fairplay India",
+      // Self-referencing: this origin publishes the AS/OIDC discovery documents that
+      // describe (the absence of) token issuance for this resource.
+      authorization_servers: [SITE_ORIGIN],
+      scopes_supported: ["public:read"],
       bearer_methods_supported: ["header"],
       resource_documentation: `${SITE_ORIGIN}/services`,
+      resource_policy_uri: `${SITE_ORIGIN}/privacy-policy`,
+      resource_tos_uri: `${SITE_ORIGIN}/terms-conditions`,
       "x-authentication-required": false,
       "x-access-model": "public-read-only",
       "x-notice":
