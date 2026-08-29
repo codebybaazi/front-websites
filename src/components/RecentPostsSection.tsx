@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar, Clock, TrendingUp, ChevronRight } from "lucide-react";
+import { ArrowRight, Calendar, Clock, TrendingUp } from "lucide-react";
 import { useMemo } from "react";
 import { parse, compareDesc } from "date-fns";
 import { blogArticles } from "@/lib/blog-data";
@@ -63,67 +63,62 @@ export function RecentPostsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {articles.map((post, i) => (post && (
-            <motion.div
+            <motion.article
               key={post.slug}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
+              className="group relative flex flex-col bg-white/[0.03] border border-white/5 rounded-[2rem] overflow-hidden hover:bg-white/[0.07] hover:border-primary/30 transition-all duration-500"
             >
-            <Link 
+              <Link
                 to="/posts/$slug"
                 params={{ slug: post.slug }}
-                className="group block relative aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-white/5 hover:border-primary/40 transition-all duration-700 shine-effect glow-border"
+                className="block relative aspect-[16/9] overflow-hidden bg-primary/5"
+                aria-label={post.title}
               >
-                {/* Image background */}
-                <div 
-                  className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-1000"
-                  style={{ backgroundImage: `url(${POST_BANNERS[post.slug] ?? post.img})` }}
+                <img
+                  src={POST_BANNERS[post.slug] ?? post.img}
+                  alt={post.title}
+                  width={1600}
+                  height={900}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700"
                 />
-                
-                {/* Overlays */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                
-                {/* Content */}
-                <div className="absolute inset-0 p-8 flex flex-col justify-between z-10">
-                  <div className="flex justify-between items-start">
-                    <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-md border border-primary/30 text-[10px] font-black uppercase tracking-widest text-primary">
-                      {post.category}
-                    </span>
-                    <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500">
-                      <ChevronRight className="w-5 h-5" />
-                    </div>
-                  </div>
-
-                  <div>
-                    <div className="flex items-center gap-4 text-[10px] font-black uppercase tracking-widest text-white/40 mb-4 group-hover:text-white/60 transition-colors">
-                      <div className="flex items-center gap-1.5">
-                        <Calendar className="w-3.5 h-3.5 text-primary" />
-                        {post.date}
-                      </div>
-                      <div className="w-1 h-1 rounded-full bg-white/20" />
-                      <div className="flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5 text-primary" />
-                        5 MIN READ
-                      </div>
-                    </div>
-                    
-                    <h3 className="text-2xl font-black italic uppercase leading-[1.1] tracking-tighter group-hover:text-primary transition-colors line-clamp-3">
-                      {post.title}
-                    </h3>
-                    
-                    <div className="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.3em] text-primary opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                      READ ANALYSIS <ArrowRight className="w-4 h-4" />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="absolute bottom-0 left-0 w-0 h-[4px] bg-primary group-hover:w-full transition-all duration-1000 ease-in-out" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-primary text-primary-foreground text-[9px] font-black uppercase tracking-[0.2em]">
+                  {post.category}
+                </span>
               </Link>
-            </motion.div>
+
+              <div className="flex flex-col flex-1 p-7">
+                <div className="flex items-center gap-4 mb-4 text-[9px] font-black uppercase tracking-widest text-muted-foreground">
+                  <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3 text-primary" />{post.date}</span>
+                  <span className="flex items-center gap-1.5"><Clock className="w-3 h-3 text-primary" />5 min read</span>
+                </div>
+                <h3 className="text-xl font-black italic uppercase tracking-tight leading-tight mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                  <Link to="/posts/$slug" params={{ slug: post.slug }}>{post.title}</Link>
+                </h3>
+                {post.desc && (
+                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3 font-medium mb-6">
+                    {post.desc}
+                  </p>
+                )}
+
+                <div className="mt-auto pt-5 border-t border-white/5">
+                  <Link
+                    to="/posts/$slug"
+                    params={{ slug: post.slug }}
+                    className="text-[10px] font-black uppercase tracking-widest text-foreground/70 group-hover:text-primary transition-colors flex items-center gap-2"
+                  >
+                    Read Analysis <ArrowRight className="w-3 h-3" />
+                  </Link>
+                </div>
+              </div>
+            </motion.article>
           )))}
         </div>
+
       </div>
     </section>
   );
