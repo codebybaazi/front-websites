@@ -121,11 +121,13 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "Fairplay withdrawal pending, Fairplay payout delayed, withdrawal not received",
   },
   "/fairplay-id": {
-    title: "Online Cricket ID | Get a Fairplay Cricket Betting ID",
+    title: "Fairplay ID | Online Cricket ID & Fairplay Club Login",
     description:
-      "Get an online cricket ID on Fairplay — a verified cricket betting ID for IPL, football, tennis and live casino. One login, UPI deposits, WhatsApp help.",
-    keywords: "online cricket id, cricket id, cricket betting id, Fairplay ID, get Fairplay ID, online cricket id India",
+      "Get a Fairplay ID — a verified online cricket ID for IPL, football, tennis and Fairplay club live casino. One login, UPI deposits, WhatsApp help.",
+    keywords:
+      "fairplay id, fairplay club, fair play online, online cricket id, cricket betting id, get fairplay id",
   },
+
   "/ipl-betting": {
     title: "IPL 2026 betting | Match winner, fancy and live odds | Fairplay",
     description:
@@ -133,17 +135,20 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "IPL betting, IPL 2026 betting, Fairplay IPL, cricket fancy betting, IPL live odds",
   },
   "/betting": {
-    title: "Cricket Betting ID | Fairplay Sports Exchange India",
+    title: "Fairplay Bet | Fair Play Exchange & Online Betting India",
     description:
-      "Use one cricket betting ID for cricket, football and tennis on the Fairplay exchange. Live odds, IPL and FIFA books, set betting and live casino.",
-    keywords: "cricket betting id, online cricket betting, Fairplay exchange, football betting, tennis betting, sports exchange India",
+      "Fairplay bet on the fair play exchange: cricket, football and tennis with live odds, IPL and FIFA books, fancy markets and one cricket betting ID.",
+    keywords:
+      "fairplay bet, fair play betting, fair play exchange, fairplay online, fair play cricket, cricket betting id, sports exchange India",
   },
   "/casino": {
-    title: "Fairplay live casino | Teen Patti, Andar Bahar and HD tables",
+    title: "Fairplay Club Casino | Teen Patti, Andar Bahar & HD Tables",
     description:
-      "Play Fairplay live casino with HD dealers: Teen Patti, Andar Bahar, roulette, blackjack and slots. Same Fairplay ID as your cricket wallet.",
-    keywords: "Fairplay casino, live casino India, Teen Patti Fairplay, Andar Bahar, HD live dealer",
+      "Fairplay club live casino with HD dealers: Teen Patti, Andar Bahar, roulette, blackjack and slots — same Fairplay login as your cricket wallet.",
+    keywords:
+      "fairplay club, fairplay casino, live casino India, teen patti fairplay, andar bahar, HD live dealer",
   },
+
   "/bonus": {
     title: "Fairplay bonus | Welcome offer and promo codes",
     description:
