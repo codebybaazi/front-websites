@@ -13,6 +13,12 @@ import blackjackVip from '@/assets/casino/blackjack-vip.jpg'
 import starburst from '@/assets/casino/starburst.jpg'
 import crazyTime from '@/assets/casino/crazy-time.jpg'
 import megaMoolah from '@/assets/casino/mega-moolah.jpg'
+import teenPatti from '@/assets/casino/teen-patti.jpg'
+import andarBahar from '@/assets/casino/andar-bahar.jpg'
+import dragonTiger from '@/assets/casino/dragon-tiger.jpg'
+import baccarat from '@/assets/casino/baccarat.jpg'
+import sweetBonanza from '@/assets/casino/sweet-bonanza.jpg'
+import aviator from '@/assets/casino/aviator.jpg'
 import casinoBanner from '@/assets/casino/casino-banner.jpg'
 import { FAQSection } from '@/components/FAQSection'
 
@@ -46,12 +52,18 @@ const winners = [
 ]
 
 const games = [
-  { id: 1, name: 'Lightning Roulette', provider: 'Evolution', image: lightningRoulette, category: 'Live Casino', isHot: true },
-  { id: 2, name: 'Book of Dead', provider: 'Play\'n GO', image: bookOfDead, category: 'Slots', isHot: false },
-  { id: 3, name: 'Blackjack VIP', provider: 'Pragmatic Play', image: blackjackVip, category: 'Live Casino', isHot: true },
-  { id: 4, name: 'Starburst', provider: 'NetEnt', image: starburst, category: 'Slots', isHot: false },
-  { id: 5, name: 'Crazy Time', provider: 'Evolution', image: crazyTime, category: 'Live Casino', isHot: true },
-  { id: 6, name: 'Mega Moolah', provider: 'Microgaming', image: megaMoolah, category: 'Slots', isHot: true },
+  { id: 1, name: 'Lightning Roulette', provider: 'Evolution', image: lightningRoulette, category: 'Live Casino', isHot: true, isNew: false, isPopular: true },
+  { id: 2, name: 'Book of Dead', provider: 'Play\'n GO', image: bookOfDead, category: 'Slots', isHot: false, isNew: false, isPopular: true },
+  { id: 3, name: 'Blackjack VIP', provider: 'Pragmatic Play', image: blackjackVip, category: 'Table Games', isHot: true, isNew: false, isPopular: true },
+  { id: 4, name: 'Starburst', provider: 'NetEnt', image: starburst, category: 'Slots', isHot: false, isNew: false, isPopular: false },
+  { id: 5, name: 'Crazy Time', provider: 'Evolution', image: crazyTime, category: 'Live Casino', isHot: true, isNew: false, isPopular: true },
+  { id: 6, name: 'Mega Moolah', provider: 'Microgaming', image: megaMoolah, category: 'Slots', isHot: true, isNew: false, isPopular: true },
+  { id: 7, name: 'Teen Patti Live', provider: 'Ezugi', image: teenPatti, category: 'Live Casino', isHot: true, isNew: true, isPopular: true },
+  { id: 8, name: 'Andar Bahar', provider: 'Ezugi', image: andarBahar, category: 'Live Casino', isHot: true, isNew: true, isPopular: true },
+  { id: 9, name: 'Dragon Tiger', provider: 'Evolution', image: dragonTiger, category: 'Table Games', isHot: false, isNew: true, isPopular: false },
+  { id: 10, name: 'Baccarat Deluxe', provider: 'Evolution', image: baccarat, category: 'Table Games', isHot: false, isNew: false, isPopular: false },
+  { id: 11, name: 'Sweet Bonanza', provider: 'Pragmatic Play', image: sweetBonanza, category: 'Slots', isHot: true, isNew: true, isPopular: true },
+  { id: 12, name: 'Aviator Crash', provider: 'Spribe', image: aviator, category: 'Slots', isHot: true, isNew: true, isPopular: true },
 ]
 
 function CasinoPage() {
@@ -71,6 +83,15 @@ function CasinoPage() {
       )
     }
   }, [type])
+
+  const visibleGames =
+    activeCategory === 'All Games'
+      ? games
+      : activeCategory === 'New'
+        ? games.filter((g) => g.isNew)
+        : activeCategory === 'Popular'
+          ? games.filter((g) => g.isPopular)
+          : games.filter((g) => g.category === activeCategory)
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -152,11 +173,11 @@ function CasinoPage() {
             <h3 className="text-2xl font-black italic uppercase tracking-tight">
               {activeCategory} <span className="text-primary not-italic">Games</span>
             </h3>
-            <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">{games.length} Results</span>
+            <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">{visibleGames.length} Results</span>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {games.map((game, i) => (
+            {visibleGames.map((game, i) => (
               <motion.div
                 key={game.id}
                 initial={{ opacity: 0, scale: 0.9 }}
