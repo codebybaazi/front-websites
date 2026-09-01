@@ -6,6 +6,14 @@ import { useState, useEffect } from 'react'
 
 import { z } from 'zod'
 import { AIOverview } from '@/components/AIOverview'
+import { waLink } from '@/lib/whatsapp'
+import lightningRoulette from '@/assets/casino/lightning-roulette.jpg'
+import bookOfDead from '@/assets/casino/book-of-dead.jpg'
+import blackjackVip from '@/assets/casino/blackjack-vip.jpg'
+import starburst from '@/assets/casino/starburst.jpg'
+import crazyTime from '@/assets/casino/crazy-time.jpg'
+import megaMoolah from '@/assets/casino/mega-moolah.jpg'
+import casinoBanner from '@/assets/casino/casino-banner.jpg'
 import { FAQSection } from '@/components/FAQSection'
 
 
@@ -29,13 +37,21 @@ const categories = [
   { name: 'Popular', icon: Trophy },
 ]
 
+const winners = [
+  { id: 1, amount: 42750, game: 'Lightning Roulette' },
+  { id: 2, amount: 18900, game: 'Book of Dead' },
+  { id: 3, amount: 65400, game: 'Crazy Time' },
+  { id: 4, amount: 27300, game: 'Blackjack VIP' },
+  { id: 5, amount: 51200, game: 'Mega Moolah' },
+]
+
 const games = [
-  { id: 1, name: 'Lightning Roulette', provider: 'Evolution', image: 'https://images.unsplash.com/photo-1596838132731-dd9fd7a8c44c?q=80&w=800&auto=format&fit=crop', category: 'Live Casino', isHot: true },
-  { id: 2, name: 'Book of Dead', provider: 'Play\'n GO', image: 'https://images.unsplash.com/photo-1605870445919-838d190e8e1b?q=80&w=800&auto=format&fit=crop', category: 'Slots', isHot: false },
-  { id: 3, name: 'Blackjack VIP', provider: 'Pragmatic Play', image: 'https://images.unsplash.com/photo-1518893063934-f7142c29c1c1?q=80&w=800&auto=format&fit=crop', category: 'Live Casino', isHot: true },
-  { id: 4, name: 'Starburst', provider: 'NetEnt', image: 'https://images.unsplash.com/photo-1614028674026-a65e31bfd27c?q=80&w=800&auto=format&fit=crop', category: 'Slots', isHot: false },
-  { id: 5, name: 'Crazy Time', provider: 'Evolution', image: 'https://images.unsplash.com/photo-1596838132731-dd9fd7a8c44c?q=80&w=800&auto=format&fit=crop', category: 'Live Casino', isHot: true },
-  { id: 6, name: 'Mega Moolah', provider: 'Microgaming', image: 'https://images.unsplash.com/photo-1533073526757-2c8ca1dfbdff?q=80&w=800&auto=format&fit=crop', category: 'Slots', isHot: true },
+  { id: 1, name: 'Lightning Roulette', provider: 'Evolution', image: lightningRoulette, category: 'Live Casino', isHot: true },
+  { id: 2, name: 'Book of Dead', provider: 'Play\'n GO', image: bookOfDead, category: 'Slots', isHot: false },
+  { id: 3, name: 'Blackjack VIP', provider: 'Pragmatic Play', image: blackjackVip, category: 'Live Casino', isHot: true },
+  { id: 4, name: 'Starburst', provider: 'NetEnt', image: starburst, category: 'Slots', isHot: false },
+  { id: 5, name: 'Crazy Time', provider: 'Evolution', image: crazyTime, category: 'Live Casino', isHot: true },
+  { id: 6, name: 'Mega Moolah', provider: 'Microgaming', image: megaMoolah, category: 'Slots', isHot: true },
 ]
 
 function CasinoPage() {
@@ -115,7 +131,7 @@ function CasinoPage() {
         {/* Banner Section */}
         <div className="relative h-64 md:h-80 rounded-3xl overflow-hidden mb-12 group">
           <img 
-            src="https://images.unsplash.com/photo-1596838132731-dd9fd7a8c44c?q=80&w=2000&auto=format&fit=crop" 
+            src={casinoBanner} 
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             alt="Casino Banner"
           />
@@ -173,10 +189,21 @@ function CasinoPage() {
             ))}
           </div>
 
-          <div className="pt-12 text-center">
-            <button className="px-12 py-4 bg-card border border-border rounded-xl font-black text-sm hover:bg-accent transition-all uppercase tracking-widest">
-              Load More Games
-            </button>
+          <div className="pt-12 flex flex-col items-center gap-4 text-center">
+            <h4 className="text-2xl md:text-3xl font-black italic uppercase tracking-tighter">
+              Ready to play? <span className="text-primary not-italic">Get your Fairplay ID</span>
+            </h4>
+            <p className="text-sm text-muted-foreground max-w-md">
+              One ID unlocks every live table, slot and cricket market. Setup takes a couple of minutes on WhatsApp.
+            </p>
+            <a
+              href={waLink('Hi Fairplay, I want a casino ID to play live tables')}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-3 px-10 py-4 bg-primary text-primary-foreground rounded-xl font-black text-sm uppercase tracking-widest shadow-xl hover:shadow-[0_0_25px_rgba(255,100,0,0.45)] hover:scale-[1.03] transition-all"
+            >
+              <PlayCircle className="w-5 h-5" /> Get your casino ID on WhatsApp
+            </a>
           </div>
         </div>
       </main>
@@ -190,11 +217,11 @@ function CasinoPage() {
           </div>
           <div className="flex-1 overflow-hidden relative">
             <div className="flex gap-12 animate-marquee whitespace-nowrap">
-              {[1,2,3,4,5].map(i => (
-                <div key={i} className="flex items-center gap-3 text-xs font-bold">
-                  <span className="text-muted-foreground">User****{i}29</span>
-                  <span className="text-green-500">₹{Math.floor(Math.random() * 50000)}</span>
-                  <span className="text-muted-foreground opacity-50 italic">in Book of Dead</span>
+              {winners.map((w) => (
+                <div key={w.id} className="flex items-center gap-3 text-xs font-bold">
+                  <span className="text-muted-foreground">User****{w.id}29</span>
+                  <span className="text-green-500">₹{w.amount.toLocaleString('en-IN')}</span>
+                  <span className="text-muted-foreground opacity-50 italic">in {w.game}</span>
                 </div>
               ))}
             </div>
