@@ -3,8 +3,12 @@ import { pageHeadFor } from '@/utils/page-seo';
 import { motion } from 'framer-motion';
 import { 
   Search, 
-  ChevronRight, 
   TrendingUp,
+  ArrowRight,
+  Calendar,
+  Clock,
+  Sparkles,
+  ChevronRight,
 } from 'lucide-react';
 import { useState, useMemo } from 'react';
 import { parse, compareDesc } from 'date-fns';
@@ -13,7 +17,6 @@ import { AIOverview } from '@/components/AIOverview';
 import { FAQSection } from '@/components/FAQSection';
 import { BlogPostList } from '@/components/blog/BlogPostList';
 import { toBlogPostState } from '@/components/blog/blog-post-context';
-
 
 export const Route = createFileRoute('/blog')({
   component: BlogPage,
@@ -45,7 +48,7 @@ function BlogPage() {
 
   const featuredPost = sortedArticles[0];
   const trendingPosts = useMemo(
-    () => sortedArticles.slice(1, 4).map(toBlogPostState),
+    () => sortedArticles.slice(1, 7).map(toBlogPostState),
     [sortedArticles],
   );
   const gridPosts = useMemo(
@@ -61,8 +64,8 @@ function BlogPage() {
         <div className="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] bg-primary/5 rounded-full blur-[130px] opacity-30" />
       </div>
 
-      {/* Hero Section */}
-      <section className="relative pt-40 pb-20 border-b border-white/5 bg-gradient-to-b from-white/[0.02] to-transparent">
+      {/* Hero Section - Redesigned without sidebar */}
+      <section className="relative pt-32 pb-20 border-b border-white/5 bg-gradient-to-b from-white/[0.02] to-transparent">
         <div className="container max-w-7xl mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <motion.div
@@ -92,138 +95,184 @@ function BlogPage() {
               transition={{ delay: 0.2 }}
               className="text-xl text-white/40 leading-relaxed max-w-2xl mx-auto mb-12 font-medium"
             >
-              How to get a Fairplay ID, fund the wallet with UPI, and bet cricket, football, tennis and live casino — written for Indian players in 2026.
+              How to get a Fairplay ID, fund the wallet with UPI, and bet cricket, football, tennis and live casino.
             </motion.p>
+
+            {/* Search Bar - Centered */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25 }}
+              className="max-w-2xl mx-auto mb-12"
+            >
+              <div className="relative group">
+                <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-white/30 group-focus-within:text-primary transition-colors" />
+                <input 
+                  type="text"
+                  placeholder="Search guides..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full bg-white/5 border border-white/8 rounded-2xl py-5 pl-16 pr-8 text-white placeholder:text-white/25 focus:outline-none focus:border-primary/50 focus:bg-white/[0.08] transition-all font-medium text-lg"
+                />
+              </div>
+            </motion.div>
+
+            {/* Category Pills - Horizontal */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="flex flex-wrap justify-center gap-3"
+            >
+              {categories.map((cat, index) => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+                    activeCategory === cat 
+                    ? 'bg-primary text-white shadow-lg shadow-primary/25 scale-105' 
+                    : 'bg-white/5 text-white/60 hover:bg-white/10 hover:text-white hover:scale-102'
+                  }`}
+                >
+                  {cat}
+                  {activeCategory === cat && (
+                    <span className="ml-2 text-xs opacity-70">{filteredArticles.filter(a => cat === 'All' || a.category === cat).length}</span>
+                  )}
+                </button>
+              ))}
+            </motion.div>
           </div>
 
-          <div className="max-w-5xl mx-auto mb-12">
-            <AIOverview 
-              title="Fairplay blog — what you will find"
-              content="The Fairplay blog is a searchable help centre for cricket IDs, IPL and T20 markets, football and tennis books, live casino tables, deposits, withdrawals and login fixes. Guides are updated through 2026 so market names and settlement rules match what you see on the exchange."
-            />
-          </div>
-
-          {featuredPost ? <BlogPostList.Featured post={toBlogPostState(featuredPost)} /> : null}
+          {featuredPost && (
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <BlogPostList.Featured post={toBlogPostState(featuredPost)} />
+            </motion.div>
+          )}
         </div>
       </section>
 
-      {/* Main Content Area */}
-      <main className="container max-w-7xl mx-auto px-4 py-32">
-        <div className="grid lg:grid-cols-12 gap-16">
-          {/* Sidebar / Filters */}
-          <aside className="lg:col-span-3 space-y-12">
-            <div className="sticky top-32 space-y-12">
-              {/* Search */}
-              <div className="relative group">
-                <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-white/20 group-focus-within:text-primary transition-colors" />
-                <input 
-                  type="text"
-                  placeholder="Search ID, UPI, IPL..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full bg-white/5 border border-white/5 rounded-xl py-6 pl-16 pr-8 text-white placeholder:text-white/20 focus:outline-none focus:border-primary/50 focus:bg-white/[0.08] transition-all font-bold"
-                />
-              </div>
-
-              {/* Categories */}
-              <div>
-                <h3 className="text-[10px] font-bold uppercase tracking-widest text-white/30 mb-8 px-2">
-                  Topics
-                </h3>
-                <div className="flex flex-col gap-2">
-                  {categories.map((cat) => (
-                    <button
-                      key={cat}
-                      onClick={() => setActiveCategory(cat)}
-                      className={`flex items-center justify-between px-6 py-4 rounded-xl text-xs font-bold tracking-tight uppercase transition-all ${
-                        activeCategory === cat 
-                        ? 'bg-primary text-white shadow-lg shadow-primary/20' 
-                        : 'bg-white/5 text-white/40 hover:bg-white/10 hover:text-white'
-                      }`}
-                    >
-                      {cat}
-                      {activeCategory === cat && <ChevronRight className="w-4 h-4" />}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Trending Sidebar */}
-              <div className="p-8 rounded-xl bg-gradient-to-br from-primary/10 to-transparent border border-primary/20">
-                <TrendingUp className="w-8 h-8 text-primary mb-6" />
-                <h3 className="text-xl font-bold tracking-tight mb-6">Trending now</h3>
-                <BlogPostList.Trending posts={trendingPosts} />
-              </div>
-            </div>
-          </aside>
-
-          {/* Grid Content */}
-          <div className="lg:col-span-9">
-            <div className="flex items-center justify-between mb-12">
-              <h2 className="text-2xl font-bold tracking-tight">
-                {activeCategory === 'All' ? 'Latest guides' : `${activeCategory} guides`}
-                <span className="ml-4 text-primary text-sm not-italic opacity-50 font-bold">{filteredArticles.length} GUIDES</span>
-              </h2>
-            </div>
-
-            <BlogPostList.Grid posts={gridPosts} />
-
-            {filteredArticles.length === 0 ? <BlogPostList.Empty /> : null}
+      {/* Trending Section - Horizontal Scroll */}
+      <section className="py-16 border-b border-white/5 overflow-hidden">
+        <div className="container max-w-7xl mx-auto px-4">
+          <div className="flex items-center gap-3 mb-8">
+            <TrendingUp className="w-5 h-5 text-primary" />
+            <h2 className="text-lg font-bold tracking-tight">Trending now</h2>
+            <span className="text-xs text-white/40 ml-auto">Scroll to explore</span>
+          </div>
+          <div className="flex gap-5 overflow-x-auto pb-4 -mx-4 px-4 custom-scrollbar">
+            {trendingPosts.map((post, index) => (
+              <motion.div
+                key={post.slug}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 * index }}
+                className="flex-shrink-0 w-72"
+              >
+                <Link to="/posts/$slug" params={{ slug: post.slug }} className="group block">
+                  <div className="relative aspect-[16/10] rounded-xl overflow-hidden mb-3">
+                    {post.bannerSrc ? (
+                      <img 
+                        src={post.bannerSrc} 
+                        alt={post.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-primary/20 to-flame/20" />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                    <span className="absolute top-3 left-3 bg-primary/90 text-white text-[10px] font-bold px-2 py-1 rounded">
+                      0{index + 1}
+                    </span>
+                    <span className="absolute bottom-3 left-3 right-3">
+                      <span className="text-xs text-white/70 font-medium">{post.category}</span>
+                    </span>
+                  </div>
+                  <h3 className="font-bold text-sm leading-tight line-clamp-2 group-hover:text-primary transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-xs text-white/40 mt-1">{post.date}</p>
+                </Link>
+              </motion.div>
+            ))}
           </div>
         </div>
+      </section>
+
+      {/* AI Overview */}
+      <section className="py-12 container max-w-7xl mx-auto px-4">
+        <AIOverview 
+          title="Fairplay blog — what you will find"
+          content="The Fairplay blog is a searchable help centre for cricket IDs, IPL and T20 markets, football and tennis books, live casino tables, deposits, withdrawals and login fixes. Guides are updated through 2026 so market names and settlement rules match what you see on the exchange."
+        />
+      </section>
+
+      {/* Main Content - Grid without Sidebar */}
+      <main className="container max-w-7xl mx-auto px-4 py-16">
+        <div className="flex items-center justify-between mb-12">
+          <h2 className="text-2xl font-bold tracking-tight">
+            {activeCategory === 'All' ? 'Latest guides' : `${activeCategory} guides`}
+            <span className="ml-4 text-primary text-sm not-italic opacity-50 font-bold">{filteredArticles.length} GUIDES</span>
+          </h2>
+        </div>
+
+        <BlogPostList.Grid posts={gridPosts} />
+
+        {filteredArticles.length === 0 ? <BlogPostList.Empty /> : null}
       </main>
 
       {/* Newsletter Footer */}
-      <section className="container max-w-7xl mx-auto px-4 pb-32">
-        <div className="relative p-12 md:p-24 bg-primary rounded-xl text-black overflow-hidden group">
-          <div className="absolute inset-0 bg-white/10 scale-0 group-hover:scale-100 transition-transform duration-1000 rounded-xl" />
-          <div className="relative z-10 grid lg:grid-cols-2 gap-20 items-center">
-            <div>
-              <h2 className="text-5xl md:text-7xl font-bold tracking-tight leading-[0.85] mb-8">
-                Fixture notes <br />
-                <span className="text-white">on WhatsApp.</span>
-              </h2>
-              <p className="text-xl font-bold tracking-tight opacity-70 max-w-md">
-                IDs and UPI still go through the published WhatsApp. This list is for schedule pointers, not deposits.
-              </p>
+      <section className="container max-w-7xl mx-auto px-4 pb-16">
+        <div className="relative p-12 md:p-20 bg-primary rounded-2xl text-black overflow-hidden group">
+          <div className="absolute inset-0 bg-white/10 scale-0 group-hover:scale-100 transition-transform duration-1000 rounded-2xl" />
+          <div className="relative z-10 text-center max-w-2xl mx-auto">
+            <Sparkles className="w-12 h-12 text-black/40 mx-auto mb-6" />
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-[0.9] mb-6">
+              Fixture notes <br />
+              <span className="text-white">on WhatsApp.</span>
+            </h2>
+            <p className="text-lg font-medium opacity-60 mb-10">
+              IDs and UPI still go through the published WhatsApp. This list is for schedule pointers, not deposits.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input 
+                type="email" 
+                placeholder="you@email.com" 
+                className="flex-1 bg-black/10 border-2 border-black/20 rounded-xl px-6 py-4 placeholder:text-black/30 text-black font-medium focus:outline-none focus:border-black/50 transition-all"
+              />
+              <button className="bg-black text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-black transition-all active:scale-95 shadow-xl whitespace-nowrap">
+                Subscribe
+              </button>
             </div>
-            <div className="flex flex-col gap-6">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <input 
-                  type="email" 
-                  placeholder="you@email.com" 
-                  className="flex-1 bg-black/10 border-2 border-black/20 rounded-xl px-8 py-6 placeholder:text-black/30 text-black font-bold tracking-tight focus:outline-none focus:border-black/50 transition-all"
-                />
-                <button className="bg-black text-white px-12 py-6 rounded-xl font-bold tracking-tight hover:bg-white hover:text-black transition-all active:scale-95 shadow-2xl">
-                  Subscribe
-                </button>
-              </div>
-              <p className="text-[10px] font-bold uppercase tracking-widest opacity-40 text-center sm:text-left">
-                No spam. Cricket desk notes only.
-              </p>
-            </div>
+            <p className="text-[10px] font-bold uppercase tracking-widest opacity-30 mt-4">
+              No spam. Cricket desk notes only.
+            </p>
           </div>
         </div>
       </section>
     
       {/* Blog SEO Quick Links */}
-      <section className="py-24 px-4 bg-primary/5 border-t border-white/5">
+      <section className="py-20 px-4 bg-primary/5 border-t border-white/5">
         <div className="container max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">Quick links</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { title: "Betting Guides", href: "/blog", category: "Guide" },
-              { title: "IPL Live Updates", href: "/ipl-betting", category: "Events" },
-              { title: "Casino Strategy", href: "/casino", category: "Strategy" },
-              { title: "Login Help", href: "/support", category: "Support" },
+              { title: "Betting Guides", href: "/blog", category: "Guide", icon: "📖" },
+              { title: "IPL Live Updates", href: "/ipl-betting", category: "Events", icon: "🏏" },
+              { title: "Casino Strategy", href: "/casino", category: "Strategy", icon: "🎰" },
+              { title: "Login Help", href: "/support", category: "Support", icon: "🔐" },
             ].map((link) => (
               <Link 
                 key={link.title} 
                 to={link.href}
-                className="glass-card p-8 rounded-xl border border-white/10 hover:border-primary transition-all text-center group"
+                className="glass-card p-8 rounded-xl border border-white/10 hover:border-primary/40 transition-all text-center group"
               >
+                <span className="block text-3xl mb-3">{link.icon}</span>
                 <span className="block text-primary text-[10px] font-bold uppercase tracking-widest mb-2">{link.category}</span>
-                <span className="text-xl font-bold tracking-tight group-hover:text-white transition-colors">{link.title}</span>
+                <span className="text-lg font-bold tracking-tight group-hover:text-white transition-colors">{link.title}</span>
               </Link>
             ))}
           </div>
