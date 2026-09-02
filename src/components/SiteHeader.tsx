@@ -183,17 +183,24 @@ export function SiteHeader() {
           <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
             <Link
               to="/login-guide"
-              className="hidden items-center rounded-md border border-white/12 px-3 py-2 font-display text-[12px] font-semibold text-foreground/80 transition-colors hover:border-primary/50 hover:text-foreground sm:inline-flex"
+              className="group relative hidden items-center overflow-hidden rounded-md border border-white/15 bg-white/[0.03] px-4 py-2 font-display text-[12px] font-semibold text-foreground/90 transition-all duration-300 hover:border-primary/40 hover:bg-white/[0.08] hover:text-foreground hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] sm:inline-flex"
             >
-              Sign in
+              <span className="relative z-10 flex items-center gap-1.5">
+                <svg className="h-3.5 w-3.5 opacity-70 transition-opacity group-hover:opacity-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                Sign in
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </Link>
             <Link
               to="/fairplay-id"
-              className="inline-flex items-center gap-1 rounded-md bg-primary px-2.5 py-2 font-display text-[11.5px] font-bold text-primary-foreground transition-colors hover:bg-flame hover:text-flame-foreground sm:gap-1.5 sm:px-4 sm:text-[12.5px]"
+              className="group relative inline-flex items-center overflow-hidden rounded-md bg-gradient-to-r from-primary to-emerald-400 px-3 py-2 font-display text-[11.5px] font-bold text-primary-foreground shadow-[0_4px_14px_rgba(47,185,74,0.35)] transition-all duration-300 hover:from-emerald-400 hover:to-primary hover:shadow-[0_6px_25px_rgba(47,185,74,0.55)] hover:scale-[1.02] active:scale-[0.98] sm:gap-1.5 sm:px-5 sm:text-[12.5px]"
             >
-              <span className="hidden min-[380px]:inline">Open an ID</span>
-              <span className="min-[380px]:hidden">Open ID</span>
-              <ArrowUpRight className="hidden h-3.5 w-3.5 stroke-[2.5] min-[380px]:block" />
+              <span className="relative z-10 flex items-center gap-1.5">
+                <span className="hidden min-[380px]:inline">Open an ID</span>
+                <span className="min-[380px]:hidden">Open ID</span>
+                <ArrowUpRight className="h-3.5 w-3.5 stroke-[2.5] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 min-[380px]:block" />
+              </span>
+              <div className="absolute -inset-px rounded-md bg-gradient-to-r from-white/20 via-white/10 to-white/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </Link>
             <button
               type="button"
