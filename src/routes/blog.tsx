@@ -226,9 +226,9 @@ function BlogPage() {
             {/* Content */}
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-white/90">What our desk covers</h3>
+                <h3 className="text-lg font-semibold mb-4 text-white/90">What this desk covers</h3>
                 <p className="text-white/50 leading-relaxed mb-6">
-                  The Fairplay blog is your searchable cricket desk — a living guide for IPL markets, football odds, tennis bookie tips, live casino tables and wallet operations. Every guide is refreshed through 2026 so the steps match what you see on the exchange.
+                  Your searchable cricket desk — a live guide for IPL markets, football odds, tennis tips, live casino tables, and wallet operations. Every guide stays current through 2026 so the steps match what you see on the exchange.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   {['Cricket ID', 'IPL 2026', 'Live Casino', 'UPI Wallet', 'Football'].map((tag) => (
@@ -240,12 +240,12 @@ function BlogPage() {
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-white/90">Why our guides work</h3>
+                <h3 className="text-lg font-semibold mb-4 text-white/90">Why our guides stand out</h3>
                 <ul className="space-y-4">
                   {[
-                    { icon: '01', text: 'Step-by-step instructions written for real players' },
-                    { icon: '02', text: 'Updated when odds formats or markets change' },
-                    { icon: '03', text: 'No jargon — plain language from the desk' },
+                    { icon: '01', text: 'Step-by-step instructions built for real players, not copy' },
+                    { icon: '02', text: 'Updated whenever odds formats or markets shift' },
+                    { icon: '03', text: 'Plain language — no jargon, no fluff' },
                   ].map((item) => (
                     <li key={item.icon} className="flex items-start gap-4">
                       <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center text-primary text-sm font-bold">
@@ -261,7 +261,7 @@ function BlogPage() {
             {/* Bottom CTA */}
             <div className="mt-10 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-6">
               <div>
-                <p className="text-white/80 font-semibold">Need help getting started?</p>
+                <p className="text-white/80 font-semibold">Need a hand getting started?</p>
                 <p className="text-white/40 text-sm mt-1">WhatsApp our desk for a verified Fairplay ID</p>
               </div>
               <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-flame text-white font-bold hover:shadow-lg hover:shadow-primary/25 transition-all active:scale-95">
