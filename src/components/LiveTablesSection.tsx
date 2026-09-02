@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Spade, Dice5 } from "lucide-react";
+import { ArrowRight, Spade, Dice5, Crown } from "lucide-react";
 import { waLink } from "@/lib/whatsapp";
 
 import teenPattiImg from "@/assets/betting/teen-patti.jpg";
@@ -159,6 +159,114 @@ export function LiveTablesSection() {
             Get an ID on WhatsApp <ArrowRight className="h-4 w-4" />
           </a>
         </div>
+
+        {/* Partner Books Section */}
+        <section className="mt-24">
+          <div className="mb-10 flex items-center gap-3">
+            <span className="text-[11px] font-semibold tabular-nums text-flame">03</span>
+            <span className="h-[2px] w-8 brand-rule" />
+            <span className="kicker">Partner books</span>
+          </div>
+
+          {/* Animated Marquee Header */}
+          <div className="relative mb-10 overflow-hidden rounded-xl border border-white/8 bg-ink-deep/80 py-6">
+            <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-ink-deep to-transparent z-20 pointer-events-none"/>
+            <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-ink-deep to-transparent z-20 pointer-events-none"/>
+            <div className="flex py-2 relative z-10">
+              <motion.div 
+                animate={{ x: [0, -1600] }} 
+                transition={{ duration: 32, repeat: Infinity, ease: "linear" }}
+                className="flex items-center gap-8 pr-8"
+              >
+                {[...partners, ...partners, ...partners, ...partners].map((partner, index) => (
+                  <div key={`${partner.name}-${index}`} className="flex-shrink-0 w-52 h-36 flex flex-col items-center justify-center bg-card/70 border border-white/8 rounded-lg p-4 hover:border-primary/40 transition-all hover:bg-card group cursor-pointer">
+                    <div className="relative w-full h-16 flex items-center justify-center mb-2">
+                      <img src={partner.logo} alt={partner.name} className="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    <span className="text-muted-foreground/70 text-[10px] font-semibold uppercase tracking-[0.16em] group-hover:text-primary transition-colors">
+                      {partner.url}
+                    </span>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Premium Partner Cards Grid */}
+          <div className="mb-8">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-bold tracking-tight flex items-center gap-3">
+                <Crown className="h-6 w-6 text-flame" />
+                Partner exchanges
+              </h3>
+              <a href={waLink("Hi Fairplay — I want to open a verified Fairplay ID.")} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-flame transition-colors">
+                Ask for a verified ID <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+
+            {/* Asymmetric Premium Grid */}
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+              {partners.slice(0, 4).map((partner, i) => (
+                <motion.div
+                  key={partner.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                  className={`group relative overflow-hidden rounded-xl border border-white/8 bg-card/60 backdrop-blur-sm p-5 hover:bg-card/90 hover:border-primary/50 transition-all duration-300 cursor-pointer ${i === 0 ? 'sm:col-span-2 sm:row-span-2' : ''}`}
+                >
+                  {/* Glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-flame/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  {/* Animated top border */}
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-flame to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                  
+                  <div className="relative z-10">
+                    <div className={`relative w-full ${i === 0 ? 'h-32 sm:h-44' : 'h-20 sm:h-24'} flex items-center justify-center mb-3`}>
+                      <img src={partner.logo} alt={partner.name} className="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105" />
+                    </div>
+                    <div className="text-center">
+                      <h4 className="text-sm font-bold tracking-tight group-hover:text-primary transition-colors">{partner.name}</h4>
+                      <p className="text-[10px] text-muted-foreground/70 mt-1 uppercase tracking-wider group-hover:text-flame transition-colors">{partner.url}</p>
+                    </div>
+                    {i === 0 && (
+                      <div className="mt-3 pt-3 border-t border-white/5">
+                        <div className="flex items-center justify-center gap-1.5 text-[10px] font-semibold text-flame">
+                          <span className="relative flex h-1.5 w-1.5">
+                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-flame opacity-70" />
+                            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-flame" />
+                          </span>
+                          Featured Partner
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Second Row - More Partners */}
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-3">
+            {partners.slice(4).map((partner, i) => (
+              <motion.div
+                key={partner.name}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.06 }}
+                className="group relative overflow-hidden rounded-lg border border-white/8 bg-card/40 backdrop-blur-sm p-3 hover:bg-card/80 hover:border-primary/40 transition-all duration-300 cursor-pointer"
+              >
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative z-10 flex flex-col items-center">
+                  <div className="relative w-full h-12 sm:h-14 flex items-center justify-center mb-2">
+                    <img src={partner.logo} alt={partner.name} className="max-w-full max-h-full object-contain opacity-60 group-hover:opacity-100 transition-all duration-300" />
+                  </div>
+                  <p className="text-[9px] text-muted-foreground/60 uppercase tracking-wider text-center group-hover:text-primary transition-colors truncate w-full">{partner.url}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
       </div>
     </section>
   );
