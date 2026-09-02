@@ -1,12 +1,12 @@
-# Fairplay Starter
+# Fair Play Hub (00)
 
-create blank project named fairplayin
+Create new project named fairplay
 
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/8366f245-5c4d-44bf-9221-01ba7f68d61c).
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/9eb6aca8-ebd6-4560-88fb-caa1afa00e39).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
 - **Stay in sync**: every change made in Lovable is committed straight to this repository.

@@ -10,33 +10,845 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as R11xplayRouteImport } from './routes/11xplay'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AccountIssuesRouteImport } from './routes/account-issues'
+import { Route as AllLinksRouteImport } from './routes/all-links'
+import { Route as AppRouteImport } from './routes/app'
+import { Route as BasketballBettingRouteImport } from './routes/basketball-betting'
+import { Route as BettingRouteImport } from './routes/betting'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as BonusRouteImport } from './routes/bonus'
+import { Route as BonusIssuesRouteImport } from './routes/bonus-issues'
+import { Route as CasinoRouteImport } from './routes/casino'
+import { Route as ChampionsTrophyRouteImport } from './routes/champions-trophy'
+import { Route as ContactUsRouteImport } from './routes/contact-us'
+import { Route as Cricbet99RouteImport } from './routes/cricbet99'
+import { Route as DepositGuideRouteImport } from './routes/deposit-guide'
+import { Route as DepositIssuesRouteImport } from './routes/deposit-issues'
+import { Route as DisclaimerRouteImport } from './routes/disclaimer'
+import { Route as EsportsBettingRouteImport } from './routes/esports-betting'
+import { Route as FairdealRouteImport } from './routes/fairdeal'
+import { Route as FairplayIdRouteImport } from './routes/fairplay-id'
+import { Route as FairplayVs11xplayRouteImport } from './routes/fairplay-vs-11xplay'
+import { Route as FairplayVsDiamondExchangeRouteImport } from './routes/fairplay-vs-diamond-exchange'
+import { Route as FairplayVsFairdealRouteImport } from './routes/fairplay-vs-fairdeal'
+import { Route as FairplayVsGold365RouteImport } from './routes/fairplay-vs-gold365'
+import { Route as FairplayVsLaser247RouteImport } from './routes/fairplay-vs-laser247'
+import { Route as FairplayVsLotus365RouteImport } from './routes/fairplay-vs-lotus365'
+import { Route as FairplayVsMahavirBookRouteImport } from './routes/fairplay-vs-mahavir-book'
+import { Route as FairplayVsReddybookRouteImport } from './routes/fairplay-vs-reddybook'
+import { Route as FairplayVsSkyexchange247RouteImport } from './routes/fairplay-vs-skyexchange247'
+import { Route as Gold365RouteImport } from './routes/gold365'
+import { Route as HorseRacingRouteImport } from './routes/horse-racing'
+import { Route as IplBettingRouteImport } from './routes/ipl-betting'
+import { Route as IsFairplayLegalRouteImport } from './routes/is-fairplay-legal'
+import { Route as IsFairplayRealRouteImport } from './routes/is-fairplay-real'
+import { Route as IsFairplaySafeRouteImport } from './routes/is-fairplay-safe'
+import { Route as KabaddiBettingRouteImport } from './routes/kabaddi-betting'
+import { Route as KycVerificationPolicyRouteImport } from './routes/kyc-verification-policy'
+import { Route as Laser247RouteImport } from './routes/laser247'
+import { Route as LegalStatusRouteImport } from './routes/legal-status'
+import { Route as LoginGuideRouteImport } from './routes/login-guide'
+import { Route as LoginIssuesRouteImport } from './routes/login-issues'
+import { Route as MatchesRouteImport } from './routes/matches'
+import { Route as PlatformsRouteImport } from './routes/platforms'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as RefundPolicyRouteImport } from './routes/refund-policy'
+import { Route as RegisterGuideRouteImport } from './routes/register-guide'
+import { Route as ResponsibleGamingRouteImport } from './routes/responsible-gaming'
+import { Route as RulesRegulationsRouteImport } from './routes/rules-regulations'
+import { Route as ScheduleRouteImport } from './routes/schedule'
+import { Route as SecuritySafetyRouteImport } from './routes/security-safety'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as SupportRouteImport } from './routes/support'
+import { Route as T20WorldCupRouteImport } from './routes/t20-world-cup'
+import { Route as TelegramChannelRouteImport } from './routes/telegram-channel'
+import { Route as TermsConditionsRouteImport } from './routes/terms-conditions'
+import { Route as WhatIsFairplayRouteImport } from './routes/what-is-fairplay'
+import { Route as WhatsappSupportRouteImport } from './routes/whatsapp-support'
+import { Route as WithdrawalGuideRouteImport } from './routes/withdrawal-guide'
+import { Route as WithdrawalIssuesRouteImport } from './routes/withdrawal-issues'
+import { Route as WplBettingRouteImport } from './routes/wpl-betting'
+import { Route as MatchSlugRouteImport } from './routes/match.$slug'
+import { Route as PostsSlugRouteImport } from './routes/posts.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const R11xplayRoute = R11xplayRouteImport.update({
+  id: '/11xplay',
+  path: '/11xplay',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccountIssuesRoute = AccountIssuesRouteImport.update({
+  id: '/account-issues',
+  path: '/account-issues',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AllLinksRoute = AllLinksRouteImport.update({
+  id: '/all-links',
+  path: '/all-links',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppRoute = AppRouteImport.update({
+  id: '/app',
+  path: '/app',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BasketballBettingRoute = BasketballBettingRouteImport.update({
+  id: '/basketball-betting',
+  path: '/basketball-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BettingRoute = BettingRouteImport.update({
+  id: '/betting',
+  path: '/betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BonusRoute = BonusRouteImport.update({
+  id: '/bonus',
+  path: '/bonus',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BonusIssuesRoute = BonusIssuesRouteImport.update({
+  id: '/bonus-issues',
+  path: '/bonus-issues',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CasinoRoute = CasinoRouteImport.update({
+  id: '/casino',
+  path: '/casino',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChampionsTrophyRoute = ChampionsTrophyRouteImport.update({
+  id: '/champions-trophy',
+  path: '/champions-trophy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactUsRoute = ContactUsRouteImport.update({
+  id: '/contact-us',
+  path: '/contact-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Cricbet99Route = Cricbet99RouteImport.update({
+  id: '/cricbet99',
+  path: '/cricbet99',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DepositGuideRoute = DepositGuideRouteImport.update({
+  id: '/deposit-guide',
+  path: '/deposit-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DepositIssuesRoute = DepositIssuesRouteImport.update({
+  id: '/deposit-issues',
+  path: '/deposit-issues',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DisclaimerRoute = DisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsportsBettingRoute = EsportsBettingRouteImport.update({
+  id: '/esports-betting',
+  path: '/esports-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FairdealRoute = FairdealRouteImport.update({
+  id: '/fairdeal',
+  path: '/fairdeal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FairplayIdRoute = FairplayIdRouteImport.update({
+  id: '/fairplay-id',
+  path: '/fairplay-id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FairplayVs11xplayRoute = FairplayVs11xplayRouteImport.update({
+  id: '/fairplay-vs-11xplay',
+  path: '/fairplay-vs-11xplay',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FairplayVsDiamondExchangeRoute =
+  FairplayVsDiamondExchangeRouteImport.update({
+    id: '/fairplay-vs-diamond-exchange',
+    path: '/fairplay-vs-diamond-exchange',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FairplayVsFairdealRoute = FairplayVsFairdealRouteImport.update({
+  id: '/fairplay-vs-fairdeal',
+  path: '/fairplay-vs-fairdeal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FairplayVsGold365Route = FairplayVsGold365RouteImport.update({
+  id: '/fairplay-vs-gold365',
+  path: '/fairplay-vs-gold365',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FairplayVsLaser247Route = FairplayVsLaser247RouteImport.update({
+  id: '/fairplay-vs-laser247',
+  path: '/fairplay-vs-laser247',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FairplayVsLotus365Route = FairplayVsLotus365RouteImport.update({
+  id: '/fairplay-vs-lotus365',
+  path: '/fairplay-vs-lotus365',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FairplayVsMahavirBookRoute = FairplayVsMahavirBookRouteImport.update({
+  id: '/fairplay-vs-mahavir-book',
+  path: '/fairplay-vs-mahavir-book',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FairplayVsReddybookRoute = FairplayVsReddybookRouteImport.update({
+  id: '/fairplay-vs-reddybook',
+  path: '/fairplay-vs-reddybook',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FairplayVsSkyexchange247Route =
+  FairplayVsSkyexchange247RouteImport.update({
+    id: '/fairplay-vs-skyexchange247',
+    path: '/fairplay-vs-skyexchange247',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Gold365Route = Gold365RouteImport.update({
+  id: '/gold365',
+  path: '/gold365',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HorseRacingRoute = HorseRacingRouteImport.update({
+  id: '/horse-racing',
+  path: '/horse-racing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IplBettingRoute = IplBettingRouteImport.update({
+  id: '/ipl-betting',
+  path: '/ipl-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IsFairplayLegalRoute = IsFairplayLegalRouteImport.update({
+  id: '/is-fairplay-legal',
+  path: '/is-fairplay-legal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IsFairplayRealRoute = IsFairplayRealRouteImport.update({
+  id: '/is-fairplay-real',
+  path: '/is-fairplay-real',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IsFairplaySafeRoute = IsFairplaySafeRouteImport.update({
+  id: '/is-fairplay-safe',
+  path: '/is-fairplay-safe',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KabaddiBettingRoute = KabaddiBettingRouteImport.update({
+  id: '/kabaddi-betting',
+  path: '/kabaddi-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KycVerificationPolicyRoute = KycVerificationPolicyRouteImport.update({
+  id: '/kyc-verification-policy',
+  path: '/kyc-verification-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Laser247Route = Laser247RouteImport.update({
+  id: '/laser247',
+  path: '/laser247',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalStatusRoute = LegalStatusRouteImport.update({
+  id: '/legal-status',
+  path: '/legal-status',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginGuideRoute = LoginGuideRouteImport.update({
+  id: '/login-guide',
+  path: '/login-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginIssuesRoute = LoginIssuesRouteImport.update({
+  id: '/login-issues',
+  path: '/login-issues',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MatchesRoute = MatchesRouteImport.update({
+  id: '/matches',
+  path: '/matches',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlatformsRoute = PlatformsRouteImport.update({
+  id: '/platforms',
+  path: '/platforms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RefundPolicyRoute = RefundPolicyRouteImport.update({
+  id: '/refund-policy',
+  path: '/refund-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegisterGuideRoute = RegisterGuideRouteImport.update({
+  id: '/register-guide',
+  path: '/register-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResponsibleGamingRoute = ResponsibleGamingRouteImport.update({
+  id: '/responsible-gaming',
+  path: '/responsible-gaming',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RulesRegulationsRoute = RulesRegulationsRouteImport.update({
+  id: '/rules-regulations',
+  path: '/rules-regulations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScheduleRoute = ScheduleRouteImport.update({
+  id: '/schedule',
+  path: '/schedule',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SecuritySafetyRoute = SecuritySafetyRouteImport.update({
+  id: '/security-safety',
+  path: '/security-safety',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SupportRoute = SupportRouteImport.update({
+  id: '/support',
+  path: '/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const T20WorldCupRoute = T20WorldCupRouteImport.update({
+  id: '/t20-world-cup',
+  path: '/t20-world-cup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TelegramChannelRoute = TelegramChannelRouteImport.update({
+  id: '/telegram-channel',
+  path: '/telegram-channel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsConditionsRoute = TermsConditionsRouteImport.update({
+  id: '/terms-conditions',
+  path: '/terms-conditions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhatIsFairplayRoute = WhatIsFairplayRouteImport.update({
+  id: '/what-is-fairplay',
+  path: '/what-is-fairplay',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhatsappSupportRoute = WhatsappSupportRouteImport.update({
+  id: '/whatsapp-support',
+  path: '/whatsapp-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WithdrawalGuideRoute = WithdrawalGuideRouteImport.update({
+  id: '/withdrawal-guide',
+  path: '/withdrawal-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WithdrawalIssuesRoute = WithdrawalIssuesRouteImport.update({
+  id: '/withdrawal-issues',
+  path: '/withdrawal-issues',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WplBettingRoute = WplBettingRouteImport.update({
+  id: '/wpl-betting',
+  path: '/wpl-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MatchSlugRoute = MatchSlugRouteImport.update({
+  id: '/match/$slug',
+  path: '/match/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PostsSlugRoute = PostsSlugRouteImport.update({
+  id: '/posts/$slug',
+  path: '/posts/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/11xplay': typeof R11xplayRoute
+  '/about': typeof AboutRoute
+  '/account-issues': typeof AccountIssuesRoute
+  '/all-links': typeof AllLinksRoute
+  '/app': typeof AppRoute
+  '/basketball-betting': typeof BasketballBettingRoute
+  '/betting': typeof BettingRoute
+  '/blog': typeof BlogRoute
+  '/bonus': typeof BonusRoute
+  '/bonus-issues': typeof BonusIssuesRoute
+  '/casino': typeof CasinoRoute
+  '/champions-trophy': typeof ChampionsTrophyRoute
+  '/contact-us': typeof ContactUsRoute
+  '/cricbet99': typeof Cricbet99Route
+  '/deposit-guide': typeof DepositGuideRoute
+  '/deposit-issues': typeof DepositIssuesRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/esports-betting': typeof EsportsBettingRoute
+  '/fairdeal': typeof FairdealRoute
+  '/fairplay-id': typeof FairplayIdRoute
+  '/fairplay-vs-11xplay': typeof FairplayVs11xplayRoute
+  '/fairplay-vs-diamond-exchange': typeof FairplayVsDiamondExchangeRoute
+  '/fairplay-vs-fairdeal': typeof FairplayVsFairdealRoute
+  '/fairplay-vs-gold365': typeof FairplayVsGold365Route
+  '/fairplay-vs-laser247': typeof FairplayVsLaser247Route
+  '/fairplay-vs-lotus365': typeof FairplayVsLotus365Route
+  '/fairplay-vs-mahavir-book': typeof FairplayVsMahavirBookRoute
+  '/fairplay-vs-reddybook': typeof FairplayVsReddybookRoute
+  '/fairplay-vs-skyexchange247': typeof FairplayVsSkyexchange247Route
+  '/gold365': typeof Gold365Route
+  '/horse-racing': typeof HorseRacingRoute
+  '/ipl-betting': typeof IplBettingRoute
+  '/is-fairplay-legal': typeof IsFairplayLegalRoute
+  '/is-fairplay-real': typeof IsFairplayRealRoute
+  '/is-fairplay-safe': typeof IsFairplaySafeRoute
+  '/kabaddi-betting': typeof KabaddiBettingRoute
+  '/kyc-verification-policy': typeof KycVerificationPolicyRoute
+  '/laser247': typeof Laser247Route
+  '/legal-status': typeof LegalStatusRoute
+  '/login-guide': typeof LoginGuideRoute
+  '/login-issues': typeof LoginIssuesRoute
+  '/matches': typeof MatchesRoute
+  '/platforms': typeof PlatformsRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/refund-policy': typeof RefundPolicyRoute
+  '/register-guide': typeof RegisterGuideRoute
+  '/responsible-gaming': typeof ResponsibleGamingRoute
+  '/rules-regulations': typeof RulesRegulationsRoute
+  '/schedule': typeof ScheduleRoute
+  '/security-safety': typeof SecuritySafetyRoute
+  '/services': typeof ServicesRoute
+  '/support': typeof SupportRoute
+  '/t20-world-cup': typeof T20WorldCupRoute
+  '/telegram-channel': typeof TelegramChannelRoute
+  '/terms-conditions': typeof TermsConditionsRoute
+  '/what-is-fairplay': typeof WhatIsFairplayRoute
+  '/whatsapp-support': typeof WhatsappSupportRoute
+  '/withdrawal-guide': typeof WithdrawalGuideRoute
+  '/withdrawal-issues': typeof WithdrawalIssuesRoute
+  '/wpl-betting': typeof WplBettingRoute
+  '/match/$slug': typeof MatchSlugRoute
+  '/posts/$slug': typeof PostsSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/11xplay': typeof R11xplayRoute
+  '/about': typeof AboutRoute
+  '/account-issues': typeof AccountIssuesRoute
+  '/all-links': typeof AllLinksRoute
+  '/app': typeof AppRoute
+  '/basketball-betting': typeof BasketballBettingRoute
+  '/betting': typeof BettingRoute
+  '/blog': typeof BlogRoute
+  '/bonus': typeof BonusRoute
+  '/bonus-issues': typeof BonusIssuesRoute
+  '/casino': typeof CasinoRoute
+  '/champions-trophy': typeof ChampionsTrophyRoute
+  '/contact-us': typeof ContactUsRoute
+  '/cricbet99': typeof Cricbet99Route
+  '/deposit-guide': typeof DepositGuideRoute
+  '/deposit-issues': typeof DepositIssuesRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/esports-betting': typeof EsportsBettingRoute
+  '/fairdeal': typeof FairdealRoute
+  '/fairplay-id': typeof FairplayIdRoute
+  '/fairplay-vs-11xplay': typeof FairplayVs11xplayRoute
+  '/fairplay-vs-diamond-exchange': typeof FairplayVsDiamondExchangeRoute
+  '/fairplay-vs-fairdeal': typeof FairplayVsFairdealRoute
+  '/fairplay-vs-gold365': typeof FairplayVsGold365Route
+  '/fairplay-vs-laser247': typeof FairplayVsLaser247Route
+  '/fairplay-vs-lotus365': typeof FairplayVsLotus365Route
+  '/fairplay-vs-mahavir-book': typeof FairplayVsMahavirBookRoute
+  '/fairplay-vs-reddybook': typeof FairplayVsReddybookRoute
+  '/fairplay-vs-skyexchange247': typeof FairplayVsSkyexchange247Route
+  '/gold365': typeof Gold365Route
+  '/horse-racing': typeof HorseRacingRoute
+  '/ipl-betting': typeof IplBettingRoute
+  '/is-fairplay-legal': typeof IsFairplayLegalRoute
+  '/is-fairplay-real': typeof IsFairplayRealRoute
+  '/is-fairplay-safe': typeof IsFairplaySafeRoute
+  '/kabaddi-betting': typeof KabaddiBettingRoute
+  '/kyc-verification-policy': typeof KycVerificationPolicyRoute
+  '/laser247': typeof Laser247Route
+  '/legal-status': typeof LegalStatusRoute
+  '/login-guide': typeof LoginGuideRoute
+  '/login-issues': typeof LoginIssuesRoute
+  '/matches': typeof MatchesRoute
+  '/platforms': typeof PlatformsRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/refund-policy': typeof RefundPolicyRoute
+  '/register-guide': typeof RegisterGuideRoute
+  '/responsible-gaming': typeof ResponsibleGamingRoute
+  '/rules-regulations': typeof RulesRegulationsRoute
+  '/schedule': typeof ScheduleRoute
+  '/security-safety': typeof SecuritySafetyRoute
+  '/services': typeof ServicesRoute
+  '/support': typeof SupportRoute
+  '/t20-world-cup': typeof T20WorldCupRoute
+  '/telegram-channel': typeof TelegramChannelRoute
+  '/terms-conditions': typeof TermsConditionsRoute
+  '/what-is-fairplay': typeof WhatIsFairplayRoute
+  '/whatsapp-support': typeof WhatsappSupportRoute
+  '/withdrawal-guide': typeof WithdrawalGuideRoute
+  '/withdrawal-issues': typeof WithdrawalIssuesRoute
+  '/wpl-betting': typeof WplBettingRoute
+  '/match/$slug': typeof MatchSlugRoute
+  '/posts/$slug': typeof PostsSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/11xplay': typeof R11xplayRoute
+  '/about': typeof AboutRoute
+  '/account-issues': typeof AccountIssuesRoute
+  '/all-links': typeof AllLinksRoute
+  '/app': typeof AppRoute
+  '/basketball-betting': typeof BasketballBettingRoute
+  '/betting': typeof BettingRoute
+  '/blog': typeof BlogRoute
+  '/bonus': typeof BonusRoute
+  '/bonus-issues': typeof BonusIssuesRoute
+  '/casino': typeof CasinoRoute
+  '/champions-trophy': typeof ChampionsTrophyRoute
+  '/contact-us': typeof ContactUsRoute
+  '/cricbet99': typeof Cricbet99Route
+  '/deposit-guide': typeof DepositGuideRoute
+  '/deposit-issues': typeof DepositIssuesRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/esports-betting': typeof EsportsBettingRoute
+  '/fairdeal': typeof FairdealRoute
+  '/fairplay-id': typeof FairplayIdRoute
+  '/fairplay-vs-11xplay': typeof FairplayVs11xplayRoute
+  '/fairplay-vs-diamond-exchange': typeof FairplayVsDiamondExchangeRoute
+  '/fairplay-vs-fairdeal': typeof FairplayVsFairdealRoute
+  '/fairplay-vs-gold365': typeof FairplayVsGold365Route
+  '/fairplay-vs-laser247': typeof FairplayVsLaser247Route
+  '/fairplay-vs-lotus365': typeof FairplayVsLotus365Route
+  '/fairplay-vs-mahavir-book': typeof FairplayVsMahavirBookRoute
+  '/fairplay-vs-reddybook': typeof FairplayVsReddybookRoute
+  '/fairplay-vs-skyexchange247': typeof FairplayVsSkyexchange247Route
+  '/gold365': typeof Gold365Route
+  '/horse-racing': typeof HorseRacingRoute
+  '/ipl-betting': typeof IplBettingRoute
+  '/is-fairplay-legal': typeof IsFairplayLegalRoute
+  '/is-fairplay-real': typeof IsFairplayRealRoute
+  '/is-fairplay-safe': typeof IsFairplaySafeRoute
+  '/kabaddi-betting': typeof KabaddiBettingRoute
+  '/kyc-verification-policy': typeof KycVerificationPolicyRoute
+  '/laser247': typeof Laser247Route
+  '/legal-status': typeof LegalStatusRoute
+  '/login-guide': typeof LoginGuideRoute
+  '/login-issues': typeof LoginIssuesRoute
+  '/matches': typeof MatchesRoute
+  '/platforms': typeof PlatformsRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/refund-policy': typeof RefundPolicyRoute
+  '/register-guide': typeof RegisterGuideRoute
+  '/responsible-gaming': typeof ResponsibleGamingRoute
+  '/rules-regulations': typeof RulesRegulationsRoute
+  '/schedule': typeof ScheduleRoute
+  '/security-safety': typeof SecuritySafetyRoute
+  '/services': typeof ServicesRoute
+  '/support': typeof SupportRoute
+  '/t20-world-cup': typeof T20WorldCupRoute
+  '/telegram-channel': typeof TelegramChannelRoute
+  '/terms-conditions': typeof TermsConditionsRoute
+  '/what-is-fairplay': typeof WhatIsFairplayRoute
+  '/whatsapp-support': typeof WhatsappSupportRoute
+  '/withdrawal-guide': typeof WithdrawalGuideRoute
+  '/withdrawal-issues': typeof WithdrawalIssuesRoute
+  '/wpl-betting': typeof WplBettingRoute
+  '/match/$slug': typeof MatchSlugRoute
+  '/posts/$slug': typeof PostsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/11xplay'
+    | '/about'
+    | '/account-issues'
+    | '/all-links'
+    | '/app'
+    | '/basketball-betting'
+    | '/betting'
+    | '/blog'
+    | '/bonus'
+    | '/bonus-issues'
+    | '/casino'
+    | '/champions-trophy'
+    | '/contact-us'
+    | '/cricbet99'
+    | '/deposit-guide'
+    | '/deposit-issues'
+    | '/disclaimer'
+    | '/esports-betting'
+    | '/fairdeal'
+    | '/fairplay-id'
+    | '/fairplay-vs-11xplay'
+    | '/fairplay-vs-diamond-exchange'
+    | '/fairplay-vs-fairdeal'
+    | '/fairplay-vs-gold365'
+    | '/fairplay-vs-laser247'
+    | '/fairplay-vs-lotus365'
+    | '/fairplay-vs-mahavir-book'
+    | '/fairplay-vs-reddybook'
+    | '/fairplay-vs-skyexchange247'
+    | '/gold365'
+    | '/horse-racing'
+    | '/ipl-betting'
+    | '/is-fairplay-legal'
+    | '/is-fairplay-real'
+    | '/is-fairplay-safe'
+    | '/kabaddi-betting'
+    | '/kyc-verification-policy'
+    | '/laser247'
+    | '/legal-status'
+    | '/login-guide'
+    | '/login-issues'
+    | '/matches'
+    | '/platforms'
+    | '/privacy-policy'
+    | '/refund-policy'
+    | '/register-guide'
+    | '/responsible-gaming'
+    | '/rules-regulations'
+    | '/schedule'
+    | '/security-safety'
+    | '/services'
+    | '/support'
+    | '/t20-world-cup'
+    | '/telegram-channel'
+    | '/terms-conditions'
+    | '/what-is-fairplay'
+    | '/whatsapp-support'
+    | '/withdrawal-guide'
+    | '/withdrawal-issues'
+    | '/wpl-betting'
+    | '/match/$slug'
+    | '/posts/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/11xplay'
+    | '/about'
+    | '/account-issues'
+    | '/all-links'
+    | '/app'
+    | '/basketball-betting'
+    | '/betting'
+    | '/blog'
+    | '/bonus'
+    | '/bonus-issues'
+    | '/casino'
+    | '/champions-trophy'
+    | '/contact-us'
+    | '/cricbet99'
+    | '/deposit-guide'
+    | '/deposit-issues'
+    | '/disclaimer'
+    | '/esports-betting'
+    | '/fairdeal'
+    | '/fairplay-id'
+    | '/fairplay-vs-11xplay'
+    | '/fairplay-vs-diamond-exchange'
+    | '/fairplay-vs-fairdeal'
+    | '/fairplay-vs-gold365'
+    | '/fairplay-vs-laser247'
+    | '/fairplay-vs-lotus365'
+    | '/fairplay-vs-mahavir-book'
+    | '/fairplay-vs-reddybook'
+    | '/fairplay-vs-skyexchange247'
+    | '/gold365'
+    | '/horse-racing'
+    | '/ipl-betting'
+    | '/is-fairplay-legal'
+    | '/is-fairplay-real'
+    | '/is-fairplay-safe'
+    | '/kabaddi-betting'
+    | '/kyc-verification-policy'
+    | '/laser247'
+    | '/legal-status'
+    | '/login-guide'
+    | '/login-issues'
+    | '/matches'
+    | '/platforms'
+    | '/privacy-policy'
+    | '/refund-policy'
+    | '/register-guide'
+    | '/responsible-gaming'
+    | '/rules-regulations'
+    | '/schedule'
+    | '/security-safety'
+    | '/services'
+    | '/support'
+    | '/t20-world-cup'
+    | '/telegram-channel'
+    | '/terms-conditions'
+    | '/what-is-fairplay'
+    | '/whatsapp-support'
+    | '/withdrawal-guide'
+    | '/withdrawal-issues'
+    | '/wpl-betting'
+    | '/match/$slug'
+    | '/posts/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/11xplay'
+    | '/about'
+    | '/account-issues'
+    | '/all-links'
+    | '/app'
+    | '/basketball-betting'
+    | '/betting'
+    | '/blog'
+    | '/bonus'
+    | '/bonus-issues'
+    | '/casino'
+    | '/champions-trophy'
+    | '/contact-us'
+    | '/cricbet99'
+    | '/deposit-guide'
+    | '/deposit-issues'
+    | '/disclaimer'
+    | '/esports-betting'
+    | '/fairdeal'
+    | '/fairplay-id'
+    | '/fairplay-vs-11xplay'
+    | '/fairplay-vs-diamond-exchange'
+    | '/fairplay-vs-fairdeal'
+    | '/fairplay-vs-gold365'
+    | '/fairplay-vs-laser247'
+    | '/fairplay-vs-lotus365'
+    | '/fairplay-vs-mahavir-book'
+    | '/fairplay-vs-reddybook'
+    | '/fairplay-vs-skyexchange247'
+    | '/gold365'
+    | '/horse-racing'
+    | '/ipl-betting'
+    | '/is-fairplay-legal'
+    | '/is-fairplay-real'
+    | '/is-fairplay-safe'
+    | '/kabaddi-betting'
+    | '/kyc-verification-policy'
+    | '/laser247'
+    | '/legal-status'
+    | '/login-guide'
+    | '/login-issues'
+    | '/matches'
+    | '/platforms'
+    | '/privacy-policy'
+    | '/refund-policy'
+    | '/register-guide'
+    | '/responsible-gaming'
+    | '/rules-regulations'
+    | '/schedule'
+    | '/security-safety'
+    | '/services'
+    | '/support'
+    | '/t20-world-cup'
+    | '/telegram-channel'
+    | '/terms-conditions'
+    | '/what-is-fairplay'
+    | '/whatsapp-support'
+    | '/withdrawal-guide'
+    | '/withdrawal-issues'
+    | '/wpl-betting'
+    | '/match/$slug'
+    | '/posts/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  R11xplayRoute: typeof R11xplayRoute
+  AboutRoute: typeof AboutRoute
+  AccountIssuesRoute: typeof AccountIssuesRoute
+  AllLinksRoute: typeof AllLinksRoute
+  AppRoute: typeof AppRoute
+  BasketballBettingRoute: typeof BasketballBettingRoute
+  BettingRoute: typeof BettingRoute
+  BlogRoute: typeof BlogRoute
+  BonusRoute: typeof BonusRoute
+  BonusIssuesRoute: typeof BonusIssuesRoute
+  CasinoRoute: typeof CasinoRoute
+  ChampionsTrophyRoute: typeof ChampionsTrophyRoute
+  ContactUsRoute: typeof ContactUsRoute
+  Cricbet99Route: typeof Cricbet99Route
+  DepositGuideRoute: typeof DepositGuideRoute
+  DepositIssuesRoute: typeof DepositIssuesRoute
+  DisclaimerRoute: typeof DisclaimerRoute
+  EsportsBettingRoute: typeof EsportsBettingRoute
+  FairdealRoute: typeof FairdealRoute
+  FairplayIdRoute: typeof FairplayIdRoute
+  FairplayVs11xplayRoute: typeof FairplayVs11xplayRoute
+  FairplayVsDiamondExchangeRoute: typeof FairplayVsDiamondExchangeRoute
+  FairplayVsFairdealRoute: typeof FairplayVsFairdealRoute
+  FairplayVsGold365Route: typeof FairplayVsGold365Route
+  FairplayVsLaser247Route: typeof FairplayVsLaser247Route
+  FairplayVsLotus365Route: typeof FairplayVsLotus365Route
+  FairplayVsMahavirBookRoute: typeof FairplayVsMahavirBookRoute
+  FairplayVsReddybookRoute: typeof FairplayVsReddybookRoute
+  FairplayVsSkyexchange247Route: typeof FairplayVsSkyexchange247Route
+  Gold365Route: typeof Gold365Route
+  HorseRacingRoute: typeof HorseRacingRoute
+  IplBettingRoute: typeof IplBettingRoute
+  IsFairplayLegalRoute: typeof IsFairplayLegalRoute
+  IsFairplayRealRoute: typeof IsFairplayRealRoute
+  IsFairplaySafeRoute: typeof IsFairplaySafeRoute
+  KabaddiBettingRoute: typeof KabaddiBettingRoute
+  KycVerificationPolicyRoute: typeof KycVerificationPolicyRoute
+  Laser247Route: typeof Laser247Route
+  LegalStatusRoute: typeof LegalStatusRoute
+  LoginGuideRoute: typeof LoginGuideRoute
+  LoginIssuesRoute: typeof LoginIssuesRoute
+  MatchesRoute: typeof MatchesRoute
+  PlatformsRoute: typeof PlatformsRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  RefundPolicyRoute: typeof RefundPolicyRoute
+  RegisterGuideRoute: typeof RegisterGuideRoute
+  ResponsibleGamingRoute: typeof ResponsibleGamingRoute
+  RulesRegulationsRoute: typeof RulesRegulationsRoute
+  ScheduleRoute: typeof ScheduleRoute
+  SecuritySafetyRoute: typeof SecuritySafetyRoute
+  ServicesRoute: typeof ServicesRoute
+  SupportRoute: typeof SupportRoute
+  T20WorldCupRoute: typeof T20WorldCupRoute
+  TelegramChannelRoute: typeof TelegramChannelRoute
+  TermsConditionsRoute: typeof TermsConditionsRoute
+  WhatIsFairplayRoute: typeof WhatIsFairplayRoute
+  WhatsappSupportRoute: typeof WhatsappSupportRoute
+  WithdrawalGuideRoute: typeof WithdrawalGuideRoute
+  WithdrawalIssuesRoute: typeof WithdrawalIssuesRoute
+  WplBettingRoute: typeof WplBettingRoute
+  MatchSlugRoute: typeof MatchSlugRoute
+  PostsSlugRoute: typeof PostsSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +860,507 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/11xplay': {
+      id: '/11xplay'
+      path: '/11xplay'
+      fullPath: '/11xplay'
+      preLoaderRoute: typeof R11xplayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/account-issues': {
+      id: '/account-issues'
+      path: '/account-issues'
+      fullPath: '/account-issues'
+      preLoaderRoute: typeof AccountIssuesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/all-links': {
+      id: '/all-links'
+      path: '/all-links'
+      fullPath: '/all-links'
+      preLoaderRoute: typeof AllLinksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/app': {
+      id: '/app'
+      path: '/app'
+      fullPath: '/app'
+      preLoaderRoute: typeof AppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/basketball-betting': {
+      id: '/basketball-betting'
+      path: '/basketball-betting'
+      fullPath: '/basketball-betting'
+      preLoaderRoute: typeof BasketballBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/betting': {
+      id: '/betting'
+      path: '/betting'
+      fullPath: '/betting'
+      preLoaderRoute: typeof BettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bonus': {
+      id: '/bonus'
+      path: '/bonus'
+      fullPath: '/bonus'
+      preLoaderRoute: typeof BonusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bonus-issues': {
+      id: '/bonus-issues'
+      path: '/bonus-issues'
+      fullPath: '/bonus-issues'
+      preLoaderRoute: typeof BonusIssuesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/casino': {
+      id: '/casino'
+      path: '/casino'
+      fullPath: '/casino'
+      preLoaderRoute: typeof CasinoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/champions-trophy': {
+      id: '/champions-trophy'
+      path: '/champions-trophy'
+      fullPath: '/champions-trophy'
+      preLoaderRoute: typeof ChampionsTrophyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact-us': {
+      id: '/contact-us'
+      path: '/contact-us'
+      fullPath: '/contact-us'
+      preLoaderRoute: typeof ContactUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricbet99': {
+      id: '/cricbet99'
+      path: '/cricbet99'
+      fullPath: '/cricbet99'
+      preLoaderRoute: typeof Cricbet99RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/deposit-guide': {
+      id: '/deposit-guide'
+      path: '/deposit-guide'
+      fullPath: '/deposit-guide'
+      preLoaderRoute: typeof DepositGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/deposit-issues': {
+      id: '/deposit-issues'
+      path: '/deposit-issues'
+      fullPath: '/deposit-issues'
+      preLoaderRoute: typeof DepositIssuesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/disclaimer': {
+      id: '/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/disclaimer'
+      preLoaderRoute: typeof DisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/esports-betting': {
+      id: '/esports-betting'
+      path: '/esports-betting'
+      fullPath: '/esports-betting'
+      preLoaderRoute: typeof EsportsBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fairdeal': {
+      id: '/fairdeal'
+      path: '/fairdeal'
+      fullPath: '/fairdeal'
+      preLoaderRoute: typeof FairdealRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fairplay-id': {
+      id: '/fairplay-id'
+      path: '/fairplay-id'
+      fullPath: '/fairplay-id'
+      preLoaderRoute: typeof FairplayIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fairplay-vs-11xplay': {
+      id: '/fairplay-vs-11xplay'
+      path: '/fairplay-vs-11xplay'
+      fullPath: '/fairplay-vs-11xplay'
+      preLoaderRoute: typeof FairplayVs11xplayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fairplay-vs-diamond-exchange': {
+      id: '/fairplay-vs-diamond-exchange'
+      path: '/fairplay-vs-diamond-exchange'
+      fullPath: '/fairplay-vs-diamond-exchange'
+      preLoaderRoute: typeof FairplayVsDiamondExchangeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fairplay-vs-fairdeal': {
+      id: '/fairplay-vs-fairdeal'
+      path: '/fairplay-vs-fairdeal'
+      fullPath: '/fairplay-vs-fairdeal'
+      preLoaderRoute: typeof FairplayVsFairdealRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fairplay-vs-gold365': {
+      id: '/fairplay-vs-gold365'
+      path: '/fairplay-vs-gold365'
+      fullPath: '/fairplay-vs-gold365'
+      preLoaderRoute: typeof FairplayVsGold365RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fairplay-vs-laser247': {
+      id: '/fairplay-vs-laser247'
+      path: '/fairplay-vs-laser247'
+      fullPath: '/fairplay-vs-laser247'
+      preLoaderRoute: typeof FairplayVsLaser247RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fairplay-vs-lotus365': {
+      id: '/fairplay-vs-lotus365'
+      path: '/fairplay-vs-lotus365'
+      fullPath: '/fairplay-vs-lotus365'
+      preLoaderRoute: typeof FairplayVsLotus365RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fairplay-vs-mahavir-book': {
+      id: '/fairplay-vs-mahavir-book'
+      path: '/fairplay-vs-mahavir-book'
+      fullPath: '/fairplay-vs-mahavir-book'
+      preLoaderRoute: typeof FairplayVsMahavirBookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fairplay-vs-reddybook': {
+      id: '/fairplay-vs-reddybook'
+      path: '/fairplay-vs-reddybook'
+      fullPath: '/fairplay-vs-reddybook'
+      preLoaderRoute: typeof FairplayVsReddybookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fairplay-vs-skyexchange247': {
+      id: '/fairplay-vs-skyexchange247'
+      path: '/fairplay-vs-skyexchange247'
+      fullPath: '/fairplay-vs-skyexchange247'
+      preLoaderRoute: typeof FairplayVsSkyexchange247RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gold365': {
+      id: '/gold365'
+      path: '/gold365'
+      fullPath: '/gold365'
+      preLoaderRoute: typeof Gold365RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/horse-racing': {
+      id: '/horse-racing'
+      path: '/horse-racing'
+      fullPath: '/horse-racing'
+      preLoaderRoute: typeof HorseRacingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ipl-betting': {
+      id: '/ipl-betting'
+      path: '/ipl-betting'
+      fullPath: '/ipl-betting'
+      preLoaderRoute: typeof IplBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/is-fairplay-legal': {
+      id: '/is-fairplay-legal'
+      path: '/is-fairplay-legal'
+      fullPath: '/is-fairplay-legal'
+      preLoaderRoute: typeof IsFairplayLegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/is-fairplay-real': {
+      id: '/is-fairplay-real'
+      path: '/is-fairplay-real'
+      fullPath: '/is-fairplay-real'
+      preLoaderRoute: typeof IsFairplayRealRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/is-fairplay-safe': {
+      id: '/is-fairplay-safe'
+      path: '/is-fairplay-safe'
+      fullPath: '/is-fairplay-safe'
+      preLoaderRoute: typeof IsFairplaySafeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kabaddi-betting': {
+      id: '/kabaddi-betting'
+      path: '/kabaddi-betting'
+      fullPath: '/kabaddi-betting'
+      preLoaderRoute: typeof KabaddiBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kyc-verification-policy': {
+      id: '/kyc-verification-policy'
+      path: '/kyc-verification-policy'
+      fullPath: '/kyc-verification-policy'
+      preLoaderRoute: typeof KycVerificationPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/laser247': {
+      id: '/laser247'
+      path: '/laser247'
+      fullPath: '/laser247'
+      preLoaderRoute: typeof Laser247RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal-status': {
+      id: '/legal-status'
+      path: '/legal-status'
+      fullPath: '/legal-status'
+      preLoaderRoute: typeof LegalStatusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login-guide': {
+      id: '/login-guide'
+      path: '/login-guide'
+      fullPath: '/login-guide'
+      preLoaderRoute: typeof LoginGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login-issues': {
+      id: '/login-issues'
+      path: '/login-issues'
+      fullPath: '/login-issues'
+      preLoaderRoute: typeof LoginIssuesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/matches': {
+      id: '/matches'
+      path: '/matches'
+      fullPath: '/matches'
+      preLoaderRoute: typeof MatchesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/platforms': {
+      id: '/platforms'
+      path: '/platforms'
+      fullPath: '/platforms'
+      preLoaderRoute: typeof PlatformsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/refund-policy': {
+      id: '/refund-policy'
+      path: '/refund-policy'
+      fullPath: '/refund-policy'
+      preLoaderRoute: typeof RefundPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/register-guide': {
+      id: '/register-guide'
+      path: '/register-guide'
+      fullPath: '/register-guide'
+      preLoaderRoute: typeof RegisterGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/responsible-gaming': {
+      id: '/responsible-gaming'
+      path: '/responsible-gaming'
+      fullPath: '/responsible-gaming'
+      preLoaderRoute: typeof ResponsibleGamingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rules-regulations': {
+      id: '/rules-regulations'
+      path: '/rules-regulations'
+      fullPath: '/rules-regulations'
+      preLoaderRoute: typeof RulesRegulationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/schedule': {
+      id: '/schedule'
+      path: '/schedule'
+      fullPath: '/schedule'
+      preLoaderRoute: typeof ScheduleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/security-safety': {
+      id: '/security-safety'
+      path: '/security-safety'
+      fullPath: '/security-safety'
+      preLoaderRoute: typeof SecuritySafetyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/support': {
+      id: '/support'
+      path: '/support'
+      fullPath: '/support'
+      preLoaderRoute: typeof SupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/t20-world-cup': {
+      id: '/t20-world-cup'
+      path: '/t20-world-cup'
+      fullPath: '/t20-world-cup'
+      preLoaderRoute: typeof T20WorldCupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/telegram-channel': {
+      id: '/telegram-channel'
+      path: '/telegram-channel'
+      fullPath: '/telegram-channel'
+      preLoaderRoute: typeof TelegramChannelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-conditions': {
+      id: '/terms-conditions'
+      path: '/terms-conditions'
+      fullPath: '/terms-conditions'
+      preLoaderRoute: typeof TermsConditionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/what-is-fairplay': {
+      id: '/what-is-fairplay'
+      path: '/what-is-fairplay'
+      fullPath: '/what-is-fairplay'
+      preLoaderRoute: typeof WhatIsFairplayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/whatsapp-support': {
+      id: '/whatsapp-support'
+      path: '/whatsapp-support'
+      fullPath: '/whatsapp-support'
+      preLoaderRoute: typeof WhatsappSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/withdrawal-guide': {
+      id: '/withdrawal-guide'
+      path: '/withdrawal-guide'
+      fullPath: '/withdrawal-guide'
+      preLoaderRoute: typeof WithdrawalGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/withdrawal-issues': {
+      id: '/withdrawal-issues'
+      path: '/withdrawal-issues'
+      fullPath: '/withdrawal-issues'
+      preLoaderRoute: typeof WithdrawalIssuesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wpl-betting': {
+      id: '/wpl-betting'
+      path: '/wpl-betting'
+      fullPath: '/wpl-betting'
+      preLoaderRoute: typeof WplBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/match/$slug': {
+      id: '/match/$slug'
+      path: '/match/$slug'
+      fullPath: '/match/$slug'
+      preLoaderRoute: typeof MatchSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/posts/$slug': {
+      id: '/posts/$slug'
+      path: '/posts/$slug'
+      fullPath: '/posts/$slug'
+      preLoaderRoute: typeof PostsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  R11xplayRoute: R11xplayRoute,
+  AboutRoute: AboutRoute,
+  AccountIssuesRoute: AccountIssuesRoute,
+  AllLinksRoute: AllLinksRoute,
+  AppRoute: AppRoute,
+  BasketballBettingRoute: BasketballBettingRoute,
+  BettingRoute: BettingRoute,
+  BlogRoute: BlogRoute,
+  BonusRoute: BonusRoute,
+  BonusIssuesRoute: BonusIssuesRoute,
+  CasinoRoute: CasinoRoute,
+  ChampionsTrophyRoute: ChampionsTrophyRoute,
+  ContactUsRoute: ContactUsRoute,
+  Cricbet99Route: Cricbet99Route,
+  DepositGuideRoute: DepositGuideRoute,
+  DepositIssuesRoute: DepositIssuesRoute,
+  DisclaimerRoute: DisclaimerRoute,
+  EsportsBettingRoute: EsportsBettingRoute,
+  FairdealRoute: FairdealRoute,
+  FairplayIdRoute: FairplayIdRoute,
+  FairplayVs11xplayRoute: FairplayVs11xplayRoute,
+  FairplayVsDiamondExchangeRoute: FairplayVsDiamondExchangeRoute,
+  FairplayVsFairdealRoute: FairplayVsFairdealRoute,
+  FairplayVsGold365Route: FairplayVsGold365Route,
+  FairplayVsLaser247Route: FairplayVsLaser247Route,
+  FairplayVsLotus365Route: FairplayVsLotus365Route,
+  FairplayVsMahavirBookRoute: FairplayVsMahavirBookRoute,
+  FairplayVsReddybookRoute: FairplayVsReddybookRoute,
+  FairplayVsSkyexchange247Route: FairplayVsSkyexchange247Route,
+  Gold365Route: Gold365Route,
+  HorseRacingRoute: HorseRacingRoute,
+  IplBettingRoute: IplBettingRoute,
+  IsFairplayLegalRoute: IsFairplayLegalRoute,
+  IsFairplayRealRoute: IsFairplayRealRoute,
+  IsFairplaySafeRoute: IsFairplaySafeRoute,
+  KabaddiBettingRoute: KabaddiBettingRoute,
+  KycVerificationPolicyRoute: KycVerificationPolicyRoute,
+  Laser247Route: Laser247Route,
+  LegalStatusRoute: LegalStatusRoute,
+  LoginGuideRoute: LoginGuideRoute,
+  LoginIssuesRoute: LoginIssuesRoute,
+  MatchesRoute: MatchesRoute,
+  PlatformsRoute: PlatformsRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  RefundPolicyRoute: RefundPolicyRoute,
+  RegisterGuideRoute: RegisterGuideRoute,
+  ResponsibleGamingRoute: ResponsibleGamingRoute,
+  RulesRegulationsRoute: RulesRegulationsRoute,
+  ScheduleRoute: ScheduleRoute,
+  SecuritySafetyRoute: SecuritySafetyRoute,
+  ServicesRoute: ServicesRoute,
+  SupportRoute: SupportRoute,
+  T20WorldCupRoute: T20WorldCupRoute,
+  TelegramChannelRoute: TelegramChannelRoute,
+  TermsConditionsRoute: TermsConditionsRoute,
+  WhatIsFairplayRoute: WhatIsFairplayRoute,
+  WhatsappSupportRoute: WhatsappSupportRoute,
+  WithdrawalGuideRoute: WithdrawalGuideRoute,
+  WithdrawalIssuesRoute: WithdrawalIssuesRoute,
+  WplBettingRoute: WplBettingRoute,
+  MatchSlugRoute: MatchSlugRoute,
+  PostsSlugRoute: PostsSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

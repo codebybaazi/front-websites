@@ -24,6 +24,18 @@ const csrfMiddleware = createCsrfMiddleware({
   filter: (ctx) => ctx.handlerType === "serverFn",
 });
 
+// Resolves the WhatsApp CTA number for the incoming host before the page is
+// rendered, so the HTML ships with the number published in fetchnumbers.json.
+const whatsappNumberMiddleware = createMiddleware().server(
+  async ({ next, request, handlerType }) => {
+    if (handlerType === "router") {
+      const { applyWhatsAppNumberForRequest } = await import("./lib/whatsapp-server");
+      await applyWhatsAppNumberForRequest(request);
+    }
+    return next();
+  },
+);
+
 export const startInstance = createStart(() => ({
-  requestMiddleware: [errorMiddleware, csrfMiddleware],
+  requestMiddleware: [errorMiddleware, csrfMiddleware, whatsappNumberMiddleware],
 }));
