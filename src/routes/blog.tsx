@@ -85,8 +85,8 @@ function BlogPage() {
               transition={{ delay: 0.1 }}
               className="text-5xl md:text-8xl font-bold tracking-tight leading-[0.85] mb-12"
             >
-              Fairplay betting <br />
-              <span className="text-primary not-italic">guides.</span>
+              Your <span className="text-primary">playbook</span> <br />
+              for <span className="text-primary">winning.</span>
             </motion.h1>
 
             <motion.p
@@ -95,7 +95,7 @@ function BlogPage() {
               transition={{ delay: 0.2 }}
               className="text-xl text-white/40 leading-relaxed max-w-2xl mx-auto mb-12 font-medium"
             >
-              How to get a Fairplay ID, fund the wallet with UPI, and bet cricket, football, tennis and live casino.
+              Master your Fairplay ID — from instant registration to smart betting strategies across cricket, football, tennis and live casino.
             </motion.p>
 
             {/* Search Bar - Centered */}
@@ -202,12 +202,74 @@ function BlogPage() {
         </div>
       </section>
 
-      {/* AI Overview */}
-      <section className="py-12 container max-w-7xl mx-auto px-4">
-        <AIOverview 
-          title="Fairplay blog — what you will find"
-          content="The Fairplay blog is a searchable help centre for cricket IDs, IPL and T20 markets, football and tennis books, live casino tables, deposits, withdrawals and login fixes. Guides are updated through 2026 so market names and settlement rules match what you see on the exchange."
-        />
+      {/* AI Powerview Section */}
+      <section className="py-16 container max-w-7xl mx-auto px-4">
+        <div className="relative">
+          {/* Background Glow */}
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-flame/5 rounded-3xl blur-3xl" />
+          
+          <div className="relative bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/8 rounded-3xl p-10 md:p-14">
+            {/* Header */}
+            <div className="flex items-center gap-4 mb-8">
+              <div className="relative">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-flame flex items-center justify-center">
+                  <Sparkles className="w-6 h-6 text-white" />
+                </div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-flame rounded-xl blur opacity-40 -z-10" />
+              </div>
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-1 block">Exclusive insight</span>
+                <h2 className="text-2xl md:text-3xl font-bold tracking-tight">AI Powerview</h2>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <h3 className="text-lg font-semibold mb-4 text-white/90">What our desk covers</h3>
+                <p className="text-white/50 leading-relaxed mb-6">
+                  The Fairplay blog is your searchable cricket desk — a living guide for IPL markets, football odds, tennis bookie tips, live casino tables and wallet operations. Every guide is refreshed through 2026 so the steps match what you see on the exchange.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  {['Cricket ID', 'IPL 2026', 'Live Casino', 'UPI Wallet', 'Football'].map((tag) => (
+                    <span key={tag} className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-white/70">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold mb-4 text-white/90">Why our guides work</h3>
+                <ul className="space-y-4">
+                  {[
+                    { icon: '01', text: 'Step-by-step instructions written for real players' },
+                    { icon: '02', text: 'Updated when odds formats or markets change' },
+                    { icon: '03', text: 'No jargon — plain language from the desk' },
+                  ].map((item) => (
+                    <li key={item.icon} className="flex items-start gap-4">
+                      <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center text-primary text-sm font-bold">
+                        {item.icon}
+                      </span>
+                      <span className="text-white/60 leading-relaxed pt-1">{item.text}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Bottom CTA */}
+            <div className="mt-10 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div>
+                <p className="text-white/80 font-semibold">Need help getting started?</p>
+                <p className="text-white/40 text-sm mt-1">WhatsApp our desk for a verified Fairplay ID</p>
+              </div>
+              <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-flame text-white font-bold hover:shadow-lg hover:shadow-primary/25 transition-all active:scale-95">
+                Get Fairplay ID
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Main Content - Grid without Sidebar */}
