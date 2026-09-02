@@ -1,4 +1,4 @@
-﻿import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { parse, compareDesc } from "date-fns";
 import { AIOverview } from "@/components/AIOverview";
@@ -13,6 +13,7 @@ import { BlogPost } from "@/components/blog/BlogPost";
 import { BlogPostBody, readMinutesFromBlocks } from "@/components/blog/BlogPostBody";
 import { BlogPostList } from "@/components/blog/BlogPostList";
 import { toBlogPostState, type BlogPostState } from "@/components/blog/blog-post-context";
+import { Sparkles } from "lucide-react";
 
 export const Route = createFileRoute("/posts/$slug")({
   loader: ({ params }: { params: { slug: string } }) => {
@@ -153,7 +154,69 @@ function PostDetail() {
               <BlogPost.Meta className="mt-5" />
             </BlogPost.Header>
 
-            <BlogPost.Hero className="mt-8" />
+            {/* AI Powerview Section - Post Specific */}
+            <section className="mt-10 mb-8 relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-flame/5 rounded-2xl blur-3xl" />
+              <div className="relative bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/8 rounded-2xl p-8 md:p-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="relative">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-flame flex items-center justify-center">
+                      <Sparkles className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="absolute -inset-1 bg-gradient-to-r from-primary to-flame rounded-xl blur opacity-30 -z-10" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-0.5 block">AI Powerview</span>
+                    <h2 className="text-lg md:text-xl font-bold tracking-tight">{category} guide</h2>
+                  </div>
+                </div>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-white/80">This guide covers</h3>
+                    <p className="text-white/50 text-sm leading-relaxed mb-4">
+                      {seo.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {[category, 'Fairplay ID', '2026'].map((tag) => (
+                        <span key={tag} className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-white/60">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-white/80">Why this guide helps</h3>
+                    <ul className="space-y-3">
+                      {[
+                        { num: '01', text: 'Step-by-step instructions built for real players' },
+                        { num: '02', text: 'Updated whenever odds formats or markets shift' },
+                        { num: '03', text: 'Plain language — no jargon, no fluff' },
+                      ].map((item) => (
+                        <li key={item.num} className="flex items-start gap-3">
+                          <span className="flex-shrink-0 w-6 h-6 rounded-md bg-primary/20 border border-primary/30 flex items-center justify-center text-primary text-xs font-bold">
+                            {item.num}
+                          </span>
+                          <span className="text-white/50 text-sm leading-relaxed pt-0.5">{item.text}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <div className="mt-6 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <p className="text-white/60 text-sm">Need a Fairplay ID for this guide?</p>
+                  <a
+                    href={waLink()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-primary to-flame text-white text-sm font-semibold hover:shadow-lg hover:shadow-primary/25 transition-all active:scale-95"
+                  >
+                    Get Fairplay ID
+                  </a>
+                </div>
+              </div>
+            </section>
+
+            <BlogPost.Hero className="mt-2" />
 
             <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,4fr)_minmax(14rem,1fr)] lg:gap-10 xl:gap-14">
               <BlogPost.Content>
