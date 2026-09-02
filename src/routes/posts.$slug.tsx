@@ -232,7 +232,11 @@ function PostDetail() {
 
   return (
     <BlogPost.Provider post={post}>
-      <div className="min-h-screen bg-gradient-to-br from-[#050a12] via-[#0a1520] to-[#071210] text-white selection:bg-primary/30 relative overflow-hidden"><div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_0%,rgba(47,185,74,0.08)_0%,transparent_50%),radial-gradient(ellipse_at_80%_100%,rgba(47,185,74,0.05)_0%,transparent_50%)]" /><div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PHBhdGggZD0iTTM2IDM0djItSDR2LTJoMzJ2MiIvPjwvZz48L2c+PC9zdmc+')] opacity-40 pointer-events-none" />
+      <div className="min-h-screen bg-[#030810] text-white selection:bg-primary/30 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#061218] to-[#030c18]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_0%,rgba(47,185,74,0.12)_0%,transparent_60%),radial-gradient(ellipse_60%_80%_at_80%_100%,rgba(47,185,74,0.08)_0%,transparent_55%),radial-gradient(ellipse_50%_50%_at_50%_50%,rgba(11,22,42,0.4)_0%,transparent_70%)]" />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2IDYiPjxwYXRoIGQ9Ik0wIDBoNHY0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTEgMWgydi0yaC0yeiIgZmlsbD0iI2ZmZiIgaWQ9ImIiLz48L2c+PC9zdmc+')] opacity-[0.03] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#030810] via-transparent to-transparent pointer-events-none" />
         <JsonLd data={jsonLd} />
 
         <div className="container mx-auto max-w-7xl px-4 pb-20 pt-28 md:px-6 md:pt-32 relative z-10">
