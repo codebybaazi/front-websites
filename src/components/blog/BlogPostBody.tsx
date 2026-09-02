@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Info } from "lucide-react";
 import type { BlogBlock } from "@/utils/blog-seo";
+export type { BlogBlock };
 
 export function readMinutesFromBlocks(blocks: BlogBlock[]): number {
   const text = blocks
