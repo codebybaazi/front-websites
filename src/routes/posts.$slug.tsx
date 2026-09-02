@@ -245,13 +245,13 @@ function PostDetail() {
           </Link>
 
           <BlogPost.Frame>
-            <BlogPost.Header>
-              <BlogPost.Title
-                as="h1"
-                className="font-display max-w-[22ch] text-3xl font-semibold leading-[1.12] tracking-[-0.03em] text-white sm:text-4xl md:text-5xl"
-              />
-              <BlogPost.Meta className="mt-5" />
-            </BlogPost.Header>
+                      <BlogPost.Header className="container mx-auto max-w-7xl px-4 md:px-6">
+            <BlogPost.Title
+              as="h1"
+              className="font-display max-w-[22ch] text-3xl font-semibold leading-[1.12] tracking-[-0.03em] text-white sm:text-4xl md:text-5xl"
+            />
+            <BlogPost.Meta className="mt-5" />
+          </BlogPost.Header>
 
             <BlogPost.Hero className="mt-2" />
 
