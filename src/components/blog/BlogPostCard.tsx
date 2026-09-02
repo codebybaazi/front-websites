@@ -110,18 +110,30 @@ export function CompactBlogPost({ rank }: { rank: number }) {
 
 export function SidebarBlogPost() {
   return (
-    <BlogPost.Link className="group flex gap-3 rounded-xl p-1 transition-colors hover:bg-white/[0.04] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
-      <BlogPost.Banner className="h-14 w-[4.5rem] shrink-0 rounded-lg object-cover" />
-      <span className="min-w-0 flex flex-col gap-1">
-        <BlogPost.DateText className="text-[10px] font-semibold uppercase tracking-widest text-primary" />
+    <BlogPost.Link className="group block overflow-hidden rounded-xl border border-white/5 bg-white/[0.02] transition-all duration-500 hover:border-primary/40 hover:bg-white/[0.05] hover:shadow-lg hover:shadow-primary/5">
+      <div className="relative aspect-[16/10] w-full overflow-hidden">
+        <BlogPost.Banner className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+        <div className="absolute bottom-0 left-0 right-0 p-4">
+          <BlogPost.DateText className="text-[10px] font-bold uppercase tracking-widest text-primary" />
+        </div>
+        <div className="absolute -top-8 -right-8 size-24 rounded-full bg-primary/20 blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      </div>
+      <div className="relative p-4">
         <BlogPost.Title
           as="h3"
-          className="line-clamp-2 text-[13px] font-semibold leading-snug tracking-tight text-white/90 group-hover:text-primary"
+          className="line-clamp-2 text-[14px] font-bold leading-snug tracking-tight text-white/90 transition-colors group-hover:text-primary"
         />
-        <span className="mt-1 text-[10px] font-semibold text-primary/70 group-hover:text-primary transition-colors">
-          Read more →
-        </span>
-      </span>
+        <div className="mt-3 flex items-center gap-2">
+          <span className="text-[11px] font-semibold text-primary transition-all group-hover:gap-3">
+            Read more
+          </span>
+          <svg className="size-3.5 text-primary transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </div>
     </BlogPost.Link>
   );
 }
