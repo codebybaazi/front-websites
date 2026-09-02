@@ -23,7 +23,7 @@ function ListFrame({
 }
 
 function BlogPostGridList({ children }: { children: ReactNode }) {
-  return <ListFrame className="grid gap-8 sm:grid-cols-2">{children}</ListFrame>;
+  return <ListFrame className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{children}</ListFrame>;
 }
 
 function BlogPostRelatedList({ children }: { children: ReactNode }) {
