@@ -112,12 +112,15 @@ export function SidebarBlogPost() {
   return (
     <BlogPost.Link className="group flex gap-3 rounded-xl p-1 transition-colors hover:bg-white/[0.04] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
       <BlogPost.Banner className="h-14 w-[4.5rem] shrink-0 rounded-lg object-cover" />
-      <span className="min-w-0">
+      <span className="min-w-0 flex flex-col gap-1">
+        <BlogPost.DateText className="text-[10px] font-semibold uppercase tracking-widest text-primary" />
         <BlogPost.Title
           as="h3"
           className="line-clamp-2 text-[13px] font-semibold leading-snug tracking-tight text-white/90 group-hover:text-primary"
         />
-        <BlogPost.DateText className="mt-1 block text-xs text-muted-foreground" />
+        <span className="mt-1 text-[10px] font-semibold text-primary/70 group-hover:text-primary transition-colors">
+          Read more →
+        </span>
       </span>
     </BlogPost.Link>
   );
