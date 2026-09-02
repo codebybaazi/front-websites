@@ -232,10 +232,10 @@ function PostDetail() {
 
   return (
     <BlogPost.Provider post={post}>
-      <div className="min-h-screen bg-[#0B1120] text-white selection:bg-primary/30">
+      <div className="min-h-screen bg-gradient-to-br from-[#050a12] via-[#0a1520] to-[#071210] text-white selection:bg-primary/30 relative overflow-hidden"><div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_0%,rgba(47,185,74,0.08)_0%,transparent_50%),radial-gradient(ellipse_at_80%_100%,rgba(47,185,74,0.05)_0%,transparent_50%)]" /><div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PHBhdGggZD0iTTM2IDM0djItSDR2LTJoMzJ2MiIvPjwvZz48L2c+PC9zdmc+')] opacity-40 pointer-events-none" />
         <JsonLd data={jsonLd} />
 
-        <div className="container mx-auto max-w-7xl px-4 pb-20 pt-28 md:px-6 md:pt-32">
+        <div className="container mx-auto max-w-7xl px-4 pb-20 pt-28 md:px-6 md:pt-32 relative z-10">
           <Link
             to="/blog"
             className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-primary underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
