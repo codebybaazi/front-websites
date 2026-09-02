@@ -67,7 +67,7 @@ function sidebarPosts(slug: string, category: string) {
     return compareDesc(dateA, dateB);
   });
 
-  const recentArticles = sorted.filter((article) => article.slug !== slug).slice(0, 4);
+  const recentArticles = sorted.filter((article) => article.slug !== slug).slice(0, 3);
   const recent = recentArticles.map(articleToState);
   const recentSlugs = new Set(recentArticles.map((article) => article.slug));
 
@@ -76,7 +76,7 @@ function sidebarPosts(slug: string, category: string) {
       (article) =>
         article.slug !== slug && article.category === category && !recentSlugs.has(article.slug),
     )
-    .slice(0, 4)
+    .slice(0, 3)
     .map(articleToState);
 
   return { recent, related };
