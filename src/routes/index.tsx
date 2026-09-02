@@ -65,23 +65,53 @@ function Index() {
     <div className="flex w-full flex-col overflow-hidden noise-bg">
       <HeroBanner />
 
-      <section className="border-b border-white/8 px-4 py-6 sm:px-6 sm:py-8">
-        <div className="container mx-auto grid max-w-7xl grid-cols-2 gap-3 sm:grid-cols-4">
-          {[
-            { to: "/fairplay-id", label: "Open an ID", hint: "WhatsApp · ~2 min" },
-            { to: "/betting", label: "Live markets", hint: "Cricket first" },
-            { to: "/casino", label: "Live tables", hint: "Same wallet" },
-            { to: "/deposit-guide", label: "Fund with UPI", hint: "Keep the UTR" },
-          ].map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="rounded-xl border border-white/8 bg-card/70 px-3 py-3.5 transition-colors hover:border-primary/40 sm:px-4 sm:py-4"
-            >
-              <span className="block text-[13px] font-semibold sm:text-sm">{item.label}</span>
-              <span className="mt-1 block text-[11px] text-muted-foreground sm:text-xs">{item.hint}</span>
-            </Link>
-          ))}
+      <section className="border-b border-white/5 px-4 py-8 sm:px-6 sm:py-10">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { to: "/fairplay-id", label: "Open an ID", hint: "WhatsApp · ~2 min", icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>, accent: "text-primary", bg: "bg-primary/10", border: "hover:border-primary/60", ring: "hover:shadow-[0_0_20px_rgba(var(--primary),0.25)]", badge: "bg-primary", badgeText: "text-primary-foreground" },
+              { to: "/betting", label: "Live Markets", hint: "Cricket, football & tennis", icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>, accent: "text-emerald-400", bg: "bg-emerald-500/10", border: "hover:border-emerald-500/60", ring: "hover:shadow-[0_0_20px_rgba(52,211,153,0.25)]", badge: "bg-emerald-500", badgeText: "text-black" },
+              { to: "/casino", label: "Live Tables", hint: "Same wallet, 24/7", icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>, accent: "text-flame", bg: "bg-flame/10", border: "hover:border-flame/60", ring: "hover:shadow-[0_0_20px_rgba(255,77,7,0.25)]", badge: "bg-flame", badgeText: "text-white" },
+              { to: "/deposit-guide", label: "Fund with UPI", hint: "Keep the UTR", icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>, accent: "text-yellow-400", bg: "bg-yellow-500/10", border: "hover:border-yellow-500/60", ring: "hover:shadow-[0_0_20px_rgba(250,204,21,0.25)]", badge: "bg-yellow-500", badgeText: "text-black" },
+            ].map((item, idx) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-card/40 backdrop-blur-xl px-5 py-5 transition-all duration-500 hover:bg-card/70 hover:scale-[1.02] ${item.border} ${item.ring} cursor-pointer`}
+              >
+                {/* Animated gradient background */}
+                <div className={`absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-gradient-to-br ${item.bg} to-transparent`} />
+                {/* Top accent line */}
+                <div className={`absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent ${item.bg.replace("/10", "")} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                {/* Icon badge */}
+                <div className={`relative mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl ${item.bg} ${item.accent} shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl`}>
+                  {item.icon}
+                </div>
+                {/* Label */}
+                <h3 className={`relative text-[15px] font-bold tracking-tight transition-colors duration-300 sm:text-[16px] ${item.accent} group-hover:brightness-110`}>
+                  {item.label}
+                </h3>
+                {/* Hint */}
+                <p className="relative mt-1.5 text-[12px] text-muted-foreground transition-colors duration-300 group-hover:text-white/70 sm:text-[12.5px]">
+                  {item.hint}
+                </p>
+                {/* Arrow indicator */}
+                <div className={`absolute right-4 top-1/2 -translate-y-1/2 ${item.accent} opacity-0 transition-all duration-300 group-hover:opacity-60 group-hover:translate-x-1`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+                {/* Live dot */}
+                {idx < 2 && (
+                  <div className={`absolute right-4 top-4 flex items-center gap-1.5 rounded-full border border-white/10 bg-black/30 px-2 py-1 text-[9px] font-semibold uppercase tracking-widest backdrop-blur-sm ${item.accent} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}>
+                    <span className={`relative flex h-1.5 w-1.5`}>
+                      <span className={`absolute inline-flex h-full w-full animate-ping rounded-full ${idx === 0 ? "bg-primary" : "bg-emerald-400"} opacity-60`} />
+                      <span className={`relative inline-flex h-1.5 w-1.5 rounded-full ${idx === 0 ? "bg-primary" : "bg-emerald-400"}`} />
+                    </span>
+                    {idx === 0 ? "Instant" : "Live"}
+                  </div>
+                )}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
