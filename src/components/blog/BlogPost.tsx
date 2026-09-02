@@ -84,14 +84,18 @@ function BlogPostCategory({ className }: { className?: string }) {
 }
 
 function BlogPostTitle({
-  as: Tag = "h3",
+  as = "h3",
   className,
 }: {
   as?: "h1" | "h2" | "h3" | "h4";
   className?: string;
 }) {
   const { state } = useBlogPost();
-  return <Tag className={className}>{state.title}</Tag>;
+  const titleClasses = className;
+  if (as === "h1") return <h1 className={titleClasses}>{state.title}</h1>;
+  if (as === "h2") return <h2 className={titleClasses}>{state.title}</h2>;
+  if (as === "h4") return <h4 className={titleClasses}>{state.title}</h4>;
+  return <h3 className={titleClasses}>{state.title}</h3>;
 }
 
 function BlogPostDescription({ className }: { className?: string }) {
@@ -181,12 +185,12 @@ function BlogPostHeader({
   className?: string;
 }) {
   return (
-    <header className={className}>
+    <header className={cn("w-full", className)}>
       {children ?? (
         <>
           <BlogPostTitle
             as="h1"
-            className="font-display max-w-[22ch] text-3xl font-semibold leading-[1.12] tracking-[-0.03em] text-white sm:text-4xl md:text-5xl"
+            className="font-display w-full text-3xl font-semibold leading-[1.12] tracking-[-0.03em] text-white sm:text-4xl md:text-5xl"
           />
           <BlogPostMeta className="mt-5" />
         </>
