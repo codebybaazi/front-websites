@@ -232,11 +232,37 @@ function PostDetail() {
 
   return (
     <BlogPost.Provider post={post}>
-      <div className="min-h-screen bg-[#030810] text-white selection:bg-primary/30 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#061218] to-[#030c18]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_0%,rgba(47,185,74,0.12)_0%,transparent_60%),radial-gradient(ellipse_60%_80%_at_80%_100%,rgba(47,185,74,0.08)_0%,transparent_55%),radial-gradient(ellipse_50%_50%_at_50%_50%,rgba(11,22,42,0.4)_0%,transparent_70%)]" />
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2IDYiPjxwYXRoIGQ9Ik0wIDBoNHY0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTEgMWgydi0yaC0yeiIgZmlsbD0iI2ZmZiIgaWQ9ImIiLz48L2c+PC9zdmc+')] opacity-[0.03] pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#030810] via-transparent to-transparent pointer-events-none" />
+      <div className="min-h-screen bg-[#05070f] text-white selection:bg-primary/30 relative overflow-hidden">
+        {/* Base gradient layer */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#060a14] via-[#04080f] to-[#03060d]" />
+        
+        {/* Primary radial glow - top left */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_15%_10%,rgba(47,185,74,0.15)_0%,transparent_55%)]" />
+        
+        {/* Secondary glow - bottom right */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_70%_at_85%_90%,rgba(47,185,74,0.1)_0%,transparent_50%)]" />
+        
+        {/* Accent glow - center top */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_40%_at_50%_0%,rgba(47,185,74,0.08)_0%,transparent_45%)]" />
+        
+        {/* Animated light orbs */}
+        <div className="absolute top-20 left-20 w-64 h-64 bg-primary/10 rounded-full blur-[100px] animate-pulse opacity-60" />
+        <div className="absolute bottom-40 right-32 w-80 h-80 bg-primary/8 rounded-full blur-[120px] animate-pulse opacity-50" style={{animationDelay:'1s'}} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 rounded-full blur-[150px] animate-pulse opacity-30" style={{animationDelay:'2s'}} />
+        
+        {/* Subtle geometric grid pattern */}
+        <div className="absolute inset-0 opacity-[0.04]" style={{backgroundImage:'linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)',backgroundSize:'60px_60px'}} />
+        
+        {/* Diagonal accent lines */}
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/15 to-transparent" />
+        
+        {/* Noise/grain texture overlay */}
+        <div className="absolute inset-0 opacity-[0.035] pointer-events-none" style={{backgroundImage:'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23n)\' opacity=\'1\'/%3E%3C/svg%3E")',backgroundSize:'200px_200px'}} />
+        
+        {/* Vignette overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#05070f] via-transparent to-[#05070f]/30 pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,rgba(5,7,15,0.4)_100%)]" />
         <JsonLd data={jsonLd} />
 
         <div className="container mx-auto max-w-7xl px-4 pb-20 pt-28 md:px-6 md:pt-32 relative z-10">
