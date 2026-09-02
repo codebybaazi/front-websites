@@ -244,8 +244,7 @@ function PostDetail() {
             Back to guides
           </Link>
 
-          <BlogPost.Frame>
-                      <BlogPost.Header className="container mx-auto max-w-7xl px-4 md:px-6">
+          <BlogPost.Header className="container mx-auto max-w-7xl px-4 md:px-6">
             <BlogPost.Title
               as="h1"
               className="font-display max-w-[22ch] text-3xl font-semibold leading-[1.12] tracking-[-0.03em] text-white sm:text-4xl md:text-5xl"
@@ -253,6 +252,7 @@ function PostDetail() {
             <BlogPost.Meta className="mt-5" />
           </BlogPost.Header>
 
+          <BlogPost.Frame>
             <BlogPost.Hero className="mt-2" />
 
             <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,4fr)_minmax(14rem,1fr)] lg:gap-10 xl:gap-14">
