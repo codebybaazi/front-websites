@@ -102,6 +102,124 @@ function getPostSummary(blocks: BlogBlock[], maxLength = 300): string {
   return '';
 }
 
+interface AIPowerviewContent {
+  title: string;
+  summary: string;
+  tags: string[];
+  benefits: { num: string; text: string }[];
+  ctaText: string;
+}
+
+function getAIPowerviewContent(
+  slug: string,
+  blocks: BlogBlock[],
+  category: string,
+  title: string
+): AIPowerviewContent {
+  // Extract key points from content blocks for dynamic bullets
+  const keyPoints: string[] = [];
+  let extractedSteps: string[] = [];
+  
+  for (const block of blocks) {
+    if (block.t === 'ul' && block.items) {
+      block.items.forEach((item) => {
+        if (typeof item === 'string' && item.length > 20 && item.length < 150) {
+          keyPoints.push(item.trim());
+        }
+        if (typeof item === 'string') {
+          const stepMatch = item.match(/^(step\s*\d+|\d+\.|first|second|third|then|next|finally|after|before)\s+/i);
+          if (stepMatch) {
+            extractedSteps.push(item.trim());
+          }
+        }
+      });
+    }
+    if (block.t === 'ol' && block.items) {
+      block.items.forEach((item) => {
+        if (typeof item === 'string' && item.length > 20) {
+          extractedSteps.push(item.trim());
+        }
+      });
+    }
+  }
+
+  // Extract keywords from title for tags
+  const titleWords = title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, '')
+    .split('\s')
+    .filter(w => w.length > 3)
+    .filter(w => !['fairplay', 'guide', 'with', 'from', 'your', 'this', 'that', 'using', 'about'].includes(w));
+  
+  const baseTags = ['Fairplay ID'];
+  if (category === 'Events') baseTags.push('Live Betting');
+  if (category === 'Guide') baseTags.push('Betting Tips');
+  if (category === 'Analysis') baseTags.push('Match Prediction');
+  if (category === 'Support') baseTags.push('Help Center');
+  if (category === 'Strategy') baseTags.push('Winning Tips');
+  
+  const titleTags = titleWords.slice(0, 3).map(w => w.charAt(0).toUpperCase() + w.slice(1));
+  const allTags = [...new Set([...baseTags, ...titleTags])].slice(0, 5);
+
+  // Generate category-specific benefits
+  const categoryBenefits: Record<string, { num: string; text: string }[]> = {
+    Events: [
+      { num: '01', text: 'Live match odds and real-time betting markets covered' },
+      { num: '02', text: 'Expert analysis for upcoming tournaments and fixtures' },
+      { num: '03', text: 'Tactical breakdowns to inform your in-play decisions' },
+    ],
+    Guide: [
+      { num: '01', text: 'Clear step-by-step instructions from account setup to first bet' },
+      { num: '02', text: 'Platform features and tools explained in plain language' },
+      { num: '03', text: 'Tips verified against current platform interface' },
+    ],
+    Analysis: [
+      { num: '01', text: 'Data-backed match previews with team form analysis' },
+      { num: '02', text: 'Head-to-head records and pitch conditions factored in' },
+      { num: '03', text: 'Betting market movements and value bets identified' },
+    ],
+    Support: [
+      { num: '01', text: 'Common issues diagnosed with verified workarounds' },
+      { num: '02', text: 'Contact methods and response times clearly explained' },
+      { num: '03', text: 'Account security best practices included' },
+    ],
+    Strategy: [
+      { num: '01', text: 'Bankroll management principles for long-term play' },
+      { num: '02', text: 'Market-specific betting approaches explained' },
+      { num: '03', text: 'Risk assessment frameworks for smarter wagers' },
+    ],
+  };
+
+  const defaultBenefits: { num: string; text: string }[] = [
+    { num: '01', text: 'Comprehensive coverage of essential concepts and terms' },
+    { num: '02', text: 'Practical examples based on real betting scenarios' },
+    { num: '03', text: 'Actionable insights to improve your betting outcomes' },
+  ];
+
+  const benefits = categoryBenefits[category] || defaultBenefits;
+
+  // Generate SEO-friendly title
+  const seoTitle = `${title.split(' ').slice(0, 6).join(' ')} — Quick Overview`;
+
+  // Generate CTA based on content
+  const ctaMap: Record<string, string> = {
+    Events: 'Get Live Betting ID',
+    Guide: 'Get Your Fairplay ID',
+    Analysis: 'Start Betting Today',
+    Support: 'Contact Support Now',
+    Strategy: 'Apply These Strategies',
+  };
+  const ctaText = ctaMap[category] || 'Get Fairplay ID';
+
+  return {
+    title: seoTitle,
+    summary: getPostSummary(blocks, 400) || `${title} — comprehensive guide covering all essential aspects, strategies, and insider tips for getting the most out of your Fairplay experience.`,
+    tags: allTags,
+    benefits,
+    ctaText,
+  };
+}
+
 function PostDetail() {
   const { slug } = Route.useLoaderData();
   const seo = getBlogSeo(slug);
@@ -152,6 +270,9 @@ function PostDetail() {
 
   const { recent, related } = sidebarPosts(slug, category);
 
+  // Generate dynamic AI Powerview content based on post specifics
+  const powerviewContent = getAIPowerviewContent(slug, content, category, seo.h1);
+
   return (
     <BlogPost.Provider post={post}>
       <div className="min-h-screen bg-[#0B1120] text-white selection:bg-primary/30">
@@ -175,7 +296,7 @@ function PostDetail() {
               <BlogPost.Meta className="mt-5" />
             </BlogPost.Header>
 
-            {/* AI Powerview Section - Post Specific */}
+            {/* AI Powerview Section - Dynamic Post-Specific Content */}
             <section className="mt-10 mb-8 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-flame/5 rounded-2xl blur-3xl" />
               <div className="relative bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/8 rounded-2xl p-8 md:p-10">
@@ -188,17 +309,17 @@ function PostDetail() {
                   </div>
                   <div>
                     <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-0.5 block">AI Powerview</span>
-                    <h2 className="text-lg md:text-xl font-bold tracking-tight">{category} guide</h2>
+                    <h2 className="text-lg md:text-xl font-bold tracking-tight">{powerviewContent.title}</h2>
                   </div>
                 </div>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
                     <h3 className="text-sm font-semibold mb-3 text-white/80">This guide covers</h3>
                     <p className="text-white/50 text-sm leading-relaxed mb-4">
-                      {postSummary || seo.description}
+                      {powerviewContent.summary}
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      {[category, 'Fairplay ID', '2026'].map((tag) => (
+                      {powerviewContent.tags.map((tag) => (
                         <span key={tag} className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-white/60">
                           {tag}
                         </span>
@@ -208,11 +329,7 @@ function PostDetail() {
                   <div>
                     <h3 className="text-sm font-semibold mb-3 text-white/80">Why this guide helps</h3>
                     <ul className="space-y-3">
-                      {[
-                        { num: '01', text: 'Step-by-step instructions built for real players' },
-                        { num: '02', text: 'Updated whenever odds formats or markets shift' },
-                        { num: '03', text: 'Plain language — no jargon, no fluff' },
-                      ].map((item) => (
+                      {powerviewContent.benefits.map((item) => (
                         <li key={item.num} className="flex items-start gap-3">
                           <span className="flex-shrink-0 w-6 h-6 rounded-md bg-primary/20 border border-primary/30 flex items-center justify-center text-primary text-xs font-bold">
                             {item.num}
@@ -224,14 +341,14 @@ function PostDetail() {
                   </div>
                 </div>
                 <div className="mt-6 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <p className="text-white/60 text-sm">Need a Fairplay ID for this guide?</p>
+                  <p className="text-white/60 text-sm">Ready to implement what you learned?</p>
                   <a
                     href={waLink()}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-primary to-flame text-white text-sm font-semibold hover:shadow-lg hover:shadow-primary/25 transition-all active:scale-95"
                   >
-                    Get Fairplay ID
+                    {powerviewContent.ctaText}
                   </a>
                 </div>
               </div>
