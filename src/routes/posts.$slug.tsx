@@ -10,7 +10,7 @@ import { BLOG_POST_DATES, blogPostIsoDate } from "@/utils/blog-post-dates";
 import { OG_IMAGE, absolutePageUrl } from "@/utils/page-seo";
 import { waLink } from "@/lib/whatsapp";
 import { BlogPost } from "@/components/blog/BlogPost";
-import { BlogPostBody, readMinutesFromBlocks } from "@/components/blog/BlogPostBody";
+import { BlogPostBody, readMinutesFromBlocks, type BlogBlock } from "@/components/blog/BlogPostBody";
 import { BlogPostList } from "@/components/blog/BlogPostList";
 import { toBlogPostState, type BlogPostState } from "@/components/blog/blog-post-context";
 import { Sparkles } from "lucide-react";
@@ -82,6 +82,26 @@ function sidebarPosts(slug: string, category: string) {
   return { recent, related };
 }
 
+function getPostSummary(blocks: BlogBlock[], maxLength = 300): string {
+  // Extract first meaningful paragraph from actual content blocks
+  for (const block of blocks) {
+    if (block.t === 'p' && typeof block.c === 'string' && block.c.length > 50) {
+      const text = block.c.trim();
+      if (text.length > maxLength) {
+        return text.substring(0, maxLength).replace(/\s+\S*$/, '') + '...';
+      }
+      return text;
+    }
+    if (block.t === 'ul' && block.items && block.items.length > 0) {
+      const firstItem = block.items[0];
+      if (typeof firstItem === 'string' && firstItem.length > 50) {
+        return firstItem.substring(0, maxLength).replace(/\s+\S*$/, '') + '...';
+      }
+    }
+  }
+  return '';
+}
+
 function PostDetail() {
   const { slug } = Route.useLoaderData();
   const seo = getBlogSeo(slug);
@@ -91,6 +111,7 @@ function PostDetail() {
   const isoDate = blogPostIsoDate(slug);
   const url = absolutePageUrl(`/posts/${slug}`);
   const category = meta?.category ?? "Guide";
+  const postSummary = getPostSummary(content);
 
   const faqNode = faqPageNode(
     content
@@ -174,7 +195,7 @@ function PostDetail() {
                   <div>
                     <h3 className="text-sm font-semibold mb-3 text-white/80">This guide covers</h3>
                     <p className="text-white/50 text-sm leading-relaxed mb-4">
-                      {seo.description}
+                      {postSummary || seo.description}
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {[category, 'Fairplay ID', '2026'].map((tag) => (
@@ -220,7 +241,7 @@ function PostDetail() {
 
             <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,4fr)_minmax(14rem,1fr)] lg:gap-10 xl:gap-14">
               <BlogPost.Content>
-                <AIOverview title={`${seo.h1} — quick summary`} content={seo.intro} />
+                <AIOverview title={`${seo.h1} — quick summary`} content={postSummary || seo.description} />
 
                 <BlogPostBody blocks={content} />
 
