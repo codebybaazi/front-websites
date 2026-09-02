@@ -25,6 +25,17 @@ type Tile = {
   search?: Record<string, string>;
 };
 
+const partners = [
+  { name: "World777", logo: "https://khaiwali.in/assets/exchange-1-C1L5-VKh.png", url: "world777.now" },
+  { name: "MiBook9", logo: "https://khaiwali.in/assets/exchange-2-YWaV63VG.png", url: "mibook9.com" },
+  { name: "LotusBook", logo: "https://khaiwali.in/assets/exchange-3-BL7xnTAS.png", url: "lotusbook.cricket" },
+  { name: "RockyBook", logo: "https://khaiwali.in/assets/exchange-4-DKMdAOch.png", url: "rockybook.com" },
+  { name: "TigerExch", logo: "https://khaiwali.in/assets/tigerexch-B-BwGAg9.png", url: "tigerexch.com" },
+  { name: "DiamondExch", logo: "https://khaiwali.in/assets/diamondexch-mWek921j.png", url: "diamondexch.com" },
+  { name: "SkyExch", logo: "https://khaiwali.in/assets/skyexch-DnP70ctn.png", url: "skyexch.art" },
+  { name: "LaserBhai", logo: "https://khaiwali.in/assets/laserbhai-C4iWU4_a.gif", url: "laserbhai.com" },
+];
+
 const liveCards: Tile[] = [
   { name: "Teen Patti", tag: "Dealt live", note: "Two-hand classic, side bets open", image: teenPattiImg, to: "/casino", search: { type: "indian" } },
   { name: "Andar Bahar", tag: "Fast round", note: "Cut card, pick a side, settle", image: andarBaharImg, to: "/casino", search: { type: "indian" } },
