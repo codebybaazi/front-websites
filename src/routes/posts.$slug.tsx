@@ -102,34 +102,6 @@ function getPostSummary(blocks: BlogBlock[], maxLength = 300): string {
   return '';
 }
 
-interface AIPowerviewContent {
-  title: string;
-  summary: string;
-  tags: string[];
-  benefits: { num: string; text: string }[];
-  ctaText: string;
-}
-
-function getPostSummary(blocks: BlogBlock[], maxLength = 300): string {
-  // Extract first meaningful paragraph from actual content blocks
-  for (const block of blocks) {
-    if (block.t === 'p' && typeof block.c === 'string' && block.c.length > 50) {
-      const text = block.c.trim();
-      if (text.length > maxLength) {
-        return text.substring(0, maxLength).replace(/\s+\S*$/, '') + '...';
-      }
-      return text;
-    }
-    if (block.t === 'ul' && block.items && block.items.length > 0) {
-      const firstItem = block.items[0];
-      if (typeof firstItem === 'string' && firstItem.length > 50) {
-        return firstItem.substring(0, maxLength).replace(/\s+\S*$/, '') + '...';
-      }
-    }
-  }
-  return '';
-}
-
 function PostDetail() {
   const { slug } = Route.useLoaderData();
   const seo = getBlogSeo(slug);
@@ -186,7 +158,8 @@ function PostDetail() {
         <JsonLd data={jsonLd} />
 
         <div className="container mx-auto max-w-7xl px-4 pb-20 pt-28 md:px-6 md:pt-32">
-            {/* AI Powerview Section removed - using In brief section below */}
+
+            <AIOverview title={`${seo.h1} — quick summary`} content={postSummary || seo.description} />
 
             <Link
             to="/blog"
@@ -208,9 +181,7 @@ function PostDetail() {
             <BlogPost.Hero className="mt-2" />
 
             <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,4fr)_minmax(14rem,1fr)] lg:gap-10 xl:gap-14">
-              <BlogPost.Content>
-                <AIOverview title={`${seo.h1} — quick summary`} content={postSummary || seo.description} />
-
+                              <BlogPost.Content>
                 <BlogPostBody blocks={content} />
 
                 <aside className="mt-12 rounded-xl border border-primary/25 bg-card/50 p-7">
