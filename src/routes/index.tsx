@@ -3,7 +3,7 @@ import { Zap, ArrowRight, ShieldCheck, Smartphone, Gift, Trophy, PlayCircle } fr
 import { OverviewSection } from "@/components/OverviewSection";
 import { EliteGamingSection } from "@/components/EliteGamingSection";
 import { HeroBanner } from "@/components/HeroBanner";
-import { TrustedExchangesSection } from "@/components/TrustedExchangesSection";
+
 import { InPlaySection } from "@/components/InPlaySection";
 import { LiveTablesSection } from "@/components/LiveTablesSection";
 import { BettingStepsSection } from "@/components/BettingStepsSection";
@@ -119,9 +119,6 @@ function Index() {
       <InPlaySection key="fresh-inplay-v2" />
 
       <LiveTablesSection />
-
-      <TrustedExchangesSection />
-
 
       <section className="px-4 py-16 sm:px-6 sm:py-20">
         <div className="container mx-auto grid max-w-7xl gap-5 md:grid-cols-2">
