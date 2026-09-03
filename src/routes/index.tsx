@@ -3,7 +3,6 @@ import { Zap, ArrowRight, ShieldCheck, Smartphone, Gift, Trophy, PlayCircle } fr
 import { OverviewSection } from "@/components/OverviewSection";
 import { EliteGamingSection } from "@/components/EliteGamingSection";
 import { HeroBanner } from "@/components/HeroBanner";
-
 import { InPlaySection } from "@/components/InPlaySection";
 import { LiveTablesSection } from "@/components/LiveTablesSection";
 import { BettingStepsSection } from "@/components/BettingStepsSection";
