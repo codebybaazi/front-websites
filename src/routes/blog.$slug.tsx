@@ -2,6 +2,8 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { PostArticle } from "@/components/PostArticle";
 import { ContentNotFound } from "@/components/ContentPage";
 import { getPost, POSTS } from "@/data/posts";
+import { authorSlugForName } from "@/data/authors";
+import { toFaqPageJsonLd } from "@/lib/derive-page-faqs";
 
 // (4) High-volume Semrush keyword sets per category (India market).
 const CATEGORY_KEYWORDS: Record<string, string[]> = {
@@ -84,22 +86,16 @@ export const Route = createFileRoute("/blog/$slug")({
     const faqSection = p.sections.find((s) =>
       /frequently asked questions/i.test(s.heading)
     );
-    const faqEntities =
+    const faqPairs =
       faqSection?.points
         ?.map((pt) => {
           const [q, ...rest] = pt.split(/\s—\s|\s-\s|\?\s+/);
           const a = rest.join(" ").trim();
           const question = pt.includes("?") ? pt.split("?")[0].trim() + "?" : q.trim();
           const answer = a || pt.replace(question, "").trim();
-          return question && answer
-            ? {
-                "@type": "Question",
-                name: question,
-                acceptedAnswer: { "@type": "Answer", text: answer },
-              }
-            : null;
+          return question && answer ? { q: question, a: answer } : null;
         })
-        .filter(Boolean) ?? [];
+        .filter((f): f is { q: string; a: string } => f !== null) ?? [];
 
     const scripts: Array<{ type: string; children: string }> = [
       {
@@ -112,7 +108,12 @@ export const Route = createFileRoute("/blog/$slug")({
           image: [ogImage], // (3)
           datePublished: p.date,
           dateModified: modified, // (2)
-          author: { "@type": "Person", name: p.author },
+          author: {
+            "@type": "Person",
+            name: p.author,
+            jobTitle: p.authorRole,
+            url: `https://lotus365id.com/authors/${authorSlugForName(p.author)}`,
+          },
           publisher: {
             "@type": "Organization",
             name: "Lotus365",
@@ -164,15 +165,37 @@ export const Route = createFileRoute("/blog/$slug")({
       },
     ];
 
-    if (faqEntities.length > 0) {
+    if (faqPairs.length > 0) {
       scripts.push({
         type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: faqEntities,
-        }),
+        children: JSON.stringify(toFaqPageJsonLd(faqPairs)),
       });
+    }
+
+    // (AEO fix) HowTo schema for posts that are genuinely step-by-step guides —
+    // matched by title rather than applied blog-wide, so it only covers posts
+    // that are actually instructional. Excludes the FAQ/closing sections.
+    if (/^how (to|do|does)\b/i.test(p.h1) || /^how (to|do|does)\b/i.test(p.title)) {
+      const stepSections = p.sections.filter(
+        (s) => !/frequently asked questions/i.test(s.heading) && !/bottom line/i.test(s.heading)
+      );
+      if (stepSections.length >= 2) {
+        scripts.push({
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: p.h1,
+            description: metaDesc,
+            step: stepSections.map((s, i) => ({
+              "@type": "HowToStep",
+              position: i + 1,
+              name: s.heading,
+              text: s.body,
+            })),
+          }),
+        });
+      }
     }
 
     return {

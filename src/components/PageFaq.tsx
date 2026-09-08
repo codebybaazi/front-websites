@@ -1,18 +1,35 @@
 import { useRouterState } from "@tanstack/react-router";
 import { Sparkles, HelpCircle } from "lucide-react";
 import { getPageFaqs } from "@/lib/page-faqs";
+import { toFaqPageJsonLd } from "@/lib/derive-page-faqs";
+import { ALL_PAGE_SLUGS } from "@/data/pages";
+import { ALL_GUIDE_SLUGS } from "@/data/guides";
+import { ALL_CASE_SLUGS } from "@/data/cases";
+
+const PAGE_SLUG_SET = new Set(ALL_PAGE_SLUGS);
+const GUIDE_SLUG_SET = new Set(ALL_GUIDE_SLUGS);
+const CASE_SLUG_SET = new Set(ALL_CASE_SLUGS);
 
 /**
- * Renders a page-specific FAQ section + FAQPage JSON-LD.
- * Reads the current pathname and derives 5 stable-but-unique Q&A per page.
- * Skips the home page (which ships its own hand-authored FAQ).
+ * Renders a page-specific FAQ section + FAQPage JSON-LD, but only as a
+ * fallback for routes that have no real page content to derive FAQs from
+ * (standalone .tsx routes like /lotus365-register or /matches).
+ *
+ * Skipped entirely for:
+ * - the home page (own hand-authored FAQ)
+ * - individual blog posts (own hand-authored FAQ + FAQPage schema)
+ * - any /$page, /betting-guides/$slug or /case-study/$slug route — those now
+ *   render a genuinely content-derived FaqBlock via ContentPage itself
+ *   (see src/lib/derive-page-faqs.ts), so this generic version would double up.
+ * - a handful of standalone pages that already ship their own hand-authored FAQ.
  */
 export function PageFaq() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
-  // Pages that already ship a hand-authored FAQ — skip to avoid duplicates.
   const clean = (pathname || "/").replace(/\/+$/, "") || "/";
-  const SKIP = new Set<string>([
+  const segments = clean.split("/").filter(Boolean);
+
+  const HANDWRITTEN_SKIP = new Set<string>([
     "/",
     "",
     "/lotus365-win",
@@ -29,19 +46,27 @@ export function PageFaq() {
     "/lotus365-vs-fairplay",
     "/lotus365-vs-lords-exchange",
   ]);
-  if (SKIP.has(clean)) return null;
+  if (HANDWRITTEN_SKIP.has(clean)) return null;
+
+  // Individual blog posts already own a unique FAQ + schema.
+  if (segments[0] === "blog" && segments.length === 2 && segments[1] !== "category") {
+    return null;
+  }
+  // Individual betting-guide / case-study pages now render their own derived FAQ.
+  if (segments[0] === "betting-guides" && segments.length === 2 && GUIDE_SLUG_SET.has(segments[1])) {
+    return null;
+  }
+  if (segments[0] === "case-study" && segments.length === 2 && CASE_SLUG_SET.has(segments[1])) {
+    return null;
+  }
+  // Any /$page route backed by real PageContent now renders its own derived FAQ.
+  if (segments.length === 1 && PAGE_SLUG_SET.has(segments[0])) {
+    return null;
+  }
 
   const { topic, faqs } = getPageFaqs(pathname);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
+  const jsonLd = toFaqPageJsonLd(faqs);
 
   return (
     <section

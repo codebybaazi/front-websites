@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { QuickLinks } from "@/components/QuickLinks";
 import { AiOverview } from "@/components/AiOverview";
 import { useWhatsAppUrl } from "@/components/WhatsAppProvider";
+import { toFaqPageJsonLd } from "@/lib/derive-page-faqs";
 import {
   Check,
   X,
@@ -227,15 +228,7 @@ export function compareHead(data: CompareData) {
       },
       {
         type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: data.faq.map((f) => ({
-            "@type": "Question",
-            name: f.q,
-            acceptedAnswer: { "@type": "Answer", text: f.a },
-          })),
-        }),
+        children: JSON.stringify(toFaqPageJsonLd(data.faq)),
       },
     ],
   };

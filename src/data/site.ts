@@ -253,6 +253,16 @@ export const siteName = "Lotus365";
 export const siteUrl = "https://lotus365id.com";
 export const supportLine = "Instant payouts · Verified · 24/7 concierge";
 
+/**
+ * Article schema dates for the static pages/guides/case-studies that don't
+ * carry their own per-item `date` field (unlike blog posts). Sourced from
+ * real git history, not invented: `git log` shows pages.ts/guides.ts/cases.ts
+ * first landed on 2026-07-22, and CONTENT_MODIFIED_DATE tracks the most
+ * recent site-wide content revision to that data.
+ */
+export const CONTENT_PUBLISHED_DATE = "2026-07-22";
+export const CONTENT_MODIFIED_DATE = "2026-09-08";
+
 /** Static fallback until the live JSON number hydrates. Prefer `useWhatsAppUrl()`. */
 export const whatsappUrl =
   "https://wa.me/918294924767?text=" +

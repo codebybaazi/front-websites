@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { WebMCPProvider } from "@/components/WebMCPProvider";
 import { WhatsAppProvider } from "@/components/WhatsAppProvider";
+import { FALLBACK_WA_DIGITS, normalizeWaNumber } from "@/lib/whatsapp";
 
 function NotFoundComponent() {
   return (
@@ -104,7 +105,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
-      // (6) hreflang — declare the India English variant as self-referential.
+      // (6) hreflang — single-market site (India, English only). en-in/x-default
+      // self-reference is intentional and complete; there is no other locale
+      // or region variant to declare, so no further hreflang entries are needed.
       { rel: "alternate", hrefLang: "en-in", href: "https://lotus365id.com/" },
       { rel: "alternate", hrefLang: "x-default", href: "https://lotus365id.com/" },
     ],
@@ -131,6 +134,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           contactPoint: {
             "@type": "ContactPoint",
             contactType: "customer support",
+            // (GEO fix) Same real support number already shown live on /contact-us,
+            // sourced from the fetchnumbers.json-backed WhatsApp system — not invented.
+            telephone: `+${normalizeWaNumber(FALLBACK_WA_DIGITS)}`,
             availableLanguage: ["en", "hi"],
             areaServed: "IN",
           },

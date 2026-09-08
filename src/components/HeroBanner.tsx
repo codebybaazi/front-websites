@@ -9,7 +9,7 @@ export function HeroBanner() {
         <div className="relative overflow-hidden rounded-tl-[48px] rounded-br-[48px] rounded-tr-md rounded-bl-md md:rounded-tl-[80px] md:rounded-br-[80px]">
           <img
             src={heroImage}
-            alt="Lotus365 — Get Your ID in 2 Minutes, Play & Win Big. Claim Your Winning Edge Today. Instant payouts, 100% secure, weekly cashback, 24/7 withdrawals. Trusted since 2016. India's #1 cricket exchange."
+            alt="Lotus365 hero banner with the brand's gold lotus emblem over cricket and live casino imagery"
             width={1920}
             height={1088}
             fetchPriority="high"

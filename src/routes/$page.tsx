@@ -1,6 +1,8 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { ContentPage, ContentNotFound } from "@/components/ContentPage";
 import { getPage, resolvePageSlug } from "@/data/pages";
+import { deriveFaqsFromPage, toFaqPageJsonLd } from "@/lib/derive-page-faqs";
+import { CONTENT_PUBLISHED_DATE, CONTENT_MODIFIED_DATE } from "@/data/site";
 
 export const Route = createFileRoute("/$page")({
   loader: ({ params }) => {
@@ -19,6 +21,10 @@ export const Route = createFileRoute("/$page")({
     }
     const p = loaderData.page;
     const url = `https://lotus365id.com/${resolvePageSlug(params.page)}`;
+    // (SEO fix) These 70+ static pages previously had no og:image — only the
+    // homepage did — so social shares fell back to a blank preview card.
+    // Reuse the real site-wide OG asset already in public/.
+    const ogImage = "https://lotus365id.com/og-lotus365.jpg";
     return {
       meta: [
         { title: p.title },
@@ -27,6 +33,11 @@ export const Route = createFileRoute("/$page")({
         { property: "og:description", content: p.description },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
+        { property: "og:image", content: ogImage },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:image", content: ogImage },
       ],
       links: [{ rel: "canonical", href: url }],
       scripts: [
@@ -37,7 +48,10 @@ export const Route = createFileRoute("/$page")({
             "@type": "Article",
             headline: p.title,
             description: p.description,
+            image: [ogImage],
             mainEntityOfPage: url,
+            datePublished: CONTENT_PUBLISHED_DATE,
+            dateModified: CONTENT_MODIFIED_DATE,
             author: { "@type": "Organization", name: "Lotus365" },
             publisher: {
               "@type": "Organization",
@@ -57,6 +71,18 @@ export const Route = createFileRoute("/$page")({
             ],
           }),
         },
+        // (AEO fix) FAQPage schema derived from this page's own intro/section
+        // text — genuinely unique per page, not a shared template.
+        ...(() => {
+          const faqs = deriveFaqsFromPage(p);
+          if (faqs.length === 0) return [];
+          return [
+            {
+              type: "application/ld+json",
+              children: JSON.stringify(toFaqPageJsonLd(faqs)),
+            },
+          ];
+        })(),
       ],
     };
   },

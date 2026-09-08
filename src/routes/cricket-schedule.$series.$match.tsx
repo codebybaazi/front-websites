@@ -4,6 +4,8 @@ import {
   findCricketMatch,
   cricketSeriesSlug,
   splitTeams,
+  clamp,
+  toISODate,
 } from "@/lib/match-slug";
 import type { CricketSeries, CricketMatch } from "@/data/schedule";
 
@@ -16,23 +18,19 @@ export const Route = createFileRoute("/cricket-schedule/$series/$match")({
   head: ({ loaderData, params }) => {
     if (!loaderData) return { meta: [{ title: "Match not found — Lotus365" }, { name: "robots", content: "noindex" }] };
     const { series, match } = loaderData;
-    const n = series.name.toLowerCase();
-    const isAsiaCup = /asia cup/.test(n);
-    const isIndZim = /zimbabwe/.test(n) && /india/.test(n);
-    const isWC = /world cup/.test(n);
-    const isIPL = /\bipl\b|indian premier league/.test(n);
-    const kwTail = isAsiaCup
-      ? "Asia Cup 2026 schedule, points table, live score & today's match"
-      : isIndZim
-        ? "IND vs ZIM 2026 schedule, head-to-head, live score & timeline"
-        : isWC
-          ? "ICC World Cup 2026 schedule, live score & points table"
-          : isIPL
-            ? "IPL 2026 schedule, live score, points table & today's match"
-            : "cricket schedule 2026, live score & today's match";
-    const title = `${match.teams} Match Prediction, Live Score & Betting Tips — ${match.match}, ${series.name} 2026 | Lotus365`;
-    const desc = `${match.teams} ${match.match} today's match prediction, live score, points table, Dream11 team, head-to-head, playing XI, toss update & cricket betting tips — ${match.date} at ${match.venue}. ${kwTail}.`;
+    // (SEO fix) Title/description are clamped to safe lengths (~60 / ~155 chars) —
+    // the raw team/series/venue strings alone previously ran past 200 characters.
+    const rawTitle = `${match.teams} — ${match.match} Prediction & Tips, ${series.name}`;
+    const title = `${clamp(rawTitle, 47)} | Lotus365`;
+    const rawDesc = `${match.teams} ${match.match} prediction, live score and betting tips for ${series.name} — ${match.date} at ${match.venue}.`;
+    const desc = clamp(rawDesc, 155);
     const canonical = `https://lotus365id.com/cricket-schedule/${params.series}/${params.match}`;
+    // (Schema fix) startDate must be ISO 8601 for SportsEvent to validate — the raw
+    // `match.date` field is a human-readable string like "Sun, 28 Jun 2026".
+    const isoDate = toISODate(match.date);
+    // (SEO fix) Reuse the real "cricket" category OG image already in public/og/ —
+    // match pages previously had no og:image at all.
+    const ogImage = "https://lotus365id.com/og/cricket.jpg";
     return {
       meta: [
         { title },
@@ -41,6 +39,11 @@ export const Route = createFileRoute("/cricket-schedule/$series/$match")({
         { property: "og:description", content: desc },
         { property: "og:url", content: canonical },
         { property: "og:type", content: "article" },
+        { property: "og:image", content: ogImage },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:image", content: ogImage },
       ],
       links: [{ rel: "canonical", href: canonical }],
       scripts: [
@@ -51,7 +54,8 @@ export const Route = createFileRoute("/cricket-schedule/$series/$match")({
             "@type": "SportsEvent",
             name: `${match.teams} — ${match.match}`,
             sport: "Cricket",
-            startDate: match.date,
+            ...(isoDate ? { startDate: isoDate } : {}),
+            image: [ogImage],
             location: { "@type": "Place", name: match.venue },
             superEvent: { "@type": "SportsEvent", name: series.name },
           }),

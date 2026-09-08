@@ -1,7 +1,13 @@
 // Auto-generated Lotus365 blog posts — unique, category-aware content.
 // Rebranded and rewritten for Lotus365; no source PII.
 
-export type PostSection = { heading: string; body: string; points?: string[] };
+export type PostSection = {
+  heading: string;
+  body: string;
+  points?: string[];
+  /** Optional comparison/reference table, rendered as real <table> markup for snippet eligibility. */
+  table?: { headers: string[]; rows: string[][] };
+};
 
 export type Post = {
   slug: string;
@@ -17,6 +23,8 @@ export type Post = {
   authorRole: string;
   readMinutes: number;
   sections: PostSection[];
+  /** Optional external authoritative sources, shown in the AI Overview block. */
+  sources?: { label: string; to: string }[];
 };
 
 export const POSTS: Post[] = [
@@ -9361,6 +9369,10 @@ export const POSTS: Post[] = [
         body: `Deposit and withdrawal limits on Lotus365 exist to keep money moving securely, not to slow you down. Verify early, use accurate payment details, and pick UPI when speed matters most — the rest takes care of itself.`,
       },
     ],
+    sources: [
+      { label: "NPCI — UPI transaction limits", to: "https://www.npci.org.in/what-we-do/upi/faqs" },
+      { label: "RBI — IMPS/NEFT settlement timings", to: "https://www.rbi.org.in/Scripts/FAQView.aspx?Id=76" },
+    ],
   },
   {
     slug: "lotus365-customer-care-guide-login-deposit-withdrawal-help",
@@ -10032,12 +10044,15 @@ export const POSTS: Post[] = [
       {
         heading: `The methods available on Lotus365`,
         body: `Each option trades off differently.`,
-        points: [
-          `UPI — fastest for most deposits and withdrawals, minimal setup`,
-          `Bank transfer (IMPS/NEFT/RTGS) — reliable for larger amounts`,
-          `Net banking — direct from your account, good for regular deposits`,
-          `Digital wallets — quick, with an added layer of privacy`,
-        ],
+        table: {
+          headers: ["Method", "Speed", "Best for"],
+          rows: [
+            ["UPI", "Fastest", "Most deposits and withdrawals, minimal setup"],
+            ["Bank transfer (IMPS/NEFT/RTGS)", "Slower for large amounts", "Larger, less frequent transfers"],
+            ["Net banking", "Standard", "Regular deposits direct from your account"],
+            ["Digital wallets", "Fast", "An added layer of privacy"],
+          ],
+        },
       },
       {
         heading: `Deposits versus withdrawals aren't always symmetric`,
@@ -10080,6 +10095,10 @@ export const POSTS: Post[] = [
         heading: `The bottom line`,
         body: `Picking the right payment method on Lotus365 comes down to matching speed and limits to what you actually need — UPI for most day-to-day transactions, bank transfer for larger ones. Verify details carefully, protect your credentials, and delays become the exception rather than the rule.`,
       },
+    ],
+    sources: [
+      { label: "NPCI — UPI overview", to: "https://www.npci.org.in/what-we-do/upi/product-overview" },
+      { label: "RBI — payment systems in India", to: "https://www.rbi.org.in/Scripts/PaymentSystems_UM.aspx" },
     ],
   },
   {
@@ -10989,12 +11008,15 @@ export const POSTS: Post[] = [
       {
         heading: `The payout math, worked through`,
         body: `The formula behind every round is simple: payout equals your wager multiplied by whatever multiplier you cashed out at.`,
-        points: [
-          `₹100 wager, cash out at 1.50x → ₹150 gross return`,
-          `₹100 wager, cash out at 2.00x → ₹200 gross return, ₹100 net gain`,
-          `₹300 wager, cash out at 2.50x → ₹750 gross return, ₹450 net gain`,
-          `₹500 wager, cash out at 5.00x → ₹2,500 gross return`,
-        ],
+        table: {
+          headers: ["Wager", "Cash-out multiplier", "Gross return", "Net gain"],
+          rows: [
+            ["₹100", "1.50x", "₹150", "₹50"],
+            ["₹100", "2.00x", "₹200", "₹100"],
+            ["₹300", "2.50x", "₹750", "₹450"],
+            ["₹500", "5.00x", "₹2,500", "₹2,000"],
+          ],
+        },
       },
       {
         heading: `Why waiting for a bigger multiplier isn't free`,

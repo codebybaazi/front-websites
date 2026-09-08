@@ -57,15 +57,20 @@ export function AiOverview({
             <span className="text-[10px] uppercase tracking-widest text-foreground/85">
               Sources
             </span>
-            {sources.map((s) => (
-              <a
-                key={s.to}
-                href={s.to}
-                className="text-xs text-primary hover:underline underline-offset-4"
-              >
-                {s.label}
-              </a>
-            ))}
+            {sources.map((s) => {
+              const isExternal = /^https?:\/\//i.test(s.to);
+              return (
+                <a
+                  key={s.to}
+                  href={s.to}
+                  {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  className="text-xs text-primary hover:underline underline-offset-4"
+                >
+                  {s.label}
+                  {isExternal && <span aria-hidden> ↗</span>}
+                </a>
+              );
+            })}
           </div>
         )}
       </div>

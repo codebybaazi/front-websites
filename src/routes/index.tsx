@@ -11,6 +11,7 @@ import { ExchangeGamesMarquee } from "@/components/ExchangeGamesMarquee";
 import { Reveal } from "@/components/Reveal";
 import { LiveTicker, AuroraBackdrop } from "@/components/LandingFx";
 import { useWhatsAppUrl } from "@/components/WhatsAppProvider";
+import { toFaqPageJsonLd, type Faq } from "@/lib/derive-page-faqs";
 
 
 import {
@@ -30,7 +31,7 @@ import {
 import vipLounge from "@/assets/vip-lounge.jpg";
 
 
-const faqs = [
+const faqs: Faq[] = [
   { q: "How do I get a Lotus365 betting ID?", a: "Tap Sign Up or message us on WhatsApp — share your name and mobile, and your verified Lotus365 ID lands in under a minute." },
   { q: "Which sports and casino games can I bet on?", a: "Cricket (IPL, T20 World Cup, WPL, bilateral series), football, tennis, kabaddi and esports — plus live Teen Patti, Andar Bahar, Dragon Tiger, Baccarat and Roulette on the casino floor." },
   { q: "How fast are UPI withdrawals?", a: "Most cricket and casino payouts settle to UPI, IMPS or NEFT in under 3 minutes. VIP members are prioritised inside 60 seconds." },
@@ -66,15 +67,7 @@ export const Route = createFileRoute("/")({
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: faqs.map((f) => ({
-            "@type": "Question",
-            name: f.q,
-            acceptedAnswer: { "@type": "Answer", text: f.a },
-          })),
-        }),
+        children: JSON.stringify(toFaqPageJsonLd(faqs)),
       },
       {
         type: "application/ld+json",

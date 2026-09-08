@@ -5,6 +5,7 @@ import { SiteFooter } from "./SiteFooter";
 import { QuickLinks } from "./QuickLinks";
 import { RelatedContent } from "./RelatedContent";
 import { AiOverview } from "./AiOverview";
+import { authorSlugForName } from "@/data/authors";
 import type { Post } from "@/data/posts";
 
 function formatDate(d: string) {
@@ -91,15 +92,19 @@ export function PostArticle({ post, related }: { post: Post; related: Post[] }) 
 
         {/* Meta strip */}
         <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-foreground/90 border-y border-primary/15 py-4">
-          <div className="flex items-center gap-2.5">
+          <Link
+            to="/authors/$slug"
+            params={{ slug: authorSlugForName(post.author) }}
+            className="flex items-center gap-2.5 group"
+          >
             <div className="h-9 w-9 rounded-full grid place-items-center bg-primary/15 text-primary text-xs font-semibold gold-border">
               {initials(post.author)}
             </div>
             <div className="leading-tight">
-              <div className="text-foreground font-medium">{post.author}</div>
+              <div className="text-foreground font-medium group-hover:text-primary transition-colors">{post.author}</div>
               <div className="text-[11px] text-foreground/85">{post.authorRole}</div>
             </div>
-          </div>
+          </Link>
           <div className="inline-flex items-center gap-1.5">
             <Calendar className="h-4 w-4 text-primary/70" />
             {formatDate(post.date)}
@@ -159,6 +164,7 @@ export function PostArticle({ post, related }: { post: Post; related: Post[] }) 
       <AiOverview
         summary={post.excerpt}
         points={post.sections.slice(0, 4).map((s) => s.heading)}
+        sources={post.sources}
       />
       <div className="pb-12 md:pb-16" />
 
@@ -184,6 +190,36 @@ export function PostArticle({ post, related }: { post: Post; related: Post[] }) 
                   ))}
                 </ul>
               )}
+              {sec.table && (
+                <div className="mt-5 overflow-x-auto rounded-xl border border-primary/15">
+                  <table className="w-full text-sm text-left border-collapse">
+                    <thead>
+                      <tr className="bg-primary/10">
+                        {sec.table.headers.map((h) => (
+                          <th
+                            key={h}
+                            scope="col"
+                            className="px-4 py-2.5 font-semibold text-foreground text-xs uppercase tracking-wide whitespace-nowrap"
+                          >
+                            {h}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {sec.table.rows.map((row, ri) => (
+                        <tr key={ri} className={ri % 2 ? "bg-transparent" : "bg-primary/5"}>
+                          {row.map((cell, ci) => (
+                            <td key={ci} className="px-4 py-2.5 text-foreground/90">
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
             </div>
           </section>
         ))}
@@ -191,7 +227,11 @@ export function PostArticle({ post, related }: { post: Post; related: Post[] }) 
 
       {/* Author card */}
       <section className="mx-auto max-w-4xl px-6 pb-14">
-        <div className="glass-card rounded-2xl p-7 flex items-start gap-5">
+        <Link
+          to="/authors/$slug"
+          params={{ slug: authorSlugForName(post.author) }}
+          className="glass-card rounded-2xl p-7 flex items-start gap-5 group hover:border-primary/40 transition-colors"
+        >
           <div className="h-14 w-14 rounded-full grid place-items-center bg-primary/15 text-primary text-base font-semibold gold-border shrink-0">
             {initials(post.author)}
           </div>
@@ -199,14 +239,17 @@ export function PostArticle({ post, related }: { post: Post; related: Post[] }) 
             <div className="text-xs uppercase tracking-[0.3em] text-primary/70 mb-1">
               Written by
             </div>
-            <div className="font-display text-lg">{post.author}</div>
+            <div className="font-display text-lg group-hover:text-primary transition-colors">{post.author}</div>
             <div className="text-sm text-foreground/95 mb-2">{post.authorRole}</div>
             <p className="text-sm text-foreground/90 max-w-xl">
               Part of the Lotus365 editorial desk — covering onboarding, payments, live
               markets and player safety with hands-on experience.
             </p>
+            <div className="mt-3 text-primary text-sm inline-flex items-center gap-1">
+              View full bio & articles <ChevronRight className="h-4 w-4" />
+            </div>
           </div>
-        </div>
+        </Link>
       </section>
 
       {/* Related */}

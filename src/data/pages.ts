@@ -7,6 +7,8 @@ export type PageSection = {
   heading: string;
   body: string;
   points?: string[];
+  /** Optional comparison/reference table, rendered as real <table> markup for snippet eligibility. */
+  table?: { headers: string[]; rows: string[][] };
 };
 
 export type PageContent = {
@@ -18,6 +20,8 @@ export type PageContent = {
   intro: string;
   sections: PageSection[];
   cta?: { title: string; body: string; label: string };
+  /** Optional external authoritative sources, shown in the AI Overview block. */
+  sources?: { label: string; to: string }[];
 };
 
 const defaultCta = {
@@ -116,7 +120,7 @@ export const PAGES: Record<string, PageContent> = {
       },
       {
         heading: "Disputes",
-        body: "If something's wrong, contact support first. Unresolved disputes may be escalated to the licensing authority named on our footer.",
+        body: "If something's wrong, contact support first. Unresolved disputes may be escalated to our Curaçao gaming licensing authority.",
       },
     ],
   },
@@ -137,7 +141,15 @@ export const PAGES: Record<string, PageContent> = {
       },
       {
         heading: "Weekly cashback",
-        body: "Automatic every Monday — 5% for Silver, 10% for Gold, up to 20% for VIP. No opt-in, no minimum, credited as real cash.",
+        body: "Automatic every Monday — credited as real cash, no opt-in and no minimum. Rate scales with your account tier.",
+        table: {
+          headers: ["Tier", "Cashback rate", "Opt-in required"],
+          rows: [
+            ["Silver", "5%", "No"],
+            ["Gold", "10%", "No"],
+            ["VIP", "Up to 20%", "No"],
+          ],
+        },
       },
       {
         heading: "Refer a friend",
@@ -146,6 +158,19 @@ export const PAGES: Record<string, PageContent> = {
       {
         heading: "Reload bonus",
         body: "Every Friday, top up and get 25% back as a bonus, up to ₹5,000. Perfect timing for weekend cricket and IPL windows.",
+      },
+      {
+        heading: "All current bonuses at a glance",
+        body: "A quick side-by-side of every active offer, its value, and what you need to do to trigger it.",
+        table: {
+          headers: ["Bonus", "Value", "Trigger"],
+          rows: [
+            ["Welcome bonus", "Up to ₹25,000 (12× wagering)", "First deposit"],
+            ["Weekly cashback", "5–20% by tier", "Automatic every Monday"],
+            ["Refer a friend", "₹500 per referral", "Friend clears first deposit"],
+            ["Reload bonus", "25% up to ₹5,000", "Deposit on Friday"],
+          ],
+        },
       },
     ],
   },
@@ -439,7 +464,7 @@ export const PAGES: Record<string, PageContent> = {
 
   "horse-race-betting": {
     slug: "horse-race-betting",
-    title: "Horse Race Betting on Lotus365 — UK, India, & International Meets",
+    title: "Horse Race Betting on Lotus365 — UK & India Meets",
     description:
       "Place horse racing bets on Lotus365 across UK, Indian, and international meets — win, place, each way, exacta, and multi-leg wagers.",
     eyebrow: "Sports",
@@ -1033,6 +1058,10 @@ export const PAGES: Record<string, PageContent> = {
         body: "See our deposit issues page for the fixes — 90% of cases resolve in under five minutes.",
       },
     ],
+    sources: [
+      { label: "NPCI — UPI overview", to: "https://www.npci.org.in/what-we-do/upi/product-overview" },
+      { label: "RBI — payment systems in India", to: "https://www.rbi.org.in/Scripts/PaymentSystems_UM.aspx" },
+    ],
   },
 
   "how-to-withdraw-safely": {
@@ -1061,6 +1090,10 @@ export const PAGES: Record<string, PageContent> = {
         heading: "Withdrawal safety",
         body: "Withdrawals only go to accounts in your name. Anything else is auto-rejected — a feature, not a bug.",
       },
+    ],
+    sources: [
+      { label: "NPCI — UPI overview", to: "https://www.npci.org.in/what-we-do/upi/product-overview" },
+      { label: "RBI — IMPS/NEFT settlement timings", to: "https://www.rbi.org.in/Scripts/FAQView.aspx?Id=76" },
     ],
   },
 
@@ -1243,16 +1276,34 @@ export const PAGES: Record<string, PageContent> = {
     sections: [
       {
         heading: "Deposits",
-        body: "UPI: ₹100 minimum, ₹1,00,000 per transaction. Bank: ₹500 minimum, ₹5,00,000 per transaction. No daily cap for verified accounts.",
+        body: "No daily deposit cap applies to verified accounts — limits below are per-transaction.",
+        table: {
+          headers: ["Method", "Minimum", "Maximum per transaction"],
+          rows: [
+            ["UPI", "₹100", "₹1,00,000"],
+            ["Bank transfer", "₹500", "₹5,00,000"],
+          ],
+        },
       },
       {
         heading: "Withdrawals",
-        body: "UPI: ₹100 minimum, ₹1,00,000 per transaction. Bank: ₹500 minimum, ₹10,00,000 per transaction. Silver/Gold/VIP tiers unlock higher daily caps.",
+        body: "Silver, Gold and VIP tiers unlock higher daily withdrawal caps on top of the per-transaction limits below.",
+        table: {
+          headers: ["Method", "Minimum", "Maximum per transaction"],
+          rows: [
+            ["UPI", "₹100", "₹1,00,000"],
+            ["Bank transfer", "₹500", "₹10,00,000"],
+          ],
+        },
       },
       {
         heading: "How to request a higher limit",
         body: "VIP members can request bespoke caps by contacting their account manager.",
       },
+    ],
+    sources: [
+      { label: "NPCI — UPI transaction limits", to: "https://www.npci.org.in/what-we-do/upi/faqs" },
+      { label: "RBI — payment systems in India", to: "https://www.rbi.org.in/Scripts/PaymentSystems_UM.aspx" },
     ],
   },
 
@@ -1770,7 +1821,7 @@ export const PAGES: Record<string, PageContent> = {
   },
   casino: {
     slug: "casino",
-    title: "Live Casino on Lotus365 — Roulette, Baccarat, Blackjack, Slots",
+    title: "Live Casino on Lotus365 — Roulette, Baccarat & Slots",
     description:
       "Play HD live casino on Lotus365 — Roulette, Baccarat, Blackjack, and premium slots, streamed from regulated studios with audited fair-play.",
     eyebrow: "Casino",

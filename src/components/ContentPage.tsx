@@ -1,13 +1,29 @@
 import { Link } from "@tanstack/react-router";
-import { ChevronRight, Sparkles, Check } from "lucide-react";
+import { ChevronRight, Sparkles, Check, MessageCircle } from "lucide-react";
 import { SiteHeader } from "./SiteHeader";
 import { SiteFooter } from "./SiteFooter";
 import { QuickLinks } from "./QuickLinks";
 import { RelatedContent } from "./RelatedContent";
 import { AiOverview } from "./AiOverview";
+import { FaqBlock } from "./FaqBlock";
+import { useWhatsApp } from "./WhatsAppProvider";
+import { deriveFaqsFromPage } from "@/lib/derive-page-faqs";
 import type { PageContent } from "@/data/pages";
 
+/** "918294924767" -> "+91 82949 24767" */
+function formatPhoneDisplay(digits: string): string | null {
+  if (!/^\d{10,15}$/.test(digits)) return null;
+  const cc = digits.slice(0, digits.length - 10);
+  const local = digits.slice(-10);
+  return `+${cc} ${local.slice(0, 5)} ${local.slice(5)}`;
+}
+
 export function ContentPage({ page }: { page: PageContent }) {
+  // Real, live support number — sourced from fetchnumbers.json via WhatsAppProvider,
+  // not a hardcoded placeholder. Rendered next to any section actually about WhatsApp.
+  const { number, url } = useWhatsApp();
+  const displayNumber = formatPhoneDisplay(number);
+
   return (
     <div className="min-h-screen text-foreground">
       <SiteHeader />
@@ -46,6 +62,7 @@ export function ContentPage({ page }: { page: PageContent }) {
       <AiOverview
         summary={page.intro || page.description}
         points={page.sections.slice(0, 4).map((s) => s.heading)}
+        sources={page.sources}
       />
       <div className="pb-12 md:pb-16" />
 
@@ -79,6 +96,50 @@ export function ContentPage({ page }: { page: PageContent }) {
                       </li>
                     ))}
                   </ul>
+                )}
+                {section.table && (
+                  <div className="mt-5 overflow-x-auto rounded-xl border border-primary/15">
+                    <table className="w-full text-sm text-left border-collapse">
+                      <thead>
+                        <tr className="bg-primary/10">
+                          {section.table.headers.map((h) => (
+                            <th
+                              key={h}
+                              scope="col"
+                              className="px-4 py-2.5 font-semibold text-foreground text-xs uppercase tracking-wide whitespace-nowrap"
+                            >
+                              {h}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {section.table.rows.map((row, ri) => (
+                          <tr
+                            key={ri}
+                            className={ri % 2 ? "bg-transparent" : "bg-primary/5"}
+                          >
+                            {row.map((cell, ci) => (
+                              <td key={ci} className="px-4 py-2.5 text-foreground/90 whitespace-nowrap">
+                                {cell}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+                {/^whatsapp$/i.test(section.heading) && displayNumber && (
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-flex items-center gap-2 text-primary font-medium hover:underline underline-offset-4"
+                  >
+                    <MessageCircle className="h-4 w-4" />
+                    {displayNumber} — Chat on WhatsApp
+                  </a>
                 )}
               </div>
             </article>
@@ -121,6 +182,8 @@ export function ContentPage({ page }: { page: PageContent }) {
           </div>
         </div>
       </section>
+
+      <FaqBlock topic={page.eyebrow} faqs={deriveFaqsFromPage(page)} />
 
       <RelatedContent currentPath={`/${page.slug}`} />
       <QuickLinks

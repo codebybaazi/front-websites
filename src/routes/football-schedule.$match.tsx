@@ -1,6 +1,6 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { MatchDetailPage } from "@/components/MatchDetailPage";
-import { findFootballMatch, footballMatchSlug, splitTeams } from "@/lib/match-slug";
+import { findFootballMatch, footballMatchSlug, splitTeams, clamp, toISODate } from "@/lib/match-slug";
 import { footballMatches, type FootballMatch } from "@/data/schedule";
 
 export const Route = createFileRoute("/football-schedule/$match")({
@@ -12,19 +12,31 @@ export const Route = createFileRoute("/football-schedule/$match")({
   head: ({ loaderData, params }) => {
     if (!loaderData) return { meta: [{ title: "Match not found — Lotus365" }, { name: "robots", content: "noindex" }] };
     const m = loaderData.match;
-    const title = `${m.match} Prediction & Betting Odds — ${m.stage}, FIFA World Cup 2026 | Lotus365`;
-    const desc = `${m.match} today match prediction, football betting odds & live score — ${m.stage}, ${m.date} at ${m.venue}. Who will win today? AI football prediction, projected score, HT/FT, BTTS & goal markets for FIFA World Cup 2026.`;
-    const keywords = `${m.match} prediction, ${m.match} betting odds, ${m.match} live score, today match prediction, football prediction today, football bets today, football betting, match prediction, who will win today football match prediction, FIFA World Cup 2026 betting, ${m.stage} prediction`;
+    // (SEO fix) Clamped to safe lengths; the old `keywords` meta tag was removed —
+    // it's ignored by modern search engines and was pure keyword stuffing.
+    const rawTitle = `${m.match} — ${m.stage.split("·")[0].trim()} Prediction & Odds`;
+    const title = `${clamp(rawTitle, 47)} | Lotus365`;
+    const rawDesc = `${m.match} prediction, betting odds and live score for ${m.stage} — ${m.date} at ${m.venue}. FIFA World Cup 2026.`;
+    const desc = clamp(rawDesc, 155);
     const canonical = `https://lotus365id.com/football-schedule/${params.match}`;
+    // (Schema fix) startDate must be ISO 8601 to validate.
+    const isoDate = toISODate(m.date);
+    // (SEO fix) Reuse the real "football" category OG image already in public/og/ —
+    // match pages previously had no og:image at all.
+    const ogImage = "https://lotus365id.com/og/football.jpg";
     return {
       meta: [
         { title },
         { name: "description", content: desc },
-        { name: "keywords", content: keywords },
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
         { property: "og:url", content: canonical },
         { property: "og:type", content: "article" },
+        { property: "og:image", content: ogImage },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:image", content: ogImage },
       ],
       links: [{ rel: "canonical", href: canonical }],
       scripts: [
@@ -35,7 +47,8 @@ export const Route = createFileRoute("/football-schedule/$match")({
             "@type": "SportsEvent",
             name: `${m.match} — ${m.stage}`,
             sport: "Football",
-            startDate: m.date,
+            ...(isoDate ? { startDate: isoDate } : {}),
+            image: [ogImage],
             location: { "@type": "Place", name: m.venue },
             superEvent: { "@type": "SportsEvent", name: "FIFA World Cup 2026" },
           }),

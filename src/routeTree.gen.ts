@@ -36,6 +36,7 @@ import { Route as WaNumbersDotjsonRouteImport } from './routes/wa-numbers[.]json
 import { Route as DotwellKnownOauthAuthorizationServerRouteImport } from './routes/[.]well-known.oauth-authorization-server'
 import { Route as DotwellKnownOauthProtectedResourceRouteImport } from './routes/[.]well-known.oauth-protected-resource'
 import { Route as DotwellKnownOpenidConfigurationRouteImport } from './routes/[.]well-known.openid-configuration'
+import { Route as AuthorsSlugRouteImport } from './routes/authors.$slug'
 import { Route as BettingGuidesSlugRouteImport } from './routes/betting-guides.$slug'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
@@ -186,6 +187,11 @@ const DotwellKnownOpenidConfigurationRoute =
     path: '/.well-known/openid-configuration',
     getParentRoute: () => rootRouteImport,
   } as any)
+const AuthorsSlugRoute = AuthorsSlugRouteImport.update({
+  id: '/authors/$slug',
+  path: '/authors/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BettingGuidesSlugRoute = BettingGuidesSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -275,6 +281,7 @@ export interface FileRoutesByFullPath {
   '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
   '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
   '/.well-known/openid-configuration': typeof DotwellKnownOpenidConfigurationRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/betting-guides/$slug': typeof BettingGuidesSlugRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/case-study/$slug': typeof CaseStudySlugRoute
@@ -314,6 +321,7 @@ export interface FileRoutesByTo {
   '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
   '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
   '/.well-known/openid-configuration': typeof DotwellKnownOpenidConfigurationRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/betting-guides/$slug': typeof BettingGuidesSlugRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/case-study/$slug': typeof CaseStudySlugRoute
@@ -355,6 +363,7 @@ export interface FileRoutesById {
   '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
   '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
   '/.well-known/openid-configuration': typeof DotwellKnownOpenidConfigurationRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/betting-guides/$slug': typeof BettingGuidesSlugRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/case-study/$slug': typeof CaseStudySlugRoute
@@ -397,6 +406,7 @@ export interface FileRouteTypes {
     | '/.well-known/oauth-authorization-server'
     | '/.well-known/oauth-protected-resource'
     | '/.well-known/openid-configuration'
+    | '/authors/$slug'
     | '/betting-guides/$slug'
     | '/blog/$slug'
     | '/case-study/$slug'
@@ -436,6 +446,7 @@ export interface FileRouteTypes {
     | '/.well-known/oauth-authorization-server'
     | '/.well-known/oauth-protected-resource'
     | '/.well-known/openid-configuration'
+    | '/authors/$slug'
     | '/betting-guides/$slug'
     | '/blog/$slug'
     | '/case-study/$slug'
@@ -476,6 +487,7 @@ export interface FileRouteTypes {
     | '/.well-known/oauth-authorization-server'
     | '/.well-known/oauth-protected-resource'
     | '/.well-known/openid-configuration'
+    | '/authors/$slug'
     | '/betting-guides/$slug'
     | '/blog/$slug'
     | '/case-study/$slug'
@@ -517,6 +529,7 @@ export interface RootRouteChildren {
   DotwellKnownOauthAuthorizationServerRoute: typeof DotwellKnownOauthAuthorizationServerRoute
   DotwellKnownOauthProtectedResourceRoute: typeof DotwellKnownOauthProtectedResourceRoute
   DotwellKnownOpenidConfigurationRoute: typeof DotwellKnownOpenidConfigurationRoute
+  AuthorsSlugRoute: typeof AuthorsSlugRoute
   FootballScheduleMatchRoute: typeof FootballScheduleMatchRoute
   DotwellKnownAgentSkillsIndexDotjsonRoute: typeof DotwellKnownAgentSkillsIndexDotjsonRoute
   DotwellKnownMcpServerCardDotjsonRoute: typeof DotwellKnownMcpServerCardDotjsonRoute
@@ -716,6 +729,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DotwellKnownOpenidConfigurationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/authors/$slug': {
+      id: '/authors/$slug'
+      path: '/authors/$slug'
+      fullPath: '/authors/$slug'
+      preLoaderRoute: typeof AuthorsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/betting-guides/$slug': {
       id: '/betting-guides/$slug'
       path: '/$slug'
@@ -864,6 +884,7 @@ const rootRouteChildren: RootRouteChildren = {
   DotwellKnownOauthProtectedResourceRoute:
     DotwellKnownOauthProtectedResourceRoute,
   DotwellKnownOpenidConfigurationRoute: DotwellKnownOpenidConfigurationRoute,
+  AuthorsSlugRoute: AuthorsSlugRoute,
   FootballScheduleMatchRoute: FootballScheduleMatchRoute,
   DotwellKnownAgentSkillsIndexDotjsonRoute:
     DotwellKnownAgentSkillsIndexDotjsonRoute,

@@ -1,6 +1,6 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { MatchDetailPage } from "@/components/MatchDetailPage";
-import { findTennisRound, tennisEventSlug, tennisRounds } from "@/lib/match-slug";
+import { findTennisRound, tennisEventSlug, tennisRounds, clamp, parseDateRangeToISO } from "@/lib/match-slug";
 import { tennisEvents, type TennisEvent } from "@/data/schedule";
 
 export const Route = createFileRoute("/tennis-schedule/$event/$round")({
@@ -12,23 +12,33 @@ export const Route = createFileRoute("/tennis-schedule/$event/$round")({
   head: ({ loaderData, params }) => {
     if (!loaderData) return { meta: [{ title: "Round not found — Lotus365" }, { name: "robots", content: "noindex" }] };
     const { event, round } = loaderData;
-    const isSlamHead = event.category === "Grand Slam";
-    const kwTail = isSlamHead
-      ? `${event.name} 2026 draw, order of play, live score & schedule`
-      : `ATP/WTA ${event.name} 2026 draw, schedule & live score`;
-    const title = `${event.name} ${round.label} 2026 — Tennis Prediction & Live Odds | Lotus365`;
-    const desc = `${event.name} ${round.label} tennis prediction, live odds & today tennis match prediction — ${event.dates} at ${event.location} (${event.surface}). Player picks, predicted score, set betting & ATP/WTA markets. ${kwTail}.`;
-    const keywords = `${event.name} ${round.label} prediction, ${event.name} tennis prediction, tennis prediction, tennis predictions today, today tennis match prediction, tennis match prediction, live tennis odds, tennis betting, tennis betting tips, ${event.tour} ${event.name} 2026`;
+    // (SEO fix) Clamped to safe lengths; the old `keywords` meta tag was removed —
+    // it's ignored by modern search engines and was pure keyword stuffing.
+    const rawTitle = `${event.name} ${round.label} — Prediction & Odds`;
+    const title = `${clamp(rawTitle, 47)} | Lotus365`;
+    const rawDesc = `${event.name} ${round.label} prediction, live odds and set betting tips — ${event.dates} at ${event.location} (${event.surface}).`;
+    const desc = clamp(rawDesc, 155);
     const canonical = `https://lotus365id.com/tennis-schedule/${params.event}/${params.round}`;
+    // (Schema fix) startDate/endDate must be ISO 8601 to validate — `event.dates` is a
+    // human-readable range like "11 Jan – 1 Feb 2026".
+    const { start, end } = parseDateRangeToISO(event.dates);
+    // (SEO fix) No dedicated "tennis" category image exists in public/og/ (only
+    // cricket/football/casino/platform/guides), so fall back to the real site-wide
+    // OG asset — match pages previously had no og:image at all.
+    const ogImage = "https://lotus365id.com/og-lotus365.jpg";
     return {
       meta: [
         { title },
         { name: "description", content: desc },
-        { name: "keywords", content: keywords },
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
         { property: "og:url", content: canonical },
         { property: "og:type", content: "article" },
+        { property: "og:image", content: ogImage },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:image", content: ogImage },
       ],
       links: [{ rel: "canonical", href: canonical }],
       scripts: [
@@ -39,7 +49,9 @@ export const Route = createFileRoute("/tennis-schedule/$event/$round")({
             "@type": "SportsEvent",
             name: `${event.name} — ${round.label}`,
             sport: "Tennis",
-            startDate: event.dates,
+            ...(start ? { startDate: start } : {}),
+            ...(end ? { endDate: end } : {}),
+            image: [ogImage],
             location: { "@type": "Place", name: event.location },
             superEvent: { "@type": "SportsEvent", name: event.name },
           }),

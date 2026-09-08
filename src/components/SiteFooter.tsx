@@ -213,7 +213,7 @@ export function SiteFooter() {
         >
           <div className="inline-flex items-center gap-2">
             <ShieldCheck className="h-4 w-4 text-primary" />
-            Regulated & audited — play responsibly, 18+ only.
+            Licensed under Curaçao gaming law — play responsibly, 18+ only.
           </div>
           <div className="flex md:justify-center gap-3">
             {socials.map(({ label, href, Icon }) => (
