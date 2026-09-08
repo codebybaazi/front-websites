@@ -5,8 +5,10 @@ import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
 import { AIOverview } from "@/components/AIOverview";
 import { BlogHeroBanner } from "@/components/BlogHeroBanner";
+import { fetchWhatsAppNumber } from "@/lib/whatsapp";
 
-function faqsForPost(post: { title: string; category: string }): FAQItem[] {
+function faqsForPost(post: { title: string; category: string; faq?: FAQItem[] }): FAQItem[] {
+  if (post.faq && post.faq.length > 0) return post.faq;
   const t = post.title;
   const c = post.category;
   return [
@@ -35,16 +37,17 @@ function faqsForPost(post: { title: string; category: string }): FAQItem[] {
 
 
 export const Route = createFileRoute("/blog/$slug")({
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
     const post = posts.find((p) => p.slug === params.slug);
     if (!post) throw notFound();
-    return { post };
+    const waNumber = await fetchWhatsAppNumber();
+    return { post, waNumber };
   },
   head: ({ loaderData, params }) => {
     if (!loaderData) {
       return { meta: [{ title: "Post not found — Mahadev Book" }, { name: "robots", content: "noindex" }] };
     }
-    const { post } = loaderData;
+    const { post, waNumber } = loaderData;
     const shortTitle = post.title.length > 60 ? post.title.slice(0, 57).trimEnd() + "…" : post.title;
     const canonicalPath = `https://mahadevbookss.com/blog/${params.slug}`;
     return {
@@ -74,7 +77,20 @@ export const Route = createFileRoute("/blog/$slug")({
             articleSection: post.category,
             image: "https://mahadevbookss.com/og-image.jpg",
             mainEntityOfPage: { "@type": "WebPage", "@id": canonicalPath },
-            author: { "@type": "Organization", name: "Mahadev Book", url: "https://mahadevbookss.com/" },
+            author: {
+              "@type": "Organization",
+              name: "Mahadev Book Editorial Team",
+              url: "https://mahadevbookss.com/about",
+              ...(waNumber
+                ? {
+                    contactPoint: {
+                      "@type": "ContactPoint",
+                      contactType: "editorial",
+                      telephone: `+${waNumber}`,
+                    },
+                  }
+                : {}),
+            },
             publisher: {
               "@type": "Organization",
               name: "Mahadev Book",
@@ -95,6 +111,15 @@ export const Route = createFileRoute("/blog/$slug")({
           }),
         },
         { type: "application/ld+json", children: JSON.stringify(faqJsonLd(faqsForPost(post))) },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            url: canonicalPath,
+            speakable: { "@type": "SpeakableSpecification", cssSelector: [".ai-overview-speakable"] },
+          }),
+        },
       ],
     };
   },

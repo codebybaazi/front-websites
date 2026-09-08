@@ -41,6 +41,15 @@ export const Route = createFileRoute("/services")({
           ],
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          url: "https://mahadevbookss.com/services",
+          speakable: { "@type": "SpeakableSpecification", cssSelector: [".ai-overview-speakable"] },
+        }),
+      },
     ],
   }),
   component: ServicesPage,

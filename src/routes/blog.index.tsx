@@ -42,6 +42,15 @@ export const Route = createFileRoute("/blog/")({
           ],
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          url: "https://mahadevbookss.com/blog",
+          speakable: { "@type": "SpeakableSpecification", cssSelector: [".ai-overview-speakable"] },
+        }),
+      },
     ],
   }),
   component: BlogIndex,
@@ -124,6 +133,7 @@ function BlogIndex() {
                   category={p.category}
                   slug={p.slug}
                   className="block w-full h-auto"
+                  compact
                 />
               </div>
               <div className="p-6 flex flex-col flex-1">

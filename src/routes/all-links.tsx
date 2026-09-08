@@ -12,7 +12,7 @@ export const Route = createFileRoute("/all-links")({
   head: () => ({
     meta: [
       { title: "All Links — Full Sitemap of Mahadev Book" },
-      { name: "description", content: "Browse every page on Mahadev Book in one place — home, about, sports, platforms, guides, support, predictions, schedule, matches, blog posts and comparison pages." },
+      { name: "description", content: "Browse every page on Mahadev Book in one place — sports, platforms, guides, support, predictions, schedule, matches, blog and comparison pages." },
       { property: "og:title", content: "All Links — Full Sitemap of Mahadev Book" },
       { property: "og:description", content: "Every Mahadev Book page in one index — navigation, matches, blog, guides, support and policies." },
       { property: "og:url", content: "https://mahadevbookss.com/all-links" },

@@ -70,7 +70,7 @@ export const Route = createFileRoute("/schedule")({
   head: () => ({
     meta: [
       { title: "T20 World Cup 2026 Schedule, IPL Match Today & Live Cricket" },
-      { name: "description", content: "T20 World Cup 2026 schedule, ICC T20 World Cup fixtures, IPL match today, women's cricket World Cup schedule and live cricket score for every India, England, Australia series." },
+      { name: "description", content: "T20 World Cup 2026 schedule, IPL match today, women's cricket World Cup schedule and live score for every India, England, Australia series." },
       { name: "keywords", content: "world cup 2026, fifa world cup 2026, world cup 2026 schedule, world cup 2026 fixtures, fifa world cup 2026 final, soccer games today, us open, us open tennis, us open tennis 2026, us open schedule, atp, atp finals, atp finals 2026, tennis grand slam schedule, australian open schedule, tennis tournaments, t20 world cup 2026, t20 world cup schedule, icc t20 world cup, ipl match today, ipl live score, women's cricket world cup schedule, live cricket score, today cricket match, cricket schedule 2026, ind vs eng, india vs england 2026, cricbuzz, cricinfo" },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
       { property: "og:title", content: "T20 World Cup 2026 Schedule, IPL Match Today & Live Cricket" },
@@ -114,6 +114,15 @@ export const Route = createFileRoute("/schedule")({
               sport: s.sport,
             },
           })),
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          url: "https://mahadevbookss.com/schedule",
+          speakable: { "@type": "SpeakableSpecification", cssSelector: [".ai-overview-speakable"] },
         }),
       },
     ],

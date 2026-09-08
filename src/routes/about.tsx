@@ -16,7 +16,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Mahadev Book — India's Trusted Cricket ID Provider" },
-      { name: "description", content: "Mahadev Book is India's trusted online cricket ID provider since 2010 — verified betting IDs, instant UPI payouts and real 24/7 human support for over a million players." },
+      { name: "description", content: "Mahadev Book is India's trusted online cricket ID provider since 2010 — verified IDs, instant UPI payouts and real 24/7 support for a million players." },
       { property: "og:title", content: "About Mahadev Book — India's Trusted Cricket ID Provider" },
       { property: "og:description", content: "15 years of verified cricket IDs, honest payouts and real human support — this is how Mahadev Book earned India's trust." },
       { property: "og:url", content: "https://mahadevbookss.com/about" },
@@ -40,6 +40,28 @@ export const Route = createFileRoute("/about")({
           ],
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          url: "https://mahadevbookss.com/about",
+          speakable: { "@type": "SpeakableSpecification", cssSelector: [".ai-overview-speakable"] },
+        }),
+      },
+      // Real testimonials already shown on this page (see `testimonials` below),
+      // marked up as Review structured data. No rating value is included since
+      // none exists in the source content — only what's genuinely published.
+      ...testimonials.map((t) => ({
+        type: "application/ld+json" as const,
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Review",
+          reviewBody: t.q,
+          author: { "@type": "Person", name: t.n },
+          itemReviewed: { "@type": "Organization", name: "Mahadev Book", url: "https://mahadevbookss.com/" },
+        }),
+      })),
     ],
   }),
 

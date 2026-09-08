@@ -90,6 +90,15 @@ export const Route = createFileRoute("/mahadev-betting-app")({
           ],
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          url: "https://mahadevbookss.com/mahadev-betting-app",
+          speakable: { "@type": "SpeakableSpecification", cssSelector: [".ai-overview-speakable"] },
+        }),
+      },
     ],
   }),
   component: Page,

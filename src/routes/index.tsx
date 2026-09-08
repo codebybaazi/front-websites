@@ -57,6 +57,30 @@ export const Route = createFileRoute("/")({
     links: [{ rel: "canonical", href: "https://mahadevbookss.com/" }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(faqJsonLd(homeFaqs)) },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          name: "How to get started with Mahadev Book",
+          description: "The 5-step process to get a verified Mahadev Book ID and start betting.",
+          step: steps.map((s) => ({
+            "@type": "HowToStep",
+            position: Number(s.n),
+            name: s.t,
+            text: s.d,
+          })),
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          url: "https://mahadevbookss.com/",
+          speakable: { "@type": "SpeakableSpecification", cssSelector: [".ai-overview-speakable"] },
+        }),
+      },
     ],
   }),
   loader: async (): Promise<{ inPlayEvents: ApiEvent[] }> => ({
@@ -327,10 +351,10 @@ function Index() {
                 Since 2010 · Trusted by 1M+
               </span>
             </div>
-            <h2 className="mt-4 font-display text-4xl sm:text-5xl font-bold tracking-tight leading-[1.05]">
+            <h1 className="mt-4 font-display text-4xl sm:text-5xl font-bold tracking-tight leading-[1.05]">
               India's most trusted <br className="hidden sm:block" />
               <span className="text-gradient-gold">betting ID</span>, refined for winners.
-            </h2>
+            </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl">
               A single verified ID unlocks sports exchanges, live casinos and instant games — engineered for razor-sharp odds, bank-grade security and payouts that actually land.
             </p>

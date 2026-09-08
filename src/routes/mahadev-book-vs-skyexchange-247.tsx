@@ -25,8 +25,8 @@ const skyFaqs: FAQItem[] = [
 export const Route = createFileRoute("/mahadev-book-vs-skyexchange-247")({
   head: () => ({
     meta: [
-      { title: "Mahadev Book vs Skyexchange 247 — Honest 2026 Comparison for Indian Players" },
-      { name: "description", content: "Mahadev Book vs Skyexchange 247 compared side-by-side: cricket ID setup, UPI payouts, IPL & session markets, casino games, commission and support. Pick the right cricket ID for you." },
+      { title: "Mahadev Book vs Skyexchange 247 — 2026 Comparison" },
+      { name: "description", content: "Mahadev Book vs Skyexchange 247 compared: cricket ID setup, UPI payouts, IPL markets, casino games, commission and support — pick the right ID." },
       { property: "og:title", content: "Mahadev Book vs Skyexchange 247 — Honest 2026 Comparison" },
       { property: "og:description", content: "Side-by-side comparison of two of India's most-searched online cricket IDs — payouts, IPL markets, commission and support." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-book-vs-skyexchange-247" },
@@ -80,6 +80,15 @@ export const Route = createFileRoute("/mahadev-book-vs-skyexchange-247")({
             { "@type": "ListItem", position: 1, name: "Home", item: "https://mahadevbookss.com/" },
             { "@type": "ListItem", position: 2, name: "Mahadev Book vs Skyexchange 247", item: "https://mahadevbookss.com/mahadev-book-vs-skyexchange-247" },
           ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          url: "https://mahadevbookss.com/mahadev-book-vs-skyexchange-247",
+          speakable: { "@type": "SpeakableSpecification", cssSelector: [".ai-overview-speakable"] },
         }),
       },
     ],

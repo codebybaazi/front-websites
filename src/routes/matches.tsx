@@ -35,7 +35,7 @@ export const Route = createFileRoute("/matches")({
   head: () => ({
     meta: [
       { title: "All Matches 2026-27 — Tournament Index, Filter & Search" },
-      { name: "description", content: "All cricket, football & tennis matches 2026-27 grouped by tournament. Filter by sport, search teams, tournaments or venues — jump to fixtures, live score & predictions." },
+      { name: "description", content: "All cricket, football & tennis matches 2026-27 by tournament. Filter by sport, search teams or venues — jump to fixtures, live score & predictions." },
       { property: "og:title", content: "All Matches 2026-27 — Tournament Index, Filter & Search" },
       { property: "og:description", content: "Every cricket series, FIFA World Cup 2026 knockout & ATP/WTA event in one place. Filter by sport, search teams or venues, open any match page." },
       { property: "og:url", content: "https://mahadevbookss.com/matches" },
@@ -53,6 +53,15 @@ export const Route = createFileRoute("/matches")({
             { "@type": "ListItem", position: 1, name: "Home", item: "https://mahadevbookss.com/" },
             { "@type": "ListItem", position: 2, name: "Matches", item: "https://mahadevbookss.com/matches" },
           ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          url: "https://mahadevbookss.com/matches",
+          speakable: { "@type": "SpeakableSpecification", cssSelector: [".ai-overview-speakable"] },
         }),
       },
     ],

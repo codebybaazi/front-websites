@@ -337,13 +337,13 @@ function MatchPage() {
               </div>
             </div>
           ) : (
-            <h1 className="mt-5 font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gradient-gold">
+            <div className="mt-5 font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gradient-gold">
               {match.title}
-            </h1>
+            </div>
           )}
 
-          <h1 className={isFootball ? "sr-only" : "sr-only-none"}>
-            {isFootball ? `${match.title} — ${match.subtitle} preview & prediction, ${series.name}` : ""}
+          <h1 className="sr-only">
+            {`${match.title} — ${match.subtitle} preview & prediction, ${series.name}`}
           </h1>
 
           <dl className="mt-8 grid sm:grid-cols-4 gap-3">

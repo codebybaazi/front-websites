@@ -36,6 +36,19 @@ export function slugify(s: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+// Shortens a knockout-stage placeholder name ("Winner Group A", "3rd A/B/C/D/E/F",
+// "Runner-up Group H") into a compact slug fragment, so pre-bracket fixture
+// URLs stay short instead of spelling the whole placeholder out.
+function compactPlaceholder(name: string): string {
+  const winner = name.match(/^Winner Group (\w)$/i);
+  if (winner) return `winner-${winner[1].toLowerCase()}`;
+  const runner = name.match(/^Runner-up Group (\w)$/i);
+  if (runner) return `runner-${runner[1].toLowerCase()}`;
+  const third = name.match(/^3rd ([\w/]+)$/i);
+  if (third) return `3rd-${third[1].replace(/\//g, "").toLowerCase()}`;
+  return slugify(name);
+}
+
 function addDays(iso: string, days: number): string {
   const d = new Date(iso + "T00:00:00Z");
   d.setUTCDate(d.getUTCDate() + days);
@@ -52,6 +65,9 @@ function daysBetween(a: string, b: string): number {
 
 type RawFootball = {
   home: string; away: string; stage: string; date: string; kickoff: string; venue: string; city: string;
+  // Set only for group-stage fixtures where the opponent isn't decided yet (pre-draw).
+  // Lets the slug builder produce a short, stable URL instead of baking in "TBD".
+  groupLetter?: string; matchday?: 1 | 2 | 3;
 };
 
 const wcMatches: RawFootball[] = [
@@ -118,6 +134,8 @@ const wcGroupRaw: RawFootball[] = wcGroupLetters.flatMap((g, gi) => {
     kickoff: "TBD",
     venue: host.venue,
     city: host.city,
+    groupLetter: g,
+    matchday: md,
   }));
 });
 
@@ -136,7 +154,12 @@ const footballSeries: ScheduleSeries = (() => {
     description:
       "FIFA World Cup 2026 schedule — the first 48-team World Cup 2026, co-hosted by USA, Canada and Mexico across 16 host cities. Group stage 11–27 June 2026 (12 groups, 72 matches), Round of 32 through to the FIFA World Cup 2026 final at MetLife Stadium on 19 July 2026 — 104 matches with live score, today match prediction, projected top scorer and world cup 2026 fixtures on every match page.",
     matches: wcAllMatches.map((m, i) => ({
-      slug: slugify(`${seriesSlug}-${m.stage}-${m.home}-vs-${m.away}-${m.date}-${i}`),
+      slug:
+        m.groupLetter && m.matchday
+          ? slugify(`${seriesSlug}-group-${m.groupLetter}-matchday-${m.matchday}-${m.date}`)
+          : m.stage === "Round of 32"
+          ? slugify(`${seriesSlug}-ro32-${compactPlaceholder(m.home)}-vs-${compactPlaceholder(m.away)}-${m.date}`)
+          : slugify(`${seriesSlug}-${m.stage}-${m.home}-vs-${m.away}-${m.date}-${i}`),
       seriesSlug,
       sport: "football",
       title: `${m.home} vs ${m.away}`,

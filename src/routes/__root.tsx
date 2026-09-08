@@ -112,6 +112,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Organization",
           name: "Mahadev Book",
           url: "https://mahadevbookss.com/",
+          logo: "https://mahadevbookss.com/apple-touch-icon.png",
+          foundingDate: "2010",
           slogan: "Verified online betting IDs in India",
           sameAs: [],
           contactPoint: [

@@ -1,18 +1,16 @@
 import { siteName } from "@/data/site";
 import { Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Twitter, Youtube, Send, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import logoUrl from "@/assets/mahadev-logo.gif";
 import { useWhatsApp } from "@/components/WhatsAppProvider";
 
 export function SiteFooter() {
   const { whatsappUrl } = useWhatsApp();
+  // Only channels with a real, working destination are listed here.
+  // Add Telegram/Instagram/Facebook/Twitter/YouTube back once real profile
+  // URLs exist — do not point these at generic platform homepages.
   const socials = [
     { label: "WhatsApp", href: whatsappUrl, Icon: MessageCircle },
-    { label: "Telegram", href: "https://t.me/", Icon: Send },
-    { label: "Instagram", href: "https://instagram.com/", Icon: Instagram },
-    { label: "Facebook", href: "https://facebook.com/", Icon: Facebook },
-    { label: "Twitter", href: "https://twitter.com/", Icon: Twitter },
-    { label: "YouTube", href: "https://youtube.com/", Icon: Youtube },
   ];
   return (
     <footer className="border-t border-border">

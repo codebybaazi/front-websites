@@ -3,7 +3,7 @@ import { MessageCircle, Send, Phone, Mail, Clock, ShieldCheck } from "lucide-rea
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useWhatsApp } from "@/components/WhatsAppProvider";
-import { formatWhatsAppDisplay } from "@/lib/whatsapp";
+import { fetchWhatsAppNumber, formatWhatsAppDisplay } from "@/lib/whatsapp";
 import { AIOverview } from "@/components/AIOverview";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
@@ -17,7 +17,8 @@ const contactFaqs: FAQItem[] = [
 ];
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
+  loader: async () => ({ waNumber: await fetchWhatsAppNumber() }),
+  head: ({ loaderData }) => ({
     meta: [
       { title: "Get a Cricket Betting ID on WhatsApp | Contact Mahadev Book" },
       { name: "description", content: "Get your online cricket ID or betting ID on WhatsApp in under 5 minutes. Message the Mahadev Book team on WhatsApp, Telegram, phone or email — 24/7." },
@@ -42,6 +43,30 @@ export const Route = createFileRoute("/contact")({
             { "@type": "ListItem", position: 1, name: "Home", item: "https://mahadevbookss.com/" },
             { "@type": "ListItem", position: 2, name: "Contact", item: "https://mahadevbookss.com/contact" },
           ],
+        }),
+      },
+      // Name + phone (fetched from the same WhatsApp-number source used for wa.me
+      // links). No physical address is published, so it's omitted rather than
+      // invented — this covers the N and P of NAP, not the A.
+      ...(loaderData?.waNumber
+        ? [{
+            type: "application/ld+json",
+            children: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Mahadev Book",
+              telephone: `+${loaderData.waNumber}`,
+              url: "https://mahadevbookss.com/contact",
+            }),
+          }]
+        : []),
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          url: "https://mahadevbookss.com/contact",
+          speakable: { "@type": "SpeakableSpecification", cssSelector: [".ai-overview-speakable"] },
         }),
       },
     ],

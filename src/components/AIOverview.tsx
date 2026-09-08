@@ -20,7 +20,8 @@ export function AIOverview({ title = "AI Overview", summary, points, keywords }:
       aria-label="AI overview and quick summary"
       className="mx-auto max-w-6xl px-6 py-6"
     >
-      <div className="rounded-xl border border-primary/20 bg-primary/5 p-4 md:p-5">
+      {/* Stable selector referenced by each page's SpeakableSpecification JSON-LD */}
+      <div className="ai-overview-speakable rounded-xl border border-primary/20 bg-primary/5 p-4 md:p-5">
         <div className="flex items-center gap-2 mb-2">
           <Sparkles className="h-4 w-4 text-primary" />
           <h2 className="font-display text-base font-bold text-foreground">{title}</h2>

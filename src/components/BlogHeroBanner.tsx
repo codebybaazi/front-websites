@@ -55,20 +55,62 @@ function titleKeywords(title: string): string[] {
     .slice(0, 4);
 }
 
-function wrapTitle(title: string, maxChars: number): string[] {
-  const words = title.split(/\s+/);
+// Average glyph advance width for 'Space Grotesk' Bold, as a fraction of font-size.
+const TITLE_CHAR_WIDTH = 0.5;
+// Safe horizontal budget (in viewBox units) for title text before it runs into the
+// illustration panel on the right — the panel's leftmost edge across all topics/offsets
+// never comes in closer than ~698, and the title renders on top of the art anyway,
+// so this leaves a real but not overly conservative margin.
+const TITLE_AVAIL_WIDTH = 680;
+
+function wrapToWidth(title: string, maxChars: number): string[] {
+  const words = title.split(/\s+/).filter(Boolean);
   const lines: string[] = [];
   let cur = "";
   for (const w of words) {
-    if ((cur + " " + w).trim().length > maxChars && cur) {
+    const candidate = cur ? `${cur} ${w}` : w;
+    if (candidate.length > maxChars && cur) {
       lines.push(cur);
       cur = w;
     } else {
-      cur = (cur ? cur + " " : "") + w;
+      cur = candidate;
     }
   }
   if (cur) lines.push(cur);
-  return lines.slice(0, 4);
+  return lines;
+}
+
+// Picks the largest font-size tier whose word-wrapped line count still fits that
+// tier's line budget, so the wrap width and the rendered font size always agree —
+// the earlier version wrapped at a fixed character count regardless of font size,
+// which is what let large titles overflow the banner at the bigger sizes.
+function fitTitle(title: string, compact: boolean): { size: number; lines: string[] } {
+  const tiers = compact
+    ? [
+        { size: 66, maxLines: 3 },
+        { size: 56, maxLines: 4 },
+        { size: 48, maxLines: 5 },
+      ]
+    : [
+        { size: 82, maxLines: 2 },
+        { size: 68, maxLines: 3 },
+        { size: 56, maxLines: 4 },
+        { size: 46, maxLines: 5 },
+      ];
+
+  let fallback = tiers[tiers.length - 1];
+  let fallbackLines = wrapToWidth(title, Math.max(8, Math.floor(TITLE_AVAIL_WIDTH / (fallback.size * TITLE_CHAR_WIDTH))));
+
+  for (const tier of tiers) {
+    const maxChars = Math.max(8, Math.floor(TITLE_AVAIL_WIDTH / (tier.size * TITLE_CHAR_WIDTH)));
+    const lines = wrapToWidth(title, maxChars);
+    if (lines.length <= tier.maxLines) {
+      return { size: tier.size, lines };
+    }
+    fallback = tier;
+    fallbackLines = lines;
+  }
+  return { size: fallback.size, lines: fallbackLines };
 }
 
 type Props = {
@@ -102,9 +144,7 @@ export function BlogHeroBanner({ title, category, slug, className, compact = fal
   const dotsId = `bhb-dots-${seed}`;
   const stripeId = `bhb-stripes-${seed}`;
 
-  const titleMax = compact ? 30 : 34;
-  const lines = wrapTitle(title, titleMax);
-  const titleSize = compact ? 36 : lines.length >= 4 ? 52 : lines.length === 3 ? 62 : 74;
+  const { size: titleSize, lines } = fitTitle(title, compact);
   const lineHeight = titleSize * 1.05;
   const titleBlockH = lines.length * lineHeight;
   const titleStartY = compact ? 258 - titleBlockH / 2 + titleSize * 0.85 : 300 - titleBlockH / 2 + titleSize * 0.85;

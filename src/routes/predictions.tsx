@@ -51,6 +51,15 @@ export const Route = createFileRoute("/predictions")({
           ],
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          url: "https://mahadevbookss.com/predictions",
+          speakable: { "@type": "SpeakableSpecification", cssSelector: [".ai-overview-speakable"] },
+        }),
+      },
     ],
   }),
   loader: async (): Promise<{ inPlayEvents: ApiEvent[] }> => ({
