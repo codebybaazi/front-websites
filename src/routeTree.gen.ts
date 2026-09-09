@@ -14,20 +14,57 @@ import { Route as SplatRouteImport } from './routes/$'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AllLinksRouteImport } from './routes/all-links'
 import { Route as AuthDotmdRouteImport } from './routes/auth[.]md'
+import { Route as AwardsRouteImport } from './routes/awards'
+import { Route as BasketballBettingRouteImport } from './routes/basketball-betting'
+import { Route as ChampionsTrophyBettingRouteImport } from './routes/champions-trophy-betting'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as EsportsBettingRouteImport } from './routes/esports-betting'
+import { Route as FootballBettingRouteImport } from './routes/football-betting'
+import { Route as HorseRacingBettingRouteImport } from './routes/horse-racing-betting'
+import { Route as IplBettingRouteImport } from './routes/ipl-betting'
+import { Route as KabaddiBettingRouteImport } from './routes/kabaddi-betting'
+import { Route as LegalRouteImport } from './routes/legal'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as MahadevBettingAppRouteImport } from './routes/mahadev-betting-app'
+import { Route as MahadevBookBonusesRouteImport } from './routes/mahadev-book-bonuses'
+import { Route as MahadevBookCustomerCareNumberRouteImport } from './routes/mahadev-book-customer-care-number'
+import { Route as MahadevBookDepositIssuesRouteImport } from './routes/mahadev-book-deposit-issues'
+import { Route as MahadevBookDepositMethodsRouteImport } from './routes/mahadev-book-deposit-methods'
+import { Route as MahadevBookDepositNumberRouteImport } from './routes/mahadev-book-deposit-number'
+import { Route as MahadevBookKycRouteImport } from './routes/mahadev-book-kyc'
+import { Route as MahadevBookLimitsRouteImport } from './routes/mahadev-book-limits'
+import { Route as MahadevBookLoginIssuesRouteImport } from './routes/mahadev-book-login-issues'
+import { Route as MahadevBookPrioritySupportRouteImport } from './routes/mahadev-book-priority-support'
+import { Route as MahadevBookReferralProgramRouteImport } from './routes/mahadev-book-referral-program'
+import { Route as MahadevBookTelegramRouteImport } from './routes/mahadev-book-telegram'
 import { Route as MahadevBookVsLotus365RouteImport } from './routes/mahadev-book-vs-lotus-365'
 import { Route as MahadevBookVsSkyexchange247RouteImport } from './routes/mahadev-book-vs-skyexchange-247'
+import { Route as MahadevBookWithdrawalDelayRouteImport } from './routes/mahadev-book-withdrawal-delay'
+import { Route as MahadevBookWithdrawalGuideRouteImport } from './routes/mahadev-book-withdrawal-guide'
+import { Route as MahadevBookWithdrawalNumberRouteImport } from './routes/mahadev-book-withdrawal-number'
 import { Route as MatchesRouteImport } from './routes/matches'
+import { Route as PoliciesRouteImport } from './routes/policies'
 import { Route as PredictionsRouteImport } from './routes/predictions'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ResponsibleRouteImport } from './routes/responsible'
+import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as SafetyRouteImport } from './routes/safety'
 import { Route as ScheduleRouteImport } from './routes/schedule'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SportsRouteImport } from './routes/sports'
+import { Route as T20WorldCupBettingRouteImport } from './routes/t20-world-cup-betting'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as TrustedRouteImport } from './routes/trusted'
+import { Route as WhatRouteImport } from './routes/what'
+import { Route as WhyRouteImport } from './routes/why'
+import { Route as WplBettingRouteImport } from './routes/wpl-betting'
 import { Route as DotwellKnownOauthAuthorizationServerRouteImport } from './routes/[.]well-known.oauth-authorization-server'
 import { Route as DotwellKnownOauthProtectedResourceRouteImport } from './routes/[.]well-known.oauth-protected-resource'
 import { Route as DotwellKnownOpenidConfigurationRouteImport } from './routes/[.]well-known.openid-configuration'
 import { Route as ApiWhatsappNumberRouteImport } from './routes/api.whatsapp-number'
+import { Route as AuthorsIndexRouteImport } from './routes/authors.index'
+import { Route as AuthorsSlugRouteImport } from './routes/authors.$slug'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as MatchSlugRouteImport } from './routes/match.$slug'
@@ -59,9 +96,54 @@ const AuthDotmdRoute = AuthDotmdRouteImport.update({
   path: '/auth.md',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AwardsRoute = AwardsRouteImport.update({
+  id: '/awards',
+  path: '/awards',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BasketballBettingRoute = BasketballBettingRouteImport.update({
+  id: '/basketball-betting',
+  path: '/basketball-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChampionsTrophyBettingRoute = ChampionsTrophyBettingRouteImport.update({
+  id: '/champions-trophy-betting',
+  path: '/champions-trophy-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsportsBettingRoute = EsportsBettingRouteImport.update({
+  id: '/esports-betting',
+  path: '/esports-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FootballBettingRoute = FootballBettingRouteImport.update({
+  id: '/football-betting',
+  path: '/football-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HorseRacingBettingRoute = HorseRacingBettingRouteImport.update({
+  id: '/horse-racing-betting',
+  path: '/horse-racing-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IplBettingRoute = IplBettingRouteImport.update({
+  id: '/ipl-betting',
+  path: '/ipl-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KabaddiBettingRoute = KabaddiBettingRouteImport.update({
+  id: '/kabaddi-betting',
+  path: '/kabaddi-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalRoute = LegalRouteImport.update({
+  id: '/legal',
+  path: '/legal',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LoginRoute = LoginRouteImport.update({
@@ -72,6 +154,67 @@ const LoginRoute = LoginRouteImport.update({
 const MahadevBettingAppRoute = MahadevBettingAppRouteImport.update({
   id: '/mahadev-betting-app',
   path: '/mahadev-betting-app',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MahadevBookBonusesRoute = MahadevBookBonusesRouteImport.update({
+  id: '/mahadev-book-bonuses',
+  path: '/mahadev-book-bonuses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MahadevBookCustomerCareNumberRoute =
+  MahadevBookCustomerCareNumberRouteImport.update({
+    id: '/mahadev-book-customer-care-number',
+    path: '/mahadev-book-customer-care-number',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const MahadevBookDepositIssuesRoute =
+  MahadevBookDepositIssuesRouteImport.update({
+    id: '/mahadev-book-deposit-issues',
+    path: '/mahadev-book-deposit-issues',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const MahadevBookDepositMethodsRoute =
+  MahadevBookDepositMethodsRouteImport.update({
+    id: '/mahadev-book-deposit-methods',
+    path: '/mahadev-book-deposit-methods',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const MahadevBookDepositNumberRoute =
+  MahadevBookDepositNumberRouteImport.update({
+    id: '/mahadev-book-deposit-number',
+    path: '/mahadev-book-deposit-number',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const MahadevBookKycRoute = MahadevBookKycRouteImport.update({
+  id: '/mahadev-book-kyc',
+  path: '/mahadev-book-kyc',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MahadevBookLimitsRoute = MahadevBookLimitsRouteImport.update({
+  id: '/mahadev-book-limits',
+  path: '/mahadev-book-limits',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MahadevBookLoginIssuesRoute = MahadevBookLoginIssuesRouteImport.update({
+  id: '/mahadev-book-login-issues',
+  path: '/mahadev-book-login-issues',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MahadevBookPrioritySupportRoute =
+  MahadevBookPrioritySupportRouteImport.update({
+    id: '/mahadev-book-priority-support',
+    path: '/mahadev-book-priority-support',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const MahadevBookReferralProgramRoute =
+  MahadevBookReferralProgramRouteImport.update({
+    id: '/mahadev-book-referral-program',
+    path: '/mahadev-book-referral-program',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const MahadevBookTelegramRoute = MahadevBookTelegramRouteImport.update({
+  id: '/mahadev-book-telegram',
+  path: '/mahadev-book-telegram',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MahadevBookVsLotus365Route = MahadevBookVsLotus365RouteImport.update({
@@ -85,14 +228,57 @@ const MahadevBookVsSkyexchange247Route =
     path: '/mahadev-book-vs-skyexchange-247',
     getParentRoute: () => rootRouteImport,
   } as any)
+const MahadevBookWithdrawalDelayRoute =
+  MahadevBookWithdrawalDelayRouteImport.update({
+    id: '/mahadev-book-withdrawal-delay',
+    path: '/mahadev-book-withdrawal-delay',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const MahadevBookWithdrawalGuideRoute =
+  MahadevBookWithdrawalGuideRouteImport.update({
+    id: '/mahadev-book-withdrawal-guide',
+    path: '/mahadev-book-withdrawal-guide',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const MahadevBookWithdrawalNumberRoute =
+  MahadevBookWithdrawalNumberRouteImport.update({
+    id: '/mahadev-book-withdrawal-number',
+    path: '/mahadev-book-withdrawal-number',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const MatchesRoute = MatchesRouteImport.update({
   id: '/matches',
   path: '/matches',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PoliciesRoute = PoliciesRouteImport.update({
+  id: '/policies',
+  path: '/policies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PredictionsRoute = PredictionsRouteImport.update({
   id: '/predictions',
   path: '/predictions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResponsibleRoute = ResponsibleRouteImport.update({
+  id: '/responsible',
+  path: '/responsible',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SafetyRoute = SafetyRouteImport.update({
+  id: '/safety',
+  path: '/safety',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ScheduleRoute = ScheduleRouteImport.update({
@@ -108,6 +294,41 @@ const ServicesRoute = ServicesRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SportsRoute = SportsRouteImport.update({
+  id: '/sports',
+  path: '/sports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const T20WorldCupBettingRoute = T20WorldCupBettingRouteImport.update({
+  id: '/t20-world-cup-betting',
+  path: '/t20-world-cup-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrustedRoute = TrustedRouteImport.update({
+  id: '/trusted',
+  path: '/trusted',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhatRoute = WhatRouteImport.update({
+  id: '/what',
+  path: '/what',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhyRoute = WhyRouteImport.update({
+  id: '/why',
+  path: '/why',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WplBettingRoute = WplBettingRouteImport.update({
+  id: '/wpl-betting',
+  path: '/wpl-betting',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DotwellKnownOauthAuthorizationServerRoute =
@@ -131,6 +352,16 @@ const DotwellKnownOpenidConfigurationRoute =
 const ApiWhatsappNumberRoute = ApiWhatsappNumberRouteImport.update({
   id: '/api/whatsapp-number',
   path: '/api/whatsapp-number',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthorsIndexRoute = AuthorsIndexRouteImport.update({
+  id: '/authors/',
+  path: '/authors/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthorsSlugRoute = AuthorsSlugRouteImport.update({
+  id: '/authors/$slug',
+  path: '/authors/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -167,22 +398,59 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/all-links': typeof AllLinksRoute
   '/auth.md': typeof AuthDotmdRoute
+  '/awards': typeof AwardsRoute
+  '/basketball-betting': typeof BasketballBettingRoute
+  '/champions-trophy-betting': typeof ChampionsTrophyBettingRoute
   '/contact': typeof ContactRoute
+  '/esports-betting': typeof EsportsBettingRoute
+  '/football-betting': typeof FootballBettingRoute
+  '/horse-racing-betting': typeof HorseRacingBettingRoute
+  '/ipl-betting': typeof IplBettingRoute
+  '/kabaddi-betting': typeof KabaddiBettingRoute
+  '/legal': typeof LegalRoute
   '/login': typeof LoginRoute
   '/mahadev-betting-app': typeof MahadevBettingAppRoute
+  '/mahadev-book-bonuses': typeof MahadevBookBonusesRoute
+  '/mahadev-book-customer-care-number': typeof MahadevBookCustomerCareNumberRoute
+  '/mahadev-book-deposit-issues': typeof MahadevBookDepositIssuesRoute
+  '/mahadev-book-deposit-methods': typeof MahadevBookDepositMethodsRoute
+  '/mahadev-book-deposit-number': typeof MahadevBookDepositNumberRoute
+  '/mahadev-book-kyc': typeof MahadevBookKycRoute
+  '/mahadev-book-limits': typeof MahadevBookLimitsRoute
+  '/mahadev-book-login-issues': typeof MahadevBookLoginIssuesRoute
+  '/mahadev-book-priority-support': typeof MahadevBookPrioritySupportRoute
+  '/mahadev-book-referral-program': typeof MahadevBookReferralProgramRoute
+  '/mahadev-book-telegram': typeof MahadevBookTelegramRoute
   '/mahadev-book-vs-lotus-365': typeof MahadevBookVsLotus365Route
   '/mahadev-book-vs-skyexchange-247': typeof MahadevBookVsSkyexchange247Route
+  '/mahadev-book-withdrawal-delay': typeof MahadevBookWithdrawalDelayRoute
+  '/mahadev-book-withdrawal-guide': typeof MahadevBookWithdrawalGuideRoute
+  '/mahadev-book-withdrawal-number': typeof MahadevBookWithdrawalNumberRoute
   '/matches': typeof MatchesRoute
+  '/policies': typeof PoliciesRoute
   '/predictions': typeof PredictionsRoute
+  '/privacy': typeof PrivacyRoute
+  '/responsible': typeof ResponsibleRoute
+  '/reviews': typeof ReviewsRoute
+  '/safety': typeof SafetyRoute
   '/schedule': typeof ScheduleRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sports': typeof SportsRoute
+  '/t20-world-cup-betting': typeof T20WorldCupBettingRoute
+  '/terms': typeof TermsRoute
+  '/trusted': typeof TrustedRoute
+  '/what': typeof WhatRoute
+  '/why': typeof WhyRoute
+  '/wpl-betting': typeof WplBettingRoute
   '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
   '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
   '/.well-known/openid-configuration': typeof DotwellKnownOpenidConfigurationRoute
   '/api/whatsapp-number': typeof ApiWhatsappNumberRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/match/$slug': typeof MatchSlugRoute
+  '/authors/': typeof AuthorsIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/.well-known/agent-skills/index.json': typeof DotwellKnownAgentSkillsIndexDotjsonRoute
   '/.well-known/mcp/server-card.json': typeof DotwellKnownMcpServerCardDotjsonRoute
@@ -193,22 +461,59 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/all-links': typeof AllLinksRoute
   '/auth.md': typeof AuthDotmdRoute
+  '/awards': typeof AwardsRoute
+  '/basketball-betting': typeof BasketballBettingRoute
+  '/champions-trophy-betting': typeof ChampionsTrophyBettingRoute
   '/contact': typeof ContactRoute
+  '/esports-betting': typeof EsportsBettingRoute
+  '/football-betting': typeof FootballBettingRoute
+  '/horse-racing-betting': typeof HorseRacingBettingRoute
+  '/ipl-betting': typeof IplBettingRoute
+  '/kabaddi-betting': typeof KabaddiBettingRoute
+  '/legal': typeof LegalRoute
   '/login': typeof LoginRoute
   '/mahadev-betting-app': typeof MahadevBettingAppRoute
+  '/mahadev-book-bonuses': typeof MahadevBookBonusesRoute
+  '/mahadev-book-customer-care-number': typeof MahadevBookCustomerCareNumberRoute
+  '/mahadev-book-deposit-issues': typeof MahadevBookDepositIssuesRoute
+  '/mahadev-book-deposit-methods': typeof MahadevBookDepositMethodsRoute
+  '/mahadev-book-deposit-number': typeof MahadevBookDepositNumberRoute
+  '/mahadev-book-kyc': typeof MahadevBookKycRoute
+  '/mahadev-book-limits': typeof MahadevBookLimitsRoute
+  '/mahadev-book-login-issues': typeof MahadevBookLoginIssuesRoute
+  '/mahadev-book-priority-support': typeof MahadevBookPrioritySupportRoute
+  '/mahadev-book-referral-program': typeof MahadevBookReferralProgramRoute
+  '/mahadev-book-telegram': typeof MahadevBookTelegramRoute
   '/mahadev-book-vs-lotus-365': typeof MahadevBookVsLotus365Route
   '/mahadev-book-vs-skyexchange-247': typeof MahadevBookVsSkyexchange247Route
+  '/mahadev-book-withdrawal-delay': typeof MahadevBookWithdrawalDelayRoute
+  '/mahadev-book-withdrawal-guide': typeof MahadevBookWithdrawalGuideRoute
+  '/mahadev-book-withdrawal-number': typeof MahadevBookWithdrawalNumberRoute
   '/matches': typeof MatchesRoute
+  '/policies': typeof PoliciesRoute
   '/predictions': typeof PredictionsRoute
+  '/privacy': typeof PrivacyRoute
+  '/responsible': typeof ResponsibleRoute
+  '/reviews': typeof ReviewsRoute
+  '/safety': typeof SafetyRoute
   '/schedule': typeof ScheduleRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sports': typeof SportsRoute
+  '/t20-world-cup-betting': typeof T20WorldCupBettingRoute
+  '/terms': typeof TermsRoute
+  '/trusted': typeof TrustedRoute
+  '/what': typeof WhatRoute
+  '/why': typeof WhyRoute
+  '/wpl-betting': typeof WplBettingRoute
   '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
   '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
   '/.well-known/openid-configuration': typeof DotwellKnownOpenidConfigurationRoute
   '/api/whatsapp-number': typeof ApiWhatsappNumberRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/match/$slug': typeof MatchSlugRoute
+  '/authors': typeof AuthorsIndexRoute
   '/blog': typeof BlogIndexRoute
   '/.well-known/agent-skills/index.json': typeof DotwellKnownAgentSkillsIndexDotjsonRoute
   '/.well-known/mcp/server-card.json': typeof DotwellKnownMcpServerCardDotjsonRoute
@@ -220,22 +525,59 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/all-links': typeof AllLinksRoute
   '/auth.md': typeof AuthDotmdRoute
+  '/awards': typeof AwardsRoute
+  '/basketball-betting': typeof BasketballBettingRoute
+  '/champions-trophy-betting': typeof ChampionsTrophyBettingRoute
   '/contact': typeof ContactRoute
+  '/esports-betting': typeof EsportsBettingRoute
+  '/football-betting': typeof FootballBettingRoute
+  '/horse-racing-betting': typeof HorseRacingBettingRoute
+  '/ipl-betting': typeof IplBettingRoute
+  '/kabaddi-betting': typeof KabaddiBettingRoute
+  '/legal': typeof LegalRoute
   '/login': typeof LoginRoute
   '/mahadev-betting-app': typeof MahadevBettingAppRoute
+  '/mahadev-book-bonuses': typeof MahadevBookBonusesRoute
+  '/mahadev-book-customer-care-number': typeof MahadevBookCustomerCareNumberRoute
+  '/mahadev-book-deposit-issues': typeof MahadevBookDepositIssuesRoute
+  '/mahadev-book-deposit-methods': typeof MahadevBookDepositMethodsRoute
+  '/mahadev-book-deposit-number': typeof MahadevBookDepositNumberRoute
+  '/mahadev-book-kyc': typeof MahadevBookKycRoute
+  '/mahadev-book-limits': typeof MahadevBookLimitsRoute
+  '/mahadev-book-login-issues': typeof MahadevBookLoginIssuesRoute
+  '/mahadev-book-priority-support': typeof MahadevBookPrioritySupportRoute
+  '/mahadev-book-referral-program': typeof MahadevBookReferralProgramRoute
+  '/mahadev-book-telegram': typeof MahadevBookTelegramRoute
   '/mahadev-book-vs-lotus-365': typeof MahadevBookVsLotus365Route
   '/mahadev-book-vs-skyexchange-247': typeof MahadevBookVsSkyexchange247Route
+  '/mahadev-book-withdrawal-delay': typeof MahadevBookWithdrawalDelayRoute
+  '/mahadev-book-withdrawal-guide': typeof MahadevBookWithdrawalGuideRoute
+  '/mahadev-book-withdrawal-number': typeof MahadevBookWithdrawalNumberRoute
   '/matches': typeof MatchesRoute
+  '/policies': typeof PoliciesRoute
   '/predictions': typeof PredictionsRoute
+  '/privacy': typeof PrivacyRoute
+  '/responsible': typeof ResponsibleRoute
+  '/reviews': typeof ReviewsRoute
+  '/safety': typeof SafetyRoute
   '/schedule': typeof ScheduleRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sports': typeof SportsRoute
+  '/t20-world-cup-betting': typeof T20WorldCupBettingRoute
+  '/terms': typeof TermsRoute
+  '/trusted': typeof TrustedRoute
+  '/what': typeof WhatRoute
+  '/why': typeof WhyRoute
+  '/wpl-betting': typeof WplBettingRoute
   '/.well-known/oauth-authorization-server': typeof DotwellKnownOauthAuthorizationServerRoute
   '/.well-known/oauth-protected-resource': typeof DotwellKnownOauthProtectedResourceRoute
   '/.well-known/openid-configuration': typeof DotwellKnownOpenidConfigurationRoute
   '/api/whatsapp-number': typeof ApiWhatsappNumberRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/match/$slug': typeof MatchSlugRoute
+  '/authors/': typeof AuthorsIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/.well-known/agent-skills/index.json': typeof DotwellKnownAgentSkillsIndexDotjsonRoute
   '/.well-known/mcp/server-card.json': typeof DotwellKnownMcpServerCardDotjsonRoute
@@ -248,22 +590,59 @@ export interface FileRouteTypes {
     | '/about'
     | '/all-links'
     | '/auth.md'
+    | '/awards'
+    | '/basketball-betting'
+    | '/champions-trophy-betting'
     | '/contact'
+    | '/esports-betting'
+    | '/football-betting'
+    | '/horse-racing-betting'
+    | '/ipl-betting'
+    | '/kabaddi-betting'
+    | '/legal'
     | '/login'
     | '/mahadev-betting-app'
+    | '/mahadev-book-bonuses'
+    | '/mahadev-book-customer-care-number'
+    | '/mahadev-book-deposit-issues'
+    | '/mahadev-book-deposit-methods'
+    | '/mahadev-book-deposit-number'
+    | '/mahadev-book-kyc'
+    | '/mahadev-book-limits'
+    | '/mahadev-book-login-issues'
+    | '/mahadev-book-priority-support'
+    | '/mahadev-book-referral-program'
+    | '/mahadev-book-telegram'
     | '/mahadev-book-vs-lotus-365'
     | '/mahadev-book-vs-skyexchange-247'
+    | '/mahadev-book-withdrawal-delay'
+    | '/mahadev-book-withdrawal-guide'
+    | '/mahadev-book-withdrawal-number'
     | '/matches'
+    | '/policies'
     | '/predictions'
+    | '/privacy'
+    | '/responsible'
+    | '/reviews'
+    | '/safety'
     | '/schedule'
     | '/services'
     | '/sitemap.xml'
+    | '/sports'
+    | '/t20-world-cup-betting'
+    | '/terms'
+    | '/trusted'
+    | '/what'
+    | '/why'
+    | '/wpl-betting'
     | '/.well-known/oauth-authorization-server'
     | '/.well-known/oauth-protected-resource'
     | '/.well-known/openid-configuration'
     | '/api/whatsapp-number'
+    | '/authors/$slug'
     | '/blog/$slug'
     | '/match/$slug'
+    | '/authors/'
     | '/blog/'
     | '/.well-known/agent-skills/index.json'
     | '/.well-known/mcp/server-card.json'
@@ -274,22 +653,59 @@ export interface FileRouteTypes {
     | '/about'
     | '/all-links'
     | '/auth.md'
+    | '/awards'
+    | '/basketball-betting'
+    | '/champions-trophy-betting'
     | '/contact'
+    | '/esports-betting'
+    | '/football-betting'
+    | '/horse-racing-betting'
+    | '/ipl-betting'
+    | '/kabaddi-betting'
+    | '/legal'
     | '/login'
     | '/mahadev-betting-app'
+    | '/mahadev-book-bonuses'
+    | '/mahadev-book-customer-care-number'
+    | '/mahadev-book-deposit-issues'
+    | '/mahadev-book-deposit-methods'
+    | '/mahadev-book-deposit-number'
+    | '/mahadev-book-kyc'
+    | '/mahadev-book-limits'
+    | '/mahadev-book-login-issues'
+    | '/mahadev-book-priority-support'
+    | '/mahadev-book-referral-program'
+    | '/mahadev-book-telegram'
     | '/mahadev-book-vs-lotus-365'
     | '/mahadev-book-vs-skyexchange-247'
+    | '/mahadev-book-withdrawal-delay'
+    | '/mahadev-book-withdrawal-guide'
+    | '/mahadev-book-withdrawal-number'
     | '/matches'
+    | '/policies'
     | '/predictions'
+    | '/privacy'
+    | '/responsible'
+    | '/reviews'
+    | '/safety'
     | '/schedule'
     | '/services'
     | '/sitemap.xml'
+    | '/sports'
+    | '/t20-world-cup-betting'
+    | '/terms'
+    | '/trusted'
+    | '/what'
+    | '/why'
+    | '/wpl-betting'
     | '/.well-known/oauth-authorization-server'
     | '/.well-known/oauth-protected-resource'
     | '/.well-known/openid-configuration'
     | '/api/whatsapp-number'
+    | '/authors/$slug'
     | '/blog/$slug'
     | '/match/$slug'
+    | '/authors'
     | '/blog'
     | '/.well-known/agent-skills/index.json'
     | '/.well-known/mcp/server-card.json'
@@ -300,22 +716,59 @@ export interface FileRouteTypes {
     | '/about'
     | '/all-links'
     | '/auth.md'
+    | '/awards'
+    | '/basketball-betting'
+    | '/champions-trophy-betting'
     | '/contact'
+    | '/esports-betting'
+    | '/football-betting'
+    | '/horse-racing-betting'
+    | '/ipl-betting'
+    | '/kabaddi-betting'
+    | '/legal'
     | '/login'
     | '/mahadev-betting-app'
+    | '/mahadev-book-bonuses'
+    | '/mahadev-book-customer-care-number'
+    | '/mahadev-book-deposit-issues'
+    | '/mahadev-book-deposit-methods'
+    | '/mahadev-book-deposit-number'
+    | '/mahadev-book-kyc'
+    | '/mahadev-book-limits'
+    | '/mahadev-book-login-issues'
+    | '/mahadev-book-priority-support'
+    | '/mahadev-book-referral-program'
+    | '/mahadev-book-telegram'
     | '/mahadev-book-vs-lotus-365'
     | '/mahadev-book-vs-skyexchange-247'
+    | '/mahadev-book-withdrawal-delay'
+    | '/mahadev-book-withdrawal-guide'
+    | '/mahadev-book-withdrawal-number'
     | '/matches'
+    | '/policies'
     | '/predictions'
+    | '/privacy'
+    | '/responsible'
+    | '/reviews'
+    | '/safety'
     | '/schedule'
     | '/services'
     | '/sitemap.xml'
+    | '/sports'
+    | '/t20-world-cup-betting'
+    | '/terms'
+    | '/trusted'
+    | '/what'
+    | '/why'
+    | '/wpl-betting'
     | '/.well-known/oauth-authorization-server'
     | '/.well-known/oauth-protected-resource'
     | '/.well-known/openid-configuration'
     | '/api/whatsapp-number'
+    | '/authors/$slug'
     | '/blog/$slug'
     | '/match/$slug'
+    | '/authors/'
     | '/blog/'
     | '/.well-known/agent-skills/index.json'
     | '/.well-known/mcp/server-card.json'
@@ -327,22 +780,59 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AllLinksRoute: typeof AllLinksRoute
   AuthDotmdRoute: typeof AuthDotmdRoute
+  AwardsRoute: typeof AwardsRoute
+  BasketballBettingRoute: typeof BasketballBettingRoute
+  ChampionsTrophyBettingRoute: typeof ChampionsTrophyBettingRoute
   ContactRoute: typeof ContactRoute
+  EsportsBettingRoute: typeof EsportsBettingRoute
+  FootballBettingRoute: typeof FootballBettingRoute
+  HorseRacingBettingRoute: typeof HorseRacingBettingRoute
+  IplBettingRoute: typeof IplBettingRoute
+  KabaddiBettingRoute: typeof KabaddiBettingRoute
+  LegalRoute: typeof LegalRoute
   LoginRoute: typeof LoginRoute
   MahadevBettingAppRoute: typeof MahadevBettingAppRoute
+  MahadevBookBonusesRoute: typeof MahadevBookBonusesRoute
+  MahadevBookCustomerCareNumberRoute: typeof MahadevBookCustomerCareNumberRoute
+  MahadevBookDepositIssuesRoute: typeof MahadevBookDepositIssuesRoute
+  MahadevBookDepositMethodsRoute: typeof MahadevBookDepositMethodsRoute
+  MahadevBookDepositNumberRoute: typeof MahadevBookDepositNumberRoute
+  MahadevBookKycRoute: typeof MahadevBookKycRoute
+  MahadevBookLimitsRoute: typeof MahadevBookLimitsRoute
+  MahadevBookLoginIssuesRoute: typeof MahadevBookLoginIssuesRoute
+  MahadevBookPrioritySupportRoute: typeof MahadevBookPrioritySupportRoute
+  MahadevBookReferralProgramRoute: typeof MahadevBookReferralProgramRoute
+  MahadevBookTelegramRoute: typeof MahadevBookTelegramRoute
   MahadevBookVsLotus365Route: typeof MahadevBookVsLotus365Route
   MahadevBookVsSkyexchange247Route: typeof MahadevBookVsSkyexchange247Route
+  MahadevBookWithdrawalDelayRoute: typeof MahadevBookWithdrawalDelayRoute
+  MahadevBookWithdrawalGuideRoute: typeof MahadevBookWithdrawalGuideRoute
+  MahadevBookWithdrawalNumberRoute: typeof MahadevBookWithdrawalNumberRoute
   MatchesRoute: typeof MatchesRoute
+  PoliciesRoute: typeof PoliciesRoute
   PredictionsRoute: typeof PredictionsRoute
+  PrivacyRoute: typeof PrivacyRoute
+  ResponsibleRoute: typeof ResponsibleRoute
+  ReviewsRoute: typeof ReviewsRoute
+  SafetyRoute: typeof SafetyRoute
   ScheduleRoute: typeof ScheduleRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SportsRoute: typeof SportsRoute
+  T20WorldCupBettingRoute: typeof T20WorldCupBettingRoute
+  TermsRoute: typeof TermsRoute
+  TrustedRoute: typeof TrustedRoute
+  WhatRoute: typeof WhatRoute
+  WhyRoute: typeof WhyRoute
+  WplBettingRoute: typeof WplBettingRoute
   DotwellKnownOauthAuthorizationServerRoute: typeof DotwellKnownOauthAuthorizationServerRoute
   DotwellKnownOauthProtectedResourceRoute: typeof DotwellKnownOauthProtectedResourceRoute
   DotwellKnownOpenidConfigurationRoute: typeof DotwellKnownOpenidConfigurationRoute
   ApiWhatsappNumberRoute: typeof ApiWhatsappNumberRoute
+  AuthorsSlugRoute: typeof AuthorsSlugRoute
   BlogSlugRoute: typeof BlogSlugRoute
   MatchSlugRoute: typeof MatchSlugRoute
+  AuthorsIndexRoute: typeof AuthorsIndexRoute
   BlogIndexRoute: typeof BlogIndexRoute
   DotwellKnownAgentSkillsIndexDotjsonRoute: typeof DotwellKnownAgentSkillsIndexDotjsonRoute
   DotwellKnownMcpServerCardDotjsonRoute: typeof DotwellKnownMcpServerCardDotjsonRoute
@@ -385,11 +875,74 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthDotmdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/awards': {
+      id: '/awards'
+      path: '/awards'
+      fullPath: '/awards'
+      preLoaderRoute: typeof AwardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/basketball-betting': {
+      id: '/basketball-betting'
+      path: '/basketball-betting'
+      fullPath: '/basketball-betting'
+      preLoaderRoute: typeof BasketballBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/champions-trophy-betting': {
+      id: '/champions-trophy-betting'
+      path: '/champions-trophy-betting'
+      fullPath: '/champions-trophy-betting'
+      preLoaderRoute: typeof ChampionsTrophyBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/esports-betting': {
+      id: '/esports-betting'
+      path: '/esports-betting'
+      fullPath: '/esports-betting'
+      preLoaderRoute: typeof EsportsBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/football-betting': {
+      id: '/football-betting'
+      path: '/football-betting'
+      fullPath: '/football-betting'
+      preLoaderRoute: typeof FootballBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/horse-racing-betting': {
+      id: '/horse-racing-betting'
+      path: '/horse-racing-betting'
+      fullPath: '/horse-racing-betting'
+      preLoaderRoute: typeof HorseRacingBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ipl-betting': {
+      id: '/ipl-betting'
+      path: '/ipl-betting'
+      fullPath: '/ipl-betting'
+      preLoaderRoute: typeof IplBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kabaddi-betting': {
+      id: '/kabaddi-betting'
+      path: '/kabaddi-betting'
+      fullPath: '/kabaddi-betting'
+      preLoaderRoute: typeof KabaddiBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal': {
+      id: '/legal'
+      path: '/legal'
+      fullPath: '/legal'
+      preLoaderRoute: typeof LegalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/login': {
@@ -406,6 +959,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MahadevBettingAppRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/mahadev-book-bonuses': {
+      id: '/mahadev-book-bonuses'
+      path: '/mahadev-book-bonuses'
+      fullPath: '/mahadev-book-bonuses'
+      preLoaderRoute: typeof MahadevBookBonusesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mahadev-book-customer-care-number': {
+      id: '/mahadev-book-customer-care-number'
+      path: '/mahadev-book-customer-care-number'
+      fullPath: '/mahadev-book-customer-care-number'
+      preLoaderRoute: typeof MahadevBookCustomerCareNumberRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mahadev-book-deposit-issues': {
+      id: '/mahadev-book-deposit-issues'
+      path: '/mahadev-book-deposit-issues'
+      fullPath: '/mahadev-book-deposit-issues'
+      preLoaderRoute: typeof MahadevBookDepositIssuesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mahadev-book-deposit-methods': {
+      id: '/mahadev-book-deposit-methods'
+      path: '/mahadev-book-deposit-methods'
+      fullPath: '/mahadev-book-deposit-methods'
+      preLoaderRoute: typeof MahadevBookDepositMethodsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mahadev-book-deposit-number': {
+      id: '/mahadev-book-deposit-number'
+      path: '/mahadev-book-deposit-number'
+      fullPath: '/mahadev-book-deposit-number'
+      preLoaderRoute: typeof MahadevBookDepositNumberRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mahadev-book-kyc': {
+      id: '/mahadev-book-kyc'
+      path: '/mahadev-book-kyc'
+      fullPath: '/mahadev-book-kyc'
+      preLoaderRoute: typeof MahadevBookKycRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mahadev-book-limits': {
+      id: '/mahadev-book-limits'
+      path: '/mahadev-book-limits'
+      fullPath: '/mahadev-book-limits'
+      preLoaderRoute: typeof MahadevBookLimitsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mahadev-book-login-issues': {
+      id: '/mahadev-book-login-issues'
+      path: '/mahadev-book-login-issues'
+      fullPath: '/mahadev-book-login-issues'
+      preLoaderRoute: typeof MahadevBookLoginIssuesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mahadev-book-priority-support': {
+      id: '/mahadev-book-priority-support'
+      path: '/mahadev-book-priority-support'
+      fullPath: '/mahadev-book-priority-support'
+      preLoaderRoute: typeof MahadevBookPrioritySupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mahadev-book-referral-program': {
+      id: '/mahadev-book-referral-program'
+      path: '/mahadev-book-referral-program'
+      fullPath: '/mahadev-book-referral-program'
+      preLoaderRoute: typeof MahadevBookReferralProgramRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mahadev-book-telegram': {
+      id: '/mahadev-book-telegram'
+      path: '/mahadev-book-telegram'
+      fullPath: '/mahadev-book-telegram'
+      preLoaderRoute: typeof MahadevBookTelegramRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/mahadev-book-vs-lotus-365': {
       id: '/mahadev-book-vs-lotus-365'
       path: '/mahadev-book-vs-lotus-365'
@@ -420,6 +1050,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MahadevBookVsSkyexchange247RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/mahadev-book-withdrawal-delay': {
+      id: '/mahadev-book-withdrawal-delay'
+      path: '/mahadev-book-withdrawal-delay'
+      fullPath: '/mahadev-book-withdrawal-delay'
+      preLoaderRoute: typeof MahadevBookWithdrawalDelayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mahadev-book-withdrawal-guide': {
+      id: '/mahadev-book-withdrawal-guide'
+      path: '/mahadev-book-withdrawal-guide'
+      fullPath: '/mahadev-book-withdrawal-guide'
+      preLoaderRoute: typeof MahadevBookWithdrawalGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mahadev-book-withdrawal-number': {
+      id: '/mahadev-book-withdrawal-number'
+      path: '/mahadev-book-withdrawal-number'
+      fullPath: '/mahadev-book-withdrawal-number'
+      preLoaderRoute: typeof MahadevBookWithdrawalNumberRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/matches': {
       id: '/matches'
       path: '/matches'
@@ -427,11 +1078,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MatchesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/policies': {
+      id: '/policies'
+      path: '/policies'
+      fullPath: '/policies'
+      preLoaderRoute: typeof PoliciesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/predictions': {
       id: '/predictions'
       path: '/predictions'
       fullPath: '/predictions'
       preLoaderRoute: typeof PredictionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/responsible': {
+      id: '/responsible'
+      path: '/responsible'
+      fullPath: '/responsible'
+      preLoaderRoute: typeof ResponsibleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/safety': {
+      id: '/safety'
+      path: '/safety'
+      fullPath: '/safety'
+      preLoaderRoute: typeof SafetyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/schedule': {
@@ -453,6 +1139,55 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sports': {
+      id: '/sports'
+      path: '/sports'
+      fullPath: '/sports'
+      preLoaderRoute: typeof SportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/t20-world-cup-betting': {
+      id: '/t20-world-cup-betting'
+      path: '/t20-world-cup-betting'
+      fullPath: '/t20-world-cup-betting'
+      preLoaderRoute: typeof T20WorldCupBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trusted': {
+      id: '/trusted'
+      path: '/trusted'
+      fullPath: '/trusted'
+      preLoaderRoute: typeof TrustedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/what': {
+      id: '/what'
+      path: '/what'
+      fullPath: '/what'
+      preLoaderRoute: typeof WhatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/why': {
+      id: '/why'
+      path: '/why'
+      fullPath: '/why'
+      preLoaderRoute: typeof WhyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wpl-betting': {
+      id: '/wpl-betting'
+      path: '/wpl-betting'
+      fullPath: '/wpl-betting'
+      preLoaderRoute: typeof WplBettingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/.well-known/oauth-authorization-server': {
@@ -481,6 +1216,20 @@ declare module '@tanstack/react-router' {
       path: '/api/whatsapp-number'
       fullPath: '/api/whatsapp-number'
       preLoaderRoute: typeof ApiWhatsappNumberRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/authors/': {
+      id: '/authors/'
+      path: '/authors'
+      fullPath: '/authors/'
+      preLoaderRoute: typeof AuthorsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/authors/$slug': {
+      id: '/authors/$slug'
+      path: '/authors/$slug'
+      fullPath: '/authors/$slug'
+      preLoaderRoute: typeof AuthorsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -527,24 +1276,61 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AllLinksRoute: AllLinksRoute,
   AuthDotmdRoute: AuthDotmdRoute,
+  AwardsRoute: AwardsRoute,
+  BasketballBettingRoute: BasketballBettingRoute,
+  ChampionsTrophyBettingRoute: ChampionsTrophyBettingRoute,
   ContactRoute: ContactRoute,
+  EsportsBettingRoute: EsportsBettingRoute,
+  FootballBettingRoute: FootballBettingRoute,
+  HorseRacingBettingRoute: HorseRacingBettingRoute,
+  IplBettingRoute: IplBettingRoute,
+  KabaddiBettingRoute: KabaddiBettingRoute,
+  LegalRoute: LegalRoute,
   LoginRoute: LoginRoute,
   MahadevBettingAppRoute: MahadevBettingAppRoute,
+  MahadevBookBonusesRoute: MahadevBookBonusesRoute,
+  MahadevBookCustomerCareNumberRoute: MahadevBookCustomerCareNumberRoute,
+  MahadevBookDepositIssuesRoute: MahadevBookDepositIssuesRoute,
+  MahadevBookDepositMethodsRoute: MahadevBookDepositMethodsRoute,
+  MahadevBookDepositNumberRoute: MahadevBookDepositNumberRoute,
+  MahadevBookKycRoute: MahadevBookKycRoute,
+  MahadevBookLimitsRoute: MahadevBookLimitsRoute,
+  MahadevBookLoginIssuesRoute: MahadevBookLoginIssuesRoute,
+  MahadevBookPrioritySupportRoute: MahadevBookPrioritySupportRoute,
+  MahadevBookReferralProgramRoute: MahadevBookReferralProgramRoute,
+  MahadevBookTelegramRoute: MahadevBookTelegramRoute,
   MahadevBookVsLotus365Route: MahadevBookVsLotus365Route,
   MahadevBookVsSkyexchange247Route: MahadevBookVsSkyexchange247Route,
+  MahadevBookWithdrawalDelayRoute: MahadevBookWithdrawalDelayRoute,
+  MahadevBookWithdrawalGuideRoute: MahadevBookWithdrawalGuideRoute,
+  MahadevBookWithdrawalNumberRoute: MahadevBookWithdrawalNumberRoute,
   MatchesRoute: MatchesRoute,
+  PoliciesRoute: PoliciesRoute,
   PredictionsRoute: PredictionsRoute,
+  PrivacyRoute: PrivacyRoute,
+  ResponsibleRoute: ResponsibleRoute,
+  ReviewsRoute: ReviewsRoute,
+  SafetyRoute: SafetyRoute,
   ScheduleRoute: ScheduleRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SportsRoute: SportsRoute,
+  T20WorldCupBettingRoute: T20WorldCupBettingRoute,
+  TermsRoute: TermsRoute,
+  TrustedRoute: TrustedRoute,
+  WhatRoute: WhatRoute,
+  WhyRoute: WhyRoute,
+  WplBettingRoute: WplBettingRoute,
   DotwellKnownOauthAuthorizationServerRoute:
     DotwellKnownOauthAuthorizationServerRoute,
   DotwellKnownOauthProtectedResourceRoute:
     DotwellKnownOauthProtectedResourceRoute,
   DotwellKnownOpenidConfigurationRoute: DotwellKnownOpenidConfigurationRoute,
   ApiWhatsappNumberRoute: ApiWhatsappNumberRoute,
+  AuthorsSlugRoute: AuthorsSlugRoute,
   BlogSlugRoute: BlogSlugRoute,
   MatchSlugRoute: MatchSlugRoute,
+  AuthorsIndexRoute: AuthorsIndexRoute,
   BlogIndexRoute: BlogIndexRoute,
   DotwellKnownAgentSkillsIndexDotjsonRoute:
     DotwellKnownAgentSkillsIndexDotjsonRoute,

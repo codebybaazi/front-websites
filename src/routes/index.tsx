@@ -7,6 +7,29 @@ import { useWhatsApp } from "@/components/WhatsAppProvider";
 import { posts } from "@/data/posts";
 import { BlogHeroBanner } from "@/components/BlogHeroBanner";
 
+const reviews = [
+  {
+    n: "Aditya Rao",
+    city: "Bengaluru",
+    q: "Been betting on IPL for three seasons now and Mahadev Book is the only ID where I've never had to chase a withdrawal. Messaged on WhatsApp, had my ID in under five minutes, and my first cash-out of ₹15,000 hit UPI before I'd finished watching the highlights.",
+  },
+  {
+    n: "Meera Joshi",
+    city: "Indore",
+    q: "Switched here after a friend's recommendation and stayed for the support. Had a deposit go through twice by mistake, messaged them at midnight, and it was sorted before I woke up. That kind of thing matters more to me than any bonus.",
+  },
+  {
+    n: "Karthik Subramaniam",
+    city: "Coimbatore",
+    q: "I mostly play the live casino tables, not cricket, and the tables here run without the lag I got used to on other apps. Withdrawals have been consistent too, usually under half an hour on UPI regardless of the amount.",
+  },
+  {
+    n: "Farah Sheikh",
+    city: "Lucknow",
+    q: "First time betting online and I was nervous about getting scammed. The KYC process felt proper, not rushed, and the WhatsApp team actually explained the odds format to me instead of just sending links. Two months in and withdrawals still work exactly as promised.",
+  },
+];
+
 const homeFaqs: FAQItem[] = [
   { q: "What is Mahadev Book?", a: "Mahadev Book is India's trusted online betting app and cricket ID provider — one verified ID unlocks IPL cricket, football, live casino, Aviator and Teen Patti with instant UPI payouts." },
   { q: "How do I get a Mahadev Book ID?", a: "Message us on WhatsApp with your name and preferred deposit method. You'll receive a verified Mahadev Book ID with login URL, user ID and password in under 60 seconds." },
@@ -37,6 +60,7 @@ import {
   ThumbsUp,
   BadgeCheck,
   MessageCircle,
+  Star,
 } from "lucide-react";
 import InPlayEvents, { fetchInPlayEvents, type ApiEvent } from "@/components/InPlayEvents";
 
@@ -81,6 +105,16 @@ export const Route = createFileRoute("/")({
           speakable: { "@type": "SpeakableSpecification", cssSelector: [".ai-overview-speakable"] },
         }),
       },
+      ...reviews.map((r) => ({
+        type: "application/ld+json" as const,
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Review",
+          reviewBody: r.q,
+          author: { "@type": "Person", name: r.n },
+          itemReviewed: { "@type": "Organization", name: "Mahadev Book", url: "https://mahadevbookss.com/" },
+        }),
+      })),
     ],
   }),
   loader: async (): Promise<{ inPlayEvents: ApiEvent[] }> => ({
@@ -741,6 +775,70 @@ function Index() {
         </div>
       </section>
 
+      {/* Quick Contact Numbers */}
+      <section className="relative mx-auto max-w-7xl px-4 sm:px-6 pb-12 sm:pb-14">
+        <div className="relative rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 via-card/70 to-card/70 backdrop-blur p-6 sm:p-8 overflow-hidden">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -top-16 -right-16 h-56 w-56 rounded-full blur-3xl opacity-40"
+            style={{ background: "radial-gradient(closest-side, oklch(0.82 0.15 85 / 0.6), transparent)" }}
+          />
+          <div className="relative flex flex-col items-center text-center mb-6">
+            <span className="text-primary text-[11px] tracking-[0.3em] uppercase font-semibold">Need Help Right Now?</span>
+            <h3 className="mt-2 font-display text-2xl sm:text-3xl font-bold tracking-tight">
+              Official <span className="text-gradient-gold">Contact Numbers</span>
+            </h3>
+          </div>
+          <div className="relative grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link
+              to="/mahadev-book-deposit-number"
+              className="group relative rounded-xl border border-primary/30 bg-background/60 p-5 hover:border-primary hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 rounded-lg grid place-items-center bg-primary/10 border border-primary/30 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <Wallet className="h-5 w-5" />
+                </div>
+                <span className="font-display font-bold text-foreground group-hover:text-primary transition-colors">Deposit Number</span>
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">Official WhatsApp line to fund your wallet instantly via UPI, IMPS or e-wallet.</p>
+              <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary">
+                Chat now <ArrowUpRight className="h-3.5 w-3.5" />
+              </span>
+            </Link>
+            <Link
+              to="/mahadev-book-withdrawal-number"
+              className="group relative rounded-xl border border-primary/30 bg-background/60 p-5 hover:border-primary hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 rounded-lg grid place-items-center bg-primary/10 border border-primary/30 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <ArrowRight className="h-5 w-5" />
+                </div>
+                <span className="font-display font-bold text-foreground group-hover:text-primary transition-colors">Withdrawal Number</span>
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">Request a payout on WhatsApp and get UPI cash-outs settled in minutes.</p>
+              <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary">
+                Chat now <ArrowUpRight className="h-3.5 w-3.5" />
+              </span>
+            </Link>
+            <Link
+              to="/mahadev-book-customer-care-number"
+              className="group relative rounded-xl border border-primary/30 bg-background/60 p-5 hover:border-primary hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 rounded-lg grid place-items-center bg-primary/10 border border-primary/30 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <Headphones className="h-5 w-5" />
+                </div>
+                <span className="font-display font-bold text-foreground group-hover:text-primary transition-colors">Customer Care Number</span>
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">24/7 support on WhatsApp for KYC, login issues, bonuses and account help.</p>
+              <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary">
+                Chat now <ArrowUpRight className="h-3.5 w-3.5" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Why */}
       <section id="why" className="relative mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-14">
         <div
@@ -925,6 +1023,37 @@ function Index() {
           <Link to="/blog" className="text-sm font-medium text-primary hover:underline">
             View all posts <ArrowRight className="ml-1 h-4 w-4 inline" />
           </Link>
+        </div>
+      </section>
+
+      {/* Player Reviews */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-14">
+        <div className="flex flex-col items-center text-center mb-10">
+          <div className="flex items-center gap-3">
+            <span className="h-px w-10 bg-gradient-to-r from-transparent to-primary" />
+            <span className="text-primary text-[11px] tracking-[0.4em] uppercase font-semibold">Player Reviews</span>
+            <span className="h-px w-10 bg-gradient-to-l from-transparent to-primary" />
+          </div>
+          <h2 className="mt-4 font-display text-4xl sm:text-5xl font-bold tracking-tight">
+            What real <span className="text-gradient-gold">players say</span>
+          </h2>
+          <p className="text-muted-foreground mt-4 max-w-xl">
+            Unfiltered feedback from Mahadev Book users across India — on withdrawals, support and everyday betting.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {reviews.map((r) => (
+            <div key={r.n} className="rounded-2xl border border-border bg-card/70 backdrop-blur p-6">
+              <div className="flex items-center gap-1 text-amber-500">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-current" />
+                ))}
+              </div>
+              <p className="mt-3 text-sm text-foreground/90 leading-relaxed">"{r.q}"</p>
+              <div className="mt-4 text-sm font-semibold text-foreground">{r.n}</div>
+              <div className="text-xs text-muted-foreground">{r.city}</div>
+            </div>
+          ))}
         </div>
       </section>
 

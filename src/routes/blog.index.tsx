@@ -70,6 +70,9 @@ function BlogIndex() {
         <p className="mt-5 text-lg text-muted-foreground max-w-2xl">
           Practical writing from people who spend all day inside sportsbooks and casino tables. No fluff, no hype.
         </p>
+        <Link to="/authors" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
+          Meet the writers behind these guides <ArrowUpRight className="h-3.5 w-3.5" />
+        </Link>
       </section>
 
       <AIOverview

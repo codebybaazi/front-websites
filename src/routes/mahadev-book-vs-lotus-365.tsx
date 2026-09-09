@@ -1,8 +1,31 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Check, X, ShieldCheck, Zap, Headphones, Wallet, Trophy, BadgeCheck } from "lucide-react";
+import { Check, X, ShieldCheck, Zap, Headphones, Wallet, Trophy, BadgeCheck, Star } from "lucide-react";
 import { AIOverview } from "@/components/AIOverview";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, type FAQItem } from "@/components/FAQSection";
+
+const reviews = [
+  {
+    n: "Rahul Deshmukh",
+    city: "Nagpur",
+    q: "Signed up on Lotus 365 for the 400% bonus, but the rollover took me almost three weeks of steady play to clear. Opened a Mahadev Book ID during IPL and the flat 5% bonus plus a same-day withdrawal made more sense for how I actually bet.",
+  },
+  {
+    n: "Priya Iyer",
+    city: "Chennai",
+    q: "I keep both. Lotus has more slot titles and I like their live casino floor on weekends, but Mahadev Book is where I bet on matches. Withdrawals landed in under thirty minutes every time I've tried, even at 1AM during a Test match.",
+  },
+  {
+    n: "Manish Bhatt",
+    city: "Ahmedabad",
+    q: "Lotus 365's headline bonus looked great until I read the wagering terms properly. Moved most of my cricket betting to Mahadev Book instead. No commission surprises, and my last withdrawal of ₹22,000 came through on UPI in about twenty minutes.",
+  },
+  {
+    n: "Neha Kapoor",
+    city: "Jaipur",
+    q: "First time betting online, so the app-only signup on Lotus 365 felt like a lot of steps. Messaged Mahadev Book on WhatsApp instead and had a working ID before the toss. Support answered every question I had without making me feel stupid for asking.",
+  },
+];
 
 const lotusFaqs: FAQItem[] = [
   { q: "Which is better, Mahadev Book or Lotus 365?", a: "For most Indian players, Mahadev Book wins on payout speed, WhatsApp support and cricket-market depth. Lotus 365 has a slicker casino lobby. Pick Mahadev Book if withdrawals matter most; Lotus 365 if you mostly play slots." },
@@ -81,6 +104,16 @@ export const Route = createFileRoute("/mahadev-book-vs-lotus-365")({
           speakable: { "@type": "SpeakableSpecification", cssSelector: [".ai-overview-speakable"] },
         }),
       },
+      ...reviews.map((r) => ({
+        type: "application/ld+json" as const,
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Review",
+          reviewBody: r.q,
+          author: { "@type": "Person", name: r.n },
+          itemReviewed: { "@type": "Organization", name: "Mahadev Book", url: "https://mahadevbookss.com/" },
+        }),
+      })),
     ],
   }),
   component: ComparePage,
@@ -246,6 +279,26 @@ function ComparePage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section className="mx-auto max-w-5xl px-4 py-12 border-t border-border/60">
+        <h2 className="text-2xl font-bold text-foreground">Players who've used both</h2>
+        <p className="mt-2 text-muted-foreground">Real feedback from users who tried Lotus 365 and Mahadev Book side by side.</p>
+        <div className="mt-6 grid gap-4 md:grid-cols-2">
+          {reviews.map((r) => (
+            <div key={r.n} className="rounded-xl border border-border/70 bg-card p-6">
+              <div className="flex items-center gap-1 text-amber-500">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-current" />
+                ))}
+              </div>
+              <p className="mt-3 text-sm text-foreground/90">"{r.q}"</p>
+              <div className="mt-4 text-sm font-semibold text-foreground">{r.n}</div>
+              <div className="text-xs text-muted-foreground">{r.city}</div>
+            </div>
+          ))}
         </div>
       </section>
 

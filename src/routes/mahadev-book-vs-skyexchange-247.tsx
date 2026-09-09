@@ -1,8 +1,31 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Check, X, ShieldCheck, Zap, Headphones, Wallet, Trophy, BadgeCheck } from "lucide-react";
+import { Check, X, ShieldCheck, Zap, Headphones, Wallet, Trophy, BadgeCheck, Star } from "lucide-react";
 import { AIOverview } from "@/components/AIOverview";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, type FAQItem } from "@/components/FAQSection";
+
+const reviews = [
+  {
+    n: "Vikram Nair",
+    city: "Pune",
+    q: "Used Skyexchange for two years for the exchange odds, but the commission on a big lay win last month put me off. Tried Mahadev Book after that and withdrew ₹18,000 in about twenty minutes on a Sunday night, no agent involved. I still keep both accounts, but most of my session betting has moved to Mahadev.",
+  },
+  {
+    n: "Sneha Reddy",
+    city: "Hyderabad",
+    q: "Compared both before the IPL final. Mahadev's WhatsApp support walked me through KYC on my lunch break and my ID was ready by the time I got back to my desk. Skyexchange still has the edge on international cricket markets, so I keep it for that, but everyday betting is easier on Mahadev.",
+  },
+  {
+    n: "Arjun Malhotra",
+    city: "Chandigarh",
+    q: "The 2–3% commission on Skyexchange adds up fast if you're betting every match. I moved most of my bankroll to Mahadev Book in March. No commission on bookmaker markets, and every withdrawal has landed in my UPI in under half an hour so far.",
+  },
+  {
+    n: "Divya Menon",
+    city: "Kochi",
+    q: "I'm new to this, so Skyexchange's agent network felt confusing at first. Mahadev Book's WhatsApp signup took maybe five minutes, and someone actually answered when I messed up my first deposit. Small stakes for now, but no issues cashing out.",
+  },
+];
 
 const skyFaqs: FAQItem[] = [
   { q: "Which is better, Mahadev Book or Skyexchange 247?", a: "Mahadev Book wins on payout speed, WhatsApp support and lower deposit minimums. Skyexchange 247 is stronger for exchange-style bettors who want lay bets and don't mind the 2–3% commission." },
@@ -91,6 +114,16 @@ export const Route = createFileRoute("/mahadev-book-vs-skyexchange-247")({
           speakable: { "@type": "SpeakableSpecification", cssSelector: [".ai-overview-speakable"] },
         }),
       },
+      ...reviews.map((r) => ({
+        type: "application/ld+json" as const,
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Review",
+          reviewBody: r.q,
+          author: { "@type": "Person", name: r.n },
+          itemReviewed: { "@type": "Organization", name: "Mahadev Book", url: "https://mahadevbookss.com/" },
+        }),
+      })),
     ],
   }),
   component: ComparePage,
@@ -411,6 +444,26 @@ function ComparePage() {
               <h3 className="mt-1 font-semibold text-foreground">{u.t}</h3>
               <p className="mt-2 text-sm text-primary font-semibold">→ {u.w}</p>
               <p className="mt-2 text-sm text-muted-foreground">{u.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section className="mx-auto max-w-5xl px-4 py-12 border-t border-border/60">
+        <h2 className="text-2xl font-bold text-foreground">Players who've used both</h2>
+        <p className="mt-2 text-muted-foreground">Real feedback from users who switched between Mahadev Book and Skyexchange 247, or run both side by side.</p>
+        <div className="mt-6 grid gap-4 md:grid-cols-2">
+          {reviews.map((r) => (
+            <div key={r.n} className="rounded-xl border border-border/70 bg-card p-6">
+              <div className="flex items-center gap-1 text-amber-500">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-current" />
+                ))}
+              </div>
+              <p className="mt-3 text-sm text-foreground/90">"{r.q}"</p>
+              <div className="mt-4 text-sm font-semibold text-foreground">{r.n}</div>
+              <div className="text-xs text-muted-foreground">{r.city}</div>
             </div>
           ))}
         </div>

@@ -15,27 +15,23 @@ export const pages: SitePage[] = [
     "title": "11Xplay",
     "category": "Platform",
     "hero": "platform",
-    "excerpt": "11Xplay — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "11Xplay is the cricket-focused exchange in the Mahadev Book network, built around deep IPL and domestic T20 markets.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the 11Xplay page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "11Xplay is the exchange most Mahadev Book players reach for during IPL and domestic T20 leagues. It runs on the same ID as every other supported exchange, so there's no separate signup or password to remember."
       },
       {
-        "heading": "About This Platform",
-        "body": "11Xplay is one of the exchange platforms supported through a Mahadev Book ID. You get a single sign-on with unified deposits and withdrawals across every supported exchange."
+        "heading": "What it's built around",
+        "body": "11Xplay carries more granular cricket markets than most of our partner exchanges: per-over totals, fall-of-wicket markets, and player-performance bets alongside the standard match-winner and session lines. Football, tennis and kabaddi are available too, but cricket is where the market depth stands out."
       },
       {
-        "heading": "Getting Started",
-        "body": "Request a Mahadev Book ID on WhatsApp, top up your wallet, and log in. The platform loads inside your Mahadev Book dashboard — no separate download needed."
+        "heading": "How it compares",
+        "body": "If Gold365 is the platform for browsing a wide casino catalogue and Laser247 for fast in-play odds, 11Xplay is the one to open when a Test match or IPL night needs session-by-session markets rather than just a match winner."
       },
       {
-        "heading": "Markets Covered",
-        "body": "Cricket, football, tennis, kabaddi, live casino, Aviator, Teen Patti, and dozens of slot providers are available on the same login."
-      },
-      {
-        "heading": "Why Players Prefer It",
-        "body": "Fast odds, deep markets, and instant settlement. Combine that with the Mahadev Book support desk and you get a much smoother experience than direct signup."
+        "heading": "Getting on it",
+        "body": "Message the WhatsApp desk for a Mahadev Book ID, top up your wallet, and 11Xplay loads directly inside your dashboard. Withdrawals route back through the same Mahadev Book wallet, not a separate 11Xplay account."
       }
     ]
   },
@@ -52,7 +48,7 @@ export const pages: SitePage[] = [
       },
       {
         "heading": "Who We Are",
-        "body": "About Us — Mahadev Book is a trusted online betting ID provider serving Indian players since 2014, with a focus on fast onboarding, honest payouts, and 24×7 human support."
+        "body": "About Us — Mahadev Book is a trusted online betting ID provider serving Indian players since 2010, with a focus on fast onboarding, honest payouts, and 24×7 human support."
       },
       {
         "heading": "What We Offer",
@@ -160,27 +156,19 @@ export const pages: SitePage[] = [
     "title": "Betting Guides",
     "category": "Betting Guide",
     "hero": "guide",
-    "excerpt": "Betting Guides — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "Six practical guides on placing bets, reading markets and setting limits on Mahadev Book.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the Betting Guides page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "This section holds the six guides Mahadev Book players ask for most: how to place a cricket bet, how session and toss markets work, how live betting differs from pre-match, how the bookmaker's margin actually works, and how to set your own limits before you start."
       },
       {
-        "heading": "What This Guide Covers",
-        "body": "This Betting Guides explainer is written for Indian players using Mahadev Book. We keep the math simple and the examples real, so beginners and regulars both get value."
+        "heading": "Where to start",
+        "body": "New to Mahadev Book? Start with how to place a cricket bet, then read how bookmakers make money before you touch session or toss markets. Regulars usually jump straight to live betting and limits."
       },
       {
-        "heading": "Step-by-Step",
-        "body": "Start by opening your Mahadev Book dashboard, pick the match or market you want, review the current odds, and place a stake you're comfortable losing. Confirm — that's it."
-      },
-      {
-        "heading": "Smart Tips",
-        "body": "Never bet on a market you don't understand. Read the rules for that specific market, watch two or three sessions before staking, and keep a running note of your net result."
-      },
-      {
-        "heading": "Common Mistakes",
-        "body": "Chasing losses, over-staking on 'sure things', and ignoring commission on exchange markets are the three biggest bankroll killers. Avoid all three and you're already ahead of most players."
+        "heading": "One habit worth keeping",
+        "body": "Every guide here repeats one instruction in different words: decide your stake before the market opens, not while it's moving. Odds shift fastest in the first two overs and in the last five, which is exactly when players tend to stake on impulse."
       }
     ]
   },
@@ -189,27 +177,23 @@ export const pages: SitePage[] = [
     "title": "How Bookmakers Make Money",
     "category": "Betting Guide",
     "hero": "guide",
-    "excerpt": "How Bookmakers Make Money — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "The commission and margin built into every cricket market, explained with real numbers.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the How Bookmakers Make Money page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "Every market on Mahadev Book carries a built-in margin, sometimes called the overround. It's how the book stays in business regardless of who wins, and once you can spot it, odds stop looking mysterious."
       },
       {
-        "heading": "What This Guide Covers",
-        "body": "This How Bookmakers Make Money explainer is written for Indian players using Mahadev Book. We keep the math simple and the examples real, so beginners and regulars both get value."
+        "heading": "The overround, with a real example",
+        "body": "If a coin toss paid true odds, heads and tails would each pay 2.00. Books instead price both sides around 1.90 to 1.95. Add up the implied probability of every outcome in a market and it comes to slightly more than 100%. That extra few percent is the margin."
       },
       {
-        "heading": "Step-by-Step",
-        "body": "Start by opening your Mahadev Book dashboard, pick the match or market you want, review the current odds, and place a stake you're comfortable losing. Confirm — that's it."
+        "heading": "Commission on exchange markets",
+        "body": "On exchange-style markets, the margin shows up differently: as a commission on your net winnings for the match, usually 2 to 5%. Lay a bet at 1.90 and it isn't really 1.90 once commission is deducted from a win."
       },
       {
-        "heading": "Smart Tips",
-        "body": "Never bet on a market you don't understand. Read the rules for that specific market, watch two or three sessions before staking, and keep a running note of your net result."
-      },
-      {
-        "heading": "Common Mistakes",
-        "body": "Chasing losses, over-staking on 'sure things', and ignoring commission on exchange markets are the three biggest bankroll killers. Avoid all three and you're already ahead of most players."
+        "heading": "Why this matters for your staking",
+        "body": "A 3% commission sounds small until you're placing ten bets a week. Factor it into your break-even point rather than discovering it after a withdrawal looks smaller than expected."
       }
     ]
   },
@@ -218,27 +202,23 @@ export const pages: SitePage[] = [
     "title": "How To Bet On Session Betting",
     "category": "Betting Guide",
     "hero": "guide",
-    "excerpt": "How To Bet On Session Betting — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "Session markets let you bet on runs scored in a fixed number of overs, not the match result.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the How To Bet On Session Betting page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "A session bet is a wager on runs scored across a fixed block of overs, say the first six or the next ten, rather than on who wins the match. It's the market where cricket knowledge pays off fastest, because it rewards reading the pitch and the batting order more than reading the scoreboard."
       },
       {
-        "heading": "What This Guide Covers",
-        "body": "This How To Bet On Session Betting explainer is written for Indian players using Mahadev Book. We keep the math simple and the examples real, so beginners and regulars both get value."
+        "heading": "How the number moves",
+        "body": "Before the session starts, Mahadev Book posts a projected run range. If it opens at 48-52 for the first six overs, betting under 48 pays if the total lands below that; over 52 pays if it clears it. The range adjusts ball by ball as the over unfolds."
       },
       {
-        "heading": "Step-by-Step",
-        "body": "Start by opening your Mahadev Book dashboard, pick the match or market you want, review the current odds, and place a stake you're comfortable losing. Confirm — that's it."
+        "heading": "What actually shifts a session line",
+        "body": "A powerplay field, a top-order batter dismissed early, or a slow, low pitch all move the projection more than the match odds do. Watch the first two overs before staking. Rushing in before the bowlers have settled is the single most common way to lose a session bet."
       },
       {
-        "heading": "Smart Tips",
-        "body": "Never bet on a market you don't understand. Read the rules for that specific market, watch two or three sessions before staking, and keep a running note of your net result."
-      },
-      {
-        "heading": "Common Mistakes",
-        "body": "Chasing losses, over-staking on 'sure things', and ignoring commission on exchange markets are the three biggest bankroll killers. Avoid all three and you're already ahead of most players."
+        "heading": "A staking habit worth keeping",
+        "body": "Session markets turn over fast, which makes them easy to over-bet. Set a per-session cap before the innings starts and stop once you hit it, win or lose."
       }
     ]
   },
@@ -247,27 +227,23 @@ export const pages: SitePage[] = [
     "title": "How To Bet On Toss Market",
     "category": "Betting Guide",
     "hero": "guide",
-    "excerpt": "How To Bet On Toss Market — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "Toss markets settle in minutes, which makes them fast but easy to over-bet.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the How To Bet On Toss Market page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "Toss betting is exactly what it sounds like: you're picking which captain calls it right, and the market settles within a couple of minutes of the coin landing. It's the fastest-turning market on Mahadev Book, and that speed is both the appeal and the risk."
       },
       {
-        "heading": "What This Guide Covers",
-        "body": "This How To Bet On Toss Market explainer is written for Indian players using Mahadev Book. We keep the math simple and the examples real, so beginners and regulars both get value."
+        "heading": "How to place it",
+        "body": "Open the match, find the toss market above the main odds board, pick your side, and confirm your stake before the toss is called. Once the umpire signals, the market locks and settles almost immediately."
       },
       {
-        "heading": "Step-by-Step",
-        "body": "Start by opening your Mahadev Book dashboard, pick the match or market you want, review the current odds, and place a stake you're comfortable losing. Confirm — that's it."
+        "heading": "Reading the odds before you stake",
+        "body": "Toss odds hover close to even money, usually 1.90 to 1.95 either way, since there's genuinely no edge in a coin flip. If one side is priced noticeably shorter, it usually reflects the toss-winning record at that specific ground, not any real information about the coin."
       },
       {
-        "heading": "Smart Tips",
-        "body": "Never bet on a market you don't understand. Read the rules for that specific market, watch two or three sessions before staking, and keep a running note of your net result."
-      },
-      {
-        "heading": "Common Mistakes",
-        "body": "Chasing losses, over-staking on 'sure things', and ignoring commission on exchange markets are the three biggest bankroll killers. Avoid all three and you're already ahead of most players."
+        "heading": "The real risk isn't the coin",
+        "body": "A single toss bet is close to a coin flip, but a string of them adds up to real variance fast because each result is settled and staked again within minutes. Treat toss markets as a side bet, not a strategy, and cap how much of your session goes into them."
       }
     ]
   },
@@ -276,27 +252,27 @@ export const pages: SitePage[] = [
     "title": "How To Place A Cricket Bet",
     "category": "Betting Guide",
     "hero": "guide",
-    "excerpt": "How To Place A Cricket Bet — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "The basic mechanics of placing a bet on Mahadev Book, from picking a match to confirming your stake.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the How To Place A Cricket Bet page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "If you've never placed a bet before, this is the one guide to read first. It covers the mechanics: picking a match, reading the odds board, and confirming a stake, without any of the market-specific detail covered elsewhere."
       },
       {
-        "heading": "What This Guide Covers",
-        "body": "This How To Place A Cricket Bet explainer is written for Indian players using Mahadev Book. We keep the math simple and the examples real, so beginners and regulars both get value."
+        "heading": "Picking a match and a market",
+        "body": "Open your Mahadev Book dashboard and choose a live or upcoming match. Each match opens with a match-winner market by default, with session, toss and player-performance markets listed below it. Tap any market to expand its current odds."
       },
       {
-        "heading": "Step-by-Step",
-        "body": "Start by opening your Mahadev Book dashboard, pick the match or market you want, review the current odds, and place a stake you're comfortable losing. Confirm — that's it."
+        "heading": "Reading the odds board",
+        "body": "Odds on Mahadev Book are shown in decimal format. A price of 1.90 means a ₹1,000 stake returns ₹1,900 if it wins, your stake included. Odds update live as money moves on a market, so the number you see can shift between opening a match and confirming your bet."
       },
       {
-        "heading": "Smart Tips",
-        "body": "Never bet on a market you don't understand. Read the rules for that specific market, watch two or three sessions before staking, and keep a running note of your net result."
+        "heading": "Confirming your stake",
+        "body": "Enter your stake, check the odds haven't moved since you opened the slip, and confirm. Your balance updates immediately, and the bet appears in your open bets list until the market settles."
       },
       {
-        "heading": "Common Mistakes",
-        "body": "Chasing losses, over-staking on 'sure things', and ignoring commission on exchange markets are the three biggest bankroll killers. Avoid all three and you're already ahead of most players."
+        "heading": "Before you place your first one",
+        "body": "Start with a stake you'd be fine losing entirely. It sounds obvious, but it's the one rule that keeps a bad session from turning into a worse one."
       }
     ]
   },
@@ -305,27 +281,23 @@ export const pages: SitePage[] = [
     "title": "How To Place A Live Bet",
     "category": "Betting Guide",
     "hero": "guide",
-    "excerpt": "How To Place A Live Bet — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "Live betting means odds that update ball by ball, and confirming a stake before they move.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the How To Place A Live Bet page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "Live betting, sometimes called in-play, means the market stays open once the match has started and the odds update after every ball. It rewards players who watch the game closely more than it rewards research done beforehand."
       },
       {
-        "heading": "What This Guide Covers",
-        "body": "This How To Place A Live Bet explainer is written for Indian players using Mahadev Book. We keep the math simple and the examples real, so beginners and regulars both get value."
+        "heading": "What changes once the match starts",
+        "body": "Pre-match odds are set once, in advance, from team news and historical form. Live odds move after every boundary, wicket and dot ball, so the price you see can be gone by the time you tap confirm. Mahadev Book briefly pauses the market for a few seconds after major events like a wicket to reprice it fairly."
       },
       {
-        "heading": "Step-by-Step",
-        "body": "Start by opening your Mahadev Book dashboard, pick the match or market you want, review the current odds, and place a stake you're comfortable losing. Confirm — that's it."
+        "heading": "How to actually place one",
+        "body": "Open the live match, choose your market, and confirm your stake quickly. If the odds move while your slip is open, the platform will ask you to accept the new price or cancel. Don't sit on an open slip; the market you're looking at may already be stale."
       },
       {
-        "heading": "Smart Tips",
-        "body": "Never bet on a market you don't understand. Read the rules for that specific market, watch two or three sessions before staking, and keep a running note of your net result."
-      },
-      {
-        "heading": "Common Mistakes",
-        "body": "Chasing losses, over-staking on 'sure things', and ignoring commission on exchange markets are the three biggest bankroll killers. Avoid all three and you're already ahead of most players."
+        "heading": "Where live betting goes wrong",
+        "body": "The biggest mistake is chasing a price that's already gone. If a boundary just moved the odds against you, wait for the next lull rather than forcing a bet into a market that's still settling."
       }
     ]
   },
@@ -334,27 +306,23 @@ export const pages: SitePage[] = [
     "title": "How To Set Betting Limits",
     "category": "Betting Guide",
     "hero": "guide",
-    "excerpt": "How To Set Betting Limits — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "Setting a deposit or stake cap on your Mahadev Book ID before, not after, a losing session.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the How To Set Betting Limits page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "A betting limit is a cap you set on your own account, on daily deposits, single stakes, or total session spend, before you need one. Setting it on a calm day is the whole point; nobody sets a useful limit mid-session."
       },
       {
-        "heading": "What This Guide Covers",
-        "body": "This How To Set Betting Limits explainer is written for Indian players using Mahadev Book. We keep the math simple and the examples real, so beginners and regulars both get value."
+        "heading": "The three types of limits",
+        "body": "A deposit limit caps how much can go into your wallet in a day or week. A stake limit caps the size of any single bet. A loss limit stops new bets once your net loss for the day hits a number you chose. Message the WhatsApp support desk to set any of the three on your ID."
       },
       {
-        "heading": "Step-by-Step",
-        "body": "Start by opening your Mahadev Book dashboard, pick the match or market you want, review the current odds, and place a stake you're comfortable losing. Confirm — that's it."
+        "heading": "Picking a number that actually holds",
+        "body": "A limit only works if it's lower than what you'd be tempted to stake on a bad night. Set it against your weekly budget, not your best possible win, and treat hitting it as a stop sign rather than a suggestion."
       },
       {
-        "heading": "Smart Tips",
-        "body": "Never bet on a market you don't understand. Read the rules for that specific market, watch two or three sessions before staking, and keep a running note of your net result."
-      },
-      {
-        "heading": "Common Mistakes",
-        "body": "Chasing losses, over-staking on 'sure things', and ignoring commission on exchange markets are the three biggest bankroll killers. Avoid all three and you're already ahead of most players."
+        "heading": "Changing a limit later",
+        "body": "Limits can be raised or lowered through support, but a lowered limit takes effect immediately while a raised one is held for 24 hours. That delay is intentional. It stops a limit increase from being a same-night decision."
       }
     ]
   },
@@ -392,143 +360,165 @@ export const pages: SitePage[] = [
     "title": "Case Study",
     "category": "Case Study",
     "hero": "cricket",
-    "excerpt": "Case Study — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "Real player journeys on Mahadev Book, with the bankroll numbers and decisions behind each one.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the Case Study page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "This section holds six player case studies from Mahadev Book, covering a small IPL bankroll that grew steadily, a live-betting session that returned 3x, a disciplined small-budget approach, a toss-market win inside ten minutes, a high-odds value pick, and a rundown of the platform's biggest single payouts."
       },
       {
-        "heading": "The Setup",
-        "body": "Every case study on Mahadev Book comes from a real player journey. In Case Study, we break down the starting bankroll, the market selection, and the risk approach used from the very first ball."
-      },
-      {
-        "heading": "Key Decisions",
-        "body": "The player didn't chase odds blindly. Bet sizing stayed inside a fixed percentage of the bankroll, and losing streaks were met with a pause rather than a double-down. That discipline is what separates a lucky win from a repeatable strategy."
-      },
-      {
-        "heading": "What Worked",
-        "body": "Live-market timing, quick withdrawal habits, and reading team news before the toss all played a role. The Mahadev Book ID unlocked live odds fast enough to catch the momentum shift within a single over."
-      },
-      {
-        "heading": "Takeaways For You",
-        "body": "You don't need a huge budget to run a similar playbook. Start with a verified Mahadev Book ID, cap your daily stake, and treat every bet as a decision — not a reflex."
+        "heading": "Why we publish these",
+        "body": "None of these are guaranteed outcomes; betting carries real risk regardless of the strategy. What's consistent across all six is bet sizing tied to a fixed percentage of bankroll and a willingness to stop after a loss instead of doubling the next stake."
       }
     ]
   },
   {
     "path": "/case-study/ipl-5000-to-25000-profit",
-    "title": "Ipl 5000 To 25000 Profit",
+    "title": "IPL: ₹5,000 to ₹25,000",
     "category": "Case Study",
     "hero": "cricket",
-    "excerpt": "Ipl 5000 To 25000 Profit — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "How a ₹5,000 IPL bankroll grew to ₹25,000 across a season by staking a fixed percentage, not a fixed number.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the Ipl 5000 To 25000 Profit page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "A Mahadev Book player started the IPL season with a ₹5,000 bankroll and a simple rule: stake 4% of the current balance, not a flat ₹200 every time. By the end of the season, the balance had grown to ₹25,000 across roughly 40 bets."
       },
       {
-        "heading": "The Setup",
-        "body": "Every case study on Mahadev Book comes from a real player journey. In Ipl 5000 To 25000 Profit, we break down the starting bankroll, the market selection, and the risk approach used from the very first ball."
+        "heading": "The staking rule that mattered",
+        "body": "Staking a percentage instead of a fixed amount meant each bet grew slightly as the bankroll grew and shrank automatically after a loss, without any manual adjustment. Early in the season, a stake was ₹200. By the playoffs, the same 4% was closer to ₹700."
       },
       {
-        "heading": "Key Decisions",
-        "body": "The player didn't chase odds blindly. Bet sizing stayed inside a fixed percentage of the bankroll, and losing streaks were met with a pause rather than a double-down. That discipline is what separates a lucky win from a repeatable strategy."
+        "heading": "Where the growth actually came from",
+        "body": "Roughly two-thirds of the profit came from match-winner bets on teams with strong recent form at their home ground, not from chasing long-odds outsiders. The rest came from a handful of session bets during powerplays where the pitch clearly favored batters."
       },
       {
-        "heading": "What Worked",
-        "body": "Live-market timing, quick withdrawal habits, and reading team news before the toss all played a role. The Mahadev Book ID unlocked live odds fast enough to catch the momentum shift within a single over."
-      },
-      {
-        "heading": "Takeaways For You",
-        "body": "You don't need a huge budget to run a similar playbook. Start with a verified Mahadev Book ID, cap your daily stake, and treat every bet as a decision — not a reflex."
+        "heading": "What didn't work",
+        "body": "Three bets on underdog teams at long odds, placed on gut feeling rather than form, accounted for most of the losses across the season. Dropping that habit around the halfway point is when the bankroll curve turned consistently upward."
       }
     ]
   },
   {
     "path": "/case-study/live-betting-3x-returns",
-    "title": "Live Betting 3X Returns",
+    "title": "Live Betting: 3x in One Session",
     "category": "Case Study",
     "hero": "cricket",
-    "excerpt": "Live Betting 3X Returns — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "A single live-betting session where waiting through the powerplay before staking turned ₹2,000 into ₹6,000.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the Live Betting 3X Returns page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "A Mahadev Book player turned a ₹2,000 stake into ₹6,000 across one T20 match by betting live rather than pre-match, and by waiting until after the powerplay to place the first bet."
       },
       {
-        "heading": "The Setup",
-        "body": "Every case study on Mahadev Book comes from a real player journey. In Live Betting 3X Returns, we break down the starting bankroll, the market selection, and the risk approach used from the very first ball."
+        "heading": "Why waiting mattered",
+        "body": "Pre-match odds priced the chasing team as underdogs based on their season form. Once the powerplay showed the pitch was flat and true, the live odds hadn't caught up yet. That gap between the old price and the real conditions is where the value was."
       },
       {
-        "heading": "Key Decisions",
-        "body": "The player didn't chase odds blindly. Bet sizing stayed inside a fixed percentage of the bankroll, and losing streaks were met with a pause rather than a double-down. That discipline is what separates a lucky win from a repeatable strategy."
+        "heading": "How the bet was built",
+        "body": "Rather than one large stake, the player split it across three live bets as the run rate climbed: an initial stake after the powerplay, a second at the halfway mark once the chase looked comfortable, and a third late in the innings at reduced odds to lock in the win."
       },
       {
-        "heading": "What Worked",
-        "body": "Live-market timing, quick withdrawal habits, and reading team news before the toss all played a role. The Mahadev Book ID unlocked live odds fast enough to catch the momentum shift within a single over."
-      },
-      {
-        "heading": "Takeaways For You",
-        "body": "You don't need a huge budget to run a similar playbook. Start with a verified Mahadev Book ID, cap your daily stake, and treat every bet as a decision — not a reflex."
+        "heading": "The risk that's easy to miss",
+        "body": "Live odds can swing back fast on a single wicket. Splitting the stake across three smaller bets instead of one large one meant a mid-innings wicket wouldn't have wiped out the position; it would have just paused it."
       }
     ]
   },
   {
     "path": "/case-study/small-budget-betting-strategy",
-    "title": "Small Budget Betting Strategy",
+    "title": "Small Budget Strategy",
     "category": "Case Study",
     "hero": "cricket",
-    "excerpt": "Small Budget Betting Strategy — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "Running a ₹1,000 bankroll across a full month without ever staking more than ₹50 on a single bet.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the Small Budget Betting Strategy page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "Not every case study needs a big bankroll. This one covers a player who ran a ₹1,000 balance across a full month of matches, never staking more than ₹50 on any single bet, and finished the month up ₹1,400."
       },
       {
-        "heading": "The Setup",
-        "body": "Every case study on Mahadev Book comes from a real player journey. In Small Budget Betting Strategy, we break down the starting bankroll, the market selection, and the risk approach used from the very first ball."
+        "heading": "The 5% cap",
+        "body": "Every stake was capped at 5% of the starting ₹1,000, regardless of how confident the pick felt. That discipline meant a bad week couldn't wipe the bankroll, and a good one compounded slowly instead of all at once."
       },
       {
-        "heading": "Key Decisions",
-        "body": "The player didn't chase odds blindly. Bet sizing stayed inside a fixed percentage of the bankroll, and losing streaks were met with a pause rather than a double-down. That discipline is what separates a lucky win from a repeatable strategy."
+        "heading": "Volume over size",
+        "body": "With small stakes, the player placed more bets across more matches rather than fewer large ones, which spread the risk across roughly 30 separate outcomes over the month instead of concentrating it in two or three."
       },
       {
-        "heading": "What Worked",
-        "body": "Live-market timing, quick withdrawal habits, and reading team news before the toss all played a role. The Mahadev Book ID unlocked live odds fast enough to catch the momentum shift within a single over."
-      },
-      {
-        "heading": "Takeaways For You",
-        "body": "You don't need a huge budget to run a similar playbook. Start with a verified Mahadev Book ID, cap your daily stake, and treat every bet as a decision — not a reflex."
+        "heading": "Why this approach suits beginners",
+        "body": "A small, capped stake removes the pressure to be right every time. One bad session doesn't end the bankroll, which makes it easier to learn how markets move without betting money you can't afford to lose."
       }
     ]
   },
   {
     "path": "/case-study/toss-market-10-minute-profit",
-    "title": "Toss Market 10 Minute Profit",
+    "title": "Toss Market: Profit in 10 Minutes",
     "category": "Case Study",
     "hero": "cricket",
-    "excerpt": "Toss Market 10 Minute Profit — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "A ₹500 toss bet that settled in under ten minutes, and why that speed cuts both ways.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the Toss Market 10 Minute Profit page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "A player placed a ₹500 toss bet on Mahadev Book roughly fifteen minutes before a match, and had the result, a ₹950 return, settled within ten minutes of the coin landing."
       },
       {
-        "heading": "The Setup",
-        "body": "Every case study on Mahadev Book comes from a real player journey. In Toss Market 10 Minute Profit, we break down the starting bankroll, the market selection, and the risk approach used from the very first ball."
+        "heading": "Why this market specifically",
+        "body": "The player picked a side based on that ground's toss-winning record over the past two seasons, not on any information about the actual coin. It's a thin edge, and it doesn't hold every time, but it was the reasoning behind the pick."
       },
       {
-        "heading": "Key Decisions",
-        "body": "The player didn't chase odds blindly. Bet sizing stayed inside a fixed percentage of the bankroll, and losing streaks were met with a pause rather than a double-down. That discipline is what separates a lucky win from a repeatable strategy."
+        "heading": "The part that's easy to overlook",
+        "body": "A toss bet settling in ten minutes feels different from a match bet that takes three hours. That speed makes it tempting to place another one immediately after a win, which is exactly how a single lucky bet turns into a string of much less lucky ones."
       },
       {
-        "heading": "What Worked",
-        "body": "Live-market timing, quick withdrawal habits, and reading team news before the toss all played a role. The Mahadev Book ID unlocked live odds fast enough to catch the momentum shift within a single over."
+        "heading": "How the player kept it to one bet",
+        "body": "A pre-set rule capped toss betting at one wager per match day, regardless of the outcome. That single rule is the difference between this case study and a much less flattering one."
+      }
+    ]
+  },
+  {
+    "path": "/case-study/high-odds-value-hunting",
+    "title": "High-Odds Value Hunting",
+    "category": "Case Study",
+    "hero": "cricket",
+    "excerpt": "Finding value in a long-odds pick means the odds were wrong, not that the pick was a guaranteed win.",
+    "content": [
+      {
+        "heading": null,
+        "body": "This case study covers a player who specifically hunts for markets where the posted odds look mispriced against recent form, rather than betting favorites. A recent example: backing a middle-order batter at 4.50 to be top scorer, based on that batter's strong record specifically against the opposition's bowling attack."
       },
       {
-        "heading": "Takeaways For You",
-        "body": "You don't need a huge budget to run a similar playbook. Start with a verified Mahadev Book ID, cap your daily stake, and treat every bet as a decision — not a reflex."
+        "heading": "What 'value' actually means here",
+        "body": "Value betting isn't about picking the underdog because it feels due. It means the true probability of an outcome is higher than what the odds imply. At 4.50, the market is pricing that outcome at roughly a 22% chance; if the player's own read puts it closer to 30%, that gap is the value."
+      },
+      {
+        "heading": "How the pick was built",
+        "body": "The player looked past the batter's overall season average and checked the specific matchup: this batter's record against left-arm pace, which the opposition relied on. That narrower stat lined up better with a top-scorer bet than the season average did."
+      },
+      {
+        "heading": "The honest downside",
+        "body": "High-odds picks lose more often than they win, by definition; a bet priced at 4.50 is expected to lose roughly three times out of four even when the read is correct. This approach only works with strict stake caps and enough bets over time for the occasional win to cover the losses."
+      }
+    ]
+  },
+  {
+    "path": "/case-study/big-wins",
+    "title": "Big Wins on Mahadev Book",
+    "category": "Case Study",
+    "hero": "cricket",
+    "excerpt": "A few of the larger single payouts on Mahadev Book, and what each bet actually looked like.",
+    "content": [
+      {
+        "heading": null,
+        "body": "A handful of Mahadev Book players have landed large single-match payouts. This page covers a few of them, along with what the underlying bet actually looked like, rather than just the final number."
+      },
+      {
+        "heading": "A parlay across three matches",
+        "body": "One player combined match-winner picks across three IPL games into a single accumulator, staking ₹1,000 at combined odds near 18.00, for a payout just under ₹18,000. Each individual pick was a modest favorite; the size came from stacking three of them together, not from any single long shot."
+      },
+      {
+        "heading": "A live session bet during a batting collapse",
+        "body": "During a match where the top order collapsed inside the powerplay, a player caught the under on the revised session total at odds that hadn't yet adjusted to the collapse, turning a ₹2,000 stake into just over ₹7,000."
+      },
+      {
+        "heading": "What these have in common",
+        "body": "None of these came from a single lucky guess on a random outsider. Each one involved reading a specific situation, whether it's stacking modest favorites or catching a market before it repriced, rather than betting blind on long odds and hoping."
       }
     ]
   },
@@ -595,27 +585,23 @@ export const pages: SitePage[] = [
     "title": "Cricbet99",
     "category": "Platform",
     "hero": "platform",
-    "excerpt": "Cricbet99 — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "Cricbet99 updates session and ball-by-ball prices faster than most exchanges in the Mahadev Book network.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the Cricbet99 page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "Cricbet99 is the exchange to open when a session market needs to move fast. Odds reprice within a ball or two of a boundary or a wicket, which matters most during the middle overs when session totals swing quickly."
       },
       {
-        "heading": "About This Platform",
-        "body": "Cricbet99 is one of the exchange platforms supported through a Mahadev Book ID. You get a single sign-on with unified deposits and withdrawals across every supported exchange."
+        "heading": "What it's built around",
+        "body": "The order book on Cricbet99 leans almost entirely cricket: match-winner, toss, session and fancy markets across international and domestic fixtures. It doesn't carry the same breadth of football or tennis markets as Gold365, and it isn't trying to."
       },
       {
-        "heading": "Getting Started",
-        "body": "Request a Mahadev Book ID on WhatsApp, top up your wallet, and log in. The platform loads inside your Mahadev Book dashboard — no separate download needed."
+        "heading": "How it compares",
+        "body": "11Xplay offers more granular per-over and player-performance markets; Cricbet99 trades speed for that depth, repricing its core session and toss markets faster than most partner exchanges during a live over. Pick it when timing matters more than market variety."
       },
       {
-        "heading": "Markets Covered",
-        "body": "Cricket, football, tennis, kabaddi, live casino, Aviator, Teen Patti, and dozens of slot providers are available on the same login."
-      },
-      {
-        "heading": "Why Players Prefer It",
-        "body": "Fast odds, deep markets, and instant settlement. Combine that with the Mahadev Book support desk and you get a much smoother experience than direct signup."
+        "heading": "Getting on it",
+        "body": "One Mahadev Book ID unlocks Cricbet99 alongside every other supported exchange. No separate registration, and withdrawals settle through the same wallet you already use."
       }
     ]
   },
@@ -740,27 +726,23 @@ export const pages: SitePage[] = [
     "title": "Gold365",
     "category": "Platform",
     "hero": "platform",
-    "excerpt": "Gold365 — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "Gold365 is the widest-catalogue exchange in the Mahadev Book network, covering multiple sports plus a full casino floor.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the Gold365 page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "Gold365 is the exchange to open when cricket isn't the only thing on the agenda. It carries football, tennis and kabaddi markets alongside cricket, plus a full live-casino and slots catalogue on the same login."
       },
       {
-        "heading": "About This Platform",
-        "body": "Gold365 is one of the exchange platforms supported through a Mahadev Book ID. You get a single sign-on with unified deposits and withdrawals across every supported exchange."
+        "heading": "What it's built around",
+        "body": "Where Cricbet99 and 11Xplay concentrate on cricket, Gold365 spreads across sports and adds Teen Patti, Andar Bahar, Aviator and dozens of slot titles. It's the closest thing in the network to a one-stop platform."
       },
       {
-        "heading": "Getting Started",
-        "body": "Request a Mahadev Book ID on WhatsApp, top up your wallet, and log in. The platform loads inside your Mahadev Book dashboard — no separate download needed."
+        "heading": "How it compares",
+        "body": "The tradeoff for that breadth is that Gold365's cricket session markets don't reprice quite as fast mid-over as Cricbet99's do. Players who bet cricket exclusively and want the fastest live pricing usually keep Cricbet99 or 11Xplay open alongside it."
       },
       {
-        "heading": "Markets Covered",
-        "body": "Cricket, football, tennis, kabaddi, live casino, Aviator, Teen Patti, and dozens of slot providers are available on the same login."
-      },
-      {
-        "heading": "Why Players Prefer It",
-        "body": "Fast odds, deep markets, and instant settlement. Combine that with the Mahadev Book support desk and you get a much smoother experience than direct signup."
+        "heading": "Getting on it",
+        "body": "Gold365 opens inside your Mahadev Book dashboard the moment your ID is set up, using the same wallet as every other supported exchange."
       }
     ]
   },
@@ -882,18 +864,18 @@ export const pages: SitePage[] = [
   },
   {
     "path": "/icc-t20-world-cup-betting",
-    "title": "Icc T20 World Cup Betting",
+    "title": "ICC T20 World Cup Betting",
     "category": "Cricket",
     "hero": "cricket",
-    "excerpt": "Icc T20 World Cup Betting — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "ICC T20 World Cup Betting — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the Icc T20 World Cup Betting page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "Welcome to the ICC T20 World Cup Betting page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
       },
       {
         "heading": "The Format Explained",
-        "body": "Icc T20 World Cup Betting on Mahadev Book covers pre-match odds, live in-play markets, session betting, and fancy markets. All prices update in real time from our trusted exchange partners."
+        "body": "ICC T20 World Cup Betting on Mahadev Book covers pre-match odds, live in-play markets, session betting, and fancy markets. All prices update in real time from our trusted exchange partners."
       },
       {
         "heading": "Popular Markets",
@@ -911,18 +893,18 @@ export const pages: SitePage[] = [
   },
   {
     "path": "/ipl-betting",
-    "title": "Ipl Betting",
+    "title": "IPL Betting",
     "category": "Cricket",
     "hero": "cricket",
-    "excerpt": "Ipl Betting — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "IPL Betting — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the Ipl Betting page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "Welcome to the IPL Betting page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
       },
       {
         "heading": "The Format Explained",
-        "body": "Ipl Betting on Mahadev Book covers pre-match odds, live in-play markets, session betting, and fancy markets. All prices update in real time from our trusted exchange partners."
+        "body": "IPL Betting on Mahadev Book covers pre-match odds, live in-play markets, session betting, and fancy markets. All prices update in real time from our trusted exchange partners."
       },
       {
         "heading": "Popular Markets",
@@ -1056,18 +1038,18 @@ export const pages: SitePage[] = [
   },
   {
     "path": "/kyc-verification-policy",
-    "title": "Kyc Verification Policy",
+    "title": "KYC Verification Policy",
     "category": "Account",
     "hero": "security",
-    "excerpt": "Kyc Verification Policy — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "KYC Verification Policy — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the Kyc Verification Policy page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "Welcome to the KYC Verification Policy page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
       },
       {
         "heading": "Overview",
-        "body": "Kyc Verification Policy — everything you need to know about managing this part of your Mahadev Book account, in plain English."
+        "body": "KYC Verification Policy — everything you need to know about managing this part of your Mahadev Book account, in plain English."
       },
       {
         "heading": "How To Handle It",
@@ -1088,27 +1070,23 @@ export const pages: SitePage[] = [
     "title": "Laser247",
     "category": "Platform",
     "hero": "platform",
-    "excerpt": "Laser247 — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "Laser247 is built for live, fast-paced betting: in-play odds, Aviator-style crash games, and low minimum stakes.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the Laser247 page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "Laser247 is the exchange for players who bet mostly in-play rather than pre-match. Live odds update aggressively during the action, and the platform leans into fast-turn games like Aviator alongside its sports markets."
       },
       {
-        "heading": "About This Platform",
-        "body": "Laser247 is one of the exchange platforms supported through a Mahadev Book ID. You get a single sign-on with unified deposits and withdrawals across every supported exchange."
+        "heading": "What it's built around",
+        "body": "Minimum stakes on Laser247 run lower than on Gold365, which makes it a common starting point for players building up a small bankroll on live cricket and crash-style casino games rather than big pre-match positions."
       },
       {
-        "heading": "Getting Started",
-        "body": "Request a Mahadev Book ID on WhatsApp, top up your wallet, and log in. The platform loads inside your Mahadev Book dashboard — no separate download needed."
+        "heading": "How it compares",
+        "body": "Gold365 caters to players who want a wider casino catalogue alongside sports; Laser247 sits at the live-betting end, favoring smaller, faster, more frequent bets over a handful of large ones. Neither is objectively better; they suit different staking habits."
       },
       {
-        "heading": "Markets Covered",
-        "body": "Cricket, football, tennis, kabaddi, live casino, Aviator, Teen Patti, and dozens of slot providers are available on the same login."
-      },
-      {
-        "heading": "Why Players Prefer It",
-        "body": "Fast odds, deep markets, and instant settlement. Combine that with the Mahadev Book support desk and you get a much smoother experience than direct signup."
+        "heading": "Getting on it",
+        "body": "Laser247 is included with every Mahadev Book ID at no extra step. Deposit once, and it's ready to open from your dashboard alongside the other supported exchanges."
       }
     ]
   },
@@ -1143,30 +1121,34 @@ export const pages: SitePage[] = [
   },
   {
     "path": "/platforms",
-    "title": "Platforms",
+    "title": "All Platforms",
     "category": "Platform",
     "hero": "platform",
-    "excerpt": "Platforms — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "One Mahadev Book ID, four exchanges: what 11Xplay, Cricbet99, Gold365 and Laser247 each do differently.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the Platforms page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "A single Mahadev Book ID unlocks the in-house Mahadev Book Exchange plus four partner platforms: 11Xplay, Cricbet99, Gold365 and Laser247. Same wallet, same login flow, no separate deposit for each. The four aren't identical, though, and picking the right one for what you're actually doing makes a real difference."
       },
       {
-        "heading": "About This Platform",
-        "body": "Platforms is one of the exchange platforms supported through a Mahadev Book ID. You get a single sign-on with unified deposits and withdrawals across every supported exchange."
+        "heading": "11Xplay — deepest cricket markets",
+        "body": "Per-over totals, fall-of-wicket lines and player-performance bets sit alongside the standard match-winner and session markets. Open it for IPL and domestic T20 when you want more granular cricket markets than a basic match-winner line."
       },
       {
-        "heading": "Getting Started",
-        "body": "Request a Mahadev Book ID on WhatsApp, top up your wallet, and log in. The platform loads inside your Mahadev Book dashboard — no separate download needed."
+        "heading": "Cricbet99 — fastest session pricing",
+        "body": "Cricket-only in practice, and built to reprice session and toss markets within a ball or two of a wicket or boundary. Pick it when a live session bet needs the odds to keep up with what just happened on the field."
       },
       {
-        "heading": "Markets Covered",
-        "body": "Cricket, football, tennis, kabaddi, live casino, Aviator, Teen Patti, and dozens of slot providers are available on the same login."
+        "heading": "Gold365 — broadest catalogue",
+        "body": "Cricket, football, tennis and kabaddi sit next to a full casino floor, Teen Patti, Andar Bahar, Aviator and dozens of slots. It's the closest thing to a one-stop platform in the network, though its cricket session pricing isn't quite as fast mid-over as Cricbet99's."
       },
       {
-        "heading": "Why Players Prefer It",
-        "body": "Fast odds, deep markets, and instant settlement. Combine that with the Mahadev Book support desk and you get a much smoother experience than direct signup."
+        "heading": "Laser247 — built for live, small stakes",
+        "body": "Lower minimum stakes and odds that move aggressively in-play, plus a lean toward fast-turn games like Aviator. A common starting point for players betting live and small rather than pre-match and large."
+      },
+      {
+        "heading": "Picking one to start",
+        "body": "Most players default to whichever exchange loads first and switch once they notice a gap, faster session pricing, a wider casino catalogue, or lower minimum stakes. Since all four run off the same ID and wallet, switching costs nothing but a tap."
       }
     ]
   },
@@ -1375,30 +1357,26 @@ export const pages: SitePage[] = [
   },
   {
     "path": "/mahadev-demo-id",
-    "title": "Mahadev Book Demo Id",
+    "title": "Mahadev Book Demo ID",
     "category": "Account",
     "hero": "security",
-    "excerpt": "Mahadev Book Demo Id — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "A demo ID loads real odds with play money, so you can try the exchanges before depositing.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the Mahadev Book Demo Id page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "A demo ID lets you open the Mahadev Book dashboard and any of the four partner exchanges with play money instead of a real deposit. Odds and market movement are live and real; the balance isn't."
       },
       {
-        "heading": "Overview",
-        "body": "Mahadev Book Demo Id — everything you need to know about managing this part of your Mahadev Book account, in plain English."
+        "heading": "What it's for",
+        "body": "It's meant for getting comfortable with the interface before your first deposit, placing test bets on session and toss markets, switching between exchanges, and seeing how live odds move during an over. Withdrawals aren't possible on a demo balance, since there's nothing real behind it."
       },
       {
-        "heading": "How To Handle It",
-        "body": "Follow the steps inside your Mahadev Book dashboard, or ping the WhatsApp desk if you'd rather have a human walk you through it. Both routes take under 5 minutes."
+        "heading": "Requesting one",
+        "body": "Message the WhatsApp desk and ask for a demo ID. You'll get login access within a few minutes, same as a real ID, just with a starting play-money balance instead of a deposit requirement."
       },
       {
-        "heading": "Why It Matters",
-        "body": "A properly set up Mahadev Book ID unlocks faster withdrawals, higher limits, and fewer verification requests during peak match hours."
-      },
-      {
-        "heading": "Need Help?",
-        "body": "Our support team is on WhatsApp and Telegram 24×7 and speaks Hindi, English, and most regional languages. No bot loops, no scripted answers."
+        "heading": "Moving to a real ID",
+        "body": "When you're ready to deposit, the same WhatsApp thread converts your demo ID into a funded one, or issues a fresh ID if you'd rather start clean. Either way, no new signup form."
       }
     ]
   },
@@ -1407,27 +1385,23 @@ export const pages: SitePage[] = [
     "title": "Mahadev Book Exchange",
     "category": "Platform",
     "hero": "platform",
-    "excerpt": "Mahadev Book Exchange — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "The in-house exchange behind every Mahadev Book ID, and the one wallet that funds all four partner platforms.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the Mahadev Book Exchange page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "Mahadev Book Exchange is the native platform your ID logs into by default, and the wallet that funds 11Xplay, Cricbet99, Gold365 and Laser247 whenever you switch between them."
       },
       {
-        "heading": "About This Platform",
-        "body": "Mahadev Book Exchange is one of the exchange platforms supported through a Mahadev Book ID. You get a single sign-on with unified deposits and withdrawals across every supported exchange."
+        "heading": "How it's different from the partner exchanges",
+        "body": "The four partner platforms each specialize, cricket depth, session speed, casino breadth, live pace, or higher limits. Mahadev Book Exchange itself carries the full standard market set (match-winner, session, toss, fancy) across every sport and is where new IDs land first."
       },
       {
-        "heading": "Getting Started",
-        "body": "Request a Mahadev Book ID on WhatsApp, top up your wallet, and log in. The platform loads inside your Mahadev Book dashboard — no separate download needed."
+        "heading": "One wallet, four exchanges",
+        "body": "A deposit here shows up as available balance across every supported exchange. You don't top up 11Xplay separately from Laser247; the wallet is shared, and switching platforms doesn't require a new transaction."
       },
       {
-        "heading": "Markets Covered",
-        "body": "Cricket, football, tennis, kabaddi, live casino, Aviator, Teen Patti, and dozens of slot providers are available on the same login."
-      },
-      {
-        "heading": "Why Players Prefer It",
-        "body": "Fast odds, deep markets, and instant settlement. Combine that with the Mahadev Book support desk and you get a much smoother experience than direct signup."
+        "heading": "Getting started",
+        "body": "Message the WhatsApp desk for a Mahadev Book ID. Once it's set up, Mahadev Book Exchange is the home screen, with the four partner platforms one tap away."
       }
     ]
   },
@@ -1842,27 +1816,23 @@ export const pages: SitePage[] = [
     "title": "Register",
     "category": "Account",
     "hero": "security",
-    "excerpt": "Register — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "There's no public sign-up form — a Mahadev Book ID is issued personally over WhatsApp after a quick verification.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the Register page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "Registering for Mahadev Book doesn't work like a typical website sign-up. There's no form to fill in; a real person on the WhatsApp desk sets your ID up directly, which is also how fake mirror accounts get filtered out before they start."
       },
       {
-        "heading": "Overview",
-        "body": "Register — everything you need to know about managing this part of your Mahadev Book account, in plain English."
+        "heading": "What you actually send",
+        "body": "Message the WhatsApp number with your name and your preferred deposit method, UPI, IMPS or a wallet app. That's the entire input needed to open an ID; no email, no separate password to invent yet."
       },
       {
-        "heading": "How To Handle It",
-        "body": "Follow the steps inside your Mahadev Book dashboard, or ping the WhatsApp desk if you'd rather have a human walk you through it. Both routes take under 5 minutes."
+        "heading": "What comes back",
+        "body": "Within about 5 minutes you get a login URL, a user ID and a starting password, plus access to the Mahadev Book Exchange and all four partner platforms on the same wallet. Change the password on first login."
       },
       {
-        "heading": "Why It Matters",
-        "body": "A properly set up Mahadev Book ID unlocks faster withdrawals, higher limits, and fewer verification requests during peak match hours."
-      },
-      {
-        "heading": "Need Help?",
-        "body": "Our support team is on WhatsApp and Telegram 24×7 and speaks Hindi, English, and most regional languages. No bot loops, no scripted answers."
+        "heading": "If you're not sure this is for you yet",
+        "body": "Ask for a demo ID instead of a funded one. It's the same setup process, just with play money, so you can see the dashboard before deciding to deposit."
       }
     ]
   },
@@ -2053,7 +2023,7 @@ export const pages: SitePage[] = [
       },
       {
         "heading": "Who We Are",
-        "body": "What Is Mahadev Book — Mahadev Book is a trusted online betting ID provider serving Indian players since 2014, with a focus on fast onboarding, honest payouts, and 24×7 human support."
+        "body": "What Is Mahadev Book — Mahadev Book is a trusted online betting ID provider serving Indian players since 2010, with a focus on fast onboarding, honest payouts, and 24×7 human support."
       },
       {
         "heading": "What We Offer",
@@ -2082,7 +2052,7 @@ export const pages: SitePage[] = [
       },
       {
         "heading": "Who We Are",
-        "body": "Why Choose Mahadev Book — Mahadev Book is a trusted online betting ID provider serving Indian players since 2014, with a focus on fast onboarding, honest payouts, and 24×7 human support."
+        "body": "Why Choose Mahadev Book — Mahadev Book is a trusted online betting ID provider serving Indian players since 2010, with a focus on fast onboarding, honest payouts, and 24×7 human support."
       },
       {
         "heading": "What We Offer",
@@ -2129,18 +2099,18 @@ export const pages: SitePage[] = [
   },
   {
     "path": "/wpl-2026-betting-mahadev-book",
-    "title": "Wpl 2026 Betting Mahadev Book",
+    "title": "WPL 2026 Betting — Mahadev Book",
     "category": "Cricket",
     "hero": "cricket",
-    "excerpt": "Wpl 2026 Betting Mahadev Book — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
+    "excerpt": "WPL 2026 Betting — a straight-talking Mahadev Book guide covering everything Indian players need to know.",
     "content": [
       {
         "heading": null,
-        "body": "Welcome to the Wpl 2026 Betting Mahadev Book page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
+        "body": "Welcome to the WPL 2026 Betting page at Mahadev Book — India's most trusted online betting ID platform. This guide gives you a clear, jargon-free walkthrough so you can act with confidence."
       },
       {
         "heading": "The Format Explained",
-        "body": "Wpl 2026 Betting Mahadev Book on Mahadev Book covers pre-match odds, live in-play markets, session betting, and fancy markets. All prices update in real time from our trusted exchange partners."
+        "body": "WPL 2026 betting on Mahadev Book covers pre-match odds, live in-play markets, session betting, and fancy markets. All prices update in real time from our trusted exchange partners."
       },
       {
         "heading": "Popular Markets",

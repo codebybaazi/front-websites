@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { posts } from "@/data/posts";
-import { ArrowLeft, ArrowUpRight, Calendar, Clock } from "lucide-react";
+import { getAuthorForCategory } from "@/data/authors";
+import { ArrowLeft, ArrowUpRight, Calendar, Clock, User } from "lucide-react";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
 import { AIOverview } from "@/components/AIOverview";
@@ -50,6 +51,8 @@ export const Route = createFileRoute("/blog/$slug")({
     const { post, waNumber } = loaderData;
     const shortTitle = post.title.length > 60 ? post.title.slice(0, 57).trimEnd() + "…" : post.title;
     const canonicalPath = `https://mahadevbookss.com/blog/${params.slug}`;
+    const author = getAuthorForCategory(post.category);
+    const authorPageUrl = author ? `https://mahadevbookss.com/authors/${author.slug}` : undefined;
     return {
       meta: [
         { title: shortTitle },
@@ -77,20 +80,28 @@ export const Route = createFileRoute("/blog/$slug")({
             articleSection: post.category,
             image: "https://mahadevbookss.com/og-image.jpg",
             mainEntityOfPage: { "@type": "WebPage", "@id": canonicalPath },
-            author: {
-              "@type": "Organization",
-              name: "Mahadev Book Editorial Team",
-              url: "https://mahadevbookss.com/about",
-              ...(waNumber
-                ? {
-                    contactPoint: {
-                      "@type": "ContactPoint",
-                      contactType: "editorial",
-                      telephone: `+${waNumber}`,
-                    },
-                  }
-                : {}),
-            },
+            author: author
+              ? {
+                  "@type": "Person",
+                  name: author.name,
+                  jobTitle: author.role,
+                  url: authorPageUrl,
+                  worksFor: { "@type": "Organization", name: "Mahadev Book", url: "https://mahadevbookss.com/" },
+                }
+              : {
+                  "@type": "Organization",
+                  name: "Mahadev Book Editorial Team",
+                  url: "https://mahadevbookss.com/about",
+                  ...(waNumber
+                    ? {
+                        contactPoint: {
+                          "@type": "ContactPoint",
+                          contactType: "editorial",
+                          telephone: `+${waNumber}`,
+                        },
+                      }
+                    : {}),
+                },
             publisher: {
               "@type": "Organization",
               name: "Mahadev Book",
@@ -141,6 +152,7 @@ function PostNotFound() {
 
 function BlogPost() {
   const { post } = Route.useLoaderData();
+  const author = getAuthorForCategory(post.category);
   const related = posts.filter((p) => p.slug !== post.slug && p.category === post.category).slice(0, 3);
   const fallback = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
   const suggestions = related.length ? related : fallback;
@@ -179,6 +191,18 @@ function BlogPost() {
           </h1>
           <p className="mt-5 max-w-2xl text-base sm:text-lg text-muted-foreground">{post.excerpt}</p>
           <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
+            {author && (
+              <>
+                <Link
+                  to="/authors/$slug"
+                  params={{ slug: author.slug }}
+                  className="inline-flex items-center gap-1.5 hover:text-primary"
+                >
+                  <User className="h-3.5 w-3.5" /> Written by {author.name}, {author.role}
+                </Link>
+                <span className="h-1 w-1 rounded-full bg-muted-foreground/50" />
+              </>
+            )}
             <span className="inline-flex items-center gap-1.5"><Calendar className="h-3.5 w-3.5" /> {post.date}</span>
             <span className="h-1 w-1 rounded-full bg-muted-foreground/50" />
             <span className="inline-flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {post.readTime}</span>

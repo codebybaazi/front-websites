@@ -144,7 +144,7 @@ function PredictionsPage() {
               className="mt-5 text-4xl md:text-6xl font-bold text-foreground leading-[1.05] tracking-tight"
               style={{ fontFamily: "'Cinzel', serif" }}
             >
-              Cricket Predictions
+              Cricket Predictions{" "}
               <span className="block text-primary drop-shadow-[0_2px_10px_rgba(212,175,55,0.35)]">
                 for Today's Fixtures
               </span>

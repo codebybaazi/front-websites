@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { posts } from "@/data/posts";
+import { authors } from "@/data/authors";
+import { pages } from "@/data/pages";
 
 import { allMatches } from "@/lib/schedule-data";
 
@@ -38,6 +40,17 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/schedule", changefreq: "daily", priority: "0.9" },
           { path: "/matches", changefreq: "daily", priority: "0.9" },
           { path: "/all-links", changefreq: "weekly", priority: "0.5" },
+          { path: "/authors", changefreq: "monthly", priority: "0.6" },
+          ...pages.map((p) => ({
+            path: p.path,
+            changefreq: "monthly" as const,
+            priority: "0.6",
+          })),
+          ...authors.map((a) => ({
+            path: `/authors/${a.slug}`,
+            changefreq: "monthly" as const,
+            priority: "0.5",
+          })),
           ...posts.map((p) => ({
             path: `/blog/${p.slug}`,
             changefreq: "monthly" as const,
