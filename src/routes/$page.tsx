@@ -2,6 +2,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { ContentPage, ContentNotFound } from "@/components/ContentPage";
 import { getPage, resolvePageSlug } from "@/data/pages";
 import { deriveFaqsFromPage, toFaqPageJsonLd } from "@/lib/derive-page-faqs";
+import { derivePageHowToSteps, toHowToJsonLd } from "@/lib/derive-page-howto";
 import { CONTENT_PUBLISHED_DATE, CONTENT_MODIFIED_DATE } from "@/data/site";
 
 export const Route = createFileRoute("/$page")({
@@ -58,6 +59,10 @@ export const Route = createFileRoute("/$page")({
               name: "Lotus365",
               logo: { "@type": "ImageObject", url: "/favicon.png" },
             },
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: ["#page-h1", "#ai-overview-summary"],
+            },
           }),
         },
         {
@@ -80,6 +85,19 @@ export const Route = createFileRoute("/$page")({
             {
               type: "application/ld+json",
               children: JSON.stringify(toFaqPageJsonLd(faqs)),
+            },
+          ];
+        })(),
+        // (AEO fix) HowTo schema for pages whose sections are written as
+        // "Step N — ..." (e.g. /register), so the same content that renders
+        // as a step guide is also marked up as one.
+        ...(() => {
+          const steps = derivePageHowToSteps(p);
+          if (steps.length < 2) return [];
+          return [
+            {
+              type: "application/ld+json",
+              children: JSON.stringify(toHowToJsonLd(p.title, steps)),
             },
           ];
         })(),

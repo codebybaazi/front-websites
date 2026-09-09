@@ -75,7 +75,7 @@ export function PostArticle({ post, related }: { post: Post; related: Post[] }) 
           <Sparkles className="h-3.5 w-3.5" />
           {post.category}
         </div>
-        <h1 className="font-display text-3xl md:text-5xl leading-[1.1]">
+        <h1 id="page-h1" className="font-display text-3xl md:text-5xl leading-[1.1]">
           {post.h1.split(" ").map((w, i, arr) =>
             i === arr.length - 1 ? (
               <span key={i} className="gold-text">

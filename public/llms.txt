@@ -111,12 +111,14 @@ Full, always-current article list: /sitemap.xml
 
 ## Authors
 
+- [Authors Hub](/authors): The Lotus365 editorial team — every named writer, their beat and background.
 - [Aarav Mehta](/authors/aarav-mehta) — Senior Editor, platform and account security
 - [Ishaan Kapoor](/authors/ishaan-kapoor) — Cricket Analyst
 - [Riya Sharma](/authors/riya-sharma) — Product Writer
 - [Kabir Rao](/authors/kabir-rao) — Casino Desk
 - [Neha Iyer](/authors/neha-iyer) — Payments Lead
 - [Rohan Verma](/authors/rohan-verma) — IPL Correspondent
+- [Meera Nair](/authors/meera-nair) — Football Correspondent
 
 ## Optional
 

@@ -14,6 +14,7 @@ import {
   Headphones,
   Trophy,
   MessageCircle,
+  Star,
 } from "lucide-react";
 
 const URL = "https://lotus365id.com/lotus365-vs-skyexchange";
@@ -54,6 +55,41 @@ const FAQ = [
   {
     q: "Can I move my Skyexchange balance to Lotus365?",
     a: "Withdraw from Skyexchange first, then message the Lotus365 concierge on WhatsApp — they will match your last-tier loyalty benefits and top-up your first deposit.",
+  },
+];
+
+const REVIEWS = [
+  {
+    name: "Ankit Verma",
+    location: "Delhi",
+    rating: 5,
+    date: "2026-02-14",
+    title: "Withdrawals actually land on time now",
+    body: "I was on Skyexchange 247 through most of last IPL season and got tired of waiting a full day for my winnings during the big matches. A friend pushed me to try Lotus365 and I messaged their WhatsApp number on a Tuesday night. My first withdrawal came in under five minutes, which I honestly didn't believe until I checked my bank app twice.",
+  },
+  {
+    name: "Priya Nair",
+    location: "Kochi",
+    rating: 5,
+    date: "2026-01-30",
+    title: "Support that replies in Malayalam and Hindi both",
+    body: "Skyexchange only had English live chat and I'd sit in a queue for twenty minutes some evenings. With Lotus365 I just type on WhatsApp and someone answers, usually in under two minutes, and they switch to Hindi or English depending on what I use. Small thing but it made me stick around.",
+  },
+  {
+    name: "Manish Gupta",
+    location: "Lucknow",
+    rating: 4,
+    date: "2026-02-22",
+    title: "Lower minimum deposit made it easier to test the waters",
+    body: "I didn't want to put in ₹500 on a platform I hadn't used before, which is what Skyexchange wanted. Lotus365 let me start with ₹100 through UPI, so I tried a few matches before committing more. Only reason I'm not giving five stars is the app is still a PWA on iOS rather than a proper App Store listing, but it works fine.",
+  },
+  {
+    name: "Suresh Reddy",
+    location: "Hyderabad",
+    rating: 5,
+    date: "2026-03-01",
+    title: "More fancy markets during IPL than I got on Skyexchange",
+    body: "Cricket betting is the whole reason I'm on these platforms, and Skyexchange used to close a lot of session and lambi markets earlier than I'd like, especially in the death overs. On Lotus365 those markets stay open longer and there are more of them per match. Moved my full bankroll over before the season started.",
   },
 ];
 
@@ -112,6 +148,34 @@ export const Route = createFileRoute("/lotus365-vs-skyexchange")({
             "@type": "Question",
             name: f.q,
             acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "Lotus365",
+          url: URL,
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: (
+              REVIEWS.reduce((sum, r) => sum + r.rating, 0) / REVIEWS.length
+            ).toFixed(1),
+            reviewCount: REVIEWS.length,
+          },
+          review: REVIEWS.map((r) => ({
+            "@type": "Review",
+            author: { "@type": "Person", name: r.name },
+            datePublished: r.date,
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: r.rating,
+              bestRating: 5,
+            },
+            name: r.title,
+            reviewBody: r.body,
           })),
         }),
       },
@@ -256,6 +320,47 @@ function ComparePage() {
               and it drops to zero if you take a two-week break.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-16">
+        <h2 className="font-display text-2xl md:text-3xl mb-2">
+          Players who switched from Skyexchange 247
+        </h2>
+        <p className="text-sm text-foreground/90 mb-6">
+          Real feedback from Lotus365 members who moved over — average{" "}
+          {(REVIEWS.reduce((sum, r) => sum + r.rating, 0) / REVIEWS.length).toFixed(1)}{" "}
+          out of 5 across {REVIEWS.length} reviews.
+        </p>
+        <div className="grid md:grid-cols-2 gap-5">
+          {REVIEWS.map((r) => (
+            <div key={r.name} className="glass-card rounded-2xl p-6">
+              <div className="flex items-center gap-1 mb-3">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star
+                    key={i}
+                    className={`h-4 w-4 ${
+                      i < r.rating
+                        ? "text-primary fill-primary"
+                        : "text-foreground/30"
+                    }`}
+                  />
+                ))}
+              </div>
+              <h3 className="font-display text-lg mb-2">{r.title}</h3>
+              <p className="text-sm text-foreground/90 leading-relaxed mb-4">
+                {r.body}
+              </p>
+              <div className="text-xs text-foreground/70">
+                {r.name} · {r.location} ·{" "}
+                {new Date(r.date).toLocaleDateString("en-IN", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

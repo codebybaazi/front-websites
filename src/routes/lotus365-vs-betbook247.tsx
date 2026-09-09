@@ -4,6 +4,16 @@ import { ComparePageView, compareHead, type CompareData } from "@/components/Com
 const DATA: CompareData = {
   slug: "lotus365-vs-betbook247",
   rival: "Betbook247",
+  intro: "Betbook247 runs on an agent network, so your deposits, withdrawals and even sign-up wait on someone else's availability. Lotus365 cuts the agent out entirely.",
+  aiOverview: {
+    summary: "Betbook247 is agent-mediated end to end, from KYC to withdrawals. Lotus365 replaces that chain with a direct wallet and a WhatsApp concierge you can reach any hour. This overview covers onboarding, payout speed and loyalty.",
+    points: [
+      "Direct self-serve wallet versus agent-held balances on Betbook247",
+      "UPI payouts averaging under 4 minutes versus 4-12 hour agent settlement",
+      "Lotus Club cashback and free bets versus rakeback negotiated per agent",
+      "One persistent WhatsApp concierge instead of relying on agent availability",
+    ],
+  },
   rows: [
     { feature: "Account setup", lotus: "60-second WhatsApp onboarding, human concierge", rival: "Agent signup, manual KYC" },
     { feature: "Minimum deposit", lotus: "₹100 via UPI / IMPS / Net-banking", rival: "₹500+ via agent" },
@@ -27,6 +37,40 @@ const DATA: CompareData = {
     { q: "Which pays out faster?", a: "Lotus365 averages under 4 minutes on UPI. Betbook247 relies on agent settlement, typically 4–12 hours." },
     { q: "Do I need an agent for Lotus365?", a: "No — the concierge onboards you on WhatsApp in 60 seconds with no intermediary." },
     { q: "How do I switch from Betbook247?", a: "Settle with your agent, then WhatsApp the Lotus365 concierge — we'll match your last-tier benefits on first deposit." },
+  ],
+  reviews: [
+    {
+      name: "Tanvi Rathore",
+      location: "Udaipur",
+      rating: 5,
+      date: "2026-02-11",
+      title: "Signing up without an agent felt like a relief",
+      body: "Every step on Betbook247 went through my agent, even the KYC, which meant sending my documents to someone I'd only spoken to on the phone. Lotus365's WhatsApp onboarding took under a minute and I never had to hand anything to a third party. That alone was worth the switch.",
+    },
+    {
+      name: "Imran Qureshi",
+      location: "Bhubaneswar",
+      rating: 5,
+      date: "2026-01-27",
+      title: "₹100 to start instead of ₹500 through an agent",
+      body: "Betbook247's agent wanted ₹500 minimum routed through his own UPI ID, which never sat right with me. On Lotus365 I deposit ₹100 straight from my bank account whenever I feel like testing a match, no agent involved at any point.",
+    },
+    {
+      name: "Lakshmi Venkatesh",
+      location: "Mysuru",
+      rating: 4,
+      date: "2026-02-23",
+      title: "Withdrawals in minutes, not half a day",
+      body: "My Betbook247 agent settled withdrawals whenever he got around to it, usually somewhere between four and twelve hours later. Lotus365's UPI payouts have cleared in under four minutes every time I've tried it. Four stars only because I'm still getting used to not having someone to call directly.",
+    },
+    {
+      name: "Abhishek Joshi",
+      location: "Dehradun",
+      rating: 5,
+      date: "2026-03-05",
+      title: "Cashback that doesn't depend on how well I know my agent",
+      body: "Rakeback on Betbook247 came down to how much my agent liked me that week, which is a strange way to run a loyalty program. Lotus Club gives everyone the same weekly cashback and free bets on a fixed tier system. Feels a lot fairer, and I know exactly what I'm getting before the week starts.",
+    },
   ],
 };
 

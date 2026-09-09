@@ -1,7 +1,7 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { ContentPage, ContentNotFound } from "@/components/ContentPage";
 import { getCase } from "@/data/cases";
-import { deriveFaqsFromPage } from "@/lib/derive-page-faqs";
+import { deriveFaqsFromPage, toFaqPageJsonLd } from "@/lib/derive-page-faqs";
 import { CONTENT_PUBLISHED_DATE, CONTENT_MODIFIED_DATE } from "@/data/site";
 
 export const Route = createFileRoute("/case-study/$slug")({
@@ -74,15 +74,7 @@ export const Route = createFileRoute("/case-study/$slug")({
           return [
             {
               type: "application/ld+json",
-              children: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "FAQPage",
-                mainEntity: faqs.map((f) => ({
-                  "@type": "Question",
-                  name: f.q,
-                  acceptedAnswer: { "@type": "Answer", text: f.a },
-                })),
-              }),
+              children: JSON.stringify(toFaqPageJsonLd(faqs)),
             },
           ];
         })(),

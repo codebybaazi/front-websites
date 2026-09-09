@@ -75,7 +75,7 @@ export const Route = createFileRoute("/authors/$slug")({
             "@type": "BreadcrumbList",
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
-              { "@type": "ListItem", position: 2, name: "Blog", item: `${siteUrl}/blog` },
+              { "@type": "ListItem", position: 2, name: "Authors", item: `${siteUrl}/authors` },
               { "@type": "ListItem", position: 3, name: author.name, item: url },
             ],
           }),
@@ -127,7 +127,7 @@ function AuthorRoute() {
             </Link>
           </li>
           <li><ChevronRight className="h-3 w-3" /></li>
-          <li><Link to="/blog" className="hover:text-primary">Blog</Link></li>
+          <li><Link to="/authors" className="hover:text-primary">Authors</Link></li>
           <li><ChevronRight className="h-3 w-3" /></li>
           <li className="text-primary/90">{author.name}</li>
         </ol>
@@ -156,8 +156,29 @@ function AuthorRoute() {
             </div>
           </div>
         </div>
-        <div className="mt-3 text-sm text-foreground/80">
-          {posts.length} article{posts.length === 1 ? "" : "s"} on Lotus365
+
+        <div className="mt-5 glass-card rounded-2xl p-7 md:p-9">
+          <div className="text-xs uppercase tracking-[0.3em] text-primary/70 mb-3">
+            Professional background
+          </div>
+          <p className="text-foreground/90 leading-relaxed max-w-2xl">{author.background}</p>
+        </div>
+
+        <div className="mt-5 grid sm:grid-cols-3 gap-3">
+          <div className="glass-card rounded-xl p-4">
+            <div className="text-[10px] uppercase tracking-[0.25em] text-primary/70 mb-1">
+              Articles published
+            </div>
+            <div className="font-display text-2xl">{posts.length}</div>
+          </div>
+          <div className="glass-card rounded-xl p-4 sm:col-span-2">
+            <div className="text-[10px] uppercase tracking-[0.25em] text-primary/70 mb-1">
+              Categories covered
+            </div>
+            <div className="text-sm text-foreground/90">
+              {Array.from(new Set(posts.map((p) => p.category))).join(", ") || "—"}
+            </div>
+          </div>
         </div>
       </section>
 

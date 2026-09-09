@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PageRouteImport } from './routes/$page'
 import { Route as AllLinksRouteImport } from './routes/all-links'
+import { Route as AuthorsRouteImport } from './routes/authors'
 import { Route as BettingGuidesRouteImport } from './routes/betting-guides'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as CaseStudyRouteImport } from './routes/case-study'
@@ -36,6 +37,7 @@ import { Route as WaNumbersDotjsonRouteImport } from './routes/wa-numbers[.]json
 import { Route as DotwellKnownOauthAuthorizationServerRouteImport } from './routes/[.]well-known.oauth-authorization-server'
 import { Route as DotwellKnownOauthProtectedResourceRouteImport } from './routes/[.]well-known.oauth-protected-resource'
 import { Route as DotwellKnownOpenidConfigurationRouteImport } from './routes/[.]well-known.openid-configuration'
+import { Route as AuthorsIndexRouteImport } from './routes/authors.index'
 import { Route as AuthorsSlugRouteImport } from './routes/authors.$slug'
 import { Route as BettingGuidesSlugRouteImport } from './routes/betting-guides.$slug'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
@@ -62,6 +64,11 @@ const PageRoute = PageRouteImport.update({
 const AllLinksRoute = AllLinksRouteImport.update({
   id: '/all-links',
   path: '/all-links',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthorsRoute = AuthorsRouteImport.update({
+  id: '/authors',
+  path: '/authors',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BettingGuidesRoute = BettingGuidesRouteImport.update({
@@ -187,10 +194,15 @@ const DotwellKnownOpenidConfigurationRoute =
     path: '/.well-known/openid-configuration',
     getParentRoute: () => rootRouteImport,
   } as any)
+const AuthorsIndexRoute = AuthorsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AuthorsRoute,
+} as any)
 const AuthorsSlugRoute = AuthorsSlugRouteImport.update({
-  id: '/authors/$slug',
-  path: '/authors/$slug',
-  getParentRoute: () => rootRouteImport,
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => AuthorsRoute,
 } as any)
 const BettingGuidesSlugRoute = BettingGuidesSlugRouteImport.update({
   id: '/$slug',
@@ -257,6 +269,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$page': typeof PageRoute
   '/all-links': typeof AllLinksRoute
+  '/authors': typeof AuthorsRouteWithChildren
   '/betting-guides': typeof BettingGuidesRouteWithChildren
   '/blog': typeof BlogRouteWithChildren
   '/case-study': typeof CaseStudyRouteWithChildren
@@ -286,6 +299,7 @@ export interface FileRoutesByFullPath {
   '/blog/$slug': typeof BlogSlugRoute
   '/case-study/$slug': typeof CaseStudySlugRoute
   '/football-schedule/$match': typeof FootballScheduleMatchRoute
+  '/authors/': typeof AuthorsIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/.well-known/agent-skills/index.json': typeof DotwellKnownAgentSkillsIndexDotjsonRoute
   '/.well-known/mcp/server-card.json': typeof DotwellKnownMcpServerCardDotjsonRoute
@@ -326,6 +340,7 @@ export interface FileRoutesByTo {
   '/blog/$slug': typeof BlogSlugRoute
   '/case-study/$slug': typeof CaseStudySlugRoute
   '/football-schedule/$match': typeof FootballScheduleMatchRoute
+  '/authors': typeof AuthorsIndexRoute
   '/blog': typeof BlogIndexRoute
   '/.well-known/agent-skills/index.json': typeof DotwellKnownAgentSkillsIndexDotjsonRoute
   '/.well-known/mcp/server-card.json': typeof DotwellKnownMcpServerCardDotjsonRoute
@@ -339,6 +354,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/$page': typeof PageRoute
   '/all-links': typeof AllLinksRoute
+  '/authors': typeof AuthorsRouteWithChildren
   '/betting-guides': typeof BettingGuidesRouteWithChildren
   '/blog': typeof BlogRouteWithChildren
   '/case-study': typeof CaseStudyRouteWithChildren
@@ -368,6 +384,7 @@ export interface FileRoutesById {
   '/blog/$slug': typeof BlogSlugRoute
   '/case-study/$slug': typeof CaseStudySlugRoute
   '/football-schedule/$match': typeof FootballScheduleMatchRoute
+  '/authors/': typeof AuthorsIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/.well-known/agent-skills/index.json': typeof DotwellKnownAgentSkillsIndexDotjsonRoute
   '/.well-known/mcp/server-card.json': typeof DotwellKnownMcpServerCardDotjsonRoute
@@ -382,6 +399,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$page'
     | '/all-links'
+    | '/authors'
     | '/betting-guides'
     | '/blog'
     | '/case-study'
@@ -411,6 +429,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/case-study/$slug'
     | '/football-schedule/$match'
+    | '/authors/'
     | '/blog/'
     | '/.well-known/agent-skills/index.json'
     | '/.well-known/mcp/server-card.json'
@@ -451,6 +470,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/case-study/$slug'
     | '/football-schedule/$match'
+    | '/authors'
     | '/blog'
     | '/.well-known/agent-skills/index.json'
     | '/.well-known/mcp/server-card.json'
@@ -463,6 +483,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$page'
     | '/all-links'
+    | '/authors'
     | '/betting-guides'
     | '/blog'
     | '/case-study'
@@ -492,6 +513,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/case-study/$slug'
     | '/football-schedule/$match'
+    | '/authors/'
     | '/blog/'
     | '/.well-known/agent-skills/index.json'
     | '/.well-known/mcp/server-card.json'
@@ -505,6 +527,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PageRoute: typeof PageRoute
   AllLinksRoute: typeof AllLinksRoute
+  AuthorsRoute: typeof AuthorsRouteWithChildren
   BettingGuidesRoute: typeof BettingGuidesRouteWithChildren
   BlogRoute: typeof BlogRouteWithChildren
   CaseStudyRoute: typeof CaseStudyRouteWithChildren
@@ -529,7 +552,6 @@ export interface RootRouteChildren {
   DotwellKnownOauthAuthorizationServerRoute: typeof DotwellKnownOauthAuthorizationServerRoute
   DotwellKnownOauthProtectedResourceRoute: typeof DotwellKnownOauthProtectedResourceRoute
   DotwellKnownOpenidConfigurationRoute: typeof DotwellKnownOpenidConfigurationRoute
-  AuthorsSlugRoute: typeof AuthorsSlugRoute
   FootballScheduleMatchRoute: typeof FootballScheduleMatchRoute
   DotwellKnownAgentSkillsIndexDotjsonRoute: typeof DotwellKnownAgentSkillsIndexDotjsonRoute
   DotwellKnownMcpServerCardDotjsonRoute: typeof DotwellKnownMcpServerCardDotjsonRoute
@@ -559,6 +581,13 @@ declare module '@tanstack/react-router' {
       path: '/all-links'
       fullPath: '/all-links'
       preLoaderRoute: typeof AllLinksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/authors': {
+      id: '/authors'
+      path: '/authors'
+      fullPath: '/authors'
+      preLoaderRoute: typeof AuthorsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/betting-guides': {
@@ -729,12 +758,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DotwellKnownOpenidConfigurationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/authors/': {
+      id: '/authors/'
+      path: '/'
+      fullPath: '/authors/'
+      preLoaderRoute: typeof AuthorsIndexRouteImport
+      parentRoute: typeof AuthorsRoute
+    }
     '/authors/$slug': {
       id: '/authors/$slug'
-      path: '/authors/$slug'
+      path: '/$slug'
       fullPath: '/authors/$slug'
       preLoaderRoute: typeof AuthorsSlugRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof AuthorsRoute
     }
     '/betting-guides/$slug': {
       id: '/betting-guides/$slug'
@@ -816,6 +852,19 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface AuthorsRouteChildren {
+  AuthorsSlugRoute: typeof AuthorsSlugRoute
+  AuthorsIndexRoute: typeof AuthorsIndexRoute
+}
+
+const AuthorsRouteChildren: AuthorsRouteChildren = {
+  AuthorsSlugRoute: AuthorsSlugRoute,
+  AuthorsIndexRoute: AuthorsIndexRoute,
+}
+
+const AuthorsRouteWithChildren =
+  AuthorsRoute._addFileChildren(AuthorsRouteChildren)
+
 interface BettingGuidesRouteChildren {
   BettingGuidesSlugRoute: typeof BettingGuidesSlugRoute
 }
@@ -858,6 +907,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PageRoute: PageRoute,
   AllLinksRoute: AllLinksRoute,
+  AuthorsRoute: AuthorsRouteWithChildren,
   BettingGuidesRoute: BettingGuidesRouteWithChildren,
   BlogRoute: BlogRouteWithChildren,
   CaseStudyRoute: CaseStudyRouteWithChildren,
@@ -884,7 +934,6 @@ const rootRouteChildren: RootRouteChildren = {
   DotwellKnownOauthProtectedResourceRoute:
     DotwellKnownOauthProtectedResourceRoute,
   DotwellKnownOpenidConfigurationRoute: DotwellKnownOpenidConfigurationRoute,
-  AuthorsSlugRoute: AuthorsSlugRoute,
   FootballScheduleMatchRoute: FootballScheduleMatchRoute,
   DotwellKnownAgentSkillsIndexDotjsonRoute:
     DotwellKnownAgentSkillsIndexDotjsonRoute,

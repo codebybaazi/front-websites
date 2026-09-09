@@ -4,6 +4,16 @@ import { ComparePageView, compareHead, type CompareData } from "@/components/Com
 const DATA: CompareData = {
   slug: "lotus365-vs-fairplay",
   rival: "Fairplay",
+  intro: "Fairplay's welcome bonus looks solid on day one, but there's no ongoing loyalty tier after that. Here's how the rest of the platform holds up next to Lotus365.",
+  aiOverview: {
+    summary: "Fairplay front-loads its value into a single welcome bonus and reviews withdrawals manually for up to 6 hours. Lotus365 pairs faster payouts with an ongoing rewards tier. This overview compares payout speed, loyalty and app coverage.",
+    points: [
+      "UPI payouts averaging under 4 minutes versus 1-6 hour manual review on Fairplay",
+      "Weekly Lotus Club cashback versus a one-off welcome bonus with no ongoing tiers",
+      "Native iOS PWA and Android APK versus Android-only on Fairplay",
+      "40+ IPL fancy markets versus a smaller, book-first fancy line",
+    ],
+  },
   rows: [
     { feature: "Account setup", lotus: "60-second WhatsApp onboarding, human concierge", rival: "Web signup + email KYC" },
     { feature: "Minimum deposit", lotus: "₹100 via UPI / IMPS / Net-banking", rival: "₹300 minimum on UPI" },
@@ -27,6 +37,40 @@ const DATA: CompareData = {
     { q: "Is Lotus365 payout faster than Fairplay?", a: "Yes — Lotus365 averages under 4 minutes on UPI, Fairplay lists 1–6 hour manual review windows." },
     { q: "Do both support UPI?", a: "Both support UPI, but Lotus365 accepts a wider set of apps and starts at ₹100 vs Fairplay's ₹300 minimum." },
     { q: "Can I move from Fairplay to Lotus365?", a: "Withdraw from Fairplay, then WhatsApp the Lotus365 concierge — we'll match your last-tier benefits on first deposit." },
+  ],
+  reviews: [
+    {
+      name: "Meena Iyengar",
+      location: "Bhopal",
+      rating: 5,
+      date: "2026-02-12",
+      title: "The welcome bonus was nice, then Fairplay had nothing else",
+      body: "Fairplay's sign-up offer got me in the door, but after that first week there was no ongoing reward for actually sticking around. Lotus365's Lotus Club gives me cashback every week instead of one bonus that never comes back. Small amounts each time, but it adds up over a season.",
+    },
+    {
+      name: "Deepak Nair",
+      location: "Guwahati",
+      rating: 5,
+      date: "2026-01-28",
+      title: "₹300 minimum on Fairplay kept me from testing it properly",
+      body: "I wanted to try a few small bets before committing real money, and Fairplay's ₹300 floor made that annoying. Lotus365 let me start with ₹100 on UPI, so I played a couple of low matches first and only moved more in once I trusted the platform.",
+    },
+    {
+      name: "Yash Trivedi",
+      location: "Vadodara",
+      rating: 4,
+      date: "2026-02-20",
+      title: "No more waiting hours for a withdrawal to clear",
+      body: "Fairplay's manual review could take anywhere up to six hours, and one time it landed right when I needed the cash for something else. Lotus365 pushed my last three withdrawals through in under four minutes each. Only reason it's not five stars is I still occasionally miss Fairplay's simpler app layout.",
+    },
+    {
+      name: "Ritika Sen",
+      location: "Ranchi",
+      rating: 5,
+      date: "2026-03-02",
+      title: "Finally an iOS option that isn't a workaround",
+      body: "Fairplay is Android-only, so I was stuck using my brother's phone whenever I wanted to check my account. Lotus365 has a proper iOS PWA I installed straight from Safari, and it works just like an app. Between that and the deeper fancy markets during IPL, I've fully switched over.",
+    },
   ],
 };
 

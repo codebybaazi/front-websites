@@ -21,6 +21,7 @@ import {
   Dice5,
   Gamepad2,
   Crown,
+  Users,
 } from "lucide-react";
 
 export type MegaItem = {
@@ -166,6 +167,9 @@ export const navItems: NavItem[] = [
             { label: "Support Hub", to: "/support", icon: LifeBuoy },
             { label: "Contact Us", to: "/contact-us", icon: LifeBuoy },
             { label: "WhatsApp Number", to: "/lotus365-whatsapp-number", icon: MessageCircle },
+            { label: "Deposit Number", to: "/lotus365-deposit-number", icon: Wallet },
+            { label: "Withdrawal Number", to: "/lotus365-withdrawal-number", icon: Wallet },
+            { label: "Customer Care Number", to: "/lotus365-customer-care-number", icon: Headphones },
             { label: "WhatsApp Support", to: "/lotus365-whatsapp-support", icon: Headphones },
             { label: "Telegram Channel", to: "/lotus365-telegram-channel", icon: Send },
           ],
@@ -223,6 +227,7 @@ export const navItems: NavItem[] = [
             { label: "Betting Guides", to: "/betting-guides", icon: BookOpen },
             { label: "Case Studies", to: "/case-study", icon: Award },
             { label: "Reviews", to: "/lotus365-reviews", icon: BadgeCheck },
+            { label: "Meet the Authors", to: "/authors", icon: Users },
           ],
         },
       ],

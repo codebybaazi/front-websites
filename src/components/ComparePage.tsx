@@ -14,18 +14,30 @@ import {
   Headphones,
   Trophy,
   MessageCircle,
+  Star,
 } from "lucide-react";
 
 export type CompareRow = { feature: string; lotus: string; rival: string };
 export type CompareFaq = { q: string; a: string };
 export type CompareNarrative = { title: string; body: string };
+export type CompareReview = {
+  name: string;
+  location: string;
+  rating: number;
+  date: string;
+  title: string;
+  body: string;
+};
 
 export type CompareData = {
   slug: string;
   rival: string;
+  intro: string;
+  aiOverview: { summary: string; points: string[] };
   rows: CompareRow[];
   faq: CompareFaq[];
   narratives: CompareNarrative[];
+  reviews?: CompareReview[];
 };
 
 const HIGHLIGHTS = [
@@ -51,8 +63,7 @@ export function ComparePageView({ data }: { data: CompareData }) {
           Lotus365 vs <span className="gold-text">{data.rival}</span>
         </h1>
         <p className="text-lg text-foreground/90 max-w-2xl">
-          An honest, no-nonsense 2026 comparison for Indian players — payouts,
-          cricket odds, UPI deposits, live casino and support, side by side.
+          {data.intro}
         </p>
         <div className="mt-7">
           <a
@@ -68,13 +79,8 @@ export function ComparePageView({ data }: { data: CompareData }) {
 
       <AiOverview
         title={`Lotus365 vs ${data.rival} — AI Overview`}
-        summary={`A quick, AI-generated summary of how Lotus365 stacks up against ${data.rival} for Indian players — payouts, cricket depth, casino, support and loyalty.`}
-        points={[
-          "Instant UPI payouts averaging under 4 minutes",
-          "40+ IPL fancy markets per match with deeper session lines",
-          "24/7 WhatsApp + Telegram concierge, sub-2-min reply",
-          "Lotus Club tiers with cashback, free bets and birthday bonuses",
-        ]}
+        summary={data.aiOverview.summary}
+        points={data.aiOverview.points}
         sources={[
           { label: "Feature table", to: "#" },
           { label: "FAQ", to: "#" },
@@ -142,6 +148,52 @@ export function ComparePageView({ data }: { data: CompareData }) {
           ))}
         </div>
       </section>
+
+      {data.reviews && data.reviews.length > 0 && (
+        <section className="mx-auto max-w-6xl px-6 pb-16">
+          <h2 className="font-display text-2xl md:text-3xl mb-2">
+            Players who switched from {data.rival}
+          </h2>
+          <p className="text-sm text-foreground/90 mb-6">
+            Real feedback from Lotus365 members who moved over — average{" "}
+            {(
+              data.reviews.reduce((sum, r) => sum + r.rating, 0) /
+              data.reviews.length
+            ).toFixed(1)}{" "}
+            out of 5 across {data.reviews.length} reviews.
+          </p>
+          <div className="grid md:grid-cols-2 gap-5">
+            {data.reviews.map((r) => (
+              <div key={r.name} className="glass-card rounded-2xl p-6">
+                <div className="flex items-center gap-1 mb-3">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`h-4 w-4 ${
+                        i < r.rating
+                          ? "text-primary fill-primary"
+                          : "text-foreground/30"
+                      }`}
+                    />
+                  ))}
+                </div>
+                <h3 className="font-display text-lg mb-2">{r.title}</h3>
+                <p className="text-sm text-foreground/90 leading-relaxed mb-4">
+                  {r.body}
+                </p>
+                <div className="text-xs text-foreground/70">
+                  {r.name} · {r.location} ·{" "}
+                  {new Date(r.date).toLocaleDateString("en-IN", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="mx-auto max-w-6xl px-6 pb-16">
         <h2 className="font-display text-2xl md:text-3xl mb-6">
@@ -230,6 +282,39 @@ export function compareHead(data: CompareData) {
         type: "application/ld+json",
         children: JSON.stringify(toFaqPageJsonLd(data.faq)),
       },
+      ...(data.reviews && data.reviews.length > 0
+        ? [
+            {
+              type: "application/ld+json",
+              children: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Product",
+                name: "Lotus365",
+                url,
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: (
+                    data.reviews.reduce((sum, r) => sum + r.rating, 0) /
+                    data.reviews.length
+                  ).toFixed(1),
+                  reviewCount: data.reviews.length,
+                },
+                review: data.reviews.map((r) => ({
+                  "@type": "Review",
+                  author: { "@type": "Person", name: r.name },
+                  datePublished: r.date,
+                  reviewRating: {
+                    "@type": "Rating",
+                    ratingValue: r.rating,
+                    bestRating: 5,
+                  },
+                  name: r.title,
+                  reviewBody: r.body,
+                })),
+              }),
+            },
+          ]
+        : []),
     ],
   };
 }

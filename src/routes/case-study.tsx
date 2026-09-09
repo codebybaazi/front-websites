@@ -25,6 +25,12 @@ export const Route = createFileRoute("/case-study")({
           "Verified Lotus365 case studies — real bankrolls, real bets, real payouts.",
       },
       { property: "og:url", content: "https://lotus365id.com/case-study" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://lotus365id.com/og-lotus365.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://lotus365id.com/og-lotus365.jpg" },
     ],
     links: [{ rel: "canonical", href: "https://lotus365id.com/case-study" }],
     scripts: [

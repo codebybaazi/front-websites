@@ -451,8 +451,8 @@ export const POSTS: Post[] = [
     excerpt: `How Lotus365 handles Football Betting Guide on Lotus365 — bookings markets, momentum swings, and the discipline behind steady football profit.`,
     date: "2026-01-06",
     category: "Football",
-    author: `Riya Sharma`,
-    authorRole: `Product Writer`,
+    author: `Meera Nair`,
+    authorRole: `Football Correspondent`,
     readMinutes: 8,
     sections: [
       {
@@ -3043,8 +3043,8 @@ export const POSTS: Post[] = [
     excerpt: `A tactical read on Lotus365 Football Betting Bet Live Predict Smart Big Win: form vs fixture, corner markets, and Lotus365's fast-settle football engine.`,
     date: "2026-02-24",
     category: "Football",
-    author: `Neha Iyer`,
-    authorRole: `Payments Lead`,
+    author: `Meera Nair`,
+    authorRole: `Football Correspondent`,
     readMinutes: 8,
     sections: [
       {
@@ -6672,8 +6672,8 @@ export const POSTS: Post[] = [
     excerpt: `Everything Lotus365 Fifa World Cup 2026 Football Fan Betting Guide means for Lotus365 punters — set-piece xG, referee tendencies, and closing-line theory.`,
     date: "2026-06-01",
     category: "Football",
-    author: `Riya Sharma`,
-    authorRole: `Product Writer`,
+    author: `Meera Nair`,
+    authorRole: `Football Correspondent`,
     readMinutes: 8,
     sections: [
       {
@@ -6774,8 +6774,8 @@ export const POSTS: Post[] = [
     excerpt: `Fifa World Cup 2026 Lotus365 Betting Tips on Lotus365 — xG signals, Asian handicap value, and how live-lag on other books quietly funds your bankroll.`,
     date: "2026-06-03",
     category: "Football",
-    author: `Neha Iyer`,
-    authorRole: `Payments Lead`,
+    author: `Meera Nair`,
+    authorRole: `Football Correspondent`,
     readMinutes: 5,
     sections: [
       {
@@ -6870,8 +6870,8 @@ export const POSTS: Post[] = [
     excerpt: `A tactical read on Lotus365 Fifa World Cup 2026 Complete Tournament Guide: form vs fixture, corner markets, and Lotus365's fast-settle football engine.`,
     date: "2026-06-05",
     category: "Football",
-    author: `Aarav Mehta`,
-    authorRole: `Senior Editor`,
+    author: `Meera Nair`,
+    authorRole: `Football Correspondent`,
     readMinutes: 7,
     sections: [
       {
@@ -7137,8 +7137,8 @@ export const POSTS: Post[] = [
     excerpt: `Fifa World Cup 2026 Lotus365 Live Betting ID Guide on Lotus365 — xG signals, Asian handicap value, and how live-lag on other books quietly funds your bankroll.`,
     date: "2026-06-12",
     category: "Football",
-    author: `Rohan Verma`,
-    authorRole: `IPL Correspondent`,
+    author: `Meera Nair`,
+    authorRole: `Football Correspondent`,
     readMinutes: 7,
     sections: [
       {
@@ -7400,8 +7400,8 @@ export const POSTS: Post[] = [
     excerpt: `A tactical read on Lotus365 Best Platforms Fifa World Cup 2026 Betting in India: form vs fixture, corner markets, and Lotus365's fast-settle football engine.`,
     date: "2026-06-18",
     category: "Football",
-    author: `Neha Iyer`,
-    authorRole: `Payments Lead`,
+    author: `Meera Nair`,
+    authorRole: `Football Correspondent`,
     readMinutes: 7,
     sections: [
       {
@@ -7666,8 +7666,8 @@ export const POSTS: Post[] = [
     excerpt: `Everything How Football World Cup Odds Work Lotus365 means for Lotus365 punters — set-piece xG, referee tendencies, and closing-line theory.`,
     date: "2026-06-25",
     category: "Football",
-    author: `Kabir Rao`,
-    authorRole: `Casino Desk`,
+    author: `Meera Nair`,
+    authorRole: `Football Correspondent`,
     readMinutes: 7,
     sections: [
       {
@@ -8226,8 +8226,8 @@ export const POSTS: Post[] = [
     excerpt: `Lotus365 Fifa World Cup Knockout Betting Tips Live Strategies on Lotus365 — xG signals, Asian handicap value, and how live-lag on other books quietly funds your bankroll.`,
     date: "2026-07-14",
     category: "Football",
-    author: `Riya Sharma`,
-    authorRole: `Product Writer`,
+    author: `Meera Nair`,
+    authorRole: `Football Correspondent`,
     readMinutes: 8,
     sections: [
       {
@@ -8275,8 +8275,8 @@ export const POSTS: Post[] = [
     excerpt: `Lotus365 Football Betting ID Features Benefits How It Works explained for the Lotus365 book: player props, minute-by-minute pricing, and when to trust the model.`,
     date: "2026-07-15",
     category: "Football",
-    author: `Kabir Rao`,
-    authorRole: `Casino Desk`,
+    author: `Meera Nair`,
+    authorRole: `Football Correspondent`,
     readMinutes: 9,
     sections: [
       {
@@ -8328,8 +8328,8 @@ export const POSTS: Post[] = [
     excerpt: `Everything Lotus365 Argentina vs Spain Fifa World Cup Final 2026 means for Lotus365 punters — set-piece xG, referee tendencies, and closing-line theory.`,
     date: "2026-07-16",
     category: "Football",
-    author: `Neha Iyer`,
-    authorRole: `Payments Lead`,
+    author: `Meera Nair`,
+    authorRole: `Football Correspondent`,
     readMinutes: 5,
     sections: [
       {
@@ -8692,8 +8692,8 @@ export const POSTS: Post[] = [
     excerpt: `A cup final isn't a normal fantasy football gameweek — only two teams matter, and the Lotus365 desk breaks down formations, captains and the differential picks that swing mini-leagues.`,
     date: "2026-07-18",
     category: "Football",
-    author: `Riya Sharma`,
-    authorRole: `Product Writer`,
+    author: `Meera Nair`,
+    authorRole: `Football Correspondent`,
     readMinutes: 6,
     sections: [
       {
@@ -9338,12 +9338,15 @@ export const POSTS: Post[] = [
       {
         heading: `The payment methods on offer`,
         body: `Lotus365 supports the full spread Indian users expect.`,
-        points: [
-          `UPI — the fastest option for most deposits and withdrawals`,
-          `IMPS, NEFT and RTGS — suited to larger bank transfers`,
-          `Net banking — direct from your account`,
-          `Digital wallets — quick and private`,
-        ],
+        table: {
+          headers: ["Method", "Speed", "Best for"],
+          rows: [
+            ["UPI", "Fastest", "Most deposits and withdrawals"],
+            ["IMPS, NEFT and RTGS", "Slower for large amounts", "Larger bank transfers"],
+            ["Net banking", "Standard", "Direct from your account"],
+            ["Digital wallets", "Fast", "Quick, private transactions"],
+          ],
+        },
       },
       {
         heading: `The habits that actually prevent delays`,
@@ -9992,13 +9995,16 @@ export const POSTS: Post[] = [
       {
         heading: `The terms that actually decide how useful the bonus is`,
         body: `These five details matter more than the headline bonus amount.`,
-        points: [
-          `Minimum qualifying deposit`,
-          `Wagering requirement — how much you must bet before withdrawing bonus funds`,
-          `Expiry date — when the offer stops being valid`,
-          `Which markets or games count toward the requirement`,
-          `Withdrawal restrictions on bonus-linked winnings`,
-        ],
+        table: {
+          headers: ["Term", "What it means"],
+          rows: [
+            ["Minimum qualifying deposit", "The deposit amount needed to trigger the offer"],
+            ["Wagering requirement", "How much you must bet before withdrawing bonus funds"],
+            ["Expiry date", "When the offer stops being valid"],
+            ["Qualifying markets/games", "Which bets actually count toward the requirement"],
+            ["Withdrawal restrictions", "Limits on cashing out bonus-linked winnings"],
+          ],
+        },
       },
       {
         heading: `If the bonus doesn't show up`,
@@ -10199,12 +10205,15 @@ export const POSTS: Post[] = [
       {
         heading: `The markets worth understanding beyond match winner`,
         body: `Cricket supports layers of markets beyond the simplest one.`,
-        points: [
-          `Total runs — team, match, or innings-specific, over/under a line`,
-          `Top batter and top bowler — individual performance against teammates`,
-          `Player performance props — runs, wickets, sixes, catches`,
-          `Live markets — repriced continuously as the game state changes`,
-        ],
+        table: {
+          headers: ["Market", "What it covers"],
+          rows: [
+            ["Total runs", "Team, match, or innings-specific, over/under a line"],
+            ["Top batter / top bowler", "Individual performance against teammates"],
+            ["Player performance props", "Runs, wickets, sixes, catches"],
+            ["Live markets", "Repriced continuously as the game state changes"],
+          ],
+        },
       },
       {
         heading: `A five-step framework for building your own read`,

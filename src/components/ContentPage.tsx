@@ -21,7 +21,7 @@ function formatPhoneDisplay(digits: string): string | null {
 export function ContentPage({ page }: { page: PageContent }) {
   // Real, live support number — sourced from fetchnumbers.json via WhatsAppProvider,
   // not a hardcoded placeholder. Rendered next to any section actually about WhatsApp.
-  const { number, url } = useWhatsApp();
+  const { number, url, urlWithText } = useWhatsApp();
   const displayNumber = formatPhoneDisplay(number);
 
   return (
@@ -42,7 +42,7 @@ export function ContentPage({ page }: { page: PageContent }) {
             <Sparkles className="h-3.5 w-3.5" />
             {page.eyebrow}
           </div>
-          <h1 className="font-display text-4xl md:text-6xl leading-[1.05]">
+          <h1 id="page-h1" className="font-display text-4xl md:text-6xl leading-[1.05]">
             {page.hero.split(" ").map((word, i, arr) =>
               i === arr.length - 1 ? (
                 <span key={i} className="gold-text">
@@ -56,6 +56,17 @@ export function ContentPage({ page }: { page: PageContent }) {
           <p className="mt-6 text-lg md:text-xl text-foreground/90 leading-relaxed max-w-3xl">
             {page.intro}
           </p>
+          {page.heroCta && (
+            <a
+              href={page.heroCta.text ? urlWithText(page.heroCta.text) : url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-whatsapp mt-8 inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold"
+            >
+              <MessageCircle className="h-4 w-4" />
+              {page.heroCta.label}
+            </a>
+          )}
         </div>
       </section>
 
@@ -171,14 +182,25 @@ export function ContentPage({ page }: { page: PageContent }) {
               {page.cta?.body ??
                 "Create your Lotus365 account in under a minute and unlock instant payouts, VIP concierge, and a curated library of premium games."}
             </p>
-            <Link
-              to="/$page"
-              params={{ page: "register" }}
-              className="btn-gold btn-gold-hover mt-8 px-7 py-3.5 rounded-full inline-flex items-center gap-2 text-base"
-            >
-              {page.cta?.label ?? "Create your account"}{" "}
-              <ChevronRight className="h-4 w-4" />
-            </Link>
+            {page.cta?.whatsapp ? (
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold btn-gold-hover mt-8 px-7 py-3.5 rounded-full inline-flex items-center gap-2 text-base"
+              >
+                {page.cta.label} <ChevronRight className="h-4 w-4" />
+              </a>
+            ) : (
+              <Link
+                to="/$page"
+                params={{ page: "register" }}
+                className="btn-gold btn-gold-hover mt-8 px-7 py-3.5 rounded-full inline-flex items-center gap-2 text-base"
+              >
+                {page.cta?.label ?? "Create your account"}{" "}
+                <ChevronRight className="h-4 w-4" />
+              </Link>
+            )}
           </div>
         </div>
       </section>

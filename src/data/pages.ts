@@ -19,7 +19,9 @@ export type PageContent = {
   hero: string;
   intro: string;
   sections: PageSection[];
-  cta?: { title: string; body: string; label: string };
+  cta?: { title: string; body: string; label: string; whatsapp?: boolean };
+  /** Optional early WhatsApp CTA rendered right under the hero intro. */
+  heroCta?: { label: string; text?: string };
   /** Optional external authoritative sources, shown in the AI Overview block. */
   sources?: { label: string; to: string }[];
 };
@@ -803,6 +805,114 @@ export const PAGES: Record<string, PageContent> = {
     ],
   },
 
+  "lotus365-deposit-number": {
+    slug: "lotus365-deposit-number",
+    title: "Lotus365 Deposit Number — Verified on WhatsApp | Lotus365",
+    description:
+      "Looking for the Lotus365 deposit number? Get the current, verified UPI or account number for your Lotus365 ID by chatting on WhatsApp — never from an old screenshot.",
+    eyebrow: "Cashier",
+    hero: "Get the real Lotus365 deposit number on WhatsApp.",
+    intro:
+      "A lot of players search for one fixed Lotus365 deposit number and paste whatever comes up straight into their UPI app. That's usually how someone ends up paying an account that used to belong to Lotus365 and doesn't anymore. The number linked to deposits for a Lotus365 ID changes from time to time for exactly that reason, so the only version worth trusting is the one a live agent sends you on WhatsApp, right before you pay.",
+    heroCta: {
+      label: "Chat on WhatsApp for your deposit number",
+      text: "Hi Lotus365, I need the current deposit number for my Lotus365 ID.",
+    },
+    sections: [
+      {
+        heading: "Why there's no single Lotus365 deposit number",
+        body: "An old number gets screenshotted, posted on a Telegram group or a random blog, and keeps circulating long after Lotus365 has stopped using it. Rotating the deposit number tied to each Lotus365 ID keeps deposits flowing through accounts that are actually being watched, instead of ones that scammers have quietly been collecting off search results for months.",
+      },
+      {
+        heading: "How to get your Lotus365 deposit number safely",
+        body: "Open the WhatsApp chat button on this page. It's connected to whichever desk is currently handling deposits, pulled fresh every time the page loads rather than typed in once and forgotten. Send your registered mobile number or Lotus365 ID, say whether you're paying by UPI, IMPS or NEFT, and the agent replies with the exact number or UPI ID to use for that transaction.",
+        points: [
+          "Tap the WhatsApp button on this page",
+          "Send your Lotus365 ID or registered mobile number",
+          "Tell the agent your deposit method and amount",
+          "Pay only the number sent back in that same chat",
+          "Share a screenshot of the payment in the chat",
+        ],
+      },
+      {
+        heading: "Lotus365 ID vs. the deposit number",
+        body: "These two get mixed up a lot. Your Lotus365 ID is what logs you into lotus365id.com and any linked Lotus365 app, and it doesn't change often. The deposit number is just the UPI ID or account WhatsApp hands you for one specific payment, and it can change week to week. That gap is the whole reason to confirm it fresh on WhatsApp instead of reusing an old screenshot or a number saved in your contacts.",
+      },
+      {
+        heading: "If a deposit doesn't reflect",
+        body: "Send the UTR number and a screenshot of the payment into the same WhatsApp chat you used to pay. Most deposits that don't show up right away get sorted within a few minutes once support has the UTR, since that's what lets them trace the exact transaction on their end rather than guess which payment was yours.",
+      },
+      {
+        heading: "Spotting a fake Lotus365 deposit number",
+        body: "Numbers lifted from old forum threads, YouTube comments or the tenth page of a Google search are the most common reason a deposit goes missing. If a number wasn't the one WhatsApp just sent you from this page, don't pay it, even if the account name has Lotus365 in it. Lotus 365 deposit number requests always come from a live chat you started, never the other way round.",
+      },
+    ],
+    cta: {
+      title: "Need your Lotus365 deposit number right now?",
+      body: "Open WhatsApp and an agent will send the exact number to pay into for this transaction, usually inside a minute.",
+      label: "Chat on WhatsApp",
+      whatsapp: true,
+    },
+    sources: [
+      { label: "NPCI — UPI overview", to: "https://www.npci.org.in/what-we-do/upi/product-overview" },
+      { label: "RBI — payment systems in India", to: "https://www.rbi.org.in/Scripts/PaymentSystems_UM.aspx" },
+    ],
+  },
+
+  "lotus365-withdrawal-number": {
+    slug: "lotus365-withdrawal-number",
+    title: "Lotus365 Withdrawal Number — Verified on WhatsApp | Lotus365",
+    description:
+      "Looking for the Lotus365 withdrawal number? Confirm your payout on the current, verified WhatsApp desk for your Lotus365 ID, never from an old screenshot or a random search result.",
+    eyebrow: "Cashier",
+    hero: "Confirm your Lotus365 withdrawal number on WhatsApp.",
+    intro:
+      "Players searching for a Lotus365 withdrawal number are usually trying to do one of two things: check where their payout is coming from, or find someone to chase a delayed one. Neither is something a fixed number sitting on a random search result can help with. The desk handling withdrawals for a Lotus365 ID gets reassigned from time to time, so the safe move is to open a WhatsApp chat from this page and let a live agent confirm the details for your specific payout.",
+    heroCta: {
+      label: "Chat on WhatsApp about your withdrawal",
+      text: "Hi Lotus365, I have a question about a withdrawal on my Lotus365 ID.",
+    },
+    sections: [
+      {
+        heading: "Why there's no single Lotus365 withdrawal number",
+        body: "A number that handled withdrawals last month can be reassigned, retired or reported this month, but old copies of it keep floating around on forums and comment sections regardless. Rotating which desk handles payouts for a Lotus365 ID is mostly a fraud-prevention measure. It also means the only number worth trusting is the one WhatsApp gives you right now, not one bookmarked from a previous conversation.",
+      },
+      {
+        heading: "How to check a Lotus365 withdrawal on WhatsApp",
+        body: "Open the WhatsApp button on this page. It connects to whichever desk is currently handling withdrawals, picked up fresh each time the page loads instead of hardcoded once. Share your Lotus365 ID or registered mobile number and the withdrawal amount, and the agent pulls up the status directly rather than asking you to wait on a generic queue.",
+        points: [
+          "Tap the WhatsApp button on this page",
+          "Send your Lotus365 ID or registered mobile number",
+          "Give the withdrawal amount and roughly when you requested it",
+          "Ask for the payout account or UTR the agent has on file",
+          "Keep the chat open until the status is confirmed",
+        ],
+      },
+      {
+        heading: "Lotus365 ID vs. the withdrawal number",
+        body: "Your Lotus365 ID is the login that gets you into lotus365id.com and any linked app, and it stays the same for as long as your account exists. The withdrawal number is just the WhatsApp desk currently handling payouts, and that can change without much notice. Mixing the two up is how players end up messaging a desk that stopped handling withdrawals weeks ago and wondering why nobody's replying.",
+      },
+      {
+        heading: "If a withdrawal is taking longer than expected",
+        body: "Most Lotus365 payouts clear over UPI in under three minutes, so anything past 30 minutes is worth flagging. Send your Lotus365 ID, the amount and the time you placed the request into the WhatsApp chat, and an agent can trace it against the settlement log instead of you having to guess whether it's a bank delay or an account issue.",
+      },
+      {
+        heading: "Avoiding a fake Lotus365 withdrawal number",
+        body: "Anyone messaging you first, asking for a fee to release a withdrawal, or offering a shortcut number to skip the queue is not Lotus365. A real Lotus365 withdrawal number conversation only starts from a chat you opened yourself, like the one on this page, and no agent will ever ask you to pay to receive your own money.",
+      },
+    ],
+    cta: {
+      title: "Need an update on your Lotus365 withdrawal?",
+      body: "Open WhatsApp and an agent will check the status against your Lotus365 ID directly, usually inside a minute.",
+      label: "Chat on WhatsApp",
+      whatsapp: true,
+    },
+    sources: [
+      { label: "NPCI — UPI overview", to: "https://www.npci.org.in/what-we-do/upi/product-overview" },
+      { label: "RBI — IMPS/NEFT settlement timings", to: "https://www.rbi.org.in/Scripts/FAQView.aspx?Id=76" },
+    ],
+  },
+
   "kyc-verification-policy": {
     slug: "kyc-verification-policy",
     title: "KYC Verification Policy — Lotus365 ID Compliance",
@@ -825,6 +935,59 @@ export const PAGES: Record<string, PageContent> = {
         heading: "How your data is stored",
         body: "AES-256 encryption at rest, access restricted to compliance officers only, purged after seven years of account inactivity.",
       },
+    ],
+  },
+
+  "lotus365-customer-care-number": {
+    slug: "lotus365-customer-care-number",
+    title: "Lotus365 Customer Care Number — Verified on WhatsApp | Lotus365",
+    description:
+      "Searching for a Lotus365 customer care number? Lotus365 doesn't run a public phone line. Reach the real, verified support desk for your Lotus365 ID on WhatsApp instead.",
+    eyebrow: "Support",
+    hero: "There's no Lotus365 customer care number. There's WhatsApp.",
+    intro:
+      "Type \"Lotus365 customer care number\" into a search bar and you'll get a page full of numbers, most of which have nothing to do with Lotus365. Some are old, some were never real, and a few belong to people who'd happily pretend to be support if you called. Lotus365 doesn't run a public phone line for exactly this reason. Every support conversation, login help, deposit or withdrawal query included, goes through the same verified WhatsApp desk you can open right from this page.",
+    heroCta: {
+      label: "Chat with Lotus365 customer care on WhatsApp",
+      text: "Hi Lotus365, I need help from customer care for my Lotus365 ID.",
+    },
+    sections: [
+      {
+        heading: "Why Lotus365 doesn't list a customer care number",
+        body: "A phone number is easy to copy, easy to fake, and impossible to secure once it's out there. WhatsApp support gives Lotus365 a way to verify who it's actually talking to, log the conversation, and hand it to the right agent, none of which happen on a cold call. If a number claiming to be Lotus365 customer care rings you first, it isn't Lotus365. Support here only starts from a chat you open yourself.",
+      },
+      {
+        heading: "How to reach Lotus365 customer care on WhatsApp",
+        body: "Tap the WhatsApp button on this page. It opens a chat with whichever agent is on the current support rotation, not a fixed contact saved from months ago. Describe the issue, share your Lotus365 ID or registered mobile number if it's an account query, and an agent takes it from there.",
+        points: [
+          "Tap the WhatsApp button on this page",
+          "Say what you need help with in one line",
+          "Share your Lotus365 ID if it's account-specific",
+          "Stay in the same chat until it's resolved",
+          "Save the chat thread for anything you may need to follow up on",
+        ],
+      },
+      {
+        heading: "What Lotus365 customer care actually handles",
+        body: "Login and password resets, Lotus365 ID recovery, deposit and withdrawal questions, KYC document checks, bonus and cashback queries, and responsible-play requests like limits or self-exclusion. Most of these get resolved inside the same chat without being passed around.",
+      },
+      {
+        heading: "Lotus365 ID vs. the support desk you reach",
+        body: "Your Lotus365 ID is the login for lotus365id.com and any linked app, and it stays fixed. The WhatsApp desk answering your message is a rotating team, not a single person or number, so don't expect the same contact to be there every time you write in. That's normal, and it's also why searching for one permanent Lotus365 customer care number was never going to work.",
+      },
+      {
+        heading: "Recognising a fake Lotus365 customer care number",
+        body: "A real Lotus365 support conversation never starts with someone calling you, never asks for your password or OTP, and never asks for a fee to fix an account issue. If any of those happen, close it and message the verified WhatsApp desk from this page instead. Lotus 365 customer care number scams almost always rely on players trusting the first result they find rather than a channel Lotus365 actually controls.",
+      },
+    ],
+    cta: {
+      title: "Need to reach Lotus365 customer care?",
+      body: "Skip the search results. Open WhatsApp and a verified agent will pick up your query directly.",
+      label: "Chat on WhatsApp",
+      whatsapp: true,
+    },
+    sources: [
+      { label: "RBI — payment systems in India", to: "https://www.rbi.org.in/Scripts/PaymentSystems_UM.aspx" },
     ],
   },
 

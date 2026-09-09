@@ -43,6 +43,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/schedule", image: DEFAULT_IMAGE },
           { path: "/matches", image: DEFAULT_IMAGE },
           { path: "/blog", image: DEFAULT_IMAGE },
+          { path: "/authors", image: DEFAULT_IMAGE },
           ...["cricket", "football", "casino", "platform", "guides"].map((c) => ({
             path: `/blog/category/${c}`,
             image: BLOG_CATEGORY_IMAGE[c],

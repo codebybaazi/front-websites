@@ -128,6 +128,10 @@ export const Route = createFileRoute("/blog/$slug")({
           timeRequired, // (7)
           mainEntityOfPage: { "@type": "WebPage", "@id": url },
           inLanguage: "en-IN",
+          speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: ["#page-h1", "#ai-overview-summary"],
+          },
         }),
       },
       {

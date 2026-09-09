@@ -36,7 +36,10 @@ export function AiOverview({
           </span>
         </div>
 
-        <p className="text-sm md:text-base text-foreground/95 leading-relaxed mb-4">
+        <p
+          id="ai-overview-summary"
+          className="text-sm md:text-base text-foreground/95 leading-relaxed mb-4"
+        >
           {summary}
         </p>
 

@@ -27,6 +27,11 @@ export const Route = createFileRoute("/blog/")({
       },
       { property: "og:url", content: "https://lotus365id.com/blog" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://lotus365id.com/og-lotus365.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://lotus365id.com/og-lotus365.jpg" },
     ],
     links: [{ rel: "canonical", href: "https://lotus365id.com/blog" }],
     scripts: [

@@ -259,7 +259,7 @@ export function SiteHeader() {
                                   {g.heading}
                                 </div>
                                 <ul className="space-y-2.5">
-                                  {g.items.slice(0, 4).map((mi) => (
+                                  {g.items.map((mi) => (
                                     <li key={mi.label}>
                                       <Link
                                         to={mi.to}

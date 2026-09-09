@@ -12,23 +12,24 @@ export const GUIDES: Record<string, PageContent> = {
       "Placing a cricket bet on Lotus365 is fast, but there are a few small habits that separate a considered bet from a rushed one. Here's the whole flow.",
     sections: [
       {
-        heading: "1. Pick the match",
+        heading: "1. How do I pick the match?",
         body: "Open Sports → Cricket. Fixtures are grouped by league — pick IPL, international, or domestic T20.",
       },
       {
-        heading: "2. Choose your market",
-        body: "Match-winner, top scorer, session runs, or fancy — every market opens with a clear description.",
+        heading: "2. How do I choose a market?",
+        body: "Every market opens with a clear description before you commit to it.",
+        points: ["Match-winner", "Top scorer", "Session runs", "Fancy"],
       },
       {
-        heading: "3. Set your stake",
+        heading: "3. How do I set my stake?",
         body: "Type an amount or tap a preset. The potential return shows live below.",
       },
       {
-        heading: "4. Review the slip",
+        heading: "4. How do I review the slip?",
         body: "Check odds, stake, and market before confirming. Odds may move between tap and confirm — Lotus365 always locks the price at confirmation.",
       },
       {
-        heading: "5. Confirm",
+        heading: "5. How do I confirm the bet?",
         body: "Tap 'Place bet'. It's in — you'll see it under 'Open bets' immediately.",
       },
     ],
@@ -44,15 +45,15 @@ export const GUIDES: Record<string, PageContent> = {
       "Live betting rewards preparation, not reflexes. Here's how to place in-play bets on Lotus365 without getting caught by moving odds.",
     sections: [
       {
-        heading: "Reading refreshed odds",
+        heading: "How do refreshed odds work?",
         body: "Live markets refresh delivery-by-delivery in cricket, second-by-second in football. Odds shown are the price at the moment of tap; final price is confirmed at submit.",
       },
       {
-        heading: "Timing your stake",
+        heading: "When should I time my stake?",
         body: "The best moments are typically after a wicket (cricket) or a goal (football) when the market is still rebalancing — but discipline over speed always wins.",
       },
       {
-        heading: "Cash-out",
+        heading: "How does cash-out work?",
         body: "Most live markets support cash-out. Use it to lock in profit or cut losses before settlement.",
       },
     ],
@@ -68,16 +69,17 @@ export const GUIDES: Record<string, PageContent> = {
       "Setting a limit is a small, one-minute action that saves you far more than it costs. Every Lotus365 account supports deposit, loss, and session caps.",
     sections: [
       {
-        heading: "Deposit limits",
+        heading: "How do I set a deposit limit?",
         body: "Cap daily, weekly, or monthly deposits from your profile → responsible gaming. Increases require 24 hours to apply.",
       },
       {
-        heading: "Loss limits",
+        heading: "How do I set a loss limit?",
         body: "Set a maximum net loss per period. Once hit, further stakes are blocked until the period rolls over.",
       },
       {
-        heading: "Session reminders",
-        body: "Enable a reality check every 30, 60, or 120 minutes to pause and reflect before continuing.",
+        heading: "What are session reminders?",
+        body: "Enable a reality check to pause and reflect before continuing.",
+        points: ["Every 30 minutes", "Every 60 minutes", "Every 120 minutes"],
       },
     ],
   },
@@ -92,15 +94,15 @@ export const GUIDES: Record<string, PageContent> = {
       "The toss market is one of the most straightforward cricket markets, but also one of the most misunderstood. Here's how it really works on Lotus365.",
     sections: [
       {
-        heading: "What you're betting on",
+        heading: "What am I actually betting on?",
         body: "Which captain wins the toss. Simple binary — but odds move sharply near the toss.",
       },
       {
-        heading: "When to bet",
+        heading: "When should I bet?",
         body: "Best value usually appears 60-90 minutes before the toss, before crowd sentiment tilts the market.",
       },
       {
-        heading: "Common pitfalls",
+        heading: "What are the common pitfalls?",
         body: "Don't confuse toss winner with the choice to bat first. They're separate markets — check the label before you confirm.",
       },
     ],
@@ -116,15 +118,15 @@ export const GUIDES: Record<string, PageContent> = {
       "Session betting is one of the most rewarding cricket markets, and one of the easiest to lose money on if you don't know what you're doing.",
     sections: [
       {
-        heading: "What a session is",
+        heading: "What is a session?",
         body: "A session is a defined block of overs — usually 6, 10, or 15 in T20 formats. You bet on total runs scored in that block.",
       },
       {
-        heading: "How odds move",
+        heading: "How do session odds move?",
         body: "Session odds move delivery-by-delivery. A dot ball drops the 'over' line; a boundary lifts it. Patience matters.",
       },
       {
-        heading: "Discipline",
+        heading: "Why does discipline matter here?",
         body: "Cap session stakes at a fixed percentage of your bankroll. High variance demands strict rules.",
       },
     ],
@@ -140,16 +142,21 @@ export const GUIDES: Record<string, PageContent> = {
       "Every bookmaker prices odds to earn a margin — the 'overround'. Understanding it is the first step to spotting value.",
     sections: [
       {
-        heading: "The overround",
+        heading: "What is the overround?",
         body: "If you add up the implied probabilities of every outcome, they exceed 100%. That excess is the book's margin.",
       },
       {
-        heading: "Line management",
+        heading: "How does line management work?",
         body: "Books move lines to balance action, not to predict outcomes. Sharp bettors profit from mispriced lines before they move.",
       },
       {
-        heading: "Where your edge is",
+        heading: "Where is my edge as a bettor?",
         body: "Depth of knowledge on niche markets, discipline on bankroll, and patience to only bet at genuine value.",
+        points: [
+          "Depth of knowledge on niche markets",
+          "Discipline on bankroll sizing",
+          "Patience to only bet at genuine value",
+        ],
       },
     ],
   },

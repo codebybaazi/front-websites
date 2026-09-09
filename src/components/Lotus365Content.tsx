@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { InPlayMatches } from "@/components/InPlayMatches";
 import { POSTS } from "@/data/posts";
 
@@ -6,6 +7,8 @@ import {
   ClipboardCheck,
   ShieldCheck,
   Wallet,
+  ArrowDownToLine,
+  Headphones,
   Gift,
   Target,
   TrendingUp,
@@ -21,7 +24,30 @@ import {
   Users,
   Star,
   Flame,
+  ShieldCheck as VerifiedIcon,
+  ArrowRight,
 } from "lucide-react";
+
+const verifiedNumbers = [
+  {
+    icon: Wallet,
+    t: "Deposit Number",
+    d: "The current, verified number for funding your Lotus365 ID — confirmed fresh on WhatsApp, never an old screenshot.",
+    to: "/lotus365-deposit-number",
+  },
+  {
+    icon: ArrowDownToLine,
+    t: "Withdrawal Number",
+    d: "Check or chase a payout on the desk actually handling withdrawals right now for your Lotus365 ID.",
+    to: "/lotus365-withdrawal-number",
+  },
+  {
+    icon: Headphones,
+    t: "Customer Care Number",
+    d: "Lotus365 runs no public phone line. Reach the real, verified support desk on WhatsApp instead.",
+    to: "/lotus365-customer-care-number",
+  },
+];
 
 const startSteps = [
   {
@@ -221,6 +247,58 @@ export function Lotus365Content() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Verified numbers — deposit / withdrawal / customer care */}
+      <section className="mx-auto max-w-7xl px-6 pb-24">
+        <div
+          className="rounded-3xl p-7 md:p-10 relative overflow-hidden gold-border"
+          style={{
+            background:
+              "linear-gradient(160deg, oklch(0.36 0.08 165), oklch(0.22 0.05 165))",
+          }}
+        >
+          <div
+            className="absolute inset-0 opacity-40 pointer-events-none"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 85% 0%, oklch(0.82 0.15 88 / 0.4), transparent 55%)",
+            }}
+          />
+          <div className="relative">
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-primary bg-primary/10 border border-primary/30 rounded-full px-3 py-1">
+                <VerifiedIcon className="h-3.5 w-3.5" />
+                Verified Numbers
+              </span>
+              <span className="text-xs text-foreground/85">
+                Confirmed live, never a stale number copied off a search result.
+              </span>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-5">
+              {verifiedNumbers.map(({ icon: Icon, t, d, to }) => (
+                <Link
+                  key={t}
+                  to={to}
+                  className="group block rounded-2xl p-6 bg-background/30 backdrop-blur-sm border border-primary/15 transition-all duration-300 hover:border-primary/50 hover:bg-background/40 hover:shadow-[0_10px_40px_-15px_oklch(0.82_0.15_88/0.5)]"
+                >
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-primary/25 bg-primary/10 text-primary mb-4">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <div className="font-display text-xl mb-1.5 group-hover:gold-text transition-colors">
+                    {t}
+                  </div>
+                  <p className="text-sm text-foreground/90 leading-relaxed mb-5">{d}</p>
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary">
+                    Get the verified number
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

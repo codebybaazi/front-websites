@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { QuickLinks } from "@/components/QuickLinks";
 import { Lotus365Content } from "@/components/Lotus365Content";
 import { AboutSection } from "@/components/AboutSection";
+import { ReviewsSection } from "@/components/ReviewsSection";
 import { HeroBanner } from "@/components/HeroBanner";
 import { GameCategoriesMarquee } from "@/components/GameCategoriesMarquee";
 import { ExchangeGamesMarquee } from "@/components/ExchangeGamesMarquee";
@@ -80,6 +81,10 @@ export const Route = createFileRoute("/")({
           isPartOf: { "@id": "https://lotus365id.com/#website" },
           about: { "@id": "https://lotus365id.com/#organization" },
           inLanguage: "en-IN",
+          speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: ["#page-h1", "#ai-overview-summary"],
+          },
         }),
       },
     ],
@@ -134,7 +139,7 @@ function Landing() {
               </span>
             </div>
 
-            <h1 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] sm:leading-[1.05] tracking-tight">
+            <h1 id="page-h1" className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] sm:leading-[1.05] tracking-tight">
               Official <span className="gold-text">Lotus365</span> — Login, App
               Download &amp; Sign Up for{" "}
               <span className="italic font-normal text-foreground/90">
@@ -297,6 +302,8 @@ function Landing() {
         })()}
       </section>
 
+      {/* REVIEWS */}
+      <ReviewsSection />
 
       {/* VIP */}
       <section id="vip" className="relative overflow-hidden py-24">
