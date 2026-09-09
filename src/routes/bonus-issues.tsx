@@ -19,10 +19,6 @@ export const Route = createFileRoute("/bonus-issues")({
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/bonus-issues", "Cricbet99 Bonus Not Credited?")),
       },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/bonus-issues", "Cricbet99 Bonus Not Credited?")),
-      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),

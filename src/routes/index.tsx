@@ -131,7 +131,6 @@ export const Route = createFileRoute("/")({
         content:
           "Get your official Cricbet99 ID in 5 minutes on WhatsApp. India's most trusted exchange for IPL 2026, live casino, and sports betting with instant UPI payouts.",
       },
-      { name: "keywords", content: "Cricbet99, cricbet99 id, cricbet99 green, cricbet99 black, cricbet99 club, online cricket id, ipl betting id, cricbet99 official app, live cricket betting india, cricket betting whatsapp number, cricbet99 login, cricbet99 registration" },
       { property: "og:title", content: "Cricbet99 — India's #1 Online Cricket ID Since 2020" },
       {
         property: "og:description",
@@ -161,6 +160,18 @@ export const Route = createFileRoute("/")({
     ],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(faqLd) },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "url": "https://cricbet99.co.in/",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["[data-speakable=\"homepage-faq\"]"]
+          }
+        }),
+      },
       {
         type: "application/ld+json",
         children: JSON.stringify({
@@ -328,7 +339,7 @@ function FaqSection() {
   const [open, setOpen] = useState<number | null>(0);
   const IconMap = { ShieldCheck, Zap, Wallet, Trophy, Gift, Smartphone } as const;
   return (
-    <section className="relative overflow-hidden py-28 content-visibility-auto contain-intrinsic-size-[0_800px]">
+    <section data-speakable="homepage-faq" className="relative overflow-hidden py-28 content-visibility-auto contain-intrinsic-size-[0_800px]">
       <div
         className="pointer-events-none absolute inset-0"
         style={{

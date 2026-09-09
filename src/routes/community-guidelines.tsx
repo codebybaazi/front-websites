@@ -17,10 +17,6 @@ export const Route = createFileRoute("/community-guidelines")({
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/community-guidelines", "Community Guidelines")),
-      },
-      {
-        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/community-guidelines", "Community Guidelines — Join the Elite Cricbet99 Network")),
       },
       ...(content.faqs && content.faqs.length ? [{

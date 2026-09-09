@@ -21,7 +21,19 @@ export const Route = createFileRoute("/reviews")({
       },
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/reviews", "Cricbet99 Reviews")),
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "Cricbet99 Cricket ID",
+          brand: { "@type": "Brand", name: "Cricbet99" },
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.8",
+            bestRating: "5",
+            worstRating: "1",
+            reviewCount: "12000",
+          },
+        }),
       },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",

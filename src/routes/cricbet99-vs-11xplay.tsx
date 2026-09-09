@@ -2,18 +2,27 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { CheckCircle2, XCircle, Trophy, Zap, ShieldCheck, Wallet, MessageCircle, Star } from "lucide-react";
+import { getRequestOrigin } from "@/lib/origin.functions";
+import shareImage from "@/assets/casino/slots.jpg";
 
 export const Route = createFileRoute("/cricbet99-vs-11xplay")({
-  head: () => ({
+  loader: async () => ({
+    origin: await getRequestOrigin(),
+  }),
+  head: ({ loaderData }) => {
+    const origin = loaderData?.origin ?? "";
+    const cardImage = `${origin}${shareImage}`;
+    return {
     meta: [
-      { title: "Comparison: 11xPlay (2026): Odds, Payouts, Verdict" },
-      { name: "description", content: "Comparison: 11xPlay compared on cricket odds, UPI payout speed, casino depth, bonuses and 24/7 support — pick the right cricket ID for India in 2026." },
-      { name: "keywords", content: "cricbet99 vs 11xplay, 11xplay vs cricbet99, best cricket betting id india, 11xplay review, cricbet99 review, ipl betting id, upi withdrawal betting, online cricket id" },
-      { property: "og:title", content: "Comparison: 11xPlay (2026) — Honest Side-by-Side" },
-      { property: "og:description", content: "Which cricket ID pays faster, prices sharper and supports better? Full 2026 comparison of Comparison: 11xPlay for Indian bettors." },
+      { title: "Cricbet99 vs 11xPlay (2026): Odds, Payouts & Verdict" },
+      { name: "description", content: "Cricbet99 vs 11xPlay compared on cricket odds, UPI payout speed, casino depth, bonuses and 24/7 support — pick the right cricket ID for India in 2026." },
+      { property: "og:title", content: "Cricbet99 vs 11xPlay (2026) — Honest Side-by-Side" },
+      { property: "og:description", content: "Which cricket ID pays faster, prices sharper and supports better? Full 2026 comparison of Cricbet99 vs 11xPlay for Indian bettors." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://cricbet99.co.in/cricbet99-vs-11xplay" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: cardImage },
+      { name: "twitter:image", content: cardImage },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/cricbet99-vs-11xplay" }],
     scripts: [
@@ -25,7 +34,7 @@ export const Route = createFileRoute("/cricbet99-vs-11xplay")({
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "https://cricbet99.co.in/" },
             { "@type": "ListItem", position: 2, name: "Compare", item: "https://cricbet99.co.in/all-links" },
-            { "@type": "ListItem", position: 3, name: "Comparison: 11xPlay", item: "https://cricbet99.co.in/cricbet99-vs-11xplay" },
+            { "@type": "ListItem", position: 3, name: "Cricbet99 vs 11xPlay", item: "https://cricbet99.co.in/cricbet99-vs-11xplay" },
           ],
         }),
       },
@@ -38,7 +47,7 @@ export const Route = createFileRoute("/cricbet99-vs-11xplay")({
             { "@type": "Question", name: "Is Cricbet99 better than 11xPlay for cricket betting?",
               acceptedAnswer: { "@type": "Answer", text: "For most Indian bettors, yes — Cricbet99 matches 11xPlay on cricket market depth but wins on WhatsApp onboarding, UPI payout speed and 24/7 human support." } },
             { "@type": "Question", name: "Which pays out faster, Cricbet99 or 11xPlay?",
-              acceptedAnswer: { "@type": "Answer", text: "Cricbet99 clears UPI withdrawals in minutes, 24/7. 11xPlay typically settles UPI within 30–120 minutes depending on the bank and time of day." } },
+              acceptedAnswer: { "@type": "Answer", text: "Cricbet99's withdrawal desk typically clears UPI requests within a few minutes, any hour of the day. 11xPlay's payout queue usually runs 30–120 minutes depending on your bank and how busy their desk is." } },
             { "@type": "Question", name: "How do I get a Cricbet99 ID?",
               acceptedAnswer: { "@type": "Answer", text: "Message Cricbet99 on WhatsApp — the team verifies your details and activates your ID in about 60 seconds. No forms, no email loops." } },
             { "@type": "Question", name: "Is 11xPlay safe to use in India?",
@@ -51,8 +60,8 @@ export const Route = createFileRoute("/cricbet99-vs-11xplay")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "Comparison: 11xPlay — Honest 2026 Comparison",
-          description: "Which cricket ID pays faster, prices sharper and supports better? Full 2026 comparison of Comparison: 11xPlay for Indian bettors.",
+          headline: "Cricbet99 vs 11xPlay — Honest 2026 Comparison",
+          description: "Which cricket ID pays faster, prices sharper and supports better? Full 2026 comparison of Cricbet99 vs 11xPlay for Indian bettors.",
           author: { "@type": "Organization", name: "Cricbet99" },
           publisher: { "@type": "Organization", name: "Cricbet99" },
           datePublished: "2026-01-15",
@@ -60,7 +69,8 @@ export const Route = createFileRoute("/cricbet99-vs-11xplay")({
         }),
       },
     ],
-  }),
+  };
+  },
   component: Compare,
 });
 
@@ -107,7 +117,7 @@ const otherCons = [
 
 const faqs = [
   { q: "Is Cricbet99 better than 11xPlay for IPL?", a: "For most Indian bettors, yes. Cricbet99 matches 11xPlay's depth on IPL and adds sharper session and fancy markets, faster UPI payouts, and 24/7 human support on WhatsApp." },
-  { q: "Which pays out faster, Cricbet99 or 11xPlay?", a: "Cricbet99 clears UPI withdrawals in minutes around the clock. 11xPlay typically settles UPI in 30–120 minutes depending on your bank." },
+  { q: "Which pays out faster, Cricbet99 or 11xPlay?", a: "Cricbet99's withdrawal desk usually clears requests within a few minutes, any hour. 11xPlay's payout queue runs 30–120 minutes depending on your bank and how busy their desk is." },
   { q: "How do I open a Cricbet99 ID?", a: "Message the Cricbet99 WhatsApp — the team activates your ID in about 60 seconds with a one-line KYC. No forms, no waiting queues." },
   { q: "Is 11xPlay safe to use in India?", a: "11xPlay is a functional, well-known brand. It's safe for casual play, but Cricbet99 remains the smoother default for cricket-first Indian bettors in 2026." },
   { q: "Can I use both Cricbet99 and 11xPlay?", a: "Yes, many bettors line-shop across IDs. For daily grinding though, one primary ID with faster payouts and better support (Cricbet99) usually wins on ROI." },
@@ -119,8 +129,8 @@ function Compare() {
       <PageHero
         wide
         eyebrow="Comparison"
-        title={<>Comparison: 11xPlay — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>compared honestly.</span></>}
-        subtitle="A no-fluff 2026 breakdown of Comparison: 11xPlay on cricket market depth, UPI payout speed, casino floor, bonuses and support — so you pick the right cricket ID for your play."
+        title={<>Cricbet99 vs 11xPlay — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>compared honestly.</span></>}
+        subtitle="A no-fluff 2026 breakdown of Cricbet99 vs 11xPlay on cricket market depth, UPI payout speed, casino floor, bonuses and support — so you pick the right cricket ID for your play."
       />
 
       <section className="mx-auto max-w-5xl px-6 pt-10">
@@ -193,12 +203,12 @@ function Compare() {
 
       <section className="mx-auto max-w-5xl space-y-8 px-6 py-8">
         <Article
-          h="Cricket market depth: Comparison: 11xPlay"
+          h="Cricket market depth: Cricbet99 vs 11xPlay"
           body="Both IDs cover IPL, T20 leagues and international cricket with back/lay and fancy markets. Cricbet99 adds sharper session lines and deeper lambi rates on smaller series where 11xPlay's book thins out. On marquee IPL games, prices are close — but on side markets, Cricbet99 typically holds tighter spreads."
         />
         <Article
           h="UPI deposits, withdrawals &amp; payout speed"
-          body="Deposits are instant on both. The gap is withdrawals. Cricbet99 clears UPI cashouts in minutes, 24/7, with no daily window restrictions. 11xPlay typically pays within 30–120 minutes depending on the bank and time of day. If instant payouts matter on live IPL swings, Cricbet99 is the practical winner."
+          body="On the deposit side, both IDs credit UPI instantly. The real difference shows up when you cash out: Cricbet99's withdrawal desk usually clears requests within a few minutes, any hour of the day, with no cutoff windows to plan around. 11xPlay's payout queue typically needs 30 to 120 minutes depending on your bank and how busy their desk is. During a tight run-chase, that gap decides whether you're reinvesting winnings mid-match or waiting it out."
         />
         <Article
           h="Onboarding, KYC &amp; account safety"
@@ -219,13 +229,13 @@ function Compare() {
       </section>
 
       <section className="mx-auto max-w-5xl px-6 py-10">
-        <h2 className="text-xl font-black text-foreground sm:text-2xl">Comparison: 11xPlay — FAQ</h2>
+        <h2 className="text-xl font-black text-foreground sm:text-2xl">Cricbet99 vs 11xPlay — FAQ</h2>
         <div className="mt-5 space-y-3">
           {faqs.map((f) => (
             <details key={f.q} className="group rounded-xl border border-primary/20 bg-background/60 p-4 open:border-primary/40">
               <summary className="cursor-pointer list-none text-sm font-bold text-foreground marker:hidden">
                 <span className="flex items-center justify-between gap-3">
-                  {f.q}
+                  <h3 className="m-0 inline text-inherit font-inherit">{f.q}</h3>
                   <span className="text-primary transition-transform group-open:rotate-45">+</span>
                 </span>
               </summary>
@@ -252,6 +262,26 @@ function Compare() {
               {l.label}
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 pb-8">
+        <h2 className="text-xl font-black text-foreground sm:text-2xl">Related reading</h2>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          <Link
+            to="/case-studies/live-betting-3x-returns"
+            className="block rounded-xl border border-primary/20 bg-background/60 p-4 transition-colors hover:border-primary/50 hover:bg-primary/5"
+          >
+            <div className="text-sm font-bold text-primary">Case Study: Live Betting 3x Returns</div>
+            <div className="mt-1 text-xs text-foreground/65">How a Cricbet99 trader turned in-play speed into real profit.</div>
+          </Link>
+          <Link
+            to="/case-studies/toss-market-10-minute-profit"
+            className="block rounded-xl border border-primary/20 bg-background/60 p-4 transition-colors hover:border-primary/50 hover:bg-primary/5"
+          >
+            <div className="text-sm font-bold text-primary">Case Study: Toss Market Profit in 10 Minutes</div>
+            <div className="mt-1 text-xs text-foreground/65">A fast-turnaround trade showing why payout speed matters.</div>
+          </Link>
         </div>
       </section>
 

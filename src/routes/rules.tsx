@@ -17,10 +17,6 @@ export const Route = createFileRoute("/rules")({
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/rules", "Official Rules & Regulations")),
-      },
-      {
-        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/rules", "Official Rules & Regulations — Official Cricbet99 Rulebook")),
       },
       ...(content.faqs && content.faqs.length ? [{

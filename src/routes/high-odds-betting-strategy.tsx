@@ -19,10 +19,6 @@ export const Route = createFileRoute("/high-odds-betting-strategy")({
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/high-odds-betting-strategy", "High Odds Betting Strategy")),
       },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/high-odds-betting-strategy", "High Odds Betting Strategy")),
-      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),
@@ -34,14 +30,18 @@ export const Route = createFileRoute("/high-odds-betting-strategy")({
 
 function Page_high_odds_betting_strategy() {
   return (
-    <LongFormPage 
-      content={content} 
+    <LongFormPage
+      content={content}
       extra={
-        <AiOverview 
-          summary={content.subtitle} 
-          highlights={content.features.slice(0, 4).map(f => f.desc)} 
+        <AiOverview
+          summary={content.subtitle}
+          highlights={content.features.slice(0, 4).map(f => f.desc)}
         />
-      } 
+      }
+      relatedLinks={[
+        { to: "/matches", label: "Live Match Predictions", desc: "Browse today's fixtures and market highlights before staking on a long shot." },
+        { to: "/todays-best-odds", label: "Today's Best Odds", desc: "Compare current pricing across cricket, football and tennis markets." },
+      ]}
     />
   );
 }

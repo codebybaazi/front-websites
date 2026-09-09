@@ -14,6 +14,8 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { WhatsAppProvider } from "../hooks/use-whatsapp";
 import { getWhatsAppContact } from "../lib/whatsapp.functions";
 import { fetchWhatsAppContact } from "../lib/whatsapp";
+import { getRequestOrigin } from "../lib/origin.functions";
+import defaultShareImage from "../assets/hero-banner.jpg";
 
 function NotFoundComponent() {
   return (
@@ -78,8 +80,12 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   loader: async () => ({
     whatsapp: await getWhatsAppContact(),
+    origin: await getRequestOrigin(),
   }),
-  head: () => ({
+  head: ({ loaderData }) => {
+    const origin = loaderData?.origin ?? "";
+    const defaultImage = `${origin}${defaultShareImage}`;
+    return {
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -98,7 +104,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "One verified ID for cricket, football, tennis, kabaddi and live casino. Instant payouts, 24/7 support.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: defaultImage },
+      { property: "og:image:width", content: "1920" },
+      { property: "og:image:height", content: "784" },
+      { property: "og:image:alt", content: "Cricbet99 — India's Trusted Cricket ID" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: defaultImage },
     ],
     links: [
       { rel: "preconnect", href: "https://wa.me" },
@@ -131,6 +142,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           logo: "https://cricbet99.co.in/favicon.png",
           description:
             "India's trusted online cricket ID platform since 2020 — cricket, football, tennis and live casino with instant UPI payouts and 24/7 WhatsApp support.",
+          address: "CricketBet99 Editorial (Virtual office — India). Correspondence via email is preferred.",
+          contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "customer support",
+            url: "https://cricbet99.co.in/whatsapp-support",
+            ...(loaderData?.whatsapp?.tel ? { telephone: loaderData.whatsapp.tel.replace("tel:", "") } : {}),
+            availableLanguage: ["English", "Hindi"],
+          },
           sameAs: [
             "https://cricbet99.co.in/whatsapp-support",
             "https://cricbet99.co.in/telegram-channel"
@@ -152,7 +171,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         }),
       },
     ],
-  }),
+    };
+  },
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,

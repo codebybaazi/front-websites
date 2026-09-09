@@ -17,10 +17,6 @@ export const Route = createFileRoute("/responsible-gaming")({
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/responsible-gaming", "Responsible Gaming")),
-      },
-      {
-        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/responsible-gaming", "Responsible Gaming — Play Safely with Cricbet99")),
       },
       ...(content.faqs && content.faqs.length ? [{

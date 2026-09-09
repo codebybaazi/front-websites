@@ -43,12 +43,8 @@ export const Route = createFileRoute('/matches/$slug')({
       scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/$slug", "Cricbet99")),
+        children: JSON.stringify(buildBreadcrumbJsonLd(`/matches/${match.slug}`, `${match.homeTeam} vs ${match.awayTeam}`)),
       },
-        {
-          type: "application/ld+json",
-          children: JSON.stringify(buildBreadcrumbJsonLd(`/matches/${match.slug}`, `${match.homeTeam} vs ${match.awayTeam}`)),
-        },
         {
           type: "application/ld+json",
           children: JSON.stringify({
@@ -56,6 +52,9 @@ export const Route = createFileRoute('/matches/$slug')({
             "@type": "SportsEvent",
             "name": `${match.homeTeam} vs ${match.awayTeam}`,
             "startDate": match.startDate,
+            ...(match.endDate ? { "endDate": match.endDate } : {}),
+            "eventStatus": "https://schema.org/EventScheduled",
+            "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
             "location": {
               "@type": "Place",
               "name": match.venue,

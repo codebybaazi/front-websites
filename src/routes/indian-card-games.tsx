@@ -16,7 +16,6 @@ export const Route = createFileRoute("/indian-card-games")({
       meta: [
         { title: "Indian Card Games on Cricbet99 — Teen Patti & Andar Bahar" },
         { name: "description", content: "Play Teen Patti, Andar Bahar, Lucky 7, and 32 Cards with live dealers on Cricbet99. HD streaming, instant UPI payouts, and 24/7 WhatsApp support for Indian players." },
-        { name: "keywords", content: "cricbet99 teen patti, online andar bahar india, cricbet99 lucky 7, indian card games online, cricbet99 live cards" },
         { property: "og:title", content: "Classic Indian Card Games — Live on Cricbet99" },
         { property: "og:description", content: "Enjoy the best of Indian card games with real dealers and lightning-fast withdrawals on India's most trusted platform." },
         { property: "og:type", content: "website" },
@@ -24,10 +23,6 @@ export const Route = createFileRoute("/indian-card-games")({
       ],
       links: [{ rel: "canonical", href: canonical }],
     scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/indian-card-games", "Indian Card Games on Cricbet99")),
-      },
       {
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/indian-card-games", "Indian Card Games on Cricbet99 — Teen Patti & Andar Bahar")),

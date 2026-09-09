@@ -19,10 +19,6 @@ export const Route = createFileRoute("/wpl-2026-betting")({
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/wpl-2026-betting", "WPL 2026 Betting")),
       },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/wpl-2026-betting", "WPL 2026 Betting")),
-      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),

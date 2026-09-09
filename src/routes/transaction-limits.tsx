@@ -19,10 +19,6 @@ export const Route = createFileRoute("/transaction-limits")({
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/transaction-limits", "Cricbet99 Transaction Limits")),
       },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/transaction-limits", "Cricbet99 Transaction Limits")),
-      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),

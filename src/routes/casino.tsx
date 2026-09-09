@@ -16,7 +16,6 @@ export const Route = createFileRoute("/casino")({
       meta: [
         { title: "Cricbet99 Live Casino — Teen Patti, Andar Bahar & 500+ Games" },
         { name: "description", content: "Experience India's most trusted live casino on Cricbet99. Play Teen Patti, Andar Bahar, Roulette, and Baccarat with HD streaming and real dealers. Instant 24/7 payouts." },
-        { name: "keywords", content: "cricbet99 casino, live teen patti, online andar bahar, cricbet99 live dealer, online casino india, cricbet99 app casino" },
         { property: "og:title", content: "Cricbet99 Live Casino — Real Dealers & Instant Payouts" },
         { property: "og:description", content: "Get your Cricbet99 Casino ID and play live card games, slots and roulette with 24/7 support and lightning fast withdrawals." },
         { property: "og:type", content: "website" },
@@ -27,12 +26,8 @@ export const Route = createFileRoute("/casino")({
       scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/casino", "Cricbet99 Live Casino")),
+        children: JSON.stringify(buildBreadcrumbJsonLd("/casino", "Live Casino")),
       },
-        {
-          type: "application/ld+json",
-          children: JSON.stringify(buildBreadcrumbJsonLd("/casino", "Live Casino")),
-        },
         {
           type: "application/ld+json",
           children: JSON.stringify(buildFaqJsonLd(casinoFaqs)),

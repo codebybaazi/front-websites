@@ -17,10 +17,6 @@ export const Route = createFileRoute("/telegram-channel")({
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/telegram-channel", "Official Cricbet99 Telegram")),
-      },
-      {
-        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/telegram-channel", "Official Cricbet99 Telegram | Live Tips & Odds")),
       },
       ...(content.faqs && content.faqs.length ? [{

@@ -18,7 +18,21 @@ export interface PageContent {
   ctaSub: string;
 }
 
-export function LongFormPage({ content, extra }: { content: PageContent; extra?: ReactNode }) {
+export interface RelatedLink {
+  to: string;
+  label: string;
+  desc: string;
+}
+
+export function LongFormPage({
+  content,
+  extra,
+  relatedLinks,
+}: {
+  content: PageContent;
+  extra?: ReactNode;
+  relatedLinks?: RelatedLink[];
+}) {
   const { wa } = useWhatsApp();
   const { eyebrow, title, titleAccent, subtitle, intro, features, sections, faqs, ctaHeading, ctaSub } = content;
   return (
@@ -120,6 +134,24 @@ export function LongFormPage({ content, extra }: { content: PageContent; extra?:
         </div>
       </section>
 
+      {relatedLinks && relatedLinks.length > 0 && (
+        <section className="mx-auto max-w-4xl px-4 py-8 border-t border-primary/10 sm:px-6">
+          <h2 className="text-xl font-black md:text-2xl">Related reading</h2>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {relatedLinks.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                className="block rounded-xl border border-primary/20 bg-background/50 p-4 transition-colors hover:border-primary/50 hover:bg-primary/5"
+              >
+                <div className="text-sm font-bold text-primary">{l.label}</div>
+                <div className="mt-1 text-xs text-foreground/65">{l.desc}</div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
       {faqs && faqs.length > 0 && (
         <section className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-12">
           <h2 className="text-2xl sm:text-3xl break-words md:text-4xl break-words font-black mb-1 uppercase tracking-tighter">Frequently asked questions</h2>
@@ -180,6 +212,31 @@ export function buildArticleJsonLd(content: PageContent, url: string) {
       "@type": "WebPage",
       "@id": url
     }
+  };
+}
+
+export function buildHowToJsonLd(
+  content: PageContent,
+  url: string,
+  options?: { totalTime?: string; image?: string }
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: content.title,
+    description: content.subtitle,
+    ...(options?.image ? { image: options.image } : {}),
+    ...(options?.totalTime ? { totalTime: options.totalTime } : {}),
+    step: content.features.map((f, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: f.title,
+      text: f.desc,
+    })),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
   };
 }
 

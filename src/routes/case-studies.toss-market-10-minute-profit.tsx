@@ -17,10 +17,6 @@ export const Route = createFileRoute("/case-studies/toss-market-10-minute-profit
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/case-studies/toss-market-10-minute-profit", "10-Minute Profit Case Study")),
-      },
-      {
-        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/case-studies/toss-market-10-minute-profit", "10-Minute Profit Case Study | Toss Market Strategy")),
       },
       ...(content.faqs && content.faqs.length ? [{

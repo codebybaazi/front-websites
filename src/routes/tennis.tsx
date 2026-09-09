@@ -21,10 +21,6 @@ export const Route = createFileRoute("/tennis")({
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/tennis", "Tennis Betting on Cricbet99")),
       },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/tennis", "Tennis Betting on Cricbet99")),
-      },
     ],
   }),
   component: Tennis,

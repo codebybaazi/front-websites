@@ -19,10 +19,6 @@ export const Route = createFileRoute("/trusted-betting-id-provider")({
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/trusted-betting-id-provider", "Trusted Online Betting ID Provider")),
       },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/trusted-betting-id-provider", "Trusted Online Betting ID Provider")),
-      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),

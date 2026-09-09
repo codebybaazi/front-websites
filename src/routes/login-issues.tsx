@@ -17,10 +17,6 @@ export const Route = createFileRoute("/login-issues")({
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/login-issues", "Fix Cricbet99 Login Issues")),
-      },
-      {
-        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/login-issues", "Fix Cricbet99 Login Issues | 24/7 Account Recovery")),
       },
       ...(content.faqs && content.faqs.length ? [{

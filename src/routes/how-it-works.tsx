@@ -19,10 +19,6 @@ export const Route = createFileRoute("/how-it-works")({
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/how-it-works", "How to Start on Cricbet99")),
       },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/how-it-works", "How to Start on Cricbet99")),
-      },
     ],
   }),
   component: HowItWorks,

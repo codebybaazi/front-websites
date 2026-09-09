@@ -2,18 +2,27 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { CheckCircle2, XCircle, Trophy, Zap, ShieldCheck, Wallet, MessageCircle, Star } from "lucide-react";
+import { getRequestOrigin } from "@/lib/origin.functions";
+import shareImage from "@/assets/launch/lightning.jpg";
 
 export const Route = createFileRoute("/cricbet99-vs-skyexchange247")({
-  head: () => ({
+  loader: async () => ({
+    origin: await getRequestOrigin(),
+  }),
+  head: ({ loaderData }) => {
+    const origin = loaderData?.origin ?? "";
+    const cardImage = `${origin}${shareImage}`;
+    return {
     meta: [
-      { title: "Comparison: SkyExchange 247 (2026): Odds, Payouts, Verdict" },
-      { name: "description", content: "Comparison: SkyExchange 247 compared on exchange odds, UPI payout speed, casino depth, bonuses and 24/7 support — pick the right cricket ID for India in 2026." },
-      { name: "keywords", content: "cricbet99 vs skyexchange247, skyexchange 247 vs cricbet99, best exchange betting id india, cricket exchange id, sky exchange review, cricbet99 review, ipl exchange id, upi withdrawal betting" },
-      { property: "og:title", content: "Comparison: SkyExchange 247 (2026) — Honest Side-by-Side" },
-      { property: "og:description", content: "Which cricket exchange pays faster, prices sharper and supports better? Full 2026 comparison of Comparison: SkyExchange 247 for Indian bettors." },
+      { title: "Cricbet99 vs SkyExchange 247 (2026): Odds, Payouts, Verdict" },
+      { name: "description", content: "Cricbet99 vs SkyExchange 247 compared on exchange odds, UPI payout speed, casino depth, bonuses and 24/7 support — pick the right cricket ID for India in 2026." },
+      { property: "og:title", content: "Cricbet99 vs SkyExchange 247 (2026) — Honest Side-by-Side" },
+      { property: "og:description", content: "Which cricket exchange pays faster, prices sharper and supports better? Full 2026 comparison of Cricbet99 vs SkyExchange 247 for Indian bettors." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://cricbet99.co.in/cricbet99-vs-skyexchange247" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: cardImage },
+      { name: "twitter:image", content: cardImage },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/cricbet99-vs-skyexchange247" }],
     scripts: [
@@ -25,7 +34,7 @@ export const Route = createFileRoute("/cricbet99-vs-skyexchange247")({
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "https://cricbet99.co.in/" },
             { "@type": "ListItem", position: 2, name: "Compare", item: "https://cricbet99.co.in/all-links" },
-            { "@type": "ListItem", position: 3, name: "Comparison: SkyExchange 247", item: "https://cricbet99.co.in/cricbet99-vs-skyexchange247" },
+            { "@type": "ListItem", position: 3, name: "Cricbet99 vs SkyExchange 247", item: "https://cricbet99.co.in/cricbet99-vs-skyexchange247" },
           ],
         }),
       },
@@ -38,7 +47,7 @@ export const Route = createFileRoute("/cricbet99-vs-skyexchange247")({
             { "@type": "Question", name: "Is Cricbet99 better than SkyExchange 247 for cricket betting?",
               acceptedAnswer: { "@type": "Answer", text: "For most Indian bettors, yes — Cricbet99 matches SkyExchange 247 on exchange depth for back/lay, fancy and session markets, but wins on onboarding speed, UPI payout time and human 24/7 WhatsApp support." } },
             { "@type": "Question", name: "Which pays out faster, Cricbet99 or SkyExchange 247?",
-              acceptedAnswer: { "@type": "Answer", text: "Cricbet99 clears UPI withdrawals in minutes, 24/7. SkyExchange 247 typically settles UPI within 30–90 minutes depending on your bank and time of day." } },
+              acceptedAnswer: { "@type": "Answer", text: "Cricbet99's payout desk usually clears UPI requests within a few minutes, any time of day. SkyExchange 247 generally needs 30–90 minutes depending on your bank." } },
             { "@type": "Question", name: "How do I get a Cricbet99 ID?",
               acceptedAnswer: { "@type": "Answer", text: "Send a message to Cricbet99 on WhatsApp — the team verifies your details and activates your ID in about 60 seconds. No forms, no email loops." } },
             { "@type": "Question", name: "Is SkyExchange 247 safe to use in India?",
@@ -51,8 +60,8 @@ export const Route = createFileRoute("/cricbet99-vs-skyexchange247")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "Comparison: SkyExchange 247 — Honest 2026 Comparison",
-          description: "Which cricket exchange pays faster, prices sharper and supports better? Full 2026 comparison of Comparison: SkyExchange 247 for Indian bettors.",
+          headline: "Cricbet99 vs SkyExchange 247 — Honest 2026 Comparison",
+          description: "Which cricket exchange pays faster, prices sharper and supports better? Full 2026 comparison of Cricbet99 vs SkyExchange 247 for Indian bettors.",
           author: { "@type": "Organization", name: "Cricbet99" },
           publisher: { "@type": "Organization", name: "Cricbet99" },
           datePublished: "2026-01-15",
@@ -60,7 +69,8 @@ export const Route = createFileRoute("/cricbet99-vs-skyexchange247")({
         }),
       },
     ],
-  }),
+  };
+  },
   component: Compare,
 });
 
@@ -107,7 +117,7 @@ const otherCons = [
 
 const faqs = [
   { q: "Is Cricbet99 better than SkyExchange 247 for IPL?", a: "For most Indian bettors, yes. Cricbet99 matches SkyExchange 247's exchange depth on IPL and adds sharper session and fancy books, faster UPI payouts, and 24/7 human support on WhatsApp." },
-  { q: "Which pays out faster, Cricbet99 or SkyExchange 247?", a: "Cricbet99 clears UPI withdrawals in minutes around the clock. SkyExchange 247 typically settles UPI in 30–90 minutes depending on your bank." },
+  { q: "Which pays out faster, Cricbet99 or SkyExchange 247?", a: "Cricbet99's payout desk usually clears requests within a few minutes, any time of day. SkyExchange 247 generally settles in 30–90 minutes depending on your bank." },
   { q: "How do I open a Cricbet99 exchange ID?", a: "Message the Cricbet99 WhatsApp — the team activates your exchange ID in about 60 seconds with a one-line KYC. No forms, no waiting queues." },
   { q: "Is SkyExchange 247 safe to use in India?", a: "SkyExchange 247 is a functional, well-known exchange. It's safe for casual play, but Cricbet99 remains the smoother default for cricket-first Indian bettors in 2026." },
   { q: "Can I use both Cricbet99 and SkyExchange 247?", a: "Yes, many exchange bettors line-shop across IDs. For daily grinding though, one primary ID with faster payouts and better support (Cricbet99) usually wins on ROI." },
@@ -119,8 +129,8 @@ function Compare() {
       <PageHero
         wide
         eyebrow="Comparison"
-        title={<>Comparison: SkyExchange 247 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>compared honestly.</span></>}
-        subtitle="A no-fluff 2026 breakdown of Comparison: SkyExchange 247 on exchange depth, UPI payout speed, casino floor, bonuses and support — so you pick the right cricket exchange ID for your play."
+        title={<>Cricbet99 vs SkyExchange 247 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>compared honestly.</span></>}
+        subtitle="A no-fluff 2026 breakdown of Cricbet99 vs SkyExchange 247 on exchange depth, UPI payout speed, casino floor, bonuses and support — so you pick the right cricket exchange ID for your play."
       />
 
       {/* TL;DR verdict */}
@@ -131,7 +141,7 @@ function Compare() {
             <span className="flex items-center gap-1 text-primary"><Star className="h-3.5 w-3.5" /> 4.9 / 5 rated by Indian bettors</span>
           </div>
           <h2 className="mt-3 text-2xl font-black text-foreground sm:text-3xl">
-            Cricbet99 wins on payouts, onboarding &amp; support — SkyExchange 247 stays a strong exchange runner-up.
+            Cricbet99 edges ahead on payout speed &amp; human support — SkyExchange 247 remains a capable exchange alternative.
           </h2>
           <p className="mt-3 text-foreground/75">
             If you want an exchange ID with minute-level UPI payouts, one-line WhatsApp KYC and a real human on support 24/7, Cricbet99 is the safer 2026 default. SkyExchange 247 still holds up if you prefer a familiar desktop-first exchange UI.
@@ -198,12 +208,12 @@ function Compare() {
       {/* Long-form content */}
       <section className="mx-auto max-w-5xl space-y-8 px-6 py-8">
         <Article
-          h="Cricket exchange depth: Comparison: SkyExchange 247"
+          h="Cricket exchange depth: Cricbet99 vs SkyExchange 247"
           body="Both IDs run a proper back/lay exchange with fancy markets on IPL, T20 leagues and international cricket. Cricbet99 adds sharper session lines and deeper lambi rates on smaller series where SkyExchange 247's book thins out. On marquee IPL games, prices are close — but on side markets, Cricbet99 typically holds tighter spreads."
         />
         <Article
           h="UPI deposits, withdrawals &amp; payout speed"
-          body="Deposits are instant on both. The gap is withdrawals. Cricbet99 clears UPI cashouts in minutes, 24/7, with no daily window restrictions. SkyExchange 247 typically pays within 30–90 minutes depending on the bank and time of day. If instant payouts matter on live IPL swings, Cricbet99 is the practical winner."
+          body="Both exchanges credit UPI deposits instantly. The split comes at withdrawal: Cricbet99's payout desk usually clears cashouts within a few minutes, any time of day, with no fixed settlement windows. SkyExchange 247 generally needs 30 to 90 minutes depending on your bank. On a live IPL session where you want to redeploy winnings into the next market, that faster turnaround is what tips the scale."
         />
         <Article
           h="Onboarding, KYC &amp; account safety"
@@ -225,13 +235,13 @@ function Compare() {
 
       {/* FAQ */}
       <section className="mx-auto max-w-5xl px-6 py-10">
-        <h2 className="text-xl font-black text-foreground sm:text-2xl">Comparison: SkyExchange 247 — FAQ</h2>
+        <h2 className="text-xl font-black text-foreground sm:text-2xl">Cricbet99 vs SkyExchange 247 — FAQ</h2>
         <div className="mt-5 space-y-3">
           {faqs.map((f) => (
             <details key={f.q} className="group rounded-xl border border-primary/20 bg-background/60 p-4 open:border-primary/40">
               <summary className="cursor-pointer list-none text-sm font-bold text-foreground marker:hidden">
                 <span className="flex items-center justify-between gap-3">
-                  {f.q}
+                  <h3 className="m-0 inline text-inherit font-inherit">{f.q}</h3>
                   <span className="text-primary transition-transform group-open:rotate-45">+</span>
                 </span>
               </summary>
@@ -259,6 +269,26 @@ function Compare() {
               {l.label}
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 pb-8">
+        <h2 className="text-xl font-black text-foreground sm:text-2xl">Related reading</h2>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          <Link
+            to="/case-studies/live-betting-3x-returns"
+            className="block rounded-xl border border-primary/20 bg-background/60 p-4 transition-colors hover:border-primary/50 hover:bg-primary/5"
+          >
+            <div className="text-sm font-bold text-primary">Case Study: Live Betting 3x Returns</div>
+            <div className="mt-1 text-xs text-foreground/65">How a Cricbet99 trader turned in-play speed into real profit.</div>
+          </Link>
+          <Link
+            to="/case-studies/toss-market-10-minute-profit"
+            className="block rounded-xl border border-primary/20 bg-background/60 p-4 transition-colors hover:border-primary/50 hover:bg-primary/5"
+          >
+            <div className="text-sm font-bold text-primary">Case Study: Toss Market Profit in 10 Minutes</div>
+            <div className="mt-1 text-xs text-foreground/65">A fast-turnaround trade showing why payout speed matters.</div>
+          </Link>
         </div>
       </section>
 

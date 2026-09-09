@@ -2,18 +2,27 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { CheckCircle2, XCircle, Trophy, Zap, ShieldCheck, Wallet, MessageCircle, Star } from "lucide-react";
+import { getRequestOrigin } from "@/lib/origin.functions";
+import shareImage from "@/assets/casino/roulette.jpg";
 
 export const Route = createFileRoute("/cricbet99-vs-gold365")({
-  head: () => ({
+  loader: async () => ({
+    origin: await getRequestOrigin(),
+  }),
+  head: ({ loaderData }) => {
+    const origin = loaderData?.origin ?? "";
+    const cardImage = `${origin}${shareImage}`;
+    return {
     meta: [
-      { title: "Comparison: Gold365 (2026): Odds, Payouts & Verdict" },
-      { name: "description", content: "Compare Comparison: Gold365 on IPL odds, withdrawal speed, bonuses and 24/7 support. Find the best betting ID in India for 2026 with instant UPI payouts." },
-      { name: "keywords", content: "cricbet99 vs gold365, gold365 login, cricbet99 id, online betting id india 2026, ipl betting, gold365 vs cricbet99, upi withdrawal betting id" },
-      { property: "og:title", content: "Comparison: Gold365 (2026) — Side-by-Side Comparison" },
-      { property: "og:description", content: "Which ID offers faster payouts and sharper odds? Full 2026 comparison of Comparison: Gold365 for serious Indian bettors." },
+      { title: "Cricbet99 vs Gold365 (2026): Odds, Payouts & Verdict" },
+      { name: "description", content: "Compare Cricbet99 vs Gold365 on IPL odds, withdrawal speed, bonuses and 24/7 support. Find the best betting ID in India for 2026 with instant UPI payouts." },
+      { property: "og:title", content: "Cricbet99 vs Gold365 (2026) — Side-by-Side Comparison" },
+      { property: "og:description", content: "Which ID offers faster payouts and sharper odds? Full 2026 comparison of Cricbet99 vs Gold365 for serious Indian bettors." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://cricbet99.co.in/cricbet99-vs-gold365" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: cardImage },
+      { name: "twitter:image", content: cardImage },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/cricbet99-vs-gold365" }],
     scripts: [
@@ -25,7 +34,7 @@ export const Route = createFileRoute("/cricbet99-vs-gold365")({
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "https://cricbet99.co.in/" },
             { "@type": "ListItem", position: 2, name: "Compare", item: "https://cricbet99.co.in/all-links" },
-            { "@type": "ListItem", position: 3, name: "Comparison: Gold365", item: "https://cricbet99.co.in/cricbet99-vs-gold365" },
+            { "@type": "ListItem", position: 3, name: "Cricbet99 vs Gold365", item: "https://cricbet99.co.in/cricbet99-vs-gold365" },
           ],
         }),
       },
@@ -49,7 +58,7 @@ export const Route = createFileRoute("/cricbet99-vs-gold365")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "Comparison: Gold365 — Full 2026 Comparison Guide",
+          headline: "Cricbet99 vs Gold365 — Full 2026 Comparison Guide",
           description: "Which betting ID offers faster payouts and sharper odds? Detailed side-by-side comparison of Cricbet99 and Gold365 for Indian players.",
           author: { "@type": "Organization", name: "Cricbet99" },
           publisher: { "@type": "Organization", name: "Cricbet99" },
@@ -58,7 +67,8 @@ export const Route = createFileRoute("/cricbet99-vs-gold365")({
         }),
       },
     ],
-  }),
+  };
+  },
   component: Compare,
 });
 
@@ -114,8 +124,8 @@ function Compare() {
       <PageHero
         wide
         eyebrow="Comparison Guide"
-        title={<>Comparison: Gold365 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>The Definitive 2026 Verdict</span></>}
-        subtitle="Compare Comparison: Gold365 on the metrics that matter most: payout speed, IPL odds, and support. See why serious Indian bettors prefer Cricbet99 for the 2026 season."
+        title={<>Cricbet99 vs Gold365 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>The Definitive 2026 Verdict</span></>}
+        subtitle="Compare Cricbet99 vs Gold365 on the metrics that matter most: payout speed, IPL odds, and support. See why serious Indian bettors prefer Cricbet99 for the 2026 season."
       />
 
       {/* Verdict Section */}
@@ -218,7 +228,7 @@ function Compare() {
             <details key={f.q} className="group rounded-xl border border-primary/20 bg-background/60 p-4 open:border-primary/40">
               <summary className="cursor-pointer list-none text-sm font-bold text-foreground marker:hidden">
                 <span className="flex items-center justify-between gap-3">
-                  {f.q}
+                  <h3 className="m-0 inline text-inherit font-inherit">{f.q}</h3>
                   <span className="text-primary transition-transform group-open:rotate-45">+</span>
                 </span>
               </summary>
@@ -246,6 +256,26 @@ function Compare() {
               {l.label}
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 pb-8">
+        <h2 className="text-xl font-black text-foreground sm:text-2xl">Related reading</h2>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          <Link
+            to="/case-studies/live-betting-3x-returns"
+            className="block rounded-xl border border-primary/20 bg-background/60 p-4 transition-colors hover:border-primary/50 hover:bg-primary/5"
+          >
+            <div className="text-sm font-bold text-primary">Case Study: Live Betting 3x Returns</div>
+            <div className="mt-1 text-xs text-foreground/65">How a Cricbet99 trader turned in-play speed into real profit.</div>
+          </Link>
+          <Link
+            to="/case-studies/toss-market-10-minute-profit"
+            className="block rounded-xl border border-primary/20 bg-background/60 p-4 transition-colors hover:border-primary/50 hover:bg-primary/5"
+          >
+            <div className="text-sm font-bold text-primary">Case Study: Toss Market Profit in 10 Minutes</div>
+            <div className="mt-1 text-xs text-foreground/65">A fast-turnaround trade showing why payout speed matters.</div>
+          </Link>
         </div>
       </section>
 

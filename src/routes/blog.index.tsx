@@ -1,26 +1,47 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { blogPosts } from "@/data/blog-posts";
 import { AiOverview } from "@/components/ai-overview";
 import defaultHero from "@/assets/stadium.webp";
 
-const INITIAL_COUNT = 30;
-const LOAD_STEP = 15;
+const PAGE_SIZE = 30;
 
+const sortedPosts = [...blogPosts].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
+const TOTAL_PAGES = Math.max(1, Math.ceil(sortedPosts.length / PAGE_SIZE));
 
 export const Route = createFileRoute("/blog/")({
-  head: () => ({
+  validateSearch: (search: Record<string, unknown>) => ({
+    page: Math.min(TOTAL_PAGES, Math.max(1, Number(search.page) || 1)),
+  }),
+  loaderDeps: ({ search }) => ({ page: search.page }),
+  loader: async ({ deps }) => ({ page: deps.page }),
+  head: ({ loaderData }) => {
+    const page = loaderData?.page ?? 1;
+    const isFirstPage = page <= 1;
+    const canonical = isFirstPage
+      ? "https://cricbet99.co.in/blog"
+      : `https://cricbet99.co.in/blog?page=${page}`;
+    const title = isFirstPage
+      ? "Cricbet99 Blog | IPL Betting Tips, Cricket News & Guides"
+      : `Cricbet99 Blog — Page ${page} | IPL Betting Tips & Cricket News`;
+    return {
     meta: [
-      { title: "Cricbet99 Blog | IPL Betting Tips, Cricket News & Guides" },
+      { title },
       { name: "description", content: "Read the latest IPL 2026 betting tips, match previews, and expert cricket analysis on the official Cricbet99 blog. Your guide to winning sports trading." },
-      { property: "og:title", content: "Cricbet99 Blog" },
+      { property: "og:title", content: title },
       { property: "og:description", content: "Cricket previews, betting guides and responsible gaming content." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://cricbet99.co.in/blog" },
+      { property: "og:url", content: canonical },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://cricbet99.co.in/blog" }],
+    links: [
+      { rel: "canonical", href: canonical },
+      ...(page > 1 ? [{ rel: "prev", href: page === 2 ? "https://cricbet99.co.in/blog" : `https://cricbet99.co.in/blog?page=${page - 1}` }] : []),
+      ...(page < TOTAL_PAGES ? [{ rel: "next", href: `https://cricbet99.co.in/blog?page=${page + 1}` }] : []),
+    ],
     scripts: [
       {
         type: "application/ld+json",
@@ -48,18 +69,17 @@ export const Route = createFileRoute("/blog/")({
         })
       }
     ],
-  }),
+    };
+  },
   component: Blog,
 });
 
 function Blog() {
-  const sortedPosts = useMemo(
-    () => [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()),
-    []
+  const { page } = Route.useSearch();
+  const visiblePosts = useMemo(
+    () => sortedPosts.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE),
+    [page]
   );
-  const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
-  const visiblePosts = sortedPosts.slice(0, visibleCount);
-  const hasMore = visibleCount < sortedPosts.length;
 
   return (
     <SiteLayout>
@@ -93,19 +113,34 @@ function Blog() {
             </Link>
           ))}
         </div>
-        {hasMore && (
-          <div className="mt-12 flex flex-col items-center gap-3">
-            <button
-              type="button"
-              onClick={() => setVisibleCount((c) => Math.min(c + LOAD_STEP, sortedPosts.length))}
-              className="rounded-full border border-primary/40 bg-primary/10 px-8 py-3 text-sm font-bold uppercase tracking-widest text-primary transition hover:border-primary hover:bg-primary hover:text-primary-foreground hover:shadow-[var(--shadow-gold)]"
-            >
-              Load more posts
-            </button>
+        {TOTAL_PAGES > 1 && (
+          <nav aria-label="Blog pagination" className="mt-12 flex flex-col items-center gap-4">
+            <div className="flex items-center gap-3">
+              {page > 1 && (
+                <Link
+                  to="/blog"
+                  search={{ page: page - 1 }}
+                  rel="prev"
+                  className="rounded-full border border-primary/40 bg-primary/10 px-6 py-2.5 text-sm font-bold uppercase tracking-widest text-primary transition hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                >
+                  ← Previous
+                </Link>
+              )}
+              {page < TOTAL_PAGES && (
+                <Link
+                  to="/blog"
+                  search={{ page: page + 1 }}
+                  rel="next"
+                  className="rounded-full border border-primary/40 bg-primary/10 px-6 py-2.5 text-sm font-bold uppercase tracking-widest text-primary transition hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                >
+                  Next →
+                </Link>
+              )}
+            </div>
             <p className="text-xs text-foreground/50">
-              Showing {visiblePosts.length} of {sortedPosts.length}
+              Page {page} of {TOTAL_PAGES} — showing {visiblePosts.length} of {sortedPosts.length} posts
             </p>
-          </div>
+          </nav>
         )}
       </section>
       <AiOverview 

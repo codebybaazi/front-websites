@@ -8,7 +8,6 @@ export const Route = createFileRoute("/register")({
     meta: [
       { title: "Cricbet99 Signup — India's Trusted Betting ID Registration" },
       { name: "description", content: "Create your verified Cricbet99 ID in under 2 minutes. Get official signup access via WhatsApp for instant UPI deposits and withdrawals. Join 1 Lakh+ trusted players." },
-      { name: "keywords", content: "cricbet99 signup, cricbet99 register, create cricbet99 id, cricbet99 new account, cricbet99 official signup, online betting id registration, get cricbet99 whatsapp id" },
       { property: "og:title", content: "Cricbet99 Signup — Official Registration & ID Creation" },
       { property: "og:description", content: "Join Cricbet99 today. Get your verified betting ID via WhatsApp in 2 minutes. Trusted human support and instant payouts." },
       { property: "og:type", content: "website" },

@@ -2,18 +2,27 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { CheckCircle2, XCircle, Trophy, Zap, ShieldCheck, Wallet, MessageCircle, Star } from "lucide-react";
+import { getRequestOrigin } from "@/lib/origin.functions";
+import shareImage from "@/assets/casino/teen-patti.jpg";
 
 export const Route = createFileRoute("/cricbet99-vs-diamond-exchange")({
-  head: () => ({
+  loader: async () => ({
+    origin: await getRequestOrigin(),
+  }),
+  head: ({ loaderData }) => {
+    const origin = loaderData?.origin ?? "";
+    const cardImage = `${origin}${shareImage}`;
+    return {
     meta: [
-      { title: "Comparison: Diamond Exchange (2026): Best Betting ID Review" },
-      { name: "description", content: "Side-by-side comparison: Comparison: Diamond Exchange. We test exchange liquidity, back/lay odds, UPI withdrawal times and live casino depth for 2026." },
-      { name: "keywords", content: "cricbet99 vs diamond exchange, diamond exchange id, best betting exchange india, diamond exchange review, cricbet99 exchange id, live cricket betting id" },
-      { property: "og:title", content: "Comparison: Diamond Exchange (2026) — Honest Exchange Comparison" },
-      { property: "og:description", content: "Which exchange ID offers better liquidity and faster payouts? Full 2026 review of Comparison: Diamond Exchange for Indian players." },
+      { title: "Cricbet99 vs Diamond Exchange (2026): Best Betting ID Review" },
+      { name: "description", content: "Side-by-side comparison: Cricbet99 vs Diamond Exchange. We test exchange liquidity, back/lay odds, UPI withdrawal times and live casino depth for 2026." },
+      { property: "og:title", content: "Cricbet99 vs Diamond Exchange (2026) — Honest Exchange Comparison" },
+      { property: "og:description", content: "Which exchange ID offers better liquidity and faster payouts? Full 2026 review of Cricbet99 vs Diamond Exchange for Indian players." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://cricbet99.co.in/cricbet99-vs-diamond-exchange" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: cardImage },
+      { name: "twitter:image", content: cardImage },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/cricbet99-vs-diamond-exchange" }],
     scripts: [
@@ -25,7 +34,7 @@ export const Route = createFileRoute("/cricbet99-vs-diamond-exchange")({
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "https://cricbet99.co.in/" },
             { "@type": "ListItem", position: 2, name: "Compare", item: "https://cricbet99.co.in/all-links" },
-            { "@type": "ListItem", position: 3, name: "Comparison: Diamond Exchange", item: "https://cricbet99.co.in/cricbet99-vs-diamond-exchange" },
+            { "@type": "ListItem", position: 3, name: "Cricbet99 vs Diamond Exchange", item: "https://cricbet99.co.in/cricbet99-vs-diamond-exchange" },
           ],
         }),
       },
@@ -47,8 +56,8 @@ export const Route = createFileRoute("/cricbet99-vs-diamond-exchange")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "Comparison: Diamond Exchange (2026): Best Betting ID Review",
-          description: "Side-by-side comparison: Comparison: Diamond Exchange. We test exchange liquidity, back/lay odds, UPI withdrawal times and live casino depth for 2026.",
+          headline: "Cricbet99 vs Diamond Exchange (2026): Best Betting ID Review",
+          description: "Side-by-side comparison: Cricbet99 vs Diamond Exchange. We test exchange liquidity, back/lay odds, UPI withdrawal times and live casino depth for 2026.",
           author: { "@type": "Organization", name: "Cricbet99" },
           publisher: { "@type": "Organization", name: "Cricbet99" },
           datePublished: "2026-07-31",
@@ -56,7 +65,8 @@ export const Route = createFileRoute("/cricbet99-vs-diamond-exchange")({
         }),
       },
     ],
-  }),
+  };
+  },
   component: Compare,
 });
 
@@ -105,7 +115,7 @@ function Compare() {
       <PageHero
         wide
         eyebrow="Market Comparison"
-        title={<>Comparison: Diamond Exchange — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>The Liquidity Test.</span></>}
+        title={<>Cricbet99 vs Diamond Exchange — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>The Liquidity Test.</span></>}
         subtitle="Comparing the two most popular exchange IDs in India. We break down the liquidity, commission rates, and payout efficiency for 2026."
       />
 
@@ -176,13 +186,33 @@ function Compare() {
             <details key={f.q} className="group rounded-xl border border-primary/20 bg-background/60 p-4 open:border-primary/40">
               <summary className="cursor-pointer list-none text-sm font-bold text-foreground">
                 <span className="flex items-center justify-between gap-3">
-                  {f.q}
+                  <h3 className="m-0 inline text-inherit font-inherit">{f.q}</h3>
                   <span className="text-primary transition-transform group-open:rotate-45">+</span>
                 </span>
               </summary>
               <p className="mt-3 text-sm leading-relaxed text-foreground/75">{f.a}</p>
             </details>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 pb-8">
+        <h2 className="text-xl font-black text-foreground sm:text-2xl">Related reading</h2>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          <Link
+            to="/case-studies/live-betting-3x-returns"
+            className="block rounded-xl border border-primary/20 bg-background/60 p-4 transition-colors hover:border-primary/50 hover:bg-primary/5"
+          >
+            <div className="text-sm font-bold text-primary">Case Study: Live Betting 3x Returns</div>
+            <div className="mt-1 text-xs text-foreground/65">How a Cricbet99 trader turned in-play speed into real profit.</div>
+          </Link>
+          <Link
+            to="/case-studies/toss-market-10-minute-profit"
+            className="block rounded-xl border border-primary/20 bg-background/60 p-4 transition-colors hover:border-primary/50 hover:bg-primary/5"
+          >
+            <div className="text-sm font-bold text-primary">Case Study: Toss Market Profit in 10 Minutes</div>
+            <div className="mt-1 text-xs text-foreground/65">A fast-turnaround trade showing why payout speed matters.</div>
+          </Link>
         </div>
       </section>
 

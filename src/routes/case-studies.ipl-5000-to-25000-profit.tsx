@@ -19,10 +19,6 @@ export const Route = createFileRoute("/case-studies/ipl-5000-to-25000-profit")({
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/case-studies/ipl-5000-to-25000-profit", "IPL Trading Case Study: ₹5K to ₹25K Bankroll Growth")),
       },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/case-studies/ipl-5000-to-25000-profit", "IPL Trading Case Study: ₹5K to ₹25K Bankroll Growth")),
-      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),

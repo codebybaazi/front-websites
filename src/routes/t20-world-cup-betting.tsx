@@ -19,10 +19,6 @@ export const Route = createFileRoute("/t20-world-cup-betting")({
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/t20-world-cup-betting", "ICC T20 World Cup Betting")),
       },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/t20-world-cup-betting", "ICC T20 World Cup Betting")),
-      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),

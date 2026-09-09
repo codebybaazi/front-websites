@@ -2,18 +2,27 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { CheckCircle2, XCircle, Trophy, Zap, ShieldCheck, Wallet, MessageCircle, Star } from "lucide-react";
+import { getRequestOrigin } from "@/lib/origin.functions";
+import shareImage from "@/assets/casino/blackjack.jpg";
 
 export const Route = createFileRoute("/cricbet99-vs-lotus365")({
-  head: () => ({
+  loader: async () => ({
+    origin: await getRequestOrigin(),
+  }),
+  head: ({ loaderData }) => {
+    const origin = loaderData?.origin ?? "";
+    const cardImage = `${origin}${shareImage}`;
+    return {
     meta: [
-      { title: "Comparison: Lotus 365 (2026): Odds, Payouts & Verdict" },
-      { name: "description", content: "Comparison: Lotus 365 compared on IPL odds, UPI payout speed, casino depth, bonuses and 24/7 support — pick the right cricket ID for India in 2026." },
-      { name: "keywords", content: "cricbet99 vs lotus365, lotus365 vs cricbet99, best cricket betting id india, cricbet99 review, lotus365 review, ipl betting id, upi withdrawal betting site, online cricket id 2026" },
-      { property: "og:title", content: "Comparison: Lotus 365 (2026) — Honest Side-by-Side" },
-      { property: "og:description", content: "Which ID pays faster, offers sharper IPL odds and better support? Full 2026 comparison of Comparison: Lotus 365 for Indian bettors." },
+      { title: "Cricbet99 vs Lotus365 (2026): Odds, Payouts & Verdict" },
+      { name: "description", content: "Cricbet99 vs Lotus365 compared on IPL odds, UPI payout speed, casino depth, bonuses and 24/7 support — pick the right cricket ID for India in 2026." },
+      { property: "og:title", content: "Cricbet99 vs Lotus365 (2026) — Honest Side-by-Side" },
+      { property: "og:description", content: "Which ID pays faster, offers sharper IPL odds and better support? Full 2026 comparison of Cricbet99 vs Lotus365 for Indian bettors." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://cricbet99.co.in/cricbet99-vs-lotus365" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: cardImage },
+      { name: "twitter:image", content: cardImage },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/cricbet99-vs-lotus365" }],
     scripts: [
@@ -25,7 +34,7 @@ export const Route = createFileRoute("/cricbet99-vs-lotus365")({
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "https://cricbet99.co.in/" },
             { "@type": "ListItem", position: 2, name: "Compare", item: "https://cricbet99.co.in/all-links" },
-            { "@type": "ListItem", position: 3, name: "Comparison: Lotus 365", item: "https://cricbet99.co.in/cricbet99-vs-lotus365" },
+            { "@type": "ListItem", position: 3, name: "Cricbet99 vs Lotus 365", item: "https://cricbet99.co.in/cricbet99-vs-lotus365" },
           ],
         }),
       },
@@ -51,8 +60,8 @@ export const Route = createFileRoute("/cricbet99-vs-lotus365")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "Comparison: Lotus 365 — Honest 2026 Comparison",
-          description: "Which ID pays faster, offers sharper IPL odds and better support? Full 2026 comparison of Comparison: Lotus 365 for Indian bettors.",
+          headline: "Cricbet99 vs Lotus 365 — Honest 2026 Comparison",
+          description: "Which ID pays faster, offers sharper IPL odds and better support? Full 2026 comparison of Cricbet99 vs Lotus 365 for Indian bettors.",
           author: { "@type": "Organization", name: "Cricbet99" },
           publisher: { "@type": "Organization", name: "Cricbet99" },
           datePublished: "2026-01-15",
@@ -60,7 +69,8 @@ export const Route = createFileRoute("/cricbet99-vs-lotus365")({
         }),
       },
     ],
-  }),
+  };
+  },
   component: Compare,
 });
 
@@ -107,7 +117,7 @@ const lotusCons = [
 
 const faqs = [
   { q: "Is Cricbet99 better than Lotus 365 for IPL betting?", a: "For cricket-first Indian bettors, yes. Cricbet99 offers exchange-style IPL odds with deep session, fancy and lambi markets, plus payouts in minutes. Lotus 365 works but leans casino-first with bookmaker-grade cricket lines." },
-  { q: "Which pays out faster, Cricbet99 or Lotus 365?", a: "Cricbet99 clears UPI withdrawals in a few minutes around the clock. Lotus 365 typically settles in a few hours to same-day depending on your bank." },
+  { q: "Which pays out faster, Cricbet99 or Lotus 365?", a: "Cricbet99 pays out within a few minutes, any time of day. Lotus 365 members generally wait a few hours to same-day, and that stretches further over festive weekends." },
   { q: "How do I get a Cricbet99 ID in 2026?", a: "Message the Cricbet99 WhatsApp — the team verifies your basic details and activates your ID in about 60 seconds. No email loops, no waiting queues." },
   { q: "Is Lotus 365 safe to use in India?", a: "It's a functional platform, but withdrawal delays and heavier KYC are the usual complaints. For a cricket-first Indian bettor, Cricbet99 remains the safer default this year." },
   { q: "Can I use both Cricbet99 and Lotus 365?", a: "Yes — many bettors line-shop across IDs. But for daily play, one primary ID with faster payouts and sharper odds (Cricbet99) usually wins on ROI." },
@@ -119,8 +129,8 @@ function Compare() {
       <PageHero
         wide
         eyebrow="Comparison"
-        title={<>Comparison: Lotus 365 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>which betting ID actually wins?</span></>}
-        subtitle="A no-fluff 2026 breakdown of Comparison: Lotus 365 on IPL odds, UPI payout speed, casino depth, bonuses and support — so you know exactly which cricket ID fits your play."
+        title={<>Cricbet99 vs Lotus 365 — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>which betting ID actually wins?</span></>}
+        subtitle="A no-fluff 2026 breakdown of Cricbet99 vs Lotus 365 on IPL odds, UPI payout speed, casino depth, bonuses and support — so you know exactly which cricket ID fits your play."
       />
 
       {/* TL;DR verdict card */}
@@ -200,12 +210,12 @@ function Compare() {
       {/* Long-form sections for keyword coverage */}
       <section className="mx-auto max-w-5xl space-y-8 px-6 py-8">
         <Article
-          h="IPL &amp; cricket odds: Comparison: Lotus 365"
+          h="IPL &amp; cricket odds: Cricbet99 vs Lotus 365"
           body="Cricbet99 runs exchange-grade IPL odds — you get sharper session lines, fancy markets, and lambi rates that update in real time. Lotus 365 uses a more traditional bookmaker feed, which means slightly wider margins and thinner in-play depth during peak IPL windows. For serious cricket bettors line-shopping through the 2026 IPL season, Cricbet99's markets tend to price out better on volume."
         />
         <Article
           h="UPI deposits, withdrawals &amp; payout speed"
-          body="Both IDs accept UPI, IMPS and net banking. The gap shows up on withdrawals. Cricbet99 clears UPI cashouts in minutes, 24/7, without daily-window restrictions. Lotus 365 users commonly report a few hours to same-day settlements, and occasional delays during festive weekends. If instant payouts matter — especially on live IPL swings — Cricbet99 is the practical winner."
+          body="Both platforms accept UPI, IMPS and net banking for deposits, and both credit instantly. Withdrawals are where they part ways: Cricbet99 pays out in a few minutes around the clock, with no cutoff windows. Lotus 365 members typically wait a few hours to same-day, and that stretches further during festive weekends when their queue backs up. For anyone cashing out mid-IPL to redeploy on the next market, Cricbet99's speed is the deciding factor."
         />
         <Article
           h="Onboarding, KYC &amp; account safety"
@@ -227,13 +237,13 @@ function Compare() {
 
       {/* FAQ */}
       <section className="mx-auto max-w-5xl px-6 py-10">
-        <h2 className="text-xl font-black text-foreground sm:text-2xl">Comparison: Lotus 365 — FAQ</h2>
+        <h2 className="text-xl font-black text-foreground sm:text-2xl">Cricbet99 vs Lotus 365 — FAQ</h2>
         <div className="mt-5 space-y-3">
           {faqs.map((f) => (
             <details key={f.q} className="group rounded-xl border border-primary/20 bg-background/60 p-4 open:border-primary/40">
               <summary className="cursor-pointer list-none text-sm font-bold text-foreground marker:hidden">
                 <span className="flex items-center justify-between gap-3">
-                  {f.q}
+                  <h3 className="m-0 inline text-inherit font-inherit">{f.q}</h3>
                   <span className="text-primary transition-transform group-open:rotate-45">+</span>
                 </span>
               </summary>
@@ -261,6 +271,26 @@ function Compare() {
               {l.label}
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 pb-8">
+        <h2 className="text-xl font-black text-foreground sm:text-2xl">Related reading</h2>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          <Link
+            to="/case-studies/live-betting-3x-returns"
+            className="block rounded-xl border border-primary/20 bg-background/60 p-4 transition-colors hover:border-primary/50 hover:bg-primary/5"
+          >
+            <div className="text-sm font-bold text-primary">Case Study: Live Betting 3x Returns</div>
+            <div className="mt-1 text-xs text-foreground/65">How a Cricbet99 trader turned in-play speed into real profit.</div>
+          </Link>
+          <Link
+            to="/case-studies/toss-market-10-minute-profit"
+            className="block rounded-xl border border-primary/20 bg-background/60 p-4 transition-colors hover:border-primary/50 hover:bg-primary/5"
+          >
+            <div className="text-sm font-bold text-primary">Case Study: Toss Market Profit in 10 Minutes</div>
+            <div className="mt-1 text-xs text-foreground/65">A fast-turnaround trade showing why payout speed matters.</div>
+          </Link>
         </div>
       </section>
 

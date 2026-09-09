@@ -17,10 +17,6 @@ export const Route = createFileRoute("/deposit-issues")({
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/deposit-issues", "Fix Cricbet99 Deposit Issues")),
-      },
-      {
-        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/deposit-issues", "Fix Cricbet99 Deposit Issues | Instant Balance Updates")),
       },
       ...(content.faqs && content.faqs.length ? [{

@@ -17,10 +17,6 @@ export const Route = createFileRoute("/cricbet99-app")({
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/cricbet99-app", "Cricbet99 App Download 2026")),
-      },
-      {
-        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/cricbet99-app", "Cricbet99 App")),
       },
     ],

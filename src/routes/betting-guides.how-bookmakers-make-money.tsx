@@ -19,10 +19,6 @@ export const Route = createFileRoute("/betting-guides/how-bookmakers-make-money"
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/betting-guides/how-bookmakers-make-money", "How Bookmakers Make Money")),
       },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/betting-guides/how-bookmakers-make-money", "How Bookmakers Make Money")),
-      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),
@@ -34,14 +30,18 @@ export const Route = createFileRoute("/betting-guides/how-bookmakers-make-money"
 
 function Page_betting_guides_how_bookmakers_make_money() {
   return (
-    <LongFormPage 
-      content={content} 
+    <LongFormPage
+      content={content}
       extra={
-        <AiOverview 
-          summary={content.subtitle} 
-          highlights={content.features.slice(0, 4).map(f => f.desc)} 
+        <AiOverview
+          summary={content.subtitle}
+          highlights={content.features.slice(0, 4).map(f => f.desc)}
         />
-      } 
+      }
+      relatedLinks={[
+        { to: "/exchange", label: "How the Cricbet99 Exchange Works", desc: "See how commission-based exchange pricing compares to a fixed-odds bookmaker." },
+        { to: "/todays-best-odds", label: "Today's Best Odds", desc: "Check live market pricing across cricket, football and tennis right now." },
+      ]}
     />
   );
 }

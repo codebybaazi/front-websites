@@ -16,17 +16,12 @@ export const Route = createFileRoute("/platforms")({
       meta: [
         { title: "Cricbet99 Platforms — Official Betting App & Web Exchange" },
         { name: "description", content: "Explore the Cricbet99 ecosystem. Our platforms include high-speed betting exchanges, mobile-first casino apps, and secure web portals for 24/7 sports action." },
-        { name: "keywords", content: "cricbet99 app, cricbet99 desktop, cricbet99 exchange, betting platforms india, cricbet99 ios app" },
         { property: "og:title", content: "Cricbet99 Ecosystem — Seamless Play on Any Device" },
         { property: "og:description", content: "One verified Cricbet99 ID, multiple ways to play. Discover our suite of premium betting and casino platforms." },
         { property: "og:url", content: canonical },
       ],
       links: [{ rel: "canonical", href: canonical }],
     scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/platforms", "Cricbet99 Platforms")),
-      },
       {
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/platforms", "Cricbet99 Platforms — Official Betting App & Web Exchange")),

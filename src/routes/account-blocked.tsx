@@ -17,10 +17,6 @@ export const Route = createFileRoute("/account-blocked")({
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/account-blocked", "Cricbet99 Account Restricted?")),
-      },
-      {
-        type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/account-blocked", "Cricbet99 Account Restricted? | Restore Access Now")),
       },
       ...(content.faqs && content.faqs.length ? [{

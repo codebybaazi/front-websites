@@ -19,10 +19,6 @@ export const Route = createFileRoute("/disclaimer")({
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/disclaimer", "Important Disclaimer Platform Information")),
       },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/disclaimer", "Important Disclaimer Platform Information")),
-      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),

@@ -6,7 +6,7 @@ import content from "@/data/pages/privacy-policy.json";
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — Official Cricbet99 Data Protection & Security | Cricbet99 Official" },
+      { title: "Cricbet99 Privacy Policy — Data Protection" },
       { name: "description", content: "Read the official Cricbet99 Privacy Policy. Learn how we protect your personal information, banking details, and WhatsApp communication with bank-grade encryption." },
       { property: "og:title", content: "Privacy Policy — Official Cricbet99 Data Protection & Security" },
       { property: "og:description", content: "Read the official Cricbet99 Privacy Policy. Learn how we protect your personal information, banking details, and WhatsApp communication with bank-grade encryption." },
@@ -18,10 +18,6 @@ export const Route = createFileRoute("/privacy-policy")({
       {
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/privacy-policy", "Privacy Policy")),
-      },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/privacy-policy", "Privacy Policy — Official Cricbet99 Data Protection & Security")),
       },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",

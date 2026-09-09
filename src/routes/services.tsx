@@ -16,17 +16,12 @@ export const Route = createFileRoute("/services")({
       meta: [
         { title: "Cricbet99 Services — Premium Betting ID & 24/7 Support" },
         { name: "description", content: "Discover the full range of Cricbet99 services: instant ID creation, secure UPI payouts, 24/7 WhatsApp assistance, and real-time betting analytics for Indian players." },
-        { name: "keywords", content: "cricbet99 services, online cricket id provider, cricbet99 support number, instant betting id india, secure betting withdrawals" },
         { property: "og:title", content: "Cricbet99 — India's Most Comprehensive Betting Service" },
         { property: "og:description", content: "From lightning-fast ID activation to dedicated account managers, see why 124,000+ players trust our service." },
         { property: "og:url", content: canonical },
       ],
       links: [{ rel: "canonical", href: canonical }],
     scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/services", "Cricbet99 Services")),
-      },
       {
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/services", "Cricbet99 Services — Premium Betting ID & 24/7 Support")),

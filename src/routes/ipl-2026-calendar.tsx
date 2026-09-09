@@ -19,10 +19,6 @@ export const Route = createFileRoute("/ipl-2026-calendar")({
         type: "application/ld+json",
         children: JSON.stringify(buildBreadcrumbJsonLd("/ipl-2026-calendar", "IPL 2026 Calendar")),
       },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(buildBreadcrumbJsonLd("/ipl-2026-calendar", "IPL 2026 Calendar")),
-      },
       ...(content.faqs && content.faqs.length ? [{
         type: "application/ld+json",
         children: JSON.stringify(buildFaqJsonLd(content.faqs)),

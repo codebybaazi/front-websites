@@ -38,6 +38,18 @@ export const Route = createFileRoute("/faq")({
             { "@type": "ListItem", "position": 2, "name": "Help Center FAQ", "item": "https://cricbet99.co.in/faq" }
           ]
         })
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "url": "https://cricbet99.co.in/faq",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["[data-speakable=\"faq\"]"]
+          }
+        })
       }
     ],
   }),
@@ -71,7 +83,7 @@ function FAQ() {
         title={<>Frequently asked <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>questions.</span></>}
         subtitle="Answers to the questions Cricbet99 players ask us every day — from registration and deposits to withdrawals, security and responsible gaming."
       />
-      <section className="mx-auto max-w-4xl px-6 py-12">
+      <section data-speakable="faq" className="mx-auto max-w-4xl px-6 py-12">
         <div className="space-y-4">
           <Accordion type="single" collapsible className="w-full space-y-4">
             {faqs.map((f, idx) => (

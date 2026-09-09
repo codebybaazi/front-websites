@@ -2,18 +2,27 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
 import { CheckCircle2, XCircle, Trophy, Zap, ShieldCheck, Wallet, MessageCircle, Star } from "lucide-react";
+import { getRequestOrigin } from "@/lib/origin.functions";
+import shareImage from "@/assets/launch/aviator.jpg";
 
 export const Route = createFileRoute("/cricbet99-vs-mahavir-book")({
-  head: () => ({
+  loader: async () => ({
+    origin: await getRequestOrigin(),
+  }),
+  head: ({ loaderData }) => {
+    const origin = loaderData?.origin ?? "";
+    const cardImage = `${origin}${shareImage}`;
+    return {
     meta: [
-      { title: "Comparison: Mahavir Book (2026): Payout Speed & Odds Review" },
-      { name: "description", content: "Compare Comparison: Mahavir Book for Indian betting. We analyze withdrawal times, cricket exchange depth, bonus offers, and 24/7 WhatsApp support quality." },
-      { name: "keywords", content: "cricbet99 vs mahavir book, mahavir book review, best cricket id india, mahavir book withdrawal time, cricbet99 payouts, online cricket exchange id" },
-      { property: "og:title", content: "Comparison: Mahavir Book (2026) — Which Betting ID is Better?" },
-      { property: "og:description", content: "Side-by-side comparison of Comparison: Mahavir Book. From UPI payout speed to live exchange markets, find the best ID for your cricket bets." },
+      { title: "Cricbet99 vs Mahavir Book (2026): Payout Speed & Odds Review" },
+      { name: "description", content: "Compare Cricbet99 vs Mahavir Book for Indian betting. We analyze withdrawal times, cricket exchange depth, bonus offers, and 24/7 WhatsApp support quality." },
+      { property: "og:title", content: "Cricbet99 vs Mahavir Book (2026) — Which Betting ID is Better?" },
+      { property: "og:description", content: "Side-by-side comparison of Cricbet99 vs Mahavir Book. From UPI payout speed to live exchange markets, find the best ID for your cricket bets." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://cricbet99.co.in/cricbet99-vs-mahavir-book" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: cardImage },
+      { name: "twitter:image", content: cardImage },
     ],
     links: [{ rel: "canonical", href: "https://cricbet99.co.in/cricbet99-vs-mahavir-book" }],
     scripts: [
@@ -25,7 +34,7 @@ export const Route = createFileRoute("/cricbet99-vs-mahavir-book")({
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "https://cricbet99.co.in/" },
             { "@type": "ListItem", position: 2, name: "Compare", item: "https://cricbet99.co.in/all-links" },
-            { "@type": "ListItem", position: 3, name: "Comparison: Mahavir Book", item: "https://cricbet99.co.in/cricbet99-vs-mahavir-book" },
+            { "@type": "ListItem", position: 3, name: "Cricbet99 vs Mahavir Book", item: "https://cricbet99.co.in/cricbet99-vs-mahavir-book" },
           ],
         }),
       },
@@ -47,8 +56,8 @@ export const Route = createFileRoute("/cricbet99-vs-mahavir-book")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "Comparison: Mahavir Book (2026): Payout Speed & Odds Review",
-          description: "Compare Comparison: Mahavir Book for Indian betting. We analyze withdrawal times, cricket exchange depth, bonus offers, and 24/7 WhatsApp support quality.",
+          headline: "Cricbet99 vs Mahavir Book (2026): Payout Speed & Odds Review",
+          description: "Compare Cricbet99 vs Mahavir Book for Indian betting. We analyze withdrawal times, cricket exchange depth, bonus offers, and 24/7 WhatsApp support quality.",
           author: { "@type": "Organization", name: "Cricbet99" },
           publisher: { "@type": "Organization", name: "Cricbet99" },
           datePublished: "2026-07-31",
@@ -56,7 +65,8 @@ export const Route = createFileRoute("/cricbet99-vs-mahavir-book")({
         }),
       },
     ],
-  }),
+  };
+  },
   component: Compare,
 });
 
@@ -105,7 +115,7 @@ function Compare() {
       <PageHero
         wide
         eyebrow="Expert Comparison"
-        title={<>Comparison: Mahavir Book — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Battle for Payouts.</span></>}
+        title={<>Cricbet99 vs Mahavir Book — <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Battle for Payouts.</span></>}
         subtitle="A detailed analysis of two Indian betting giants. We compare the lightning-fast Cricbet99 engine against the traditional Mahavir Book experience."
       />
 
@@ -176,13 +186,33 @@ function Compare() {
             <details key={f.q} className="group rounded-xl border border-primary/20 bg-background/60 p-4 open:border-primary/40">
               <summary className="cursor-pointer list-none text-sm font-bold text-foreground">
                 <span className="flex items-center justify-between gap-3">
-                  {f.q}
+                  <h3 className="m-0 inline text-inherit font-inherit">{f.q}</h3>
                   <span className="text-primary transition-transform group-open:rotate-45">+</span>
                 </span>
               </summary>
               <p className="mt-3 text-sm leading-relaxed text-foreground/75">{f.a}</p>
             </details>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 pb-8">
+        <h2 className="text-xl font-black text-foreground sm:text-2xl">Related reading</h2>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          <Link
+            to="/case-studies/live-betting-3x-returns"
+            className="block rounded-xl border border-primary/20 bg-background/60 p-4 transition-colors hover:border-primary/50 hover:bg-primary/5"
+          >
+            <div className="text-sm font-bold text-primary">Case Study: Live Betting 3x Returns</div>
+            <div className="mt-1 text-xs text-foreground/65">How a Cricbet99 trader turned in-play speed into real profit.</div>
+          </Link>
+          <Link
+            to="/case-studies/toss-market-10-minute-profit"
+            className="block rounded-xl border border-primary/20 bg-background/60 p-4 transition-colors hover:border-primary/50 hover:bg-primary/5"
+          >
+            <div className="text-sm font-bold text-primary">Case Study: Toss Market Profit in 10 Minutes</div>
+            <div className="mt-1 text-xs text-foreground/65">A fast-turnaround trade showing why payout speed matters.</div>
+          </Link>
         </div>
       </section>
 
