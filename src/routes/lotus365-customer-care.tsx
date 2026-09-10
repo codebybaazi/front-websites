@@ -1,19 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { AiOverview } from "@/components/AiOverview";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { QuickLinks } from "@/components/QuickLinks";
-import { useWhatsAppUrl } from "@/components/WhatsAppProvider";
+import { useWhatsApp } from "@/components/WhatsAppProvider";
+import { LiveWhatsAppNumber } from "@/components/LiveWhatsAppNumber";
 import { Headphones, MessageCircle, Clock, ShieldCheck } from "lucide-react";
 
 const URL = "https://lotus365id.com/lotus365-customer-care";
 
 const FAQ = [
-  { q: "What is the Lotus365 customer care number?", a: "Lotus365 does not publish a phone number — for your safety, all support runs through our verified WhatsApp concierge, staffed 24/7 in Hindi and English." },
+  { q: "What is the Lotus365 customer care number?", a: "The current WhatsApp desk number is shown on this page and on /contact-us. Use that chat. Ignore numbers from search ads or anyone who calls you first." },
   { q: "How fast is Lotus365 support?", a: "Median first-reply on WhatsApp is under 2 minutes, 24 hours a day. Withdrawals and login issues are prioritised." },
   { q: "Which issues can Lotus365 concierge help with?", a: "Lotus365 login, ID recovery, deposit / UPI issues, withdrawal status, bonus & rollover queries, KYC, responsible-play controls and account closure." },
-  { q: "Is WhatsApp the only Lotus365 support channel?", a: "WhatsApp is primary. Telegram and email are backups — never trust a call claiming to be from Lotus365; we do not cold-call players." },
+  { q: "Is WhatsApp the only Lotus365 support channel?", a: "WhatsApp is primary. Email help@lotus365id.com for KYC files. Never trust a call claiming to be from Lotus365; we do not cold-call players." },
 ];
 
 export const Route = createFileRoute("/lotus365-customer-care")({
@@ -78,7 +78,7 @@ export const Route = createFileRoute("/lotus365-customer-care")({
 });
 
 function CustomerCarePage() {
-  const whatsappUrl = useWhatsAppUrl();
+  const { url: whatsappUrl } = useWhatsApp();
   return (
     <div className="min-h-screen text-foreground">
       <SiteHeader />
@@ -90,11 +90,13 @@ function CustomerCarePage() {
           Lotus365 <span className="gold-text">Customer Care</span>
         </h1>
         <p className="text-lg text-foreground/90 max-w-2xl">
-          Real humans, 24/7, on WhatsApp — with a median first-reply under 2
-          minutes. Lotus365 does not publish a phone number: for your safety,
-          all support runs through our verified concierge.
+          Real humans, 24/7, on WhatsApp, with a median first-reply under 2
+          minutes. The number below is the live desk for this site. Email
+          help@lotus365id.com for KYC uploads. A call that rings you first is
+          not Lotus365.
         </p>
-        <div className="mt-7">
+        <div className="mt-7 flex flex-wrap items-center gap-3">
+          <LiveWhatsAppNumber text="Hi Lotus365, I need help from customer care." />
           <a
             href={whatsappUrl}
             target="_blank"

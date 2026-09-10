@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import { WhatsAppLink } from "@/components/WhatsAppProvider";
+import { LiveWhatsAppNumber } from "@/components/LiveWhatsAppNumber";
 
 export function WhatsAppFloat() {
   const [showPopup, setShowPopup] = useState(false);
@@ -58,12 +59,7 @@ export function WhatsAppFloat() {
             <p className="mt-1 text-xs text-muted-foreground">
               Trusted since 2016 — ID delivered on WhatsApp in minutes.
             </p>
-            <WhatsAppLink
-              onClick={() => setDismissed(true)}
-              className="mt-3 inline-flex w-full items-center justify-center rounded-lg bg-[#25D366] px-4 py-2 text-sm font-semibold text-white transition-transform hover:scale-[1.02]"
-            >
-              Get ID Now
-            </WhatsAppLink>
+            <LiveWhatsAppNumber className="mt-3 w-full justify-center" />
           </div>
         </div>
       )}

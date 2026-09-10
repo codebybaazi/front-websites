@@ -181,11 +181,15 @@ export const PAGES: Record<string, PageContent> = {
     slug: "contact-us",
     title: "Contact Lotus365 — 24/7 Human Support",
     description:
-      "Reach the Lotus365 support desk by live chat, WhatsApp, email, or Telegram. Real humans, real replies, 24 hours a day.",
+      "Reach Lotus365 support by WhatsApp, email at help@lotus365id.com, live chat, or Telegram. The current WhatsApp desk number is on this page.",
     eyebrow: "Support",
     hero: "Talk to a real person, any time of day.",
     intro:
-      "Every message you send lands with a trained agent — not a chatbot. Pick whichever channel is fastest for you.",
+      "Every message you send lands with a trained agent, not a chatbot. Use the live WhatsApp number on this page, or email help@lotus365id.com for KYC and account escalations.",
+    heroCta: {
+      label: "Chat on WhatsApp",
+      text: "Hi Lotus365, I need help from the contact desk.",
+    },
     sections: [
       {
         heading: "Live chat",
@@ -193,7 +197,7 @@ export const PAGES: Record<string, PageContent> = {
       },
       {
         heading: "WhatsApp",
-        body: "Message our desk on WhatsApp for the same speed with a paper trail. Ideal for quick withdrawal or ID checks.",
+        body: "The number shown on this page is the current Lotus365 WhatsApp desk, loaded for this site rather than copied from an old screenshot. Tap it to open a chat with a paper trail. Ideal for quick withdrawal or ID checks.",
       },
       {
         heading: "Telegram",
@@ -201,7 +205,7 @@ export const PAGES: Record<string, PageContent> = {
       },
       {
         heading: "Email",
-        body: "For anything sensitive — KYC uploads, account escalations, complaints — email our concierge inbox. Replies within one business hour.",
+        body: "For anything sensitive — KYC uploads, account escalations, complaints — write to help@lotus365id.com. Replies within one business hour.",
       },
     ],
   },
@@ -788,7 +792,11 @@ export const PAGES: Record<string, PageContent> = {
     eyebrow: "Support",
     hero: "Get your Lotus365 ID via WhatsApp.",
     intro:
-      "WhatsApp is the fastest path to a live Lotus365 ID — especially useful if you'd rather chat than fill in a web form.",
+      "WhatsApp is the fastest path to a live Lotus365 ID — especially useful if you'd rather chat than fill in a web form. The current desk number is on this page.",
+    heroCta: {
+      label: "Message the current WhatsApp number",
+      text: "Hi Lotus365, I want to get a Lotus365 ID.",
+    },
     sections: [
       {
         heading: "How it works",
@@ -813,7 +821,7 @@ export const PAGES: Record<string, PageContent> = {
     eyebrow: "Cashier",
     hero: "Get the real Lotus365 deposit number on WhatsApp.",
     intro:
-      "A lot of players search for one fixed Lotus365 deposit number and paste whatever comes up straight into their UPI app. That's usually how someone ends up paying an account that used to belong to Lotus365 and doesn't anymore. The number linked to deposits for a Lotus365 ID changes from time to time for exactly that reason, so the only version worth trusting is the one a live agent sends you on WhatsApp, right before you pay.",
+      "A lot of players search for one fixed Lotus365 deposit number and paste whatever comes up straight into their UPI app. That's usually how someone ends up paying an account that used to belong to Lotus365 and doesn't anymore. The WhatsApp number on this page is the live desk for this site. Ask it for the UPI or account to use on this payment; do not treat an old screenshot as the payee.",
     heroCta: {
       label: "Chat on WhatsApp for your deposit number",
       text: "Hi Lotus365, I need the current deposit number for my Lotus365 ID.",
@@ -867,7 +875,7 @@ export const PAGES: Record<string, PageContent> = {
     eyebrow: "Cashier",
     hero: "Confirm your Lotus365 withdrawal number on WhatsApp.",
     intro:
-      "Players searching for a Lotus365 withdrawal number are usually trying to do one of two things: check where their payout is coming from, or find someone to chase a delayed one. Neither is something a fixed number sitting on a random search result can help with. The desk handling withdrawals for a Lotus365 ID gets reassigned from time to time, so the safe move is to open a WhatsApp chat from this page and let a live agent confirm the details for your specific payout.",
+      "Players searching for a Lotus365 withdrawal number are usually trying to check where a payout is coming from, or chase a delayed one. The WhatsApp number on this page is the live desk for this site. Open that chat and let an agent confirm the details for your payout. Do not message a number from last month's screenshot.",
     heroCta: {
       label: "Chat on WhatsApp about your withdrawal",
       text: "Hi Lotus365, I have a question about a withdrawal on my Lotus365 ID.",
@@ -942,25 +950,25 @@ export const PAGES: Record<string, PageContent> = {
     slug: "lotus365-customer-care-number",
     title: "Lotus365 Customer Care Number — Verified on WhatsApp | Lotus365",
     description:
-      "Searching for a Lotus365 customer care number? Lotus365 doesn't run a public phone line. Reach the real, verified support desk for your Lotus365 ID on WhatsApp instead.",
+      "The current Lotus365 customer care WhatsApp number is on this page. Skip random search results and chat with the verified desk for your Lotus365 ID.",
     eyebrow: "Support",
-    hero: "There's no Lotus365 customer care number. There's WhatsApp.",
+    hero: "Lotus365 customer care on the current WhatsApp number.",
     intro:
-      "Type \"Lotus365 customer care number\" into a search bar and you'll get a page full of numbers, most of which have nothing to do with Lotus365. Some are old, some were never real, and a few belong to people who'd happily pretend to be support if you called. Lotus365 doesn't run a public phone line for exactly this reason. Every support conversation, login help, deposit or withdrawal query included, goes through the same verified WhatsApp desk you can open right from this page.",
+      "Search results for a Lotus365 customer care number are full of old, fake, or unrelated lines. The number on this page is the live WhatsApp desk for this site. Use it to open a chat yourself. A call that rings you first is not Lotus365.",
     heroCta: {
       label: "Chat with Lotus365 customer care on WhatsApp",
       text: "Hi Lotus365, I need help from customer care for my Lotus365 ID.",
     },
     sections: [
       {
-        heading: "Why Lotus365 doesn't list a customer care number",
-        body: "A phone number is easy to copy, easy to fake, and impossible to secure once it's out there. WhatsApp support gives Lotus365 a way to verify who it's actually talking to, log the conversation, and hand it to the right agent, none of which happen on a cold call. If a number claiming to be Lotus365 customer care rings you first, it isn't Lotus365. Support here only starts from a chat you open yourself.",
+        heading: "Why search-result numbers are a problem",
+        body: "A phone number is easy to copy, easy to fake, and stays in Google long after Lotus365 stopped using it. The WhatsApp number on this page is fetched for this site when the page loads. If a number claiming to be Lotus365 customer care rings you first, it isn't Lotus365.",
       },
       {
         heading: "How to reach Lotus365 customer care on WhatsApp",
-        body: "Tap the WhatsApp button on this page. It opens a chat with whichever agent is on the current support rotation, not a fixed contact saved from months ago. Describe the issue, share your Lotus365 ID or registered mobile number if it's an account query, and an agent takes it from there.",
+        body: "Tap the number or the WhatsApp button on this page. It opens a chat with whichever agent is on the current support rotation. Describe the issue, share your Lotus365 ID or registered mobile number if it's an account query, and stay in that same thread.",
         points: [
-          "Tap the WhatsApp button on this page",
+          "Tap the live WhatsApp number on this page",
           "Say what you need help with in one line",
           "Share your Lotus365 ID if it's account-specific",
           "Stay in the same chat until it's resolved",
@@ -973,11 +981,11 @@ export const PAGES: Record<string, PageContent> = {
       },
       {
         heading: "Lotus365 ID vs. the support desk you reach",
-        body: "Your Lotus365 ID is the login for lotus365id.com and any linked app, and it stays fixed. The WhatsApp desk answering your message is a rotating team, not a single person or number, so don't expect the same contact to be there every time you write in. That's normal, and it's also why searching for one permanent Lotus365 customer care number was never going to work.",
+        body: "Your Lotus365 ID is the login for lotus365id.com and any linked app, and it stays fixed. The WhatsApp desk answering your message is a rotating team. The number on this page is the current desk, not a personal agent you should save from last season and never check again.",
       },
       {
         heading: "Recognising a fake Lotus365 customer care number",
-        body: "A real Lotus365 support conversation never starts with someone calling you, never asks for your password or OTP, and never asks for a fee to fix an account issue. If any of those happen, close it and message the verified WhatsApp desk from this page instead. Lotus 365 customer care number scams almost always rely on players trusting the first result they find rather than a channel Lotus365 actually controls.",
+        body: "A real Lotus365 support conversation never starts with someone calling you, never asks for your password or OTP, and never asks for a fee to fix an account issue. If any of those happen, close it and use the WhatsApp number shown on this page instead.",
       },
     ],
     cta: {
@@ -1268,11 +1276,15 @@ export const PAGES: Record<string, PageContent> = {
     eyebrow: "Help",
     hero: "Real humans, every hour.",
     intro:
-      "Lotus365 support is staffed 24/7 by trained agents — never chatbots. Pick the channel that suits you.",
+      "Lotus365 support is staffed 24/7 by trained agents, never chatbots. Use the live WhatsApp number on this page, or email help@lotus365id.com for KYC and account files.",
+    heroCta: {
+      label: "Chat on WhatsApp",
+      text: "Hi Lotus365, I need support for my Lotus365 ID.",
+    },
     sections: [
       {
         heading: "Fastest channels",
-        body: "Live chat (under 30 seconds) and WhatsApp (under 40 seconds) are the fastest for anything account-related.",
+        body: "Live chat (under 30 seconds) and WhatsApp (under 40 seconds) are the fastest for anything account-related. Email help@lotus365id.com for KYC files.",
       },
       {
         heading: "Self-serve",
@@ -1293,7 +1305,11 @@ export const PAGES: Record<string, PageContent> = {
     eyebrow: "Support",
     hero: "One WhatsApp chat away.",
     intro:
-      "WhatsApp is the easiest way to talk to Lotus365 — the same trained agents as live chat, with a message trail you can scroll back through.",
+      "WhatsApp is the easiest way to talk to Lotus365 — the same trained agents as live chat, with a message trail you can scroll back through. The current number is shown on this page.",
+    heroCta: {
+      label: "Open WhatsApp support",
+      text: "Hi Lotus365, I need WhatsApp support for my Lotus365 ID.",
+    },
     sections: [
       {
         heading: "What you can do",
@@ -2087,7 +2103,6 @@ export const PAGES: Record<string, PageContent> = {
 // Fallback slug aliases — accept minor typos from source URLs.
 export const PAGE_ALIASES: Record<string, string> = {
   about: "about-us",
-  contact: "contact-us",
   privacy: "privacy-policy",
   terms: "terms-conditions",
   "reddy-anna-id": "lotus365-id",

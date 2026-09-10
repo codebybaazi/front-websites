@@ -49,7 +49,7 @@ export const Route = createFileRoute("/.well-known/mcp/server-card.json")({
           },
           contact: {
             
-            url: `${siteUrl}/contact`,
+            url: `${siteUrl}/contact-us`,
           },
           documentation: `${siteUrl}/faq`,
           termsOfService: `${siteUrl}/terms`,

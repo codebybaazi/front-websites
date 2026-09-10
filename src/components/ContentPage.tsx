@@ -7,22 +7,20 @@ import { RelatedContent } from "./RelatedContent";
 import { AiOverview } from "./AiOverview";
 import { FaqBlock } from "./FaqBlock";
 import { useWhatsApp } from "./WhatsAppProvider";
+import {
+  LiveSupportEmail,
+  LiveWhatsAppNumber,
+  shouldShowLiveWaNumber,
+} from "./LiveWhatsAppNumber";
 import { deriveFaqsFromPage } from "@/lib/derive-page-faqs";
+import { formatPhoneDisplay } from "@/lib/whatsapp";
 import type { PageContent } from "@/data/pages";
 
-/** "918294924767" -> "+91 82949 24767" */
-function formatPhoneDisplay(digits: string): string | null {
-  if (!/^\d{10,15}$/.test(digits)) return null;
-  const cc = digits.slice(0, digits.length - 10);
-  const local = digits.slice(-10);
-  return `+${cc} ${local.slice(0, 5)} ${local.slice(5)}`;
-}
-
 export function ContentPage({ page }: { page: PageContent }) {
-  // Real, live support number — sourced from fetchnumbers.json via WhatsAppProvider,
-  // not a hardcoded placeholder. Rendered next to any section actually about WhatsApp.
   const { number, url, urlWithText } = useWhatsApp();
   const displayNumber = formatPhoneDisplay(number);
+  const showLiveNumber = shouldShowLiveWaNumber(page.slug);
+  const showEmail = page.slug === "contact-us" || page.slug === "support";
 
   return (
     <div className="min-h-screen text-foreground">
@@ -56,6 +54,14 @@ export function ContentPage({ page }: { page: PageContent }) {
           <p className="mt-6 text-lg md:text-xl text-foreground/90 leading-relaxed max-w-3xl">
             {page.intro}
           </p>
+          {(showLiveNumber || showEmail) && (
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              {showLiveNumber && (
+                <LiveWhatsAppNumber text={page.heroCta?.text} />
+              )}
+              {showEmail && <LiveSupportEmail />}
+            </div>
+          )}
           {page.heroCta && (
             <a
               href={page.heroCta.text ? urlWithText(page.heroCta.text) : url}
@@ -142,15 +148,10 @@ export function ContentPage({ page }: { page: PageContent }) {
                   </div>
                 )}
                 {/^whatsapp$/i.test(section.heading) && displayNumber && (
-                  <a
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-5 inline-flex items-center gap-2 text-primary font-medium hover:underline underline-offset-4"
-                  >
-                    <MessageCircle className="h-4 w-4" />
-                    {displayNumber} — Chat on WhatsApp
-                  </a>
+                  <LiveWhatsAppNumber className="mt-5" />
+                )}
+                {/^email$/i.test(section.heading) && showEmail && (
+                  <LiveSupportEmail className="mt-5" />
                 )}
               </div>
             </article>

@@ -11070,6 +11070,304 @@ export const POSTS: Post[] = [
       },
     ],
   },
+  {
+    slug: "lotus365-id-complete-guide-getting-and-using",
+    title: `Lotus365 ID: Complete Guide to Getting and Using Your ID`,
+    h1: `Lotus365 ID: Complete Guide to Getting and Using Your ID`,
+    description: `How to get a Lotus365 ID online, what a betting ID and cricket ID actually mean, and how to log in, fund, and use the account without sharing OTPs.`,
+    excerpt: `A Lotus365 ID is the login for cricket, sports, and casino on one wallet. Get it online, then use it without handing OTPs to anyone.`,
+    date: "2026-09-08",
+    updated: "2026-09-08",
+    category: "Platform",
+    author: `Riya Sharma`,
+    authorRole: `Product Writer`,
+    readMinutes: 10,
+    sections: [
+      {
+        heading: `What is a Lotus365 ID?`,
+        body: `A Lotus365 ID is the login that opens sports, cricket markets, and casino games on Lotus365 from a single account. You use it on lotus365id.com and in the official app. The same ID sits on one wallet, so a cricket stake and a casino round draw from the same balance. Searches for a lotus365 betting id or a lotus365 cricket id usually mean this same login, named after the markets the person plans to use first.`,
+      },
+      {
+        heading: `How do you get a Lotus365 ID online?`,
+        body: `The safe way to get a lotus365 id online is to open the official Lotus365 site yourself, type the address, and register there. The account page on this site describes the flow as a mobile number, an OTP, and KYC when you are ready to withdraw. Skip any link that arrives as a forwarded APK, a "limited ID" message, or a page that asks you to pay before the login even exists.`,
+        points: [
+          `Open lotus365id.com or the Get Lotus365 ID page from this site, rather than a chat attachment`,
+          `Enter your own mobile number and complete the OTP on that same device`,
+          `Set a password you do not reuse on email or banking apps`,
+          `Finish KYC before you need a withdrawal, using your own documents`,
+          `Save the ID in a password manager; do not screenshot the dashboard into a group chat`,
+        ],
+      },
+      {
+        heading: `What does a Lotus365 betting ID actually unlock?`,
+        body: `A lotus365 betting id is still the same Lotus365 ID. "Betting" here means the sports book: pre-match and in-play markets, plus the wallet that funds them. After you log in, you pick a sport, a fixture, a market, and a stake. The ID does not change when you switch from cricket to football. What changes is the market list in front of you.`,
+      },
+      {
+        heading: `What is a Lotus365 cricket ID used for?`,
+        body: `A lotus365 cricket id is the same login used on IPL, international, and domestic cricket markets. Players use that phrase when cricket is the only sport they care about. You still deposit, withdraw, and lock the account through the same ID. If you later open a football match or a casino table, you do not register again.`,
+      },
+      {
+        heading: `Lotus365 ID compared with nearby terms`,
+        body: `These labels get mixed up in search and in WhatsApp chats. The table is the short version.`,
+        table: {
+          headers: ["Term", "What it refers to", "Does it change your login?"],
+          rows: [
+            ["Lotus365 ID", "The account username for site and app", "This is the login"],
+            ["Lotus365 betting ID", "The same ID, used on sports markets", "No"],
+            ["Lotus365 cricket ID", "The same ID, used on cricket markets", "No"],
+            ["Lotus365 ID online", "Registering that ID on the official site", "No"],
+            ["Deposit number", "A UPI ID or account for one payment", "No, and it can rotate"],
+          ],
+        },
+      },
+      {
+        heading: `How do you log in and keep the ID usable?`,
+        body: `Once the ID exists, daily use is a password plus OTP on the official domain or app. Support will not ask for your password. If a chat asks you to read out an OTP so they can "activate" the ID, close it. Wrong-domain clones copy the logo. Check the address bar before you type the password.`,
+        points: [
+          `Type the site address or open the app you installed from this site`,
+          `Use the ID and password you set at registration`,
+          `Complete the OTP yourself; never forward it`,
+          `If login fails, reset from the official page rather than a helper who wants remote access`,
+        ],
+      },
+      {
+        heading: `Should you use the website or the app with the same ID?`,
+        body: `The Lotus365 ID works on the website and on the official app. You do not get a second cricket ID when you install the app. Download the app from this site's app or APK pages, not from a file sitting in WhatsApp. If the install asks for permissions that have nothing to do with betting, stop and go back to the official download. The mobile site is the fallback when you do not want to install anything: same ID, same password, same OTP.`,
+      },
+      {
+        heading: `How do you fund the ID and take money out?`,
+        body: `Deposits and withdrawals run through the cashier tied to your Lotus365 ID. UPI is the method most Indian users reach for. The deposit number used for a transfer can change, so treat an old screenshot as stale. Confirm the current payee in an official Lotus365 WhatsApp or in-account cashier flow before you send money. Withdrawals wait on KYC. Use a bank account or UPI ID in your own name.`,
+      },
+      {
+        heading: `What should you check before you treat an ID as yours?`,
+        body: `If someone offers to "sell" a ready-made Lotus365 ID, you inherit their history, their KYC mismatch, and any ban that follows. Buy access only through the official register or ID desk. Before the first stake, confirm you can log in, see the cashier, and find support from this site rather than from a stranger's Telegram handle.`,
+        points: [
+          `The ID was created with your mobile number and documents`,
+          `You can change the password without asking a third party`,
+          `Deposit instructions come from the live cashier or official WhatsApp, not a saved contact from last season`,
+          `You have not shared the password, OTP, or recovery codes`,
+        ],
+      },
+      {
+        heading: `How should you use the ID on a match day?`,
+        body: `Open the app or site, find the fixture, read the market, then place the stake you already decided was affordable. Live cricket markets move quickly; a late tap is still a tap you own. Keep stakes inside a limit you set before the toss, and stop when that limit is gone. The ID will still be there tomorrow. Chasing a loss through a bigger stake is how an evening turns into a problem.`,
+      },
+      {
+        heading: `Who should skip getting a Lotus365 ID?`,
+        body: `If you are under the legal age for betting where you live, do not register. If a family member's UPI or bank account would have to carry the deposits, do not register in their name. If you already feel the need to hide losses, pause and use the site's responsible-gaming tools instead of opening a fresh ID to "start clean." A new login does not reset a spending problem.`,
+      },
+      {
+        heading: `What mistakes show up most with a new Lotus365 ID?`,
+        body: `Most new-ID tickets are about money sent to the wrong place, or a password someone else still holds.`,
+        points: [
+          `Registering from a cloned URL that looks like Lotus365 until you read the domain character by character`,
+          `Paying a deposit number saved from last month instead of the current cashier or official WhatsApp`,
+          `Letting an "agent" keep the password after they created the ID for you`,
+          `Skipping KYC until a withdrawal is already pending, then wondering why the payout sits`,
+          `Using someone else's UPI, which fails name checks and can freeze the wallet`,
+        ],
+      },
+      {
+        heading: `Frequently asked questions`,
+        body: `Questions people ask when they search for a Lotus365 ID, a betting ID, or a cricket ID.`,
+        points: [
+          `What is a Lotus365 ID? It is the login for Lotus365 on the website and the official app, with one wallet for sports and casino.`,
+          `How do I get a Lotus365 ID online? Register on the official Lotus365 site with your own mobile number and OTP. Do not use a forwarded APK or a paid "instant ID" from a chat group.`,
+          `Is a Lotus365 cricket ID different from a betting ID? No. Both names point at the same Lotus365 ID. Cricket ID just means you plan to use cricket markets.`,
+          `Can I share my Lotus365 ID with a friend? No. Sharing the login also shares the wallet, and you cannot take back an OTP once it is sent.`,
+          `Do I need a new ID to play casino games? No. Casino tables use the same Lotus365 ID and the same balance as sports bets.`,
+        ],
+      },
+      {
+        heading: `The bottom line`,
+        body: `Get the Lotus365 ID from the official site, treat betting ID and cricket ID as nicknames for that same login, and keep OTPs off group chats. Fund it through a cashier you opened yourself, finish KYC before you need a payout, and stake only what you can afford to lose on the night.`,
+      },
+    ],
+    sources: [
+      { label: "Get a Lotus365 ID", to: "/lotus365-id" },
+      { label: "Lotus365 login", to: "/lotus365-login" },
+      { label: "Register on Lotus365", to: "/lotus365-register" },
+      { label: "How to get a new Lotus365 ID safely", to: "/blog/how-to-get-a-new-lotus365-id-online-safely-and-easily" },
+    ],
+  },
+  {
+    slug: "how-to-get-a-new-lotus365-id-complete-guide",
+    title: `How to Get a New Lotus365 ID: Complete Guide`,
+    h1: `How to Get a New Lotus365 ID: Complete Guide`,
+    description: `How to open a Lotus365 new ID and a new Lotus365 account on the official site or WhatsApp, when a password reset is enough, and what to do in the first hour.`,
+    excerpt: `A Lotus365 new ID is a login you register yourself. Open a new Lotus365 account on the official site, or reset the old one if you still have the number.`,
+    date: "2026-09-09",
+    updated: "2026-09-09",
+    category: "Platform",
+    author: `Riya Sharma`,
+    authorRole: `Product Writer`,
+    readMinutes: 9,
+    sections: [
+      {
+        heading: `What is a Lotus365 new ID?`,
+        body: `A Lotus365 new ID is a login that did not exist until you registered it. It is the username for lotus365id.com and the official app, with one wallet for sports and casino. People also type new lotus365 id or lotus365 new account. Those searches point at the same job: open an account in your name, with a mobile number and OTP you control.`,
+      },
+      {
+        heading: `When do you need a new ID instead of a password reset?`,
+        body: `A forgotten password is not a reason to abandon the old login. Use the official reset flow if you still have the registered mobile number. Open a lotus365 new id when the old number is gone, when the account was created by someone else who still holds the password, or when you never registered at all. Opening a second account to dodge a limit or a self-exclusion is a bad idea. Support can see the overlap, and you can lose both.`,
+      },
+      {
+        heading: `How do you open a new Lotus365 account on the site?`,
+        body: `The register and Get ID pages on this site describe the same short path: your mobile number, an OTP on that phone, then KYC when you want to withdraw. Type the address. Do not tap a "new ID in 30 seconds" card that lands in a group chat.`,
+        points: [
+          `Go to the official register or Lotus365 ID page from this website`,
+          `Use a mobile number that you can answer right now`,
+          `Enter the OTP on the same phone; do not read it out to anyone`,
+          `Pick a password that is not your email or UPI PIN`,
+          `Write the new Lotus365 ID somewhere only you can open, then log in once to confirm it works`,
+        ],
+      },
+      {
+        heading: `Can you get a new Lotus365 ID on WhatsApp?`,
+        body: `Yes, if you start the chat from this site. The WhatsApp desk can walk you through a new lotus365 id the same way the web form does: a few checks, your number, then a live login. That is useful if you would rather talk than fill fields. It is not useful if a stranger messages you first and asks you to pay "activation" before any ID exists. You should be the one who opens the chat.`,
+      },
+      {
+        heading: `What should you have ready before you register?`,
+        body: `A new Lotus365 account goes faster when the details you type already match the details you will withdraw to.`,
+        points: [
+          `A mobile number in your name`,
+          `A bank account or UPI ID in the same name you will put on KYC`,
+          `A password manager or a notebook that is not a screenshot sitting in WhatsApp`,
+          `Time to finish OTP without handing the phone to a "helper"`,
+        ],
+      },
+      {
+        heading: `New ID, recovered login, and a bought account`,
+        body: `Search results mix these three. Use the table if you are choosing between a reset and a fresh login.`,
+        table: {
+          headers: ["What you asked for", "What you actually get", "Who holds the password"],
+          rows: [
+            ["Lotus365 new ID", "A login created on the official site or official WhatsApp", "You"],
+            ["New Lotus365 account", "The same thing as a new ID", "You"],
+            ["Password reset", "The old ID, with a new password", "You, if the OTP lands on your number"],
+            ["Bought or \"ready\" ID", "Someone else's history and KYC", "Often still them"],
+          ],
+        },
+      },
+      {
+        heading: `What should you do in the first hour after the ID is live?`,
+        body: `Log out and log back in once, from the official site or the app you installed from this site. Change nothing through a remote-access app. If you plan to withdraw later, start KYC now rather than during a payout. Make a small deposit only after the cashier or official WhatsApp shows the current payee. An old UPI screenshot is not that payee.`,
+      },
+      {
+        heading: `Do you need the app to finish a new Lotus365 account?`,
+        body: `No. The website can create the lotus365 new id on its own. Install the app later from this site's download pages if you want notifications and a home-screen icon. An APK forwarded as "required to activate your new account" is a common trick. The ID works in the browser with the same password and OTP.`,
+      },
+      {
+        heading: `Why you should not buy a ready-made Lotus365 ID`,
+        body: `Sellers pitch a lotus365 new id as already funded, already verified, already "VIP." You cannot see whether the KYC belongs to someone else, whether the number still receives OTPs, or whether the wallet has a dispute sitting on it. When the owner resets the password, the ID is theirs again. Registering yourself takes a few extra minutes and leaves the password on your side of the chat.`,
+      },
+      {
+        heading: `Frequently asked questions`,
+        body: `What people ask when they want a Lotus365 new ID or a new Lotus365 account.`,
+        points: [
+          `How do I get a Lotus365 new ID? Register on the official Lotus365 site or start WhatsApp from this site, using your own mobile number and OTP.`,
+          `Is a new Lotus365 account different from a new ID? No. Both mean a fresh login. You do not need two of them for sports and casino.`,
+          `I forgot my password. Do I need a new Lotus365 ID? Not if you still have the registered number. Reset the password on the official login page first.`,
+          `Can someone create a new lotus365 id for me and then hand it over? Avoid that. If they keep the password or the SIM, it is still their account.`,
+          `Do I pay before the ID exists? No. A page or chat that demands payment to "release" a new ID is not the official register flow.`,
+        ],
+      },
+      {
+        heading: `The bottom line`,
+        body: `Create the Lotus365 new ID yourself, on the official site or a WhatsApp chat you opened from this site. Reset the old password when the number is still yours. Skip bought logins. Finish KYC before the first withdrawal, and keep the OTP on your phone.`,
+      },
+    ],
+    sources: [
+      { label: "Register on Lotus365", to: "/lotus365-register" },
+      { label: "Get a Lotus365 ID", to: "/lotus365-id" },
+      { label: "Lotus365 login", to: "/lotus365-login" },
+      { label: "Lotus365 ID: getting and using", to: "/blog/lotus365-id-complete-guide-getting-and-using" },
+    ],
+  },
+  {
+    slug: "lotus365-app-guide-mobile-access-features-setup",
+    title: `Lotus365 App Guide: Mobile Access, Features and Setup`,
+    h1: `Lotus365 App Guide: Mobile Access, Features and Setup`,
+    description: `How the Lotus365 app, the Lotus365 betting app, and the Lotus365 mobile app work: Android APK vs iPhone PWA, what you can do after login, and how to set it up.`,
+    excerpt: `The Lotus365 app is the phone login for the same ID you use on the website. It covers mobile access, betting-app features, and Android or iPhone setup.`,
+    date: "2026-09-10",
+    updated: "2026-09-10",
+    category: "Platform",
+    author: `Riya Sharma`,
+    authorRole: `Product Writer`,
+    readMinutes: 9,
+    sections: [
+      {
+        heading: `What is the Lotus365 app?`,
+        body: `The Lotus365 app is the smartphone build of the same account you already use on lotus365id.com. You log in with your Lotus365 ID. Sports, cricket markets, and casino sit on the same wallet. People also search for a lotus365 betting app or a lotus365 mobile app. Those names describe the same install, not a second account.`,
+      },
+      {
+        heading: `How do you get mobile access if you skip the install?`,
+        body: `Open lotus365id.com in Chrome or Safari and log in there. The mobile site uses the same ID and password as the app. Install later if you want a home-screen icon and less browser toolbar in the way. You do not get better odds by installing. You get a dedicated screen and, on the official build, login shortcuts such as fingerprint or Face ID.`,
+      },
+      {
+        heading: `What does the Lotus365 betting app actually include?`,
+        body: `After login, the lotus365 betting app is the sports book and the cashier on a smaller screen: fixtures, live markets, your open bets, deposits, and withdrawals. Casino tables sit in the same app. Switching from cricket to Teen Patti does not create a new ID. If a download page promises a separate "VIP betting app" with different odds, you are not on the official download.`,
+      },
+      {
+        heading: `App, mobile site, and desktop compared`,
+        body: `Pick the door that matches the phone you have. The account behind them is the same.`,
+        table: {
+          headers: ["How you open Lotus365", "What you install", "Best when"],
+          rows: [
+            ["Lotus365 app (Android)", "Official APK from this site or official WhatsApp", "You want an icon and biometric unlock"],
+            ["Lotus365 mobile app (iPhone)", "Safari PWA added to the home screen", "There is no App Store listing"],
+            ["Mobile browser", "Nothing", "You do not want an APK or PWA yet"],
+            ["Desktop browser", "Nothing", "You are on a laptop, same ID"],
+          ],
+        },
+      },
+      {
+        heading: `How do you set up the Lotus365 app on Android?`,
+        body: `Google Play blocks most real-money betting apps in India, so the official Android file is an APK. The download page on this site walks the path as: get the current file from official WhatsApp or the app page, allow installs from that browser if Android asks, then log in with your ID. The same page lists the build at about 18 MB, Android 6 or newer, and a 2 GB RAM floor. Ignore any Telegram file that asks you to turn off Play Protect "just this once."`,
+        points: [
+          `Start from the Lotus365 app download page on this website, not a forwarded chat file`,
+          `Allow unknown sources only for the browser you used for that download`,
+          `Check the permissions list before you tap Install`,
+          `Open the app and sign in with your own Lotus365 ID`,
+          `Turn on fingerprint unlock after the first password login, if your phone offers it`,
+        ],
+      },
+      {
+        heading: `How do you set up the Lotus365 mobile app on iPhone?`,
+        body: `The App Store also blocks this category, so iPhone access is a PWA. In Safari, open the official site, tap Share, then Add to Home Screen. The icon behaves like an app. Log in with the same ID. Face ID is optional after that first password. If a page tells you to sideload an unsigned iOS file, stop. That is not how the official lotus365 mobile app is meant to land on an iPhone.`,
+      },
+      {
+        heading: `What should you do the first time the app opens?`,
+        body: `Confirm you can see the cashier and a live fixture list before you send money. If the screen looks like Lotus365 but the address you came from was a lookalike domain, delete the shortcut and start from this site again. Deposit only through the in-app cashier or official WhatsApp. An APK does not replace KYC. Withdrawals still wait on verification, the same as on desktop.`,
+      },
+      {
+        heading: `How do you keep the app from becoming a problem?`,
+        body: `Push alerts make it easy to open a market every time a wicket falls. Set a spend limit before you enable them, or leave alerts off. Update only from the same official channel you used to install. A message that says your ID will be blocked unless you install a "hot fix" APK is pressure, not support.`,
+      },
+      {
+        heading: `Frequently asked questions`,
+        body: `What people ask when they look for the Lotus365 app, the betting app, or the mobile app.`,
+        points: [
+          `Is the Lotus365 app the same as the website? Yes. Same Lotus365 ID, same wallet. The app is the phone interface.`,
+          `Is the Lotus365 betting app a different download? No. Betting app and mobile app are names for the official Lotus365 app.`,
+          `Why is it not on Google Play? Real-money betting apps are restricted there, so Android uses a signed APK from the official channel.`,
+          `Can I use the Lotus365 mobile app on iPhone? Yes, as a Safari home-screen app. There is no App Store listing.`,
+          `Do I need the app to log in? No. The mobile website works with the same ID if you prefer not to install.`,
+        ],
+      },
+      {
+        heading: `The bottom line`,
+        body: `Install the Lotus365 app from this site or official WhatsApp, or skip the file and use the mobile browser. Android is an APK. iPhone is a Safari home-screen shortcut. Log in with your existing ID, treat betting-app promises of extra odds as a warning, and update only from the same place you installed.`,
+      },
+    ],
+    sources: [
+      { label: "Lotus365 app download", to: "/lotus365-app-download" },
+      { label: "Lotus365 APK", to: "/lotus365-apk" },
+      { label: "Lotus365 login", to: "/lotus365-login" },
+      { label: "How to get a new Lotus365 ID", to: "/blog/how-to-get-a-new-lotus365-id-complete-guide" },
+    ],
+  },
 ];
 
 export const POSTS_BY_SLUG: Record<string, Post> = Object.fromEntries(POSTS.map((p) => [p.slug, p]));

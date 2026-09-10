@@ -63,8 +63,9 @@ export const Route = createFileRoute("/blog/$slug")({
     const clamp = (s: string, max: number) =>
       s.length <= max ? s : s.slice(0, max - 1).replace(/\s+\S*$/, "").trimEnd() + "…";
 
-    // (1) Unique, keyword-led meta title (≤60 chars)
-    const metaTitle = clamp(`${p.h1} | Lotus365`, 60);
+    // (1) Unique, keyword-led meta title (≤60 chars).
+    // If the H1 is already title-length, do not append "| Lotus365" and clip the keyword.
+    const metaTitle = clamp(p.h1.length >= 50 ? p.h1 : `${p.h1} | Lotus365`, 60);
     // (2) Unique description from the post's excerpt (not the templated description)
     const metaDesc = clamp(p.excerpt || p.description, 155);
     const ogTitle = clamp(p.h1, 60);
@@ -179,7 +180,12 @@ export const Route = createFileRoute("/blog/$slug")({
     // (AEO fix) HowTo schema for posts that are genuinely step-by-step guides —
     // matched by title rather than applied blog-wide, so it only covers posts
     // that are actually instructional. Excludes the FAQ/closing sections.
-    if (/^how (to|do|does)\b/i.test(p.h1) || /^how (to|do|does)\b/i.test(p.title)) {
+    if (
+      /^how (to|do|does)\b/i.test(p.h1) ||
+      /^how (to|do|does)\b/i.test(p.title) ||
+      /complete guide to getting/i.test(`${p.h1} ${p.title}`) ||
+      /lotus365 app guide/i.test(`${p.h1} ${p.title}`)
+    ) {
       const stepSections = p.sections.filter(
         (s) => !/frequently asked questions/i.test(s.heading) && !/bottom line/i.test(s.heading)
       );

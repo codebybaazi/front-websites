@@ -16,6 +16,7 @@ import { Route as AuthorsRouteImport } from './routes/authors'
 import { Route as BettingGuidesRouteImport } from './routes/betting-guides'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as CaseStudyRouteImport } from './routes/case-study'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IsLotus365LegalInIndiaRouteImport } from './routes/is-lotus365-legal-in-india'
 import { Route as Lotus365ApkRouteImport } from './routes/lotus365-apk'
 import { Route as Lotus365AppDownloadRouteImport } from './routes/lotus365-app-download'
@@ -84,6 +85,11 @@ const BlogRoute = BlogRouteImport.update({
 const CaseStudyRoute = CaseStudyRouteImport.update({
   id: '/case-study',
   path: '/case-study',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IsLotus365LegalInIndiaRoute = IsLotus365LegalInIndiaRouteImport.update({
@@ -273,6 +279,7 @@ export interface FileRoutesByFullPath {
   '/betting-guides': typeof BettingGuidesRouteWithChildren
   '/blog': typeof BlogRouteWithChildren
   '/case-study': typeof CaseStudyRouteWithChildren
+  '/contact': typeof ContactRoute
   '/is-lotus365-legal-in-india': typeof IsLotus365LegalInIndiaRoute
   '/lotus365-apk': typeof Lotus365ApkRoute
   '/lotus365-app-download': typeof Lotus365AppDownloadRoute
@@ -314,6 +321,7 @@ export interface FileRoutesByTo {
   '/all-links': typeof AllLinksRoute
   '/betting-guides': typeof BettingGuidesRouteWithChildren
   '/case-study': typeof CaseStudyRouteWithChildren
+  '/contact': typeof ContactRoute
   '/is-lotus365-legal-in-india': typeof IsLotus365LegalInIndiaRoute
   '/lotus365-apk': typeof Lotus365ApkRoute
   '/lotus365-app-download': typeof Lotus365AppDownloadRoute
@@ -358,6 +366,7 @@ export interface FileRoutesById {
   '/betting-guides': typeof BettingGuidesRouteWithChildren
   '/blog': typeof BlogRouteWithChildren
   '/case-study': typeof CaseStudyRouteWithChildren
+  '/contact': typeof ContactRoute
   '/is-lotus365-legal-in-india': typeof IsLotus365LegalInIndiaRoute
   '/lotus365-apk': typeof Lotus365ApkRoute
   '/lotus365-app-download': typeof Lotus365AppDownloadRoute
@@ -403,6 +412,7 @@ export interface FileRouteTypes {
     | '/betting-guides'
     | '/blog'
     | '/case-study'
+    | '/contact'
     | '/is-lotus365-legal-in-india'
     | '/lotus365-apk'
     | '/lotus365-app-download'
@@ -444,6 +454,7 @@ export interface FileRouteTypes {
     | '/all-links'
     | '/betting-guides'
     | '/case-study'
+    | '/contact'
     | '/is-lotus365-legal-in-india'
     | '/lotus365-apk'
     | '/lotus365-app-download'
@@ -487,6 +498,7 @@ export interface FileRouteTypes {
     | '/betting-guides'
     | '/blog'
     | '/case-study'
+    | '/contact'
     | '/is-lotus365-legal-in-india'
     | '/lotus365-apk'
     | '/lotus365-app-download'
@@ -531,6 +543,7 @@ export interface RootRouteChildren {
   BettingGuidesRoute: typeof BettingGuidesRouteWithChildren
   BlogRoute: typeof BlogRouteWithChildren
   CaseStudyRoute: typeof CaseStudyRouteWithChildren
+  ContactRoute: typeof ContactRoute
   IsLotus365LegalInIndiaRoute: typeof IsLotus365LegalInIndiaRoute
   Lotus365ApkRoute: typeof Lotus365ApkRoute
   Lotus365AppDownloadRoute: typeof Lotus365AppDownloadRoute
@@ -609,6 +622,13 @@ declare module '@tanstack/react-router' {
       path: '/case-study'
       fullPath: '/case-study'
       preLoaderRoute: typeof CaseStudyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/is-lotus365-legal-in-india': {
@@ -911,6 +931,7 @@ const rootRouteChildren: RootRouteChildren = {
   BettingGuidesRoute: BettingGuidesRouteWithChildren,
   BlogRoute: BlogRouteWithChildren,
   CaseStudyRoute: CaseStudyRouteWithChildren,
+  ContactRoute: ContactRoute,
   IsLotus365LegalInIndiaRoute: IsLotus365LegalInIndiaRoute,
   Lotus365ApkRoute: Lotus365ApkRoute,
   Lotus365AppDownloadRoute: Lotus365AppDownloadRoute,

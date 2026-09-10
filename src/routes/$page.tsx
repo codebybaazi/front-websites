@@ -1,4 +1,4 @@
-import { createFileRoute, notFound } from "@tanstack/react-router";
+import { createFileRoute, notFound, redirect } from "@tanstack/react-router";
 import { ContentPage, ContentNotFound } from "@/components/ContentPage";
 import { getPage, resolvePageSlug } from "@/data/pages";
 import { deriveFaqsFromPage, toFaqPageJsonLd } from "@/lib/derive-page-faqs";
@@ -7,6 +7,13 @@ import { CONTENT_PUBLISHED_DATE, CONTENT_MODIFIED_DATE } from "@/data/site";
 
 export const Route = createFileRoute("/$page")({
   loader: ({ params }) => {
+    if (params.page === "contact") {
+      throw redirect({
+        to: "/$page",
+        params: { page: "contact-us" },
+        replace: true,
+      });
+    }
     const page = getPage(params.page);
     if (!page) throw notFound();
     return { page };

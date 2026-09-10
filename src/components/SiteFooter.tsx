@@ -1,5 +1,6 @@
 import { siteName } from "@/data/site";
-import { useWhatsAppUrl } from "@/components/WhatsAppProvider";
+import { useWhatsApp } from "@/components/WhatsAppProvider";
+import { LiveSupportEmail, LiveWhatsAppNumber } from "@/components/LiveWhatsAppNumber";
 import {
   Instagram,
   Send,
@@ -23,7 +24,7 @@ const marqueeTags = [
 
 
 export function SiteFooter() {
-  const whatsappUrl = useWhatsAppUrl();
+  const { url: whatsappUrl } = useWhatsApp();
 
   const socials = [
     { label: "WhatsApp", href: whatsappUrl, Icon: MessageCircle },
@@ -62,6 +63,7 @@ export function SiteFooter() {
       "Wallet & Support",
       [
         ["WhatsApp Concierge", whatsappUrl, true],
+        ["Contact Us", "/contact-us"],
         ["UPI Deposits", "/how-to-deposit"],
         ["Instant Withdrawals", "/how-to-withdraw-safely"],
         ["KYC & Security", "/kyc-verification-policy"],
@@ -136,6 +138,10 @@ export function SiteFooter() {
               casino, IPL markets and Teen Patti tables with instant UPI payouts
               and a 24/7 WhatsApp concierge.
             </p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <LiveWhatsAppNumber />
+              <LiveSupportEmail />
+            </div>
 
             {/* CTA card */}
             <a

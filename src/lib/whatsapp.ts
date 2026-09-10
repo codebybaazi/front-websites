@@ -6,6 +6,27 @@ export const FALLBACK_WA_DIGITS = "8294924767";
 
 export const DEFAULT_WA_MESSAGE = "Hi Lotus365, I want to get started.";
 
+export const SUPPORT_EMAIL = "help@lotus365id.com";
+
+/** Pages that should print the live desk number (from fetchnumbers.json) plus a WhatsApp link. */
+export const LIVE_WA_NUMBER_SLUGS = new Set([
+  "contact-us",
+  "support",
+  "lotus365-deposit-number",
+  "lotus365-withdrawal-number",
+  "lotus365-customer-care-number",
+  "lotus365-whatsapp-number",
+  "lotus365-whatsapp-support",
+]);
+
+/** "918294924767" -> "+91 82949 24767" */
+export function formatPhoneDisplay(digits: string): string | null {
+  if (!/^\d{10,15}$/.test(digits)) return null;
+  const cc = digits.slice(0, digits.length - 10);
+  const local = digits.slice(-10);
+  return `+${cc} ${local.slice(0, 5)} ${local.slice(5)}`;
+}
+
 const THIS_SITE_HOST = "lotus365id.com";
 /** Same-origin proxy — Spaces CDN caches the raw JSON for 1h and varies by Origin. */
 export const WA_NUMBERS_PROXY_PATH = "/wa-numbers.json";

@@ -257,6 +257,7 @@ export const navItems: NavItem[] = [
 export const siteName = "Lotus365";
 export const siteUrl = "https://lotus365id.com";
 export const supportLine = "Instant payouts · Verified · 24/7 concierge";
+export const supportEmail = "help@lotus365id.com";
 
 /**
  * Article schema dates for the static pages/guides/case-studies that don't

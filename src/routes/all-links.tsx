@@ -59,6 +59,7 @@ const mainLinks: LinkItem[] = [
   { label: "Lotus365 Register", href: "/lotus365-register" },
   { label: "Lotus365 Blue", href: "/lotus365-blue" },
   { label: "Customer Care", href: "/lotus365-customer-care" },
+  { label: "Contact Us", href: "/contact-us" },
   { label: "Is Lotus365 Legal in India?", href: "/is-lotus365-legal-in-india" },
   { label: "All Matches", href: "/matches" },
   { label: "Full Schedule", href: "/schedule" },
