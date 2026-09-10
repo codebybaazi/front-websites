@@ -5,6 +5,7 @@ import { authors } from "@/data/authors";
 import { pages } from "@/data/pages";
 
 import { allMatches } from "@/lib/schedule-data";
+import { FILE_ROUTE_PATHS } from "@/lib/seo";
 
 const BASE_URL = "https://mahadevbookss.com";
 
@@ -41,11 +42,23 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/matches", changefreq: "daily", priority: "0.9" },
           { path: "/all-links", changefreq: "weekly", priority: "0.5" },
           { path: "/authors", changefreq: "monthly", priority: "0.6" },
-          ...pages.map((p) => ({
-            path: p.path,
-            changefreq: "monthly" as const,
-            priority: "0.6",
-          })),
+        ];
+
+        const listed = new Set(entries.map((e) => e.path));
+        for (const path of FILE_ROUTE_PATHS) {
+          if (path === "/" || path === "/about-us" || listed.has(path)) continue;
+          entries.push({ path, changefreq: "monthly", priority: "0.65" });
+          listed.add(path);
+        }
+
+        entries.push(
+          ...pages
+            .filter((p) => !listed.has(p.path) && !FILE_ROUTE_PATHS.has(p.path) && !p.noindex)
+            .map((p) => ({
+              path: p.path,
+              changefreq: "monthly" as const,
+              priority: "0.65",
+            })),
           ...authors.map((a) => ({
             path: `/authors/${a.slug}`,
             changefreq: "monthly" as const,
@@ -54,28 +67,27 @@ export const Route = createFileRoute("/sitemap.xml")({
           ...posts.map((p) => ({
             path: `/blog/${p.slug}`,
             changefreq: "monthly" as const,
-            priority: "0.6",
-            lastmod: p.date,
+            priority: "0.7",
+            lastmod: p.updated || p.date,
           })),
-          ...allMatches.map((m) => {
-            const isPast = m.date < today;
-            return {
-              path: `/match/${m.slug}`,
-              // A past match's preview/prediction content is settled and won't
-              // change again, so it's crawled far less often and ranked lower.
-              // An upcoming match's page is effectively static too (no live
-              // score integration), so "weekly" overstated how often it
-              // actually changes — "monthly" is closer to the truth.
-              changefreq: isPast ? ("never" as const) : ("monthly" as const),
-              priority: isPast ? "0.3" : "0.6",
-              // Only past matches get a lastmod: their kickoff date is a real
-              // past date. An upcoming match's kickoff date is in the future,
-              // which is not a valid "last modified" date, so it's omitted
-              // rather than faked.
-              lastmod: isPast ? m.date : undefined,
-            };
-          }),
-        ];
+          ...allMatches
+            .filter((m) => {
+              if (m.date >= today) return true;
+              const ageDays = (Date.parse(today) - Date.parse(m.date)) / 86_400_000;
+              return ageDays <= 14;
+            })
+            .map((m) => {
+              const isPast = m.date < today;
+              return {
+                path: `/match/${m.slug}`,
+                changefreq: isPast ? ("never" as const) : ("weekly" as const),
+                // Editorial URLs sit at 0.65–1.0. Match pages stay lower so
+                // hundreds of fixtures do not drown blog, CMS and money pages.
+                priority: isPast ? "0.2" : "0.35",
+                lastmod: isPast ? m.date : undefined,
+              };
+            }),
+        );
 
         const urls = entries.map((e) =>
           [

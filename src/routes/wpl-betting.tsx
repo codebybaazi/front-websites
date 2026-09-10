@@ -18,6 +18,7 @@ export const Route = createFileRoute("/wpl-betting")({
       { title: "WPL Betting on Mahadev Book — Women's Premier League Odds" },
       { name: "description", content: "Bet on the Women's Premier League with Mahadev Book — match winner, session and player markets, live in-play odds, same ID as IPL." },
       { property: "og:title", content: "WPL Betting on Mahadev Book — Women's Premier League Odds" },
+        { name: "twitter:title", content: "WPL Betting on Mahadev Book — Women's Premier League Odds" },
       { property: "og:description", content: "WPL markets on Mahadev Book — match, session and player odds under the same ID as IPL." },
       { property: "og:url", content: "https://mahadevbookss.com/wpl-betting" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

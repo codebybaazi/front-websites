@@ -3,13 +3,23 @@ import { MessageCircle, Trophy, Zap } from "lucide-react";
 import { useWhatsApp } from "@/components/WhatsAppProvider";
 import { AIOverview } from "@/components/AIOverview";
 import { QuickLinks } from "@/components/QuickLinks";
+import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
+
+const sportsFaqs: FAQItem[] = [
+  { q: "What sports can I bet on with a Mahadev Book ID?", a: "Cricket (IPL, T20 World Cup, Champions Trophy, WPL), football (EPL, La Liga, Serie A, UCL, FIFA World Cup 2026), kabaddi, basketball, horse racing and esports — all under one verified ID." },
+  { q: "Do I need a separate ID for each sport?", a: "No. One Mahadev Book ID covers every sport and market on the platform, so switching from cricket to football or esports needs no new signup." },
+  { q: "Which sport has the most betting markets?", a: "Cricket, and IPL specifically — over 200 markets per match, including session and fancy odds alongside standard match-winner pricing." },
+  { q: "Can I bet on sports live, in-play?", a: "Yes. Live in-play odds update through the match across cricket, football and most other sports on the platform." },
+  { q: "How do I get an ID to start betting on a sport?", a: "Message support on WhatsApp with your name and preferred deposit method. A verified ID is usually issued in under five minutes." },
+];
 
 export const Route = createFileRoute("/sports")({
   head: () => ({
     meta: [
-      { title: "Sports Betting on Mahadev Book — Cricket, Football, Kabaddi & More" },
+      { title: "Sports Betting on Mahadev Book — Cricket & More" },
       { name: "description", content: "Every sport you can bet on with a Mahadev Book ID — IPL, T20 World Cup, WPL, football, kabaddi, basketball, horse racing and esports, all under one login." },
-      { property: "og:title", content: "Sports Betting on Mahadev Book — Cricket, Football, Kabaddi & More" },
+      { property: "og:title", content: "Sports Betting on Mahadev Book — Cricket & More" },
+        { name: "twitter:title", content: "Sports Betting on Mahadev Book — Cricket & More" },
       { property: "og:description", content: "IPL, T20 World Cup, WPL, football, kabaddi, basketball, horse racing and esports — one Mahadev Book ID, every sport." },
       { property: "og:url", content: "https://mahadevbookss.com/sports" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
@@ -20,6 +30,7 @@ export const Route = createFileRoute("/sports")({
     ],
     links: [{ rel: "canonical", href: "https://mahadevbookss.com/sports" }],
     scripts: [
+      { type: "application/ld+json", children: JSON.stringify(faqJsonLd(sportsFaqs)) },
       {
         type: "application/ld+json",
         children: JSON.stringify({
@@ -99,7 +110,8 @@ function SportsPage() {
       />
 
       <section className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
-        <h2 className="text-2xl sm:text-3xl font-bold text-foreground flex items-center gap-2"><Trophy className="h-6 w-6 text-primary" /> Cricket</h2>
+        <h2 className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">What sports can you bet on with Mahadev Book?</h2>
+        <h3 className="text-2xl sm:text-3xl font-bold text-foreground flex items-center gap-2"><Trophy className="h-6 w-6 text-primary" /> Cricket</h3>
         <div className="mt-6 grid sm:grid-cols-2 gap-4">
           {cricket.map((c) => (
             <Link key={c.t} to={c.to} className="group rounded-2xl border border-border bg-card p-6 hover:border-primary/50 transition-colors">
@@ -111,7 +123,7 @@ function SportsPage() {
       </section>
 
       <section className="mx-auto max-w-5xl px-4 sm:px-6 py-12 border-t border-border/60">
-        <h2 className="text-2xl sm:text-3xl font-bold text-foreground flex items-center gap-2"><Zap className="h-6 w-6 text-primary" /> Other sports</h2>
+        <h3 className="text-2xl sm:text-3xl font-bold text-foreground flex items-center gap-2"><Zap className="h-6 w-6 text-primary" /> Other sports</h3>
         <div className="mt-6 grid sm:grid-cols-2 gap-4">
           {other.map((c) => (
             <Link key={c.t} to={c.to} className="group rounded-2xl border border-border bg-card p-6 hover:border-primary/50 transition-colors">
@@ -121,6 +133,8 @@ function SportsPage() {
           ))}
         </div>
       </section>
+
+      <FAQSection title="Sports Betting on Mahadev Book — FAQs" items={sportsFaqs} />
 
       <section className="mx-auto max-w-4xl px-4 sm:px-6 py-16 text-center border-t border-border/60">
         <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground">Ready to place your first bet?</h2>

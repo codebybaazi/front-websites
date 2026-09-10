@@ -1,8 +1,11 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
+import { ogImageMeta, howToJsonLd, isHowToPath, SITE_ORIGIN } from "@/lib/seo";
 import { ArrowLeft, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { pagesByPath, pages, type SitePage } from "@/data/pages";
 import { useWhatsApp } from "@/components/WhatsAppProvider";
+import { OfficialNumberCard } from "@/components/OfficialNumberCard";
 import { QuickLinks } from "@/components/QuickLinks";
+import { FAQSection, faqJsonLd } from "@/components/FAQSection";
 import heroCricket from "@/assets/hero-cricket.jpg";
 import heroSports from "@/assets/hero-sports.jpg";
 import heroWallet from "@/assets/hero-wallet.jpg";
@@ -38,7 +41,11 @@ function findPage(splat: string): SitePage | undefined {
 
 export const Route = createFileRoute("/$")({
   loader: ({ params }) => {
-    const page = findPage(params._splat ?? "");
+    const splat = (params._splat ?? "").replace(/\/$/, "");
+    if (splat === "about-us") {
+      throw redirect({ to: "/about", replace: true, statusCode: 301 });
+    }
+    const page = findPage(splat);
     if (!page) throw notFound();
     return { page };
   },
@@ -47,17 +54,53 @@ export const Route = createFileRoute("/$")({
       return { meta: [{ title: "Page not found — Mahadev Book" }, { name: "robots", content: "noindex" }] };
     }
     const { page } = loaderData;
-    const rawTitle = `${page.title} — Mahadev Book`;
-    const shortTitle = rawTitle.length > 60 ? rawTitle.slice(0, 57).trimEnd() + "…" : rawTitle;
+    const pageTitle = page.title.length > 60 ? page.title : `${page.title} | Mahadev Book`;
+    const title = pageTitle.length > 60 ? page.title : pageTitle;
+    const robots = page.noindex
+      ? "noindex, follow"
+      : "index, follow, max-image-preview:large, max-snippet:-1";
+    const howToSteps: { name: string; text: string }[] = [];
+    for (const b of page.content) {
+      if (!b.heading) continue;
+      if (howToSteps.length >= 4) break;
+      howToSteps.push({ name: b.heading, text: b.body });
+    }
     return {
       meta: [
-        { title: shortTitle },
+        { title },
         { name: "description", content: page.excerpt },
-        { property: "og:title", content: shortTitle },
+        { name: "robots", content: robots },
+        { property: "og:title", content: title },
+        { name: "twitter:title", content: title },
         { property: "og:description", content: page.excerpt },
-        { property: "og:url", content: `https://mahadevbookss.com${page.path}` },
+        { property: "og:url", content: `${SITE_ORIGIN}${page.path}` },
+        ...ogImageMeta(`${page.title} | Mahadev Book`),
       ],
-      links: [{ rel: "canonical", href: `https://mahadevbookss.com${page.path}` }],
+      links: [{ rel: "canonical", href: `${SITE_ORIGIN}${page.path}` }],
+      scripts: [
+        ...(page.faq && page.faq.length > 0
+          ? [{ type: "application/ld+json" as const, children: JSON.stringify(faqJsonLd(page.faq)) }]
+          : []),
+        ...(isHowToPath(page.path) && howToSteps.length >= 2
+          ? [
+              {
+                type: "application/ld+json" as const,
+                children: JSON.stringify(howToJsonLd(page.title, page.excerpt, howToSteps)),
+              },
+            ]
+          : []),
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_ORIGIN}/` },
+              { "@type": "ListItem", position: 2, name: page.title, item: `${SITE_ORIGIN}${page.path}` },
+            ],
+          }),
+        },
+      ],
     };
   },
   component: SitePageView,
@@ -111,7 +154,11 @@ function SitePageView() {
             {page.title}
           </h1>
           <p className="mt-5 max-w-2xl text-base sm:text-lg text-muted-foreground">{page.excerpt}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <OfficialNumberCard
+            heading="Talk to the desk"
+            blurb="Same WhatsApp and phone line as deposits, withdrawals and customer care."
+          />
+          <div className="mt-6 flex flex-wrap gap-3">
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-glow inline-flex items-center gap-3 rounded-full px-6 py-3 font-semibold text-primary-foreground">
               <span className="btn-glow-content">Get Mahadev ID</span>
               <span className="btn-glow-content grid place-items-center h-7 w-7 rounded-full bg-black/25">
@@ -126,7 +173,7 @@ function SitePageView() {
       </section>
 
       <article className="mx-auto max-w-3xl px-4 sm:px-6 py-14">
-        {page.content.map((block: { heading?: string; body: string }, i: number) => (
+        {page.content.map((block, i) => (
           <div key={i} className="mb-8">
             {block.heading && (
               <h2 className="font-display text-2xl sm:text-3xl font-bold mt-4 mb-3 flex items-start gap-3">
@@ -137,6 +184,10 @@ function SitePageView() {
             <p className="text-foreground/85 leading-relaxed text-base sm:text-lg">{block.body}</p>
           </div>
         ))}
+
+        {page.faq && page.faq.length > 0 && (
+          <FAQSection title={`${page.title} FAQs`} items={page.faq} />
+        )}
 
         <div className="mt-12 rounded-2xl border border-primary/30 bg-primary/5 p-6 sm:p-8 text-center">
           <div className="font-display text-2xl font-bold">Ready to play with Mahadev Book?</div>

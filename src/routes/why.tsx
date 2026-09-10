@@ -10,15 +10,16 @@ const whyFaqs: FAQItem[] = [
   { q: "Is Mahadev Book faster than other platforms for withdrawals?", a: "UPI withdrawals typically settle in 5 to 30 minutes, 24 hours a day. Many other platforms route payouts through an agent network, which can add hours depending on availability." },
   { q: "What makes Mahadev Book accounts more secure?", a: "Every ID goes through mandatory KYC before withdrawals unlock, and accounts aren't shared or resold. That combination cuts down on the fraud and account-takeover issues that plague less strict platforms." },
   { q: "Does Mahadev Book really offer human support, not a bot?", a: "Yes. WhatsApp and Telegram are staffed by real agents around the clock, including during IPL nights and holidays, not an automated menu you have to fight through." },
-  { q: "How many players use Mahadev Book?", a: "Over a million verified players, built up over 15+ years of running the platform." },
+  { q: "How many players use Mahadev Book?", a: "We do not publish an audited headcount. IDs have been issued since 2010, each one KYC-checked before withdrawals unlock." },
 ];
 
 export const Route = createFileRoute("/why")({
   head: () => ({
     meta: [
-      { title: "Why Choose Mahadev Book — Faster Payouts, Verified IDs, Real Support" },
-      { name: "description", content: "Why over a million players use Mahadev Book — faster UPI withdrawals, verified-only accounts, 24/7 human support and no shared logins." },
-      { property: "og:title", content: "Why Choose Mahadev Book — Faster Payouts, Verified IDs, Real Support" },
+      { title: "Why Choose Mahadev Book — Fast Payouts, Real Support" },
+      { name: "description", content: "Why players stay with Mahadev Book — faster UPI withdrawals, verified-only accounts, 24/7 human support and no shared logins." },
+      { property: "og:title", content: "Why Choose Mahadev Book — Fast Payouts, Real Support" },
+        { name: "twitter:title", content: "Why Choose Mahadev Book — Fast Payouts, Real Support" },
       { property: "og:description", content: "The concrete reasons players pick Mahadev Book and stay — payout speed, account security and real support." },
       { property: "og:url", content: "https://mahadevbookss.com/why" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
@@ -75,7 +76,7 @@ function WhyPage() {
           <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" /> Why Choose Us
         </span>
         <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
-          Why <span className="text-gradient-gold">1M+ players</span> stick with Mahadev Book
+          Why <span className="text-gradient-gold">players since 2010</span> stick with Mahadev Book
         </h1>
         <p className="mt-5 text-lg text-muted-foreground max-w-2xl">
           Not the marketing version — the actual reasons players give when asked why they didn't
@@ -97,7 +98,7 @@ function WhyPage() {
           "24/7 human support on WhatsApp and Telegram",
           "200+ markets per IPL match plus casino, football, tennis",
           "New ID issued in under 5 minutes on WhatsApp",
-          "1M+ verified players over 15+ years",
+          "KYC-verified players over 15+ years",
         ]}
         keywords={["why choose mahadev book", "mahadev book benefits", "best cricket id india", "mahadev book"]}
       />

@@ -18,6 +18,7 @@ export const Route = createFileRoute("/esports-betting")({
       { title: "Esports Betting on Mahadev Book — CS, Dota 2 & Valorant" },
       { name: "description", content: "Bet on CS, Dota 2 and Valorant with Mahadev Book — match and map winner markets, live in-play odds, under the same ID as cricket." },
       { property: "og:title", content: "Esports Betting on Mahadev Book — CS, Dota 2 & Valorant" },
+        { name: "twitter:title", content: "Esports Betting on Mahadev Book — CS, Dota 2 & Valorant" },
       { property: "og:description", content: "Esports markets on Mahadev Book — CS, Dota 2 and Valorant match and map odds." },
       { property: "og:url", content: "https://mahadevbookss.com/esports-betting" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

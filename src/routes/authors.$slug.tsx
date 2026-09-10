@@ -1,4 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { ogImageMeta } from "@/lib/seo";
 import { ArrowLeft } from "lucide-react";
 import { getAuthorBySlug } from "@/data/authors";
 import { posts } from "@/data/posts";
@@ -22,9 +23,11 @@ export const Route = createFileRoute("/authors/$slug")({
         { title },
         { name: "description", content: author.bio },
         { property: "og:title", content: title },
+        { name: "twitter:title", content: title },
         { property: "og:description", content: author.bio },
         { property: "og:url", content: canonicalPath },
         { property: "og:type", content: "profile" },
+        ...ogImageMeta(`${author.name} — ${author.role} at Mahadev Book`),
       ],
       links: [{ rel: "canonical", href: canonicalPath }],
       scripts: [

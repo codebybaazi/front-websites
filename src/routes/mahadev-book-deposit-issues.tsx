@@ -21,6 +21,7 @@ export const Route = createFileRoute("/mahadev-book-deposit-issues")({
       { title: "Mahadev Book Deposit Issues — Fix a Stuck Deposit on WhatsApp" },
       { name: "description", content: "Paid but not credited? Deposit stuck as pending? See the common causes of Mahadev Book deposit issues and get them resolved on the official WhatsApp support line." },
       { property: "og:title", content: "Mahadev Book Deposit Issues — Fix a Stuck Deposit on WhatsApp" },
+        { name: "twitter:title", content: "Mahadev Book Deposit Issues — Fix a Stuck Deposit on WhatsApp" },
       { property: "og:description", content: "UPI deposit not showing up, or payment stuck as pending? Get Mahadev Book deposit issues resolved on the official WhatsApp support line." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-book-deposit-issues" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

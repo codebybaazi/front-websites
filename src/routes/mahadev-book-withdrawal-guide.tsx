@@ -4,6 +4,7 @@ import { useWhatsApp } from "@/components/WhatsAppProvider";
 import { AIOverview } from "@/components/AIOverview";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
+import { howToJsonLd } from "@/lib/seo";
 
 const withdrawFaqs: FAQItem[] = [
   { q: "How do I withdraw money from Mahadev Book?", a: "Message the official WhatsApp line with your withdrawal amount and UPI ID or bank account. The team checks your KYC and pushes the payout, usually within minutes for UPI." },
@@ -21,6 +22,7 @@ export const Route = createFileRoute("/mahadev-book-withdrawal-guide")({
       { title: "Mahadev Book Withdrawal Guide — How Payouts Work" },
       { name: "description", content: "How to withdraw from Mahadev Book — UPI and bank transfer payouts, processing times, KYC requirements and what to do if a withdrawal is delayed." },
       { property: "og:title", content: "Mahadev Book Withdrawal Guide — How Payouts Work" },
+        { name: "twitter:title", content: "Mahadev Book Withdrawal Guide — How Payouts Work" },
       { property: "og:description", content: "Everything about withdrawing from Mahadev Book — payout methods, processing time and KYC requirements." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-book-withdrawal-guide" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
@@ -32,6 +34,16 @@ export const Route = createFileRoute("/mahadev-book-withdrawal-guide")({
     links: [{ rel: "canonical", href: "https://mahadevbookss.com/mahadev-book-withdrawal-guide" }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(faqJsonLd(withdrawFaqs)) },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          howToJsonLd("How to withdraw from Mahadev Book", "Request a UPI or bank payout on WhatsApp after KYC is complete.", [
+            { name: "Message the official WhatsApp line", text: "Send the withdrawal amount and the UPI ID or bank account you want paid." },
+            { name: "Pass the KYC check", text: "The desk matches the request to your verified identity before any money moves." },
+            { name: "Wait for settlement", text: "UPI payouts usually land in 5 to 30 minutes, any hour of the day. IMPS and NEFT follow your bank's hours." },
+          ]),
+        ),
+      },
       {
         type: "application/ld+json",
         children: JSON.stringify({

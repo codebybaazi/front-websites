@@ -25,6 +25,7 @@ import { getMatchBySlug, formatLongDate, allMatches, type ScheduleMatch } from "
 import { getMatchPrediction, hasRealTeams } from "@/lib/match-predictions";
 import { getTennisPrediction, tennisStageFromSubtitle, tennisTourFromSubtitle } from "@/lib/tennis-predictions";
 import { getCricketPrediction, formatFromSubtitle, hasKnownCricketTeams } from "@/lib/cricket-predictions";
+import { ogImageMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/match/$slug")({
   loader: ({ params }) => {
@@ -40,13 +41,13 @@ export const Route = createFileRoute("/match/$slug")({
     const isFootball = series.sport === "football" && hasRealTeams(match.home, match.away);
     const isCricket = series.sport === "cricket";
     const rawTitle = isFootball
-      ? `${match.title} Live Score, Prediction & Odds — World Cup 2026 ${match.subtitle}`
+      ? `${match.title} Prediction | World Cup 2026`
       : isCricket
-      ? `${match.title} Live Cricket Score, Today Match Prediction — ${match.subtitle}`
+      ? `${match.title} Prediction | ${match.subtitle}`
       : series.sport === "tennis"
-      ? `${match.title} Live Score & Prediction — ${series.name}`
-      : `${match.title} Prediction & Live Score — ${match.subtitle}, ${series.name}`;
-    const title = rawTitle.length > 60 ? `${rawTitle.slice(0, 60).trimEnd()}…` : rawTitle;
+      ? `${match.title} | ${series.name}`
+      : `${match.title} | ${series.name}`;
+    const title = rawTitle.length <= 60 ? rawTitle : match.title;
     const rawDesc = isFootball
       ? `${match.title} FIFA World Cup 2026 ${match.subtitle} — live score, today match prediction, projected top scorer${match.venue ? `, ${match.venue}` : ""} on ${formatLongDate(match.date)}. World cup 2026 fixtures & odds.`
       : isCricket
@@ -68,6 +69,7 @@ export const Route = createFileRoute("/match/$slug")({
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: desc },
+        ...ogImageMeta(title),
       ],
       links: [{ rel: "canonical", href: `https://mahadevbookss.com/match/${match.slug}` }],
       scripts: [

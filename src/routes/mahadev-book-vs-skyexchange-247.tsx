@@ -51,6 +51,7 @@ export const Route = createFileRoute("/mahadev-book-vs-skyexchange-247")({
       { title: "Mahadev Book vs Skyexchange 247 — 2026 Comparison" },
       { name: "description", content: "Mahadev Book vs Skyexchange 247 compared: cricket ID setup, UPI payouts, IPL markets, casino games, commission and support — pick the right ID." },
       { property: "og:title", content: "Mahadev Book vs Skyexchange 247 — Honest 2026 Comparison" },
+        { name: "twitter:title", content: "Mahadev Book vs Skyexchange 247 — Honest 2026 Comparison" },
       { property: "og:description", content: "Side-by-side comparison of two of India's most-searched online cricket IDs — payouts, IPL markets, commission and support." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-book-vs-skyexchange-247" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

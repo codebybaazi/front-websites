@@ -11,7 +11,6 @@ const LINK_HEADER = [
   '</sitemap.xml>; rel="sitemap"; type="application/xml"; title="XML sitemap"',
   '</llms.txt>; rel="alternate"; type="text/plain"; title="LLM discovery manifest"',
   '</robots.txt>; rel="alternate"; type="text/plain"; title="Robots policy"',
-  '<https://mahadevbookss.com/>; rel="canonical"',
   '</about>; rel="author"; title="About Mahadev Book"',
   '</contact>; rel="help"; title="Contact support"',
 ].join(", ");

@@ -3,9 +3,12 @@ import { Link } from "@tanstack/react-router";
 import { MessageCircle } from "lucide-react";
 import logoUrl from "@/assets/mahadev-logo.gif";
 import { useWhatsApp } from "@/components/WhatsAppProvider";
+import { formatWhatsAppDisplay } from "@/lib/whatsapp";
+import { OFFICE_ADDRESS_LINE, SUPPORT_EMAIL, SUPPORT_MAILTO } from "@/lib/seo";
 
 export function SiteFooter() {
-  const { whatsappUrl } = useWhatsApp();
+  const { whatsappUrl, number } = useWhatsApp();
+  const phoneDisplay = formatWhatsAppDisplay(number);
   // Only channels with a real, working destination are listed here.
   // Add Telegram/Instagram/Facebook/Twitter/YouTube back once real profile
   // URLs exist — do not point these at generic platform homepages.
@@ -20,7 +23,19 @@ export function SiteFooter() {
             <img src={logoUrl} alt={siteName} className="h-10 w-auto" />
           </div>
           <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-            India's trusted Mahadev Book ID provider — instant UPI payouts, 24/7 WhatsApp support and exchange-grade odds across sports and live casino.
+            India's trusted Mahadev Book ID provider — instant UPI payouts, 24/7 WhatsApp support and exchange-grade odds across sports and live casino. {OFFICE_ADDRESS_LINE}
+            {phoneDisplay ? (
+              <>
+                {" · "}
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary">
+                  {phoneDisplay}
+                </a>
+              </>
+            ) : null}
+            {" · "}
+            <a href={SUPPORT_MAILTO} className="text-foreground hover:text-primary">
+              {SUPPORT_EMAIL}
+            </a>
           </p>
           <div className="mt-5">
             <div className="text-[11px] font-bold uppercase tracking-widest text-primary/80 mb-2">Follow Us</div>
@@ -43,16 +58,16 @@ export function SiteFooter() {
         <div>
           <div className="font-semibold mb-3">Product</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><a href="#in-play" className="hover:text-foreground">In-Play & Upcoming</a></li>
-            <li><Link to="/matches" className="hover:text-foreground">All Matches Index</Link></li>
+            <li><Link to="/matches" search={{ sport: "all", q: "" }} className="hover:text-foreground">In-Play & Upcoming</Link></li>
+            <li><Link to="/matches" search={{ sport: "all", q: "" }} className="hover:text-foreground">All Matches Index</Link></li>
             <li><Link to="/predictions" className="hover:text-foreground">Match Predictions</Link></li>
             <li><Link to="/schedule" className="hover:text-foreground">2026 Match Schedule</Link></li>
             <li><Link to="/mahadev-betting-app" className="hover:text-foreground">Mahadev Betting App</Link></li>
             <li><Link to="/mahadev-book-vs-lotus-365" className="hover:text-foreground">Mahadev Book vs Lotus 365</Link></li>
             <li><Link to="/mahadev-book-vs-skyexchange-247" className="hover:text-foreground">Mahadev Book vs SkyExchange 247</Link></li>
-            <li><a href="#betting-options" className="hover:text-foreground">Betting Options</a></li>
-            <li><a href="#our-casinos" className="hover:text-foreground">Live Casino</a></li>
-            <li><a href="#promotions" className="hover:text-foreground">Promotions</a></li>
+            <li><Link to="/sports" className="hover:text-foreground">Betting Options</Link></li>
+            <li><Link to="/services" className="hover:text-foreground">Live Casino</Link></li>
+            <li><Link to="/mahadev-book-bonuses" className="hover:text-foreground">Promotions</Link></li>
           </ul>
         </div>
         <div>
@@ -63,20 +78,36 @@ export function SiteFooter() {
             <li><Link to="/blog" className="hover:text-foreground">Blog</Link></li>
             <li><Link to="/contact" className="hover:text-foreground">Contact</Link></li>
             <li><Link to="/login" className="hover:text-foreground">Login</Link></li>
-            <li><a href="#why" className="hover:text-foreground">Why Choose Us</a></li>
-            <li><a href="#testimonials" className="hover:text-foreground">Testimonials</a></li>
+            <li><Link to="/why" className="hover:text-foreground">Why Choose Us</Link></li>
+            <li><Link to="/reviews" className="hover:text-foreground">Testimonials</Link></li>
             <li><Link to="/all-links" className="hover:text-foreground">All Links (Sitemap)</Link></li>
           </ul>
         </div>
         <div>
           <div className="font-semibold mb-3">Support</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">WhatsApp Support</a></li>
-            <li><a href="#steps" className="hover:text-foreground">How It Works</a></li>
+            <li>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
+                WhatsApp {phoneDisplay || "Support"}
+              </a>
+            </li>
+            {number ? (
+              <li>
+                <a href={`tel:+${number}`} className="hover:text-foreground">
+                  Call {phoneDisplay}
+                </a>
+              </li>
+            ) : null}
+            <li>
+              <a href={SUPPORT_MAILTO} className="hover:text-foreground">
+                {SUPPORT_EMAIL}
+              </a>
+            </li>
+            <li><Link to="/what" className="hover:text-foreground">How It Works</Link></li>
             <li><Link to="/contact" className="hover:text-foreground">Live Chat</Link></li>
-            <li><a href="#faq" className="hover:text-foreground">FAQs</a></li>
-            <li><a href="#payments" className="hover:text-foreground">Deposit & Withdrawal</a></li>
-            <li><a href="#kyc" className="hover:text-foreground">KYC & Security</a></li>
+            <li><Link to="/contact" className="hover:text-foreground">FAQs</Link></li>
+            <li><Link to="/mahadev-book-deposit-methods" className="hover:text-foreground">Deposit & Withdrawal</Link></li>
+            <li><Link to="/mahadev-book-kyc" className="hover:text-foreground">KYC & Security</Link></li>
           </ul>
         </div>
       </div>

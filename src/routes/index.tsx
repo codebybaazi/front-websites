@@ -33,7 +33,7 @@ const reviews = [
 const homeFaqs: FAQItem[] = [
   { q: "What is Mahadev Book?", a: "Mahadev Book is India's trusted online betting app and cricket ID provider — one verified ID unlocks IPL cricket, football, live casino, Aviator and Teen Patti with instant UPI payouts." },
   { q: "How do I get a Mahadev Book ID?", a: "Message us on WhatsApp with your name and preferred deposit method. You'll receive a verified Mahadev Book ID with login URL, user ID and password in under 60 seconds." },
-  { q: "Is Mahadev Book safe to use?", a: "Yes. Every account is KYC-verified, the platform uses SSL and PCI-DSS-aligned payments, and casino games are RNG-audited. Running since 2010 with 1M+ verified users." },
+  { q: "Is Mahadev Book safe to use?", a: "Every account is KYC-verified, payments run on SSL and PCI-DSS-aligned rails, and casino games are RNG-audited. The platform has been issuing IDs since 2010." },
   { q: "How fast are UPI withdrawals?", a: "UPI withdrawals settle in minutes, not days. IMPS and bank transfers land the same working day. No hidden delays." },
   { q: "What sports and games can I play?", a: "IPL, T20 World Cup, EPL, La Liga, tennis, kabaddi, horse racing, live-dealer casino, Aviator, Teen Patti, Andar Bahar and 500+ slots — all under one login." },
   { q: "Is there a Mahadev Book app or APK?", a: "Yes — you can play from any mobile browser, and the official Mahadev betting app APK is available on request via WhatsApp." },
@@ -68,8 +68,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Mahadev Book — Official Online Betting App & Cricket ID" },
-      { name: "description", content: "Mahadev Book — India's trusted online betting app. Get a verified Mahadev ID on WhatsApp in 60 seconds for IPL cricket, live casino, Aviator & Teen Patti with instant UPI payouts." },
+      { name: "description", content: "India's trusted online betting app. Get a verified Mahadev ID on WhatsApp in 60 seconds for IPL cricket, live casino, Aviator & Teen Patti with UPI payouts." },
       { property: "og:title", content: "Mahadev Book — Official Online Betting App & Cricket ID" },
+        { name: "twitter:title", content: "Mahadev Book — Official Online Betting App & Cricket ID" },
       { property: "og:description", content: "Mahadev Book: verified Mahadev IDs on WhatsApp in 60 seconds. IPL cricket, live casino, Aviator, Teen Patti — instant UPI payouts 24/7." },
       { property: "og:url", content: "https://mahadevbookss.com/" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
@@ -345,7 +346,7 @@ function Index() {
                   { icon: "🛡️", label: "100% Verified · KYC Secure", tone: "from-emerald-400/20 to-emerald-500/10 text-emerald-200 border-emerald-400/40" },
                   { icon: "💬", label: "24/7 WhatsApp Support", tone: "from-lime-400/20 to-lime-500/10 text-lime-200 border-lime-400/40" },
                   { icon: "🎁", label: "Welcome Bonus", tone: "from-fuchsia-400/20 to-fuchsia-500/10 text-fuchsia-200 border-fuchsia-400/40" },
-                  { icon: "🏆", label: "1M+ Trusted Players", tone: "from-amber-400/20 to-amber-500/10 text-amber-200 border-amber-400/40" },
+                  { icon: "🏆", label: "KYC-only IDs since 2010", tone: "from-amber-400/20 to-amber-500/10 text-amber-200 border-amber-400/40" },
                 ].map((p, idx) => (
                   <span
                     key={`${i}-${idx}`}
@@ -382,7 +383,7 @@ function Index() {
             <div className="flex items-center gap-3">
               <span className="h-px w-10 bg-gradient-to-r from-transparent to-primary" />
               <span className="text-primary text-[11px] tracking-[0.4em] uppercase font-semibold">
-                Since 2010 · Trusted by 1M+
+                Since 2010 · KYC-verified IDs
               </span>
             </div>
             <h1 className="mt-4 font-display text-4xl sm:text-5xl font-bold tracking-tight leading-[1.05]">
@@ -395,10 +396,10 @@ function Index() {
 
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
               {[
-                { k: "1M+", v: "Verified Users" },
+                { k: "2010", v: "Operating since" },
                 { k: "15Y", v: "Years Running" },
                 { k: "24/7", v: "Live Support" },
-                { k: "99.98%", v: "Uptime" },
+                { k: "UPI", v: "In & out" },
               ].map((s) => (
                 <div key={s.v} className="rounded-xl border border-border bg-card/60 backdrop-blur px-4 py-3">
                   <div className="font-display text-2xl font-bold text-gradient-gold">{s.k}</div>
@@ -856,7 +857,7 @@ function Index() {
             Why bettors pick <span className="text-gradient-gold">Mahadev Book</span> first
           </h2>
           <p className="text-muted-foreground mt-4 max-w-xl">
-            Six non-negotiables that keep 1M+ Indian bettors coming back — no fake bonuses, no delayed payouts, no chatbot mazes.
+            Six habits that keep Indian bettors coming back — no fake bonuses, no delayed payouts, no chatbot mazes.
           </p>
         </div>
         <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -959,7 +960,7 @@ function Index() {
           "Live casino, Aviator, Teen Patti, Andar Bahar",
           "Instant UPI deposits & minute-scale withdrawals",
           "24/7 human support (English & Hindi)",
-          "1M+ verified players since 2010",
+          "KYC-verified players since 2010",
         ]}
         keywords={["online cricket id", "cricket betting id", "cricket satta id", "ipl betting id", "mahadev book", "betting id"]}
       />

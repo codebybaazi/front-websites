@@ -41,6 +41,7 @@ export const Route = createFileRoute("/mahadev-book-vs-lotus-365")({
       { title: "Mahadev Book vs Lotus 365 — Honest 2026 Comparison" },
       { name: "description", content: "Mahadev Book vs Lotus 365 compared side-by-side: setup time, UPI payouts, IPL markets, casino games, bonuses and support — pick the right cricket ID." },
       { property: "og:title", content: "Mahadev Book vs Lotus 365 — Honest 2026 Comparison" },
+        { name: "twitter:title", content: "Mahadev Book vs Lotus 365 — Honest 2026 Comparison" },
       { property: "og:description", content: "Side-by-side comparison of India's two most-searched online cricket IDs — payouts, markets, bonuses and support." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-book-vs-lotus-365" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

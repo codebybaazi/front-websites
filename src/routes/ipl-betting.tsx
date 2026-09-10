@@ -19,6 +19,7 @@ export const Route = createFileRoute("/ipl-betting")({
       { title: "IPL Betting on Mahadev Book — Markets, Odds & Live In-Play" },
       { name: "description", content: "Bet on IPL with a Mahadev Book ID — 200+ markets per match, session and fancy odds, live in-play pricing, and UPI withdrawals in minutes." },
       { property: "og:title", content: "IPL Betting on Mahadev Book — Markets, Odds & Live In-Play" },
+        { name: "twitter:title", content: "IPL Betting on Mahadev Book — Markets, Odds & Live In-Play" },
       { property: "og:description", content: "IPL markets, session odds and live in-play betting on Mahadev Book, with fast UPI payouts." },
       { property: "og:url", content: "https://mahadevbookss.com/ipl-betting" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
@@ -104,6 +105,7 @@ function IplBettingPage() {
       />
 
       <section className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6">What IPL betting markets does Mahadev Book offer?</h2>
         <div className="grid sm:grid-cols-2 gap-4">
           {markets.map((m) => (
             <div key={m.t} className="rounded-2xl border border-border bg-card p-6">

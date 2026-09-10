@@ -19,6 +19,7 @@ export const Route = createFileRoute("/football-betting")({
       { title: "Football Betting on Mahadev Book — EPL, La Liga, UCL & More" },
       { name: "description", content: "Bet on football with Mahadev Book — EPL, La Liga, Serie A, UEFA Champions League and FIFA World Cup 2026, with live in-play markets and fast UPI payouts." },
       { property: "og:title", content: "Football Betting on Mahadev Book — EPL, La Liga, UCL & More" },
+        { name: "twitter:title", content: "Football Betting on Mahadev Book — EPL, La Liga, UCL & More" },
       { property: "og:description", content: "Football markets on Mahadev Book — major leagues, live odds and the same ID used for cricket." },
       { property: "og:url", content: "https://mahadevbookss.com/football-betting" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
@@ -104,6 +105,7 @@ function FootballBettingPage() {
       />
 
       <section className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6">What football betting markets does Mahadev Book offer?</h2>
         <div className="grid sm:grid-cols-2 gap-4">
           {markets.map((m) => (
             <div key={m.t} className="rounded-2xl border border-border bg-card p-6">

@@ -21,6 +21,7 @@ export const Route = createFileRoute("/mahadev-book-limits")({
       { title: "Mahadev Book Limits — Deposit & Withdrawal Caps Explained" },
       { name: "description", content: "How Mahadev Book deposit and withdrawal limits work, why new accounts start lower, and how to raise your withdrawal cap through the official WhatsApp support line." },
       { property: "og:title", content: "Mahadev Book Limits — Deposit & Withdrawal Caps Explained" },
+        { name: "twitter:title", content: "Mahadev Book Limits — Deposit & Withdrawal Caps Explained" },
       { property: "og:description", content: "Mahadev Book deposit and withdrawal limits explained — how they scale with KYC and account history." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-book-limits" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

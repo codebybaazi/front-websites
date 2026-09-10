@@ -4,6 +4,7 @@ import { useWhatsApp } from "@/components/WhatsAppProvider";
 import { AIOverview } from "@/components/AIOverview";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
+import { howToJsonLd } from "@/lib/seo";
 
 const loginFaqs: FAQItem[] = [
   { q: "Why can't I log into my Mahadev Book ID?", a: "The most common causes are a mistyped password, an expired session after a long gap between logins, or a temporary hold placed on the account after several failed attempts. All three are fixed on WhatsApp in a few minutes." },
@@ -21,6 +22,7 @@ export const Route = createFileRoute("/mahadev-book-login-issues")({
       { title: "Mahadev Book Login Issues — Fix Access on WhatsApp" },
       { name: "description", content: "Can't log into your Mahadev Book ID? See the common causes of login issues and get access restored fast through the official Mahadev Book WhatsApp support line." },
       { property: "og:title", content: "Mahadev Book Login Issues — Fix Access on WhatsApp" },
+        { name: "twitter:title", content: "Mahadev Book Login Issues — Fix Access on WhatsApp" },
       { property: "og:description", content: "Locked out, forgot your password, or your Mahadev Book ID won't load? Get it fixed on the official WhatsApp support line." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-book-login-issues" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
@@ -32,6 +34,16 @@ export const Route = createFileRoute("/mahadev-book-login-issues")({
     links: [{ rel: "canonical", href: "https://mahadevbookss.com/mahadev-book-login-issues" }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(faqJsonLd(loginFaqs)) },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          howToJsonLd("How to fix a Mahadev Book login issue", "Restore access to a Mahadev Book ID on WhatsApp without sharing your password.", [
+            { name: "Message from your registered number", text: "Open the official WhatsApp line and describe what happens when you try to log in: wrong password, lock screen, or a new device prompt." },
+            { name: "Confirm it is your account", text: "Support checks KYC details. They will not ask you to send your password." },
+            { name: "Take the fix they give you", text: "That is usually a password reset, an unlock after failed attempts, or a number update if you changed phones." },
+          ]),
+        ),
+      },
       {
         type: "application/ld+json",
         children: JSON.stringify({

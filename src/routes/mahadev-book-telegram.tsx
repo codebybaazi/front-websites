@@ -20,6 +20,7 @@ export const Route = createFileRoute("/mahadev-book-telegram")({
       { title: "Mahadev Book Telegram — Official Channel for Updates" },
       { name: "description", content: "Join the official Mahadev Book Telegram channel for match updates, odds and promotions. For deposits, withdrawals and account help, use the official WhatsApp support line." },
       { property: "og:title", content: "Mahadev Book Telegram — Official Channel for Updates" },
+        { name: "twitter:title", content: "Mahadev Book Telegram — Official Channel for Updates" },
       { property: "og:description", content: "The official Mahadev Book Telegram channel for match updates and odds. Account support still runs through WhatsApp." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-book-telegram" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

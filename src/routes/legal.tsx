@@ -7,7 +7,7 @@ import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
 
 const legalFaqs: FAQItem[] = [
   { q: "Is online betting legal in India?", a: "It sits in a grey area under the Public Gambling Act 1867, a colonial-era law that doesn't clearly address online formats. Most states treat skill-based games differently from pure chance games, and a small number of states, including Sikkim, Nagaland and Meghalaya, have their own licensing frameworks for online betting." },
-  { q: "Where is Mahadev Book based?", a: "Like most platforms serving the Indian market, Mahadev Book operates offshore, using licensed backend gaming software rather than being incorporated as an Indian gaming company." },
+  { q: "Where is Mahadev Book based?", a: "Mahadev Book is incorporated under the laws of Curaçao and operates offshore, using backend gaming software licensed under Curaçao's gaming framework rather than being incorporated as an Indian gaming company." },
   { q: "Can I get in legal trouble for using Mahadev Book?", a: "Enforcement against individual players is rare in most Indian states, but laws vary by state and can change. If you're unsure about your local rules, it's worth checking before playing." },
   { q: "Does Mahadev Book follow anti-money-laundering practices?", a: "Yes. Mandatory KYC, payment matching to verified accounts, and monitoring for unusual account activity are standard parts of how deposits and withdrawals are handled." },
   { q: "Is there an age requirement?", a: "Yes, strictly 18 and over. Accounts found to belong to a minor are closed under the terms and conditions." },
@@ -18,8 +18,9 @@ export const Route = createFileRoute("/legal")({
   head: () => ({
     meta: [
       { title: "Mahadev Book — Legal Status & Compliance Explained" },
-      { name: "description", content: "Where online betting stands legally in India, how Mahadev Book operates, and the compliance practices — KYC, AML checks and dispute handling — behind the platform." },
+      { name: "description", content: "How online betting is treated in India, where Mahadev Book operates, and how KYC, AML checks and disputes are handled." },
       { property: "og:title", content: "Mahadev Book — Legal Status & Compliance Explained" },
+        { name: "twitter:title", content: "Mahadev Book — Legal Status & Compliance Explained" },
       { property: "og:description", content: "Online betting's legal status in India and how Mahadev Book handles compliance, KYC and disputes." },
       { property: "og:url", content: "https://mahadevbookss.com/legal" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
@@ -59,7 +60,7 @@ export const Route = createFileRoute("/legal")({
 
 const points = [
   { icon: Scale, t: "A grey area, not a clear yes or no", d: "The Public Gambling Act 1867 predates online betting entirely, so states interpret and enforce it differently." },
-  { icon: Globe, t: "Offshore operation", d: "Like most platforms serving Indian players, Mahadev Book operates outside India using licensed backend gaming software." },
+  { icon: Globe, t: "Incorporated in Curaçao", d: "Mahadev Book is incorporated under the laws of Curaçao and operates outside India under that jurisdiction's gaming framework." },
   { icon: ShieldCheck, t: "AML and KYC built in", d: "Verified identity and payment matching aren't optional extras — they're how deposits and withdrawals are processed by default." },
   { icon: FileText, t: "Disputes handled directly", d: "No arbitration process to navigate — disputes go through the same WhatsApp desk that handles everything else." },
 ];
@@ -84,16 +85,16 @@ function LegalPage() {
 
       <AIOverview
         title="AI Overview — Mahadev Book Legal Status"
-        summary="Online betting in India sits in a grey area under the Public Gambling Act 1867, a law that predates online formats and is interpreted differently across states. Mahadev Book, like most platforms serving Indian players, operates offshore using licensed backend gaming software. KYC and anti-money-laundering checks are built into deposits and withdrawals, and disputes are handled directly through the WhatsApp support desk rather than a formal arbitration process."
+        summary="Online betting in India sits in a grey area under the Public Gambling Act 1867, a law that predates online formats and is interpreted differently across states. Mahadev Book is incorporated under the laws of Curaçao and operates offshore under that jurisdiction's gaming framework. KYC and anti-money-laundering checks are built into deposits and withdrawals, and disputes are handled directly through the WhatsApp support desk rather than a formal arbitration process."
         points={[
           "Legal status varies by state under a colonial-era law",
           "Some states (Sikkim, Nagaland, Meghalaya) license online betting directly",
-          "Platform operates offshore with licensed backend software",
+          "Incorporated under the laws of Curaçao, operating offshore",
           "KYC and AML checks built into deposits and withdrawals",
           "18+ only, strictly enforced",
           "Disputes handled directly on WhatsApp",
         ]}
-        keywords={["mahadev book legal", "is online betting legal in india", "mahadev book compliance", "mahadev book kyc aml"]}
+        keywords={["mahadev book legal", "is online betting legal in india", "mahadev book curacao", "mahadev book compliance", "mahadev book kyc aml"]}
       />
 
       <section className="mx-auto max-w-5xl px-4 sm:px-6 py-12">

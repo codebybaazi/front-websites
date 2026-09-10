@@ -21,6 +21,7 @@ export const Route = createFileRoute("/mahadev-book-priority-support")({
       { title: "Mahadev Book Priority Support — Faster Help for High-Volume Players" },
       { name: "description", content: "How the Mahadev Book priority desk works for high-volume players — faster response, senior agents, and quicker withdrawal reviews on the official WhatsApp support line." },
       { property: "og:title", content: "Mahadev Book Priority Support — Faster Help for High-Volume Players" },
+        { name: "twitter:title", content: "Mahadev Book Priority Support — Faster Help for High-Volume Players" },
       { property: "og:description", content: "Get moved to Mahadev Book's priority support desk for faster responses and quicker withdrawal reviews on WhatsApp." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-book-priority-support" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

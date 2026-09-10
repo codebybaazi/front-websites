@@ -37,9 +37,15 @@ export const Route = createFileRoute("/matches")({
       { title: "All Matches 2026-27 — Tournament Index, Filter & Search" },
       { name: "description", content: "All cricket, football & tennis matches 2026-27 by tournament. Filter by sport, search teams or venues — jump to fixtures, live score & predictions." },
       { property: "og:title", content: "All Matches 2026-27 — Tournament Index, Filter & Search" },
+        { name: "twitter:title", content: "All Matches 2026-27 — Tournament Index, Filter & Search" },
       { property: "og:description", content: "Every cricket series, FIFA World Cup 2026 knockout & ATP/WTA event in one place. Filter by sport, search teams or venues, open any match page." },
       { property: "og:url", content: "https://mahadevbookss.com/matches" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Mahadev Book — All Matches, Fixtures & Predictions" },
+      { name: "twitter:image", content: "https://mahadevbookss.com/og-image.jpg" },
     ],
     links: [{ rel: "canonical", href: "https://mahadevbookss.com/matches" }],
     scripts: [
@@ -283,6 +289,7 @@ function MatchesIndexPage() {
               </div>
             ) : (
               <div className="space-y-10">
+                <h2 className="sr-only">Which tournaments and matches are on the index?</h2>
                 {filtered.map((series, idx) => (
                   <TournamentGroup key={series.slug} series={series} index={idx + 1} />
                 ))}
@@ -313,9 +320,9 @@ function TournamentGroup({ series, index }: { series: ScheduleSeries; index: num
         <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-primary border border-primary/40 px-2 py-0.5">
           {series.sport}
         </span>
-        <h2 className="font-display text-xl sm:text-2xl font-bold uppercase leading-tight">
+        <h3 className="font-display text-xl sm:text-2xl font-bold uppercase leading-tight">
           {series.name}
-        </h2>
+        </h3>
         <span className="text-xs text-muted-foreground font-mono">
           {series.format} · {formatLongDate(series.start)} – {formatLongDate(series.end)}
         </span>

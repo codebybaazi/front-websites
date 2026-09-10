@@ -4,6 +4,7 @@ import { useWhatsApp } from "@/components/WhatsAppProvider";
 import { AIOverview } from "@/components/AIOverview";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
+import { howToJsonLd } from "@/lib/seo";
 
 const depositFaqs: FAQItem[] = [
   { q: "What deposit methods does Mahadev Book accept?", a: "UPI (any app), PhonePe, Google Pay, Paytm, IMPS and NEFT bank transfer, plus USDT and crypto on request. UPI is the fastest and most commonly used." },
@@ -21,6 +22,7 @@ export const Route = createFileRoute("/mahadev-book-deposit-methods")({
       { title: "Mahadev Book Deposit Methods — UPI, Bank & Wallet Guide" },
       { name: "description", content: "How to deposit on Mahadev Book — UPI, PhonePe, Google Pay, Paytm, IMPS, NEFT and crypto. Minimum amounts, processing time and how to get started on WhatsApp." },
       { property: "og:title", content: "Mahadev Book Deposit Methods — UPI, Bank & Wallet Guide" },
+        { name: "twitter:title", content: "Mahadev Book Deposit Methods — UPI, Bank & Wallet Guide" },
       { property: "og:description", content: "Every way to deposit on Mahadev Book — UPI, e-wallets, bank transfer and crypto — with minimums and processing time." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-book-deposit-methods" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
@@ -32,6 +34,17 @@ export const Route = createFileRoute("/mahadev-book-deposit-methods")({
     links: [{ rel: "canonical", href: "https://mahadevbookss.com/mahadev-book-deposit-methods" }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(faqJsonLd(depositFaqs)) },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          howToJsonLd("How to deposit on Mahadev Book", "Fund a Mahadev Book ID over UPI, e-wallet, bank transfer or crypto via WhatsApp.", [
+            { name: "Message the official WhatsApp line", text: "Send the amount you want to deposit and the method you prefer (UPI, PhonePe, Google Pay, Paytm, IMPS/NEFT or crypto)." },
+            { name: "Use the payment detail support shares", text: "The desk sends the correct UPI ID or account for that request. Payments sent to any other number cannot be traced or credited." },
+            { name: "Pay from your own account", text: "The deposit should come from the UPI or bank account that matches your KYC. Third-party payments can trigger an extra check." },
+            { name: "Wait for the wallet credit", text: "UPI and e-wallet deposits usually reflect within a few minutes. Bank transfers can take longer depending on the bank." },
+          ]),
+        ),
+      },
       {
         type: "application/ld+json",
         children: JSON.stringify({

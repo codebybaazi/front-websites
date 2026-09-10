@@ -10,6 +10,7 @@ export const Route = createFileRoute("/privacy")({
       { title: "Mahadev Book Privacy Policy" },
       { name: "description", content: "How Mahadev Book collects, uses and protects account and KYC information — what's stored, who it's shared with, and how to request changes to your data." },
       { property: "og:title", content: "Mahadev Book Privacy Policy" },
+        { name: "twitter:title", content: "Mahadev Book Privacy Policy" },
       { property: "og:description", content: "What data Mahadev Book collects, how it's used, and how it's kept secure." },
       { property: "og:url", content: "https://mahadevbookss.com/privacy" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
@@ -94,14 +95,14 @@ function PrivacyPage() {
 
       <AIOverview
         title="AI Overview — Mahadev Book Privacy Policy"
-        summary="Mahadev Book collects account details, payment information and KYC documents to verify identity, process deposits and withdrawals, and prevent fraud. Data isn't sold or shared with third parties for marketing, and is disclosed only where legally required or to payment processors completing a requested transaction. Account and payment data is handled under SSL and PCI-DSS aligned practices, and players can request changes to their data on WhatsApp."
+        summary="Mahadev Book collects account details, payment information and KYC documents to verify identity, process deposits and withdrawals, and prevent fraud. Data isn't sold or shared with third parties for marketing, and is disclosed only where legally required or to payment processors completing a requested transaction. Account and payment data is handled under SSL and PCI-DSS aligned practices, and players can request changes to their data on WhatsApp or at support@mahadevbookss.com."
         points={[
           "Data collected: name, mobile number, payment method, KYC ID",
           "Used for verification, fraud prevention and support",
           "Not sold or shared with third parties for marketing",
           "Bank-grade SSL and PCI-DSS aligned handling",
           "Basic cookies for login and site analytics only",
-          "Data change or deletion requests handled on WhatsApp",
+          "Data change or deletion requests: WhatsApp or support@mahadevbookss.com",
         ]}
         keywords={["mahadev book privacy policy", "mahadev book data protection", "mahadev book kyc privacy"]}
       />
@@ -121,8 +122,8 @@ function PrivacyPage() {
           <p className="mt-3 text-foreground/85 leading-relaxed">
             You can ask what information we hold about you, request a correction, or ask for your
             account data to be deleted where it isn't needed for legal or fraud-prevention
-            purposes. Message support on WhatsApp with your registered mobile number to start any
-            of these requests.
+            purposes. Email support@mahadevbookss.com or message WhatsApp with your registered mobile
+            number to start any of these requests.
           </p>
         </div>
 

@@ -6,7 +6,7 @@ import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
 
 const trustedFaqs: FAQItem[] = [
-  { q: "What makes Mahadev Book a trusted provider?", a: "Mandatory KYC on every ID, SSL and PCI-DSS aligned payment handling, independently audited casino RNG, and 15+ years of continuous operation with over a million verified players." },
+  { q: "What makes Mahadev Book a trusted provider?", a: "Mandatory KYC on every ID, SSL and PCI-DSS aligned payment handling, independently audited casino RNG, and continuous operation since 2010." },
   { q: "Is Mahadev Book licensed?", a: "The platform runs on licensed backend gaming software from established providers, the same infrastructure used across the regulated online betting industry." },
   { q: "How do I know casino games aren't rigged?", a: "Live tables run through independently audited studios like Evolution and Ezugi, and RNG-based games go through regular fairness audits rather than running on in-house, unverifiable code." },
   { q: "Are my payment details safe with Mahadev Book?", a: "Yes. Payment data is handled under SSL encryption and PCI-DSS aligned practices, the same standard used by banks and major payment processors." },
@@ -19,6 +19,7 @@ export const Route = createFileRoute("/trusted")({
       { title: "Mahadev Book — A Trusted, Verified Betting ID Provider" },
       { name: "description", content: "What makes Mahadev Book a trusted cricket ID provider — mandatory KYC, licensed backend software, audited casino games, and SSL/PCI-DSS aligned payments." },
       { property: "og:title", content: "Mahadev Book — A Trusted, Verified Betting ID Provider" },
+        { name: "twitter:title", content: "Mahadev Book — A Trusted, Verified Betting ID Provider" },
       { property: "og:description", content: "KYC-verified IDs, audited casino games and secure payments — the trust signals behind Mahadev Book." },
       { property: "og:url", content: "https://mahadevbookss.com/trusted" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
@@ -60,7 +61,7 @@ const signals = [
   { icon: BadgeCheck, t: "Mandatory KYC", d: "Every ID is tied to one verified person before withdrawals unlock. No shared or anonymous accounts." },
   { icon: Lock, t: "SSL & PCI-DSS aligned payments", d: "The same class of encryption and payment-handling standards used by banks and major processors." },
   { icon: Dice5, t: "Audited casino games", d: "Live tables run through independently audited studios, and RNG titles go through regular fairness checks." },
-  { icon: ShieldCheck, t: "15+ years running", d: "Continuous operation since 2010, with over a million verified players and no public payout disputes." },
+  { icon: ShieldCheck, t: "15+ years running", d: "Continuous operation since 2010. Payouts go out on the same WhatsApp desk that issued the ID." },
 ];
 
 function TrustedPage() {
@@ -88,19 +89,20 @@ function TrustedPage() {
 
       <AIOverview
         title="AI Overview — Mahadev Book Trust Signals"
-        summary="Mahadev Book's trust signals rest on four things: mandatory KYC on every account before withdrawals unlock, SSL and PCI-DSS aligned payment handling, independently audited casino games through established studios, and 15+ years of continuous operation with over a million verified players and no public payout disputes."
+        summary="Mahadev Book's trust signals rest on four things: mandatory KYC on every account before withdrawals unlock, SSL and PCI-DSS aligned payment handling, independently audited casino games through established studios, and continuous operation since 2010 with payouts on UPI, IMPS and bank transfer."
         points={[
           "Mandatory KYC before withdrawals unlock",
           "SSL and PCI-DSS aligned payment handling",
           "Casino games run through audited, established studios",
           "Regular fairness audits on RNG-based games",
           "Running continuously since 2010",
-          "1M+ verified players, no public payout disputes",
+          "Payouts on the same desk that issued the ID",
         ]}
         keywords={["mahadev book trusted", "mahadev book verified", "mahadev book licensed", "is mahadev book legit"]}
       />
 
       <section className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6">What makes Mahadev Book a trusted provider?</h2>
         <div className="grid sm:grid-cols-2 gap-4">
           {signals.map((s) => (
             <div key={s.t} className="rounded-2xl border border-border bg-card p-6">

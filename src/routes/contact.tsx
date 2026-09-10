@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useWhatsApp } from "@/components/WhatsAppProvider";
 import { fetchWhatsAppNumber, formatWhatsAppDisplay } from "@/lib/whatsapp";
+import { ogImageMeta, OFFICE_ADDRESS_LINE, postalAddressJsonLd, SUPPORT_EMAIL, SUPPORT_MAILTO } from "@/lib/seo";
+import { OfficialNumberCard } from "@/components/OfficialNumberCard";
 import { AIOverview } from "@/components/AIOverview";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
@@ -11,7 +13,7 @@ import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
 const contactFaqs: FAQItem[] = [
   { q: "How do I get a Mahadev Book cricket ID?", a: "Message our WhatsApp with your name and preferred deposit method. You'll receive a verified online cricket ID with login URL, user ID and password in under 5 minutes." },
   { q: "Is support really available 24/7?", a: "Yes — human agents (not bots) staff WhatsApp, Telegram and phone 24 hours a day, including IPL nights, Diwali and cup finals." },
-  { q: "What's the fastest way to reach Mahadev Book?", a: "WhatsApp. Replies typically land in under 60 seconds. Telegram and phone are also live 24/7 for anyone who prefers them." },
+  { q: "What's the fastest way to reach Mahadev Book?", a: "WhatsApp. The live number is printed on this page with a wa.me chat link and a tel: call link. Replies typically land in under 60 seconds. For a written record, email support@mahadevbookss.com." },
   { q: "Which languages does Mahadev Book support?", a: "English and Hindi across every channel. Regional-language agents are available on request for Marathi, Gujarati, Tamil and Telugu." },
   { q: "Can I get help with deposits, withdrawals or KYC on the same channel?", a: "Yes — the same WhatsApp desk handles new IDs, UPI deposits, minute-scale withdrawals and KYC verification. No transfers, no ticket queues." },
 ];
@@ -23,13 +25,10 @@ export const Route = createFileRoute("/contact")({
       { title: "Get a Cricket Betting ID on WhatsApp | Contact Mahadev Book" },
       { name: "description", content: "Get your online cricket ID or betting ID on WhatsApp in under 5 minutes. Message the Mahadev Book team on WhatsApp, Telegram, phone or email — 24/7." },
       { property: "og:title", content: "Get a Cricket Betting ID on WhatsApp | Contact Mahadev Book" },
+        { name: "twitter:title", content: "Get a Cricket Betting ID on WhatsApp | Contact Mahadev Book" },
       { property: "og:description", content: "Message us on WhatsApp for a verified cricket ID in under 5 minutes. 24/7 human support in Hindi and English." },
       { property: "og:url", content: "https://mahadevbookss.com/contact" },
-      { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Contact Mahadev Book — Cricket Betting ID on WhatsApp, 24/7 Support" },
-      { name: "twitter:image", content: "https://mahadevbookss.com/og-image.jpg" },
+      ...ogImageMeta("Contact Mahadev Book — Cricket Betting ID on WhatsApp, 24/7 Support"),
     ],
     links: [{ rel: "canonical", href: "https://mahadevbookss.com/contact" }],
     scripts: [
@@ -46,8 +45,8 @@ export const Route = createFileRoute("/contact")({
         }),
       },
       // Name + phone (fetched from the same WhatsApp-number source used for wa.me
-      // links). No physical address is published, so it's omitted rather than
-      // invented — this covers the N and P of NAP, not the A.
+      // links). Address is a virtual office, not a walk-in location — flagged as
+      // such rather than presented as a physical premises.
       ...(loaderData?.waNumber
         ? [{
             type: "application/ld+json",
@@ -57,6 +56,8 @@ export const Route = createFileRoute("/contact")({
               name: "Mahadev Book",
               telephone: `+${loaderData.waNumber}`,
               url: "https://mahadevbookss.com/contact",
+              email: SUPPORT_EMAIL,
+              address: postalAddressJsonLd(),
             }),
           }]
         : []),
@@ -90,9 +91,13 @@ function ContactPage() {
           Get your cricket ID in <span className="text-gradient-gold">5 minutes on WhatsApp</span>
         </h1>
         <p className="mt-5 text-lg text-muted-foreground max-w-2xl">
-          The fastest way to get your online cricket ID or betting ID is a WhatsApp message. Our team is on for you around the clock — every match, every night, every holiday.
+          The fastest way to get your online cricket ID or betting ID is a WhatsApp message. Our team is on for you around the clock — every match, every night, every holiday. Office: {OFFICE_ADDRESS_LINE}.
         </p>
-
+        <OfficialNumberCard
+          heading="Official WhatsApp & phone"
+          blurb="This is the live Mahadev Book line from our number list. Chat on WhatsApp or tap to call — same desk for IDs, deposits, withdrawals and KYC."
+          showAddress
+        />
       </section>
 
       <AIOverview
@@ -116,7 +121,7 @@ function ContactPage() {
             { icon: MessageCircle, t: "WhatsApp", d: phoneDisplay, cta: "Chat now", href: whatsappUrl },
             { icon: Send, t: "Telegram", d: "@mahadevbook_official", cta: "Open Telegram", href: "https://t.me/" },
             { icon: Phone, t: "Phone", d: phoneDisplay, cta: "Call us", href: number ? `tel:+${number}` : undefined },
-            { icon: Mail, t: "Email", d: "support@mahadevbook.example", cta: "Send email", href: "mailto:support@mahadevbook.example" },
+            { icon: Mail, t: "Email", d: SUPPORT_EMAIL, cta: "Send email", href: SUPPORT_MAILTO },
           ].map((c) => {
             const inner = (
               <>

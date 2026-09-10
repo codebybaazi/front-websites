@@ -20,6 +20,7 @@ export const Route = createFileRoute("/responsible")({
       { title: "Mahadev Book Responsible Gaming" },
       { name: "description", content: "Responsible gaming tools on Mahadev Book — deposit limits, cooling-off periods, self-exclusion and how to spot the signs of a gambling problem." },
       { property: "og:title", content: "Mahadev Book Responsible Gaming" },
+        { name: "twitter:title", content: "Mahadev Book Responsible Gaming" },
       { property: "og:description", content: "Deposit limits, cooling-off periods and self-exclusion on Mahadev Book — play in control." },
       { property: "og:url", content: "https://mahadevbookss.com/responsible" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

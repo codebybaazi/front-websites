@@ -45,6 +45,7 @@ export const Route = createFileRoute("/reviews")({
       { title: "Mahadev Book Reviews — What Real Players Say" },
       { name: "description", content: "Genuine Mahadev Book reviews from real players — withdrawal speed, KYC, live casino and support experiences, in their own words." },
       { property: "og:title", content: "Mahadev Book Reviews — What Real Players Say" },
+        { name: "twitter:title", content: "Mahadev Book Reviews — What Real Players Say" },
       { property: "og:description", content: "Unfiltered feedback from real Mahadev Book players across India." },
       { property: "og:url", content: "https://mahadevbookss.com/reviews" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

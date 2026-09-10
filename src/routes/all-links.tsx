@@ -4,6 +4,7 @@ import { navItems } from "@/data/site";
 import { posts } from "@/data/posts";
 import { allSeries } from "@/lib/schedule-data";
 import { RelatedLinks } from "@/components/RelatedLinks";
+import { ogImageMeta } from "@/lib/seo";
 
 type LinkRow = { label: string; to: string; desc?: string };
 type LinkSection = { heading: string; items: LinkRow[] };
@@ -14,9 +15,11 @@ export const Route = createFileRoute("/all-links")({
       { title: "All Links — Full Sitemap of Mahadev Book" },
       { name: "description", content: "Browse every page on Mahadev Book in one place — sports, platforms, guides, support, predictions, schedule, matches, blog and comparison pages." },
       { property: "og:title", content: "All Links — Full Sitemap of Mahadev Book" },
+        { name: "twitter:title", content: "All Links — Full Sitemap of Mahadev Book" },
       { property: "og:description", content: "Every Mahadev Book page in one index — navigation, matches, blog, guides, support and policies." },
       { property: "og:url", content: "https://mahadevbookss.com/all-links" },
       { property: "og:type", content: "website" },
+      ...ogImageMeta("All Links — Full Sitemap of Mahadev Book"),
     ],
     links: [{ rel: "canonical", href: "https://mahadevbookss.com/all-links" }],
     scripts: [

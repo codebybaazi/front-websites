@@ -10,6 +10,7 @@ export const Route = createFileRoute("/policies")({
       { title: "Mahadev Book Policies — Terms, Privacy & Responsible Gaming" },
       { name: "description", content: "All Mahadev Book policies in one place — terms and conditions, privacy policy, responsible gaming tools and account verification requirements." },
       { property: "og:title", content: "Mahadev Book Policies — Terms, Privacy & Responsible Gaming" },
+        { name: "twitter:title", content: "Mahadev Book Policies — Terms, Privacy & Responsible Gaming" },
       { property: "og:description", content: "Every Mahadev Book policy, in one place — terms, privacy, responsible gaming and KYC." },
       { property: "og:url", content: "https://mahadevbookss.com/policies" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

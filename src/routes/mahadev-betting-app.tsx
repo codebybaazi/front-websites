@@ -17,9 +17,10 @@ const appFaqs: FAQItem[] = [
 export const Route = createFileRoute("/mahadev-betting-app")({
   head: () => ({
     meta: [
-      { title: "Mahadev Betting App — Official Download for Cricket & Casino" },
+      { title: "Mahadev Betting App — Official Cricket & Casino Download" },
       { name: "description", content: "Mahadev betting app — official download for IPL cricket, live casino, Aviator and Teen Patti. Get your ID on WhatsApp in 60 seconds with instant UPI payouts." },
       { property: "og:title", content: "Mahadev Betting App — Official Download & Cricket ID" },
+        { name: "twitter:title", content: "Mahadev Betting App — Official Download & Cricket ID" },
       { property: "og:description", content: "Download the Mahadev betting app for cricket, casino, Aviator & Teen Patti. Verified Mahadev ID on WhatsApp in 60 seconds. Instant UPI payouts." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-betting-app" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

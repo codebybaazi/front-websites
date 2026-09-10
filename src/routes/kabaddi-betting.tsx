@@ -18,6 +18,7 @@ export const Route = createFileRoute("/kabaddi-betting")({
       { title: "Kabaddi Betting on Mahadev Book — PKL & International Odds" },
       { name: "description", content: "Bet on Pro Kabaddi League and international kabaddi with Mahadev Book — match winner, total points and live in-play odds under one ID." },
       { property: "og:title", content: "Kabaddi Betting on Mahadev Book — PKL & International Odds" },
+        { name: "twitter:title", content: "Kabaddi Betting on Mahadev Book — PKL & International Odds" },
       { property: "og:description", content: "Kabaddi markets on Mahadev Book — Pro Kabaddi League and international events." },
       { property: "og:url", content: "https://mahadevbookss.com/kabaddi-betting" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

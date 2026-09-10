@@ -7,6 +7,7 @@ import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
 import { AIOverview } from "@/components/AIOverview";
 import { BlogHeroBanner } from "@/components/BlogHeroBanner";
 import { fetchWhatsAppNumber } from "@/lib/whatsapp";
+import { howToJsonLd } from "@/lib/seo";
 
 function faqsForPost(post: { title: string; category: string; faq?: FAQItem[] }): FAQItem[] {
   if (post.faq && post.faq.length > 0) return post.faq;
@@ -49,18 +50,59 @@ export const Route = createFileRoute("/blog/$slug")({
       return { meta: [{ title: "Post not found — Mahadev Book" }, { name: "robots", content: "noindex" }] };
     }
     const { post, waNumber } = loaderData;
-    const shortTitle = post.title.length > 60 ? post.title.slice(0, 57).trimEnd() + "…" : post.title;
+    const title = post.title;
     const canonicalPath = `https://mahadevbookss.com/blog/${params.slug}`;
     const author = getAuthorForCategory(post.category);
     const authorPageUrl = author ? `https://mahadevbookss.com/authors/${author.slug}` : undefined;
+    const articleLd = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: post.title,
+      description: post.excerpt,
+      datePublished: post.date,
+      dateModified: post.updated || post.date,
+      articleSection: post.category,
+      image: "https://mahadevbookss.com/og-image.jpg",
+      mainEntityOfPage: { "@type": "WebPage", "@id": canonicalPath },
+      author: author
+        ? {
+            "@type": "Person",
+            name: author.name,
+            jobTitle: author.role,
+            url: authorPageUrl,
+            worksFor: { "@type": "Organization", name: "Mahadev Book", url: "https://mahadevbookss.com/" },
+          }
+        : {
+            "@type": "Organization",
+            name: "Mahadev Book Editorial Team",
+            url: "https://mahadevbookss.com/about",
+            ...(waNumber
+              ? {
+                  contactPoint: {
+                    "@type": "ContactPoint",
+                    contactType: "editorial",
+                    telephone: `+${waNumber}`,
+                  },
+                }
+              : {}),
+          },
+      publisher: {
+        "@type": "Organization",
+        name: "Mahadev Book",
+        logo: { "@type": "ImageObject", url: "https://mahadevbookss.com/favicon.png" },
+      },
+    };
     return {
       meta: [
-        { title: shortTitle },
+        { title },
         { name: "description", content: post.excerpt },
-        { property: "og:title", content: shortTitle },
+        { property: "og:title", content: title },
         { property: "og:description", content: post.excerpt },
         { property: "og:type", content: "article" },
         { property: "og:url", content: canonicalPath },
+        { name: "twitter:title", content: title },
+        { property: "article:published_time", content: post.date },
+        { property: "article:modified_time", content: post.updated || post.date },
         { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
         { property: "og:image:width", content: "1200" },
         { property: "og:image:height", content: "630" },
@@ -68,47 +110,7 @@ export const Route = createFileRoute("/blog/$slug")({
       ],
       links: [{ rel: "canonical", href: canonicalPath }],
       scripts: [
-        {
-          type: "application/ld+json",
-          children: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: post.title,
-            description: post.excerpt,
-            datePublished: post.date,
-            dateModified: post.date,
-            articleSection: post.category,
-            image: "https://mahadevbookss.com/og-image.jpg",
-            mainEntityOfPage: { "@type": "WebPage", "@id": canonicalPath },
-            author: author
-              ? {
-                  "@type": "Person",
-                  name: author.name,
-                  jobTitle: author.role,
-                  url: authorPageUrl,
-                  worksFor: { "@type": "Organization", name: "Mahadev Book", url: "https://mahadevbookss.com/" },
-                }
-              : {
-                  "@type": "Organization",
-                  name: "Mahadev Book Editorial Team",
-                  url: "https://mahadevbookss.com/about",
-                  ...(waNumber
-                    ? {
-                        contactPoint: {
-                          "@type": "ContactPoint",
-                          contactType: "editorial",
-                          telephone: `+${waNumber}`,
-                        },
-                      }
-                    : {}),
-                },
-            publisher: {
-              "@type": "Organization",
-              name: "Mahadev Book",
-              logo: { "@type": "ImageObject", url: "https://mahadevbookss.com/favicon.png" },
-            },
-          }),
-        },
+        { type: "application/ld+json", children: JSON.stringify(articleLd) },
         {
           type: "application/ld+json",
           children: JSON.stringify({
@@ -122,6 +124,14 @@ export const Route = createFileRoute("/blog/$slug")({
           }),
         },
         { type: "application/ld+json", children: JSON.stringify(faqJsonLd(faqsForPost(post))) },
+        ...(post.howto
+          ? [
+              {
+                type: "application/ld+json",
+                children: JSON.stringify(howToJsonLd(post.howto.name, post.excerpt, post.howto.steps)),
+              },
+            ]
+          : []),
         {
           type: "application/ld+json",
           children: JSON.stringify({
@@ -203,7 +213,7 @@ function BlogPost() {
                 <span className="h-1 w-1 rounded-full bg-muted-foreground/50" />
               </>
             )}
-            <span className="inline-flex items-center gap-1.5"><Calendar className="h-3.5 w-3.5" /> {post.date}</span>
+            <span className="inline-flex items-center gap-1.5"><Calendar className="h-3.5 w-3.5" /> Last updated: {post.updated || post.date}</span>
             <span className="h-1 w-1 rounded-full bg-muted-foreground/50" />
             <span className="inline-flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {post.readTime}</span>
           </div>
@@ -224,7 +234,13 @@ function BlogPost() {
       <AIOverview
         summary={post.excerpt}
         points={post.content.slice(0, 4).map((b: { heading?: string; body: string }) => b.heading || b.body.slice(0, 90))}
-        keywords={[post.category, "Mahadev Book", "cricket betting India", "betting guide"]}
+        keywords={
+          post.slug === "mahadev-book-india-platform-guide"
+            ? [post.category, "Mahadev Book India", "Mahadev Book India 2026", "Mahadev Book India guide"]
+            : post.slug.includes("cricket")
+              ? [post.category, "Mahadev Book Cricket", "Mahadev cricket betting", "Mahadev Book cricket"]
+              : [post.category, "Mahadev Book", "cricket betting India", "betting guide"]
+        }
       />
 
       <article className="mx-auto max-w-3xl px-4 sm:px-6 pt-12 pb-8">

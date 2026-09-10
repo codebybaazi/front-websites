@@ -1,34 +1,38 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, ShieldCheck, Wallet, Clock, AlertTriangle } from "lucide-react";
+import { fetchWhatsAppNumber, formatWhatsAppDisplay } from "@/lib/whatsapp";
+import { ogImageMeta } from "@/lib/seo";
+import { OfficialNumberCard } from "@/components/OfficialNumberCard";
 import { useWhatsApp } from "@/components/WhatsAppProvider";
 import { AIOverview } from "@/components/AIOverview";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
 
 const depositFaqs: FAQItem[] = [
-  { q: "What is the Mahadev Book deposit number?", a: "It's the official WhatsApp line Mahadev Book uses to confirm deposits and issue verified cricket IDs. We only publish it as a click-to-chat link, not a printed digit, since the line can rotate for security." },
-  { q: "How do I deposit using the Mahadev Book deposit number?", a: "Tap the WhatsApp button on this page and tell us your preferred payment method — UPI, IMPS or e-wallet. Our team sends a payment link or account detail, confirms the credit, and updates your Mahadev Book wallet within minutes." },
-  { q: "Is the Mahadev Book deposit number the same every day?", a: "The number behind the WhatsApp button can rotate for security reasons, which is exactly why this page never prints it as text. Always deposit through the WhatsApp button here, not a number saved from an old screenshot or forwarded message." },
-  { q: "What happens if I send money to the wrong number?", a: "Mahadev Book can only confirm and credit deposits made after chatting through the official WhatsApp button. If a payment goes to any other number, including one from an old post or a stranger's message, we have no way to trace or refund it." },
-  { q: "Which payment methods work with this deposit number?", a: "UPI, PhonePe, Google Pay, Paytm, IMPS and NEFT bank transfer all route through the same WhatsApp deposit line. Minimum deposit starts at ₹100 over UPI." },
-  { q: "How long does a deposit take to reflect in my wallet?", a: "Most UPI deposits reflect within a few minutes of the team confirming your payment screenshot on WhatsApp. IMPS and NEFT transfers can take slightly longer depending on your bank." },
-  { q: "Can I use the deposit number for withdrawals too?", a: "Yes. The same WhatsApp line handles withdrawal requests. UPI withdrawals typically settle in 5 to 30 minutes, 24 hours a day." },
-  { q: "Is it safe to message a Mahadev Book number saved in my contacts?", a: "The deposit line does get rotated periodically for account security. If a saved contact stops responding, always come back to this page and use the current WhatsApp button rather than guessing at an old number." },
+  { q: "What is the Mahadev Book deposit number?", a: "It is the live WhatsApp and phone line used to confirm UPI, IMPS and e-wallet deposits. The current digits are printed on this page, with a WhatsApp chat link and a call link." },
+  { q: "How do I deposit using the Mahadev Book deposit number?", a: "Open the WhatsApp link next to the printed number, say your amount and method (UPI, IMPS or e-wallet), pay the detail the desk sends, and share the screenshot. Most UPI credits land within minutes." },
+  { q: "Does the deposit number change?", a: "It can rotate. Trust the number shown on this page today, not an old screenshot or a forwarded chat." },
+  { q: "What happens if I send money to the wrong number?", a: "Only deposits started through the official number on this page can be matched to your ID. Money sent to any other number cannot be traced or refunded by the desk." },
+  { q: "Which payment methods work with this deposit number?", a: "UPI, PhonePe, Google Pay, Paytm, IMPS and NEFT all go through the same line. UPI deposits start at ₹100." },
+  { q: "How long does a deposit take to reflect in my wallet?", a: "Most UPI deposits reflect within a few minutes after the screenshot is confirmed. IMPS and NEFT can take longer depending on the bank." },
+  { q: "Can I use the deposit number for withdrawals too?", a: "Yes. The same line handles withdrawal requests. UPI payouts typically settle in 5 to 30 minutes." },
+  { q: "Is it safe to save the number in my contacts?", a: "You can save it, but if a saved contact goes quiet, come back here and use the number currently listed." },
 ];
 
 export const Route = createFileRoute("/mahadev-book-deposit-number")({
-  head: () => ({
+  loader: async () => ({ waNumber: await fetchWhatsAppNumber() }),
+  head: ({ loaderData }) => {
+    const title = "Mahadev Book Deposit Number — Official WhatsApp Deposit Line";
+    const display = loaderData?.waNumber ? formatWhatsAppDisplay(loaderData.waNumber) : "";
+    return {
     meta: [
-      { title: "Mahadev Book Deposit Number — Official WhatsApp Deposit Line" },
-      { name: "description", content: "Reach the official Mahadev Book deposit number on WhatsApp for UPI, IMPS and e-wallet deposits. One tap chat link, no numbers to copy, with a safe step-by-step deposit guide." },
-      { property: "og:title", content: "Mahadev Book Deposit Number — Official WhatsApp Deposit Line" },
-      { property: "og:description", content: "Chat with the official Mahadev Book deposit line on WhatsApp. Deposit via UPI, IMPS or e-wallet and get your cricket ID funded in minutes." },
+      { title },
+      { name: "description", content: `Official Mahadev Book deposit number${display ? ` ${display}` : ""} on WhatsApp for UPI, IMPS and e-wallet. Chat or call the live line listed on this page.` },
+      { property: "og:title", content: title },
+        { name: "twitter:title", content: title },
+      { property: "og:description", content: "Chat or call the official Mahadev Book deposit line. Deposit via UPI, IMPS or e-wallet and get your cricket ID funded in minutes." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-book-deposit-number" },
-      { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Mahadev Book Deposit Number — official WhatsApp deposit line" },
-      { name: "twitter:image", content: "https://mahadevbookss.com/og-image.jpg" },
+      ...ogImageMeta("Mahadev Book Deposit Number — official WhatsApp deposit line"),
     ],
     links: [{ rel: "canonical", href: "https://mahadevbookss.com/mahadev-book-deposit-number" }],
     scripts: [
@@ -54,8 +58,24 @@ export const Route = createFileRoute("/mahadev-book-deposit-number")({
           speakable: { "@type": "SpeakableSpecification", cssSelector: [".ai-overview-speakable"] },
         }),
       },
+      ...(loaderData?.waNumber
+        ? [{
+            type: "application/ld+json" as const,
+            children: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ContactPoint",
+              contactType: "sales",
+              name: "Mahadev Book deposit desk",
+              telephone: `+${loaderData.waNumber}`,
+              url: `https://wa.me/${loaderData.waNumber}`,
+              areaServed: "IN",
+              availableLanguage: ["en", "hi"],
+            }),
+          }]
+        : []),
     ],
-  }),
+  };
+  },
   component: DepositNumberPage,
 });
 
@@ -87,42 +107,26 @@ function DepositNumberPage() {
           Mahadev Book <span className="text-gradient-gold">Deposit Number</span>
         </h1>
         <p className="mt-5 text-lg text-muted-foreground max-w-2xl">
-          The Mahadev Book deposit number is the official WhatsApp line our team uses to confirm
-          UPI, IMPS and e-wallet deposits and get your cricket ID funded. We don't print it as a
-          digit anywhere on this site, since the line can rotate for security. Use the button
-          below to open a chat with the current, verified deposit line.
+          The Mahadev Book deposit number is the live WhatsApp and phone line used to confirm
+          UPI, IMPS and e-wallet deposits. The digits below come from our official number list.
+          Chat on WhatsApp or tap Call if you prefer voice.
         </p>
-
-        <div className="mt-8 max-w-md rounded-2xl border border-primary/30 bg-primary/5 p-6">
-          <div className="text-xs uppercase tracking-wider text-muted-foreground">Official deposit line</div>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Tap below to chat directly with the verified Mahadev Book deposit number on WhatsApp.
-          </p>
-          <div className="mt-5">
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-glow inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-primary-foreground"
-            >
-              <span className="btn-glow-content flex items-center gap-2">
-                <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
-              </span>
-            </a>
-          </div>
-        </div>
+        <OfficialNumberCard
+          heading="Official deposit number"
+          blurb="Use this line for deposits only after you start the chat from this page. If a saved contact stops answering, come back here."
+        />
       </section>
 
       <AIOverview
         title="AI Overview — Mahadev Book Deposit Number"
-        summary="The Mahadev Book deposit number is the official WhatsApp line used to fund a Mahadev Book cricket ID. It accepts UPI, PhonePe, Google Pay, Paytm and IMPS/NEFT bank transfer, starting at a ₹100 minimum deposit. It's only shared as a click-to-chat WhatsApp link on this page, never printed as a fixed digit, since deposit numbers are rotated periodically for account security."
+        summary="The Mahadev Book deposit number is printed on this page as a live WhatsApp and phone line. Use it to fund a cricket ID via UPI, PhonePe, Google Pay, Paytm or IMPS/NEFT, starting at ₹100 on UPI. If the listed number ever differs from an old screenshot, trust this page."
         points={[
-          "Click-to-chat WhatsApp link, not a printed digit",
+          "Live number plus WhatsApp and call links",
           "Accepts UPI, PhonePe, Google Pay, Paytm, IMPS/NEFT",
           "₹100 minimum deposit over UPI",
           "Deposits usually reflect within minutes",
           "Same line also handles withdrawal requests",
-          "Always start from the WhatsApp button on this page",
+          "Ignore numbers from forwarded chats",
         ]}
         keywords={["mahadev book deposit number", "deposit number mahadev book", "mahadev book", "mahadev book whatsapp number"]}
       />

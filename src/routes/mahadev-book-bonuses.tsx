@@ -21,6 +21,7 @@ export const Route = createFileRoute("/mahadev-book-bonuses")({
       { title: "Mahadev Book Bonuses — Welcome Offer, Reload & Cashback" },
       { name: "description", content: "Mahadev Book bonuses explained — welcome deposit bonus, weekly reload, loss cashback and rollover terms. How to claim each one on WhatsApp." },
       { property: "og:title", content: "Mahadev Book Bonuses — Welcome Offer, Reload & Cashback" },
+        { name: "twitter:title", content: "Mahadev Book Bonuses — Welcome Offer, Reload & Cashback" },
       { property: "og:description", content: "Every Mahadev Book bonus explained — welcome offer, reload, cashback and what the rollover actually means." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-book-bonuses" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

@@ -6,20 +6,21 @@ import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
 
 const awardsFaqs: FAQItem[] = [
-  { q: "Has Mahadev Book won any industry awards?", a: "We don't claim third-party awards or certifications we haven't actually earned. What we can show is real, verifiable growth — a million-plus verified players, 15+ years of continuous operation, and consistent uptime." },
-  { q: "How many players use Mahadev Book?", a: "Over a million verified players, built up gradually since the platform started in 2010." },
-  { q: "How long has Mahadev Book been running?", a: "15+ years, starting as a small agent network before growing into the full platform it is today." },
-  { q: "What does 99.98% uptime actually mean?", a: "It means the platform is available and taking bets essentially all the time, including through major events like IPL finals when traffic spikes hardest." },
-  { q: "Why doesn't this page list specific awards?", a: "Because we haven't been formally recognized by an independent industry body, and we'd rather show real numbers than claim something that isn't true." },
+  { q: "Has Mahadev Book won any industry awards?", a: "We don't claim third-party awards we haven't earned. What we can show is continuous operation since 2010, KYC-only IDs, and UPI payouts handled on the same WhatsApp desk as support." },
+  { q: "How many players use Mahadev Book?", a: "We do not publish an audited user count. Accounts have been issued since 2010, each one KYC-checked before withdrawals unlock." },
+  { q: "How long has Mahadev Book been running?", a: "Since 2010, first as an agent network and then as the full platform." },
+  { q: "Does Mahadev Book stay up during IPL nights?", a: "The desk and wallet stay open through high-traffic events. We do not quote an unaudited uptime percentage." },
+  { q: "Why doesn't this page list specific awards?", a: "Because we haven't been formally recognized by an independent industry body, and we'd rather describe how the ID actually works than invent a trophy list." },
 ];
 
 export const Route = createFileRoute("/awards")({
   head: () => ({
     meta: [
       { title: "Mahadev Book Milestones — Real Growth, Not Empty Claims" },
-      { name: "description", content: "Mahadev Book's real growth over 15+ years — a million-plus verified players, consistent uptime and yearly payout volume, shown honestly rather than as claimed awards." },
+      { name: "description", content: "Mahadev Book since 2010: KYC-only IDs, UPI payouts and 24/7 WhatsApp support. No invented awards or unaudited volume stats." },
       { property: "og:title", content: "Mahadev Book Milestones — Real Growth, Not Empty Claims" },
-      { property: "og:description", content: "The real numbers behind Mahadev Book's growth since 2010." },
+        { name: "twitter:title", content: "Mahadev Book Milestones — Real Growth, Not Empty Claims" },
+      { property: "og:description", content: "How Mahadev Book has operated since 2010, without a fake trophy list." },
       { property: "og:url", content: "https://mahadevbookss.com/awards" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
       { property: "og:image:width", content: "1200" },
@@ -57,10 +58,10 @@ export const Route = createFileRoute("/awards")({
 });
 
 const milestones = [
-  { icon: Users, t: "1M+ verified players", d: "Built up gradually over 15+ years, one KYC-checked account at a time, not through paid growth campaigns." },
+  { icon: Users, t: "KYC-only IDs since 2010", d: "Every cash-out waits on a name match. Accounts are built one KYC check at a time, not through shared or proxy logins." },
   { icon: Calendar, t: "15+ years running", d: "Continuous operation since 2010, starting as a small agent network before growing into the full platform." },
-  { icon: Wallet, t: "₹500Cr+ paid out yearly", d: "Real payout volume processed through UPI, IMPS and bank transfer, without public disputes over unpaid winnings." },
-  { icon: Activity, t: "99.98% uptime", d: "The platform stays live through the traffic spikes that matter most, including IPL finals and major tournament nights." },
+  { icon: Wallet, t: "UPI, IMPS and bank payouts", d: "Winnings leave through the same desk that takes deposits. We do not publish an unaudited yearly rupee total." },
+  { icon: Activity, t: "Open through IPL nights", d: "Wallet and support stay staffed when traffic spikes. We do not quote a made-up uptime percentage." },
 ];
 
 function AwardsPage() {
@@ -83,19 +84,20 @@ function AwardsPage() {
 
       <AIOverview
         title="AI Overview — Mahadev Book Milestones"
-        summary="Mahadev Book doesn't claim third-party industry awards or certifications it hasn't earned. Its track record instead shows in verifiable numbers: over a million verified players built up since 2010, more than 15 years of continuous operation, roughly ₹500 crore paid out yearly across UPI, IMPS and bank transfer, and 99.98% platform uptime, including through high-traffic events like IPL finals."
+        summary="Mahadev Book does not claim third-party industry awards it has not earned. What it can show is continuous operation since 2010, KYC before every withdrawal, UPI and IMPS payouts on the same WhatsApp desk, and an office listed at 1012, South Delhi, India."
         points={[
           "No claimed third-party awards or certifications",
-          "1M+ verified players since 2010",
+          "KYC-verified IDs since 2010",
           "15+ years of continuous operation",
-          "₹500Cr+ paid out yearly",
-          "99.98% uptime, including major event nights",
-          "Growth built through KYC-verified accounts, not paid campaigns",
+          "Payouts over UPI, IMPS and bank transfer",
+          "Desk stays open through IPL and cup nights",
+          "Growth through KYC-verified accounts, not paid campaigns",
         ]}
         keywords={["mahadev book awards", "mahadev book milestones", "mahadev book track record", "mahadev book history"]}
       />
 
       <section className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6">What has Mahadev Book actually achieved?</h2>
         <div className="grid sm:grid-cols-2 gap-4">
           {milestones.map((m) => (
             <div key={m.t} className="rounded-2xl border border-border bg-card p-6">

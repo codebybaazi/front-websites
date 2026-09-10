@@ -1,34 +1,38 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, ShieldCheck, Headphones, Clock, AlertTriangle } from "lucide-react";
+import { fetchWhatsAppNumber, formatWhatsAppDisplay } from "@/lib/whatsapp";
+import { ogImageMeta } from "@/lib/seo";
+import { OfficialNumberCard } from "@/components/OfficialNumberCard";
 import { useWhatsApp } from "@/components/WhatsAppProvider";
 import { AIOverview } from "@/components/AIOverview";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
 
 const careFaqs: FAQItem[] = [
-  { q: "What is the Mahadev Book customer care number?", a: "It's the official WhatsApp line Mahadev Book uses for support — new IDs, deposits, withdrawals, KYC and general account help. We only publish it as a click-to-chat link, not a printed digit, since the line can rotate for security." },
-  { q: "How do I reach Mahadev Book customer care?", a: "Tap the WhatsApp button on this page and describe your issue in a line or two. A real person picks it up, not a bot menu, and most queries get a first reply in under a minute." },
-  { q: "Is Mahadev Book customer care available 24/7?", a: "Yes. The desk runs around the clock, including IPL nights, Diwali and cup finals, so a match running late doesn't mean waiting until morning for help." },
-  { q: "Does the same customer care number handle deposits and withdrawals?", a: "Yes. One WhatsApp line covers new ID creation, deposits, withdrawal requests, KYC verification and account issues, so you're not bounced between different numbers for different problems." },
-  { q: "Which languages does Mahadev Book customer care support?", a: "English and Hindi on every chat, with regional-language agents available on request for Marathi, Gujarati, Tamil and Telugu." },
-  { q: "Why does the Mahadev Book customer care number keep changing?", a: "The line is rotated periodically as a security measure, the same as the deposit and withdrawal lines. That's why this page never prints a fixed digit and instead links straight to the current, active chat." },
-  { q: "What should I do if an old customer care number stops replying?", a: "Come back to this page and use the WhatsApp button here instead of guessing at an old saved contact. Numbers from old screenshots or forwarded messages can be inactive or, in some cases, belong to someone else entirely." },
-  { q: "Can customer care help if I forgot my Mahadev Book login details?", a: "Yes. Message the WhatsApp line with your registered mobile number, and the team verifies your identity against your KYC before resetting access." },
+  { q: "What is the Mahadev Book customer care number?", a: "It is the live WhatsApp and phone line for new IDs, deposits, withdrawals, KYC and login help. The current digits are printed on this page with a chat link and a call link." },
+  { q: "How do I reach Mahadev Book customer care?", a: "Tap the WhatsApp link next to the printed number and describe the issue in a line or two. A person picks it up; first replies are usually under a minute." },
+  { q: "Is Mahadev Book customer care available 24/7?", a: "Yes, including IPL nights, Diwali and cup finals." },
+  { q: "Does the same number handle deposits and withdrawals?", a: "Yes. One line covers new IDs, deposits, payouts, KYC and account issues." },
+  { q: "Which languages does customer care support?", a: "English and Hindi on every chat. Marathi, Gujarati, Tamil and Telugu agents are available on request." },
+  { q: "Why might the number change?", a: "The line can rotate. Trust the number listed on this page, not an old screenshot." },
+  { q: "What if an old customer care number stops replying?", a: "Come back to this page and use the number currently shown." },
+  { q: "Can customer care reset a forgotten login?", a: "Yes. Message the registered mobile number. The desk checks KYC before resetting access." },
 ];
 
 export const Route = createFileRoute("/mahadev-book-customer-care-number")({
-  head: () => ({
+  loader: async () => ({ waNumber: await fetchWhatsAppNumber() }),
+  head: ({ loaderData }) => {
+    const title = "Mahadev Book Customer Care Number & WhatsApp Support";
+    const display = loaderData?.waNumber ? formatWhatsAppDisplay(loaderData.waNumber) : "";
+    return {
     meta: [
-      { title: "Mahadev Book Customer Care Number — Official WhatsApp Support Line" },
-      { name: "description", content: "Reach the official Mahadev Book customer care number on WhatsApp for IDs, deposits, withdrawals and KYC help. One tap chat link, no numbers to copy, with real 24/7 human support." },
-      { property: "og:title", content: "Mahadev Book Customer Care Number — Official WhatsApp Support Line" },
-      { property: "og:description", content: "Chat with the official Mahadev Book customer care line on WhatsApp. Real human support 24/7 for IDs, deposits, withdrawals and account issues." },
+      { title },
+      { name: "description", content: `Mahadev Book customer care number${display ? ` ${display}` : ""} on WhatsApp for IDs, deposits, withdrawals and KYC. Chat or call the live line on this page.` },
+      { property: "og:title", content: title },
+        { name: "twitter:title", content: title },
+      { property: "og:description", content: "Chat or call official Mahadev Book customer care. Human support 24/7 for IDs, deposits, withdrawals and account issues." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-book-customer-care-number" },
-      { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Mahadev Book Customer Care Number — official WhatsApp support line" },
-      { name: "twitter:image", content: "https://mahadevbookss.com/og-image.jpg" },
+      ...ogImageMeta("Mahadev Book Customer Care Number — official WhatsApp support line"),
     ],
     links: [{ rel: "canonical", href: "https://mahadevbookss.com/mahadev-book-customer-care-number" }],
     scripts: [
@@ -54,8 +58,24 @@ export const Route = createFileRoute("/mahadev-book-customer-care-number")({
           speakable: { "@type": "SpeakableSpecification", cssSelector: [".ai-overview-speakable"] },
         }),
       },
+      ...(loaderData?.waNumber
+        ? [{
+            type: "application/ld+json" as const,
+            children: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ContactPoint",
+              contactType: "customer support",
+              name: "Mahadev Book customer care",
+              telephone: `+${loaderData.waNumber}`,
+              url: `https://wa.me/${loaderData.waNumber}`,
+              areaServed: "IN",
+              availableLanguage: ["en", "hi"],
+            }),
+          }]
+        : []),
     ],
-  }),
+  };
+  },
   component: CustomerCareNumberPage,
 });
 
@@ -86,42 +106,26 @@ function CustomerCareNumberPage() {
           Mahadev Book <span className="text-gradient-gold">Customer Care Number</span>
         </h1>
         <p className="mt-5 text-lg text-muted-foreground max-w-2xl">
-          The Mahadev Book customer care number is the official WhatsApp line our team uses for
-          support — new IDs, deposits, withdrawals, KYC and account issues. We don't print it as a
-          digit anywhere on this site, since the line can rotate for security. Use the button
-          below to open a chat with the current, verified support line.
+          The Mahadev Book customer care number is the live WhatsApp and phone line for new IDs,
+          deposits, withdrawals, KYC and login help. The digits below come from our official number list.
         </p>
-
-        <div className="mt-8 max-w-md rounded-2xl border border-primary/30 bg-primary/5 p-6">
-          <div className="text-xs uppercase tracking-wider text-muted-foreground">Official support line</div>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Tap below to chat directly with the verified Mahadev Book customer care number on WhatsApp.
-          </p>
-          <div className="mt-5">
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-glow inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-primary-foreground"
-            >
-              <span className="btn-glow-content flex items-center gap-2">
-                <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
-              </span>
-            </a>
-          </div>
-        </div>
+        <OfficialNumberCard
+          heading="Official customer care number"
+          blurb="Same desk for IDs, wallet and account issues. Office: 1012, South Delhi, India."
+          showAddress
+        />
       </section>
 
       <AIOverview
         title="AI Overview — Mahadev Book Customer Care Number"
-        summary="The Mahadev Book customer care number is the official WhatsApp line used for support on a Mahadev Book cricket ID. It covers new ID creation, deposits, withdrawals, KYC verification and general account help, staffed by real people 24 hours a day in English and Hindi. It's only shared as a click-to-chat WhatsApp link on this page, never printed as a fixed digit, since the line is rotated periodically for account security."
+        summary="The Mahadev Book customer care number is printed on this page as a live WhatsApp and phone line. Use it for new IDs, deposits, withdrawals, KYC and login help. Agents reply in English and Hindi, usually within a minute."
         points={[
-          "Click-to-chat WhatsApp link, not a printed digit",
-          "24/7 human support, not a bot menu",
+          "Live number plus WhatsApp and call links",
+          "24/7 human support",
           "Handles IDs, deposits, withdrawals, KYC and account issues",
-          "English and Hindi, with regional languages on request",
-          "First replies typically land in under a minute",
-          "Always start from the WhatsApp button on this page",
+          "English and Hindi, regional languages on request",
+          "First replies typically under a minute",
+          "Office: 1012, South Delhi, India",
         ]}
         keywords={["mahadev book customer care number", "customer care number mahadev book", "mahadev book", "mahadev book support number"]}
       />

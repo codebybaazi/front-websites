@@ -16,6 +16,8 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { WebMCPProvider } from "@/components/WebMCPProvider";
 import { WhatsAppProvider } from "@/components/WhatsAppProvider";
+import { fetchWhatsAppNumber } from "@/lib/whatsapp";
+import { postalAddressJsonLd, sameAsForNumber, SUPPORT_EMAIL } from "@/lib/seo";
 
 function NotFoundComponent() {
   return (
@@ -78,7 +80,8 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
+  loader: async () => ({ waNumber: await fetchWhatsAppNumber() }),
+  head: ({ loaderData }) => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -114,14 +117,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           url: "https://mahadevbookss.com/",
           logo: "https://mahadevbookss.com/apple-touch-icon.png",
           foundingDate: "2010",
-          slogan: "Verified online betting IDs in India",
-          sameAs: [],
+          email: SUPPORT_EMAIL,
+          address: postalAddressJsonLd(),
+          sameAs: sameAsForNumber(loaderData?.waNumber),
+          ...(loaderData?.waNumber
+            ? { telephone: `+${loaderData.waNumber}` }
+            : {}),
           contactPoint: [
             {
               "@type": "ContactPoint",
               contactType: "customer support",
               availableLanguage: ["en", "hi"],
               areaServed: "IN",
+              email: SUPPORT_EMAIL,
+              ...(loaderData?.waNumber
+                ? {
+                    telephone: `+${loaderData.waNumber}`,
+                    url: `https://wa.me/${loaderData.waNumber}`,
+                  }
+                : {}),
             },
           ],
         }),
@@ -146,7 +160,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <head>
         <HeadContent />
       </head>
@@ -160,10 +174,11 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const { waNumber } = Route.useLoaderData();
 
   return (
     <QueryClientProvider client={queryClient}>
-      <WhatsAppProvider>
+      <WhatsAppProvider initialNumber={waNumber}>
         <div className="min-h-screen bg-background text-foreground flex flex-col">
           <SiteHeader />
           <main className="flex-1">

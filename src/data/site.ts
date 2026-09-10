@@ -49,7 +49,7 @@ export const navItems: NavItem[] = [
           heading: "Company",
           items: [
             { label: "About Us", desc: "Our story since 2010", to: "/about", icon: Sparkles },
-            { label: "Why Choose Us", desc: "1M+ trusted players", to: "/why", icon: BadgeCheck },
+            { label: "Why Choose Us", desc: "Since 2010, KYC-only IDs", to: "/why", icon: BadgeCheck },
             { label: "What We Do", desc: "The platform explained", to: "/what", icon: BookOpen },
             { label: "Trusted Provider", desc: "Verified & regulated", to: "/trusted", icon: ShieldCheck },
           ],

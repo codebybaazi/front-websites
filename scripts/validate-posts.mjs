@@ -40,6 +40,8 @@ while ((m = postRe.exec(src))) {
 
   if (excerpt.length > 160)
     errors.push(`Excerpt over 160 chars (${excerpt.length}): "${slug}"`);
+  if (title.length > 60)
+    errors.push(`Title over 60 chars (${title.length}): "${slug}"`);
 }
 
 const questions = new Map();

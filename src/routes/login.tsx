@@ -24,6 +24,7 @@ export const Route = createFileRoute("/login")({
           "Official Mahadev Book login page. Get your online cricket ID login on WhatsApp in 5 minutes — secure, verified, 24/7 support for IPL, casino & sports betting.",
       },
       { property: "og:title", content: "Mahadev Book Login | Official Cricket ID Login" },
+        { name: "twitter:title", content: "Mahadev Book Login | Official Cricket ID Login" },
       {
         property: "og:description",
         content:

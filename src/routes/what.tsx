@@ -19,6 +19,7 @@ export const Route = createFileRoute("/what")({
       { title: "What Mahadev Book Does — Platform Explained" },
       { name: "description", content: "What Mahadev Book actually is — verified ID issuance, wallet and UPI payments, sports exchange, live casino and 24/7 support, explained in plain terms." },
       { property: "og:title", content: "What Mahadev Book Does — Platform Explained" },
+        { name: "twitter:title", content: "What Mahadev Book Does — Platform Explained" },
       { property: "og:description", content: "A plain explanation of what Mahadev Book does — from ID setup to withdrawals." },
       { property: "og:url", content: "https://mahadevbookss.com/what" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

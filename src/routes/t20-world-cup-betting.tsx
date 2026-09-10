@@ -19,6 +19,7 @@ export const Route = createFileRoute("/t20-world-cup-betting")({
       { title: "T20 World Cup Betting on Mahadev Book — Odds & Live Markets" },
       { name: "description", content: "Bet on the T20 World Cup with Mahadev Book — match winner, outright odds, top scorer and wicket-taker markets, group stage through the final." },
       { property: "og:title", content: "T20 World Cup Betting on Mahadev Book — Odds & Live Markets" },
+        { name: "twitter:title", content: "T20 World Cup Betting on Mahadev Book — Odds & Live Markets" },
       { property: "og:description", content: "Full T20 World Cup coverage on Mahadev Book — outright odds, group stage and knockout markets." },
       { property: "og:url", content: "https://mahadevbookss.com/t20-world-cup-betting" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

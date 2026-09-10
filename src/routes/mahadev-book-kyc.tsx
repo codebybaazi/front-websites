@@ -4,6 +4,7 @@ import { useWhatsApp } from "@/components/WhatsAppProvider";
 import { AIOverview } from "@/components/AIOverview";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
+import { howToJsonLd } from "@/lib/seo";
 
 const kycFaqs: FAQItem[] = [
   { q: "What is KYC on Mahadev Book and why is it needed?", a: "KYC, or Know Your Customer, confirms that the person behind an ID is real and that it's tied to their own bank or UPI account. It protects your account from being used by someone else and keeps withdrawals going to the right person." },
@@ -22,6 +23,7 @@ export const Route = createFileRoute("/mahadev-book-kyc")({
       { title: "Mahadev Book KYC — Verify Your ID on WhatsApp" },
       { name: "description", content: "Understand how Mahadev Book KYC works, what documents you need, and how to complete or fix your verification on the official WhatsApp support line." },
       { property: "og:title", content: "Mahadev Book KYC — Verify Your ID on WhatsApp" },
+        { name: "twitter:title", content: "Mahadev Book KYC — Verify Your ID on WhatsApp" },
       { property: "og:description", content: "New to Mahadev Book KYC, or stuck on a rejected verification? Get it sorted on the official WhatsApp support line." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-book-kyc" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
@@ -33,6 +35,17 @@ export const Route = createFileRoute("/mahadev-book-kyc")({
     links: [{ rel: "canonical", href: "https://mahadevbookss.com/mahadev-book-kyc" }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(faqJsonLd(kycFaqs)) },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          howToJsonLd("How to complete Mahadev Book KYC", "Verify a Mahadev Book ID on WhatsApp with a government photo ID and matching payout details.", [
+            { name: "Message WhatsApp support", text: "Tell the desk you are completing or updating KYC from your registered mobile number." },
+            { name: "Share your government ID", text: "Send a clear photo of Aadhaar, PAN or a driving licence plus the mobile number on the account." },
+            { name: "Confirm payout details", text: "Give the UPI ID or bank account you will actually use. The name should match the ID." },
+            { name: "Wait for verification", text: "Most checks finish within minutes. When it clears, withdrawals are unlocked." },
+          ]),
+        ),
+      },
       {
         type: "application/ld+json",
         children: JSON.stringify({

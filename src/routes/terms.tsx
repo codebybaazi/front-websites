@@ -10,6 +10,7 @@ export const Route = createFileRoute("/terms")({
       { title: "Mahadev Book Terms & Conditions" },
       { name: "description", content: "The terms that govern using a Mahadev Book cricket ID — eligibility, account rules, betting and settlement, deposits and withdrawals, and account suspension." },
       { property: "og:title", content: "Mahadev Book Terms & Conditions" },
+        { name: "twitter:title", content: "Mahadev Book Terms & Conditions" },
       { property: "og:description", content: "Eligibility, account rules, betting and settlement, and payment terms for Mahadev Book." },
       { property: "og:url", content: "https://mahadevbookss.com/terms" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

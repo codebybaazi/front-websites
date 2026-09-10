@@ -19,6 +19,7 @@ export const Route = createFileRoute("/services")({
       { title: "Cricket Betting ID, Casino & Games — Mahadev Book Services" },
       { name: "description", content: "Get a verified cricket betting ID for IPL, live casino, Aviator and Teen Patti — plus instant UPI withdrawals, agent programs and 24/7 support on Mahadev Book." },
       { property: "og:title", content: "Cricket Betting ID, Casino & Games — Mahadev Book" },
+        { name: "twitter:title", content: "Cricket Betting ID, Casino & Games — Mahadev Book" },
       { property: "og:description", content: "One verified cricket betting ID unlocks IPL markets, live casino, Aviator, Teen Patti and instant UPI payouts." },
       { property: "og:url", content: "https://mahadevbookss.com/services" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
@@ -113,9 +114,10 @@ function ServicesPage() {
 
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 py-8">
-        <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
-          <Trophy className="h-6 w-6 text-primary" /> Sports
-        </h2>
+        <h2 className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">What services does Mahadev Book offer?</h2>
+        <h3 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+          <Trophy className="h-6 w-6 text-primary" /> Sports betting
+        </h3>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
           {sports.map((s) => (
             <div key={s.id} id={s.id} className="rounded-2xl border border-border bg-card p-6 hover:border-primary/50 transition scroll-mt-24">
@@ -127,9 +129,9 @@ function ServicesPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 py-8">
-        <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+        <h3 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
           <Dice5 className="h-6 w-6 text-primary" /> Casino & instant games
-        </h2>
+        </h3>
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {casino.map((s) => (
             <div key={s.id} id={s.id} className="rounded-2xl border border-border bg-card p-6 hover:border-primary/50 transition scroll-mt-24">
@@ -141,9 +143,9 @@ function ServicesPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 py-8">
-        <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+        <h3 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
           <Zap className="h-6 w-6 text-primary" /> For players
-        </h2>
+        </h3>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
           {player.map((s) => (
             <div key={s.id} id={s.id} className="rounded-2xl border border-border bg-card p-6 scroll-mt-24">
@@ -156,9 +158,9 @@ function ServicesPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 py-8 pb-16">
-        <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
+        <h3 className="text-2xl sm:text-3xl font-bold flex items-center gap-3">
           <Headphones className="h-6 w-6 text-primary" /> For agents
-        </h2>
+        </h3>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
           {agent.map((s) => (
             <div key={s.id} id={s.id} className="rounded-2xl border border-border bg-card p-6 scroll-mt-24">

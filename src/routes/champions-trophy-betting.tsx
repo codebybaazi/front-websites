@@ -18,6 +18,7 @@ export const Route = createFileRoute("/champions-trophy-betting")({
       { title: "Champions Trophy Betting on Mahadev Book — Odds & Live Markets" },
       { name: "description", content: "Bet on the Champions Trophy with Mahadev Book — match winner, outright odds, top scorer and wicket-taker markets, group stage through the final." },
       { property: "og:title", content: "Champions Trophy Betting on Mahadev Book — Odds & Live Markets" },
+        { name: "twitter:title", content: "Champions Trophy Betting on Mahadev Book — Odds & Live Markets" },
       { property: "og:description", content: "Full Champions Trophy coverage on Mahadev Book — outright odds and live in-play markets." },
       { property: "og:url", content: "https://mahadevbookss.com/champions-trophy-betting" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

@@ -18,6 +18,7 @@ export const Route = createFileRoute("/basketball-betting")({
       { title: "Basketball Betting on Mahadev Book — NBA & Euroleague Odds" },
       { name: "description", content: "Bet on NBA and Euroleague basketball with Mahadev Book — moneyline, spread, totals and live in-play odds under one ID." },
       { property: "og:title", content: "Basketball Betting on Mahadev Book — NBA & Euroleague Odds" },
+        { name: "twitter:title", content: "Basketball Betting on Mahadev Book — NBA & Euroleague Odds" },
       { property: "og:description", content: "NBA and Euroleague markets on Mahadev Book — moneyline, spread and totals." },
       { property: "og:url", content: "https://mahadevbookss.com/basketball-betting" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

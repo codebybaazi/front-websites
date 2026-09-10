@@ -21,6 +21,7 @@ export const Route = createFileRoute("/mahadev-book-referral-program")({
       { title: "Mahadev Book Referral Program — Earn ₹300 Per Friend" },
       { name: "description", content: "How the Mahadev Book referral program works — earn ₹300 for every verified friend who signs up and deposits. How to refer and when the bonus is credited." },
       { property: "og:title", content: "Mahadev Book Referral Program — Earn ₹300 Per Friend" },
+        { name: "twitter:title", content: "Mahadev Book Referral Program — Earn ₹300 Per Friend" },
       { property: "og:description", content: "Invite friends to Mahadev Book and earn ₹300 per verified sign-up. Here's exactly how it works." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-book-referral-program" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

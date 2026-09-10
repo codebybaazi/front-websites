@@ -18,6 +18,7 @@ export const Route = createFileRoute("/horse-racing-betting")({
       { title: "Horse Racing Betting on Mahadev Book — Win, Place & Each-Way" },
       { name: "description", content: "Bet on global horse racing with Mahadev Book — win, place and each-way markets on major race meets, under the same ID as cricket." },
       { property: "og:title", content: "Horse Racing Betting on Mahadev Book — Win, Place & Each-Way" },
+        { name: "twitter:title", content: "Horse Racing Betting on Mahadev Book — Win, Place & Each-Way" },
       { property: "og:description", content: "Horse racing markets on Mahadev Book — win, place and each-way on global race meets." },
       { property: "og:url", content: "https://mahadevbookss.com/horse-racing-betting" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

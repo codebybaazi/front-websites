@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { authors } from "@/data/authors";
+import { ogImageMeta } from "@/lib/seo";
 import { posts } from "@/data/posts";
 
 function initials(name: string): string {
@@ -19,9 +20,11 @@ export const Route = createFileRoute("/authors/")({
       { title: "Our Writers — Mahadev Book" },
       { name: "description", content: "Meet the analysts and support staff behind Mahadev Book's betting guides, each covering the category they actually work in day to day." },
       { property: "og:title", content: "Our Writers — Mahadev Book" },
+        { name: "twitter:title", content: "Our Writers — Mahadev Book" },
       { property: "og:description", content: "Meet the analysts and support staff behind Mahadev Book's betting guides." },
       { property: "og:url", content: "https://mahadevbookss.com/authors" },
       { property: "og:type", content: "website" },
+      ...ogImageMeta("Our Writers — Mahadev Book"),
     ],
     links: [{ rel: "canonical", href: "https://mahadevbookss.com/authors" }],
     scripts: [

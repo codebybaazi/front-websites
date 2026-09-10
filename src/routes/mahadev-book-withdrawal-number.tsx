@@ -1,34 +1,38 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, ShieldCheck, Wallet, Clock, AlertTriangle } from "lucide-react";
+import { fetchWhatsAppNumber, formatWhatsAppDisplay } from "@/lib/whatsapp";
+import { ogImageMeta } from "@/lib/seo";
+import { OfficialNumberCard } from "@/components/OfficialNumberCard";
 import { useWhatsApp } from "@/components/WhatsAppProvider";
 import { AIOverview } from "@/components/AIOverview";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FAQSection, faqJsonLd, type FAQItem } from "@/components/FAQSection";
 
 const withdrawalFaqs: FAQItem[] = [
-  { q: "What is the Mahadev Book withdrawal number?", a: "It's the official WhatsApp line Mahadev Book uses to process payout requests and confirm your UPI, IMPS or e-wallet details. We only publish it as a click-to-chat link, not a printed digit, since the line can rotate for security." },
-  { q: "How do I withdraw using the Mahadev Book withdrawal number?", a: "Tap the WhatsApp button on this page and send your withdrawal amount along with your UPI ID or bank account. Our team verifies the request against your KYC and pushes the payout, usually within minutes." },
-  { q: "Is the Mahadev Book withdrawal number the same as the deposit number?", a: "Both run through the same official WhatsApp desk, so one chat handles deposits, withdrawals, KYC and general support. It's not a separate hotline, just the same verified line." },
-  { q: "How long does a Mahadev Book withdrawal take?", a: "UPI withdrawals typically land in 5 to 30 minutes, 24 hours a day. IMPS and NEFT bank transfers can take a little longer depending on your bank's processing hours." },
-  { q: "Is there a minimum or maximum withdrawal amount?", a: "There's no fixed minimum on most accounts, and daily withdrawal limits scale with your KYC tier. Ask on WhatsApp if you're planning a large cash-out so the team can process it without delay." },
-  { q: "What happens if I send my withdrawal request to the wrong number?", a: "Mahadev Book can only verify and process payouts requested through the official WhatsApp chat shown on this page. A request sent to any other number, including one from an old screenshot, won't be recognized or actioned." },
-  { q: "Why does the Mahadev Book withdrawal number change sometimes?", a: "The line is rotated periodically as a security measure, the same way deposit numbers are. That's why this page never prints a fixed digit and instead links straight to the current, active chat." },
-  { q: "Do I need to complete KYC before withdrawing?", a: "Yes. Every payout is checked against your verified KYC details to prevent fraud and account takeover. If you haven't completed KYC yet, the WhatsApp team will guide you through it before releasing funds." },
+  { q: "What is the Mahadev Book withdrawal number?", a: "It is the live WhatsApp and phone line used to request UPI, IMPS or e-wallet payouts. The current digits are printed on this page with a chat link and a call link." },
+  { q: "How do I withdraw using the Mahadev Book withdrawal number?", a: "Open WhatsApp from the number on this page, send the amount and your UPI ID or bank account. The desk checks KYC and pushes the payout, usually within minutes on UPI." },
+  { q: "Is the withdrawal number the same as the deposit number?", a: "Yes. One desk handles deposits, withdrawals, KYC and general support." },
+  { q: "How long does a Mahadev Book withdrawal take?", a: "UPI usually lands in 5 to 30 minutes, any hour of the day. IMPS and NEFT follow the bank clock." },
+  { q: "Is there a minimum or maximum withdrawal amount?", a: "Most accounts have no fixed UPI minimum. Daily caps follow your KYC tier. Ask on the same chat before a large cash-out." },
+  { q: "What if I message the wrong number?", a: "Payouts are only processed from the number listed here. An old screenshot or a forwarded chat will not be actioned." },
+  { q: "Why might the number change?", a: "The line can rotate. When it does, this page shows the current one." },
+  { q: "Do I need KYC before withdrawing?", a: "Yes. The payout account name has to match KYC. If KYC is incomplete, the desk will finish it before releasing funds." },
 ];
 
 export const Route = createFileRoute("/mahadev-book-withdrawal-number")({
-  head: () => ({
+  loader: async () => ({ waNumber: await fetchWhatsAppNumber() }),
+  head: ({ loaderData }) => {
+    const title = "Mahadev Book Withdrawal Number — Official WhatsApp Payout Line";
+    const display = loaderData?.waNumber ? formatWhatsAppDisplay(loaderData.waNumber) : "";
+    return {
     meta: [
-      { title: "Mahadev Book Withdrawal Number — Official WhatsApp Payout Line" },
-      { name: "description", content: "Reach the official Mahadev Book withdrawal number on WhatsApp to request payouts over UPI, IMPS or e-wallet. One tap chat link, no numbers to copy, with a safe step-by-step withdrawal guide." },
-      { property: "og:title", content: "Mahadev Book Withdrawal Number — Official WhatsApp Payout Line" },
-      { property: "og:description", content: "Chat with the official Mahadev Book withdrawal line on WhatsApp. Request a UPI, IMPS or e-wallet payout and get paid in minutes." },
+      { title },
+      { name: "description", content: `Official Mahadev Book withdrawal number${display ? ` ${display}` : ""} on WhatsApp for UPI, IMPS and e-wallet payouts. Chat or call the live line on this page.` },
+      { property: "og:title", content: title },
+        { name: "twitter:title", content: title },
+      { property: "og:description", content: "Chat or call the official Mahadev Book withdrawal line. Request a UPI, IMPS or e-wallet payout." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-book-withdrawal-number" },
-      { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Mahadev Book Withdrawal Number — official WhatsApp payout line" },
-      { name: "twitter:image", content: "https://mahadevbookss.com/og-image.jpg" },
+      ...ogImageMeta("Mahadev Book Withdrawal Number — official WhatsApp payout line"),
     ],
     links: [{ rel: "canonical", href: "https://mahadevbookss.com/mahadev-book-withdrawal-number" }],
     scripts: [
@@ -54,8 +58,24 @@ export const Route = createFileRoute("/mahadev-book-withdrawal-number")({
           speakable: { "@type": "SpeakableSpecification", cssSelector: [".ai-overview-speakable"] },
         }),
       },
+      ...(loaderData?.waNumber
+        ? [{
+            type: "application/ld+json" as const,
+            children: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ContactPoint",
+              contactType: "customer support",
+              name: "Mahadev Book withdrawal desk",
+              telephone: `+${loaderData.waNumber}`,
+              url: `https://wa.me/${loaderData.waNumber}`,
+              areaServed: "IN",
+              availableLanguage: ["en", "hi"],
+            }),
+          }]
+        : []),
     ],
-  }),
+  };
+  },
   component: WithdrawalNumberPage,
 });
 
@@ -86,42 +106,25 @@ function WithdrawalNumberPage() {
           Mahadev Book <span className="text-gradient-gold">Withdrawal Number</span>
         </h1>
         <p className="mt-5 text-lg text-muted-foreground max-w-2xl">
-          The Mahadev Book withdrawal number is the official WhatsApp line our team uses to verify
-          payout requests and send your winnings to UPI, IMPS or your e-wallet. We don't print it
-          as a digit anywhere on this site, since the line can rotate for security. Use the button
-          below to open a chat with the current, verified withdrawal line.
+          The Mahadev Book withdrawal number is the live WhatsApp and phone line used to verify
+          payouts to UPI, IMPS or e-wallet. The digits below come from our official number list.
         </p>
-
-        <div className="mt-8 max-w-md rounded-2xl border border-primary/30 bg-primary/5 p-6">
-          <div className="text-xs uppercase tracking-wider text-muted-foreground">Official withdrawal line</div>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Tap below to chat directly with the verified Mahadev Book withdrawal number on WhatsApp.
-          </p>
-          <div className="mt-5">
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-glow inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-primary-foreground"
-            >
-              <span className="btn-glow-content flex items-center gap-2">
-                <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
-              </span>
-            </a>
-          </div>
-        </div>
+        <OfficialNumberCard
+          heading="Official withdrawal number"
+          blurb="Share your amount and payout account on this chat. KYC has to match the account name before funds leave."
+        />
       </section>
 
       <AIOverview
         title="AI Overview — Mahadev Book Withdrawal Number"
-        summary="The Mahadev Book withdrawal number is the official WhatsApp line used to request payouts from a Mahadev Book cricket ID. It processes UPI, IMPS/NEFT and e-wallet withdrawals, usually settling UPI requests in 5 to 30 minutes, 24 hours a day. Every payout is checked against KYC before release. It's only shared as a click-to-chat WhatsApp link on this page, never printed as a fixed digit, since withdrawal numbers are rotated periodically for account security."
+        summary="The Mahadev Book withdrawal number is printed on this page as a live WhatsApp and phone line. Use it to request UPI, IMPS/NEFT or e-wallet payouts. UPI usually settles in 5 to 30 minutes after KYC matches the payout account."
         points={[
-          "Click-to-chat WhatsApp link, not a printed digit",
+          "Live number plus WhatsApp and call links",
           "UPI, IMPS/NEFT and e-wallet payouts supported",
-          "UPI withdrawals usually settle in 5–30 minutes",
-          "Every payout checked against verified KYC",
-          "Same line also handles deposits and support",
-          "Always start from the WhatsApp button on this page",
+          "UPI typically 5–30 minutes",
+          "KYC name must match the payout account",
+          "Same desk as deposits and customer care",
+          "Ignore numbers from forwarded chats",
         ]}
         keywords={["mahadev book withdrawal number", "withdrawal number mahadev book", "mahadev book", "mahadev book payout number"]}
       />

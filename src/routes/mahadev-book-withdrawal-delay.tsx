@@ -21,6 +21,7 @@ export const Route = createFileRoute("/mahadev-book-withdrawal-delay")({
       { title: "Mahadev Book Withdrawal Delay — What to Check on WhatsApp" },
       { name: "description", content: "Withdrawal taking longer than expected? See the common reasons for a Mahadev Book withdrawal delay and get your payout pushed through on the official WhatsApp support line." },
       { property: "og:title", content: "Mahadev Book Withdrawal Delay — What to Check on WhatsApp" },
+        { name: "twitter:title", content: "Mahadev Book Withdrawal Delay — What to Check on WhatsApp" },
       { property: "og:description", content: "Payout pending longer than usual? Get your Mahadev Book withdrawal delay resolved on the official WhatsApp support line." },
       { property: "og:url", content: "https://mahadevbookss.com/mahadev-book-withdrawal-delay" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

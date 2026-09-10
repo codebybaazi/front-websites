@@ -20,6 +20,7 @@ export const Route = createFileRoute("/blog/")({
       { title: "Blog — Betting Guides & Tips | Mahadev Book" },
       { name: "description", content: "Guides on IPL and football betting, deposits and withdrawals, live casino strategy, KYC, and responsible play — from the Mahadev Book team." },
       { property: "og:title", content: "Mahadev Book Blog" },
+        { name: "twitter:title", content: "Mahadev Book Blog" },
       { property: "og:description", content: "Practical betting guides written for Indian players." },
       { property: "og:url", content: "https://mahadevbookss.com/blog" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

@@ -20,6 +20,7 @@ export const Route = createFileRoute("/safety")({
       { title: "Mahadev Book Safety — How Accounts Are Protected" },
       { name: "description", content: "How Mahadev Book protects accounts and payments — SSL encryption, device fingerprinting, fraud monitoring and mandatory KYC — plus how to protect yourself." },
       { property: "og:title", content: "Mahadev Book Safety — How Accounts Are Protected" },
+        { name: "twitter:title", content: "Mahadev Book Safety — How Accounts Are Protected" },
       { property: "og:description", content: "The security measures behind Mahadev Book accounts, and what players can do to stay safe." },
       { property: "og:url", content: "https://mahadevbookss.com/safety" },
       { property: "og:image", content: "https://mahadevbookss.com/og-image.jpg" },

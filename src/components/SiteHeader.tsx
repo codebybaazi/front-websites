@@ -10,12 +10,14 @@ import {
 } from "lucide-react";
 import { navItems, supportLine, siteName } from "@/data/site";
 import { useWhatsApp } from "@/components/WhatsAppProvider";
+import { formatWhatsAppDisplay } from "@/lib/whatsapp";
 import logoUrl from "@/assets/mahadev-logo.gif";
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState<string | null>(null);
-  const { whatsappUrl } = useWhatsApp();
+  const { whatsappUrl, number } = useWhatsApp();
+  const phoneDisplay = formatWhatsAppDisplay(number);
 
   return (
     <header className="sticky top-0 z-40">
@@ -35,9 +37,19 @@ export function SiteHeader() {
               <span className="sm:hidden">24/7</span>
             </span>
             <span className="hidden sm:inline-block h-4 w-px bg-primary-foreground/30" />
-            <a href="#contact" className="inline-flex items-center gap-1.5 sm:gap-2 hover:opacity-80">
+            {phoneDisplay ? (
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:inline-flex items-center gap-1.5 font-semibold hover:opacity-80"
+              >
+                {phoneDisplay}
+              </a>
+            ) : null}
+            <Link to="/contact" className="inline-flex items-center gap-1.5 sm:gap-2 hover:opacity-80">
               <Headset className="h-3.5 w-3.5 sm:h-4 sm:w-4" /> <span className="hidden sm:inline">Support</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
