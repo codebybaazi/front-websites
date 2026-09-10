@@ -1,3 +1,5 @@
+import { abs, ogImageMeta } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute } from "@tanstack/react-router";
 import { Suspense } from "react";
 import { Shield, Zap, Headphones, Trophy, Sparkles, Wallet, MessageCircle, Send } from "lucide-react";
@@ -23,9 +25,13 @@ export const Route = createFileRoute("/about")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:url", content: "/about" }
+      { property: "og:url", content: abs("/about") },
+      ...ogImageMeta("About Sprinters Online Gaming — our story and mission"),
     ],
     links: [{ rel: "canonical", href: "/about" }],
+    scripts: [
+        ...(buildPageFaqLd("/about") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/about")) }] : []),
+    ],
   }),
   component: AboutPage,
 });

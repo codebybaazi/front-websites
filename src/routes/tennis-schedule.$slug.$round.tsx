@@ -1,3 +1,4 @@
+import { abs } from "@/lib/site-url";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { Sparkles, Trophy, Target, MapPin, Calendar, Activity } from "lucide-react";
@@ -48,7 +49,7 @@ export const Route = createFileRoute("/tennis-schedule/$slug/$round")({
         { property: "og:title", content: `${round.label} — ${event.name} 2026 Prediction` },
         { property: "og:description", content: desc.slice(0, 160) },
         { property: "og:type", content: "article" },
-        { property: "og:url", content: `/tennis-schedule/${params.slug}/${params.round}` },
+        { property: "og:url", content: abs(`/tennis-schedule/${params.slug}/${params.round}`) },
       ],
       links: [{ rel: "canonical", href: `/tennis-schedule/${params.slug}/${params.round}` }],
       scripts: [

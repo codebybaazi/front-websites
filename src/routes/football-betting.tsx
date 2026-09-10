@@ -1,3 +1,5 @@
+import { abs } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/ContentPage";
 
@@ -10,9 +12,12 @@ export const Route = createFileRoute("/football-betting")({
       { property: "og:description", content: "Full football coverage — from EPL to ISL — with live odds and instant payouts." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:url", content: "/football-betting" }
+      { property: "og:url", content: abs("/football-betting") }
     ],
     links: [{ rel: "canonical", href: "/football-betting" }],
+    scripts: [
+        ...(buildPageFaqLd("/football-betting") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/football-betting")) }] : []),
+    ],
   }),
   component: () => (
     <ContentPage

@@ -20,7 +20,7 @@ export const Route = createFileRoute("/cricket-schedule/")({
           "Every major upcoming international cricket series through March 2027 — with fixtures, venues and Sprinters betting IDs.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/cricket-schedule" },
+      { property: "og:url", content: abs("/cricket-schedule") },
     ],
     links: [{ rel: "canonical", href: "/cricket-schedule" }],
     scripts: [

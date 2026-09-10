@@ -1,3 +1,4 @@
+import { abs } from "@/lib/site-url";
 import { useMemo, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { zodValidator, fallback } from "@tanstack/zod-adapter";
@@ -51,7 +52,7 @@ export const Route = createFileRoute("/matches")({
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: "/matches" },
+        { property: "og:url", content: abs("/matches") },
       ],
       links: [{ rel: "canonical", href: "/matches" }],
     };

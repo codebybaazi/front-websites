@@ -1,3 +1,5 @@
+import { abs } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -13,6 +15,9 @@ const mainPages: { path: string; label: string }[] = [
   { path: "/", label: "Home" },
   { path: "/about", label: "About" },
   { path: "/contact", label: "Contact" },
+  { path: "/sprinters-book-deposit-number", label: "Sprinters Book Deposit Number" },
+  { path: "/sprinters-book-withdrawl-number", label: "Sprinters Book Withdrawal Number" },
+  { path: "/sprinters-book-customer-care-number", label: "Sprinters Book Customer Care Number" },
   { path: "/services", label: "Services" },
   { path: "/platforms", label: "Platforms" },
   { path: "/sports-id", label: "Sports ID" },
@@ -56,9 +61,12 @@ export const Route = createFileRoute("/all-links")({
       { property: "og:title", content: "All Links | Sprinters" },
       { property: "og:description", content: "Complete sitemap of every page on Sprinters Online Gaming." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/all-links" },
+      { property: "og:url", content: abs("/all-links") },
     ],
     links: [{ rel: "canonical", href: "/all-links" }],
+    scripts: [
+        ...(buildPageFaqLd("/all-links") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/all-links")) }] : []),
+    ],
   }),
   component: AllLinksPage,
 });

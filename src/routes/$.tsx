@@ -1,7 +1,7 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { ContentPage } from "@/components/ContentPage";
 import { getPage } from "@/data/pages";
-import { abs } from "@/lib/site-url";
+import { abs, ogImageMeta } from "@/lib/site-url";
 
 export const Route = createFileRoute("/$")({
   loader: ({ params }) => {
@@ -21,15 +21,24 @@ export const Route = createFileRoute("/$")({
     }
     const { page, slug } = loaderData;
     const path = `/${slug}`;
+    const title =
+      page.metaTitle.length > 60
+        ? `${page.metaTitle.slice(0, 59).trimEnd()}…`
+        : page.metaTitle;
+    const description =
+      page.metaDescription.length > 160
+        ? `${page.metaDescription.slice(0, 159).trimEnd()}…`
+        : page.metaDescription;
     return {
       meta: [
-        { title: page.metaTitle },
-        { name: "description", content: page.metaDescription },
+        { title },
+        { name: "description", content: description },
         { property: "og:title", content: page.metaTitle },
         { property: "og:description", content: page.metaDescription },
         { property: "og:type", content: "article" },
-        { property: "og:url", content: path },
+        { property: "og:url", content: abs(path) },
         { name: "twitter:card", content: "summary_large_image" },
+        ...ogImageMeta(page.title),
       ],
       links: [{ rel: "canonical", href: path }],
       scripts: [

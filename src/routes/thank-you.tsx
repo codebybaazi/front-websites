@@ -1,3 +1,5 @@
+import { abs } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/ContentPage";
 
@@ -7,9 +9,12 @@ export const Route = createFileRoute("/thank-you")({
       { title: "Thank You — Sprinters Online Gaming" },
       { name: "description", content: "Thanks for reaching out. Our team will contact you on WhatsApp within minutes to set up your Sprinters ID." },
       { name: "robots", content: "noindex" },
-      { property: "og:url", content: "/thank-you" }
+      { property: "og:url", content: abs("/thank-you") }
     ],
     links: [{ rel: "canonical", href: "/thank-you" }],
+    scripts: [
+        ...(buildPageFaqLd("/thank-you") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/thank-you")) }] : []),
+    ],
   }),
   component: () => (
     <ContentPage

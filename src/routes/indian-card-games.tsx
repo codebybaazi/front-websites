@@ -1,3 +1,5 @@
+import { abs } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/ContentPage";
 
@@ -9,9 +11,12 @@ export const Route = createFileRoute("/indian-card-games")({
       { property: "og:title", content: "Indian Card Games | Sprinters" },
       { property: "og:description", content: "Teen Patti, Andar Bahar, Rummy — live dealers, real wins." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/indian-card-games" }
+      { property: "og:url", content: abs("/indian-card-games") }
     ],
     links: [{ rel: "canonical", href: "/indian-card-games" }],
+    scripts: [
+        ...(buildPageFaqLd("/indian-card-games") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/indian-card-games")) }] : []),
+    ],
   }),
   component: () => (
     <ContentPage

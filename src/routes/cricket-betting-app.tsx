@@ -18,7 +18,7 @@ export const Route = createFileRoute("/cricket-betting-app")({
       { property: "og:description", content: "Live IPL odds, fancy markets and 24-hour payouts on mobile. Get your Sprinters ID on WhatsApp in minutes." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:url", content: "/cricket-betting-app" },
+      { property: "og:url", content: abs("/cricket-betting-app") },
     ],
     links: [{ rel: "canonical", href: "/cricket-betting-app" }],
     scripts: [

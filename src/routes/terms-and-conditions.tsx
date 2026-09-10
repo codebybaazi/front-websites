@@ -1,3 +1,5 @@
+import { abs } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/ContentPage";
 
@@ -9,9 +11,12 @@ export const Route = createFileRoute("/terms-and-conditions")({
       { property: "og:title", content: "Terms & Conditions | Sprinters" },
       { property: "og:description", content: "Terms governing your use of Sprinters services." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/terms-and-conditions" }
+      { property: "og:url", content: abs("/terms-and-conditions") }
     ],
     links: [{ rel: "canonical", href: "/terms-and-conditions" }],
+    scripts: [
+        ...(buildPageFaqLd("/terms-and-conditions") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/terms-and-conditions")) }] : []),
+    ],
   }),
   component: () => (
     <ContentPage

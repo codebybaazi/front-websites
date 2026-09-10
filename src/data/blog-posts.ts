@@ -7,7 +7,26 @@ export type BlogPost = {
   body: string;
 };
 
-export const blogPosts: BlogPost[] = [
+// Source data was migrated from a legacy Wix export and its `body` field is
+// cut off mid-sentence (sometimes mid-word) around the 500-character mark.
+// cleanBody() trims each one back to its last complete sentence once, here at
+// the data layer, so every consumer (post pages, Article schema, sitemap)
+// sees the same clean text instead of each doing its own ad hoc repair.
+function cleanBody(body: string): string {
+  if (!body) return "";
+  const collapsed = body.replace(/\s+/g, " ").trim();
+  const lastPunct = Math.max(
+    collapsed.lastIndexOf("."),
+    collapsed.lastIndexOf("!"),
+    collapsed.lastIndexOf("?"),
+  );
+  if (lastPunct > 80 && lastPunct < collapsed.length - 1) {
+    return collapsed.slice(0, lastPunct + 1);
+  }
+  return collapsed;
+}
+
+const RAW_POSTS: BlogPost[] = [
   {
     "slug": "sprinters-analysis-kookaburra-conundrum-can-county-cricket-have-too-many-runs",
     "title": "Sprinters Analysis: Kookaburra Conundrum – Can County Cricket Have Too Many Runs?",
@@ -5465,3 +5484,8 @@ export const blogPosts: BlogPost[] = [
     "body": ""
   }
 ];
+
+export const blogPosts: BlogPost[] = RAW_POSTS.map((p) => ({
+  ...p,
+  body: cleanBody(p.body),
+}));

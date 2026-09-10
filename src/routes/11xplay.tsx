@@ -1,3 +1,5 @@
+import { abs } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/ContentPage";
 
@@ -9,9 +11,12 @@ export const Route = createFileRoute("/11xplay")({
       { property: "og:title", content: "11xplay ID | Sprinters" },
       { property: "og:description", content: "11xplay betting IDs delivered on WhatsApp — with local Indian support." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/11xplay" }
+      { property: "og:url", content: abs("/11xplay") }
     ],
     links: [{ rel: "canonical", href: "/11xplay" }],
+    scripts: [
+        ...(buildPageFaqLd("/11xplay") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/11xplay")) }] : []),
+    ],
   }),
   component: () => (
     <ContentPage

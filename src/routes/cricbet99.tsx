@@ -1,3 +1,5 @@
+import { abs } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/ContentPage";
 
@@ -9,9 +11,12 @@ export const Route = createFileRoute("/cricbet99")({
       { property: "og:title", content: "Cricbet99 ID | Sprinters" },
       { property: "og:description", content: "Verified Cricbet99 ID — delivered on WhatsApp in minutes." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/cricbet99" }
+      { property: "og:url", content: abs("/cricbet99") }
     ],
     links: [{ rel: "canonical", href: "/cricbet99" }],
+    scripts: [
+        ...(buildPageFaqLd("/cricbet99") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/cricbet99")) }] : []),
+    ],
   }),
   component: () => (
     <ContentPage

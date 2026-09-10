@@ -1,3 +1,5 @@
+import { abs } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo } from "react";
 import { useSuspenseQuery } from "@tanstack/react-query";
@@ -69,11 +71,12 @@ export const Route = createFileRoute("/predictions")({
         content: "Real live and upcoming cricket fixtures with predictions, live odds and fancy tips from Sprinters.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/predictions" },
+      { property: "og:url", content: abs("/predictions") },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/predictions" }],
     scripts: [
+        ...(buildPageFaqLd("/predictions") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/predictions")) }] : []),
       {
         type: "application/ld+json",
         children: JSON.stringify({

@@ -1,3 +1,5 @@
+import { abs } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/ContentPage";
 
@@ -9,9 +11,12 @@ export const Route = createFileRoute("/tennis-betting")({
       { property: "og:title", content: "Tennis Betting ID | Sprinters" },
       { property: "og:description", content: "Grand Slams, ATP, WTA — full tennis coverage with one Sprinters ID." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/tennis-betting" }
+      { property: "og:url", content: abs("/tennis-betting") }
     ],
     links: [{ rel: "canonical", href: "/tennis-betting" }],
+    scripts: [
+        ...(buildPageFaqLd("/tennis-betting") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/tennis-betting")) }] : []),
+    ],
   }),
   component: () => (
     <ContentPage

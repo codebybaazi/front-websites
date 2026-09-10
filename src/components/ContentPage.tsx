@@ -27,6 +27,9 @@ const RELATED_LINKS: { to: string; label: string; desc: string }[] = [
   { to: "/cricket-schedule", label: "Cricket Schedule", desc: "India series & ICC events" },
   { to: "/matches", label: "Live Matches", desc: "In-play & upcoming" },
   { to: "/blog", label: "Blog & Guides", desc: "Strategy & news" },
+  { to: "/sprinters-book-deposit-number", label: "Deposit Number", desc: "Sprinters Book WhatsApp deposit" },
+  { to: "/sprinters-book-withdrawl-number", label: "Withdrawal Number", desc: "Sprinters Book WhatsApp payout" },
+  { to: "/sprinters-book-customer-care-number", label: "Customer Care Number", desc: "Sprinters Book WhatsApp support" },
 
 ];
 

@@ -1,3 +1,5 @@
+import { abs } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/ContentPage";
 
@@ -9,9 +11,12 @@ export const Route = createFileRoute("/disclaimer")({
       { property: "og:title", content: "Disclaimer | Sprinters" },
       { property: "og:description", content: "Legal disclaimer for Sprinters services." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/disclaimer" }
+      { property: "og:url", content: abs("/disclaimer") }
     ],
     links: [{ rel: "canonical", href: "/disclaimer" }],
+    scripts: [
+        ...(buildPageFaqLd("/disclaimer") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/disclaimer")) }] : []),
+    ],
   }),
   component: () => (
     <ContentPage

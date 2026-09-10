@@ -1,3 +1,4 @@
+import { abs } from "@/lib/site-url";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { useSuspenseQuery } from "@tanstack/react-query";
@@ -26,7 +27,7 @@ export const Route = createFileRoute("/schedule/")({
           "All upcoming 2026-27 fixtures — cricket, football and tennis — with venues and Sprinters betting IDs.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/schedule" },
+      { property: "og:url", content: abs("/schedule") },
     ],
     links: [{ rel: "canonical", href: "/schedule" }],
   }),

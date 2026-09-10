@@ -68,11 +68,14 @@ const MENU: MenuGroup[] = [
     label: "Company",
     columns: [
       {
-        heading: "About",
+        heading: "Support",
         items: [
           { to: "/about", label: "About Us" },
           { to: "/blog", label: "Blog" },
           { to: "/contact", label: "Contact" },
+          { to: "/sprinters-book-deposit-number", label: "Deposit Number" },
+          { to: "/sprinters-book-withdrawl-number", label: "Withdrawal Number" },
+          { to: "/sprinters-book-customer-care-number", label: "Customer Care Number" },
         ],
       },
       {

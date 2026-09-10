@@ -91,7 +91,11 @@ export function SiteFooter() {
             <li><Link to="/services" className="hover:text-primary">What We Offer</Link></li>
             <li><Link to="/sprinters-club" className="hover:text-primary">VIP Club</Link></li>
             <li><Link to="/blog" className="hover:text-primary">Blog & News</Link></li>
+            <li><Link to="/authors" className="hover:text-primary">Our Writers</Link></li>
             <li><Link to="/contact" className="hover:text-primary">Contact Support</Link></li>
+            <li><Link to="/sprinters-book-deposit-number" className="hover:text-primary">Deposit Number</Link></li>
+            <li><Link to="/sprinters-book-withdrawl-number" className="hover:text-primary">Withdrawal Number</Link></li>
+            <li><Link to="/sprinters-book-customer-care-number" className="hover:text-primary">Customer Care Number</Link></li>
             <li><Link to="/responsible-gambling" className="hover:text-primary">Play Responsibly</Link></li>
             <li><Link to="/privacy-policy" className="hover:text-primary">Privacy Policy</Link></li>
           </ul>

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/ContentPage";
-import { abs } from "@/lib/site-url";
+import { abs, ogImageMeta } from "@/lib/site-url";
 
 const FAQS = [
   {
@@ -33,7 +33,8 @@ export const Route = createFileRoute("/casino")({
       { property: "og:title", content: "Online Casino ID | Sprinters" },
       { property: "og:description", content: "100+ live tables, real dealers, instant payouts — with one Sprinters Casino ID." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/casino" },
+      { property: "og:url", content: abs("/casino") },
+      ...ogImageMeta("Sprinters Online Casino — live dealers, slots and Aviator"),
     ],
     links: [{ rel: "canonical", href: "/casino" }],
     scripts: [

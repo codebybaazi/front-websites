@@ -1,3 +1,5 @@
+import { abs, ogImageMeta } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ContentPage } from "@/components/ContentPage";
 
@@ -16,9 +18,13 @@ export const Route = createFileRoute("/platforms")({
       { property: "og:title", content: "Supported Platforms | Sprinters" },
       { property: "og:description", content: "One WhatsApp. Every platform. Verified IDs across India's leading exchanges." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/platforms" }
+      { property: "og:url", content: abs("/platforms") },
+      ...ogImageMeta("Supported platforms on Sprinters Online Gaming — Cricbet99, Laser247, 11xplay and more"),
     ],
     links: [{ rel: "canonical", href: "/platforms" }],
+    scripts: [
+        ...(buildPageFaqLd("/platforms") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/platforms")) }] : []),
+    ],
   }),
   component: () => (
     <ContentPage

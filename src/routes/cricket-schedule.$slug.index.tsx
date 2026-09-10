@@ -1,3 +1,4 @@
+import { abs } from "@/lib/site-url";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteHeader, TELEGRAM } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -69,7 +70,7 @@ export const Route = createFileRoute("/cricket-schedule/$slug/")({
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
         { property: "og:type", content: "article" },
-        { property: "og:url", content: `/cricket-schedule/${params.slug}` },
+        { property: "og:url", content: abs(`/cricket-schedule/${params.slug}`) },
       ],
       links: [{ rel: "canonical", href: `/cricket-schedule/${params.slug}` }],
       scripts: [

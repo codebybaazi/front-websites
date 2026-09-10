@@ -1,3 +1,5 @@
+import { abs } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/ContentPage";
 
@@ -9,9 +11,12 @@ export const Route = createFileRoute("/laser247")({
       { property: "og:title", content: "Laser247 ID | Sprinters" },
       { property: "og:description", content: "Verified Laser247 access — full sports + casino, delivered on WhatsApp." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/laser247" }
+      { property: "og:url", content: abs("/laser247") }
     ],
     links: [{ rel: "canonical", href: "/laser247" }],
+    scripts: [
+        ...(buildPageFaqLd("/laser247") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/laser247")) }] : []),
+    ],
   }),
   component: () => (
     <ContentPage

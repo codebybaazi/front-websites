@@ -1,3 +1,5 @@
+import { abs } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/ContentPage";
 
@@ -9,9 +11,12 @@ export const Route = createFileRoute("/privacy-policy")({
       { property: "og:title", content: "Privacy Policy | Sprinters" },
       { property: "og:description", content: "How Sprinters handles your data — full privacy policy." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/privacy-policy" }
+      { property: "og:url", content: abs("/privacy-policy") }
     ],
     links: [{ rel: "canonical", href: "/privacy-policy" }],
+    scripts: [
+        ...(buildPageFaqLd("/privacy-policy") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/privacy-policy")) }] : []),
+    ],
   }),
   component: () => (
     <ContentPage

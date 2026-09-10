@@ -34,7 +34,7 @@ export const Route = createFileRoute("/cricket-betting")({
       { property: "og:description", content: "Sharpest odds across IPL, T20, ODI and Test formats — with one verified Sprinters account." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:url", content: "/cricket-betting" },
+      { property: "og:url", content: abs("/cricket-betting") },
     ],
     links: [{ rel: "canonical", href: "/cricket-betting" }],
     scripts: [

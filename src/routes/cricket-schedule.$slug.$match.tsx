@@ -1,3 +1,4 @@
+import { abs } from "@/lib/site-url";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { Sparkles, Trophy, Target, Users, MapPin, Calendar, TrendingUp, Check, ChevronRight } from "lucide-react";
@@ -61,7 +62,7 @@ export const Route = createFileRoute("/cricket-schedule/$slug/$match")({
         { property: "og:title", content: `${match.home} vs ${match.away} — ${series.name} Prediction` },
         { property: "og:description", content: desc },
         { property: "og:type", content: "article" },
-        { property: "og:url", content: `/cricket-schedule/${params.slug}/${params.match}` },
+        { property: "og:url", content: abs(`/cricket-schedule/${params.slug}/${params.match}`) },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: `${match.home} vs ${match.away} Prediction` },
         { name: "twitter:description", content: desc },

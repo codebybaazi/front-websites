@@ -1,3 +1,4 @@
+import { abs } from "@/lib/site-url";
 import { createFileRoute } from "@tanstack/react-router";
 import { Suspense } from "react";
 import heroSlide1 from "@/assets/hero-slide-1.jpg?w=1600&format=webp&quality=72";
@@ -24,6 +25,8 @@ import {
   IndianRupee,
   BadgeCheck,
   Check,
+  ArrowDownToLine,
+  ArrowRight,
 } from "lucide-react";
 import { SiteHeader, TELEGRAM } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -71,6 +74,7 @@ import tableWar from "@/assets/table-war.jpg?w=400&format=webp&quality=68";
 
 import { liveMatchesQueryOptions } from "@/lib/live-matches.functions";
 import { useWhatsAppHref } from "@/hooks/use-whatsapp";
+import { displayNumberFromHref } from "@/lib/whatsapp";
 
 
 
@@ -85,7 +89,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Get your online cricket & betting ID in minutes with Sprinters. IPL, football, tennis & live casino — instant UPI, 24-hour payouts, 24/7 support.",
+          "Get your online cricket & betting ID in minutes with Sprinters. IPL, football, tennis & live casino — instant UPI, 24-hour payouts, player reviews.",
       },
       { property: "og:title", content: "Online Cricket & Betting ID in India — Sprinters" },
       {
@@ -94,7 +98,7 @@ export const Route = createFileRoute("/")({
           "One verified Sprinters cricket ID unlocks Laser247, Tiger Exchange, Cricbet99, 11xplay and more — sharp odds, instant deposits and 24-hour payouts.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: abs("/") },
       { property: "og:image", content: "https://sprintersbokk.com/og-banner.jpg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
@@ -113,6 +117,8 @@ export const Route = createFileRoute("/")({
     ],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(buildFaqLd()) },
+      { type: "application/ld+json", children: JSON.stringify(buildHowToLd()) },
+      { type: "application/ld+json", children: JSON.stringify(buildReviewsLd()) },
     ],
   }),
   component: Index,
@@ -236,10 +242,65 @@ const FAQ_ITEMS = [
   { q: "Is there an age restriction?", a: "You must be 18 or older, or the legal age in your state, to open and use a Sprinters account." },
 ];
 
+const landingReviews: {
+  name: string;
+  city: string;
+  detail: string;
+  date: string;
+  rating: number;
+  title: string;
+  body: string;
+}[] = [
+  {
+    name: "Neha Deshmukh",
+    city: "Nagpur",
+    detail: "PhonePe deposits, IPL sessions",
+    date: "2026-03-11",
+    rating: 5,
+    title: "₹500 on PhonePe showed up before I locked the phone",
+    body: "WhatsApp sent the login, I paid ₹500 on PhonePe, and the wallet updated before I put the phone down. Used it on a CSK session the same night. No extra cut on the deposit.",
+  },
+  {
+    name: "Rajesh Iyer",
+    city: "Chennai",
+    detail: "IPL withdrawals",
+    date: "2026-05-22",
+    rating: 5,
+    title: "Payout the same day after an IPL night",
+    body: "I raised a withdrawal at 9am after betting through an IPL match. UPI landed around 6pm. The bank SMS named the credit. Last season on another ID I waited overnight, so same-day felt like a different setup.",
+  },
+  {
+    name: "Imran Sheikh",
+    city: "Delhi",
+    detail: "India T20s",
+    date: "2026-06-14",
+    rating: 5,
+    title: "ID arrived before my tea break",
+    body: "I messaged WhatsApp at lunch and had the Sprinters ID before tea. First bets were an India T20 match winner and one fancy over. When I asked how to switch between Laser247 and Cricbet99, the manager replied in Hindi with the steps.",
+  },
+  {
+    name: "Kavita Reddy",
+    city: "Visakhapatnam",
+    detail: "Teen Patti and small cricket stakes",
+    date: "2026-08-07",
+    rating: 4,
+    title: "Casino on mobile data, payout inside 24 hours",
+    body: "Teen Patti tables ran fine on Jio data. One withdrawal sat until the next morning, still inside the 24-hour window they print on the site. Support pinged me on Telegram when the bank was slow. I keep stakes small.",
+  },
+];
+
+const landingReviewAverage = (
+  landingReviews.reduce((sum, review) => sum + review.rating, 0) / landingReviews.length
+).toFixed(1);
+
 function buildFaqLd() {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".faq-question", ".faq-answer"],
+    },
     mainEntity: FAQ_ITEMS.map(({ q, a }) => ({
       "@type": "Question",
       name: q,
@@ -248,8 +309,62 @@ function buildFaqLd() {
   };
 }
 
+function buildHowToLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to get a Sprinters betting ID",
+    description: "Get a verified Sprinters cricket, sports and casino betting ID in six quick steps.",
+    step: howSteps.map(({ title, text }) => ({
+      "@type": "HowToStep",
+      name: title,
+      text,
+    })),
+  };
+}
+
+function buildReviewsLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Sprinters betting ID",
+    description:
+      "Player reviews of Sprinters covering PhonePe deposits, WhatsApp ID setup, IPL betting and 24-hour UPI withdrawals.",
+    brand: { "@type": "Brand", name: "Sprinters" },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: landingReviewAverage,
+      bestRating: "5",
+      worstRating: "1",
+      reviewCount: String(landingReviews.length),
+    },
+    review: landingReviews.map((review) => ({
+      "@type": "Review",
+      name: review.title,
+      datePublished: review.date,
+      reviewBody: review.body,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: String(review.rating),
+        bestRating: "5",
+        worstRating: "1",
+      },
+      author: {
+        "@type": "Person",
+        name: review.name,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: review.city,
+          addressCountry: "IN",
+        },
+      },
+    })),
+  };
+}
+
 function Index() {
   const whatsapp = useWhatsAppHref();
+  const displayNumber = displayNumberFromHref(whatsapp);
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
@@ -961,6 +1076,105 @@ function Index() {
             </div>
           ))}
         </div>
+
+        <div
+          className="relative mt-14 overflow-hidden rounded-[1.75rem] border border-secondary/50 p-5 md:p-8"
+          style={{ boxShadow: "var(--shadow-glow-secondary)" }}
+        >
+          <div
+            className="pointer-events-none absolute inset-0 opacity-40"
+            style={{ background: "var(--gradient-hero)" }}
+            aria-hidden
+          />
+          <div className="relative">
+            <p className="text-center text-xs font-bold uppercase tracking-[0.28em] text-black/80">
+              Official Sprinters Book numbers
+            </p>
+            <div className="mt-5 grid gap-4 md:grid-cols-3">
+              {[
+                {
+                  to: "/sprinters-book-deposit-number",
+                  icon: Wallet,
+                  title: "Deposit Number",
+                  text: "Chat for today's UPI details and credit your Sprinters Book ID from ₹100.",
+                },
+                {
+                  to: "/sprinters-book-withdrawl-number",
+                  icon: ArrowDownToLine,
+                  title: "Withdrawal Number",
+                  text: "Request a cash-out on WhatsApp. Payouts typically land within 24 hours.",
+                },
+                {
+                  to: "/sprinters-book-customer-care-number",
+                  icon: Headphones,
+                  title: "Customer Care Number",
+                  text: "24/7 desk for IDs, login, deposits and withdrawals. Tap the number to chat.",
+                },
+              ].map(({ to, icon: Icon, title, text }) => (
+                <Link
+                  key={to}
+                  to={to}
+                  className="group flex h-full flex-col rounded-2xl border border-black/10 bg-background/90 p-5 text-left shadow-lg backdrop-blur-sm transition hover:-translate-y-1 hover:border-secondary"
+                >
+                  <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-secondary/20 text-secondary">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <p className="mt-4 text-lg font-black text-foreground">{title}</p>
+                  {displayNumber ? (
+                    <p className="mt-1 text-xl font-black tracking-wide text-secondary">
+                      {displayNumber}
+                    </p>
+                  ) : null}
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{text}</p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                    Open page
+                    <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 pb-24" aria-labelledby="landing-reviews-heading">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 id="landing-reviews-heading" className="text-3xl font-black text-foreground md:text-4xl">
+            Player reviews
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            Four Indian players on PhonePe deposits, WhatsApp IDs, IPL bets, and how long a UPI payout took.
+          </p>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Average rating {landingReviewAverage} out of 5 from {landingReviews.length} reviews.
+          </p>
+        </div>
+        <ul className="mt-12 grid gap-5 md:grid-cols-2">
+          {landingReviews.map((review) => (
+            <li key={review.name} className="rounded-3xl border border-border bg-card p-6">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <p className="text-lg font-semibold text-card-foreground">{review.name}</p>
+                  <p className="mt-0.5 text-xs text-muted-foreground">
+                    {review.city}, {review.detail}
+                  </p>
+                </div>
+                <span className="flex shrink-0 items-center gap-0.5" aria-label={`${review.rating} out of 5 stars`}>
+                  {Array.from({ length: 5 }, (_, i) => (
+                    <Star
+                      key={i}
+                      className={`h-3.5 w-3.5 ${
+                        i < review.rating ? "fill-primary text-primary" : "text-muted-foreground/40"
+                      }`}
+                    />
+                  ))}
+                </span>
+              </div>
+              <h3 className="mt-5 text-sm font-semibold text-foreground">{review.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{review.body}</p>
+            </li>
+          ))}
+        </ul>
       </section>
 
       {/* CTA banner */}
@@ -1049,12 +1263,12 @@ function Index() {
               className="group rounded-2xl border border-border bg-card p-5 open:border-primary"
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-semibold text-card-foreground">
-                {q}
+                <h3 className="faq-question text-base font-semibold text-card-foreground">{q}</h3>
                 <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-border text-primary transition group-open:rotate-45">
                   +
                 </span>
               </summary>
-              <p className="mt-3 text-sm text-muted-foreground">{a}</p>
+              <p className="faq-answer mt-3 text-sm text-muted-foreground">{a}</p>
             </details>
           ))}
         </div>

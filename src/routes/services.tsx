@@ -1,3 +1,5 @@
+import { abs, ogImageMeta } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/ContentPage";
 
@@ -9,9 +11,13 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: "Services | Sprinters" },
       { property: "og:description", content: "Everything Sprinters delivers — from ID creation to 24-hour payouts." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/services" }
+      { property: "og:url", content: abs("/services") },
+      ...ogImageMeta("Sprinters Online Gaming services — verified betting IDs and 24/7 support"),
     ],
     links: [{ rel: "canonical", href: "/services" }],
+    scripts: [
+        ...(buildPageFaqLd("/services") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/services")) }] : []),
+    ],
   }),
   component: () => (
     <ContentPage

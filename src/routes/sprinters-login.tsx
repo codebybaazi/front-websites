@@ -1,3 +1,5 @@
+import { abs } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/ContentPage";
 
@@ -10,9 +12,12 @@ export const Route = createFileRoute("/sprinters-login")({
       { property: "og:description", content: "Access your Sprinters ID. Credentials shared privately after WhatsApp verification." },
       { property: "og:type", content: "website" },
       { name: "robots", content: "noindex" },
-      { property: "og:url", content: "/sprinters-login" }
+      { property: "og:url", content: abs("/sprinters-login") }
     ],
     links: [{ rel: "canonical", href: "/sprinters-login" }],
+    scripts: [
+        ...(buildPageFaqLd("/sprinters-login") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/sprinters-login")) }] : []),
+    ],
   }),
   component: () => (
     <ContentPage

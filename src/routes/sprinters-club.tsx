@@ -1,3 +1,5 @@
+import { abs } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/ContentPage";
 
@@ -9,9 +11,12 @@ export const Route = createFileRoute("/sprinters-club")({
       { property: "og:title", content: "Sprinters Club | VIP Membership" },
       { property: "og:description", content: "Priority payouts, VIP odds, exclusive markets — Sprinters Club members-only." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/sprinters-club" }
+      { property: "og:url", content: abs("/sprinters-club") }
     ],
     links: [{ rel: "canonical", href: "/sprinters-club" }],
+    scripts: [
+        ...(buildPageFaqLd("/sprinters-club") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/sprinters-club")) }] : []),
+    ],
   }),
   component: () => (
     <ContentPage

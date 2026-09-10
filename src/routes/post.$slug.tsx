@@ -3,6 +3,7 @@ import { SiteHeader, TELEGRAM } from "@/components/SiteHeader";
 import { useWhatsAppHref } from "@/hooks/use-whatsapp";
 import { SiteFooter } from "@/components/SiteFooter";
 import { blogPosts } from "@/data/blog-posts";
+import { getAuthorForPost } from "@/data/authors";
 import { abs } from "@/lib/site-url";
 import { MessageCircle, Send, Calendar, ArrowLeft } from "lucide-react";
 
@@ -24,6 +25,7 @@ export const Route = createFileRoute("/post/$slug")({
       };
     }
     const { post } = loaderData;
+    const author = getAuthorForPost(post);
     const desc = post.excerpt || `${post.title} — read the full story on the Sprinters blog.`;
     const url = `/post/${params.slug}`;
     const suffix = " | Sprinters Blog";
@@ -37,7 +39,7 @@ export const Route = createFileRoute("/post/$slug")({
         { property: "og:title", content: post.title },
         { property: "og:description", content: desc.slice(0, 200) },
         { property: "og:type", content: "article" },
-        { property: "og:url", content: url },
+        { property: "og:url", content: abs(url) },
         ...(post.image ? [{ property: "og:image", content: post.image }] : []),
         { name: "twitter:card", content: "summary_large_image" },
       ],
@@ -54,7 +56,12 @@ export const Route = createFileRoute("/post/$slug")({
             image: [abs(post.image || "/favicon.png")],
             description: desc.slice(0, 200),
             mainEntityOfPage: { "@type": "WebPage", "@id": abs(url) },
-            author: { "@type": "Organization", name: "Sprinters Online Gaming", url: abs("/") },
+            author: {
+              "@type": "Person",
+              name: author.name,
+              jobTitle: author.role,
+              url: abs(`/authors/${author.slug}`),
+            },
             publisher: {
               "@type": "Organization",
               name: "Sprinters Online Gaming",
@@ -109,17 +116,9 @@ export const Route = createFileRoute("/post/$slug")({
 
 function splitParagraphs(body: string): string[] {
   if (!body) return [];
-  let cleaned = body.replace(/\s+/g, " ").trim();
-  // Source body data was truncated mid-word during generation. Trim back to
-  // the last complete sentence so content renders cleanly.
-  const lastPunct = Math.max(
-    cleaned.lastIndexOf("."),
-    cleaned.lastIndexOf("!"),
-    cleaned.lastIndexOf("?"),
-  );
-  if (lastPunct > 80 && lastPunct < cleaned.length - 1) {
-    cleaned = cleaned.slice(0, lastPunct + 1);
-  }
+  // blog-posts.ts already trims each body to its last complete sentence
+  // (cleanBody()), so this only needs to group sentences into paragraphs.
+  const cleaned = body.replace(/\s+/g, " ").trim();
   const sentences = cleaned.match(/[^.!?]+[.!?]+/g) ?? [cleaned];
   const paras: string[] = [];
   let buf = "";
@@ -136,6 +135,7 @@ function splitParagraphs(body: string): string[] {
 
 function PostPage() {
   const { post, related } = Route.useLoaderData();
+  const author = getAuthorForPost(post);
   const paragraphs = splitParagraphs(post.body);
   const whatsapp = useWhatsAppHref();
 
@@ -155,7 +155,10 @@ function PostPage() {
           <Calendar className="h-4 w-4" />
           <span>{post.date}</span>
           <span aria-hidden>•</span>
-          <span>Sprinters Editorial</span>
+          <Link to="/authors/$slug" params={{ slug: author.slug }} className="normal-case tracking-normal text-foreground hover:text-primary hover:underline">
+            {author.name}
+          </Link>
+          <span className="normal-case tracking-normal text-muted-foreground/70">· {author.role}</span>
         </div>
 
         <h1 className="mt-4 text-3xl font-black leading-tight text-foreground md:text-5xl">

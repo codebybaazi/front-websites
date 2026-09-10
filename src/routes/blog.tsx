@@ -1,9 +1,11 @@
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageFaqs } from "@/components/PageFaqs";
 import { blogPosts } from "@/data/blog-posts";
-import { abs } from "@/lib/site-url";
+import { getAuthorForPost } from "@/data/authors";
+import { abs, ogImageMeta } from "@/lib/site-url";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -13,10 +15,12 @@ export const Route = createFileRoute("/blog")({
       { property: "og:title", content: "Sprinters Blog" },
       { property: "og:description", content: "Cricket, football and casino insights — updated weekly." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/blog" }
+      { property: "og:url", content: abs("/blog") },
+      ...ogImageMeta("Sprinters Blog — cricket, betting tips and casino guides"),
     ],
     links: [{ rel: "canonical", href: "/blog" }],
     scripts: [
+        ...(buildPageFaqLd("/blog") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/blog")) }] : []),
       {
         type: "application/ld+json",
         children: JSON.stringify({
@@ -54,6 +58,9 @@ function BlogIndex() {
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
             {sorted.length}+ articles on cricket, betting, casino strategy and Indian sports culture.
           </p>
+          <Link to="/authors" className="mt-4 inline-block text-sm font-semibold text-primary hover:underline">
+            Meet the writers behind these articles →
+          </Link>
         </div>
       </section>
 
@@ -77,6 +84,9 @@ function BlogIndex() {
                 {p.excerpt ? (
                   <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{p.excerpt}</p>
                 ) : null}
+                <span className="mt-2 text-xs font-medium text-muted-foreground/80">
+                  By {getAuthorForPost(p).name}
+                </span>
                 <Link
                   to="/post/$slug"
                   params={{ slug: p.slug }}

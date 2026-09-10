@@ -1,3 +1,5 @@
+import { abs } from "@/lib/site-url";
+import { buildPageFaqLd } from "@/data/pageFaqs";
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPage } from "@/components/ContentPage";
 
@@ -9,9 +11,12 @@ export const Route = createFileRoute("/responsible-gambling")({
       { property: "og:title", content: "Responsible Gambling | Sprinters" },
       { property: "og:description", content: "Limits, self-exclusion and support — play safe with Sprinters." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/responsible-gambling" }
+      { property: "og:url", content: abs("/responsible-gambling") }
     ],
     links: [{ rel: "canonical", href: "/responsible-gambling" }],
+    scripts: [
+        ...(buildPageFaqLd("/responsible-gambling") ? [{ type: "application/ld+json", children: JSON.stringify(buildPageFaqLd("/responsible-gambling")) }] : []),
+    ],
   }),
   component: () => (
     <ContentPage

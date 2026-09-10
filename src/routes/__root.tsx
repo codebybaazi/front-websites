@@ -120,6 +120,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               logo: abs("/favicon.png"),
               description:
                 "India's trusted online betting ID provider — cricket, football, tennis, kabaddi and live casino.",
+              sameAs: [
+                "https://facebook.com/sprintersonline",
+                "https://instagram.com/sprintersonline",
+                "https://twitter.com/sprintersonline",
+                "https://youtube.com/@sprintersonline",
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer support",
+                url: abs("/contact"),
+                availableLanguage: ["English", "Hindi"],
+              },
             },
             {
               "@type": "WebSite",

@@ -1,10 +1,11 @@
-import { useEffect } from "react";
 import { useRouterState } from "@tanstack/react-router";
 import { PAGE_FAQS } from "@/data/pageFaqs";
 
 /**
  * Renders a unique FAQ block for the current route (if one is defined in
- * PAGE_FAQS) and injects a matching FAQPage JSON-LD tag into <head>.
+ * PAGE_FAQS). The matching FAQPage JSON-LD is emitted server-side by the
+ * route's own `head()` via `buildPageFaqLd()`, not from this component, so
+ * it's present in the initial HTML for crawlers that don't execute JS.
  *
  * Pages that already ship their own FAQ block (home, casino, cricket pages)
  * are intentionally omitted from PAGE_FAQS to avoid duplicates.
@@ -12,26 +13,6 @@ import { PAGE_FAQS } from "@/data/pageFaqs";
 export function PageFaqs() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const faqs = PAGE_FAQS[pathname];
-
-  useEffect(() => {
-    if (!faqs || faqs.length === 0) return;
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.setAttribute("data-page-faqs", pathname);
-    script.text = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faqs.map((f) => ({
-        "@type": "Question",
-        name: f.q,
-        acceptedAnswer: { "@type": "Answer", text: f.a },
-      })),
-    });
-    document.head.appendChild(script);
-    return () => {
-      script.remove();
-    };
-  }, [pathname, faqs]);
 
   if (!faqs || faqs.length === 0) return null;
 
@@ -51,9 +32,9 @@ export function PageFaqs() {
               className="group rounded-xl border border-border/70 bg-background/60 p-4 open:border-primary/60"
             >
               <summary className="cursor-pointer list-none text-sm font-semibold text-foreground md:text-base">
-                {q}
+                <h3 className="faq-question text-sm font-semibold text-foreground md:text-base">{q}</h3>
               </summary>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              <p className="faq-answer mt-2 text-sm leading-relaxed text-muted-foreground">
                 {a}
               </p>
             </details>

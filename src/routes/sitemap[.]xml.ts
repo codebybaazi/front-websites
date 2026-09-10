@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { blogPosts } from "@/data/blog-posts";
+import { AUTHORS } from "@/data/authors";
 import { ALL_PAGE_SLUGS } from "@/data/pages";
 import { wc2026Matches } from "@/data/wc2026-matches";
 import { cricketSeries2026 } from "@/data/cricket-series-2026";
@@ -26,6 +27,9 @@ export const Route = createFileRoute("/sitemap.xml")({
 
           { path: "/about", changefreq: "monthly", priority: "0.8" },
           { path: "/contact", changefreq: "monthly", priority: "0.8" },
+          { path: "/sprinters-book-deposit-number", changefreq: "weekly", priority: "0.85" },
+          { path: "/sprinters-book-withdrawl-number", changefreq: "weekly", priority: "0.85" },
+          { path: "/sprinters-book-customer-care-number", changefreq: "weekly", priority: "0.85" },
           { path: "/services", changefreq: "monthly", priority: "0.8" },
           { path: "/platforms", changefreq: "monthly", priority: "0.8" },
           { path: "/sports-id", changefreq: "monthly", priority: "0.9" },
@@ -45,6 +49,12 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/sprinters-vs-lotus365", changefreq: "monthly", priority: "0.6" },
           { path: "/sprinters-vs-skyexchange247", changefreq: "monthly", priority: "0.6" },
           { path: "/blog", changefreq: "daily", priority: "0.9" },
+          { path: "/authors", changefreq: "monthly", priority: "0.5" },
+          ...AUTHORS.map((a) => ({
+            path: `/authors/${a.slug}`,
+            changefreq: "weekly" as const,
+            priority: "0.5",
+          })),
           { path: "/thank-you", changefreq: "yearly", priority: "0.2" },
           { path: "/privacy-policy", changefreq: "yearly", priority: "0.3" },
           { path: "/terms-and-conditions", changefreq: "yearly", priority: "0.3" },

@@ -1,3 +1,4 @@
+import { abs } from "@/lib/site-url";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { SiteHeader, TELEGRAM } from "@/components/SiteHeader";
@@ -58,7 +59,7 @@ export const Route = createFileRoute("/match/$id")({
         { property: "og:title", content: `${matchName} — ${league} Prediction` },
         { property: "og:description", content: description.slice(0, 160) },
         { property: "og:type", content: "article" },
-        { property: "og:url", content: url },
+        { property: "og:url", content: abs(url) },
         { name: "twitter:card", content: "summary_large_image" },
       ],
       links: [{ rel: "canonical", href: url }],

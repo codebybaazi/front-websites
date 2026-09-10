@@ -4,6 +4,30 @@
 
 export type Faq = { q: string; a: string };
 
+/**
+ * Builds the FAQPage JSON-LD for a route's PAGE_FAQS entry, for use in that
+ * route's SSR `head()` (so crawlers see it without executing JS). Returns
+ * null when the pathname has no FAQ set, so callers can conditionally spread
+ * it into their `scripts` array.
+ */
+export function buildPageFaqLd(pathname: string) {
+  const faqs = PAGE_FAQS[pathname];
+  if (!faqs || faqs.length === 0) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".faq-question", ".faq-answer"],
+    },
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}
+
 export const PAGE_FAQS: Record<string, Faq[]> = {
   "/11xplay": [
     { q: "How do I create an 11xplay ID with Sprinters?", a: "Message Sprinters on WhatsApp with your name and mobile number. After OTP verification and your first UPI deposit, your 11xplay ID is delivered on WhatsApp within minutes." },
@@ -73,6 +97,29 @@ export const PAGE_FAQS: Record<string, Faq[]> = {
     { q: "How long does Sports ID verification take?", a: "OTP verification is instant. Your Sports ID is delivered on WhatsApp within 5 minutes of your first UPI deposit." },
     { q: "Can I use one Sports ID on multiple devices?", a: "Yes. Your Sports ID works on mobile web, desktop and installable PWA — up to 3 concurrent sessions per account." },
     { q: "What documents do I need for a Sports ID?", a: "Only a working Indian mobile number is required to start. KYC is only requested for withdrawals above the platform-specific threshold." },
+  ],
+  "/sprinters-book-deposit-number": [
+    { q: "What is the Sprinters Book deposit number?", a: "It is the live UPI or bank detail Sprinters uses to credit your betting ID. The current Sprinters Book deposit number is sent in WhatsApp after you tap Chat on WhatsApp on this page. It is not printed on the site." },
+    { q: "How do I get the deposit number Sprinters Book uses?", a: "Open the official WhatsApp chat from this page, send your username or registered mobile, and ask for the deposit number. Pay only the details that arrive in that thread, then share the UTR or screenshot there." },
+    { q: "Why is the number not shown on the page?", a: "Payment handles change. Listing them in search results leaves stale QRs in circulation. The chat button loads the current WhatsApp desk for this domain so you receive today's details." },
+    { q: "Can I call for the Sprinters Book deposit number?", a: "No. This page does not offer a call button. Deposits are handled in WhatsApp so the payment proof and credit stay in one chat." },
+    { q: "What is the minimum deposit on Sprinters Book?", a: "First deposits start at ₹100 via PhonePe, Google Pay, Paytm or bank UPI. There is no deposit fee. Credit usually follows within a few minutes of the screenshot being checked." },
+    { q: "How do I spot a fake deposit number Sprinters Book listing?", a: "Ignore any QR, UPI ID or mobile number that did not come from the Chat on WhatsApp button on this page. Sprinters will not ask for your password or send you to a personal call." },
+  ],
+  "/sprinters-book-withdrawl-number": [
+    { q: "What is the Sprinters Book withdrawl number?", a: "It is the live WhatsApp desk Sprinters uses to process cash-outs from your betting ID. The current Sprinters Book withdrawl number is opened by the Chat on WhatsApp button on this page. It is not printed on the site." },
+    { q: "How do I get the withdrawl number Sprinters Book uses?", a: "Open the official WhatsApp chat from this page, send your username and the amount you want out, then share your UPI or bank details. Stay in that thread until the payout is confirmed." },
+    { q: "How long does a Sprinters Book withdrawal take?", a: "Most payouts land within 24 hours to PhonePe, Google Pay, Paytm or bank UPI. There is no withdrawal fee. Club players are processed first in the same queue." },
+    { q: "Can I call for the Sprinters Book withdrawl number?", a: "No. This page does not offer a call button. Withdrawals are handled in WhatsApp so the request, UPI details and confirmation stay in one chat." },
+    { q: "Why is the number not shown on the page?", a: "Payout contacts change. Listing them in search results leaves stale numbers in circulation. The chat button loads the current WhatsApp desk for this domain." },
+    { q: "How do I spot a fake withdrawl number Sprinters Book listing?", a: "Ignore any payout contact that did not come from the Chat on WhatsApp button on this page. Sprinters will not ask for your password, a remote-access app, or a personal phone call before sending money." },
+  ],
+  "/sprinters-book-customer-care-number": [
+    { q: "What is the Sprinters Book customer care number?", a: "It is the live WhatsApp desk for this website. Tap the number on this page to open chat. Sprinters Book customer care does not use a voice call button here." },
+    { q: "How do I use the customer care number Sprinters Book lists?", a: "Tap the number or Chat on WhatsApp, send your username or registered mobile, and describe the issue. Stay in that thread for ID, login, deposit and withdrawal help." },
+    { q: "Is Sprinters Book customer care available 24/7?", a: "Yes. The WhatsApp desk replies around the clock in Hindi, English and Hinglish, including IPL nights and public holidays." },
+    { q: "Can I call the Sprinters Book customer care number?", a: "No. The digits on this page open WhatsApp. Voice calls are not offered from this page because payout and login work stays in chat." },
+    { q: "How do I spot a fake customer care number Sprinters Book listing?", a: "Ignore any helpline that did not open from this page. Sprinters will not ask for your password, OTP to a stranger, or a remote-access app." },
   ],
   "/sprinters-club": [
     { q: "What is the Sprinters Club?", a: "Sprinters Club is our VIP tier for high-volume players — with priority withdrawals, personal account managers, cashback and invite-only tournaments." },

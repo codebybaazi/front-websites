@@ -46,6 +46,27 @@ export function toWhatsAppHref(rawNumber: string): string {
   return `https://wa.me/${intl}`;
 }
 
+/** Visible label for a WhatsApp number. Never use this as a tel: link. */
+export function formatDisplayNumber(rawNumber: string): string {
+  const digits = String(rawNumber).replace(/\D/g, "");
+  if (!digits) return "";
+
+  let intl = digits;
+  if (intl.length === 10) intl = `91${intl}`;
+  else if (intl.startsWith("0") && intl.length === 11) intl = `91${intl.slice(1)}`;
+
+  if (intl.length === 12 && intl.startsWith("91")) {
+    return `+91 ${intl.slice(2, 7)} ${intl.slice(7)}`;
+  }
+  return `+${intl}`;
+}
+
+export function displayNumberFromHref(href: string): string {
+  const match = href.match(/wa\.me\/(\d+)/i);
+  if (!match) return "";
+  return formatDisplayNumber(match[1]);
+}
+
 export function withWhatsAppText(href: string, text?: string): string {
   if (!text) return href;
   const sep = href.includes("?") ? "&" : "?";

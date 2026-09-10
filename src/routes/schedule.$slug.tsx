@@ -1,3 +1,4 @@
+import { abs } from "@/lib/site-url";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import {
@@ -57,7 +58,7 @@ export const Route = createFileRoute("/schedule/$slug")({
         { property: "og:title", content: `${m.home} vs ${m.away} — ${TOURNAMENT} ${m.stage}` },
         { property: "og:description", content: desc },
         { property: "og:type", content: "article" },
-        { property: "og:url", content: `/schedule/${params.slug}` },
+        { property: "og:url", content: abs(`/schedule/${params.slug}`) },
       ],
       links: [{ rel: "canonical", href: `/schedule/${params.slug}` }],
       scripts: [
