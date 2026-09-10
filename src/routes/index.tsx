@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   Wallet,
   Headphones,
+  Phone,
   Sparkles,
   ChevronRight,
   BadgeCheck,
@@ -473,7 +474,31 @@ function FaqSection() {
 import { AiOverview } from "@/components/ai-overview";
 
 function IndexInner({ aiOverview }: { aiOverview: any }) {
-  const { wa } = useWhatsApp();
+  const { wa, display, digits } = useWhatsApp();
+  const liveNumber = display || digits;
+  const numberCards = [
+    {
+      label: "Deposit number",
+      desc: "Ask for today's UPI details and credit your Cricbet99 ID.",
+      to: "/cricbet99-deposit-number" as const,
+      chat: `${wa}?text=${encodeURIComponent("Hi, I need the Cricbet99 deposit number and today's UPI details.")}`,
+      icon: Wallet,
+    },
+    {
+      label: "Withdrawal number",
+      desc: "Request a UPI payout and track it on the same WhatsApp chat.",
+      to: "/cricbet99-withdrawl-number" as const,
+      chat: `${wa}?text=${encodeURIComponent("Hi, I need the Cricbet99 withdrawl number. I want to withdraw to UPI.")}`,
+      icon: CircleDollarSign,
+    },
+    {
+      label: "Customer care number",
+      desc: "IDs, login help, deposits, and payouts in Hindi or English.",
+      to: "/cricbet99-customer-care-number" as const,
+      chat: `${wa}?text=${encodeURIComponent("Hi, I need the Cricbet99 customer care number. I want help with my account.")}`,
+      icon: Headphones,
+    },
+  ];
 
   return (
     <SiteLayout>
@@ -1591,6 +1616,71 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
             <p className="mt-4 text-sm leading-relaxed text-foreground/65 md:text-base">
               Unedited words from real Cricbet99 members — verified IDs, verified withdrawals, straight from WhatsApp.
             </p>
+          </div>
+
+          <div className="relative mt-10 overflow-hidden rounded-3xl border-2 border-accent/70 p-4 shadow-[0_0_60px_-12px_color-mix(in_oklab,var(--accent)_55%,transparent)] sm:p-6">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 opacity-80"
+              style={{
+                background:
+                  "radial-gradient(80% 80% at 50% 0%, color-mix(in oklab, var(--accent) 22%, transparent), transparent 70%), linear-gradient(180deg, color-mix(in oklab, var(--primary) 12%, transparent), transparent)",
+              }}
+            />
+            <div className="relative mb-4 flex flex-wrap items-center justify-center gap-2 text-center">
+              <span className="inline-flex items-center gap-2 rounded-full border border-accent bg-accent px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-accent-foreground shadow-[0_8px_24px_-8px_color-mix(in_oklab,var(--accent)_80%,transparent)]">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-background opacity-70" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-background" />
+                </span>
+                Official WhatsApp numbers
+              </span>
+            </div>
+            <div className="relative grid gap-3 sm:grid-cols-3">
+              {numberCards.map((card) => {
+                const Icon = card.icon;
+                return (
+                  <div
+                    key={card.to}
+                    className="flex flex-col rounded-2xl border border-primary/40 bg-background/90 p-4 shadow-[0_12px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-md sm:p-5"
+                  >
+                    <div className="flex items-center gap-2">
+                      <span
+                        className="grid h-9 w-9 place-items-center rounded-lg text-primary-foreground"
+                        style={{ background: "var(--gradient-gold)" }}
+                      >
+                        <Icon className="h-4 w-4" />
+                      </span>
+                      <Link to={card.to} className="text-sm font-black uppercase tracking-tight text-foreground hover:text-primary">
+                        {card.label}
+                      </Link>
+                    </div>
+                    <p className="mt-3 flex items-center gap-2 text-2xl font-black tracking-tight text-accent sm:text-[1.65rem]">
+                      <Phone className="h-5 w-5 shrink-0" />
+                      {liveNumber}
+                    </p>
+                    <p className="mt-2 text-xs leading-relaxed text-foreground/70">{card.desc}</p>
+                    <div className="mt-4 flex flex-wrap items-center gap-2">
+                      <a
+                        href={card.chat}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-pulse inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-[11px] font-extrabold uppercase tracking-wider text-accent-foreground"
+                        style={{
+                          background:
+                            "linear-gradient(135deg, oklch(0.82 0.21 148) 0%, oklch(0.6 0.19 150) 55%, oklch(0.82 0.21 148) 100%)",
+                        }}
+                      >
+                        <MessageCircle className="h-3.5 w-3.5" /> Chat on WhatsApp
+                      </a>
+                      <Link to={card.to} className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-primary hover:underline">
+                        Open page <ChevronRight className="h-3.5 w-3.5" />
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           <div className="mt-16 grid gap-7 md:grid-cols-3">

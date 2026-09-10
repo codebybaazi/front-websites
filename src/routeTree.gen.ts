@@ -25,6 +25,8 @@ import { Route as ChampionsTrophyBettingRouteImport } from './routes/champions-t
 import { Route as CommunityGuidelinesRouteImport } from './routes/community-guidelines'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as Cricbet99AppRouteImport } from './routes/cricbet99-app'
+import { Route as Cricbet99CustomerCareNumberRouteImport } from './routes/cricbet99-customer-care-number'
+import { Route as Cricbet99DepositNumberRouteImport } from './routes/cricbet99-deposit-number'
 import { Route as Cricbet99IdRouteImport } from './routes/cricbet99-id'
 import { Route as Cricbet99Vs11xplayRouteImport } from './routes/cricbet99-vs-11xplay'
 import { Route as Cricbet99VsDiamondExchangeRouteImport } from './routes/cricbet99-vs-diamond-exchange'
@@ -35,6 +37,7 @@ import { Route as Cricbet99VsLotus365RouteImport } from './routes/cricbet99-vs-l
 import { Route as Cricbet99VsMahavirBookRouteImport } from './routes/cricbet99-vs-mahavir-book'
 import { Route as Cricbet99VsReddybookRouteImport } from './routes/cricbet99-vs-reddybook'
 import { Route as Cricbet99VsSkyexchange247RouteImport } from './routes/cricbet99-vs-skyexchange247'
+import { Route as Cricbet99WithdrawlNumberRouteImport } from './routes/cricbet99-withdrawl-number'
 import { Route as CricketRouteImport } from './routes/cricket'
 import { Route as CricketScheduleRouteImport } from './routes/cricket-schedule'
 import { Route as DemoIdRouteImport } from './routes/demo-id'
@@ -204,6 +207,17 @@ const Cricbet99AppRoute = Cricbet99AppRouteImport.update({
   path: '/cricbet99-app',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Cricbet99CustomerCareNumberRoute =
+  Cricbet99CustomerCareNumberRouteImport.update({
+    id: '/cricbet99-customer-care-number',
+    path: '/cricbet99-customer-care-number',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Cricbet99DepositNumberRoute = Cricbet99DepositNumberRouteImport.update({
+  id: '/cricbet99-deposit-number',
+  path: '/cricbet99-deposit-number',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const Cricbet99IdRoute = Cricbet99IdRouteImport.update({
   id: '/cricbet99-id',
   path: '/cricbet99-id',
@@ -254,6 +268,12 @@ const Cricbet99VsSkyexchange247Route =
   Cricbet99VsSkyexchange247RouteImport.update({
     id: '/cricbet99-vs-skyexchange247',
     path: '/cricbet99-vs-skyexchange247',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Cricbet99WithdrawlNumberRoute =
+  Cricbet99WithdrawlNumberRouteImport.update({
+    id: '/cricbet99-withdrawl-number',
+    path: '/cricbet99-withdrawl-number',
     getParentRoute: () => rootRouteImport,
   } as any)
 const CricketRoute = CricketRouteImport.update({
@@ -730,6 +750,8 @@ export interface FileRoutesByFullPath {
   '/community-guidelines': typeof CommunityGuidelinesRoute
   '/contact': typeof ContactRoute
   '/cricbet99-app': typeof Cricbet99AppRoute
+  '/cricbet99-customer-care-number': typeof Cricbet99CustomerCareNumberRoute
+  '/cricbet99-deposit-number': typeof Cricbet99DepositNumberRoute
   '/cricbet99-id': typeof Cricbet99IdRoute
   '/cricbet99-vs-11xplay': typeof Cricbet99Vs11xplayRoute
   '/cricbet99-vs-diamond-exchange': typeof Cricbet99VsDiamondExchangeRoute
@@ -740,6 +762,7 @@ export interface FileRoutesByFullPath {
   '/cricbet99-vs-mahavir-book': typeof Cricbet99VsMahavirBookRoute
   '/cricbet99-vs-reddybook': typeof Cricbet99VsReddybookRoute
   '/cricbet99-vs-skyexchange247': typeof Cricbet99VsSkyexchange247Route
+  '/cricbet99-withdrawl-number': typeof Cricbet99WithdrawlNumberRoute
   '/cricket': typeof CricketRoute
   '/cricket-schedule': typeof CricketScheduleRoute
   '/demo-id': typeof DemoIdRoute
@@ -846,6 +869,8 @@ export interface FileRoutesByTo {
   '/community-guidelines': typeof CommunityGuidelinesRoute
   '/contact': typeof ContactRoute
   '/cricbet99-app': typeof Cricbet99AppRoute
+  '/cricbet99-customer-care-number': typeof Cricbet99CustomerCareNumberRoute
+  '/cricbet99-deposit-number': typeof Cricbet99DepositNumberRoute
   '/cricbet99-id': typeof Cricbet99IdRoute
   '/cricbet99-vs-11xplay': typeof Cricbet99Vs11xplayRoute
   '/cricbet99-vs-diamond-exchange': typeof Cricbet99VsDiamondExchangeRoute
@@ -856,6 +881,7 @@ export interface FileRoutesByTo {
   '/cricbet99-vs-mahavir-book': typeof Cricbet99VsMahavirBookRoute
   '/cricbet99-vs-reddybook': typeof Cricbet99VsReddybookRoute
   '/cricbet99-vs-skyexchange247': typeof Cricbet99VsSkyexchange247Route
+  '/cricbet99-withdrawl-number': typeof Cricbet99WithdrawlNumberRoute
   '/cricket': typeof CricketRoute
   '/cricket-schedule': typeof CricketScheduleRoute
   '/demo-id': typeof DemoIdRoute
@@ -963,6 +989,8 @@ export interface FileRoutesById {
   '/community-guidelines': typeof CommunityGuidelinesRoute
   '/contact': typeof ContactRoute
   '/cricbet99-app': typeof Cricbet99AppRoute
+  '/cricbet99-customer-care-number': typeof Cricbet99CustomerCareNumberRoute
+  '/cricbet99-deposit-number': typeof Cricbet99DepositNumberRoute
   '/cricbet99-id': typeof Cricbet99IdRoute
   '/cricbet99-vs-11xplay': typeof Cricbet99Vs11xplayRoute
   '/cricbet99-vs-diamond-exchange': typeof Cricbet99VsDiamondExchangeRoute
@@ -973,6 +1001,7 @@ export interface FileRoutesById {
   '/cricbet99-vs-mahavir-book': typeof Cricbet99VsMahavirBookRoute
   '/cricbet99-vs-reddybook': typeof Cricbet99VsReddybookRoute
   '/cricbet99-vs-skyexchange247': typeof Cricbet99VsSkyexchange247Route
+  '/cricbet99-withdrawl-number': typeof Cricbet99WithdrawlNumberRoute
   '/cricket': typeof CricketRoute
   '/cricket-schedule': typeof CricketScheduleRoute
   '/demo-id': typeof DemoIdRoute
@@ -1081,6 +1110,8 @@ export interface FileRouteTypes {
     | '/community-guidelines'
     | '/contact'
     | '/cricbet99-app'
+    | '/cricbet99-customer-care-number'
+    | '/cricbet99-deposit-number'
     | '/cricbet99-id'
     | '/cricbet99-vs-11xplay'
     | '/cricbet99-vs-diamond-exchange'
@@ -1091,6 +1122,7 @@ export interface FileRouteTypes {
     | '/cricbet99-vs-mahavir-book'
     | '/cricbet99-vs-reddybook'
     | '/cricbet99-vs-skyexchange247'
+    | '/cricbet99-withdrawl-number'
     | '/cricket'
     | '/cricket-schedule'
     | '/demo-id'
@@ -1197,6 +1229,8 @@ export interface FileRouteTypes {
     | '/community-guidelines'
     | '/contact'
     | '/cricbet99-app'
+    | '/cricbet99-customer-care-number'
+    | '/cricbet99-deposit-number'
     | '/cricbet99-id'
     | '/cricbet99-vs-11xplay'
     | '/cricbet99-vs-diamond-exchange'
@@ -1207,6 +1241,7 @@ export interface FileRouteTypes {
     | '/cricbet99-vs-mahavir-book'
     | '/cricbet99-vs-reddybook'
     | '/cricbet99-vs-skyexchange247'
+    | '/cricbet99-withdrawl-number'
     | '/cricket'
     | '/cricket-schedule'
     | '/demo-id'
@@ -1313,6 +1348,8 @@ export interface FileRouteTypes {
     | '/community-guidelines'
     | '/contact'
     | '/cricbet99-app'
+    | '/cricbet99-customer-care-number'
+    | '/cricbet99-deposit-number'
     | '/cricbet99-id'
     | '/cricbet99-vs-11xplay'
     | '/cricbet99-vs-diamond-exchange'
@@ -1323,6 +1360,7 @@ export interface FileRouteTypes {
     | '/cricbet99-vs-mahavir-book'
     | '/cricbet99-vs-reddybook'
     | '/cricbet99-vs-skyexchange247'
+    | '/cricbet99-withdrawl-number'
     | '/cricket'
     | '/cricket-schedule'
     | '/demo-id'
@@ -1430,6 +1468,8 @@ export interface RootRouteChildren {
   CommunityGuidelinesRoute: typeof CommunityGuidelinesRoute
   ContactRoute: typeof ContactRoute
   Cricbet99AppRoute: typeof Cricbet99AppRoute
+  Cricbet99CustomerCareNumberRoute: typeof Cricbet99CustomerCareNumberRoute
+  Cricbet99DepositNumberRoute: typeof Cricbet99DepositNumberRoute
   Cricbet99IdRoute: typeof Cricbet99IdRoute
   Cricbet99Vs11xplayRoute: typeof Cricbet99Vs11xplayRoute
   Cricbet99VsDiamondExchangeRoute: typeof Cricbet99VsDiamondExchangeRoute
@@ -1440,6 +1480,7 @@ export interface RootRouteChildren {
   Cricbet99VsMahavirBookRoute: typeof Cricbet99VsMahavirBookRoute
   Cricbet99VsReddybookRoute: typeof Cricbet99VsReddybookRoute
   Cricbet99VsSkyexchange247Route: typeof Cricbet99VsSkyexchange247Route
+  Cricbet99WithdrawlNumberRoute: typeof Cricbet99WithdrawlNumberRoute
   CricketRoute: typeof CricketRoute
   CricketScheduleRoute: typeof CricketScheduleRoute
   DemoIdRoute: typeof DemoIdRoute
@@ -1634,6 +1675,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Cricbet99AppRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cricbet99-customer-care-number': {
+      id: '/cricbet99-customer-care-number'
+      path: '/cricbet99-customer-care-number'
+      fullPath: '/cricbet99-customer-care-number'
+      preLoaderRoute: typeof Cricbet99CustomerCareNumberRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricbet99-deposit-number': {
+      id: '/cricbet99-deposit-number'
+      path: '/cricbet99-deposit-number'
+      fullPath: '/cricbet99-deposit-number'
+      preLoaderRoute: typeof Cricbet99DepositNumberRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/cricbet99-id': {
       id: '/cricbet99-id'
       path: '/cricbet99-id'
@@ -1702,6 +1757,13 @@ declare module '@tanstack/react-router' {
       path: '/cricbet99-vs-skyexchange247'
       fullPath: '/cricbet99-vs-skyexchange247'
       preLoaderRoute: typeof Cricbet99VsSkyexchange247RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricbet99-withdrawl-number': {
+      id: '/cricbet99-withdrawl-number'
+      path: '/cricbet99-withdrawl-number'
+      fullPath: '/cricbet99-withdrawl-number'
+      preLoaderRoute: typeof Cricbet99WithdrawlNumberRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cricket': {
@@ -2387,6 +2449,8 @@ const rootRouteChildren: RootRouteChildren = {
   CommunityGuidelinesRoute: CommunityGuidelinesRoute,
   ContactRoute: ContactRoute,
   Cricbet99AppRoute: Cricbet99AppRoute,
+  Cricbet99CustomerCareNumberRoute: Cricbet99CustomerCareNumberRoute,
+  Cricbet99DepositNumberRoute: Cricbet99DepositNumberRoute,
   Cricbet99IdRoute: Cricbet99IdRoute,
   Cricbet99Vs11xplayRoute: Cricbet99Vs11xplayRoute,
   Cricbet99VsDiamondExchangeRoute: Cricbet99VsDiamondExchangeRoute,
@@ -2397,6 +2461,7 @@ const rootRouteChildren: RootRouteChildren = {
   Cricbet99VsMahavirBookRoute: Cricbet99VsMahavirBookRoute,
   Cricbet99VsReddybookRoute: Cricbet99VsReddybookRoute,
   Cricbet99VsSkyexchange247Route: Cricbet99VsSkyexchange247Route,
+  Cricbet99WithdrawlNumberRoute: Cricbet99WithdrawlNumberRoute,
   CricketRoute: CricketRoute,
   CricketScheduleRoute: CricketScheduleRoute,
   DemoIdRoute: DemoIdRoute,

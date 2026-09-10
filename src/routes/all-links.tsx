@@ -74,7 +74,9 @@ const groups: { title: string; items: { l: string; to: string }[] }[] = [
     title: "User Education",
     items: [
       { l: "How to Deposit", to: "/how-to-deposit" },
+      { l: "Cricbet99 Deposit Number", to: "/cricbet99-deposit-number" },
       { l: "How to Withdraw", to: "/how-to-withdraw" },
+      { l: "Cricbet99 Withdrawl Number", to: "/cricbet99-withdrawl-number" },
       { l: "KYC Policy", to: "/kyc-policy" },
       { l: "Security Review", to: "/security" },
       { l: "Transaction Limits", to: "/transaction-limits" },
@@ -107,6 +109,7 @@ const groups: { title: string; items: { l: string; to: string }[] }[] = [
     title: "Support & Help",
     items: [
       { l: "WhatsApp Support", to: "/whatsapp-support" },
+      { l: "Cricbet99 Customer Care Number", to: "/cricbet99-customer-care-number" },
       { l: "Contact Us", to: "/contact" },
       { l: "FAQ Knowledge Base", to: "/faq" },
       { l: "Login Issues", to: "/login-issues" },

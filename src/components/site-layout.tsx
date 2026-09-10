@@ -224,6 +224,21 @@ export function SiteFooter() {
                 Contact
               </Link>
             </li>
+            <li>
+              <Link to="/cricbet99-deposit-number" className="hover:text-primary">
+                Deposit Number
+              </Link>
+            </li>
+            <li>
+              <Link to="/cricbet99-withdrawl-number" className="hover:text-primary">
+                Withdrawl Number
+              </Link>
+            </li>
+            <li>
+              <Link to="/cricbet99-customer-care-number" className="hover:text-primary">
+                Customer Care Number
+              </Link>
+            </li>
           </ul>
         </div>
         <div>

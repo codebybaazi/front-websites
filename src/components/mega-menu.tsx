@@ -197,6 +197,9 @@ const MENUS: MenuDef[] = [
         { label: "All Links", to: "/all-links" },
         { label: "App", to: "/cricbet99-app" },
         { label: "Contact", to: "/contact" },
+        { label: "Deposit Number", to: "/cricbet99-deposit-number" },
+        { label: "Withdrawl Number", to: "/cricbet99-withdrawl-number" },
+        { label: "Customer Care Number", to: "/cricbet99-customer-care-number" },
       ]},
       { title: "Policies", items: [
         { label: "All Policies", to: "/policies" },

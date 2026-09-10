@@ -110,6 +110,9 @@ export function generateScheduleSitemap(
 
     // Support & help center
     { path: "/how-to-deposit", changefreq: "monthly", priority: "0.5" },
+    { path: "/cricbet99-deposit-number", changefreq: "weekly", priority: "0.7" },
+    { path: "/cricbet99-withdrawl-number", changefreq: "weekly", priority: "0.7" },
+    { path: "/cricbet99-customer-care-number", changefreq: "weekly", priority: "0.7" },
     { path: "/how-to-withdraw", changefreq: "monthly", priority: "0.5" },
     { path: "/deposit-issues", changefreq: "monthly", priority: "0.4" },
     { path: "/withdrawal-delay", changefreq: "monthly", priority: "0.4" },
