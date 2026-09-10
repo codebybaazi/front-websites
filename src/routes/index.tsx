@@ -1618,7 +1618,60 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
             </p>
           </div>
 
-          <div className="relative mt-10 overflow-hidden rounded-3xl border-2 border-accent/70 p-4 shadow-[0_0_60px_-12px_color-mix(in_oklab,var(--accent)_55%,transparent)] sm:p-6">
+          <div className="mt-16 grid gap-7 md:grid-cols-3">
+            {[
+              { name: "Ravi K.", city: "Mumbai", role: "IPL Regular", initials: "RK", payout: "₹18,400", quote: "ID activated in under 3 minutes. First IPL bet placed, first withdrawal in my bank the same night. Zero friction, zero excuses." },
+              { name: "Aditya S.", city: "Bengaluru", role: "Session Specialist", initials: "AS", payout: "₹42,900", quote: "Tried four platforms before this. Cricbet99 has the sharpest session odds and a WhatsApp manager who actually understands cricket." },
+              { name: "Neha P.", city: "Delhi", role: "Live Casino Player", initials: "NP", payout: "₹27,150", quote: "The Teen Patti live tables are elite — crisp HD stream, zero lag, and my withdrawal hit my account inside 8 minutes flat." },
+            ].map((t, idx) => (
+              <div key={t.name} className="group relative rounded-3xl p-[1.5px] transition-all duration-500 hover:-translate-y-2" style={{ backgroundImage: "linear-gradient(140deg, color-mix(in oklab, var(--primary) 55%, transparent), color-mix(in oklab, var(--accent) 50%, transparent) 45%, transparent 80%)" }}>
+                <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(1.5rem-1.5px)] bg-background/95 p-8 backdrop-blur-xl">
+                  {/* Ambient glow on hover */}
+                  <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-40" style={{ background: "var(--gradient-gold)" }} />
+
+                  {/* Quote glyph */}
+                  <div className="absolute right-6 top-5 font-serif text-7xl leading-none text-primary/15 transition-colors duration-500 group-hover:text-primary/25">"</div>
+
+                  {/* Rating + verified */}
+                  <div className="relative flex items-center justify-between">
+                    <div className="flex gap-0.5 text-accent">
+                      {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
+                    </div>
+                    <div className="flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-accent">
+                      <ClipboardCheck className="h-3 w-3" /> Verified
+                    </div>
+                  </div>
+
+                  {/* Quote */}
+                  <p className="relative mt-6 text-[15px] leading-relaxed text-foreground/85">
+                    {t.quote}
+                  </p>
+
+                  {/* Divider */}
+                  <div className="relative mt-6 h-px w-full" style={{ background: "linear-gradient(90deg, transparent, color-mix(in oklab, var(--primary) 40%, transparent), transparent)" }} />
+
+                  {/* Footer: avatar + payout */}
+                  <div className="relative mt-5 flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-full text-sm font-black text-background shadow-lg" style={{ background: "var(--gradient-gold)" }}>
+                        {t.initials}
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold text-foreground">{t.name}</div>
+                        <div className="text-[11px] font-medium uppercase tracking-wider text-foreground/55">{t.city} · {t.role}</div>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-[10px] font-semibold uppercase tracking-widest text-foreground/50">Withdrew</div>
+                      <div className="bg-clip-text text-sm font-black text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>{t.payout}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="relative mt-16 overflow-hidden rounded-3xl border-2 border-accent/70 p-4 shadow-[0_0_60px_-12px_color-mix(in_oklab,var(--accent)_55%,transparent)] sm:p-6">
             <div
               aria-hidden
               className="pointer-events-none absolute inset-0 opacity-80"
@@ -1681,59 +1734,6 @@ function IndexInner({ aiOverview }: { aiOverview: any }) {
                 );
               })}
             </div>
-          </div>
-
-          <div className="mt-16 grid gap-7 md:grid-cols-3">
-            {[
-              { name: "Ravi K.", city: "Mumbai", role: "IPL Regular", initials: "RK", payout: "₹18,400", quote: "ID activated in under 3 minutes. First IPL bet placed, first withdrawal in my bank the same night. Zero friction, zero excuses." },
-              { name: "Aditya S.", city: "Bengaluru", role: "Session Specialist", initials: "AS", payout: "₹42,900", quote: "Tried four platforms before this. Cricbet99 has the sharpest session odds and a WhatsApp manager who actually understands cricket." },
-              { name: "Neha P.", city: "Delhi", role: "Live Casino Player", initials: "NP", payout: "₹27,150", quote: "The Teen Patti live tables are elite — crisp HD stream, zero lag, and my withdrawal hit my account inside 8 minutes flat." },
-            ].map((t, idx) => (
-              <div key={t.name} className="group relative rounded-3xl p-[1.5px] transition-all duration-500 hover:-translate-y-2" style={{ backgroundImage: "linear-gradient(140deg, color-mix(in oklab, var(--primary) 55%, transparent), color-mix(in oklab, var(--accent) 50%, transparent) 45%, transparent 80%)" }}>
-                <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(1.5rem-1.5px)] bg-background/95 p-8 backdrop-blur-xl">
-                  {/* Ambient glow on hover */}
-                  <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-40" style={{ background: "var(--gradient-gold)" }} />
-
-                  {/* Quote glyph */}
-                  <div className="absolute right-6 top-5 font-serif text-7xl leading-none text-primary/15 transition-colors duration-500 group-hover:text-primary/25">"</div>
-
-                  {/* Rating + verified */}
-                  <div className="relative flex items-center justify-between">
-                    <div className="flex gap-0.5 text-accent">
-                      {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
-                    </div>
-                    <div className="flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-accent">
-                      <ClipboardCheck className="h-3 w-3" /> Verified
-                    </div>
-                  </div>
-
-                  {/* Quote */}
-                  <p className="relative mt-6 text-[15px] leading-relaxed text-foreground/85">
-                    {t.quote}
-                  </p>
-
-                  {/* Divider */}
-                  <div className="relative mt-6 h-px w-full" style={{ background: "linear-gradient(90deg, transparent, color-mix(in oklab, var(--primary) 40%, transparent), transparent)" }} />
-
-                  {/* Footer: avatar + payout */}
-                  <div className="relative mt-5 flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-11 w-11 items-center justify-center rounded-full text-sm font-black text-background shadow-lg" style={{ background: "var(--gradient-gold)" }}>
-                        {t.initials}
-                      </div>
-                      <div>
-                        <div className="text-sm font-bold text-foreground">{t.name}</div>
-                        <div className="text-[11px] font-medium uppercase tracking-wider text-foreground/55">{t.city} · {t.role}</div>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-[10px] font-semibold uppercase tracking-widest text-foreground/50">Withdrew</div>
-                      <div className="bg-clip-text text-sm font-black text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>{t.payout}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
