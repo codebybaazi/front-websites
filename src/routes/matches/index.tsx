@@ -1,5 +1,4 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { matches } from '@/data/matches'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -26,10 +25,15 @@ export const Route = createFileRoute('/matches/')({
       },
     ],
   }),
+  loader: async () => {
+    const { matches } = await import("@/data/matches");
+    return { matches };
+  },
   component: MatchesDashboard,
 })
 
 function MatchesDashboard() {
+  const { matches } = Route.useLoaderData();
   return (
     <div className="min-h-screen bg-black pt-24 pb-12">
       <div className="container mx-auto px-4 max-w-7xl">

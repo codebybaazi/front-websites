@@ -1,15 +1,24 @@
-import { CricketSeries } from "@/data/cricket-fixtures";
-import { FootballFixture } from "@/data/football-fixtures";
-import { TennisFixture } from "@/data/tennis-fixtures";
+import type { CricketSeries } from "@/data/cricket-fixtures";
+import type { FootballFixture } from "@/data/football-fixtures";
+import type { TennisFixture } from "@/data/tennis-fixtures";
 import { blogPosts } from "@/data/blog-posts";
+import { authors } from "@/data/authors";
+
+/** Converts a real content date to a YYYY-MM-DD sitemap lastmod value, or null if invalid. */
+function toLastmod(dateStr: string | undefined | null): string | null {
+  if (!dateStr) return null;
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return null;
+  return d.toISOString().split("T")[0];
+}
 
 export function generateScheduleSitemap(
   cricket: CricketSeries[],
   football: FootballFixture[],
-  tennis: TennisFixture[]
+  tennis: TennisFixture[],
 ) {
   const baseUrl = "https://cricbet99.co.in";
-  const today = new Date().toISOString().split('T')[0];
+  const today = new Date().toISOString().split("T")[0];
 
   const staticRoutes = [
     { path: "", changefreq: "daily", priority: "1.0" },
@@ -19,6 +28,7 @@ export function generateScheduleSitemap(
     { path: "/football-schedule", changefreq: "daily", priority: "0.8" },
     { path: "/tennis-schedule", changefreq: "daily", priority: "0.8" },
     { path: "/blog", changefreq: "daily", priority: "0.8" },
+    { path: "/authors", changefreq: "weekly", priority: "0.5" },
     { path: "/betting-guides", changefreq: "weekly", priority: "0.7" },
     { path: "/casino", changefreq: "daily", priority: "0.8" },
     { path: "/ipl-betting", changefreq: "always", priority: "0.9" },
@@ -47,7 +57,11 @@ export function generateScheduleSitemap(
 
     // Betting guides (sub-pages)
     { path: "/betting-guides/how-bookmakers-make-money", changefreq: "monthly", priority: "0.6" },
-    { path: "/betting-guides/how-to-bet-on-session-betting", changefreq: "monthly", priority: "0.6" },
+    {
+      path: "/betting-guides/how-to-bet-on-session-betting",
+      changefreq: "monthly",
+      priority: "0.6",
+    },
     { path: "/betting-guides/how-to-bet-on-toss-market", changefreq: "monthly", priority: "0.6" },
     { path: "/betting-guides/how-to-place-a-cricket-bet", changefreq: "monthly", priority: "0.6" },
     { path: "/betting-guides/how-to-place-a-live-bet", changefreq: "monthly", priority: "0.6" },
@@ -125,7 +139,7 @@ export function generateScheduleSitemap(
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
-  staticRoutes.forEach(route => {
+  staticRoutes.forEach((route) => {
     xml += `
   <url>
     <loc>${baseUrl}${route.path}</loc>
@@ -136,13 +150,25 @@ export function generateScheduleSitemap(
   });
 
   // Add Blog Posts
-  blogPosts.forEach(post => {
+  blogPosts.forEach((post) => {
+    const postLastmod = toLastmod(post.dateModified || post.date) || today;
     xml += `
   <url>
     <loc>${baseUrl}/blog/${post.slug}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${postLastmod}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>`;
+  });
+
+  // Add Author Pages
+  authors.forEach((author) => {
+    xml += `
+  <url>
+    <loc>${baseUrl}/authors/${author.slug}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>`;
   });
 
@@ -160,12 +186,12 @@ export function generateScheduleSitemap(
   }
 
   // Add Cricket Matches
-  cricket.forEach(series => {
-    series.matches.forEach(match => {
+  cricket.forEach((series) => {
+    series.matches.forEach((match) => {
       xml += `
   <url>
     <loc>${baseUrl}/matches/${match.slug}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${toLastmod(match.startDate) || today}</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
   </url>`;
@@ -173,22 +199,22 @@ export function generateScheduleSitemap(
   });
 
   // Add Football Matches
-  football.forEach(match => {
+  football.forEach((match) => {
     xml += `
   <url>
     <loc>${baseUrl}/matches/${match.slug}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${toLastmod(match.startDate) || today}</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
   </url>`;
   });
 
   // Add Tennis Matches
-  tennis.forEach(match => {
+  tennis.forEach((match) => {
     xml += `
   <url>
     <loc>${baseUrl}/matches/${match.slug}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${toLastmod(match.startDate) || today}</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
   </url>`;

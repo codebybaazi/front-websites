@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { getMatch, type MatchFixture } from '@/data/matches'
+import type { MatchFixture } from '@/data/matches'
 import { SiteLayout, CTABand } from '@/components/site-layout'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -19,7 +19,8 @@ import { AiOverview } from '@/components/ai-overview'
 import { useWhatsApp } from '@/hooks/use-whatsapp'
 
 export const Route = createFileRoute('/matches/$slug')({
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
+    const { getMatch } = await import("@/data/matches");
     const match = getMatch(params.slug)
     if (!match) throw new Error('Match not found')
     return { match }

@@ -1,7 +1,9 @@
 import { createFileRoute } from '@tanstack/react-router'
-import SchedulePage from './schedule'
+import { lazy, Suspense } from 'react'
 import { buildBreadcrumbJsonLd } from '@/components/long-form-page'
 import { AiOverview } from '@/components/ai-overview'
+
+const SchedulePage = lazy(() => import('@/components/schedule-page'))
 
 export const Route = createFileRoute('/football-schedule')({
   head: () => ({
@@ -21,7 +23,7 @@ export const Route = createFileRoute('/football-schedule')({
     ],
   }),
   component: () => (
-    <>
+    <Suspense fallback={<div className="min-h-screen bg-background" />}>
       <SchedulePage initialTab="Football" />
       <AiOverview 
         summary="FIFA World Cup & Football Schedule Hub: Comprehensive 2026 calendar covering Premier League, UCL, and international fixtures."
@@ -32,6 +34,6 @@ export const Route = createFileRoute('/football-schedule')({
           "Global Soccer Event Intelligence"
         ]}
       />
-    </>
+    </Suspense>
   ),
 })

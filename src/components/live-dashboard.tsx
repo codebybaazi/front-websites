@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 import { Flame, ChevronRight, Radio, CalendarClock, Trophy, Zap, TrendingUp } from "lucide-react";
 import { useWhatsApp } from "@/hooks/use-whatsapp";
 import { Link } from "@tanstack/react-router";
-import { matches as curatedMatches } from "@/data/matches";
 
 type LiveRunner = { name: string; back?: number; lay?: number };
 type LiveEvent = {

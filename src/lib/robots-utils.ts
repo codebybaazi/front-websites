@@ -1,5 +1,3 @@
-import { matches } from "@/data/matches";
-
 export function generateRobotsTxt() {
   return `User-agent: *
 Allow: /

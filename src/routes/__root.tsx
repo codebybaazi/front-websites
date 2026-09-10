@@ -143,6 +143,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           description:
             "India's trusted online cricket ID platform since 2020 — cricket, football, tennis and live casino with instant UPI payouts and 24/7 WhatsApp support.",
           address: "CricketBet99 Editorial (Virtual office — India). Correspondence via email is preferred.",
+          areaServed: {
+            "@type": "Country",
+            name: "India",
+          },
+          inLanguage: ["en-IN", "hi-IN"],
           contactPoint: {
             "@type": "ContactPoint",
             contactType: "customer support",
@@ -181,7 +186,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <head>
         <HeadContent />
       </head>

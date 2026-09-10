@@ -1,0 +1,521 @@
+import { Link } from "@tanstack/react-router";
+import { SiteLayout, PageHero, CTABand } from "@/components/site-layout";
+import { matches } from "@/data/matches";
+import { footballFixtures } from "@/data/football-fixtures";
+import { tennisFixtures } from "@/data/tennis-fixtures";
+import { cricketFixtures } from "@/data/cricket-fixtures";
+import { Calendar, MapPin, Trophy, Clock, ArrowRight, ExternalLink, BrainCircuit, Sparkles, TrendingUp } from "lucide-react";
+import { format } from "date-fns";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+import { AiOverview } from "@/components/ai-overview";
+
+const majorEvents = [
+  { m: "Mar 2026", e: "IPL 2026 — Season Opener", v: "Ahmedabad", cat: "Cricket" },
+  { m: "Mar–May 2026", e: "IPL 2026 League Stage", v: "Pan-India", cat: "Cricket" },
+  { m: "May 2026", e: "IPL 2026 Playoffs & Final", v: "Kolkata / Mumbai", cat: "Cricket" },
+  { m: "Jun 11, 2026", e: "FIFA World Cup 2026 Opener", v: "Mexico City", cat: "Football" },
+  { m: "Jun–Jul 2026", e: "FIFA World Cup 2026", v: "North America", cat: "Football" },
+  { m: "Jul 19, 2026", e: "FIFA World Cup 2026 Final", v: "New York/NJ", cat: "Football" },
+  { m: "Oct–Nov 2026", e: "ICC T20 World Cup 2026", v: "India & Sri Lanka", cat: "Cricket" },
+  { m: "Jun–Jul 2026", e: "Wimbledon Championships", v: "London", cat: "Tennis" },
+  { m: "Aug–Sep 2026", e: "US Open 2026", v: "New York", cat: "Tennis" },
+];
+
+interface ScheduleProps {
+  initialTab?: "Cricket" | "Football" | "Tennis";
+}
+
+export default function Schedule({ initialTab = "Cricket" }: ScheduleProps) {
+  const [activeTab, setActiveTab] = useState<"Cricket" | "Football" | "Tennis">(
+    initialTab.charAt(0).toUpperCase() + initialTab.slice(1) as any
+  );
+  
+  const filteredEvents = majorEvents.filter(e => e.cat === activeTab);
+  
+  const upcomingMatches = matches
+    .filter(m => m.status === 'upcoming' && m.sport === activeTab)
+    .slice(0, 10);
+  
+  const tabs = ["Cricket", "Football", "Tennis"] as const;
+
+  return (
+    <SiteLayout>
+      <PageHero
+        wide
+        eyebrow="2026 Sports Intelligence Hub"
+        title={<>2026 Cricket Schedule & <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-gold)" }}>Live Sports Calendar.</span></>}
+        subtitle="The definitive guide to the IPL 2026 fixtures, T20 World Cup 2026 schedule, and international football/tennis events. Track every live match and betting market on Cricbet99."
+      />
+
+      <section className="mx-auto max-w-7xl px-6 py-8 border-b border-primary/10">
+        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={cn(
+                "px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 border",
+                activeTab === tab
+                  ? "bg-primary text-primary-foreground border-primary shadow-[0_0_20px_rgba(212,175,55,0.3)]"
+                  : "bg-background/40 text-foreground/60 border-primary/20 hover:border-primary/50 hover:text-foreground"
+              )}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16">
+        <div className="space-y-12">
+          {/* Main Schedule Column */}
+          <div className="space-y-12">
+            <div className="prose prose-invert max-w-none mb-12">
+              <h1 className="text-4xl break-words md:text-5xl break-words font-black mb-6">
+                2026 Cricket Schedule, <span className="text-primary">IPL Fixtures</span> & Sports Calendar
+              </h1>
+              <p className="text-lg text-foreground/70 leading-relaxed">
+                Stay ahead of the game with the most comprehensive 2026 sports calendar. Whether you're tracking the <strong>IPL 2026 schedule</strong>, 
+                planning for the <strong>T20 World Cup 2026</strong>, or looking for <strong>FIFA World Cup 2026</strong> kickoff times, Cricbet99 
+                provides real-time updates and AI-driven betting intelligence for every major tournament.
+              </p>
+            </div>
+            
+            <div>
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
+                  <Trophy className="w-5 h-5 text-primary" />
+                </div>
+                <h2 className="text-3xl break-words font-bold tracking-tight">
+                  {`${activeTab} Fixtures & Betting Schedule 2026`}
+                </h2>
+              </div>
+              
+              <div className="space-y-4">
+                {activeTab === "Football" ? (
+                  <div className="space-y-12">
+                    {(["Group Stage", "Round of 32", "Round of 16", "Quarter-finals", "Semi-finals", "Final"] as const).map((category) => (
+                      <div key={category} className="space-y-6">
+                        <div className="flex items-center gap-3">
+                          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+                          <h3 className="text-xl font-bold text-primary px-4 py-1 rounded-full border border-primary/20 bg-primary/5 uppercase tracking-widest text-xs">
+                            {category}
+                          </h3>
+                          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+                        </div>
+                        
+                        <div className="rounded-2xl border border-primary/10 bg-background/40 overflow-hidden content-visibility-auto contain-intrinsic-size-[0_400px]">
+                          <div className="overflow-x-auto md:overflow-x-visible">
+                            {/* Desktop Table View */}
+                            <table className="w-full text-left border-collapse hidden md:table">
+                              <thead>
+                                <tr className="border-b border-primary/10 bg-primary/5">
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Stage</th>
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Match</th>
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Date & Kickoff</th>
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Venue</th>
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Details</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {footballFixtures
+                                  .filter(m => m.sport === "Football" && (m as any).category === category)
+                                  .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
+                                  .map((match) => (
+                                    <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap md:text-wrap">
+                                      <td className="p-4 text-sm font-medium text-foreground/80">{match.stage}</td>
+                                      <td className="p-4 font-bold text-foreground">{match.homeTeam} vs {match.awayTeam}</td>
+                                      <td className="p-4 text-sm text-foreground/60">{format(new Date(match.startDate), 'eee, dd MMM yyyy · HH:mm')}</td>
+                                      <td className="p-4 text-sm text-foreground/60 md:text-wrap">{match.venue}, {match.city}</td>
+                                      <td className="p-4">
+                                        <Link 
+                                          to="/matches/$slug"
+                                          params={{ slug: match.slug }}
+                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                          >
+                                            Analytics <ArrowRight className="w-3 h-3" />
+                                          </Link>
+                                      </td>
+                                    </tr>
+                                  ))}
+                              </tbody>
+                            </table>
+
+                            {/* Mobile Card View */}
+                            <div className="md:hidden divide-y divide-primary/10">
+                              {footballFixtures
+                                .filter(m => m.sport === "Football" && (m as any).category === category)
+                                .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
+                                .map((match) => (
+                                  <div key={match.slug} className="p-4 space-y-3">
+                                    <div className="flex justify-between items-start">
+                                      <div className="text-[10px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20 w-fit">
+                                        {match.stage}
+                                      </div>
+                                      <div className="text-[10px] text-foreground/60 font-medium">
+                                        {format(new Date(match.startDate), 'dd MMM yyyy')}
+                                      </div>
+                                    </div>
+                                    <div className="text-base font-bold text-foreground">
+                                      {match.homeTeam} vs {match.awayTeam}
+                                    </div>
+                                    <div className="grid grid-cols-2 gap-2 text-[11px] text-foreground/60">
+                                      <div className="flex items-center gap-1.5">
+                                        <Clock className="w-3.5 h-3.5 text-primary/70" />
+                                        {format(new Date(match.startDate), 'HH:mm')}
+                                      </div>
+                                      <div className="flex items-center gap-1.5">
+                                        <MapPin className="w-3.5 h-3.5 text-primary/70" />
+                                        {match.city}
+                                      </div>
+                                    </div>
+                                    <Link 
+                                      to="/matches/$slug"
+                                      params={{ slug: match.slug }}
+                                      className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                    >
+                                      Match Analytics <ArrowRight className="w-3.5 h-3.5" />
+                                    </Link>
+                                  </div>
+                                ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : activeTab === "Tennis" ? (
+                  <div className="space-y-6">
+                    <div className="rounded-2xl border border-primary/10 bg-background/40 overflow-hidden">
+                      <div className="overflow-x-auto md:overflow-x-visible">
+                        {/* Desktop Table View */}
+                        <table className="w-full text-left border-collapse hidden md:table">
+                          <thead>
+                            <tr className="border-b border-primary/10 bg-primary/5">
+                              <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Dates</th>
+                              <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Tournament</th>
+                              <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Defending Champ</th>
+                              <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Venue</th>
+                              <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Details</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {tennisFixtures
+                              .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
+                              .map((match) => (
+                                <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap md:text-wrap">
+                                  <td className="p-4 text-sm text-foreground/60 md:text-wrap">
+                                    {match.endDate ? (
+                                      <>
+                                        {(() => {
+                                          const start = new Date(match.startDate);
+                                          const end = new Date(match.endDate);
+                                          const sameMonth = start.getMonth() === end.getMonth() && start.getFullYear() === end.getFullYear();
+                                          return (
+                                            <>
+                                              {format(start, sameMonth ? 'd' : 'd MMM')} – {format(end, 'd MMM yyyy')}
+                                            </>
+                                          );
+                                        })()}
+                                      </>
+                                    ) : (
+                                      format(new Date(match.startDate), 'dd MMM yyyy')
+                                    )}
+                                  </td>
+                                  <td className="p-4">
+                                    <div className="text-sm font-bold text-foreground">{match.tournament}</div>
+                                    <div className="flex flex-wrap items-center gap-2 mt-1">
+                                      <span className="text-[10px] uppercase text-primary font-bold opacity-70 tracking-widest">{match.category}</span>
+                                      <span className="w-1 h-1 rounded-full bg-primary/30" />
+                                      <span className="text-[10px] font-bold text-foreground/50 uppercase tracking-tighter">{match.surface}</span>
+                                      <span className="w-1 h-1 rounded-full bg-primary/30" />
+                                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 font-bold leading-none">
+                                        {match.tour}
+                                      </span>
+                                    </div>
+                                  </td>
+                                  <td className="p-4">
+                                    <div className="text-sm font-bold text-foreground">{match.player1}</div>
+                                    <div className="text-[10px] text-foreground/40 italic">Prev: {match.player1}</div>
+                                  </td>
+                                  <td className="p-4 text-sm text-foreground/60 md:text-wrap">{match.venue}, {match.city}</td>
+                                  <td className="p-4">
+                                    <div className="flex flex-col gap-2">
+                                      <Link 
+                                        to="/matches/$slug"
+                                        params={{ slug: match.slug }}
+                                        className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                      >
+                                        Match Details <ArrowRight className="w-3 h-3" />
+                                      </Link>
+                                    </div>
+                                  </td>
+                                </tr>
+                              ))}
+                          </tbody>
+                        </table>
+
+                        {/* Mobile Card View */}
+                        <div className="md:hidden divide-y divide-primary/10">
+                          {tennisFixtures
+                            .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
+                            .map((match) => (
+                              <div key={match.slug} className="p-4 space-y-4">
+                                <div className="flex justify-between items-start gap-4">
+                                  <div className="flex-1">
+                                    <div className="text-[10px] font-bold text-primary uppercase tracking-widest mb-1">{match.category}</div>
+                                    <div className="text-base font-bold text-foreground leading-tight">{match.tournament}</div>
+                                  </div>
+                                  <div className="text-right">
+                                    <div className="text-[10px] text-foreground/60 font-bold whitespace-nowrap">
+                                      {match.endDate ? (
+                                        <>
+                                          {format(new Date(match.startDate), 'd')} - {format(new Date(match.endDate), 'd MMM')}
+                                        </>
+                                      ) : format(new Date(match.startDate), 'dd MMM')}
+                                    </div>
+                                    <div className="text-[9px] text-foreground/40 uppercase tracking-tighter mt-0.5">2026 Season</div>
+                                  </div>
+                                </div>
+
+                                <div className="grid grid-cols-2 gap-3 p-3 rounded-xl bg-primary/5 border border-primary/10">
+                                  <div>
+                                    <div className="text-[9px] text-foreground/40 uppercase font-bold mb-1 tracking-widest">Defending</div>
+                                    <div className="text-xs font-bold text-foreground">{match.player1}</div>
+                                  </div>
+                                  <div>
+                                    <div className="text-[9px] text-foreground/40 uppercase font-bold mb-1 tracking-widest">Surface</div>
+                                    <div className="text-xs font-bold text-foreground">{match.surface}</div>
+                                  </div>
+                                </div>
+
+                                <div className="flex items-center justify-between text-[11px] text-foreground/60 px-1">
+                                  <div className="flex items-center gap-1.5">
+                                    <MapPin className="w-3.5 h-3.5 text-primary/70" />
+                                    {match.city}
+                                  </div>
+                                  <div className="flex items-center gap-1.5">
+                                    <Trophy className="w-3.5 h-3.5 text-primary/70" />
+                                    {match.tour}
+                                  </div>
+                                </div>
+
+                                <Link 
+                                  to="/matches/$slug"
+                                  params={{ slug: match.slug }}
+                                  className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                >
+                                  Event Analytics <ArrowRight className="w-3.5 h-3.5" />
+                                </Link>
+                              </div>
+                            ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : activeTab === "Cricket" ? (
+                  <div className="space-y-12">
+                    {cricketFixtures.map((series) => (
+                      <div key={series.name} className="space-y-6">
+                        <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 border-l-4 border-l-primary shadow-sm">
+                          <h3 className="text-2xl font-bold text-foreground mb-2">{series.name}</h3>
+                          <p className="text-foreground/60 text-sm leading-relaxed">{series.details}</p>
+                        </div>
+                        
+                        <div className="rounded-2xl border border-primary/10 bg-background/40 overflow-hidden">
+                          <div className="overflow-x-auto md:overflow-x-visible">
+                            {/* Desktop Table View */}
+                            <table className="w-full text-left border-collapse hidden md:table">
+                              <thead>
+                                <tr className="border-b border-primary/10 bg-primary/5">
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Match</th>
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Teams</th>
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Date</th>
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Venue</th>
+                                  <th className="p-4 text-xs font-bold uppercase tracking-widest text-primary">Details</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {series.matches.map((match) => (
+                                  <tr key={match.slug} className="border-b border-primary/5 hover:bg-primary/5 transition-colors text-nowrap md:text-wrap">
+                                    <td className="p-4 text-sm font-medium text-foreground/80">{match.match}</td>
+                                    <td className="p-4">
+                                      <div className="flex items-center gap-3">
+                                        <img 
+                                          src={`https://cricbet99.co.in/images/teams/${match.homeTeam?.toLowerCase().replace(/\s+/g, '-')}.png`} 
+                                          alt={`${match.homeTeam} official logo — Official Cricbet99 Match Fixture 2026`}
+                                          className="w-6 h-6 object-contain"
+                                          onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                        />
+                                        <span className="font-bold text-foreground">{match.teams}</span>
+                                        <img 
+                                          src={`https://cricbet99.co.in/images/teams/${match.awayTeam?.toLowerCase().replace(/\s+/g, '-')}.png`} 
+                                          alt={`${match.awayTeam} official logo — Official Cricbet99 Match Fixture 2026`}
+                                          className="w-6 h-6 object-contain"
+                                          onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                        />
+                                      </div>
+                                    </td>
+                                    <td className="p-4 text-sm text-foreground/60 md:text-wrap">{match.date}</td>
+                                    <td className="p-4 text-sm text-foreground/60 md:text-wrap">{match.venue}</td>
+                                    <td className="p-4">
+                                      <Link 
+                                        to="/matches/$slug"
+                                        params={{ slug: match.slug }}
+                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                      >
+                                        Analytics <ArrowRight className="w-3 h-3" />
+                                      </Link>
+                                    </td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+
+                            {/* Mobile Card View */}
+                            <div className="md:hidden divide-y divide-primary/10">
+                              {series.matches.map((match) => (
+                                <div key={match.slug} className="p-4 space-y-3">
+                                  <div className="flex justify-between items-start">
+                                    <div className="text-[10px] font-bold text-primary uppercase tracking-widest px-2 py-0.5 rounded bg-primary/10 border border-primary/20 w-fit">
+                                      {match.match}
+                                    </div>
+                                    <div className="text-[10px] text-foreground/60 font-medium">
+                                      {match.date}
+                                    </div>
+                                  </div>
+                                  <div className="flex items-center gap-3">
+                                    <img 
+                                      src={`https://cricbet99.co.in/images/teams/${match.homeTeam?.toLowerCase().replace(/\s+/g, '-')}.png`} 
+                                      alt={`${match.homeTeam} official logo — Official Cricbet99 Match Fixture 2026`}
+                                      className="w-6 h-6 object-contain"
+                                      onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                    />
+                                    <div className="text-base font-bold text-foreground">
+                                      {match.teams}
+                                    </div>
+                                    <img 
+                                      src={`https://cricbet99.co.in/images/teams/${match.awayTeam?.toLowerCase().replace(/\s+/g, '-')}.png`} 
+                                      alt={`${match.awayTeam} official logo — Official Cricbet99 Match Fixture 2026`}
+                                      className="w-6 h-6 object-contain"
+                                      onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                    />
+                                  </div>
+                                  <div className="flex items-center gap-1.5 text-[11px] text-foreground/60">
+                                    <MapPin className="w-3.5 h-3.5 text-primary/70" />
+                                    {match.venue}
+                                  </div>
+                                  <Link 
+                                    to="/matches/$slug"
+                                    params={{ slug: match.slug }}
+                                    className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-primary/10 border border-primary/20 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                  >
+                                    Match Analytics <ArrowRight className="w-3.5 h-3.5" />
+                                  </Link>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  filteredEvents.map((event, i) => (
+                    <div 
+                      key={i}
+                      className="group relative overflow-hidden rounded-2xl border border-primary/10 bg-background/40 p-6 transition-all hover:border-primary/30 hover:bg-background/60"
+                    >
+                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div className="flex items-start gap-4">
+                          <div className="mt-1 flex flex-col items-center justify-center min-w-[80px] py-2 rounded-lg bg-primary/5 border border-primary/10 text-primary font-bold">
+                            <span className="text-xs uppercase opacity-70 tracking-tighter">Event Date</span>
+                            <span className="text-sm">{event.m}</span>
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">{event.cat}</div>
+                            <div className="flex items-center gap-3">
+                              <img 
+                                src={`https://cricbet99.co.in/images/teams/${(event.e.split(' vs ')[0] || '').toLowerCase().replace(/\s+/g, '-')}.png`} 
+                                alt={`${event.e.split(' vs ')[0]} official logo — Official Cricbet99 Match Fixture 2026`}
+                                className="w-8 h-8 object-contain"
+                                onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                              />
+                              <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{event.e}</h3>
+                              <img 
+                                src={`https://cricbet99.co.in/images/teams/${(event.e.split(' vs ')[1] || '').toLowerCase().replace(/\s+/g, '-')}.png`} 
+                                alt={`${event.e.split(' vs ')[1]} official logo — Official Cricbet99 Match Fixture 2026`}
+                                className="w-8 h-8 object-contain"
+                                onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                              />
+                            </div>
+                            <div className="flex items-center gap-2 text-sm text-foreground/60 mt-1">
+                              <MapPin className="w-3.5 h-3.5" />
+                              {event.v}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-4">
+                          <Link 
+                            to="/register"
+                            className="px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-bold flex items-center gap-2 hover:brightness-110 transition-all"
+                          >
+                            Bet Live <ArrowRight className="w-4 h-4" />
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  ))
+                )}
+                {filteredEvents.length === 0 && activeTab !== "Football" && (
+                  <div className="text-center py-12 border border-dashed border-primary/20 rounded-2xl bg-primary/5">
+                    <p className="text-foreground/60">No major {activeTab} events listed for this selection yet.</p>
+                  </div>
+                )}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16 bg-primary/5 rounded-3xl mb-16 border border-primary/10">
+        <h2 className="text-3xl break-words font-bold mb-8 text-center">Frequently Asked Questions — 2026 Sports Schedule</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-primary">Where can I find the IPL 2026 full schedule?</h3>
+            <p className="text-foreground/70 leading-relaxed">The IPL 2026 full schedule is updated live on Cricbet99. The tournament is expected to run from March to May 2026, featuring a 74-match format with the final in late May.</p>
+          </div>
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-primary">When is the T20 World Cup 2026 starting?</h3>
+            <p className="text-foreground/70 leading-relaxed">The ICC T20 World Cup 2026 is scheduled to be co-hosted by India and Sri Lanka in October and November 2026, capturing massive search intent for cricket fans worldwide.</p>
+          </div>
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-primary">How to track FIFA World Cup 2026 match timings in IST?</h3>
+            <p className="text-foreground/70 leading-relaxed">Our football tab converts all North American match times to Indian Standard Time (IST), ensuring you never miss a kickoff for the FIFA World Cup 2026 league stage or final.</p>
+          </div>
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-primary">Are tennis tournament dates for 2026 confirmed?</h3>
+            <p className="text-foreground/70 leading-relaxed">Yes, all major Grand Slams—Wimbledon, US Open, and WTA events—are listed in our Tennis calendar with surface details and defending champion insights.</p>
+          </div>
+        </div>
+      </section>
+
+      <AiOverview 
+        summary={`The 2026 ${activeTab} Cricket Schedule and Sports Calendar is optimized for precision betting. Our AI-driven Intelligence Hub integrates live T20 World Cup 2026 scheduling, IPL fixtures, and tennis/football metrics to provide a 360-degree view of today's match and high-authority betting markets.`}
+        highlights={[
+          "98% Accuracy on Tournament scheduling and venue mapping",
+          "Advanced AI Predictions for ATP/WTA match winners and total points",
+          "Real-time market volatility tracking for High-Authority betting events",
+          "Comprehensive keywords integration for elite SEO performance"
+        ]}
+      />
+
+      <CTABand 
+        heading="Experience 2026 with Cricbet99" 
+        sub="The world's most sophisticated sports exchange for the world's biggest sports year." 
+      />
+    </SiteLayout>
+  );
+}

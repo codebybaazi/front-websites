@@ -160,7 +160,7 @@ export function LongFormPage({
             {faqs.map((f, i) => (
               <details key={i} className="group rounded-xl border border-primary/25 bg-background/50 p-4 open:bg-background/70 sm:p-5">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold text-foreground sm:text-base">
-                  {f.q}
+                  <h3 className="m-0 inline text-inherit font-inherit">{f.q}</h3>
                   <ChevronRight className="h-4 w-4 shrink-0 transition-transform group-open:rotate-90" />
                 </summary>
                 <p className="mt-3 text-sm text-foreground/75 leading-relaxed">{f.a}</p>
@@ -193,8 +193,8 @@ export function buildArticleJsonLd(content: PageContent, url: string) {
     "@type": "Article",
     headline: content.title,
     description: content.subtitle,
-    datePublished: "2024-01-01T08:00:00+08:00",
-    dateModified: new Date().toISOString(),
+    datePublished: "2024-01-01T08:00:00+05:30",
+    dateModified: "2026-07-27T12:00:00+05:30",
     author: {
       "@type": "Organization",
       "name": "Cricbet99",

@@ -1,7 +1,13 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteLayout, CTABand } from "@/components/site-layout";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { blogPosts, getPostBySlug } from "@/data/blog-posts";
+import { getAuthorBySlug } from "@/data/authors";
 import { AiOverview } from "@/components/ai-overview";
 import defaultHero from "@/assets/stadium.webp";
 
@@ -13,6 +19,7 @@ export const Route = createFileRoute("/blog/$slug")({
   },
   head: ({ loaderData, params }) => {
     const post = loaderData?.post;
+    const author = post ? getAuthorBySlug(post.authorSlug) : undefined;
     if (!post) {
       return {
         meta: [
@@ -29,7 +36,12 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:description", content: post.excerpt },
         { property: "og:type", content: "article" },
         { property: "og:url", content: `https://cricbet99.co.in/blog/${post.slug}` },
-        ...(post.hero ? [{ property: "og:image", content: post.hero }, { name: "twitter:image", content: post.hero }] : []),
+        ...(post.hero
+          ? [
+              { property: "og:image", content: post.hero },
+              { name: "twitter:image", content: post.hero },
+            ]
+          : []),
         { name: "twitter:card", content: "summary_large_image" },
       ],
       links: [{ rel: "canonical", href: `https://cricbet99.co.in/blog/${params.slug}` }],
@@ -43,28 +55,33 @@ export const Route = createFileRoute("/blog/$slug")({
             description: post.excerpt,
             datePublished: post.date,
             dateModified: post.dateModified || post.date,
-            author: { 
-              "@type": "Person", 
-              "name": post.author || "Cricbet99 Editorial",
-              "url": "https://cricbet99.co.in/about"
+            author: {
+              "@type": "Person",
+              name: post.author || "Cricbet99 Editorial",
+              url: author
+                ? `https://cricbet99.co.in/authors/${author.slug}`
+                : "https://cricbet99.co.in/about",
+              ...(author ? { jobTitle: author.role, description: author.shortBio } : {}),
             },
             publisher: {
               "@type": "Organization",
               name: "Cricbet99",
-              logo: { "@type": "ImageObject", url: "https://cricbet99.co.in/favicon.png" }
+              logo: { "@type": "ImageObject", url: "https://cricbet99.co.in/favicon.png" },
             },
             ...(post.hero ? { image: post.hero } : {}),
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://cricbet99.co.in/blog/${params.slug}`
+              "@id": `https://cricbet99.co.in/blog/${params.slug}`,
             },
-            ...(post.faqs ? {
-              mainEntity: post.faqs.map(f => ({
-                "@type": "Question",
-                name: f.q,
-                acceptedAnswer: { "@type": "Answer", text: f.a }
-              }))
-            } : {})
+            ...(post.faqs
+              ? {
+                  mainEntity: post.faqs.map((f) => ({
+                    "@type": "Question",
+                    name: f.q,
+                    acceptedAnswer: { "@type": "Answer", text: f.a },
+                  })),
+                }
+              : {}),
           }),
         },
         {
@@ -72,13 +89,23 @@ export const Route = createFileRoute("/blog/$slug")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cricbet99.co.in/" },
-              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://cricbet99.co.in/blog" },
-              { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://cricbet99.co.in/blog/${params.slug}` }
-            ]
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://cricbet99.co.in/" },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Blog",
+                item: "https://cricbet99.co.in/blog",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: post.title,
+                item: `https://cricbet99.co.in/blog/${params.slug}`,
+              },
+            ],
           }),
-        }
+        },
       ],
     };
   },
@@ -86,8 +113,15 @@ export const Route = createFileRoute("/blog/$slug")({
     <SiteLayout>
       <div className="mx-auto max-w-3xl px-6 py-24 text-center">
         <h1 className="text-3xl break-words font-bold">Post not found</h1>
-        <p className="mt-4 text-foreground/70">The blog post you're looking for isn't here. Head back to the blog to browse the latest.</p>
-        <Link to="/blog" className="mt-6 inline-block rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground">Back to blog</Link>
+        <p className="mt-4 text-foreground/70">
+          The blog post you're looking for isn't here. Head back to the blog to browse the latest.
+        </p>
+        <Link
+          to="/blog"
+          className="mt-6 inline-block rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground"
+        >
+          Back to blog
+        </Link>
       </div>
     </SiteLayout>
   ),
@@ -95,7 +129,12 @@ export const Route = createFileRoute("/blog/$slug")({
     <SiteLayout>
       <div className="mx-auto max-w-3xl px-6 py-24 text-center">
         <h1 className="text-3xl break-words font-bold">Something went wrong</h1>
-        <button onClick={reset} className="mt-6 inline-block rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground">Try again</button>
+        <button
+          onClick={reset}
+          className="mt-6 inline-block rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground"
+        >
+          Try again
+        </button>
       </div>
     </SiteLayout>
   ),
@@ -104,31 +143,64 @@ export const Route = createFileRoute("/blog/$slug")({
 
 function PostPage() {
   const { post } = Route.useLoaderData();
+  const author = getAuthorBySlug(post.authorSlug);
   const related = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
   return (
     <SiteLayout>
       <article className="mx-auto max-w-5xl px-6 pt-16 pb-8">
         <div className="flex flex-wrap items-center gap-y-2 gap-x-4 text-[10px] font-bold uppercase tracking-widest text-foreground/50">
-          <span className="inline-flex rounded-full bg-accent/20 px-3 py-1 text-accent-foreground">{post.tag}</span>
+          <span className="inline-flex rounded-full bg-accent/20 px-3 py-1 text-accent-foreground">
+            {post.tag}
+          </span>
           <div className="flex items-center gap-1.5">
             <span className="text-primary/60">By</span>
-            <span className="text-foreground/90">{post.author || "Cricbet99 Editorial"}</span>
+            {author ? (
+              <Link
+                to="/authors/$slug"
+                params={{ slug: author.slug }}
+                className="text-foreground/90 hover:text-primary hover:underline"
+              >
+                {author.name}
+              </Link>
+            ) : (
+              <span className="text-foreground/90">{post.author || "Cricbet99 Editorial"}</span>
+            )}
           </div>
           <div className="flex items-center gap-1.5 border-l border-white/10 pl-4">
             <span className="text-primary/60">Published</span>
-            <span className="text-foreground/90">{new Date(post.date).toLocaleDateString("en-GB", { timeZone: "Asia/Kolkata",  year: "numeric", month: "short", day: "numeric"   })}</span>
+            <span className="text-foreground/90">
+              {new Date(post.date).toLocaleDateString("en-GB", {
+                timeZone: "Asia/Kolkata",
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })}
+            </span>
           </div>
           {post.dateModified && post.dateModified !== post.date && (
             <div className="flex items-center gap-1.5 border-l border-white/10 pl-4">
               <span className="text-primary/60">Updated</span>
-              <span className="text-foreground/90">{new Date(post.dateModified).toLocaleDateString("en-GB", { timeZone: "Asia/Kolkata",  year: "numeric", month: "short", day: "numeric"   })}</span>
+              <span className="text-foreground/90">
+                {new Date(post.dateModified).toLocaleDateString("en-GB", {
+                  timeZone: "Asia/Kolkata",
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </span>
             </div>
           )}
         </div>
-        <h1 className="mt-4 text-4xl break-words font-black leading-tight md:text-5xl break-words">{post.title}</h1>
+        <h1 className="mt-4 text-4xl break-words font-black leading-tight md:text-5xl break-words">
+          {post.title}
+        </h1>
         <p className="mt-4 text-lg text-foreground/70">{post.excerpt}</p>
-        <img src={post.hero ?? defaultHero} alt={post.title} className="mt-8 aspect-[16/9] w-full rounded-2xl object-cover shadow-[var(--shadow-gold)]" />
+        <img
+          src={post.hero ?? defaultHero}
+          alt={post.title}
+          className="mt-8 aspect-[16/9] w-full rounded-2xl object-cover shadow-[var(--shadow-gold)]"
+        />
 
         <div className="mt-10 space-y-8">
           {post.sections.map((s: { heading: string; body: string }) => (
@@ -146,8 +218,8 @@ function PostPage() {
             </h2>
             <Accordion type="single" collapsible className="w-full space-y-4">
               {post.faqs.map((faq: { q: string; a: string }, idx: number) => (
-                <AccordionItem 
-                  key={idx} 
+                <AccordionItem
+                  key={idx}
                   value={`item-${idx}`}
                   className="rounded-2xl border border-primary/10 bg-black/40 px-6 transition-all hover:border-primary/30 data-[state=open]:border-primary/50 data-[state=open]:bg-black/60"
                 >
@@ -162,20 +234,50 @@ function PostPage() {
             </Accordion>
           </div>
         )}
+
+        {author && (
+          <Link
+            to="/authors/$slug"
+            params={{ slug: author.slug }}
+            className="mt-12 flex items-center gap-4 rounded-2xl border border-primary/20 bg-background/40 p-6 transition hover:border-primary/50"
+          >
+            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary/15 text-lg font-black text-primary">
+              {author.name
+                .split(" ")
+                .map((n) => n[0])
+                .join("")
+                .slice(0, 2)}
+            </span>
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-foreground/50">
+                Written by
+              </p>
+              <p className="font-bold text-foreground/90">
+                {author.name} · {author.role}
+              </p>
+              <p className="mt-1 text-sm text-foreground/70">{author.shortBio}</p>
+            </div>
+          </Link>
+        )}
       </article>
 
       <section className="mx-auto max-w-5xl px-6 pb-16">
-        <CTABand heading="Read up, then bet smart." sub="Get your Cricbet99 ID on WhatsApp and put what you've learned into play." />
+        <CTABand
+          heading="Read up, then bet smart."
+          sub="Get your Cricbet99 ID on WhatsApp and put what you've learned into play."
+        />
 
         <div className="mt-16">
-          <AiOverview 
+          <AiOverview
             summary={post.excerpt}
             highlights={post.sections.map((s: any) => s.heading).slice(0, 4)}
           />
         </div>
 
         <div className="mt-20">
-          <h3 className="text-sm font-bold uppercase tracking-widest text-foreground/60">More from the blog</h3>
+          <h3 className="text-sm font-bold uppercase tracking-widest text-foreground/60">
+            More from the blog
+          </h3>
           <div className="mt-4 grid gap-6 md:grid-cols-3">
             {related.map((p) => (
               <Link
@@ -185,10 +287,17 @@ function PostPage() {
                 className="group overflow-hidden rounded-2xl border border-primary/20 bg-background/60 hover:border-primary/50"
               >
                 <div className="aspect-[16/9] w-full overflow-hidden">
-                  <img src={p.hero ?? defaultHero} alt={p.title} loading="lazy" className="h-full w-full object-cover transition group-hover:scale-105" />
+                  <img
+                    src={p.hero ?? defaultHero}
+                    alt={p.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition group-hover:scale-105"
+                  />
                 </div>
                 <div className="p-6">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-accent-foreground">{p.tag}</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-accent-foreground">
+                    {p.tag}
+                  </span>
                   <h4 className="mt-2 font-bold leading-snug">{p.title}</h4>
                 </div>
               </Link>

@@ -1,12 +1,25 @@
 import { Link } from "@tanstack/react-router";
-import { MessageCircle, Phone, Mail, ShieldCheck, Zap, Gift, ArrowRight, Facebook, Instagram, Twitter, Youtube, Send, Linkedin } from "lucide-react";
+import {
+  MessageCircle,
+  Phone,
+  Mail,
+  ShieldCheck,
+  Zap,
+  Gift,
+  ArrowRight,
+  Facebook,
+  Instagram,
+  Twitter,
+  Youtube,
+  Send,
+  Linkedin,
+} from "lucide-react";
 import type { ReactNode } from "react";
 import logo from "@/assets/logo.png";
 
 import { WhatsAppFloat, GetIdSlider } from "./floating-widgets";
 import { MegaMenuHeader } from "./mega-menu";
 import { useWhatsApp } from "@/hooks/use-whatsapp";
-
 
 export const navLinks = [
   { label: "Official Home", to: "/" },
@@ -32,7 +45,13 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-primary/20 bg-background/70 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-6">
         <Link to="/" className="flex items-center gap-3 shrink-0">
-          <img src={logo} alt="Cricbet99 Official Logo - India's Most Trusted Online Cricket ID Platform" width={176} height={48} className="h-11 w-auto drop-shadow-[0_4px_14px_rgba(0,0,0,0.4)]" />
+          <img
+            src={logo}
+            alt="Cricbet99 Official Logo - India's Most Trusted Online Cricket ID Platform"
+            width={176}
+            height={48}
+            className="h-11 w-auto drop-shadow-[0_4px_14px_rgba(0,0,0,0.4)]"
+          />
         </Link>
         <nav className="hidden flex-wrap items-center gap-6 xl:flex">
           {navLinks.map((l) => (
@@ -68,10 +87,17 @@ export function SiteFooter() {
     <footer className="border-t border-primary/20 bg-background/60 backdrop-blur-xl">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:grid-cols-2 sm:gap-10 sm:px-6 sm:py-12 md:grid-cols-4 md:py-16">
         <div>
-          <img src={logo} alt="Cricbet99 Official Logo - Secure Login and Registration" width={176} height={48} className="h-12 w-auto" loading="lazy" />
+          <img
+            src={logo}
+            alt="Cricbet99 Official Logo - Secure Login and Registration"
+            width={176}
+            height={48}
+            className="h-12 w-auto"
+            loading="lazy"
+          />
           <p className="mt-4 text-sm text-foreground/70">
-            India's premium cricket ID platform. Live in-play odds, instant UPI
-            payouts and 24/7 human support — all from one verified account.
+            India's premium cricket ID platform. Live in-play odds, instant UPI payouts and 24/7
+            human support — all from one verified account.
           </p>
           <div className="mt-5">
             <h4 className="text-xs font-bold uppercase tracking-widest text-primary">Follow Us</h4>
@@ -82,7 +108,11 @@ export function SiteFooter() {
                 { Icon: Twitter, label: "X (Twitter)", href: "https://twitter.com/cricbet99" },
                 { Icon: Youtube, label: "YouTube", href: "https://youtube.com/@cricbet99" },
                 { Icon: Send, label: "Telegram", href: "https://t.me/cricbet99" },
-                { Icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/company/cricbet99" },
+                {
+                  Icon: Linkedin,
+                  label: "LinkedIn",
+                  href: "https://linkedin.com/company/cricbet99",
+                },
               ].map(({ Icon, label, href }) => (
                 <a
                   key={label}
@@ -104,44 +134,138 @@ export function SiteFooter() {
         <div>
           <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Sports</h4>
           <ul className="mt-4 space-y-2 text-sm text-foreground/75">
-            <li><Link to="/cricket" className="hover:text-primary">Cricket & IPL</Link></li>
-            <li><Link to="/football" className="hover:text-primary">Football</Link></li>
-            <li><Link to="/tennis" className="hover:text-primary">Tennis</Link></li>
-            <li><Link to="/horse-racing" className="hover:text-primary">Horse Racing</Link></li>
-            <li><Link to="/casino" className="hover:text-primary">Live Betting Casino</Link></li>
-            <li><Link to="/schedule" className="hover:text-primary">2026–27 Match Schedule</Link></li>
-            <li><Link to="/matches" className="hover:text-primary">All Matches & Predictions</Link></li>
-            <li><Link to="/indian-card-games" className="hover:text-primary">Indian Card Games</Link></li>
+            <li>
+              <Link to="/cricket" className="hover:text-primary">
+                Cricket & IPL
+              </Link>
+            </li>
+            <li>
+              <Link to="/football" className="hover:text-primary">
+                Football
+              </Link>
+            </li>
+            <li>
+              <Link to="/tennis" className="hover:text-primary">
+                Tennis
+              </Link>
+            </li>
+            <li>
+              <Link to="/horse-racing" className="hover:text-primary">
+                Horse Racing
+              </Link>
+            </li>
+            <li>
+              <Link to="/casino" className="hover:text-primary">
+                Live Betting Casino
+              </Link>
+            </li>
+            <li>
+              <Link to="/schedule" className="hover:text-primary">
+                2026–27 Match Schedule
+              </Link>
+            </li>
+            <li>
+              <Link to="/matches" className="hover:text-primary">
+                All Matches & Predictions
+              </Link>
+            </li>
+            <li>
+              <Link to="/indian-card-games" className="hover:text-primary">
+                Indian Card Games
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
           <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Company</h4>
           <ul className="mt-4 space-y-2 text-sm text-foreground/75">
-            <li><Link to="/about" className="hover:text-primary">Our Story</Link></li>
-            <li><Link to="/services" className="hover:text-primary">Services</Link></li>
-            <li><Link to="/platforms" className="hover:text-primary">Platforms</Link></li>
-            <li><Link to="/sports-id" className="hover:text-primary">Sports ID</Link></li>
-            <li><Link to="/how-it-works" className="hover:text-primary">Getting Started Guide</Link></li>
-            <li><Link to="/blog" className="hover:text-primary">Blog</Link></li>
-            <li><Link to="/faq" className="hover:text-primary">Help Center FAQ</Link></li>
-            <li><Link to="/contact" className="hover:text-primary">Contact</Link></li>
+            <li>
+              <Link to="/about" className="hover:text-primary">
+                Our Story
+              </Link>
+            </li>
+            <li>
+              <Link to="/services" className="hover:text-primary">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link to="/platforms" className="hover:text-primary">
+                Platforms
+              </Link>
+            </li>
+            <li>
+              <Link to="/sports-id" className="hover:text-primary">
+                Sports ID
+              </Link>
+            </li>
+            <li>
+              <Link to="/how-it-works" className="hover:text-primary">
+                Getting Started Guide
+              </Link>
+            </li>
+            <li>
+              <Link to="/blog" className="hover:text-primary">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link to="/authors" className="hover:text-primary">
+                Our Authors
+              </Link>
+            </li>
+            <li>
+              <Link to="/faq" className="hover:text-primary">
+                Help Center FAQ
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-primary">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
-          <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Legal & Support</h4>
+          <h4 className="text-sm font-bold uppercase tracking-widest text-primary">
+            Legal & Support
+          </h4>
           <ul className="mt-4 space-y-3 text-sm text-foreground/75">
-            <li><Link to="/responsible-gaming" className="hover:text-primary">Responsible Gaming</Link></li>
-            <li><Link to="/privacy-policy" className="hover:text-primary">Privacy Policy</Link></li>
-            <li><Link to="/terms" className="hover:text-primary">Terms & Conditions</Link></li>
-            <li><Link to="/disclaimer" className="hover:text-primary">Disclaimer</Link></li>
-            <li className="flex items-center gap-2 pt-2"><MessageCircle className="h-4 w-4 text-accent" /> WhatsApp 24/7</li>
-            <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-accent" /> {display}</li>
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-accent" /> support@cricbet99.co.in</li>
+            <li>
+              <Link to="/responsible-gaming" className="hover:text-primary">
+                Responsible Gaming
+              </Link>
+            </li>
+            <li>
+              <Link to="/privacy-policy" className="hover:text-primary">
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link to="/terms" className="hover:text-primary">
+                Terms & Conditions
+              </Link>
+            </li>
+            <li>
+              <Link to="/disclaimer" className="hover:text-primary">
+                Disclaimer
+              </Link>
+            </li>
+            <li className="flex items-center gap-2 pt-2">
+              <MessageCircle className="h-4 w-4 text-accent" /> WhatsApp 24/7
+            </li>
+            <li className="flex items-center gap-2">
+              <Phone className="h-4 w-4 text-accent" /> {display}
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail className="h-4 w-4 text-accent" /> support@cricbet99.co.in
+            </li>
           </ul>
         </div>
       </div>
       <div className="border-t border-primary/15 py-6 text-center text-xs text-foreground/55">
-        © {new Date().getFullYear()} Cricbet99. 18+ only. Please play responsibly. Betting involves financial risk.
+        © {new Date().getFullYear()} Cricbet99. 18+ only. Please play responsibly. Betting involves
+        financial risk.
       </div>
     </footer>
   );
@@ -184,7 +308,6 @@ export function SiteBackdrop() {
 }
 
 export function SiteLayout({ children }: { children: ReactNode }) {
-
   return (
     <div className="min-h-screen overflow-x-hidden text-foreground">
       <SiteBackdrop />
@@ -197,24 +320,41 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   );
 }
 
-
-
-export function PageHero({ eyebrow, title, subtitle, wide = false }: { eyebrow: string; title: ReactNode; subtitle?: string; wide?: boolean }) {
+export function PageHero({
+  eyebrow,
+  title,
+  subtitle,
+  wide = false,
+}: {
+  eyebrow: string;
+  title: ReactNode;
+  subtitle?: string;
+  wide?: boolean;
+}) {
   return (
-    <section className={`mx-auto px-4 pt-10 pb-8 sm:px-6 sm:pt-14 sm:pb-12 lg:pt-28 ${wide ? 'max-w-none' : 'max-w-7xl'}`}>
-      <div className={wide ? 'mx-auto px-4 sm:px-6 lg:px-12 w-full' : ''}>
+    <section
+      className={`mx-auto px-4 pt-10 pb-8 sm:px-6 sm:pt-14 sm:pb-12 lg:pt-28 ${wide ? "max-w-none" : "max-w-7xl"}`}
+    >
+      <div className={wide ? "mx-auto px-4 sm:px-6 lg:px-12 w-full" : ""}>
         <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-primary sm:px-4 sm:py-1.5 sm:text-xs">
           {eyebrow}
         </span>
-        <h1 className={`mt-4 font-black leading-[1.15] tracking-tight sm:mt-6 md:leading-[1.1] ${wide ? 'w-full text-3xl sm:text-4xl lg:text-5xl' : 'max-w-4xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl'}`}>
+        <h1
+          className={`mt-4 font-black leading-[1.15] tracking-tight sm:mt-6 md:leading-[1.1] ${wide ? "w-full text-3xl sm:text-4xl lg:text-5xl" : "max-w-4xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl"}`}
+        >
           {title}
         </h1>
-        {subtitle && <p className={`mt-4 text-sm leading-relaxed text-foreground/80 sm:mt-6 sm:text-lg ${wide ? 'w-full max-w-4xl' : 'max-w-2xl'}`}>{subtitle}</p>}
+        {subtitle && (
+          <p
+            className={`mt-4 text-sm leading-relaxed text-foreground/80 sm:mt-6 sm:text-lg ${wide ? "w-full max-w-4xl" : "max-w-2xl"}`}
+          >
+            {subtitle}
+          </p>
+        )}
       </div>
     </section>
   );
 }
-
 
 export function CTABand({ heading, sub }: { heading: string; sub: string }) {
   const { wa, tel } = useWhatsApp();
@@ -235,9 +375,7 @@ export function CTABand({ heading, sub }: { heading: string; sub: string }) {
           <div className="grid items-center gap-10 md:grid-cols-[1.3fr_1fr]">
             {/* Left: copy + CTA */}
             <div className="text-center md:text-left">
-              <span
-                className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/40 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary backdrop-blur"
-              >
+              <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/40 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary backdrop-blur">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-70" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
@@ -281,16 +419,29 @@ export function CTABand({ heading, sub }: { heading: string; sub: string }) {
               </div>
 
               <p className="mt-5 text-xs text-foreground/60">
-                ⚡ ID activated in under 5 minutes · 🔒 100% private &amp; secure · 💸 Instant deposits &amp; withdrawals
+                ⚡ ID activated in under 5 minutes · 🔒 100% private &amp; secure · 💸 Instant
+                deposits &amp; withdrawals
               </p>
             </div>
 
             {/* Right: perks */}
             <div className="grid gap-3">
               {[
-                { icon: Gift, title: "₹10,000 Welcome Bonus", desc: "100% match on your first deposit — credited instantly." },
-                { icon: Zap, title: "5-Minute Activation", desc: "Live agents onboard you the moment you message." },
-                { icon: ShieldCheck, title: "Bank-Grade Privacy", desc: "Your details stay encrypted end-to-end. Always." },
+                {
+                  icon: Gift,
+                  title: "₹10,000 Welcome Bonus",
+                  desc: "100% match on your first deposit — credited instantly.",
+                },
+                {
+                  icon: Zap,
+                  title: "5-Minute Activation",
+                  desc: "Live agents onboard you the moment you message.",
+                },
+                {
+                  icon: ShieldCheck,
+                  title: "Bank-Grade Privacy",
+                  desc: "Your details stay encrypted end-to-end. Always.",
+                },
               ].map(({ icon: Icon, title, desc }) => (
                 <div
                   key={title}

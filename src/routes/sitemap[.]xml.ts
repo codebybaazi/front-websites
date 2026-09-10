@@ -1,9 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
-import { blogPosts } from "@/data/blog-posts";
-import { matches } from "@/data/matches";
 
-// TODO: replace with your project URL once a project name or custom domain is set.
 const BASE_URL = "https://cricbet99.co.in";
 
 interface SitemapEntry {
@@ -16,6 +13,10 @@ export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
+        const [{ blogPosts }, { matches }] = await Promise.all([
+          import("@/data/blog-posts"),
+          import("@/data/matches"),
+        ]);
         const staticPaths: string[] = [
           "/", "/about", "/cricket", "/football", "/tennis", "/horse-racing",
           "/casino", "/indian-card-games", "/sports-id", "/services", "/platforms",

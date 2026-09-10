@@ -3,6 +3,7 @@ export type BlogPost = {
   title: string;
   tag: string;
   author: string;
+  authorSlug: string;
   date: string;
   dateModified?: string;
   excerpt: string;

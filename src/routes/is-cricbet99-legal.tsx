@@ -31,14 +31,18 @@ export const Route = createFileRoute("/is-cricbet99-legal")({
 
 function Page_is_cricbet99_legal() {
   return (
-    <LongFormPage 
-      content={content} 
+    <LongFormPage
+      content={content}
+      relatedLinks={[
+        { to: "/is-cricbet99-safe", label: "Is Cricbet99 Safe?", desc: "Security, encryption and payout trust signals explained." },
+        { to: "/is-cricbet99-real", label: "Is Cricbet99 Real or Fake?", desc: "Transparency on our operating history and verification." },
+      ]}
       extra={
-        <AiOverview 
-          summary={content.subtitle} 
-          highlights={content.features.slice(0, 4).map(f => f.desc)} 
+        <AiOverview
+          summary={content.subtitle}
+          highlights={content.features.slice(0, 4).map(f => f.desc)}
         />
-      } 
+      }
     />
   );
 }
