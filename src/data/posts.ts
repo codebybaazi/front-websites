@@ -14,6 +14,100 @@ export type BlogPost = {
 
 const allPosts: BlogPost[] = [
   {
+    "slug": "mahadev-book-review",
+    "title": "Mahadev Book Review: Features, Access, Payments",
+    "excerpt": "Mahadev Book review 2026: features after login, WhatsApp ID access, UPI payments, and user checks before you deposit. Read this platform review first.",
+    "category": "Guides",
+    "date": "2026-09-11",
+    "readTime": "8 min",
+    "updated": "2026-09-11",
+    "content": [
+      {
+        "body": "This Mahadev Book review is the 2026 map of the product Indian players open: what sits after login, how the ID is issued, how the rupee wallet moves, and which checks belong on paper before the first UPI send. Player quotes live on the reviews page. This Mahadev Book platform review stays on those four topics.",
+        "heading": ""
+      },
+      {
+        "heading": "What is Mahadev Book?",
+        "body": "Mahadev Book is a WhatsApp-issued betting login with a rupee wallet. Cricket is the busiest board. Football, live tables, and a few arcade-style games share the same balance. Signup starts on official chat, not a public web form. Markets settle in INR. The desk answers in English and Hindi. The office printed on the site is 1012, South Delhi, India. If a page lists a different city, a different brand spelling, or a deposit handle the official chat has not confirmed, treat it as a different site until the desk says otherwise."
+      },
+      {
+        "heading": "What does a Mahadev Book review 2026 cover?",
+        "body": "A useful Mahadev Book review 2026 answers four questions in order. What can you open after login. How do you get the ID without handing a password to a stranger. How do deposits and withdrawals leave the bank. What should you decide in advance so a bad session stays small. Rankings and five-star badges skip those steps. The India platform guide on this blog is the India-facing twin. This article is the same year, written as a Mahadev Book platform review for people comparing the product before they message the desk."
+      },
+      {
+        "heading": "Which features sit on the platform after login?",
+        "body": "Open cricket and you get today's fixtures, then match winner, toss, session runs, and player lines once you tap a game. Football and live tables use the same wallet. IPL nights are the heaviest stretch on the cricket list; internationals and other leagues appear when those fixtures are priced. The Android app is a file from the official domain. It is not on the Play Store. Bonuses, if any, attach to the same ID the desk already issued. If you only need cricket market labels, the cricket markets article on this blog is the narrower read. If you want player quotes, open the reviews page. This section only names what the login contains."
+      },
+      {
+        "heading": "How do you get access to a Mahadev Book ID?",
+        "body": "Open the live WhatsApp number from the customer care or contact page, not from a forwarded screenshot. Send a name and a preferred username. The desk replies with a login URL, a user ID, and a password. KYC is a photo ID and a selfie on that same chat when they ask. Real support does not send a Google form for you to paste a password. One ID covers the sports boards and the tables. For the first-day click path, the WhatsApp ID guide on this blog is the step list. If the password later fails, the login issues page is the fix path."
+      },
+      {
+        "heading": "How do payments work on Mahadev Book?",
+        "body": "Deposits credit from the deposit number page after you send UPI to the handle the official chat confirmed that day. Withdrawals wait until KYC matches the payout account, then leave from the withdrawal pages. UPI payouts usually settle in minutes. Bank rails can sit on working-day hours. A transfer that left your UPI app but never hit the wallet is a desk ticket. Refreshing the cricket or casino board will not move the ledger. Use the deposit methods page and the withdrawal guide for the screens. If a payout sits past the usual window, the withdrawal delay page lists the usual causes."
+      },
+      {
+        "heading": "What should users consider before the first deposit?",
+        "body": "Match the login URL to the chat that issued the ID. Write a monthly ceiling and a per-match unit you can lose. If the first two units go, leave the board for the day. Players must be 18 or older. Betting rules differ by Indian state, so this review is not legal advice. Search results for Mahadev Book still mix copycat domains, so take APKs, deposit numbers, and login pages only after the official chat confirms them. KYC name should match the UPI you will cash out to. Those checks belong in this Mahadev Book review because they are the ones that stop most first-week tickets."
+      },
+      {
+        "heading": "How should you use this Mahadev Book platform review?",
+        "body": "Read it once, then message the live digits on the customer care page if you still want an ID. Comparison pages on this site, including the Lotus 365 write-up, are for people already holding two logins in mind. This Mahadev Book platform review does not pick a winner between books. It tells you what this book contains so you can decide whether the WhatsApp ID, the UPI wallet, and the cricket-first board match how you already play."
+      },
+      {
+        "heading": "What this Mahadev Book review does not cover",
+        "body": "It does not pick winners or replace house rules on voids, abandoned matches, or revised targets. Those sit on the market help inside the ID. For payout timing, use the withdrawal pages. For a stuck login, use the login issues page. For India-specific signup notes, use the India platform guide. Keep this article as the 2026 Mahadev Book review: features, access, payments, and the user checks before you fund."
+      }
+    ],
+    "faq": [
+      {
+        "q": "What is a Mahadev Book review?",
+        "a": "A Mahadev Book review is a product walkthrough of the WhatsApp-issued ID: features after login, how access is granted, how UPI deposits and withdrawals run, and what to decide before the first send. This article is that walkthrough for 2026. Player quotes sit on the reviews page."
+      },
+      {
+        "q": "What does a Mahadev Book review 2026 include?",
+        "a": "Mahadev Book review 2026 coverage here is the cricket and football boards, live tables on the same wallet, WhatsApp ID issue, KYC on chat, UPI deposit and payout paths, clone-domain checks, and a loss unit written before you fund."
+      },
+      {
+        "q": "How do you get access after reading this Mahadev Book platform review?",
+        "a": "Message the live WhatsApp number from the customer care or contact page with a name and preferred username. The desk sends a login URL, user ID, and password. KYC is a photo ID and a selfie on that same chat when they ask. Do not paste a password into a Google form."
+      },
+      {
+        "q": "How do payments work in this Mahadev Book review?",
+        "a": "Deposits credit from the official deposit number page to a UPI handle the desk confirmed. Withdrawals leave after KYC matches the payout account. UPI payouts usually settle in minutes. Bank transfers can wait for working-day hours. A missing credit is a desk ticket. Refreshing the board will not add the funds."
+      },
+      {
+        "q": "What should users consider before depositing on Mahadev Book?",
+        "a": "Confirm the login URL with the chat that issued the ID, keep APKs and deposit numbers off unofficial forwards, write a monthly ceiling and a unit you can lose, match KYC name to the cash-out UPI, and stop for the day if the first two units go. You must be 18 or older."
+      }
+    ],
+    "howto": {
+      "name": "How to use this Mahadev Book review before you sign up",
+      "steps": [
+        {
+          "name": "Confirm the official chat",
+          "text": "Open the live WhatsApp number from the customer care or contact page, not from a forwarded screenshot."
+        },
+        {
+          "name": "Match features to how you play",
+          "text": "Check that cricket, football, or live tables on one rupee wallet is what you want before you request an ID."
+        },
+        {
+          "name": "Confirm the payment path",
+          "text": "Plan to deposit and withdraw through the official deposit number and withdrawal pages after KYC matches the payout account."
+        },
+        {
+          "name": "Write the loss unit",
+          "text": "Set a monthly ceiling and a per-match unit you can lose. Leave the board for the day if the first two units go."
+        },
+        {
+          "name": "Request the ID",
+          "text": "Send a name and preferred username. Take the login URL, user ID, and password only from that same official chat."
+        }
+      ]
+    }
+  },
+  {
     "slug": "mahadev-book-india-platform-guide",
     "title": "Mahadev Book India: Platform Guide and Key Information",
     "excerpt": "Mahadev Book India guide for 2026: how the Indian ID works, what sits on the platform, and which official details to confirm before the first UPI deposit.",
