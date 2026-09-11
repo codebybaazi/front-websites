@@ -123,13 +123,13 @@ export function fixtureStartDate(date?: string): string | undefined {
 
   const dayMonthYear = text.match(/(\d{1,2})\s+([A-Za-z]{3,9})\s+(\d{4})/);
   if (dayMonthYear) {
-    const month = MONTH_INDEX[dayMonthYear[2].toLowerCase()];
+    const month = MONTH_INDEX[(dayMonthYear[2] ?? "").toLowerCase()];
     if (month) return isoFromParts(Number(dayMonthYear[3]), month, Number(dayMonthYear[1]));
   }
 
   const monthDayYear = text.match(/([A-Za-z]{3,9})\s+(\d{1,2}),?\s+(\d{4})/);
   if (monthDayYear) {
-    const month = MONTH_INDEX[monthDayYear[1].toLowerCase()];
+    const month = MONTH_INDEX[(monthDayYear[1] ?? "").toLowerCase()];
     if (month) return isoFromParts(Number(monthDayYear[3]), month, Number(monthDayYear[2]));
   }
 
