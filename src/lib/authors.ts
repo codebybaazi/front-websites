@@ -232,7 +232,7 @@ const BY_CATEGORY: Record<string, SiteAuthor> = Object.fromEntries(
   SITE_AUTHORS.map((author) => [author.category.toLowerCase(), author]),
 );
 
-export const DEFAULT_AUTHOR = SITE_AUTHORS[0];
+export const DEFAULT_AUTHOR: SiteAuthor = SITE_AUTHORS[0]!;
 
 export const AUTHOR_INDEX_PATH = "/authors";
 

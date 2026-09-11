@@ -234,8 +234,8 @@ export function blogPostIsoDate(slug: string): string | undefined {
   if (!display) return undefined;
   const match = display.match(/^([A-Za-z]{3}) (\d{1,2}), (\d{4})$/);
   if (!match) return undefined;
-  const month = DISPLAY_MONTHS[match[1]];
+  const month = DISPLAY_MONTHS[match[1] ?? ""];
   if (!month) return undefined;
-  const day = match[2].padStart(2, "0");
+  const day = (match[2] ?? "").padStart(2, "0");
   return `${match[3]}-${month}-${day}`;
 }
