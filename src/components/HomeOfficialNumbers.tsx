@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Headphones, MessageCircle, Wallet, Banknote } from "lucide-react";
+import { ChevronRight, Headphones, MessageCircle, Wallet, Banknote } from "lucide-react";
 import {
   formatWhatsAppDisplay,
   getWhatsAppNumber,
@@ -15,6 +15,7 @@ const lines = [
     desc: "WhatsApp help when a Fairplay UPI credit is pending. Pay in the wallet first, then tap this number with the UTR.",
     waText: "Hi Fairplay, I need help with a deposit. Here is my Fairplay ID, amount and UTR screenshot.",
     icon: Wallet,
+    cta: "Read deposit guide",
   },
   {
     to: "/fairplay-withdrawal-number" as const,
@@ -22,6 +23,7 @@ const lines = [
     desc: "WhatsApp help when a Fairplay payout is late. Request Withdraw in the wallet, then message this number with the UTR.",
     waText: "Hi Fairplay, I need help with a withdrawal. Here is my Fairplay ID, amount and UTR.",
     icon: Banknote,
+    cta: "Read withdrawal guide",
   },
   {
     to: "/fairplay-customer-care-number" as const,
@@ -29,6 +31,7 @@ const lines = [
     desc: "Official Fairplay WhatsApp for ID, login OTP, deposits and payouts. Use this line, not a number from an ad.",
     waText: "Hi Fairplay customer care, I need help with my Fairplay ID. I will send the details and a screenshot.",
     icon: Headphones,
+    cta: "Read care number guide",
   },
 ];
 
@@ -87,9 +90,10 @@ export function HomeOfficialNumbers() {
               <p className="text-sm leading-relaxed text-[#052e16]/80 mb-5">{line.desc}</p>
               <Link
                 to={line.to}
-                className="inline-flex items-center text-sm font-black uppercase tracking-widest underline underline-offset-4 decoration-2 hover:text-black"
+                className="inline-flex items-center gap-1.5 rounded-full bg-[#052e16] text-[#25D366] px-4 py-2 text-sm font-black tracking-tight hover:bg-black hover:text-[#25D366] transition-colors"
               >
-                Open {line.title} page
+                {line.cta}
+                <ChevronRight className="w-4 h-4" aria-hidden />
               </Link>
             </article>
           ))}
