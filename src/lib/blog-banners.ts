@@ -193,6 +193,17 @@ import cricketIdVsBettingIdBanner from "@/assets/blog/fairplay-cricket-id-vs-bet
 import indVsNz3rdOdiBanner from "@/assets/blog/fairplay-ind-vs-nz-3rd-odi-prediction.jpg";
 import receiveIdOnWhatsappBanner from "@/assets/blog/fairplay-receive-id-on-whatsapp.jpg";
 
+import bettingAppFeaturesBanner from "@/assets/blog/fairplay-betting-app-features-login.jpg";
+import androidAppInstallBanner from "@/assets/blog/fairplay-android-app-installation-login.jpg";
+import cricketBeginnersBanner from "@/assets/blog/fairplay-cricket-betting-beginners.jpg";
+import cricketMarketsTossBanner from "@/assets/blog/fairplay-cricket-markets-match-winner-toss.jpg";
+import bettingIndiaGuideBanner from "@/assets/blog/fairplay-betting-india-complete-guide.jpg";
+import betAppAccessBanner from "@/assets/blog/fairplay-bet-app-features-access.jpg";
+import accountSecurityOtpBanner from "@/assets/blog/fairplay-account-security-otp-phishing.jpg";
+import depositGuideUpiBanner from "@/assets/blog/fairplay-deposit-guide-upi.jpg";
+import kycGuideVerificationBanner from "@/assets/blog/fairplay-kyc-guide-verification.jpg";
+import loginProblemsSolutionsBanner from "@/assets/blog/fairplay-login-not-working-problems-solutions.jpg";
+
 export const POST_BANNERS: Record<string, string> = {
   "fairplay-india-vs-new-zealand-3rd-odi-prediction": indVsNz3rdOdiBanner,
   "receive-fairplay-id-on-whatsapp": receiveIdOnWhatsappBanner,
@@ -388,4 +399,14 @@ export const POST_BANNERS: Record<string, string> = {
   "fairplay-live-casino-features-and-services": liveCasinoServicesBanner,
   "fairplay-poker-guide-for-new-players": pokerGuideBanner,
   "how-to-claim-your-fairplay-welcome-bonus": welcomeBonusBanner,
+  "fairplay-betting-app-features-login-and-mobile-guide": bettingAppFeaturesBanner,
+  "fairplay-android-app-guide-installation-and-login": androidAppInstallBanner,
+  "fairplay-cricket-betting-guide-for-beginners": cricketBeginnersBanner,
+  "cricket-betting-markets-explained-match-winner-toss-and-more": cricketMarketsTossBanner,
+  "fairplay-betting-india-complete-guide-to-online-betting": bettingIndiaGuideBanner,
+  "fairplay-bet-app-features-access-and-mobile-betting-guide": betAppAccessBanner,
+  "fairplay-account-security-otp-login-and-phishing-safety": accountSecurityOtpBanner,
+  "fairplay-deposit-guide-understanding-upi-deposits": depositGuideUpiBanner,
+  "fairplay-kyc-guide-account-verification-explained": kycGuideVerificationBanner,
+  "fairplay-login-not-working-common-problems-and-solutions": loginProblemsSolutionsBanner,
 };
