@@ -184,7 +184,8 @@ export const Route = createFileRoute("/blog/$slug")({
       /^how (to|do|does)\b/i.test(p.h1) ||
       /^how (to|do|does)\b/i.test(p.title) ||
       /complete guide to getting/i.test(`${p.h1} ${p.title}`) ||
-      /lotus365 app guide/i.test(`${p.h1} ${p.title}`)
+      /lotus365 app guide/i.test(`${p.h1} ${p.title}`) ||
+      /complete beginner's guide/i.test(`${p.h1} ${p.title}`)
     ) {
       const stepSections = p.sections.filter(
         (s) => !/frequently asked questions/i.test(s.heading) && !/bottom line/i.test(s.heading)
