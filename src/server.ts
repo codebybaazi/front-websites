@@ -241,6 +241,17 @@ export default {
         });
       }
 
+      if (isRead && url.pathname === "/llms.txt") {
+        const { LLMS_TXT_CONTENT_TYPE, buildLlmsTxt } = await import("./utils/llms-txt");
+        return new Response(bodyFor(buildLlmsTxt()), {
+          status: 200,
+          headers: {
+            "content-type": LLMS_TXT_CONTENT_TYPE,
+            "cache-control": "public, max-age=3600",
+          },
+        });
+      }
+
       if (isRead) {
         const {
           OAUTH_AS_PATH,

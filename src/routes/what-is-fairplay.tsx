@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { pageHeadFor } from "@/utils/page-seo"
+import { pageHeadFor, absolutePageUrl, speakableSpecification } from "@/utils/page-seo"
 import { Trophy, Shield, Zap, Globe, Star, ArrowRight, Target, Users, Landmark, Award, ShieldCheck, Cpu, Wallet, Headphones } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/what-is-fairplay')({
   head: () => pageHeadFor('/what-is-fairplay'),
@@ -13,6 +14,15 @@ export const Route = createFileRoute('/what-is-fairplay')({
 function WhatIsFairplayPage() {
   return (
     <div className="flex flex-col bg-background text-foreground overflow-hidden">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          url: absolutePageUrl("/what-is-fairplay"),
+          name: "What is Fairplay?",
+          speakable: speakableSpecification(["#what-is-fairplay", "#what-is-fairplay-answer"]),
+        }}
+      />
       {/* Premium Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,100,0,0.1),transparent_50%)]" />
@@ -26,10 +36,10 @@ function WhatIsFairplayPage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black tracking-widest uppercase mb-8">
               <Cpu className="w-4 h-4" /> Cricket ID and sports exchange
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter italic mb-8 leading-[0.9]">
+            <h1 id="what-is-fairplay" className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter italic mb-8 leading-[0.9]">
               What is <span className="text-primary not-italic">Fairplay</span>?
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-12">
+            <p id="what-is-fairplay-answer" className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-12">
               Fairplay is a sports exchange and live casino on one Fairplay ID: cricket and IPL, football, tennis, UPI deposits, and WhatsApp help if login or payouts stick.
             </p>
           </motion.div>

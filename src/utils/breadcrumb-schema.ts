@@ -1,3 +1,4 @@
+import { getAuthorBySlug } from "@/lib/authors";
 import { getBlogSeo } from "@/utils/blog-seo";
 import { PAGE_SEO, SITE_ORIGIN } from "@/utils/page-seo";
 import { parseMatchTeams } from "@/utils/match-projections";
@@ -12,12 +13,15 @@ const PARENT_PATH: Record<string, string> = {
   "/login-guide": "/fairplay-id",
   "/register-guide": "/fairplay-id",
   "/deposit-guide": "/fairplay-id",
+  "/fairplay-deposit-number": "/deposit-guide",
   "/withdrawal-guide": "/fairplay-id",
+  "/fairplay-withdrawal-number": "/withdrawal-guide",
   "/login-issues": "/support",
   "/deposit-issues": "/support",
   "/withdrawal-issues": "/support",
   "/account-issues": "/support",
   "/whatsapp-support": "/support",
+  "/fairplay-customer-care-number": "/support",
   "/contact-us": "/support",
   "/telegram-channel": "/support",
   "/bonus-issues": "/bonus",
@@ -42,6 +46,7 @@ const PARENT_PATH: Record<string, string> = {
   "/refund-policy": "/legal-status",
   "/rules-regulations": "/legal-status",
   "/disclaimer": "/legal-status",
+  "/authors": "/blog",
 };
 
 for (const path of Object.keys(PAGE_SEO)) {
@@ -79,6 +84,13 @@ export function crumbsForPathname(pathname: string): BreadcrumbCrumb[] {
     const slug = path.slice("/posts/".length);
     trail.push({ name: breadcrumbLabelForPath("/blog"), path: "/blog" });
     trail.push({ name: slug ? getBlogSeo(slug).h1 : "Article", path });
+    return trail;
+  }
+
+  if (path.startsWith("/authors/")) {
+    const slug = path.slice("/authors/".length);
+    trail.push({ name: "Writers", path: "/authors" });
+    trail.push({ name: getAuthorBySlug(slug)?.name ?? titleCaseSlug(slug), path });
     return trail;
   }
 

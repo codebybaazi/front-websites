@@ -14,14 +14,13 @@ import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 
 
 import appCss from "../styles.css?url";
-import { OG_IMAGE } from "../utils/page-seo";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { FloatingWhatsApp } from "../components/FloatingWhatsApp";
 import { PageInternalLinks } from "../components/PageInternalLinks";
 import { PageBreadcrumbs } from "../components/PageBreadcrumbs";
 import { WhatsAppNumberSync } from "../components/WhatsAppNumberSync";
 import { WebMcpTools } from "../components/WebMcpTools";
-import { getWhatsAppNumber, WHATSAPP_NUMBER_META_NAME } from "../lib/whatsapp";
+import { getWhatsAppNumber, waLink, WHATSAPP_NUMBER_META_NAME } from "../lib/whatsapp";
 
 function NotFoundComponent() {
   return (
@@ -88,20 +87,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=5" },
-      { title: "Fairplay | Cricket ID, sports betting exchange and live casino" },
-      { name: "description", content: "Fairplay is a cricket ID and sports exchange for IPL, football and tennis, plus live casino. UPI deposits and withdrawals that usually settle within 180 minutes. Since 2017." },
       { name: "author", content: "Fairplay" },
-      { name: "robots", content: "index, follow" },
-      // Hands the host-matched number to the client bundle before it renders.
       { name: WHATSAPP_NUMBER_META_NAME, content: getWhatsAppNumber() },
-      { property: "og:title", content: "Fairplay | Cricket ID and sports betting exchange" },
-      { property: "og:description", content: "Bet cricket, football and tennis on Fairplay, or play live casino, with one ID. UPI wallet and WhatsApp help for new players." },
-      { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Fairplay" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@FairplayElite" },
-      { property: "og:image", content: OG_IMAGE },
-      { name: "twitter:image", content: OG_IMAGE },
     ],
     links: [
       {
@@ -238,6 +225,7 @@ const megaMenu = [
           { name: "Contact Us", href: "/contact-us" },
           { name: "Fairplay ID", href: "/fairplay-id" },
           { name: "Insights Blog", href: "/blog" },
+          { name: "Writers", href: "/authors" },
           { name: "All Site Links", href: "/all-links", badge: "New" },
         ]
       },
@@ -247,7 +235,10 @@ const megaMenu = [
           { name: "How to Register", href: "/register-guide" },
           { name: "How to Login", href: "/login-guide" },
           { name: "How to Deposit", href: "/deposit-guide" },
+          { name: "Deposit number", href: "/fairplay-deposit-number" },
           { name: "How to Withdraw", href: "/withdrawal-guide" },
+          { name: "Withdrawal number", href: "/fairplay-withdrawal-number" },
+          { name: "Customer Care Number", href: "/fairplay-customer-care-number" },
           { name: "Security Center", href: "/security-safety" },
         ]
       }
@@ -447,7 +438,12 @@ function RootComponent() {
             
             <div className="flex items-center gap-4">
               <div className="hidden sm:flex items-center gap-3">
-                <button className="relative group flex items-center justify-center px-10 py-3 rounded-full overflow-hidden bg-primary shadow-[0_0_30px_rgba(255,100,0,0.5)] transition-all hover:shadow-[0_0_50px_rgba(255,100,0,0.7)] hover:scale-105 active:scale-95 cursor-pointer">
+                <a
+                  href={waLink("Hello Fairplay! I want to Join Now and get my ID.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative group flex items-center justify-center px-10 py-3 rounded-full overflow-hidden bg-primary shadow-[0_0_30px_rgba(255,100,0,0.5)] transition-all hover:shadow-[0_0_50px_rgba(255,100,0,0.7)] hover:scale-105 active:scale-95 cursor-pointer"
+                >
                   {/* Pulse Effect */}
                   <div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-20 group-hover:opacity-40" />
                   
@@ -477,7 +473,7 @@ function RootComponent() {
 
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                </button>
+                </a>
               </div>
               <button 
                 className="lg:hidden p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/5 transition-colors"
@@ -580,12 +576,24 @@ function RootComponent() {
 
                 {/* Mobile Bottom Actions */}
                 <div className="p-6 border-t border-white/10 bg-[#0a0a0b] grid grid-cols-2 gap-4 pb-12">
-                  <button className="w-full py-4 rounded-2xl border border-white/10 font-bold text-xs tracking-[0.2em] text-white hover:bg-white/5 transition-all">
+                  <a
+                    href={waLink("Hi Fairplay, I need help logging in to my Fairplay ID.")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-4 rounded-2xl border border-white/10 font-bold text-xs tracking-[0.2em] text-white hover:bg-white/5 transition-all text-center"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     LOGIN
-                  </button>
-                  <button className="w-full py-4 rounded-2xl bg-primary text-black font-black text-xs tracking-[0.2em] shadow-[0_10px_30px_rgba(255,100,0,0.3)] hover:scale-[1.02] active:scale-95 transition-all">
+                  </a>
+                  <a
+                    href={waLink("Hello Fairplay! I want to Join Now and get my ID.")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-4 rounded-2xl bg-primary text-black font-black text-xs tracking-[0.2em] shadow-[0_10px_30px_rgba(255,100,0,0.3)] hover:scale-[1.02] active:scale-95 transition-all text-center"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     JOIN NOW
-                  </button>
+                  </a>
                 </div>
               </motion.div>
             </>
@@ -649,6 +657,7 @@ function RootComponent() {
                   <li><Link to="/betting" className="hover:text-white transition-colors">Sports exchange</Link></li>
                   <li><Link to="/casino" className="hover:text-white transition-colors">HD Casino</Link></li>
                   <li><Link to="/blog" className="hover:text-white transition-colors">Guides & blog</Link></li>
+                  <li><Link to="/authors" className="hover:text-white transition-colors">Writers</Link></li>
                 </ul>
               </div>
 
@@ -669,6 +678,8 @@ function RootComponent() {
                   <li><Link to="/fairplay-id" className="hover:text-white transition-colors">Fairplay ID</Link></li>
                   <li><Link to="/t20-world-cup" className="hover:text-white transition-colors">T20 World Cup</Link></li>
                   <li><Link to="/deposit-guide" className="hover:text-white transition-colors">Deposit guide</Link></li>
+                  <li><Link to="/fairplay-deposit-number" className="hover:text-white transition-colors">Deposit number</Link></li>
+                  <li><Link to="/fairplay-withdrawal-number" className="hover:text-white transition-colors">Withdrawal number</Link></li>
                 </ul>
               </div>
 
@@ -676,6 +687,7 @@ function RootComponent() {
                 <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-primary mb-8">Help</h4>
                 <ul className="space-y-4 text-[14px] font-medium text-white/60">
                   <li><Link to="/support" className="hover:text-white transition-colors">Support hub</Link></li>
+                  <li><Link to="/fairplay-customer-care-number" className="hover:text-white transition-colors">Customer Care Number</Link></li>
                   <li><Link to="/login-guide" className="hover:text-white transition-colors">Login guide</Link></li>
                   <li><Link to="/contact-us" className="hover:text-white transition-colors">Contact</Link></li>
                   <li><Link to="/app" className="hover:text-white transition-colors">Download app</Link></li>
@@ -686,6 +698,7 @@ function RootComponent() {
                 <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-primary mb-8">Compliance</h4>
                 <ul className="space-y-4 text-[14px] font-medium text-white/60">
                   <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
+                  <li><Link to="/authors" className="hover:text-white transition-colors">Writers</Link></li>
                   <li><Link to="/responsible-gaming" className="hover:text-white transition-colors">Responsible gaming</Link></li>
                   <li><Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy</Link></li>
                   <li><Link to="/all-links" className="hover:text-white transition-colors">Site index</Link></li>

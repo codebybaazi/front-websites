@@ -20,6 +20,7 @@ export const API_CATALOG_CONTENT_TYPE =
 
 const DISCOVERY_LINKS: DiscoveryLink[] = [
   { path: API_CATALOG_PATH, rel: "api-catalog", type: "application/linkset+json" },
+  { path: "/llms.txt", rel: "describedby", type: "text/plain" },
   { path: "/sitemap.xml", rel: "describedby", type: "application/xml" },
   { path: "/all-links", rel: "index", type: "text/html" },
   { path: "/services", rel: "service-doc", type: "text/html" },
@@ -58,6 +59,11 @@ export const AGENT_DISCOVERY_LINK_HEADER = DISCOVERY_LINKS.map(
 
 /** The machine-readable endpoints this site publishes, listed as catalog items. */
 const CATALOG_ITEMS = [
+  {
+    path: "/llms.txt",
+    type: "text/plain",
+    title: "llms.txt map for AI crawlers (catalog, markdown, sitemap)",
+  },
   {
     path: "/sitemap.xml",
     type: "application/xml",

@@ -13,7 +13,7 @@ function TelegramChannel() {
   const features = [
     { title: 'Market Alerts', desc: 'Real-time notifications on major sporting events and odds shifts.', icon: Bell },
     { title: 'Exclusive Tips', desc: 'Expert analysis and high-probability betting patterns.', icon: Zap },
-    { title: 'VIP Community', desc: 'Connect with 50,000+ elite members in a secure environment.', icon: Users },
+    { title: 'Official updates', desc: 'Fixture notes and support pointers. We do not publish member counts.', icon: Users },
   ]
 
   return (
@@ -81,7 +81,7 @@ function TelegramChannel() {
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#0088cc]/10 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2" />
             <h2 className="text-4xl md:text-6xl font-black mb-8 italic tracking-tighter leading-none uppercase">
-              Join <span className="text-[#0088cc] not-italic underline decoration-[#0088cc]/30 underline-offset-8">50,000+</span> Winners
+              Join the <span className="text-[#0088cc] not-italic underline decoration-[#0088cc]/30 underline-offset-8">official</span> channel
             </h2>
             <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
               Get instant access to the official Fairplay Telegram and never miss a beat in the world of elite exchange betting.

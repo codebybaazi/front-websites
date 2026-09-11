@@ -49,11 +49,11 @@ const CLUSTER_HUBS: Record<LinkCluster, HubLink[]> = {
   ],
   wallet: [
     { to: "/deposit-guide", label: "Deposit guide", desc: "UPI and wallet top-up" },
+    { to: "/fairplay-deposit-number", label: "Deposit number", desc: "Official WhatsApp for deposits" },
     { to: "/withdrawal-guide", label: "Withdrawal guide", desc: "180-minute payouts" },
+    { to: "/fairplay-withdrawal-number", label: "Withdrawal number", desc: "Official WhatsApp for payouts" },
     { to: "/deposit-issues", label: "Deposit issues", desc: "Failed or pending credits" },
     { to: "/withdrawal-issues", label: "Withdrawal issues", desc: "Payout tracking" },
-    { to: "/fairplay-id", label: "Fairplay ID", desc: "Fund a live sports ID" },
-    { to: "/bonus", label: "Bonuses", desc: "Welcome and reload offers" },
   ],
   cricket: [
     { to: "/ipl-betting", label: "IPL 2026 betting", desc: "Match-winner and fancy books" },
@@ -121,9 +121,9 @@ const CLUSTER_HUBS: Record<LinkCluster, HubLink[]> = {
   ],
   support: [
     { to: "/support", label: "Support hub", desc: "ID, payments and betting" },
-    { to: "/whatsapp-support", label: "WhatsApp support", desc: "Fastest live desk" },
-    { to: "/contact-us", label: "Contact us", desc: "VIP concierge" },
-    { to: "/kyc-verification-policy", label: "KYC policy", desc: "What Fairplay asks for" },
+    { to: "/fairplay-customer-care-number", label: "Customer Care Number", desc: "Official WhatsApp for Fairplay" },
+    { to: "/whatsapp-support", label: "WhatsApp support", desc: "How to message the desk" },
+    { to: "/contact-us", label: "Contact us", desc: "WhatsApp and issue hubs" },
     { to: "/is-fairplay-safe", label: "Is Fairplay safe?", desc: "Security overview" },
     { to: "/login-issues", label: "Login issues", desc: "Access troubleshooting" },
   ],
@@ -154,6 +154,8 @@ const PATH_CLUSTER: Record<string, LinkCluster> = {
   "/register-guide": "id",
   "/fairplay-id": "id",
   "/deposit-guide": "wallet",
+  "/fairplay-deposit-number": "wallet",
+  "/fairplay-withdrawal-number": "wallet",
   "/deposit-issues": "wallet",
   "/withdrawal-guide": "wallet",
   "/withdrawal-issues": "wallet",
@@ -171,6 +173,7 @@ const PATH_CLUSTER: Record<string, LinkCluster> = {
   "/esports-betting": "general",
   "/support": "support",
   "/whatsapp-support": "support",
+  "/fairplay-customer-care-number": "support",
   "/contact-us": "support",
   "/kyc-verification-policy": "support",
   "/is-fairplay-safe": "support",
@@ -218,20 +221,28 @@ const PAGE_EXTRA_HUBS: Record<string, HubLink[]> = {
     { to: "/blog", label: "Betting guides", desc: "How markets settle" },
   ],
   "/blog": [
+    { to: "/authors", label: "Writers", desc: "Who writes each category" },
     { to: "/schedule", label: "Match schedule", desc: "Open a fixture after you read" },
     { to: "/fairplay-id", label: "Fairplay ID", desc: "Most guides start here" },
     { to: "/ipl-betting", label: "IPL hub", desc: "Season cricket markets" },
     { to: "/deposit-guide", label: "Deposits", desc: "UPI wallet steps" },
     { to: "/login-guide", label: "Login", desc: "OTP access" },
-    { to: "/betting", label: "Exchange", desc: "Put the guide into a live book" },
+  ],
+  "/authors": [
+    { to: "/blog", label: "Blog", desc: "All guides by category" },
+    { to: "/about", label: "About", desc: "What this site explains" },
+    { to: "/support", label: "Support", desc: "Issue hubs" },
+    { to: "/contact-us", label: "Contact", desc: "WhatsApp desk" },
+    { to: "/fairplay-id", label: "Fairplay ID", desc: "Start here" },
+    { to: "/all-links", label: "All links", desc: "Full site index" },
   ],
   "/about": [
+    { to: "/authors", label: "Writers", desc: "Named people on the desk" },
     { to: "/what-is-fairplay", label: "What is Fairplay?", desc: "How the exchange works" },
     { to: "/is-fairplay-safe", label: "Is Fairplay safe?", desc: "Security checks" },
     { to: "/fairplay-id", label: "Get an ID", desc: "Start betting" },
     { to: "/schedule", label: "Schedule", desc: "2026 fixtures" },
     { to: "/blog", label: "Blog", desc: "Guides and FAQs" },
-    { to: "/all-links", label: "All links", desc: "Full site index" },
   ],
   "/what-is-fairplay": CLUSTER_HUBS.general,
   "/app": CLUSTER_HUBS.general,
@@ -255,6 +266,9 @@ export function getHubLinksForSlug(slug: string, limit = 6): HubLink[] {
 export function getHubLinksForPathname(pathname: string, limit = 6): HubLink[] {
   if (pathname.startsWith("/posts/")) {
     return getHubLinksForSlug(pathname.slice("/posts/".length), limit);
+  }
+  if (pathname.startsWith("/authors")) {
+    return (PAGE_EXTRA_HUBS["/authors"] ?? CLUSTER_HUBS.general).slice(0, limit);
   }
   if (pathname.startsWith("/match/")) {
     return MATCH_HUBS.slice(0, limit);

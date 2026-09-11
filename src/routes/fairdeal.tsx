@@ -57,7 +57,7 @@ function Fairdeal() {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Fairdeal utilizes a proprietary matching engine that processes 100,000+ orders per second. Experience zero lag even during high-traffic events like the T20 World Cup finals or high-stakes IPL fixtures.
+                  Fairdeal is a partner exchange in the Fairplay network. Use it for cricket and football only if the desk issued that book. We do not publish order-per-second figures or trader counts.
                 </p>
                 <p>
                   By leveraging direct exchange APIs and a commitment to 100% transparency, we've created an environment where your skills are the only thing that matters. No hidden fees, no delayed payouts—just pure, high-octane betting.
@@ -118,8 +118,8 @@ function Fairdeal() {
               <div className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Market Uptime</div>
             </div>
             <div className="p-8 rounded-3xl bg-white/2 border border-white/5">
-              <div className="text-4xl md:text-6xl font-black italic text-primary mb-2">1M+</div>
-              <div className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Active Traders</div>
+              <div className="text-4xl md:text-6xl font-black italic text-primary mb-2">18+</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Adults only</div>
             </div>
           </div>
         </div>

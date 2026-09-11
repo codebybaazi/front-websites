@@ -1,9 +1,11 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import { pageHeadFor } from "@/utils/page-seo"
 import { Wallet, QrCode, CreditCard, Banknote, ShieldCheck, Zap, Star } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/deposit-guide')({
   component: DepositGuide,
@@ -29,8 +31,33 @@ function DepositGuide() {
     }
   ]
 
+  const steps = [
+    {
+      title: "Open the Fairplay wallet",
+      desc: "Log in with your Fairplay ID, then choose UPI, net banking or crypto. UPI (GPay, PhonePe, Paytm) is what most players use.",
+    },
+    {
+      title: "Pay and keep the UTR",
+      desc: "Complete the transfer, screenshot the receipt, and note the UTR. Do not send a second payment if the first is still pending.",
+    },
+    {
+      title: "Confirm on Fairplay",
+      desc: "Enter the UTR if the screen asks for it. When the wallet credits, you can open IPL, cricket or casino.",
+    },
+  ]
+
+  const howTo = howToJsonLd({
+    path: "/deposit-guide",
+    name: "How to deposit on Fairplay",
+    description:
+      "Add money to a Fairplay wallet with UPI, net banking or crypto. Check the credit, then open cricket or casino.",
+    totalTime: "PT5M",
+    steps: steps.map((step) => ({ name: step.title, text: step.desc })),
+  })
+
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-hidden">
+      <JsonLd data={howTo} />
       {/* Premium Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,100,0,0.08),transparent_70%)]" />
@@ -89,27 +116,15 @@ function DepositGuide() {
               <Zap className="w-6 h-6 text-primary" /> How to deposit on Fairplay
             </h2>
             <div className="space-y-8">
-              <div className="flex gap-6">
-                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-black shrink-0 text-xs">1</div>
-                <div>
-                  <h3 className="font-bold italic uppercase mb-2">Open the Fairplay wallet</h3>
-                  <p className="text-sm text-muted-foreground">Log in with your Fairplay ID, then choose UPI, net banking or crypto. UPI (GPay, PhonePe, Paytm) is what most players use.</p>
+              {steps.map((step, i) => (
+                <div key={step.title} id={`step-${i + 1}`} className="flex gap-6">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-black shrink-0 text-xs">{i + 1}</div>
+                  <div>
+                    <h3 className="font-bold italic uppercase mb-2">{step.title}</h3>
+                    <p className="text-sm text-muted-foreground">{step.desc}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-6">
-                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-black shrink-0 text-xs">2</div>
-                <div>
-                  <h3 className="font-bold italic uppercase mb-2">Pay and keep the UTR</h3>
-                  <p className="text-sm text-muted-foreground">Complete the transfer, screenshot the receipt, and note the UTR. Do not send a second payment if the first is still pending.</p>
-                </div>
-              </div>
-              <div className="flex gap-6">
-                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-black shrink-0 text-xs">3</div>
-                <div>
-                  <h3 className="font-bold italic uppercase mb-2">Confirm on Fairplay</h3>
-                  <p className="text-sm text-muted-foreground">Enter the UTR if the screen asks for it. When the wallet credits, you can open IPL, cricket or casino.</p>
-                </div>
-              </div>
+              ))}
             </div>
           </motion.section>
 
@@ -120,7 +135,13 @@ function DepositGuide() {
             className="p-8 bg-white/5 border border-white/10 rounded-[40px] text-center"
           >
             <h3 className="text-primary font-black italic uppercase mb-2">Deposit not showing?</h3>
-            <p className="text-sm text-muted-foreground mb-6">Open deposit issues with the UTR, or WhatsApp your Fairplay ID and a screenshot. Do not pay twice.</p>
+            <p className="text-sm text-muted-foreground mb-6">
+              Open deposit issues with the UTR, or message the{" "}
+              <Link to="/fairplay-deposit-number" className="text-primary underline underline-offset-4">
+                Fairplay Deposit number
+              </Link>{" "}
+              with your Fairplay ID and a screenshot. Do not pay twice.
+            </p>
             <a 
               href={waLink("Hi Fairplay, I need help with a deposit.")}
               target="_blank"

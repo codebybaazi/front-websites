@@ -1,3 +1,5 @@
+import { UNIQUE_BLOG_POSTS } from "@/content/blog-unique";
+
 export interface BlogSeo {
   h1: string;
   title: string;
@@ -7,9 +9,13 @@ export interface BlogSeo {
 }
 
 export interface BlogBlock {
-  t: "h1" | "h2" | "h3" | "p" | "ul" | "faq";
+  t: "h1" | "h2" | "h3" | "p" | "ul" | "ol" | "faq";
   c?: string;
   items?: string[] | Array<{ q: string; a: string }>;
+}
+
+export function hasUniqueBlogBody(slug: string): boolean {
+  return Object.prototype.hasOwnProperty.call(UNIQUE_BLOG_POSTS, slug);
 }
 
 const ACRONYMS: Record<string, string> = {
@@ -223,6 +229,17 @@ function topicNoun(h1: string): string {
 }
 
 export function getBlogSeo(slug: string): BlogSeo {
+  const unique = UNIQUE_BLOG_POSTS[slug];
+  if (unique) {
+    return {
+      h1: unique.h1,
+      title: unique.title,
+      description: unique.description,
+      keywords: unique.keywords,
+      intro: unique.intro,
+    };
+  }
+
   const h1 = titleFromSlug(slug);
   const cluster = clusterOf(slug);
   const copy = CLUSTER[cluster];
@@ -247,6 +264,9 @@ export function enrichBlogArticle<T extends { slug: string; title: string; desc:
 }
 
 export function getBlogArticleBlocks(slug: string): BlogBlock[] {
+  const unique = UNIQUE_BLOG_POSTS[slug];
+  if (unique) return unique.blocks;
+
   const seo = getBlogSeo(slug);
   const cluster = clusterOf(slug);
   const copy = CLUSTER[cluster];

@@ -154,7 +154,7 @@ function CasinoPage() {
           <img 
             src={casinoBanner} 
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            alt="Casino Banner"
+            alt="Fairplay live casino: weekly cashback on Teen Patti, roulette, blackjack and slots"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent flex flex-col justify-center p-8 md:p-12">
             <h2 className="text-4xl md:text-5xl font-black italic uppercase tracking-tighter text-white mb-4">
@@ -188,7 +188,7 @@ function CasinoPage() {
                 <div className="aspect-[3/4] overflow-hidden">
                   <img 
                     src={game.image} 
-                    alt={game.name}
+                    alt={`${game.name} on Fairplay — ${game.category} by ${game.provider}`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   {game.isHot && (

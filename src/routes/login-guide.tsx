@@ -4,6 +4,9 @@ import { Smartphone, Shield, Key, ArrowRight, UserCheck, HelpCircle } from 'luci
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
+import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/login-guide')({
   component: LoginGuide,
   head: () => pageHeadFor('/login-guide'),
@@ -28,8 +31,18 @@ function LoginGuide() {
     }
   ]
 
+  const howTo = howToJsonLd({
+    path: "/login-guide",
+    name: "How to log in to Fairplay",
+    description:
+      "Sign in with the number on your Fairplay ID, enter the OTP, then open cricket or casino. 2FA is extra protection, not a second account.",
+    totalTime: "PT2M",
+    steps: steps.map((step) => ({ name: step.title, text: step.desc })),
+  })
+
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-hidden">
+      <JsonLd data={howTo} />
       {/* Premium Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,100,0,0.08),transparent_70%)]" />
@@ -62,6 +75,7 @@ function LoginGuide() {
           {steps.map((step, i) => (
             <motion.div 
               key={i}
+              id={`step-${i + 1}`}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.1 }}
@@ -85,9 +99,14 @@ function LoginGuide() {
             OTP delay, a locked ID, or a cached session are the usual causes. Try the login issues page, then WhatsApp the Fairplay ID with a screenshot.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-primary text-primary-foreground px-12 py-5 rounded-2xl font-black italic uppercase tracking-widest hover:scale-105 transition-all shadow-xl flex items-center gap-3">
+            <a
+              href={waLink("Hello Fairplay! I need help logging in with my Fairplay ID.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary text-primary-foreground px-12 py-5 rounded-2xl font-black italic uppercase tracking-widest hover:scale-105 transition-all shadow-xl flex items-center justify-center gap-3"
+            >
               <UserCheck className="w-5 h-5" /> PROCEED TO LOGIN
-            </button>
+            </a>
             <Link to="/login-issues" className="px-12 py-5 border border-primary/30 rounded-2xl font-black italic uppercase tracking-widest hover:bg-primary/10 transition-all">
               TROUBLESHOOTING
             </Link>

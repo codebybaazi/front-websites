@@ -4,6 +4,8 @@ import { AlertCircle, RefreshCw, HelpCircle, Shield, PhoneCall, Star, ArrowRight
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/deposit-issues')({
   component: DepositIssues,
@@ -26,11 +28,26 @@ function DepositIssues() {
       title: "Account Verification",
       desc: "Make sure the Fairplay ID is verified. Unverified accounts can see a temporary deposit hold.",
       icon: Shield
+    },
+    {
+      title: "WhatsApp with proof",
+      desc: "If the wallet is still empty after that wait, message official WhatsApp once with Fairplay ID, amount and the UTR screenshot. Do not pay a second time.",
+      icon: PhoneCall
     }
   ]
 
+  const howTo = howToJsonLd({
+    path: "/deposit-issues",
+    name: "How to fix a pending Fairplay deposit",
+    description:
+      "Check the UTR, wait for the UPI gateway, confirm the Fairplay ID is verified, then WhatsApp one ticket with the screenshot.",
+    totalTime: "PT30M",
+    steps: commonIssues.map((step) => ({ name: step.title, text: step.desc })),
+  })
+
   return (
     <div className="flex flex-col bg-background text-foreground overflow-hidden">
+      <JsonLd data={howTo} />
       {/* Premium Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,100,0,0.08),transparent_70%)]" />
@@ -63,10 +80,11 @@ function DepositIssues() {
       {/* Solutions Grid */}
       <section className="py-24 relative">
         <div className="container max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {commonIssues.map((item, i) => (
               <motion.div 
                 key={i}
+                id={`step-${i + 1}`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

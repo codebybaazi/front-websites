@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import type { FootballBlogCard, FootballFaq, FootballMatchModel } from "@/utils/football-match";
 import type { RelatedFixture } from "@/utils/related-fixtures";
-import { faqPageNode } from "@/utils/faq-schema";
+import { FAQSection } from "@/components/FAQSection";
 import { JsonLd } from "@/components/JsonLd";
 import { sportsEventGraph } from "@/utils/match-seo";
 import { getMatchSlug } from "@/utils/slugify";
@@ -84,19 +84,18 @@ export function FootballMatchDetail({
 }: FootballMatchDetailProps) {
   const kickoff = match.time && match.time !== "TBD" ? match.time : "TBD";
   const fixtureName = `${model.teamA} vs ${model.teamB}`;
-  const faqNode = faqPageNode(faqs);
   const jsonLd = sportsEventGraph({
     name: fixtureName,
     description: model.overview,
     slug: getMatchSlug(match.seriesName, match),
     date: match.date,
+    time: match.time,
     venue: match.venue,
     sport: "Soccer",
     competitors: [
       { type: "SportsTeam", name: model.teamA },
       { type: "SportsTeam", name: model.teamB },
     ],
-    faqNode,
   });
 
   const marketTiles = [
@@ -505,26 +504,10 @@ export function FootballMatchDetail({
           </section>
         )}
 
-        <section aria-labelledby="faq-heading">
-          <SectionEyebrow>Quick answers</SectionEyebrow>
-          <h2 id="faq-heading" className="text-3xl md:text-5xl font-black italic uppercase tracking-tighter text-white mb-4">
-            Frequently asked questions about {fixtureName}
-          </h2>
-          <p className="text-white/55 max-w-3xl mb-8">
-            Straight answers on Fairplay markets, live betting and settlement for {fixtureName} at {match.venue}.
-          </p>
-          <div className="space-y-3">
-            {faqs.map((faq) => (
-              <details key={faq.q} className="group rounded-2xl border border-white/10 bg-card/30 open:border-primary/40 open:bg-primary/5">
-                <summary className="cursor-pointer list-none p-5 md:p-6 flex items-start justify-between gap-4">
-                  <h3 className="text-sm md:text-base font-black uppercase tracking-wide text-white pr-4">{faq.q}</h3>
-                  <span className="text-primary font-black group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <p className="px-5 md:px-6 pb-6 text-sm text-white/65 leading-relaxed">{faq.a}</p>
-              </details>
-            ))}
-          </div>
-        </section>
+        <FAQSection
+          title={`Frequently asked questions about ${fixtureName}`}
+          faqs={faqs}
+        />
 
         <aside className="relative overflow-hidden rounded-[2rem] bg-primary px-8 py-10 md:px-12 md:py-12 text-black">
           <ShieldCheck className="absolute right-8 top-8 h-16 w-16 opacity-20" aria-hidden="true" />

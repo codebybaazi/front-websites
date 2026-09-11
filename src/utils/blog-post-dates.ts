@@ -199,15 +199,43 @@ export const BLOG_POST_DATES: Record<string, string> = {
   "fairplay-games-id-explore-multiple-tournaments-with-one-id": "Aug 26, 2026",
   "fairplay-online-cricket-id-vs-cricket-betting-id": "Aug 28, 2026",
   "fairplay-id-security-tips-protect-your-id-login": "Aug 29, 2026",
+  "fairplay-betting-app-features-login-and-mobile-guide": "Sep 01, 2026",
+  "fairplay-android-app-guide-installation-and-login": "Sep 02, 2026",
+  "fairplay-cricket-betting-guide-for-beginners": "Sep 04, 2026",
+  "cricket-betting-markets-explained-match-winner-toss-and-more": "Sep 05, 2026",
+  "fairplay-betting-india-complete-guide-to-online-betting": "Sep 06, 2026",
+  "fairplay-bet-app-features-access-and-mobile-betting-guide": "Sep 07, 2026",
+  "fairplay-account-security-otp-login-and-phishing-safety": "Sep 08, 2026",
+  "fairplay-deposit-guide-understanding-upi-deposits": "Sep 09, 2026",
+  "fairplay-kyc-guide-account-verification-explained": "Sep 10, 2026",
+  "fairplay-login-not-working-common-problems-and-solutions": "Sep 11, 2026",
 };
 
 export const BLOG_POST_SLUGS: string[] = Object.keys(BLOG_POST_DATES);
+
+const DISPLAY_MONTHS: Record<string, string> = {
+  Jan: "01",
+  Feb: "02",
+  Mar: "03",
+  Apr: "04",
+  May: "05",
+  Jun: "06",
+  Jul: "07",
+  Aug: "08",
+  Sep: "09",
+  Oct: "10",
+  Nov: "11",
+  Dec: "12",
+};
 
 /** Google needs ISO 8601 in Article.datePublished, not the "Jan 05, 2026" display form. */
 export function blogPostIsoDate(slug: string): string | undefined {
   const display = BLOG_POST_DATES[slug];
   if (!display) return undefined;
-  const ms = Date.parse(display);
-  if (Number.isNaN(ms)) return undefined;
-  return new Date(ms).toISOString().slice(0, 10);
+  const match = display.match(/^([A-Za-z]{3}) (\d{1,2}), (\d{4})$/);
+  if (!match) return undefined;
+  const month = DISPLAY_MONTHS[match[1]];
+  if (!month) return undefined;
+  const day = match[2].padStart(2, "0");
+  return `${match[3]}-${month}-${day}`;
 }

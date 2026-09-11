@@ -34,16 +34,17 @@ const sections = [
     icon: <Home className="w-6 h-6 text-primary" />,
     links: [
       { text: "Home", sub: "Elite landing page & overview", href: "/" },
-      { text: "About Fairplay", sub: "Our story, values & elite standards", href: "/about" },
+      { text: "About Fairplay", sub: "Since 2017: cricket ID, UPI wallet, WhatsApp desk", href: "/about" },
       { text: "What is Fairplay?", sub: "Deep-dive guide into our exchange ecosystem", href: "/what-is-fairplay" },
       { text: "Is Fairplay Real?", sub: "Technical legitimacy & trust audit", href: "/is-fairplay-real" },
       { text: "Is Fairplay Safe?", sub: "Security & encryption protocol audit", href: "/is-fairplay-safe" },
       { text: "Is Fairplay Legal?", sub: "Regulatory & compliance deep-dive", href: "/is-fairplay-legal" },
       { text: "Our Services", sub: "Full spectrum of betting & casino", href: "/services" },
-      { text: "Contact Elite Support", sub: "Get in touch with VIP concierge", href: "/contact-us" },
+      { text: "Contact Elite Support", sub: "WhatsApp desk, email, issue hubs", href: "/contact-us" },
       { text: "Support Hub", sub: "Comprehensive assistance center", href: "/support" },
       { text: "Platforms Index", sub: "Complete betting network", href: "/platforms" },
       { text: "Blog & Analysis", sub: "Latest insights & strategies", href: "/blog" },
+      { text: "Writers", sub: "Named authors, one per blog category", href: "/authors" },
       { text: "2026 Schedule", sub: "Cricket, FIFA and tennis fixtures", href: "/schedule" },
       { text: "All Matches", sub: "Every tournament and fixture index", href: "/matches" },
       { text: "Casino Elite", sub: "Live dealer & table games", href: "/casino" },
@@ -101,9 +102,12 @@ const sections = [
       { text: "Login Guide", sub: "Securely access your elite ID", href: "/login-guide" },
       { text: "Register Guide", sub: "Step-by-step account creation", href: "/register-guide" },
       { text: "Deposit Guide", sub: "UPI, Bank & Crypto funding", href: "/deposit-guide" },
+      { text: "Deposit number", sub: "Official WhatsApp number for UPI help", href: "/fairplay-deposit-number" },
       { text: "Withdrawal Guide", sub: "Fast, secure elite payouts", href: "/withdrawal-guide" },
+      { text: "Withdrawal number", sub: "Official WhatsApp number for payout help", href: "/fairplay-withdrawal-number" },
       { text: "Telegram Channel", sub: "Real-time odds & updates", href: "/telegram-channel" },
-      { text: "WhatsApp Support", sub: "Direct concierge access", href: "/whatsapp-support" }
+      { text: "WhatsApp Support", sub: "Direct concierge access", href: "/whatsapp-support" },
+      { text: "Customer Care Number", sub: "Official WhatsApp number for Fairplay help", href: "/fairplay-customer-care-number" },
     ]
   },
   {

@@ -4,6 +4,8 @@ import { MessageCircle, Send, ShieldCheck, Zap, Info, PhoneCall, Star, ArrowRigh
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
 import { waLink } from "@/lib/whatsapp";
 
 
@@ -13,8 +15,37 @@ export const Route = createFileRoute('/whatsapp-support')({
 })
 
 function WhatsappSupport() {
+  const steps = [
+    {
+      title: "Open official WhatsApp",
+      desc: "Use the WhatsApp button on this page. Do not message a number from an ad or Telegram.",
+    },
+    {
+      title: "Share the login number",
+      desc: "Send the mobile number that will receive OTP. That number is the Fairplay ID login.",
+    },
+    {
+      title: "Complete OTP",
+      desc: "Finish the check so the cricket ID is bound to that phone. Never read the OTP aloud in chat.",
+    },
+    {
+      title: "Keep the ID",
+      desc: "Save the Fairplay ID the desk sends. Later deposits and withdrawals use the wallet screen, not a personal UPI in chat.",
+    },
+  ]
+
+  const howTo = howToJsonLd({
+    path: "/whatsapp-support",
+    name: "How to get a Fairplay ID on WhatsApp",
+    description:
+      "Message official WhatsApp from this site, share the OTP number, complete the check, then keep the Fairplay ID.",
+    totalTime: "PT10M",
+    steps: steps.map((step) => ({ name: step.title, text: step.desc })),
+  })
+
   return (
     <div className="flex flex-col bg-background text-foreground overflow-hidden">
+      <JsonLd data={howTo} />
       {/* Premium Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(37,211,102,0.08),transparent_70%)]" />
@@ -90,6 +121,21 @@ function WhatsappSupport() {
                 </div>
               </div>
             </motion.div>
+          </div>
+
+          <div className="mt-16 max-w-3xl mx-auto space-y-6">
+            <h2 className="text-3xl font-black italic uppercase tracking-tight text-center">How to get a Fairplay ID</h2>
+            {steps.map((step, i) => (
+              <div key={step.title} id={`step-${i + 1}`} className="glass-card p-6 flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-[#25D366]/20 text-[#25D366] text-sm font-black flex items-center justify-center shrink-0">
+                  {i + 1}
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold uppercase italic mb-1">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

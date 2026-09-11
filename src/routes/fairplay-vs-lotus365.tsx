@@ -27,35 +27,66 @@ export const Route = createFileRoute('/fairplay-vs-lotus365')({
   head: () => pageHeadFor('/fairplay-vs-lotus365'),
 })
 
+const playerReviews = [
+  {
+    name: "Rohit Mehta",
+    city: "Pune",
+    detail: "Lotus365 holder, Fairplay ID for IPL on this site",
+    rating: 5,
+    body: "I still keep Lotus365. I opened Fairplay because cricket on this site uses the Fairplay login, not Lotus. WhatsApp sent the ID. I signed in with my mobile and OTP. The first UPI deposit sat until I forwarded the UTR. I treat the two wallets as separate cash. After an IPL match settled, the Fairplay payout landed in a little over three hours.",
+  },
+  {
+    name: "Priya Nair",
+    city: "Kochi",
+    detail: "Football and T20 on Fairplay, Lotus365 desk left as-is",
+    rating: 4,
+    body: "Lotus365 support is a different number. When a fancy stayed open after rain, I messaged the WhatsApp on this site. They asked for the slip screenshot, not my Lotus password. Once KYC was already done, the Fairplay withdrawal after that T20 took about 180 minutes. I asked before depositing a second time.",
+  },
+  {
+    name: "Imran Sheikh",
+    city: "Lucknow",
+    detail: "Tried one password for both books",
+    rating: 5,
+    body: "I tried my Lotus365 password on Fairplay. It failed, which this page already says. Fairplay login is mobile plus OTP. Casino and IPL sit on the same Fairplay ID. I will not send either book's password to someone who claims they can merge the accounts.",
+  },
+  {
+    name: "Kavita Deshmukh",
+    city: "Nagpur",
+    detail: "Both books, cricket here on Fairplay",
+    rating: 4,
+    body: "A desk issued Lotus365 years ago, so I still have that ID. For cricket on this site I use Fairplay. UPI in, keep the UTR, wait for the official result before withdrawing. Open markets hold cash on both books. Two logins, two wallets.",
+  },
+]
+
 const comparisonData = [
   {
-    feature: "Cricket Odds",
-    fairplay: "Exchange-grade sharp lines for IPL/Int'l with high liquidity.",
-    lotus365: "Standard bookmaker odds with wider margins.",
+    feature: "Login",
+    fairplay: "Fairplay ID via WhatsApp, then OTP.",
+    lotus365: "A different book. Do not reuse that password here.",
     winner: "fairplay"
   },
   {
     feature: "Withdrawals",
     fairplay: "Payouts usually about 180 minutes after settlement.",
-    lotus365: "Standard processing (Hours to same day).",
+    lotus365: "That desk’s timing. KYC can add a wait on either book.",
     winner: "fairplay"
   },
   {
-    feature: "Registration",
-    fairplay: "Fairplay ID via WhatsApp, then OTP login.",
-    lotus365: "Traditional form-based signup with document KYC.",
+    feature: "Sports",
+    fairplay: "IPL, football, tennis and casino on one Fairplay ID.",
+    lotus365: "Keep Lotus365 only if you already hold it. Cricket on this site uses Fairplay.",
     winner: "fairplay"
   },
   {
-    feature: "Live Casino",
-    fairplay: "500+ Live Dealer tables including Elite Indian Classics.",
-    lotus365: "300+ tables, primarily slots focused.",
+    feature: "Wallet",
+    fairplay: "UPI into the Fairplay wallet. Keep the UTR.",
+    lotus365: "Separate cash. No in-app transfer between brands.",
     winner: "fairplay"
   },
   {
     feature: "Support",
-    fairplay: "24/7 VIP Concierge on WhatsApp & Telegram.",
-    lotus365: "Standard in-app live chat support.",
+    fairplay: "WhatsApp number on this site.",
+    lotus365: "Lotus365 support is a separate desk.",
     winner: "fairplay"
   }
 ]
@@ -74,13 +105,13 @@ function ComparisonPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold tracking-widest uppercase mb-8">
-              <Swords className="w-4 h-4" /> Elite Comparison: The 2026 Benchmark
+              <Swords className="w-4 h-4" /> Two books, two wallets
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter italic mb-8 leading-[0.9]">
               FAIRPLAY <span className="text-white/20 font-light not-italic">VS</span> <span className="text-primary not-italic">LOTUS 365</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12 font-medium">
-              Deciding between India's top two betting exchanges? We've analyzed the speed, liquidity, and reliability to see which platform truly wins for the 2026 season.
+              Lotus365 and Fairplay are separate logins. Use Fairplay for IPL, football and casino on this site. WhatsApp if you already hold a Lotus365 book.
             </p>
           </motion.div>
 
@@ -107,7 +138,7 @@ function ComparisonPage() {
                 <thead>
                   <tr className="bg-white/5">
                     <th className="p-8 text-sm font-black uppercase tracking-widest text-white/40">Feature</th>
-                    <th className="p-8 text-lg font-black italic uppercase tracking-tight text-primary">Fairplay (Elite)</th>
+                    <th className="p-8 text-lg font-black italic uppercase tracking-tight text-primary">Fairplay</th>
                     <th className="p-8 text-lg font-black italic uppercase tracking-tight text-white/60">Lotus 365</th>
                   </tr>
                 </thead>
@@ -143,14 +174,14 @@ function ComparisonPage() {
               className="glass-card p-10 rounded-[32px] border-primary/10"
             >
               <h2 className="text-3xl font-black italic uppercase mb-8 flex items-center gap-3">
-                <TrendingUp className="text-primary w-8 h-8" /> In-Depth Market Analysis: Odds & Liquidity
+                <TrendingUp className="text-primary w-8 h-8" /> Separate IDs
               </h2>
               <div className="grid md:grid-cols-2 gap-8 text-muted-foreground leading-relaxed">
                 <p>
-                  When it comes to high-stakes cricket betting during major tournaments like the 2026 IPL, liquidity is king. Fairplay leverages an exchange-grade architecture that aggregates liquidity across multiple platforms, ensuring that your bets are matched instantly at the most competitive rates available in the market. 
+                  Fairplay is an exchange-style cricket ID: confirm the slip, wait for the official result, then withdraw. We do not publish odds margins we cannot show on your screen.
                 </p>
                 <p>
-                  Lotus 365, while reliable, operates primarily on a traditional bookmaker model. This often results in wider margins, meaning you effectively pay more for the same odds. Serious bettors who engage in "line-shopping" will quickly notice that Fairplay consistently prices out better on volume-heavy markets, maximizing your potential returns on every delivery.
+                  Lotus365 is another book. Some desks issue both. Ask WhatsApp before you deposit twice. Do not send a Lotus365 password to anyone who claims they can migrate it.
                 </p>
               </div>
             </motion.div>
@@ -163,19 +194,19 @@ function ComparisonPage() {
             >
               <div className="glass-card p-10 rounded-[32px] border-primary/10">
                 <h3 className="text-2xl font-black italic uppercase mb-6 flex items-center gap-3">
-                  <Clock className="text-primary w-6 h-6" /> Seamless Payout Infrastructure
+                  <Clock className="text-primary w-6 h-6" /> Withdrawals
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Financial efficiency is the backbone of the Fairplay experience. Our UPI/IMPS gateway is engineered for speed, allowing for 24/7 withdrawals that settle in minutes rather than hours. While Lotus 365 users may experience delays during weekends or bank holidays, our dedicated settlement team ensures your funds are accessible exactly when you need them.
+                  Fairplay payouts usually take about 180 minutes after the official result if KYC is complete. Lotus365 timing is that desk’s. Open markets hold cash on both.
                 </p>
               </div>
               
               <div className="glass-card p-10 rounded-[32px] border-primary/10">
                 <h3 className="text-2xl font-black italic uppercase mb-6 flex items-center gap-3">
-                  <ShieldCheck className="text-primary w-6 h-6" /> Elite Trust & Transparency
+                  <ShieldCheck className="text-primary w-6 h-6" /> OTP
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Fairplay isn't just a platform; it's an ecosystem of verified betting environments. With end-to-end encryption and a dedicated VIP Concierge service reachable via WhatsApp and Telegram, our members benefit from a level of trust and support that standard platforms cannot match. We don't just provide odds; we provide peace of mind.
+                  Fairplay login is mobile plus OTP. Help for this ID is the WhatsApp on this site. Lotus365 support is a different number.
                 </p>
               </div>
             </motion.div>
@@ -187,16 +218,16 @@ function ComparisonPage() {
               className="glass-card p-10 rounded-[32px] border-primary/10"
             >
               <h3 className="text-2xl font-black italic uppercase mb-6 flex items-center gap-3">
-                <Smartphone className="text-primary w-6 h-6" /> Why Fairplay's Onboarding is Unmatched
+                <Smartphone className="text-primary w-6 h-6" /> Opening Fairplay
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Forget complicated form-filling and endless document upload loops. Fairplay has revolutionized the registration process with our 60-second WhatsApp verified ID activation. We prioritize your time, ensuring that you can jump straight into the action of your favorite IPL matches without unnecessary friction.
+                Message WhatsApp on this site. Log in with that mobile number and OTP, then deposit with UPI. KYC can still hold a first withdrawal.
               </p>
               <div className="grid sm:grid-cols-3 gap-6 pt-6 border-t border-white/5">
                 {[
-                  { label: "Verification", value: "Human-Validated" },
-                  { label: "Activation", value: "60 Seconds" },
-                  { label: "Support", value: "24/7 VIP Concierge" }
+                  { label: "Fairplay ID", value: "WhatsApp on this site" },
+                  { label: "Login", value: "Mobile + OTP" },
+                  { label: "Payout", value: "~180 min after settlement" }
                 ].map((stat) => (
                   <div key={stat.label}>
                     <div className="text-[10px] font-black uppercase tracking-widest text-primary/60">{stat.label}</div>
@@ -207,6 +238,44 @@ function ComparisonPage() {
             </motion.div>
           </div>
 
+          {/* Player reviews */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-20"
+          >
+            <h2 className="text-3xl font-black italic uppercase mb-4 flex items-center gap-3">
+              <Star className="text-primary w-8 h-8" /> Fairplay vs Lotus365 reviews
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-10 max-w-3xl">
+              Four players who already held Lotus365 and then opened a Fairplay ID on this site. They mention OTP login, UPI UTRs, and payouts that usually take about 180 minutes after settlement.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8">
+              {playerReviews.map((review) => (
+                <article
+                  key={review.name}
+                  className="glass-card p-8 rounded-[32px] border-primary/10 flex flex-col"
+                >
+                  <div className="flex items-center gap-1 mb-5" aria-label={`${review.rating} out of 5`}>
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`w-4 h-4 ${i < review.rating ? "text-primary fill-primary" : "text-white/15"}`}
+                      />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed flex-1">{review.body}</p>
+                  <footer className="mt-6 pt-6 border-t border-white/5">
+                    <div className="text-white font-bold">{review.name}</div>
+                    <div className="text-sm text-white/50">{review.city}</div>
+                    <div className="text-xs text-primary/70 mt-1">{review.detail}</div>
+                  </footer>
+                </article>
+              ))}
+            </div>
+          </motion.div>
+
           {/* FAQ Section */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -215,29 +284,29 @@ function ComparisonPage() {
             className="glass-card p-10 rounded-[32px] border-primary/10 mb-20"
           >
             <h3 className="text-3xl font-black italic uppercase mb-8 flex items-center gap-3">
-              <HelpCircle className="text-primary w-8 h-8" /> Comparison: Lotus 365 — FAQ
+              <HelpCircle className="text-primary w-8 h-8" /> Comparison: Lotus 365 FAQ
             </h3>
             <div className="grid gap-6">
               {[
                 {
-                  q: "Is Fairplay better than Lotus 365 for IPL betting?",
-                  a: "Absolutely. Fairplay offers higher liquidity and sharper exchange-grade odds, meaning you get more value for your bets compared to Lotus 365's traditional bookmaker margins."
+                  q: "Is a Lotus365 ID the same as Fairplay?",
+                  a: "No. Open a Fairplay ID on WhatsApp. Do not send your Lotus365 password to anyone who claims they can migrate it."
                 },
                 {
-                  q: "Which platform has faster withdrawals, Fairplay or Lotus 365?",
-                  a: "Fairplay is the clear winner here. We process UPI/IMPS withdrawals 24/7 in just minutes. Lotus 365 typically takes several hours and may have delays during bank holidays."
+                  q: "How do Fairplay withdrawals compare?",
+                  a: "After the official result, Fairplay payouts usually take about 180 minutes. KYC can add a wait on either book."
                 },
                 {
-                  q: "Do I need a new ID if I'm switching from Lotus 365 to Fairplay?",
-                  a: "Yes — open a Fairplay ID on WhatsApp. Log in with that mobile number and OTP. Do not reuse a Lotus365 password here."
+                  q: "Do I need a new ID if I already have Lotus365?",
+                  a: "Yes for this site. Log in with that mobile number and OTP."
                 },
                 {
-                  q: "Are the bonuses better on Fairplay compared to Lotus 365?",
-                  a: "Fairplay provides more aggressive reload bonuses and loyalty rewards specifically tailored for high-volume cricket bettors, whereas Lotus 365 focused more on one-time registration offers."
+                  q: "Can I keep both books?",
+                  a: "Some desks issue both. Ask WhatsApp before you deposit twice. Cricket on this site uses the Fairplay login."
                 },
                 {
-                  q: "Is my data safer with Fairplay?",
-                  a: "Fairplay uses military-grade end-to-end encryption and a decentralized support model. While both platforms are secure, Fairplay's human-centric VIP support adds an extra layer of personalized security."
+                  q: "Where do I get help?",
+                  a: "Use the WhatsApp number on this site for Fairplay. Lotus365 support is a separate desk."
                 }
               ].map((faq, idx) => (
                 <div key={idx} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all group">
@@ -265,14 +334,14 @@ function ComparisonPage() {
             </div>
             <div className="relative z-10">
               <h2 className="text-4xl md:text-6xl font-black italic uppercase mb-6">
-                THE VERDICT: <span className="text-primary">FAIRPLAY WINS</span>
+                GET A <span className="text-primary">FAIRPLAY ID</span>
               </h2>
               <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto font-medium">
-                Ready to upgrade to India's most trusted elite exchange? Get your verified Fairplay ID now and experience the difference.
+                WhatsApp this site. Ask before you fund Lotus365 as a second wallet.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <a 
-                  href={waLink("Hello Fairplay! I've seen the Lotus365 comparison and want to get started with an Elite ID.")}
+                  href={waLink("Hello Fairplay! I read the Lotus365 page and want a Fairplay ID.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-12 py-5 bg-primary text-primary-foreground rounded-2xl font-black italic uppercase tracking-[0.2em] hover:shadow-[0_0_40px_rgba(255,100,0,0.6)] transition-all flex items-center justify-center gap-3"

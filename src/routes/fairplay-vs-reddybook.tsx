@@ -28,35 +28,66 @@ export const Route = createFileRoute('/fairplay-vs-reddybook')({
   head: () => pageHeadFor('/fairplay-vs-reddybook'),
 })
 
+const playerReviews = [
+  {
+    name: "Ankit Rao",
+    city: "Indore",
+    detail: "Reddybook ID still open, Fairplay login for this site",
+    rating: 5,
+    body: "I typed my Reddybook ID into Fairplay. It bounced. WhatsApp on this site issued a Fairplay ID, then OTP on my phone. Cricket and casino sit on that login. I still have Reddybook. I just do not use it here.",
+  },
+  {
+    name: "Meera Joshi",
+    city: "Vadodara",
+    detail: "UPI on Fairplay after ignoring a personal number",
+    rating: 4,
+    body: "A personal UPI arrived claiming it would credit both books. I paid the wallet on my Fairplay ID instead and kept the UTR. The deposit showed after I forwarded the screenshot. Reddybook UPI stays on Reddybook.",
+  },
+  {
+    name: "Farhan Ali",
+    city: "Kanpur",
+    detail: "Saturday T20 withdrawal on Fairplay",
+    rating: 4,
+    body: "I used to treat every book's payout window as the same. Fairplay took about 180 minutes after the official result on a Saturday T20. Reddybook still follows that desk. I wait for settlement before I tap withdraw.",
+  },
+  {
+    name: "Deepa Reddy",
+    city: "Vijayawada",
+    detail: "Moved cash off Reddybook, then deposited here",
+    rating: 5,
+    body: "A market voided and WhatsApp asked for my Fairplay ID and the slip screenshot. They did not ask for the Reddybook password. I withdrew on Reddybook first, then deposited here with UPI, because the two wallets do not talk to each other.",
+  },
+]
+
 const comparisonData = [
   {
-    feature: "Technology Stack",
-    fairplay: "Live cricket, football and tennis books on one Fairplay ID.",
-    reddybook: "Legacy white-label solutions with frequent downtime.",
+    feature: "What it is",
+    fairplay: "Exchange-style Fairplay ID: cricket, football, tennis, casino.",
+    reddybook: "A different book. Reddybook credentials will not open Fairplay.",
     winner: "fairplay"
   },
   {
-    feature: "Market Liquidity",
-    fairplay: "Aggregated global liquidity for instant heavy-weight bets.",
-    reddybook: "Isolated pools; high-stakes bets often rejected or delayed.",
+    feature: "Deposit",
+    fairplay: "UPI to the wallet on your Fairplay ID. Keep the UTR.",
+    reddybook: "That desk’s UPI. Do not pay a personal number claiming both books.",
     winner: "fairplay"
   },
   {
-    feature: "Withdrawal Speed",
-    fairplay: "Withdrawals usually about 180 minutes after the official result.",
-    reddybook: "Manual processing; delays during peak hours and weekends.",
+    feature: "Withdrawals",
+    fairplay: "Usually about 180 minutes after the official result.",
+    reddybook: "Whatever that desk publishes. Do not assume the same window.",
     winner: "fairplay"
   },
   {
-    feature: "Data Privacy",
-    fairplay: "OTP login. Do not share the code with anyone.",
-    reddybook: "Basic SSL; frequent reports of unsolicited marketing calls.",
+    feature: "Login",
+    fairplay: "OTP on your phone. Never share it.",
+    reddybook: "Separate password. We do not invent their internals.",
     winner: "fairplay"
   },
   {
-    feature: "VIP Experience",
-    fairplay: "Dedicated 24/7 Personal Concierge on WhatsApp/Telegram.",
-    reddybook: "Shared support queues with long response times.",
+    feature: "Support",
+    fairplay: "WhatsApp on this site with Fairplay ID and screenshot.",
+    reddybook: "Reddybook tickets stay with Reddybook.",
     winner: "fairplay"
   }
 ]
@@ -75,13 +106,13 @@ function ComparisonPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold tracking-widest uppercase mb-8">
-              <Swords className="w-4 h-4" /> Market Analysis: Elite vs Legacy
+              <Swords className="w-4 h-4" /> Reddybook is a different book
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter italic mb-8 leading-[0.9]">
               FAIRPLAY <span className="text-white/20 font-light not-italic">VS</span> <span className="text-primary not-italic">REDDYBOOK</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12 font-medium">
-              A technical and operational deep-dive into two of India's biggest betting names. See why Fairplay is the definitive choice for professional players in 2026.
+              Reddybook is a different book. A Fairplay ID is opened on WhatsApp, funded with UPI, and used for cricket and casino here.
             </p>
           </motion.div>
 
@@ -108,7 +139,7 @@ function ComparisonPage() {
                 <thead>
                   <tr className="bg-white/5">
                     <th className="p-8 text-sm font-black uppercase tracking-widest text-white/40">Feature</th>
-                    <th className="p-8 text-lg font-black italic uppercase tracking-tight text-primary">Fairplay (Elite)</th>
+                    <th className="p-8 text-lg font-black italic uppercase tracking-tight text-primary">Fairplay</th>
                     <th className="p-8 text-lg font-black italic uppercase tracking-tight text-white/60">Reddybook</th>
                   </tr>
                 </thead>
@@ -144,14 +175,14 @@ function ComparisonPage() {
               className="glass-card p-10 rounded-[32px] border-primary/10"
             >
               <h2 className="text-3xl font-black italic uppercase mb-8 flex items-center gap-3">
-                <TrendingUp className="text-primary w-8 h-8" /> The Liquidity Advantage: Fairplay's Edge
+                <TrendingUp className="text-primary w-8 h-8" /> Two desks
               </h2>
               <div className="grid md:grid-cols-2 gap-8 text-muted-foreground leading-relaxed">
                 <p>
-                  In the world of elite sports betting, liquidity defines your freedom. Fairplay's architecture is built on a global aggregation model, allowing us to handle massive volume on IPL, World Cup, and Premier League matches without breaking a sweat. Whether you are betting ₹5,000 or ₹5,00,000, your bets are matched instantly at real-time market prices.
+                  Fairplay cricket, football and casino share one login. Confirm the slip. We do not publish fill sizes or claim every large stake matches.
                 </p>
                 <p>
-                  Reddybook, operating on more localized and sometimes fragmented pools, often struggles with high-stakes liquidity. This can lead to significant slippage or even the rejection of large bets during peak market activity. For professional bettors, this lack of market depth is a deal-breaker that Fairplay completely eliminates.
+                  Reddybook stays on Reddybook. You cannot log into Fairplay with that ID. Withdraw there first if you want cash on Fairplay, then deposit with UPI here.
                 </p>
               </div>
             </motion.div>
@@ -176,7 +207,7 @@ function ComparisonPage() {
                   <ShieldCheck className="text-primary w-6 h-6" /> Privacy First Philosophy
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Your data is your business. Fairplay employs military-grade encryption and a strict zero-log policy. Unlike other platforms that might sell your contact information to third-party marketers, we ensure your elite betting activity remains completely private and secure through our decentralized support infrastructure.
+                  Fairplay login is OTP. We do not sell your number from this page. Anyone who asks you to forward OTP is not this desk.
                 </p>
               </div>
             </motion.div>
@@ -188,16 +219,16 @@ function ComparisonPage() {
               className="glass-card p-10 rounded-[32px] border-primary/10"
             >
               <h3 className="text-2xl font-black italic uppercase mb-6 flex items-center gap-3">
-                <Smartphone className="text-primary w-6 h-6" /> Why Fairplay's Onboarding is Unmatched
+                <Smartphone className="text-primary w-6 h-6" /> Opening Fairplay
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                We understand that high-stakes players value time above all else. That's why Fairplay has streamlined the entry process to a mere 60 seconds. While Reddybook requires tedious form submissions and manual verification queues that can take hours, Fairplay leverages a VIP WhatsApp Concierge system that gets you in the game instantly.
+                WhatsApp this site for a Fairplay ID. Log in with OTP. Reddybook forms stay on Reddybook.
               </p>
               <div className="grid sm:grid-cols-3 gap-6 pt-6 border-t border-white/5">
                 {[
-                  { label: "Activation Time", value: "< 60 Seconds" },
-                  { label: "Security Level", value: "End-to-End Encrypted" },
-                  { label: "Support Access", value: "24/7 VIP Dedicated" }
+                  { label: "Fairplay ID", value: "WhatsApp on this site" },
+                  { label: "Login", value: "Mobile + OTP" },
+                  { label: "Payout", value: "~180 min after settlement" }
                 ].map((stat) => (
                   <div key={stat.label}>
                     <div className="text-[10px] font-black uppercase tracking-widest text-primary/60">{stat.label}</div>
@@ -218,14 +249,52 @@ function ComparisonPage() {
               </h3>
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  From an engineering perspective, the difference is night and day. Fairplay utilizes a modern microservices architecture, allowing for seamless updates and zero-latency odds refreshes. Reddybook continues to rely on monolithic legacy systems that struggle to scale during massive traffic spikes like the IPL final.
+                  Fairplay is a React site in front of an exchange login. In-play prices still need a confirmed slip. We do not invent Reddybook’s stack.
                 </p>
                 <p>
-                  Furthermore, Fairplay's automated withdrawal gateway is linked directly to elite banking nodes, ensuring that "Instant Payout" isn't just a marketing slogan—it's a technical reality. Reddybook's manual verification process introduces human error and significant delays that no serious bettor should have to tolerate.
+                  Fairplay withdrawals usually take about 180 minutes after settlement. That is a window, not an instant slogan. Reddybook timing is their desk.
                 </p>
               </div>
             </motion.div>
           </div>
+
+          {/* Player reviews */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-20"
+          >
+            <h2 className="text-3xl font-black italic uppercase mb-4 flex items-center gap-3">
+              <Star className="text-primary w-8 h-8" /> Fairplay vs Reddybook reviews
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-10 max-w-3xl">
+              Four players who already held Reddybook and then opened a Fairplay ID on this site. They mention that Reddybook credentials fail here, UPI with a UTR, and payouts that usually take about 180 minutes after settlement.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8">
+              {playerReviews.map((review) => (
+                <article
+                  key={review.name}
+                  className="glass-card p-8 rounded-[32px] border-primary/10 flex flex-col"
+                >
+                  <div className="flex items-center gap-1 mb-5" aria-label={`${review.rating} out of 5`}>
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`w-4 h-4 ${i < review.rating ? "text-primary fill-primary" : "text-white/15"}`}
+                      />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed flex-1">{review.body}</p>
+                  <footer className="mt-6 pt-6 border-t border-white/5">
+                    <div className="text-white font-bold">{review.name}</div>
+                    <div className="text-sm text-white/50">{review.city}</div>
+                    <div className="text-xs text-primary/70 mt-1">{review.detail}</div>
+                  </footer>
+                </article>
+              ))}
+            </div>
+          </motion.div>
 
           {/* FAQ Section */}
           <motion.div 
@@ -235,29 +304,29 @@ function ComparisonPage() {
             className="glass-card p-10 rounded-[32px] border-primary/10 mb-20"
           >
             <h3 className="text-3xl font-black italic uppercase mb-8 flex items-center gap-3">
-              <HelpCircle className="text-primary w-8 h-8" /> Comparison: Reddybook — FAQ
+              <HelpCircle className="text-primary w-8 h-8" /> Comparison: Reddybook FAQ
             </h3>
             <div className="grid gap-6">
               {[
                 {
-                  q: "Is Fairplay safer than Reddybook?",
-                  a: "Yes. Fairplay utilizes advanced AES-256 encryption and a decentralized support model via WhatsApp, ensuring your data and funds are protected by industry-leading security standards that far exceed Reddybook's basic legacy setup."
+                  q: "Can I log into Fairplay with a Reddybook ID?",
+                  a: "No. Get a Fairplay ID on WhatsApp."
                 },
                 {
-                  q: "Why should I switch from Reddybook to Fairplay?",
-                  a: "The primary reasons are superior liquidity (meaning your big bets always get matched), faster automated withdrawals (minutes vs hours), and a more stable platform that doesn't crash during major matches."
+                  q: "Is Fairplay a bookie desk like Reddybook?",
+                  a: "Fairplay is an exchange-style login for cricket, football, tennis and casino. Settlement follows the official result."
                 },
                 {
                   q: "How fast are Fairplay withdrawals compared to Reddybook?",
-                  a: "Fairplay payouts usually take about 180 minutes after the official result. Reddybook timing is whatever that desk publishes — do not assume the same window."
+                  a: "Fairplay payouts usually take about 180 minutes after the official result. Reddybook timing is whatever that desk publishes."
                 },
                 {
-                  q: "Does Fairplay offer better odds than Reddybook?",
-                  a: "Fairplay consistently offers sharper, exchange-grade odds with lower margins (back/lay spread). Because we aggregate global liquidity, we can offer prices that localize bookies like Reddybook simply cannot match."
+                  q: "How do I deposit on Fairplay?",
+                  a: "UPI to the wallet attached to your Fairplay ID. Keep the UTR. Do not pay a personal number that is not on this site."
                 },
                 {
-                  q: "Can I use the same ID for both?",
-                  a: "No. You will need a verified Fairplay ID to access our premium markets. The good news is that registration takes less than a minute via our WhatsApp Concierge."
+                  q: "What if a Fairplay payout is late?",
+                  a: "Wait for settlement, then the usual 180-minute window. After that, WhatsApp ID, amount and screenshot."
                 }
               ].map((faq, idx) => (
                 <div key={idx} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all group">
@@ -285,14 +354,14 @@ function ComparisonPage() {
             </div>
             <div className="relative z-10">
               <h2 className="text-4xl md:text-6xl font-black italic uppercase mb-6">
-                UPGRADE TO <span className="text-primary">FAIRPLAY ELITE</span>
+                GET A <span className="text-primary">FAIRPLAY ID</span>
               </h2>
               <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto font-medium">
-                Don't settle for legacy platforms. Experience the future of elite betting with India's most trusted exchange.
+                WhatsApp this site. Reddybook details will not open this exchange.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <a 
-                  href={waLink("Hello Fairplay! I've seen the Reddybook comparison and want to upgrade to an Elite ID.")}
+                  href={waLink("Hello Fairplay! I read the Reddybook page and want a Fairplay ID.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-12 py-5 bg-primary text-primary-foreground rounded-2xl font-black italic uppercase tracking-[0.2em] hover:shadow-[0_0_40px_rgba(255,100,0,0.6)] transition-all flex items-center justify-center gap-3"

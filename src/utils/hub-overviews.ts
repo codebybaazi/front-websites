@@ -35,7 +35,7 @@ export const HUB_OVERVIEWS: Record<string, string> = {
   "Telegram Channel":
     "Fairplay Telegram is for updates, not for sending UPI to strangers. IDs and deposits still go through official WhatsApp and the Fairplay login you already use.",
   "Contact Us":
-    "Contact Fairplay for ID, wallet and betting questions. WhatsApp is the working desk; use the contact page if you need a written trail.",
+    "Contact Fairplay on official WhatsApp for ID, login and UPI. Email is a written trail only. There is no contact form — open the matching issue page, then message with your Fairplay ID.",
   Platforms:
     "Fairplay can open partner exchanges (11xplay, Laser247, Gold365) on related IDs. Cricket and casino still sit on the main Fairplay login unless the desk tells you otherwise.",
   "All Links":
@@ -61,9 +61,15 @@ export const HUB_OVERVIEWS: Record<string, string> = {
   "Platform Definition Audit":
     "Fairplay is a sports exchange plus live casino: one Fairplay ID, UPI deposits, cricket (including IPL), football, tennis and tables. You bet other players on the exchange, not a house book.",
   "Intelligence Overview: 2026 Season":
-    "The Fairplay schedule lists 2026 cricket (IPL, T20, ODIs), football and tennis. Open a fixture for prediction notes and markets. Times are IST unless the match page says otherwise.",
+    "The Fairplay schedule lists 2026 cricket (IPL, T20, ODIs), football and tennis. Cricket fixture days are a series window, not a confirmed XI date. Times are IST unless the match page says otherwise.",
   "Liquidity Infrastructure Report":
     "Fairplay deposits usually go through UPI. Send the amount, wait for the wallet to credit, and keep the UTR. Do not pay a second time if the first payment is still pending.",
+  "Fairplay Deposit Number":
+    "The Fairplay Deposit number is the official WhatsApp line published for this site. Use it for UPI wallet help and pending credits. Pay inside the Fairplay wallet; do not treat a chat UPI ID as the deposit number Fairplay uses.",
+  "Fairplay Withdrawal Number":
+    "The Fairplay Withdrawal number is the official WhatsApp line published for this site. Request the payout in the wallet first, then message this number if the UPI or bank credit is late. A chat UPI ID is not the withdrawal number Fairplay uses.",
+  "Fairplay Customer Care Number":
+    "The Fairplay Customer Care number is the official WhatsApp line published for this site. Use it for Fairplay ID, login OTP, deposits and payouts. Tap the number on this page; do not use a number from an ad or Telegram group.",
   "Laser247 Technical Stack":
     "Laser247 is used for live cricket and football in the Fairplay network. Latency talk aside: you still need a verified ID and a funded wallet.",
   "Fairplay vs Lotus365":
@@ -89,7 +95,7 @@ export const HUB_OVERVIEWS: Record<string, string> = {
   "Fairplay betting rules":
     "Fairplay markets settle on official results. Manipulation, multi-accounting and bots can close an ID. Check the slip; void rules sit with the exchange.",
   "Fairplay legal status":
-    "Fairplay is an offshore sports exchange plus casino. You must be 18+. Local law still applies where you live — this page is not legal advice.",
+    "Fairplay is the brand on fairplayindia.com. We do not publish a licence number or a registered operator company name. You must be 18+. Local law still applies — this page is not legal advice.",
   "Fairplay disclaimer":
     "Betting can lose money. Fairplay pages are information, not a guarantee of payouts or legality in your state. Stake only what you can afford to lose.",
   "Fairplay security":
@@ -109,7 +115,7 @@ export const HUB_OVERVIEWS: Record<string, string> = {
   "Is Fairplay safe":
     "Treat Fairplay like any wallet: OTP only on your phone, never share the ID password, and withdraw to your own UPI. Report clones that copy this site.",
   "Is Fairplay legal":
-    "Fairplay operates as an offshore exchange. Indian users must follow local law. This page summarises how the product is described, not a court opinion.",
+    "Fairplay is an offshore exchange with no licence number or company registry name on this site. Indian users follow local law. This page is not a court opinion.",
   "Fairplay refunds":
     "Deposits that never credit can be traced with the UTR. Settled bets are not refunded. Void markets return the stake. WhatsApp with ID and amount.",
   "Fairplay privacy":

@@ -1,14 +1,14 @@
-import { Zap, ShieldCheck, Smartphone, TrendingUp, Users, Clock, Star } from "lucide-react";
+import { Zap, ShieldCheck, Smartphone, TrendingUp, Clock, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import { waLink } from "@/lib/whatsapp";
 
 export const OverviewSection = () => {
   const stats = [
-    { label: "Years running", val: "7+", icon: Clock },
-    { label: "Players", val: "250K+", icon: Users },
+    { label: "Running since", val: "2017", icon: Clock },
     { label: "Withdrawal window", val: "180 min", icon: Zap },
-    { label: "Rating", val: "4.9/5", icon: Star },
+    { label: "Login", val: "OTP", icon: ShieldCheck },
+    { label: "ID desk", val: "WhatsApp", icon: MessageCircle },
   ];
 
   const features = [
@@ -125,7 +125,7 @@ export const OverviewSection = () => {
                   />
                 </div>
                 <p className="mt-4 text-[10px] text-white/40 font-medium uppercase tracking-tighter italic">
-                  Trusted by 250,000+ elite members across India since 2017.
+                  Cricket ID in India since 2017. We do not publish user counts.
                 </p>
               </div>
             </div>

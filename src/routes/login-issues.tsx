@@ -4,6 +4,8 @@ import { AlertCircle, Lock, Shield, HelpCircle, Zap, RefreshCw, Star, ArrowRight
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/login-issues')({
   component: LoginIssues,
@@ -18,8 +20,18 @@ function LoginIssues() {
     { icon: Zap, title: 'WhatsApp the ID', desc: 'If OTP never arrives, message official WhatsApp with the Fairplay ID. Never share the OTP with anyone who DMs you first.' },
   ]
 
+  const howTo = howToJsonLd({
+    path: "/login-issues",
+    name: "How to fix Fairplay login issues",
+    description:
+      "Check the number on the Fairplay ID, clear a stuck session, wait out a lock, then WhatsApp the ID if OTP never arrives.",
+    totalTime: "PT20M",
+    steps: steps.map((step) => ({ name: step.title, text: step.desc })),
+  })
+
   return (
     <div className="flex flex-col bg-background text-foreground overflow-hidden">
+      <JsonLd data={howTo} />
       {/* Premium Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,100,0,0.08),transparent_70%)]" />
@@ -54,6 +66,7 @@ function LoginIssues() {
             {steps.map((step, i) => (
               <motion.div 
                 key={i}
+                id={`step-${i + 1}`}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}

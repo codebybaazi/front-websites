@@ -4,6 +4,8 @@ import { UserPlus, Shield, Smartphone, ArrowRight, CheckCircle, Info, Star } fro
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/register-guide')({
   component: RegisterGuide,
@@ -34,8 +36,18 @@ function RegisterGuide() {
     }
   ]
 
+  const howTo = howToJsonLd({
+    path: "/register-guide",
+    name: "How to register for a Fairplay ID",
+    description:
+      "Get a Fairplay ID on WhatsApp, log in with OTP, deposit with UPI, then bet cricket or play casino. No second registration for IPL.",
+    totalTime: "PT10M",
+    steps: steps.map((step) => ({ name: step.title, text: step.desc })),
+  })
+
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-hidden">
+      <JsonLd data={howTo} />
       {/* Premium Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,100,0,0.08),transparent_70%)]" />
@@ -68,6 +80,7 @@ function RegisterGuide() {
           {steps.map((step, i) => (
             <motion.div 
               key={i}
+              id={`step-${i + 1}`}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}

@@ -4,14 +4,45 @@ import { UserCheck, Shield, FileSearch, CheckCircle, AlertCircle, Clock, Star, S
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
 export const Route = createFileRoute('/kyc-verification-policy')({
   component: KYCVerificationPolicy,
   head: () => pageHeadFor('/kyc-verification-policy'),
 })
 
 function KYCVerificationPolicy() {
+  const steps = [
+    {
+      title: "Wait until Fairplay asks",
+      desc: "KYC usually appears before a large withdrawal or if the desk flags the ID. Do not upload documents to a random form from an ad.",
+    },
+    {
+      title: "Photograph a matching ID",
+      desc: "Use a government ID whose name matches the Fairplay ID. Blurry or cropped photos get rejected.",
+    },
+    {
+      title: "Send it on official WhatsApp",
+      desc: "Message from the number on the ID. Include the Fairplay ID and the photo. Do not send OTP.",
+    },
+    {
+      title: "Wait for the desk",
+      desc: "If KYC fails, they will say why. Do not open a second Fairplay ID with the same papers.",
+    },
+  ]
+
+  const howTo = howToJsonLd({
+    path: "/kyc-verification-policy",
+    name: "How to complete Fairplay KYC",
+    description:
+      "Send a matching government ID on official WhatsApp when Fairplay asks, so withdrawals can pay the right person.",
+    totalTime: "PT15M",
+    steps: steps.map((step) => ({ name: step.title, text: step.desc })),
+  })
+
   return (
     <div className="flex flex-col bg-background text-foreground overflow-hidden">
+      <JsonLd data={howTo} />
       {/* Premium Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,100,0,0.08),transparent_70%)]" />
@@ -111,6 +142,28 @@ function KYCVerificationPolicy() {
                 </ul>
               </motion.div>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="group p-8 rounded-3xl bg-white/2 border border-white/5"
+            >
+              <h2 className="text-3xl font-black italic uppercase tracking-tight mb-8">How to send KYC</h2>
+              <div className="space-y-6">
+                {steps.map((step, i) => (
+                  <div key={step.title} id={`step-${i + 1}`} className="flex gap-4">
+                    <div className="w-8 h-8 rounded-full bg-primary/20 text-primary text-sm font-black flex items-center justify-center shrink-0">
+                      {i + 1}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold uppercase italic mb-1">{step.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
 
             <motion.div 
               initial={{ opacity: 0, y: 20 }}

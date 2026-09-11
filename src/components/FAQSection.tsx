@@ -12,9 +12,11 @@ interface FAQSectionProps {
   title?: string;
   faqs: FAQItem[];
   className?: string;
+  /** Mark the “What is Fairplay?” answer for SpeakableSpecification. */
+  speakable?: boolean;
 }
 
-export function FAQSection({ title = "Frequently Asked Questions", faqs, className = "" }: FAQSectionProps) {
+export function FAQSection({ title = "Frequently Asked Questions", faqs, className = "", speakable = false }: FAQSectionProps) {
   const items = normalizeFaqs(faqs);
   if (items.length === 0) return null;
   const schema = faqPageJsonLd(items);
@@ -43,7 +45,9 @@ export function FAQSection({ title = "Frequently Asked Questions", faqs, classNa
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {items.map((faq, i) => (
+          {items.map((faq, i) => {
+            const isWhatIs = speakable && /what is fairplay/i.test(faq.q);
+            return (
             <motion.div
               key={faq.q}
               initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
@@ -53,15 +57,22 @@ export function FAQSection({ title = "Frequently Asked Questions", faqs, classNa
               className="bg-card/30 border border-white/5 p-8 rounded-3xl hover:border-primary/20 transition-all group relative overflow-hidden"
             >
               <div className="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors" />
-              <h3 className="text-white font-black uppercase text-sm tracking-widest mb-4 flex items-start gap-3 relative z-10">
+              <h3
+                id={isWhatIs ? "what-is-fairplay" : undefined}
+                className="text-white font-semibold text-base tracking-normal mb-4 flex items-start gap-3 relative z-10"
+              >
                 <Zap className="w-4 h-4 text-primary shrink-0 mt-0.5" /> 
                 <span className="leading-tight">{faq.q}</span>
               </h3>
-              <p className="text-muted-foreground/80 leading-relaxed italic text-sm relative z-10">
+              <p
+                id={isWhatIs ? "what-is-fairplay-answer" : undefined}
+                className="text-muted-foreground/80 leading-relaxed italic text-sm relative z-10"
+              >
                 {faq.a}
               </p>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
       </motion.div>
     </section>

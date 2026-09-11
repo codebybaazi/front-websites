@@ -79,8 +79,27 @@ function readNumberFromDocument(): string | null {
 // in the browser it holds the latest number we know about.
 let currentNumber = readNumberFromDocument() ?? FALLBACK_WHATSAPP_NUMBER;
 
+type WhatsAppNumberListener = (number: string) => void;
+const numberListeners = new Set<WhatsAppNumberListener>();
+
 export function getWhatsAppNumber(): string {
   return currentNumber;
+}
+
+/** Formats digits from fetchnumbers.json for on-page display, e.g. +91 82949 24767. */
+export function formatWhatsAppDisplay(digits = getWhatsAppNumber()): string {
+  const normalized = normalizeWhatsAppNumber(digits) ?? digits.replace(/\D/g, "");
+  if (normalized.startsWith("91") && normalized.length === 12) {
+    return `+91 ${normalized.slice(2, 7)} ${normalized.slice(7)}`;
+  }
+  return normalized.length >= 11 ? `+${normalized}` : normalized;
+}
+
+export function subscribeWhatsAppNumber(listener: WhatsAppNumberListener): () => void {
+  numberListeners.add(listener);
+  return () => {
+    numberListeners.delete(listener);
+  };
 }
 
 /** Returns true when the stored number actually changed. */
@@ -88,6 +107,7 @@ export function setWhatsAppNumber(value: string | null | undefined): boolean {
   const normalized = normalizeWhatsAppNumber(value);
   if (!normalized || normalized === currentNumber) return false;
   currentNumber = normalized;
+  numberListeners.forEach((listener) => listener(currentNumber));
   return true;
 }
 

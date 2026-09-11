@@ -15,10 +15,11 @@ import type { CricketProjection } from "@/utils/match-projections";
 import type { WatchPlayer } from "@/utils/cricket-players";
 import type { MatchFaq } from "@/utils/match-faqs";
 import type { RelatedFixture } from "@/utils/related-fixtures";
-import { faqPageNode } from "@/utils/faq-schema";
+import { FAQSection } from "@/components/FAQSection";
 import { JsonLd } from "@/components/JsonLd";
 import { sportsEventGraph } from "@/utils/match-seo";
 import { cricketKeywordCluster } from "@/utils/cricket-keywords";
+import { CRICKET_DATE_NOTE } from "@/lib/cricket-schedule";
 import { getMatchSlug } from "@/utils/slugify";
 import { waLink } from "@/lib/whatsapp";
 
@@ -142,7 +143,7 @@ export function CricketMatchDetail({
   const favPct = Math.max(projection.winA, projection.winB);
   const inningsLabel = projection.format === "TEST" ? "Day 1 total" : "1st innings";
   const pitchRead = pitchReadFor(projection.surface, projection.format);
-  const overview = `${codePair} ${stage} prediction: ${fixtureName} at ${venueShort} on ${match.date || "a date still to be confirmed"}. The model projects ${teamA} at ${projection.totalA} and ${teamB} at ${projection.totalB} across ${projection.format === "TEST" ? "day-one sessions" : "first-innings phases"}, with a ${projection.surface} pitch read. Live Fairplay odds still move with the toss.`;
+  const overview = `${codePair} ${stage} prediction: ${fixtureName} at ${venueShort} on ${match.date || "a date still to be confirmed"} (${CRICKET_DATE_NOTE.toLowerCase()}). The model projects ${teamA} at ${projection.totalA} and ${teamB} at ${projection.totalB} across ${projection.format === "TEST" ? "day-one sessions" : "first-innings phases"}, with a ${projection.surface} pitch read. Live Fairplay odds still move with the toss.`;
   const takeaways = whyBet.slice(0, 4);
   const firstPhase = projection.phases[0];
   const lastPhase = projection.phases[projection.phases.length - 1];
@@ -164,19 +165,18 @@ export function CricketMatchDetail({
       : `Session and fancy markets track the ${projection.formatLabel.toLowerCase()} phase map on this ${projection.surface.toLowerCase()} deck.` },
   ];
 
-  const faqNode = faqPageNode(faqs);
   const jsonLd = sportsEventGraph({
     name: fixtureName,
     description: overview,
     slug: getMatchSlug(match.seriesName, match),
     date: match.date,
+    time: match.time,
     venue: match.venue,
     sport: "Cricket",
     competitors: [
       { type: "SportsTeam", name: teamA },
       { type: "SportsTeam", name: teamB },
     ],
-    faqNode,
   });
 
   return (
@@ -228,6 +228,7 @@ export function CricketMatchDetail({
               <li className="bg-background/90 px-3 py-4">
                 <Calendar className="mx-auto mb-1 h-3.5 w-3.5 text-primary" />
                 <time className="block text-[11px] font-bold text-white">{match.date || "TBD"}</time>
+                <span className="mt-1 block text-[9px] font-bold uppercase tracking-widest text-white/40">{CRICKET_DATE_NOTE}</span>
               </li>
               <li className="bg-background/90 px-3 py-4">
                 <Clock className="mx-auto mb-1 h-3.5 w-3.5 text-primary" />
@@ -532,7 +533,7 @@ export function CricketMatchDetail({
                 { label: "Series", value: match.seriesName },
                 { label: "Stage", value: stage },
                 { label: "Fixture", value: fixtureName },
-                { label: "Date", value: match.date || "TBD" },
+                { label: "Date", value: match.date ? `${match.date} (${CRICKET_DATE_NOTE})` : "TBD" },
                 { label: "Start", value: kickoff },
                 { label: "Venue", value: match.venue },
                 { label: "Format", value: projection.formatLabel },
@@ -608,26 +609,10 @@ export function CricketMatchDetail({
           </section>
         )}
 
-        <section aria-labelledby="faq-heading">
-          <SectionEyebrow>Quick answers</SectionEyebrow>
-          <h2 id="faq-heading" className="text-3xl md:text-5xl font-black italic uppercase tracking-tighter text-white mb-4">
-            {codePair} {stage} — frequently asked questions
-          </h2>
-          <p className="text-white/55 max-w-3xl mb-8">
-            Straight answers on the {codePair} prediction, pitch report, live betting and settlement for {fixtureName} at {match.venue}.
-          </p>
-          <div className="space-y-3">
-            {faqs.map((faq) => (
-              <details key={faq.q} className="group rounded-2xl border border-white/10 bg-card/30 open:border-primary/40 open:bg-primary/5">
-                <summary className="cursor-pointer list-none p-5 md:p-6 flex items-start justify-between gap-4">
-                  <h3 className="text-sm md:text-base font-black uppercase tracking-wide text-white pr-4">{faq.q}</h3>
-                  <span className="text-primary font-black group-open:rotate-45 transition-transform">+</span>
-                </summary>
-                <p className="px-5 md:px-6 pb-6 text-sm text-white/65 leading-relaxed">{faq.a}</p>
-              </details>
-            ))}
-          </div>
-        </section>
+        <FAQSection
+          title={`${codePair} ${stage} — frequently asked questions`}
+          faqs={faqs}
+        />
 
         <aside className="relative overflow-hidden rounded-[2rem] bg-primary px-8 py-10 md:px-12 md:py-12 text-black">
           <ShieldCheck className="absolute right-8 top-8 h-16 w-16 opacity-20" aria-hidden="true" />

@@ -25,6 +25,8 @@ import { blogArticles as articles, ICON_MAP } from '@/lib/blog-data';
 import { POST_BANNERS } from '@/lib/blog-banners';
 import { AIOverview } from '@/components/AIOverview';
 import { FAQSection } from '@/components/FAQSection';
+import { AuthorByline } from '@/components/AuthorByline';
+import { authorForCategory } from '@/lib/authors';
 
 
 export const Route = createFileRoute('/blog')({
@@ -95,10 +97,16 @@ function BlogPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-xl text-white/40 leading-relaxed max-w-2xl mx-auto mb-12 font-medium"
+              className="text-xl text-white/40 leading-relaxed max-w-2xl mx-auto mb-8 font-medium"
             >
-              How to get a Fairplay ID, fund the wallet, and bet cricket, football, tennis and live casino — written for Indian players in 2026.
+              How to get a Fairplay ID, fund the wallet, and bet cricket, football, tennis and live casino. Written for Indian players in 2026, with a named writer on every post.
             </motion.p>
+            <Link
+              to="/authors"
+              className="inline-flex text-[11px] font-black uppercase tracking-widest text-primary hover:underline mb-12"
+            >
+              Meet the writers
+            </Link>
           </div>
 
           <div className="max-w-5xl mx-auto mb-12">
@@ -130,7 +138,13 @@ function BlogPage() {
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
                 />
               ) : (
-                <BookOpen className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 text-primary/20 group-hover:scale-110 transition-transform duration-700" />
+                <img
+                  src="/og-banner.jpg"
+                  alt={featuredPost.title}
+                  width={1376}
+                  height={768}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
+                />
               )}
             </Link>
             <div className="p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
@@ -142,6 +156,7 @@ function BlogPage() {
                   <span className="text-white/30 text-[10px] font-bold uppercase tracking-widest">
                     {featuredPost.date}
                   </span>
+                  <AuthorByline author={authorForCategory(featuredPost.category)} />
                 </div>
                 <h2 className="sr-only">{featuredPost.title}</h2>
                 <p className="text-white/60 leading-relaxed font-medium max-w-3xl">
@@ -289,6 +304,9 @@ function BlogPage() {
                       <div className="flex items-center gap-4 mb-4 text-[9px] font-black uppercase tracking-widest text-white/30">
                         <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3" />{post.date}</span>
                         <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" />{readMins} min read</span>
+                      </div>
+                      <div className="mb-4 normal-case tracking-normal">
+                        <AuthorByline author={authorForCategory(post.category)} />
                       </div>
                       <h3 className="text-xl font-black italic uppercase tracking-tight leading-tight mb-3 group-hover:text-primary transition-colors line-clamp-2">
                         <Link to="/posts/$slug" params={{ slug: post.slug }}>{post.title}</Link>

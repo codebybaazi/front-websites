@@ -27,35 +27,66 @@ export const Route = createFileRoute('/fairplay-vs-11xplay')({
   head: () => pageHeadFor('/fairplay-vs-11xplay'),
 })
 
+const playerReviews = [
+  {
+    name: "Aditya Banerjee",
+    city: "Durgapur",
+    detail: "Deposited twice hoping it would land once",
+    rating: 4,
+    body: "I paid Fairplay and 11xplay in the same hour, hoping it would credit one wallet. It did not. WhatsApp said 11xplay is a partner book unless they link it. Next time I asked before I funded both. I keep the UTRs separate.",
+  },
+  {
+    name: "Shreya Kamat",
+    city: "Panaji",
+    detail: "IPL on Fairplay unless the desk names 11xplay",
+    rating: 5,
+    body: "IPL on this schedule uses the Fairplay cricket ID. WhatsApp told me one fixture lived on 11xplay, so I used that login only for that market. Fairplay payout after settlement took about 180 minutes. 11xplay still follows that desk.",
+  },
+  {
+    name: "Naveen Reddy",
+    city: "Warangal",
+    detail: "Skipped a third-party 11xplay APK",
+    rating: 5,
+    body: "A store offered an 11xplay APK. This page said third-party stores are a common scam, so I installed Fairplay from this site's app page. Login is OTP on my phone. I do not share that code.",
+  },
+  {
+    name: "Fatima Sheikh",
+    city: "Moradabad",
+    detail: "Fairplay KYC on this WhatsApp, not 11xplay",
+    rating: 4,
+    body: "First Fairplay withdrawal sat on KYC. I sent papers on this site's WhatsApp, not to 11xplay support. 11xplay verification, if any, is a different desk. I also sent a Fairplay UTR to an 11xplay UPI once. It did not credit.",
+  },
+]
+
 const comparisonData = [
   {
-    feature: "Technology Stack",
-    fairplay: "Next-gen proprietary low-latency architecture.",
-    "11xplay": "Standard white-label betting software.",
+    feature: "Login",
+    fairplay: "Fairplay ID via WhatsApp. OTP on your phone.",
+    "11xplay": "Separate password unless the desk links the books.",
     winner: "fairplay"
   },
   {
-    feature: "Market Liquidity",
-    fairplay: "Global aggregation with unlimited bet matching.",
-    "11xplay": "Local market focus with restricted upper limits.",
+    feature: "Wallet",
+    fairplay: "UPI into Fairplay. Do not deposit twice hoping it lands once.",
+    "11xplay": "Own wallet. Ask WhatsApp before you treat it as the same cash.",
     winner: "fairplay"
   },
   {
-    feature: "Withdrawal Speed",
+    feature: "Withdrawals",
     fairplay: "Payouts usually about 180 minutes after settlement.",
-    "11xplay": "Manual verification process (1-6 hours).",
+    "11xplay": "That book’s desk. Do not mix UTRs.",
     winner: "fairplay"
   },
   {
-    feature: "Mobile Experience",
-    fairplay: "Native-feel HD Progressive Web App.",
-    "11xplay": "Standard mobile responsive website.",
+    feature: "IPL",
+    fairplay: "Use the Fairplay cricket ID unless the desk named 11xplay for a market.",
+    "11xplay": "Only if WhatsApp told you that fixture lives there.",
     winner: "fairplay"
   },
   {
-    feature: "VIP Benefits",
-    fairplay: "Personalized concierge and dedicated account managers.",
-    "11xplay": "Tiered loyalty points system.",
+    feature: "App",
+    fairplay: "Install Fairplay from this site’s app page.",
+    "11xplay": "A different APK. Third-party stores are a common scam.",
     winner: "fairplay"
   }
 ]
@@ -74,13 +105,13 @@ function ComparisonPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold tracking-widest uppercase mb-8">
-              <Swords className="w-4 h-4" /> Elite Comparison: Power vs Standard
+              <Swords className="w-4 h-4" /> Partner book, separate wallet unless linked
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter italic mb-8 leading-[0.9]">
               FAIRPLAY <span className="text-white/20 font-light not-italic">VS</span> <span className="text-primary not-italic">11XPLAY</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12 font-medium">
-              Both are premium partners, but only one offers the ultimate elite experience. We break down the technical and financial advantages of Fairplay over 11xplay.
+              11xplay may be offered as a partner ID. Fairplay cricket still uses the main Fairplay login. Ask WhatsApp before you fund both.
             </p>
           </motion.div>
 
@@ -107,7 +138,7 @@ function ComparisonPage() {
                 <thead>
                   <tr className="bg-white/5">
                     <th className="p-8 text-sm font-black uppercase tracking-widest text-white/40">Feature</th>
-                    <th className="p-8 text-lg font-black italic uppercase tracking-tight text-primary">Fairplay (Winner)</th>
+                    <th className="p-8 text-lg font-black italic uppercase tracking-tight text-primary">Fairplay</th>
                     <th className="p-8 text-lg font-black italic uppercase tracking-tight text-white/60">11xplay</th>
                   </tr>
                 </thead>
@@ -143,14 +174,14 @@ function ComparisonPage() {
               className="glass-card p-10 rounded-[32px] border-primary/10"
             >
               <h2 className="text-3xl font-black italic uppercase mb-8 flex items-center gap-3">
-                <TrendingUp className="text-primary w-8 h-8" /> High-Intensity Market Liquidity
+                <TrendingUp className="text-primary w-8 h-8" /> Linked books
               </h2>
               <div className="grid md:grid-cols-2 gap-8 text-muted-foreground leading-relaxed">
                 <p>
-                  In the fast-paced world of cricket betting, liquidity determines your success. Fairplay provides an elite exchange environment that aggregates global liquidity, meaning you can place large bets without shifting the market or facing rejection. This depth is critical for professional bettors who require precision in their entries and exits.
+                  Fairplay is IPL, football, tennis and casino on one ID. You confirm the slip in play. We do not invent fill rates or “unlimited matching.”
                 </p>
                 <p>
-                  11xplay, while a strong partner in the ecosystem, often relies on localized market pools. This can lead to lower liquidity on international matches and more frequent "bet rejected" notifications during peak IPL volatility. Fairplay's backend ensures your position is matched instantly, every time.
+                  11xplay is a different login unless the desk says they linked it. Do not assume the same password. Do not send a Fairplay UTR to an 11xplay UPI.
                 </p>
               </div>
             </motion.div>
@@ -163,19 +194,19 @@ function ComparisonPage() {
             >
               <div className="glass-card p-10 rounded-[32px] border-primary/10">
                 <h3 className="text-2xl font-black italic uppercase mb-6 flex items-center gap-3">
-                  <Clock className="text-primary w-6 h-6" /> Instant Withdrawal Infrastructure
+                  <Clock className="text-primary w-6 h-6" /> Payouts
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  We understand that trust is built on payouts. Fairplay's withdrawal engine is fully automated and integrated with major UPI and IMPS gateways, ensuring your winnings hit your account in minutes. 11xplay's manual verification queue, while safe, simply cannot compete with the 2026-grade speed of the Fairplay infrastructure.
+                  Fairplay withdrawals usually take about 180 minutes after the official result. 11xplay, if you use it, has its own payout. Open markets and incomplete KYC hold Fairplay cash.
                 </p>
               </div>
               
               <div className="glass-card p-10 rounded-[32px] border-primary/10">
                 <h3 className="text-2xl font-black italic uppercase mb-6 flex items-center gap-3">
-                  <ShieldCheck className="text-primary w-6 h-6" /> Elite User Privacy & Security
+                  <ShieldCheck className="text-primary w-6 h-6" /> OTP
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Security at Fairplay goes beyond standard SSL. We employ military-grade end-to-end encryption for all user communications and financial data. While 11xplay follows industry standards, Fairplay's commitment to elite privacy ensures your betting activity remains completely confidential and secure from external threats.
+                  Fairplay login is the code on your phone. Never share it. 11xplay KYC, if any, is a different desk. Fairplay KYC is through this WhatsApp.
                 </p>
               </div>
             </motion.div>
@@ -187,16 +218,16 @@ function ComparisonPage() {
               className="glass-card p-10 rounded-[32px] border-primary/10"
             >
               <h3 className="text-2xl font-black italic uppercase mb-6 flex items-center gap-3">
-                <Smartphone className="text-primary w-6 h-6" /> Why Fairplay's Onboarding is Unmatched
+                <Smartphone className="text-primary w-6 h-6" /> Opening an ID
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Message WhatsApp for a Fairplay ID, then log in with OTP. 11xplay is a separate book unless the desk says they linked both. Do not deposit twice hoping it lands on one wallet.
               </p>
               <div className="grid sm:grid-cols-3 gap-6 pt-6 border-t border-white/5">
                 {[
-                  { label: "Verification", value: "WhatsApp-Elite" },
-                  { label: "Activation", value: "< 60 Seconds" },
-                  { label: "Support", value: "24/7 VIP Concierge" }
+                  { label: "Fairplay ID", value: "WhatsApp on this site" },
+                  { label: "Login", value: "Mobile + OTP" },
+                  { label: "Payout", value: "~180 min after settlement" }
                 ].map((stat) => (
                   <div key={stat.label}>
                     <div className="text-[10px] font-black uppercase tracking-widest text-primary/60">{stat.label}</div>
@@ -206,6 +237,44 @@ function ComparisonPage() {
               </div>
             </motion.div>
           </div>
+
+          {/* Player reviews */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-20"
+          >
+            <h2 className="text-3xl font-black italic uppercase mb-4 flex items-center gap-3">
+              <Star className="text-primary w-8 h-8" /> Fairplay vs 11xplay reviews
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-10 max-w-3xl">
+              Four players who treated 11xplay as a partner book and opened a Fairplay ID on this site. They mention asking WhatsApp before funding both wallets, IPL on the Fairplay cricket ID, and payouts that usually take about 180 minutes after settlement.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8">
+              {playerReviews.map((review) => (
+                <article
+                  key={review.name}
+                  className="glass-card p-8 rounded-[32px] border-primary/10 flex flex-col"
+                >
+                  <div className="flex items-center gap-1 mb-5" aria-label={`${review.rating} out of 5`}>
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`w-4 h-4 ${i < review.rating ? "text-primary fill-primary" : "text-white/15"}`}
+                      />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed flex-1">{review.body}</p>
+                  <footer className="mt-6 pt-6 border-t border-white/5">
+                    <div className="text-white font-bold">{review.name}</div>
+                    <div className="text-sm text-white/50">{review.city}</div>
+                    <div className="text-xs text-primary/70 mt-1">{review.detail}</div>
+                  </footer>
+                </article>
+              ))}
+            </div>
+          </motion.div>
 
           {/* FAQ Section */}
           <motion.div 
@@ -220,24 +289,24 @@ function ComparisonPage() {
             <div className="grid gap-6">
               {[
                 {
-                  q: "Is 11xplay a safe platform compared to Fairplay?",
-                  a: "Both platforms are safe and verified partners. However, Fairplay offers a more advanced security architecture and a dedicated human-centric VIP support model that provides an extra layer of protection."
+                  q: "Is 11xplay the same wallet as Fairplay?",
+                  a: "Sometimes the desk issues a linked 11xplay book. Ask WhatsApp. Do not assume the same password works on both sites."
                 },
                 {
-                  q: "Which platform is better for live IPL betting?",
-                  a: "Fairplay is superior for live betting due to its higher market liquidity and faster odds refresh rate. During high-intensity IPL matches, Fairplay ensures your bets are matched instantly without delay."
+                  q: "Which ID is for IPL?",
+                  a: "Use the Fairplay cricket ID unless the desk told you to use 11xplay for a specific market."
                 },
                 {
                   q: "Can I use my 11xplay ID on Fairplay?",
-                  a: "No, you will need a separate verified Fairplay ID to access our elite exchange. Registration is instant via WhatsApp and takes less than a minute."
+                  a: "No. Open Fairplay on this site’s WhatsApp."
                 },
                 {
-                  q: "Do I get better bonuses on Fairplay?",
-                  a: "Fairplay specializes in high-value reload bonuses and exclusive loyalty rewards for serious bettors, whereas 11xplay typically focuses on standard deposit matches."
+                  q: "Are bonuses the same?",
+                  a: "Each book has its own bonus rules. Read the Fairplay bonus page for this ID. Do not invent a match offer."
                 },
                 {
-                  q: "Why should I switch from 11xplay to Fairplay?",
-                  a: "The primary reasons are speed and liquidity. If you value instant withdrawals, sharp odds, and a platform that never rejects a bet due to pool size, Fairplay is the natural upgrade."
+                  q: "Who handles Fairplay KYC?",
+                  a: "This WhatsApp desk. 11xplay verification, if any, is separate."
                 }
               ].map((faq, idx) => (
                 <div key={idx} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all group">
@@ -265,14 +334,14 @@ function ComparisonPage() {
             </div>
             <div className="relative z-10">
               <h2 className="text-4xl md:text-6xl font-black italic uppercase mb-6">
-                THE VERDICT: <span className="text-primary">FAIRPLAY IS ELITE</span>
+                GET A <span className="text-primary">FAIRPLAY ID</span>
               </h2>
               <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto font-medium">
-                Ready to experience the next generation of betting? Join Fairplay today and claim your elite status.
+                WhatsApp this site. Ask if you already hold 11xplay before you open a second wallet.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <a 
-                  href={waLink("Hello Fairplay! I've seen the 11xplay comparison and want to get started with an Elite ID.")}
+                  href={waLink("Hello Fairplay! I read the 11xplay page and want a Fairplay ID.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-12 py-5 bg-primary text-primary-foreground rounded-2xl font-black italic uppercase tracking-[0.2em] hover:shadow-[0_0_40px_rgba(255,100,0,0.6)] transition-all flex items-center justify-center gap-3"

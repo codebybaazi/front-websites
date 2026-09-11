@@ -1,17 +1,48 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { pageHeadFor } from "@/utils/page-seo"
-import { Smartphone, Apple, ShieldCheck, Zap, Download, Star, ArrowRight } from 'lucide-react'
+import { Smartphone, Apple, ShieldCheck, Zap, Download, ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
 export const Route = createFileRoute('/app')({
   head: () => pageHeadFor('/app'),
   component: AppPage,
 })
 
 function AppPage() {
+  const androidSteps = [
+    {
+      title: "Download the Android APK",
+      desc: "Use Download Android APK on this page. Do not install a file forwarded on WhatsApp or Telegram.",
+    },
+    {
+      title: "Allow unknown sources",
+      desc: "If Android asks, allow installs from this source. That prompt is normal for an official APK, not a reason to grab a clone instead.",
+    },
+    {
+      title: "Install the file",
+      desc: "Open the downloaded APK and tap Install. After it finishes, you still use the same Fairplay ID as the website.",
+    },
+    {
+      title: "Log in with OTP",
+      desc: "Launch Fairplay and sign in with the number on your Fairplay ID. You do not register a second ID for the app.",
+    },
+  ]
+
+  const howTo = howToJsonLd({
+    path: "/app",
+    name: "How to download the Fairplay Android app",
+    description:
+      "Install the Fairplay APK from this page, then log in with the same Fairplay ID and OTP you use on the website.",
+    totalTime: "PT8M",
+    steps: androidSteps.map((step) => ({ name: step.title, text: step.desc })),
+  })
+
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-hidden">
+      <JsonLd data={howTo} />
       {/* Premium Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,100,0,0.08),transparent_70%)]" />
@@ -81,19 +112,9 @@ function AppPage() {
                 </button>
               </div>
 
-              <div className="flex items-center gap-6">
-                <div className="flex -space-x-3">
-                  {[1,2,3,4].map(i => (
-                    <div key={i} className="w-10 h-10 rounded-full border-2 border-background bg-muted" />
-                  ))}
-                </div>
-                <div className="text-xs">
-                  <div className="flex text-yellow-500 mb-1">
-                    {[1,2,3,4,5].map(i => <Star key={i} className="w-3 h-3 fill-current" />)}
-                  </div>
-                  <p className="font-bold">4.9/5 Rating from 1M+ Users</p>
-                </div>
-              </div>
+              <p className="text-sm text-muted-foreground max-w-md">
+                Same Fairplay ID as the website — OTP login, UPI wallet. No user-count or store-rating figures on this page.
+              </p>
             </motion.div>
 
             <motion.div
@@ -144,15 +165,13 @@ function AppPage() {
                   <h3 className="text-2xl font-black italic uppercase tracking-tight">ANDROID APK</h3>
                 </div>
                 <div className="space-y-6">
-                  {[
-                    "Click 'Download Android APK' to begin download.",
-                    "Allow installation from 'Unknown Sources' in settings.",
-                    "Open the downloaded file and click 'Install'.",
-                    "Launch Fairplay and log in with your Fairplay ID OTP."
-                  ].map((step, i) => (
-                    <div key={i} className="flex items-center gap-4 font-bold italic tracking-tight">
-                      <div className="w-6 h-6 rounded-full bg-primary/20 text-primary text-xs flex items-center justify-center shrink-0">{i+1}</div>
-                      {step}
+                  {androidSteps.map((step, i) => (
+                    <div key={i} id={`step-${i + 1}`} className="flex items-start gap-4 font-bold italic tracking-tight">
+                      <div className="w-6 h-6 rounded-full bg-primary/20 text-primary text-xs flex items-center justify-center shrink-0 mt-0.5">{i + 1}</div>
+                      <div>
+                        <p className="text-foreground">{step.title}</p>
+                        <p className="text-sm font-medium not-italic text-muted-foreground mt-1">{step.desc}</p>
+                      </div>
                     </div>
                   ))}
                 </div>

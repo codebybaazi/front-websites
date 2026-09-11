@@ -1,5 +1,6 @@
 import { enrichBlogArticle } from "@/utils/blog-seo";
 import { BLOG_POST_DATES } from "@/utils/blog-post-dates";
+import { POST_BANNERS } from "@/lib/blog-banners";
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { 
@@ -25,7 +26,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "ShieldCheck",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-add-money-in-fairplay-wallet-complete-beginner-guide",
@@ -34,7 +35,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-bet-on-live-ipl-matches-using-fairplay-id",
@@ -43,7 +44,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-check-bet-history-on-fairplay",
@@ -52,7 +53,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "step-by-step-guide-to-bet-on-icc-t20-world-cup-2026-with-fairplay-id",
@@ -61,7 +62,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "why-fairplay-is-a-top-choice-for-cricket-betting-in-india",
@@ -70,7 +71,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-fairplay-became-a-trusted-name-in-online-betting",
@@ -79,7 +80,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "things-to-check-before-buying-a-fairplay-id",
@@ -88,7 +89,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "football-betting-guide-on-fairplay",
@@ -97,7 +98,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-verify-your-fairplay-account",
@@ -106,7 +107,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-withdraw-money-from-fairplay-using-upi",
@@ -115,7 +116,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "icc-mens-t20-world-cup-2026-betting-strategy-for-fairplay-users",
@@ -124,7 +125,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-agent-system-explained",
@@ -133,7 +134,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "top-5-safe-betting-strategies-for-wpl-matches-on-fairplay",
@@ -142,7 +143,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-fairplay-works-login-id-creation-betting-process",
@@ -151,7 +152,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "ShieldCheck",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-app-vs-website",
@@ -160,7 +161,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-betting-options-bonuses-benefits",
@@ -169,7 +170,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-delhi-vs-up-warriors-women-match-analysis",
@@ -178,7 +179,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "TrendingUp",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-mumbai-vs-up-warriors-women-match-prediction",
@@ -187,7 +188,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "TrendingUp",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-ipl-wpl-bbl-guide",
@@ -196,7 +197,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-india-vs-new-zealand-3rd-odi-prediction",
@@ -205,7 +206,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "TrendingUp",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-whatsapp-support-service",
@@ -214,7 +215,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "ShieldCheck",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-gg-w-vs-rcb-w-ipl-match-prediction",
@@ -223,7 +224,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-ind-vs-nz-t20-live-betting-strategy",
@@ -232,7 +233,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "TrendingUp",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "why-fairplay-trusted-ipl-t20-live-betting-india",
@@ -241,7 +242,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-ind-vs-nz-2nd-t20-match-prediction",
@@ -250,7 +251,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "TrendingUp",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-online-gaming-guide",
@@ -259,7 +260,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-id-in-5-easy-steps",
@@ -268,7 +269,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-id-for-online-betting",
@@ -277,7 +278,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "betting-history-using-fairplay-id",
@@ -286,7 +287,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "exclusive-bonuses-rewards-fairplay-id",
@@ -295,7 +296,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-india-vs-new-zealand-4th-t20-match-prediction",
@@ -304,7 +305,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "TrendingUp",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-features-games-safe-betting",
@@ -313,7 +314,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-use-fairplay-on-mobile-india",
@@ -322,7 +323,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-money-transfer-guide",
@@ -331,7 +332,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "ipl-live-match-betting-fairplay",
@@ -340,7 +341,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-gaming-online-cricket-id",
@@ -349,7 +350,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "icc-t20-world-cup-2026-match-prediction-fairplay",
@@ -358,7 +359,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-online-betting-features-game-types",
@@ -367,7 +368,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "ipl-betting-id-safe-signup-fairplay",
@@ -376,7 +377,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-vs-other-betting-ids-2026",
@@ -385,7 +386,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "why-indian-gamers-prefer-fairplay",
@@ -394,7 +395,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-india-vs-usa-match-prediction-icc-t20-world-cup",
@@ -403,7 +404,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-ipl-t20-world-cup-betting-guide",
@@ -412,7 +413,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-best-time-to-place-bets",
@@ -421,7 +422,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-online-cricket-platform-india",
@@ -430,7 +431,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "casino-games-types-on-fairplay",
@@ -439,7 +440,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Zap",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-t20-world-cup-predictions-betting-strategies",
@@ -448,7 +449,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-india-vs-pakistan-today-match-prediction",
@@ -457,7 +458,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "TrendingUp",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "live-match-betting-fairplay-winning-plan-t20-world-cup",
@@ -466,7 +467,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-safe-verified-ipl-online-cricket-id-2026",
@@ -475,7 +476,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "best-ipl-betting-tips-fairplay-users-2026",
@@ -484,7 +485,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-super-8-betting-strategy-t20-world-cup",
@@ -493,7 +494,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-icc-t20-world-cup-2026-points-table-analysis",
@@ -502,7 +503,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "popular-cricket-football-prediction-markets-fairplay",
@@ -511,7 +512,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "TrendingUp",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "new-zealand-vs-pakistan-super-8-match-prediction",
@@ -520,7 +521,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "TrendingUp",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-ind-vs-sa-match-prediction-who-will-win-today",
@@ -529,7 +530,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "TrendingUp",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-tds-betting-winnings-guide-2026",
@@ -538,7 +539,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-football-betting-bet-live-predict-smart-big-win",
@@ -547,7 +548,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "why-verification-matters-ipl-betting-id-fairplay-guide",
@@ -556,7 +557,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-whatsapp-vs-direct-login-withdrawals",
@@ -565,7 +566,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "ShieldCheck",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-customer-support-24-7-help-for-betting-and-withdrawal-issues",
@@ -574,7 +575,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "ShieldCheck",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "what-is-fairplay-a-complete-beginners-guide",
@@ -583,7 +584,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "why-fairplay-is-indias-most-popular-choice",
@@ -592,7 +593,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-login-to-fairplay-a-step-by-step-beginners-guide",
@@ -601,7 +602,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "ShieldCheck",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "ipl-betting-feels-different-from-regular-cricket-betting-on-fairplay",
@@ -610,7 +611,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-wi-vs-ind-elimination-match-today-prediction",
@@ -619,7 +620,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "TrendingUp",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-sa-vs-nz-semifinal-prediction",
@@ -628,7 +629,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-id-for-sa-vs-nz-semi-final-live-betting",
@@ -637,7 +638,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-app-guide-best-markets-1st-semi-final-2026",
@@ -646,7 +647,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-india-vs-england-semifinal-match-prediction",
@@ -655,7 +656,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-t20-world-cup-final-betting-markets-odds-predictions",
@@ -664,7 +665,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-betting-id-guide-for-india-vs-new-zealand-final",
@@ -673,7 +674,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "india-vs-new-zealand-t20-world-cup-final-fairplay-match-prediction",
@@ -682,7 +683,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-ipl-betting-id-2026-prediction-guide",
@@ -691,7 +692,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-live-match-betting-works-fairplay",
@@ -700,7 +701,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-vs-competitors-online-cricket-platform",
@@ -709,7 +710,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-how-to-withdraw-guide-money",
@@ -718,7 +719,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-deposit-money-on-fairplay",
@@ -727,7 +728,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-download-the-fairplay-app-safely",
@@ -736,7 +737,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-login-problems-solutions",
@@ -745,7 +746,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "ShieldCheck",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-scam-or-real-full-review",
@@ -754,7 +755,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-security-account-safety-guide",
@@ -763,7 +764,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-ipl-2026-betting-guide-every-match",
@@ -772,7 +773,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-live-casino-works-fairplay-guide",
@@ -781,7 +782,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Zap",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-play-cricket-games-on-fairplay",
@@ -790,7 +791,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "why-users-prefer-fairplay-app-for-ipl-betting",
@@ -799,7 +800,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "ipl-2026-betting-avoid-mistakes-fairplay",
@@ -808,7 +809,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "complete-fairplay-guide-2026-login-id-features-how-it-works",
@@ -817,7 +818,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "ShieldCheck",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-contact-fairplay-whatsapp-for-ipl-id",
@@ -826,7 +827,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "ipl-2026-betting-tips-on-fairplay-smart-strategies",
@@ -835,7 +836,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-id-ipl-2026-betting-guide",
@@ -844,7 +845,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-ipl-match-day-strategy-to-win-more",
@@ -853,7 +854,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "ipl-2026-season-guide-fairplay-strategies",
@@ -862,7 +863,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-match-tips-and-betting-prediction",
@@ -871,7 +872,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "TrendingUp",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "rr-vs-rcb-toss-match-prediction-15th-match-ipl-2026",
@@ -880,7 +881,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "mi-vs-pbks-toss-and-match-prediction-24th-match-ipl-2026",
@@ -889,7 +890,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-win-live-bets-in-ipl-2026-on-fairplay",
@@ -898,7 +899,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "rcb-vs-dc-dream11-team-prediction-match-26th-ipl-2026",
@@ -907,7 +908,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "understanding-fairplay-online-betting-id-guide",
@@ -916,7 +917,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-app-guide-simple-ipl-betting-anytime-anywhere",
@@ -925,7 +926,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-fairplay-is-becoming-popular-during-ipl-season",
@@ -934,7 +935,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-deposit-funds-on-fairplay-using-upi",
@@ -943,7 +944,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-trends-in-ipl-2026",
@@ -952,7 +953,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "ipl-2026-orange-cap-and-purple-cap-race-fairplay",
@@ -961,7 +962,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "analyze-ipl-teams-before-betting-on-fairplay",
@@ -970,7 +971,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-apk-fast-stable-low-end-phones",
@@ -979,7 +980,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-explains-popular-ipl-2026-betting-markets",
@@ -988,7 +989,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "rr-vs-gt-dream11-prediction-today-match-52st-ipl-2026",
@@ -997,7 +998,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "rcb-vs-mi-dream11-prediction-today-match54-ipl-2026",
@@ -1006,7 +1007,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "srh-vs-gt-dream11-prediction-today-match-56-ipl-2026",
@@ -1015,7 +1016,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "rcb-vs-kkr-ipl-2026-dream11-prediction-today-match57",
@@ -1024,7 +1025,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "mi-vs-pbks-dream11-prediction-today-match",
@@ -1033,7 +1034,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "TrendingUp",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-id-not-working-quick-solutions-guide",
@@ -1042,7 +1043,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-growing-craze-for-cricket-platforms-ipl-2026",
@@ -1051,7 +1052,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "why-ipl-fans-are-looking-for-fairplay-id",
@@ -1060,7 +1061,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-2026-online-cricket-gaming-features",
@@ -1069,7 +1070,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "top-mobile-betting-features-on-fairplay",
@@ -1078,7 +1079,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-login-not-working-fix-guide",
@@ -1087,7 +1088,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "ShieldCheck",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-works-behind-the-scenes-during-ipl-2026",
@@ -1096,7 +1097,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-top-features-and-benefits-of-ipl-betting-id-in-india",
@@ -1105,7 +1106,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "why-choose-fairplay-for-ipl-betting",
@@ -1114,7 +1115,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-account-a-quick-guide-to-kyc",
@@ -1123,7 +1124,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-add-funds-to-your-fairplay-id",
@@ -1132,7 +1133,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-teen-patti-rules-and-gameplay-explained",
@@ -1141,7 +1142,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "india-top-mobile-betting-features-on-fairplay",
@@ -1150,7 +1151,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "why-ipl-cricket-fans-prefer-fairplay-for-mobile-cricket-updates",
@@ -1159,7 +1160,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-rcb-continue-title-defense-in-ipl-2026-final",
@@ -1168,7 +1169,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-fifa-world-cup-2026-football-fan-betting-guide",
@@ -1177,7 +1178,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "enjoy-real-casino-gaming-on-fairplay",
@@ -1186,7 +1187,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Zap",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fifa-world-cup-2026-fairplay-betting-tips",
@@ -1195,7 +1196,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-casino-best-online-casino-sports-betting-platform",
@@ -1204,7 +1205,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Zap",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-fifa-world-cup-2026-complete-tournament-guide",
@@ -1213,7 +1214,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-card-game-zone-gaming-fan",
@@ -1222,7 +1223,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "womens-t20-world-cup-2026-betting-guide-fairplay-expert-analysis",
@@ -1231,7 +1232,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-ball-by-ball-betting-works-on-fairplay",
@@ -1240,7 +1241,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "online-casino-vs-sports-betting-guide",
@@ -1249,7 +1250,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Zap",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fifa-world-cup-2026-fairplay-live-betting-id-guide",
@@ -1258,7 +1259,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fifa-world-cup-and-womens-t20-world-cup-2026-guide",
@@ -1267,7 +1268,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "bet-on-ipl-t20-odi-and-test-cricket-with-fairplay",
@@ -1276,7 +1277,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-casino-slots-guide-rtp-free-spins-winning-tips-2026",
@@ -1285,7 +1286,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Zap",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-play-roulette-on-fairplay",
@@ -1294,7 +1295,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Zap",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-best-platforms-fifa-world-cup-2026-betting-in-india",
@@ -1303,7 +1304,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-online-betting-id-and-services",
@@ -1312,7 +1313,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-app-indias-trusted-mobile-betting-platform",
@@ -1321,7 +1322,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-mobile-features-for-t20-cricket-betting",
@@ -1330,7 +1331,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-helps-new-users-navigate-online-sports-platforms",
@@ -1339,7 +1340,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-football-world-cup-odds-work-fairplay",
@@ -1348,7 +1349,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-id-fast-verified-id-for-online-sports-betting",
@@ -1357,7 +1358,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "create-a-fairplay-account-for-sports-betting",
@@ -1366,7 +1367,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-cricket-betting-id-and-how-does-it-work",
@@ -1375,7 +1376,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-stop-cricket-betting-losses-using-smart-strategies",
@@ -1384,7 +1385,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-cricket-id-vs-traditional-online-account-access-difference",
@@ -1393,7 +1394,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-get-started-with-fairplay-apk-for-android",
@@ -1402,7 +1403,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-explains-probability-in-sports-betting",
@@ -1411,7 +1412,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-free-demo-id",
@@ -1420,7 +1421,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-club-complete-features-benefits-security",
@@ -1429,7 +1430,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-safe-security-features-explained",
@@ -1438,7 +1439,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-fifa-world-cup-knockout-betting-tips-live-strategies",
@@ -1447,7 +1448,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-play-dream11-fantasy-cricket-with-fairplay",
@@ -1456,7 +1457,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-best-dream11-fantasy-football-team-final",
@@ -1465,7 +1466,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "receive-fairplay-id-on-whatsapp",
@@ -1474,7 +1475,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-argentina-vs-spain-fifa-world-cup-final-2026",
@@ -1483,7 +1484,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-football-betting-id-features-benefits-how-it-works",
@@ -1492,7 +1493,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-access-your-fairplay-account-from-any-device",
@@ -1501,7 +1502,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-does-fairplay-login-work",
@@ -1510,7 +1511,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "ShieldCheck",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-download-latest-fairplay-app-apk",
@@ -1519,7 +1520,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "free-casino-gaming-experience-fairplay",
@@ -1528,7 +1529,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Zap",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "benefits-of-fairplay-sports-id-for-online",
@@ -1537,7 +1538,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-top-sports-tournaments-betting-opportunities",
@@ -1546,7 +1547,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "experience-safe-secure-horse-race-betting-with-fairplay",
@@ -1555,7 +1556,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-safe-online-blackjack-casino-deposit-money-guide",
@@ -1564,7 +1565,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Zap",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "top-cricket-tournaments-to-bet-on-using-fairplay-in-2026",
@@ -1573,7 +1574,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "deposit-and-withdrawal-limits-on-fairplay-explained",
@@ -1582,7 +1583,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-customer-care-guide-contact-support-for-login",
@@ -1591,7 +1592,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "ShieldCheck",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "types-of-fairplay-cricket-betting-markets-explained",
@@ -1600,7 +1601,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-free-demo-id-step-by-step-registration",
@@ -1609,7 +1610,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-features-and-services-2026-explained",
@@ -1618,7 +1619,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "top-sports-to-bet-on-fairplay",
@@ -1627,7 +1628,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "reddy-anan-book-club-membership-features-benefits",
@@ -1636,7 +1637,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-how-to-play-andar-bahar-guide",
@@ -1645,7 +1646,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-live-casino-features-and-services",
@@ -1654,7 +1655,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Zap",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-poker-guide-for-new-players",
@@ -1663,7 +1664,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Jan 05, 2026",
     "icon": "Zap",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-to-claim-your-fairplay-welcome-bonus",
@@ -1672,7 +1673,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Aug 14, 2026",
     "icon": "Star",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-payment-methods-guide",
@@ -1681,7 +1682,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Aug 15, 2026",
     "icon": "Zap",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "how-kabaddi-betting-works-on-fairplay",
@@ -1690,7 +1691,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Aug 17, 2026",
     "icon": "Target",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-cricket-odds-explained-markets-and-predictions",
@@ -1699,7 +1700,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Aug 18, 2026",
     "icon": "TrendingUp",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-pro-apk-new-version-download-install",
@@ -1708,7 +1709,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Aug 19, 2026",
     "icon": "Zap",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "indian-and-international-casino-games-on-fairplay",
@@ -1717,7 +1718,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Aug 20, 2026",
     "icon": "Crown",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-payment-security-transaction-protection",
@@ -1726,7 +1727,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Aug 22, 2026",
     "icon": "ShieldCheck",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-platform-trends-2026",
@@ -1735,7 +1736,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Aug 24, 2026",
     "icon": "TrendingUp",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-games-id-explore-multiple-tournaments-with-one-id",
@@ -1744,7 +1745,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Aug 26, 2026",
     "icon": "BookOpen",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-online-cricket-id-vs-cricket-betting-id",
@@ -1753,7 +1754,7 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Aug 28, 2026",
     "icon": "Trophy",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
   },
   {
     "slug": "fairplay-id-security-tips-protect-your-id-login",
@@ -1762,7 +1763,97 @@ const RAW_BLOG_ARTICLES = [
     "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
     "date": "Aug 29, 2026",
     "icon": "ShieldCheck",
-    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+    "img": "/og-banner.jpg"
+  },
+  {
+    "slug": "fairplay-betting-app-features-login-and-mobile-guide",
+    "title": "Fairplay Betting App: Features, Login and Mobile Guide",
+    "category": "Guide",
+    "desc": "The Fairplay betting app shares one ID with the website. Read features, OTP login steps, and how the Fairplay online betting app runs on Android and iPhone.",
+    "date": "Sep 01, 2026",
+    "icon": "Zap",
+    "img": "/og-banner.jpg"
+  },
+  {
+    "slug": "fairplay-android-app-guide-installation-and-login",
+    "title": "Fairplay Android App Guide: Installation and Login",
+    "category": "Guide",
+    "desc": "Install the Fairplay Android app from the official APK on this site. Fairplay Android download, unknown-sources prompt, then OTP on the same Fairplay ID.",
+    "date": "Sep 02, 2026",
+    "icon": "Zap",
+    "img": "/og-banner.jpg"
+  },
+  {
+    "slug": "fairplay-cricket-betting-guide-for-beginners",
+    "title": "Fairplay Cricket Betting Guide for Beginners",
+    "category": "Guide",
+    "desc": "Fairplay cricket betting for beginners: WhatsApp ID, UPI, then a named market. Online Fairplay cricket betting uses the same OTP wallet as the website.",
+    "date": "Sep 04, 2026",
+    "icon": "Trophy",
+    "img": "/og-banner.jpg"
+  },
+  {
+    "slug": "cricket-betting-markets-explained-match-winner-toss-and-more",
+    "title": "Cricket Betting Markets Explained: Match Winner, Toss and More",
+    "category": "Guide",
+    "desc": "Cricket betting markets on Fairplay: match winner, toss, totals, sessions. Cricket market types and cricket betting options start with the listed row name.",
+    "date": "Sep 05, 2026",
+    "icon": "Target",
+    "img": "/og-banner.jpg"
+  },
+  {
+    "slug": "fairplay-betting-india-complete-guide-to-online-betting",
+    "title": "Fairplay Betting India: Complete Guide to Online Betting",
+    "category": "Guide",
+    "desc": "Fairplay betting India: WhatsApp ID, OTP, UPI wallet, listed sports and casino. Fairplay online betting India on one platform. 18+, local law is yours.",
+    "date": "Sep 06, 2026",
+    "icon": "BookOpen",
+    "img": "/og-banner.jpg"
+  },
+  {
+    "slug": "fairplay-bet-app-features-access-and-mobile-betting-guide",
+    "title": "Fairplay Bet App: Features, Access and Mobile Betting Guide",
+    "category": "Guide",
+    "desc": "Fairplay bet app access: official APK or iPhone home screen, same Fairplay ID. Features, then a mobile betting guide for cricket on the Fairplay betting app.",
+    "date": "Sep 07, 2026",
+    "icon": "Zap",
+    "img": "/og-banner.jpg"
+  },
+  {
+    "slug": "fairplay-account-security-otp-login-and-phishing-safety",
+    "title": "Fairplay Account Security: OTP, Login and Phishing Safety",
+    "category": "Support",
+    "desc": "Fairplay account security is OTP on your SIM, official login links, and ignoring clone chats. Fairplay OTP security: never read the code into a new WhatsApp.",
+    "date": "Sep 08, 2026",
+    "icon": "ShieldCheck",
+    "img": "/og-banner.jpg"
+  },
+  {
+    "slug": "fairplay-deposit-guide-understanding-upi-deposits",
+    "title": "Fairplay Deposit Guide: Understanding UPI Deposits",
+    "category": "Guide",
+    "desc": "Fairplay deposit with UPI: live ID, on-screen amount, keep the UTR, wait if pending. Fairplay UPI deposit is the wallet screen, not a personal handle in chat.",
+    "date": "Sep 09, 2026",
+    "icon": "Zap",
+    "img": "/og-banner.jpg"
+  },
+  {
+    "slug": "fairplay-kyc-guide-account-verification-explained",
+    "title": "Fairplay KYC Guide: Account Verification Explained",
+    "category": "Guide",
+    "desc": "Fairplay KYC is name, mobile and ID proof when asked so payouts match the ID. Fairplay account verification is that check. Send docs on official WhatsApp.",
+    "date": "Sep 10, 2026",
+    "icon": "ShieldCheck",
+    "img": "/og-banner.jpg"
+  },
+  {
+    "slug": "fairplay-login-not-working-common-problems-and-solutions",
+    "title": "Fairplay Login Not Working? Common Problems and Solutions",
+    "category": "Support",
+    "desc": "Fairplay login problem: OTP delay, lock, clone or old APK. Fairplay login not working is the number or session. Fairplay account access uses that same ID.",
+    "date": "Sep 11, 2026",
+    "icon": "ShieldCheck",
+    "img": "/og-banner.jpg"
   }
 ];
 
@@ -1770,6 +1861,7 @@ export const blogArticles = RAW_BLOG_ARTICLES.map((article) =>
   enrichBlogArticle({
     ...article,
     date: BLOG_POST_DATES[article.slug] ?? article.date,
+    img: POST_BANNERS[article.slug] || "/og-banner.jpg",
   })
 );
 

@@ -29,35 +29,66 @@ export const Route = createFileRoute('/fairplay-vs-fairdeal')({
   head: () => pageHeadFor('/fairplay-vs-fairdeal'),
 })
 
+const playerReviews = [
+  {
+    name: "Rahul Bhatt",
+    city: "Dehradun",
+    detail: "Skipped a Fairdeal link from social media",
+    rating: 5,
+    body: "A Fairdeal deposit link showed up in a social chat. This page said that is how people lose money, so I ignored it and messaged the WhatsApp on this site for a Fairplay ID. OTP on my phone. I asked before I funded anything else.",
+  },
+  {
+    name: "Nisha Varghese",
+    city: "Kottayam",
+    detail: "Already had Fairdeal, opened Fairplay for IPL",
+    rating: 4,
+    body: "I already had Fairdeal. In the WhatsApp chat I said so. Most cricket on this schedule uses Fairplay, so I opened that ID. I did not mix UTRs. After settlement the Fairplay payout took about 180 minutes.",
+  },
+  {
+    name: "Sameer Khan",
+    city: "Jhansi",
+    detail: "Desk named Fairdeal for one market only",
+    rating: 4,
+    body: "WhatsApp named Fairdeal for one market. Everything else on this schedule stayed on Fairplay. I confirmed the live price on the slip. When a slip went stale I cancelled. Fairdeal tickets still go to Fairdeal unless the desk is the same number.",
+  },
+  {
+    name: "Leela Naik",
+    city: "Hubballi",
+    detail: "Did not split the bankroll across two wallets",
+    rating: 5,
+    body: "The desk had not issued both IDs, so I kept cash on Fairplay. Casino and IPL sit on that login. First withdrawal waited until KYC cleared. Fairdeal remains a partner book I did not fund.",
+  },
+]
+
 const comparisonData = [
   {
-    feature: "Engine Latency",
-    fairplay: "Live exchange prices; confirm the slip before you send.",
-    fairdeal: "Standard partner-network infrastructure (40-80ms).",
+    feature: "What it is",
+    fairplay: "Main Fairplay ID for cricket and casino on this site.",
+    fairdeal: "Partner book. Ask WhatsApp before you fund a second wallet.",
     winner: "fairplay"
   },
   {
-    feature: "Liquidity Depth",
-    fairplay: "Aggregated global liquidity across 5+ international hubs.",
-    fairdeal: "Regional liquidity pools with moderate market depth.",
+    feature: "Wallet",
+    fairplay: "UPI into Fairplay. Confirm the slip in play.",
+    fairdeal: "Own wallet unless the desk says they linked it.",
     winner: "fairplay"
   },
   {
-    feature: "Withdrawal System",
+    feature: "Withdrawals",
     fairplay: "Payouts usually about 180 minutes after settlement.",
-    fairdeal: "Semi-automated verification cycles (1-3 hours).",
+    fairdeal: "That book’s clock. Do not mix UTRs.",
     winner: "fairplay"
   },
   {
-    feature: "Indian Market Focus",
-    fairplay: "Elite bespoke markets for IPL, WPL, and local favorites.",
-    fairdeal: "Broad international focus with standard Indian coverage.",
+    feature: "IPL",
+    fairplay: "Most cricket on this schedule uses Fairplay.",
+    fairdeal: "Only if the desk named Fairdeal for that market.",
     winner: "fairplay"
   },
   {
-    feature: "VIP Concierge",
-    fairplay: "24/7 Dedicated Human Concierge on WhatsApp/Telegram.",
-    fairdeal: "Standard automated ticket-based support system.",
+    feature: "Support",
+    fairplay: "WhatsApp on this site.",
+    fairdeal: "Fairdeal tickets stay with Fairdeal unless the desk is the same number.",
     winner: "fairplay"
   }
 ]
@@ -76,13 +107,13 @@ function ComparisonPage() {
             className="max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold tracking-widest uppercase mb-8">
-              <Star className="w-4 h-4 fill-primary" /> The Elite Standard 2026
+              <Star className="w-4 h-4 fill-primary" /> Partner book, ask before a second wallet
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter italic mb-8 leading-[0.9] uppercase">
               FAIRPLAY <span className="text-white/20 not-italic">VS</span> <span className="text-primary not-italic">FAIRDEAL</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
-              While both platforms occupy a premium space in the market, our technical audit reveals significant differences in execution speed, liquidity aggregation, and settlement integrity.
+              Fairdeal is a network partner. Most cricket sits on the main Fairplay ID. Ask WhatsApp before you fund a second wallet. Funding a random Fairdeal link from social media is how people lose deposits.
             </p>
           </motion.div>
 
@@ -108,7 +139,7 @@ function ComparisonPage() {
               <thead>
                 <tr className="bg-white/5">
                   <th className="p-8 text-sm font-black uppercase tracking-widest text-white/40">Core Metric</th>
-                  <th className="p-8 text-lg font-black italic uppercase tracking-tight text-primary">Fairplay (Elite)</th>
+                  <th className="p-8 text-lg font-black italic uppercase tracking-tight text-primary">Fairplay</th>
                   <th className="p-8 text-lg font-black italic uppercase tracking-tight text-white/60">Fairdeal</th>
                 </tr>
               </thead>
@@ -144,14 +175,14 @@ function ComparisonPage() {
             className="glass-card p-10 rounded-[32px] border-primary/10"
           >
             <h2 className="text-3xl font-black italic uppercase mb-8 flex items-center gap-3 text-center justify-center lg:justify-start">
-              <TrendingUp className="text-primary w-8 h-8" /> Market Liquidity & Aggregation Strategy
+              <TrendingUp className="text-primary w-8 h-8" /> Linked or not
             </h2>
             <div className="grid md:grid-cols-2 gap-8 text-muted-foreground leading-relaxed">
               <p>
-                The fundamental difference between Fairplay and Fairdeal lies in their approach to market depth. Fairplay operates an advanced liquidity aggregation layer that pulls orders from top-tier international exchanges. This ensures that even during high-volatility events like the IPL final, our users can place large stakes without moving the market or facing rejection.
+                Fairplay IPL and casino on this site use the Fairplay login. Confirm the live price on the slip. We do not publish latency milliseconds.
               </p>
               <p>
-                Fairdeal, while a respected partner, often relies on more localized liquidity pools. For the casual bettor, this may go unnoticed, but for the elite trader who requires instant execution and deep markets, the Fairplay technical stack provides a clear competitive advantage in terms of both odds-sharpness and matching speed.
+                Fairdeal is a partner book. Most people only need Fairplay. Split a bankroll only if the desk issued both IDs.
               </p>
             </div>
           </motion.div>
@@ -166,18 +197,18 @@ function ComparisonPage() {
               <h3 className="text-2xl font-black italic uppercase mb-6 flex items-center gap-3">
                 <Cpu className="text-primary w-6 h-6" /> Infrastructure Latency
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                In live betting, milliseconds matter. Fairplay's proprietary engine is optimized for low-latency response times, ensuring that the odds you see are the odds you get. Fairdeal's infrastructure, while stable, often exhibits higher latency during peak loads.
-              </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  In-play odds move. If the slip is stale, cancel. That is true on Fairplay and on Fairdeal. A delayed tap is a worse price.
+                </p>
             </div>
             
             <div className="glass-card p-10 rounded-[32px] border-primary/10">
               <h3 className="text-2xl font-black italic uppercase mb-6 flex items-center gap-3">
                 <ShieldCheck className="text-primary w-6 h-6" /> Settlement Integrity
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Fairplay has pioneered automated withdrawal infrastructure in the Indian market. Our API-driven payout system ensures that once a withdrawal is requested, it is processed and settled in minutes.
-              </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Fairplay withdrawals usually take about 180 minutes after settlement if KYC is complete. Fairdeal has its own payout if you use that ID.
+                </p>
             </div>
           </motion.div>
 
@@ -188,16 +219,16 @@ function ComparisonPage() {
             className="glass-card p-10 rounded-[32px] border-primary/10"
           >
             <h3 className="text-2xl font-black italic uppercase mb-6 flex items-center gap-3">
-              <Smartphone className="text-primary w-6 h-6" /> Why Fairplay's Onboarding is Unmatched
+              <Smartphone className="text-primary w-6 h-6" /> Opening Fairplay
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Elite service begins with the first interaction. Fairplay's WhatsApp-native registration and verification process is engineered to take less than 60 seconds. We value your time as much as your action.
+              WhatsApp this site for a Fairplay ID. You log in with that mobile number and OTP. If you already have Fairdeal, say so in the chat.
             </p>
             <div className="grid sm:grid-cols-3 gap-6 pt-6 border-t border-white/5">
               {[
-                { label: "Verification", value: "API-Validated" },
-                { label: "Execution", value: "low-latency" },
-                { label: "Support", value: "24/7 VIP Concierge" }
+                { label: "Fairplay ID", value: "WhatsApp on this site" },
+                { label: "Login", value: "Mobile + OTP" },
+                { label: "Payout", value: "~180 min after settlement" }
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="text-[10px] font-black uppercase tracking-widest text-primary/60">{stat.label}</div>
@@ -207,6 +238,44 @@ function ComparisonPage() {
             </div>
           </motion.div>
         </div>
+
+        {/* Player reviews */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-24"
+        >
+          <h2 className="text-3xl font-black italic uppercase mb-4 flex items-center gap-3">
+            <Star className="text-primary w-8 h-8" /> Fairplay vs Fairdeal reviews
+          </h2>
+          <p className="text-muted-foreground leading-relaxed mb-10 max-w-3xl">
+            Four players who treated Fairdeal as a partner book and opened a Fairplay ID on this site. They mention asking WhatsApp before a second wallet, IPL on the main Fairplay login, and payouts that usually take about 180 minutes after settlement.
+          </p>
+          <div className="grid md:grid-cols-2 gap-8">
+            {playerReviews.map((review) => (
+              <article
+                key={review.name}
+                className="glass-card p-8 rounded-[32px] border-primary/10 flex flex-col"
+              >
+                <div className="flex items-center gap-1 mb-5" aria-label={`${review.rating} out of 5`}>
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-4 h-4 ${i < review.rating ? "text-primary fill-primary" : "text-white/15"}`}
+                    />
+                  ))}
+                </div>
+                <p className="text-muted-foreground leading-relaxed flex-1">{review.body}</p>
+                <footer className="mt-6 pt-6 border-t border-white/5">
+                  <div className="text-white font-bold">{review.name}</div>
+                  <div className="text-sm text-white/50">{review.city}</div>
+                  <div className="text-xs text-primary/70 mt-1">{review.detail}</div>
+                </footer>
+              </article>
+            ))}
+          </div>
+        </motion.div>
 
         {/* FAQ Section */}
         <motion.div 
@@ -221,20 +290,20 @@ function ComparisonPage() {
           <div className="grid gap-6">
             {[
               {
-                q: "Is Fairplay more reliable than Fairdeal for high-stakes betting?",
-                a: "Yes. Fairplay's global liquidity aggregation and proprietary low-latency engine make it the superior choice for high-volume traders who require instant execution and guaranteed market depth."
+                q: "Is Fairdeal a Fairplay login?",
+                a: "Fairdeal is a partner book. Most IPL and casino on this site use the main Fairplay ID."
               },
               {
-                q: "Which platform has faster withdrawals, Fairplay or Fairdeal?",
-                a: "Fairplay is the clear winner. Our automated 24/7 payout system settles withdrawals in minutes. Fairdeal typically requires manual verification cycles."
+                q: "Should I split my bankroll?",
+                a: "Only if the desk issued both IDs. Funding a random Fairdeal link from social media is how people lose deposits."
               },
               {
-                q: "Can I use a Fairplay ID on the Fairdeal network?",
-                a: "No, they are independent platforms. However, obtaining an Fairplay ID takes less than 60 seconds via our verified WhatsApp concierge service."
+                q: "Can I use a Fairplay ID on Fairdeal?",
+                a: "Not unless the desk linked them. Open Fairplay on this WhatsApp."
               },
               {
-                q: "Does Fairplay offer better odds on IPL matches?",
-                a: "Consistently. Because we aggregate liquidity from international hubs, we can offer sharper lines and narrower margins than regional platforms like Fairdeal."
+                q: "When do Fairplay withdrawals land?",
+                a: "After the market settles, usually within 180 minutes. Open bets and incomplete KYC add time."
               }
             ].map((faq, idx) => (
               <div key={idx} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all group">
@@ -262,14 +331,14 @@ function ComparisonPage() {
           </div>
           <div className="relative z-10">
             <h2 className="text-4xl md:text-6xl font-black italic uppercase mb-6">
-              THE VERDICT: <span className="text-primary">FAIRPLAY SUPREMACY</span>
+              GET A <span className="text-primary">FAIRPLAY ID</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto font-medium">
-              Ready to elevate your betting experience with India's most advanced technical ecosystem? Get your verified Fairplay ID today.
+              WhatsApp this site. Ask before you open Fairdeal as a second wallet.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a 
-                href={waLink("Hello Fairplay! I've read the Fairdeal comparison and want to upgrade to an Elite ID.")}
+                href={waLink("Hello Fairplay! I read the Fairdeal page and want a Fairplay ID.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-12 py-5 bg-primary text-primary-foreground rounded-2xl font-black italic uppercase tracking-[0.2em] hover:shadow-[0_0_40px_rgba(255,100,0,0.6)] transition-all flex items-center justify-center gap-3"

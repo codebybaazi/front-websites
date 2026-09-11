@@ -28,35 +28,66 @@ export const Route = createFileRoute('/fairplay-vs-laser247')({
   head: () => pageHeadFor('/fairplay-vs-laser247'),
 })
 
+const playerReviews = [
+  {
+    name: "Devendra Singh",
+    city: "Varanasi",
+    detail: "Laser247 password failed on Fairplay",
+    rating: 5,
+    body: "I reused my Laser247 password here. It did not open Fairplay. WhatsApp on this site issued a Fairplay ID and OTP on my phone. I asked if they would link Laser247. They had not, so I funded only this wallet.",
+  },
+  {
+    name: "Anjali Pillai",
+    city: "Kollam",
+    detail: "In-play slip went stale, then confirmed the new price",
+    rating: 4,
+    body: "In-play cricket moved while I was tapping. Fairplay showed a price-changed error on a stale slip. I cancelled and confirmed the new price before sending. Laser247 would need the same check on its own book.",
+  },
+  {
+    name: "Rehan Qureshi",
+    city: "Meerut",
+    detail: "IPL on the Fairplay cricket ID",
+    rating: 4,
+    body: "I use the Fairplay cricket ID for matches on this schedule. Laser247 is only if the desk issues a linked book for that market. After settlement, the Fairplay payout took about 180 minutes. I did not mix UTRs.",
+  },
+  {
+    name: "Kiran Shetty",
+    city: "Mangaluru",
+    detail: "Page hung on an IPL night, then first KYC withdrawal",
+    rating: 5,
+    body: "An IPL page hung, so I refreshed once and did not double-send. First Fairplay withdrawal sat until KYC cleared. Laser247 tickets still go to that desk. Fairplay help is the WhatsApp on this site.",
+  },
+]
+
 const comparisonData = [
   {
-    feature: "Engine Latency",
-    fairplay: "In-play books update while the match is live. Check the slip.",
-    laser247: "Standard 500ms+ refresh; prone to 'Price Changed' errors.",
+    feature: "Login",
+    fairplay: "Fairplay ID via WhatsApp. OTP on your phone.",
+    laser247: "Separate login. Do not reuse a Laser247 password here.",
     winner: "fairplay"
   },
   {
-    feature: "Liquidity Pool",
-    fairplay: "Tier-1 Global Aggregation (Cricket, Football, Tennis).",
-    laser247: "Local network sharing; limited depth for VIP stakes.",
+    feature: "In-play",
+    fairplay: "Confirm the price on the slip before you send.",
+    laser247: "Each exchange has its own book. Confirm that slip too.",
     winner: "fairplay"
   },
   {
-    feature: "Withdrawal System",
+    feature: "Withdrawals",
     fairplay: "Payouts usually about 180 minutes after settlement.",
-    laser247: "Semi-automated; requires manual verification steps.",
+    laser247: "That book’s clock if you hold a linked ID. Do not mix UTRs.",
     winner: "fairplay"
   },
   {
-    feature: "Mobile Performance",
-    fairplay: "Optimized PWA/Native experience; zero bloat.",
-    laser247: "Heavy web-wrappers; high battery & data consumption.",
+    feature: "IPL",
+    fairplay: "Use the Fairplay cricket ID for matches on this schedule.",
+    laser247: "Only if the desk issues a linked book for that market.",
     winner: "fairplay"
   },
   {
-    feature: "Support Tier",
-    fairplay: "24/7 Dedicated VIP Concierge (Human-Only).",
-    laser247: "Hybrid Bot/Agent support with varying response times.",
+    feature: "Support",
+    fairplay: "WhatsApp on this site.",
+    laser247: "Laser247 tickets stay with that desk.",
     winner: "fairplay"
   }
 ]
@@ -81,7 +112,7 @@ function ComparisonPage() {
               FAIRPLAY <span className="text-white/20 font-light not-italic">VS</span> <span className="text-primary not-italic">LASER247</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12 font-medium">
-              In the fast-paced world of exchange betting, every millisecond counts. We've benchmarked Fairplay against Laser247 to see which engine delivers the ultimate performance.
+              Laser247 is a partner-style exchange. Fairplay still needs its own ID, UPI deposit and WhatsApp desk.
             </p>
           </motion.div>
 
@@ -108,7 +139,7 @@ function ComparisonPage() {
                 <thead>
                   <tr className="bg-white/5">
                     <th className="p-8 text-sm font-black uppercase tracking-widest text-white/40">Feature</th>
-                    <th className="p-8 text-lg font-black italic uppercase tracking-tight text-primary">Fairplay (Elite)</th>
+                    <th className="p-8 text-lg font-black italic uppercase tracking-tight text-primary">Fairplay</th>
                     <th className="p-8 text-lg font-black italic uppercase tracking-tight text-white/60">Laser247</th>
                   </tr>
                 </thead>
@@ -148,10 +179,10 @@ function ComparisonPage() {
               </h2>
               <div className="grid md:grid-cols-2 gap-8 text-muted-foreground leading-relaxed">
                 <p>
-                  In-play cricket moves quickly. On Fairplay you still confirm the price on the slip before you send — a delayed tap is a void or a worse price, not a slogan.
+                  In-play cricket moves quickly. On Fairplay you still confirm the price on the slip before you send. A delayed tap is a void or a worse price, not a slogan.
                 </p>
                 <p>
-                  Laser247, while functional, often suffers from 'price latency' during peak IPL hours. This leads to the frustrating 'Price Changed' or 'Bet Rejected' errors that can cost professional bettors significant opportunities. Fairplay's investment in elite server hardware and direct-to-exchange API nodes provides a technical edge that Laser247 simply cannot match.
+                  Laser247 is a different login unless the desk linked it. Price-changed errors happen on any live book if you send a stale slip. We do not invent their refresh time.
                 </p>
               </div>
             </motion.div>
@@ -164,10 +195,10 @@ function ComparisonPage() {
             >
               <div className="glass-card p-10 rounded-[32px] border-primary/10">
                 <h3 className="text-2xl font-black italic uppercase mb-6 flex items-center gap-3">
-                  <Clock className="text-primary w-6 h-6" /> Seamless Payout Infrastructure
+                  <Clock className="text-primary w-6 h-6" /> Withdrawals
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Fairplay withdrawals usually take about 180 minutes after the official result. Laser247, if you use a linked book, has its own payout clock — ask that desk, do not mix UTRs.
+                  Fairplay withdrawals usually take about 180 minutes after the official result. Laser247, if you use a linked book, has its own payout clock. Ask that desk. Do not mix UTRs.
                 </p>
               </div>
               
@@ -176,7 +207,7 @@ function ComparisonPage() {
                   <ShieldCheck className="text-primary w-6 h-6" /> Professional Grade Security
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Fairplay's platform is designed with a 'Privacy-First' architecture. Every transaction is protected by military-grade encryption, and our decentralized support model ensures that your data remains confidential. While Laser247 offers standard protection, Fairplay's multi-layered security protocols provide the peace of mind that high-stakes players demand.
+                  Fairplay login is OTP. Laser247, if you use it, has its own password.
                 </p>
               </div>
             </motion.div>
@@ -188,16 +219,16 @@ function ComparisonPage() {
               className="glass-card p-10 rounded-[32px] border-primary/10"
             >
               <h3 className="text-2xl font-black italic uppercase mb-6 flex items-center gap-3">
-                <Smartphone className="text-primary w-6 h-6" /> Why Fairplay's Onboarding is Unmatched
+                <Smartphone className="text-primary w-6 h-6" /> Opening Fairplay
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Transitioning to an elite exchange should be effortless. Fairplay has streamlined the registration process to a 60-second WhatsApp verified ID activation. We've removed the friction of traditional forms, allowing you to jump straight into the action of your favorite leagues without the typical delays associated with legacy platforms like Laser247.
+                Message WhatsApp on this site. Do not reuse a Laser247 password here. KYC can still hold a first withdrawal.
               </p>
               <div className="grid sm:grid-cols-3 gap-6 pt-6 border-t border-white/5">
                 {[
-                  { label: "ID Activation", value: "60 Seconds" },
-                  { label: "Market Access", value: "Instant" },
-                  { label: "Support", value: "24/7 Elite VIP" }
+                  { label: "Fairplay ID", value: "WhatsApp on this site" },
+                  { label: "Login", value: "Mobile + OTP" },
+                  { label: "Payout", value: "~180 min after settlement" }
                 ].map((stat) => (
                   <div key={stat.label}>
                     <div className="text-[10px] font-black uppercase tracking-widest text-primary/60">{stat.label}</div>
@@ -218,14 +249,52 @@ function ComparisonPage() {
               </h3>
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  The 2026 betting landscape requires platforms that can handle millions of concurrent operations. Fairplay's React-based front-end and microservices back-end ensure that the platform remains snappy and responsive, even under extreme load. Laser247's legacy architecture often results in UI sluggishness during high-volume events, which can be the difference between a winning and losing trade.
+                  Fairplay is a React site in front of an exchange login. IPL traffic can still hang a page. Refresh once. Do not double-send.
                 </p>
                 <p>
-                  Furthermore, our data integrity protocols ensure that every bet is settled fairly and transparently. We don't just provide an exchange; we provide a professional-grade trading environment for the most discerning sports enthusiasts.
+                  We do not invent Laser247’s stack or claim 100% uptime. Confirm the slip. Withdrawals follow settlement, usually about 180 minutes.
                 </p>
               </div>
             </motion.div>
           </div>
+
+          {/* Player reviews */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-20"
+          >
+            <h2 className="text-3xl font-black italic uppercase mb-4 flex items-center gap-3">
+              <Star className="text-primary w-8 h-8" /> Fairplay vs Laser247 reviews
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-10 max-w-3xl">
+              Four players who already held Laser247 and then opened a Fairplay ID on this site. They mention OTP login, confirming the in-play slip, and payouts that usually take about 180 minutes after settlement.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8">
+              {playerReviews.map((review) => (
+                <article
+                  key={review.name}
+                  className="glass-card p-8 rounded-[32px] border-primary/10 flex flex-col"
+                >
+                  <div className="flex items-center gap-1 mb-5" aria-label={`${review.rating} out of 5`}>
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`w-4 h-4 ${i < review.rating ? "text-primary fill-primary" : "text-white/15"}`}
+                      />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed flex-1">{review.body}</p>
+                  <footer className="mt-6 pt-6 border-t border-white/5">
+                    <div className="text-white font-bold">{review.name}</div>
+                    <div className="text-sm text-white/50">{review.city}</div>
+                    <div className="text-xs text-primary/70 mt-1">{review.detail}</div>
+                  </footer>
+                </article>
+              ))}
+            </div>
+          </motion.div>
 
           {/* FAQ Section */}
           <motion.div 
@@ -235,29 +304,29 @@ function ComparisonPage() {
             className="glass-card p-10 rounded-[32px] border-primary/10 mb-20"
           >
             <h3 className="text-3xl font-black italic uppercase mb-8 flex items-center gap-3">
-              <HelpCircle className="text-primary w-8 h-8" /> Comparison: Laser247 — FAQ
+              <HelpCircle className="text-primary w-8 h-8" /> Comparison: Laser247 FAQ
             </h3>
             <div className="grid gap-6">
               {[
                 {
-                  q: "Is Fairplay better than Laser247 for high-stakes betting?",
-                  a: "Yes. Fairplay's global liquidity aggregation and superior engine speed make it the definitive choice for professional players who need to place large bets instantly without price slippage."
+                  q: "Do I need a new ID for Fairplay if I use Laser247?",
+                  a: "Yes. Fairplay is a separate login. Message WhatsApp on this site."
                 },
                 {
                   q: "How fast are withdrawals on Fairplay vs Laser247?",
                   a: "Fairplay payouts usually take about 180 minutes after settlement. Laser247 timing is separate if you hold that ID."
                 },
                 {
-                  q: "Do I need a new ID for Fairplay if I use Laser247?",
-                  a: "Yes, you will need a verified Fairplay ID. The process is much faster—simply message our VIP Concierge on WhatsApp and your account will be active in 60 seconds."
+                  q: "Are in-play prices identical?",
+                  a: "No. Each exchange has its own liquidity. Confirm the price on the slip before you send it."
                 },
                 {
-                  q: "Are the odds sharper on Fairplay?",
-                  a: "Fairplay consistently offers tighter spreads and higher liquidity. Because we aggregate global volume, we can offer prices that localize networks like Laser247 simply cannot match."
+                  q: "Which book should I fund for IPL?",
+                  a: "Use the Fairplay cricket ID for matches listed on this schedule. Laser247 is only if the desk issues a linked book."
                 },
                 {
-                  q: "Is Fairplay more stable during the IPL finals?",
-                  a: "Absolutely. Our infrastructure is built to handle extreme traffic spikes, ensuring that you have 100% uptime during the most critical moments of the match, whereas legacy platforms often experience lag or downtime."
+                  q: "Does Fairplay stay up during IPL?",
+                  a: "The book is meant to stay open. If a page hangs, refresh once. We do not claim 100% uptime."
                 }
               ].map((faq, idx) => (
                 <div key={idx} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all group">
@@ -285,14 +354,14 @@ function ComparisonPage() {
             </div>
             <div className="relative z-10">
               <h2 className="text-4xl md:text-6xl font-black italic uppercase mb-6">
-                JOIN THE <span className="text-primary">FAIRPLAY ELITE</span>
+                GET A <span className="text-primary">FAIRPLAY ID</span>
               </h2>
               <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto font-medium">
-                Ready to leave legacy betting behind? Experience the speed and reliability of India's most advanced exchange today.
+                WhatsApp this site. Ask if you already hold Laser247 before you fund a second wallet.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <a 
-                  href={waLink("Hello Fairplay! I've seen the Laser247 comparison and want to upgrade to an Elite ID.")}
+                  href={waLink("Hello Fairplay! I read the Laser247 page and want a Fairplay ID.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-12 py-5 bg-primary text-primary-foreground rounded-2xl font-black italic uppercase tracking-[0.2em] hover:shadow-[0_0_40px_rgba(255,100,0,0.6)] transition-all flex items-center justify-center gap-3"

@@ -31,7 +31,9 @@ export function getCanonicalMatchSlug(match: MatchSlugInput & { seriesName: stri
 export function matchSlugAliases(seriesName: string, match: MatchSlugInput): string[] {
   const withVenue = getMatchSlug(seriesName, match);
   const withoutVenue = slugify(`${seriesName}-${match.event}-${match.date || ""}`);
-  return withVenue === withoutVenue ? [withVenue] : [withVenue, withoutVenue];
+  const legacyEmptyDate = slugify(`${seriesName}-${match.event}--${match.venue || ""}`);
+  const eventVenue = slugify(`${seriesName}-${match.event}-${match.venue || ""}`);
+  return [...new Set([withVenue, withoutVenue, legacyEmptyDate, eventVenue].filter(Boolean))];
 }
 
 export function matchMatchesSlug(seriesName: string, match: MatchSlugInput, slug: string): boolean {

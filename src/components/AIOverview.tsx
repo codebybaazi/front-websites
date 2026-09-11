@@ -15,6 +15,7 @@ export function AIOverview({ title, content = '', type = 'summary' }: AIOverview
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
+      id="post-summary"
       className="relative overflow-hidden mb-12"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-[40px] border border-primary/20" />

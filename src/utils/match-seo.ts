@@ -1,10 +1,12 @@
-import { BLOG_POST_SLUGS } from "@/utils/blog-post-dates";
+import { AUTHOR_PATHS } from "@/lib/authors";
+import { BLOG_POST_SLUGS, blogPostIsoDate } from "@/utils/blog-post-dates";
+import { hasUniqueBlogBody } from "@/utils/blog-seo";
 import { CRICKET_SCHEDULE_DATA } from "@/lib/cricket-schedule";
 import { FOOTBALL_SCHEDULE_DATA } from "@/lib/sports-data";
 import { TENNIS_SCHEDULE_DATA } from "@/lib/tennis-schedule";
 import { MATCH_INDEX } from "@/utils/match-index";
 import type { PageSeo } from "@/utils/page-seo";
-import { OG_IMAGE, PAGE_SEO, SITE_ORIGIN } from "@/utils/page-seo";
+import { OG_IMAGE, PAGE_SEO, SITE_ORIGIN, socialImageMeta } from "@/utils/page-seo";
 import { getMatchSlug } from "@/utils/slugify";
 
 function pageUrl(path: string): string {
@@ -58,17 +60,92 @@ export function listAllScheduleFixtures(): ScheduleFixture[] {
   ];
 }
 
+/** CollectionPage ItemList cap — full calendars are too large for rich results. */
+export const SCHEDULE_ITEMLIST_CAP = 30;
+
+/** Next fixtures by date (today onward). If none remain, the latest dated rows. */
+export function upcomingScheduleFixtures(limit = SCHEDULE_ITEMLIST_CAP): ScheduleFixture[] {
+  const today = new Date().toISOString().slice(0, 10);
+  const ranked = listAllScheduleFixtures()
+    .map((fixture) => ({
+      fixture,
+      iso: fixtureStartDate(fixture.date) ?? "9999-12-31",
+    }))
+    .sort((a, b) => a.iso.localeCompare(b.iso) || a.fixture.event.localeCompare(b.fixture.event));
+
+  const upcoming = ranked.filter((row) => row.iso >= today);
+  const source = upcoming.length > 0 ? upcoming : ranked.slice(-limit);
+  return source.slice(0, limit).map((row) => row.fixture);
+}
+
 /** ISO date (YYYY-MM-DD) when the fixture string is parseable; otherwise omitted. */
+const MONTH_INDEX: Record<string, number> = {
+  jan: 1,
+  feb: 2,
+  mar: 3,
+  apr: 4,
+  may: 5,
+  jun: 6,
+  jul: 7,
+  aug: 8,
+  sep: 9,
+  sept: 9,
+  oct: 10,
+  nov: 11,
+  dec: 12,
+  january: 1,
+  february: 2,
+  march: 3,
+  april: 4,
+  june: 6,
+  july: 7,
+  august: 8,
+  september: 9,
+  october: 10,
+  november: 11,
+  december: 12,
+};
+
+function isoFromParts(year: number, month: number, day: number): string | undefined {
+  if (year < 2020 || year > 2035 || month < 1 || month > 12 || day < 1 || day > 31) return undefined;
+  const utc = Date.UTC(year, month - 1, day);
+  const check = new Date(utc);
+  if (check.getUTCFullYear() !== year || check.getUTCMonth() !== month - 1 || check.getUTCDate() !== day) {
+    return undefined;
+  }
+  return `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+}
+
+/** Parse schedule copy such as "Wed, 01 Jul 2026", "Tue, 15 Sept 2026", or "June 11, 2026". */
 export function fixtureStartDate(date?: string): string | undefined {
   if (!date?.trim() || /^tbd$/i.test(date.trim())) return undefined;
-  const ms = Date.parse(date);
-  if (Number.isNaN(ms)) return undefined;
-  const parsed = new Date(ms);
-  const year = parsed.getFullYear();
-  if (year < 2020 || year > 2035) return undefined;
-  const month = String(parsed.getMonth() + 1).padStart(2, "0");
-  const day = String(parsed.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
+  const text = date.replace(/\u2013|\u2014/g, "-").trim();
+
+  const dayMonthYear = text.match(/(\d{1,2})\s+([A-Za-z]{3,9})\s+(\d{4})/);
+  if (dayMonthYear) {
+    const month = MONTH_INDEX[dayMonthYear[2].toLowerCase()];
+    if (month) return isoFromParts(Number(dayMonthYear[3]), month, Number(dayMonthYear[1]));
+  }
+
+  const monthDayYear = text.match(/([A-Za-z]{3,9})\s+(\d{1,2}),?\s+(\d{4})/);
+  if (monthDayYear) {
+    const month = MONTH_INDEX[monthDayYear[1].toLowerCase()];
+    if (month) return isoFromParts(Number(monthDayYear[3]), month, Number(monthDayYear[2]));
+  }
+
+  const iso = text.match(/(\d{4})-(\d{2})-(\d{2})/);
+  if (iso) return isoFromParts(Number(iso[1]), Number(iso[2]), Number(iso[3]));
+
+  return undefined;
+}
+
+/** Date-only, or IST kick-off as an offset datetime when the time string includes HH:MM IST. */
+export function fixtureStartDateTime(date?: string, time?: string): string | undefined {
+  const iso = fixtureStartDate(date);
+  if (!iso) return undefined;
+  const hm = time?.match(/\b(\d{1,2}):(\d{2})\s*IST\b/i);
+  if (!hm) return iso;
+  return `${iso}T${String(Number(hm[1])).padStart(2, "0")}:${hm[2]}:00+05:30`;
 }
 
 export function matchCanonicalUrl(slug: string): string {
@@ -82,19 +159,16 @@ export function matchDocumentHead(seo: PageSeo, slug: string, indexable = true) 
     meta: [
       { title: seo.title },
       { name: "description", content: seo.description },
-      { name: "keywords", content: seo.keywords },
       { name: "robots", content: indexable ? "index, follow" : "noindex, follow" },
       { property: "og:title", content: seo.title },
       { property: "og:description", content: seo.description },
       { property: "og:type", content: "article" },
       { property: "og:url", content: url },
-      { property: "og:image", content: OG_IMAGE },
       { property: "og:locale", content: "en_IN" },
       { property: "og:site_name", content: "Fairplay" },
-      { name: "twitter:card", content: "summary_large_image" },
+      ...socialImageMeta(),
       { name: "twitter:title", content: seo.title },
       { name: "twitter:description", content: seo.description },
-      { name: "twitter:image", content: OG_IMAGE },
     ],
     links: [{ rel: "canonical", href: url }],
   };
@@ -120,13 +194,14 @@ export function sportsEventGraph(input: {
   description: string;
   slug: string;
   date?: string;
+  time?: string;
   venue: string;
   sport: "Cricket" | "Soccer" | "Tennis";
   competitors: Competitor[];
   faqNode?: object | null;
 }) {
   const url = matchCanonicalUrl(input.slug);
-  const startDate = fixtureStartDate(input.date);
+  const startDate = fixtureStartDateTime(input.date, input.time);
 
   // startDate is required for Event rich results. Fixtures whose date is still TBD
   // would emit invalid Event markup, so they ship the FAQ graph alone instead.
@@ -165,7 +240,7 @@ export function sportsEventGraph(input: {
 }
 
 export function scheduleCollectionJsonLd() {
-  const fixtures = listAllScheduleFixtures();
+  const fixtures = upcomingScheduleFixtures();
   const pageUrlCanonical = pageUrl("/schedule");
   const seo = PAGE_SEO["/schedule"];
 
@@ -180,7 +255,7 @@ export function scheduleCollectionJsonLd() {
         isPartOf: { "@type": "WebSite", name: "Fairplay", url: SITE_ORIGIN },
         mainEntity: {
           "@type": "ItemList",
-          name: "Fairplay 2026 cricket, football and tennis fixtures",
+          name: "Upcoming Fairplay cricket, football and tennis fixtures",
           numberOfItems: fixtures.length,
           itemListElement: fixtures.map((fixture, index) => ({
             "@type": "ListItem",
@@ -227,13 +302,21 @@ export function matchesIndexJsonLd() {
 /** Fixture indexes change as often as the fixtures themselves. */
 const FIXTURE_INDEX_PATHS = ["/schedule", "/matches"];
 
+/** Hub and guide pages share one lastmod when the SEO/content map is updated. */
+const STATIC_SITEMAP_LASTMOD = "2026-09-11";
+
 export function buildSitemapXml(): string {
-  const paths = new Set<string>(["/", ...Object.keys(PAGE_SEO), ...FIXTURE_INDEX_PATHS]);
-  for (const fixture of listAllScheduleFixtures()) {
+  const fixtures = listAllScheduleFixtures();
+  const matchDates = new Map(
+    fixtures.map((fixture) => [fixture.slug, fixtureStartDate(fixture.date)]),
+  );
+
+  const paths = new Set<string>(["/", ...Object.keys(PAGE_SEO), ...FIXTURE_INDEX_PATHS, ...AUTHOR_PATHS]);
+  for (const fixture of fixtures) {
     paths.add(`/match/${fixture.slug}`);
   }
   for (const slug of BLOG_POST_SLUGS) {
-    paths.add(`/posts/${slug}`);
+    if (hasUniqueBlogBody(slug)) paths.add(`/posts/${slug}`);
   }
 
   const urls = [...paths]
@@ -245,7 +328,13 @@ export function buildSitemapXml(): string {
       const isFixtureIndex = FIXTURE_INDEX_PATHS.includes(path);
       const changefreq = isFixtureIndex || isMatch ? "daily" : isPost ? "monthly" : "weekly";
       const priority = path === "/" ? "1.0" : isFixtureIndex || isMatch ? "0.8" : "0.6";
-      return `  <url>\n    <loc>${loc.replace(/&/g, "&amp;")}</loc>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+      const lastmod = isPost
+        ? blogPostIsoDate(path.slice("/posts/".length))
+        : isMatch
+          ? matchDates.get(path.slice("/match/".length)) ?? STATIC_SITEMAP_LASTMOD
+          : STATIC_SITEMAP_LASTMOD;
+      const lastmodLine = lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : "";
+      return `  <url>\n    <loc>${loc.replace(/&/g, "&amp;")}</loc>${lastmodLine}\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
     })
     .join("\n");
 

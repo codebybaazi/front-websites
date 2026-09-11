@@ -4,6 +4,8 @@ import { AlertCircle, RefreshCw, HelpCircle, Shield, PhoneCall, Star, ArrowRight
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/withdrawal-issues')({
   component: WithdrawalIssues,
@@ -13,24 +15,39 @@ export const Route = createFileRoute('/withdrawal-issues')({
 function WithdrawalIssues() {
   const commonIssues = [
     {
-      title: "Processing Timeframes",
-      desc: "Withdrawals are processed as quickly as possible. Standard payouts are settled within 45 minutes for verified elite members.",
+      title: "Wait for the market to settle",
+      desc: "Fairplay withdrawals start after the official result. Open fancy books hold exposure. The usual window is about 180 minutes once KYC is clear.",
       icon: RefreshCw
     },
     {
-      title: "Verification Requirements",
-      desc: "Ensure your ID is fully KYC-verified to prevent any unnecessary holds. 2026 security protocols require active validation for high-value payouts.",
+      title: "Check KYC on the Fairplay ID",
+      desc: "Pending identity checks pause payouts. Finish documents on the KYC page before you treat a delay as a failed UPI.",
       icon: Shield
     },
     {
-      title: "Banking Details",
-      desc: "Double-check that the bank or wallet details in your request are correct. Mismatched account holders are a leading cause of withdrawal blocks.",
+      title: "Confirm UPI or bank details",
+      desc: "Mismatched account names are a common block. The handle must match the name on the Fairplay ID.",
       icon: AlertCircle
+    },
+    {
+      title: "WhatsApp one payout ticket",
+      desc: "If the payout is still pending past the usual window, message official WhatsApp with Fairplay ID, amount, UPI handle and a screenshot.",
+      icon: PhoneCall
     }
   ]
 
+  const howTo = howToJsonLd({
+    path: "/withdrawal-issues",
+    name: "How to fix a delayed Fairplay withdrawal",
+    description:
+      "Wait for settlement, check KYC, confirm the UPI handle, then WhatsApp one ticket if the payout is still pending.",
+    totalTime: "PT180M",
+    steps: commonIssues.map((step) => ({ name: step.title, text: step.desc })),
+  })
+
   return (
     <div className="flex flex-col bg-background text-foreground overflow-hidden">
+      <JsonLd data={howTo} />
       {/* Premium Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,100,0,0.08),transparent_70%)]" />
@@ -63,10 +80,11 @@ function WithdrawalIssues() {
       {/* Solutions Grid */}
       <section className="py-24 relative">
         <div className="container max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {commonIssues.map((item, i) => (
               <motion.div 
                 key={i}
+                id={`step-${i + 1}`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

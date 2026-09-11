@@ -4,6 +4,8 @@ import { ShieldAlert, RefreshCw, HelpCircle, Shield, PhoneCall, Info, Star, Targ
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/bonus-issues')({
   component: BonusIssues,
@@ -11,8 +13,37 @@ export const Route = createFileRoute('/bonus-issues')({
 })
 
 function BonusIssues() {
+  const steps = [
+    {
+      title: "Read wagering on the bonus page",
+      desc: "Turnover (for example 20x) must finish before you withdraw bonus-derived funds. Unmet wagering is not a missing credit.",
+    },
+    {
+      title: "Check the promo was applied on deposit",
+      desc: "Most bonuses need a code or an opt-in on the qualifying UPI. If you skipped it, WhatsApp the Fairplay ID and UTR before you place more bets.",
+    },
+    {
+      title: "Confirm the market counts",
+      desc: "Some cricket fancy books and odds bands do not count toward wagering. Check the offer terms before you grind the bonus.",
+    },
+    {
+      title: "WhatsApp ID and UTR",
+      desc: "If the bonus still did not credit, message official WhatsApp with Fairplay ID, deposit UTR and the promo name. Do not open a second ID.",
+    },
+  ]
+
+  const howTo = howToJsonLd({
+    path: "/bonus-issues",
+    name: "How to fix a missing Fairplay bonus",
+    description:
+      "Read wagering, confirm the promo applied on the deposit, check excluded markets, then WhatsApp Fairplay ID and UTR.",
+    totalTime: "PT15M",
+    steps: steps.map((step) => ({ name: step.title, text: step.desc })),
+  })
+
   return (
     <div className="flex flex-col bg-background text-foreground overflow-hidden">
+      <JsonLd data={howTo} />
       {/* Premium Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,100,0,0.08),transparent_70%)]" />
@@ -56,18 +87,16 @@ function BonusIssues() {
                 RESOLUTION: <br/><span className="text-primary">COMMON BONUS QUERIES</span>
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <div className="p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-primary/50 transition-colors">
-                  <h4 className="font-bold text-white italic uppercase mb-2">Wagering Requirements</h4>
-                  <p className="text-sm">Ensure you understand the turnover rules (e.g., 20x) before attempting a withdrawal of bonus-derived funds.</p>
-                </div>
-                <div className="p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-primary/50 transition-colors">
-                  <h4 className="font-bold text-white italic uppercase mb-2">Promo Code Activation</h4>
-                  <p className="text-sm">Most bonuses require a specific code during deposit. If you forgot yours, contact support before placing your first bet.</p>
-                </div>
-                <div className="p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-primary/50 transition-colors">
-                  <h4 className="font-bold text-white italic uppercase mb-2">Exclusion Criteria</h4>
-                  <p className="text-sm">Certain markets or odds ranges might be excluded from wagering progress. Check the specific promotion terms for details.</p>
-                </div>
+                {steps.map((step, i) => (
+                  <div
+                    key={step.title}
+                    id={`step-${i + 1}`}
+                    className="p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-primary/50 transition-colors"
+                  >
+                    <h4 className="font-bold text-white italic uppercase mb-2">{step.title}</h4>
+                    <p className="text-sm">{step.desc}</p>
+                  </div>
+                ))}
               </div>
             </motion.div>
             

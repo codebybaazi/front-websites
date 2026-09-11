@@ -160,7 +160,7 @@ function IsFairplayRealPage() {
             
             <div className="grid sm:grid-cols-3 gap-6">
               {[
-                { icon: Globe, title: "URL Verification", desc: "Always check for the official fairplay-pro.org domain or verified partner links." },
+                { icon: Globe, title: "URL Verification", desc: "Always open https://fairplayindia.com or WhatsApp from this site. Other domains that copy the Fairplay name are clones." },
                 { icon: MessageSquare, title: "Concierge Quality", desc: "Fake sites use bots; Fairplay uses elite human VIP concierge support." },
                 { icon: History, title: "Market Depth", desc: "If the odds don't move with every ball, you are likely on a fake platform." }
               ].map((pill, i) => (

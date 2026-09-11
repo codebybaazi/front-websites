@@ -18,19 +18,22 @@ import { InPlaySection } from "@/components/InPlaySection";
 import { PlayOptionsSection } from "@/components/PlayOptionsSection";
 import { BettingStepsSection } from "@/components/BettingStepsSection";
 import { RecentPostsSection } from "@/components/RecentPostsSection";
+import { HomeReviewsSection } from "@/components/HomeReviewsSection";
+import { HomeOfficialNumbers } from "@/components/HomeOfficialNumbers";
 import { FAQSection } from "@/components/FAQSection";
-import { OG_IMAGE, SITE_ORIGIN } from "@/utils/page-seo";
+import { JsonLd } from "@/components/JsonLd";
+import { SITE_ORIGIN, clipMetaDescription, homeEntityJsonLd, socialImageMeta } from "@/utils/page-seo";
 
 
 
 export const Route = createFileRoute("/")({
   head: ({ loaderData }) => {
-    const matches = loaderData?.matchKeywords || [];
-    const liveBit = matches.length > 0 ? ` Live: ${matches.slice(0, 3).join(", ")}.` : "";
-    const title = "Fairplay | Login, App Download & Online Cricket ID India";
-    const description = matches.length > 0
-      ? `Fairplay India: Fairplay login, Fairplay app download and an online cricket ID. Bet live on ${matches.slice(0, 4).join(", ")} with UPI deposits and payouts in about 180 minutes.${liveBit}`
-      : "Fairplay India — Fairplay login, Fairplay app download (APK), Fairplay club exchange and an online cricket ID for IPL, football, tennis and live casino, with UPI deposits.";
+    const matches = (loaderData?.matchKeywords || []).filter((name) => name.length > 2 && name.length <= 48);
+    const title = "Fairplay | Login, app download & cricket ID";
+    const base =
+      "Fairplay India: login, app download and a cricket ID for IPL, football, tennis and live casino. UPI deposits; payouts usually in about 180 minutes.";
+    const liveName = matches[0];
+    const description = clipMetaDescription(liveName ? `${base} Live: ${liveName}.` : base);
 
     return {
       title,
@@ -43,11 +46,9 @@ export const Route = createFileRoute("/")({
         { property: "og:url", content: SITE_ORIGIN },
         { property: "og:locale", content: "en_IN" },
         { property: "og:site_name", content: "Fairplay" },
-        { property: "og:image", content: OG_IMAGE },
-        { name: "twitter:card", content: "summary_large_image" },
+        ...socialImageMeta(),
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: description },
-        { name: "twitter:image", content: OG_IMAGE },
         { name: "robots", content: "index, follow" }
       ],
       links: [{ rel: "canonical", href: SITE_ORIGIN }],
@@ -80,6 +81,7 @@ const quickLinks = [
 function Index() {
   return (
     <div className="flex flex-col w-full overflow-hidden noise-bg">
+      <JsonLd data={homeEntityJsonLd()} />
       <HeroBanner />
 
       {/* Hero Section removed per request */}
@@ -202,8 +204,13 @@ function Index() {
       {/* Recent Posts & Analysis Section */}
       <RecentPostsSection />
 
+      <HomeReviewsSection />
+
+      <HomeOfficialNumbers />
+
       <FAQSection 
         title="Fairplay questions"
+        speakable
         faqs={[
           { q: "What is Fairplay?", a: "Fairplay is a sports exchange and live casino. You get a Fairplay ID, deposit with UPI, and bet cricket (including IPL), football, tennis or tables — then withdraw after markets settle." },
           { q: "How do I get a Fairplay ID?", a: "Message official WhatsApp, complete a short check, then log in with OTP. The same ID works on the app and in a browser." },
@@ -224,7 +231,7 @@ function Index() {
               <h3 className="text-2xl font-black italic uppercase mb-4">Live Casino</h3>
               <p className="text-muted-foreground text-sm">Experience real-time HD dealer action with Indian classics.</p>
             </Link>
-            <Link to="/betting" className="glass-card p-10 rounded-3xl relative overflow-hidden group border border-primary/20 shine-effect hover:border-primary/40 transition-all">
+            <Link to="/horse-racing" className="glass-card p-10 rounded-3xl relative overflow-hidden group border border-primary/20 shine-effect hover:border-primary/40 transition-all">
               <Trophy className="w-12 h-12 text-primary mb-6 group-hover:scale-110 transition-transform" />
               <h3 className="text-2xl font-black italic uppercase mb-4">Horse Racing</h3>
               <p className="text-muted-foreground text-sm">Win, place and in-running on the same Fairplay ID as cricket.</p>
@@ -380,8 +387,8 @@ function Index() {
           <div className="grid md:grid-cols-3 gap-12 text-center">
             <div>
               <ShieldCheck className="w-12 h-12 text-primary mx-auto mb-6" />
-              <h3 className="text-xl font-bold uppercase mb-4">Certified Safe</h3>
-              <p className="text-muted-foreground text-sm">Holding the Curaçao 365/JAZ licence, ensuring a fair and regulated gaming environment since 2017.</p>
+              <h3 className="text-xl font-bold uppercase mb-4">18+ and KYC</h3>
+              <p className="text-muted-foreground text-sm">Fairplay has been used as a cricket ID since 2017. We do not publish a licence number. You must be 18+ and follow the law where you live.</p>
             </div>
             <div>
               <Zap className="w-12 h-12 text-primary mx-auto mb-6" />

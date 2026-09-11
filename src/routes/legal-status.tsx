@@ -23,13 +23,13 @@ function LegalStatus() {
             className="max-w-4xl mx-auto text-center"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold tracking-widest uppercase mb-8">
-              <Scale className="w-4 h-4" /> Fully Compliant Framework
+              <Scale className="w-4 h-4" /> Not legal advice
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter italic mb-8 leading-[0.9]">
-              LEGAL <span className="text-primary not-italic">STATUS</span> & LICENSING
+              LEGAL <span className="text-primary not-italic">STATUS</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
-              Fairplay is committed to providing a transparent, regulated, and safe betting environment for all elite members through global governance.
+              What this site publishes about Fairplay: brand, domain, and support. We do not publish a licence number or a registered operator company name.
             </p>
           </motion.div>
 
@@ -55,26 +55,26 @@ function LegalStatus() {
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/20 shrink-0">
                   <ShieldCheck className="w-6 h-6 text-primary" />
                 </div>
-                <h2 className="text-3xl font-black italic uppercase italic tracking-tight">International <span className="text-primary">Licensing</span></h2>
+                <h2 className="text-3xl font-black italic uppercase italic tracking-tight">What we <span className="text-primary">publish</span></h2>
               </div>
               <div className="prose prose-invert max-w-none text-muted-foreground mb-8">
                 <p className="text-lg leading-relaxed">
-                  Fairplay operates as an offshore sports exchange plus casino. You must be 18+. Local law still applies where you live — this page is not legal advice.
+                  Fairplay is an offshore sports exchange plus casino on fairplayindia.com. You must be 18+. Local law still applies where you live — this page is not legal advice.
                 </p>
               </div>
               <div className="grid md:grid-cols-2 gap-6 pt-4">
                 <div className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/10">
                   <Gavel className="w-8 h-8 text-primary shrink-0" />
                   <div>
-                    <h4 className="font-bold text-white uppercase tracking-wider mb-2">Regulatory Oversight</h4>
-                    <p className="text-sm text-muted-foreground">Adhering to strict international corporate governance protocols.</p>
+                    <h4 className="font-bold text-white uppercase tracking-wider mb-2">Brand and site</h4>
+                    <p className="text-sm text-muted-foreground">Public name: Fairplay. Official site: https://fairplayindia.com. Support: support@fairplayindia.com and the WhatsApp number on /contact-us.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/10">
                   <Globe className="w-8 h-8 text-primary shrink-0" />
                   <div>
-                    <h4 className="font-bold text-white uppercase tracking-wider mb-2">Global Standards</h4>
-                    <p className="text-sm text-muted-foreground">Certified compliance with cross-border gaming regulations.</p>
+                    <h4 className="font-bold text-white uppercase tracking-wider mb-2">Licence and company</h4>
+                    <p className="text-sm text-muted-foreground">No licence number and no registered operator legal name are published on this site. We do not claim an India licence or a Curaçao licence we cannot show you.</p>
                   </div>
                 </div>
               </div>
@@ -88,9 +88,9 @@ function LegalStatus() {
                 className="group p-8 rounded-3xl bg-white/2 border border-white/5 hover:border-primary/50 transition-all"
               >
                 <FileText className="w-12 h-12 text-primary mb-6 group-hover:scale-110 transition-transform duration-500" />
-                <h3 className="text-xl font-bold mb-4 tracking-tight uppercase italic">Institutional <span className="text-primary">Compliance</span></h3>
+                <h3 className="text-xl font-bold mb-4 tracking-tight uppercase italic">House <span className="text-primary">rules</span></h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Our internal compliance team ensures that every transaction and game on Fairplay follows international anti-money laundering (AML) and know-your-customer (KYC) protocols.
+                  KYC and AML checks on this desk are for payouts to the person on the ID. They are not a government licence. Read terms, privacy and responsible gaming.
                 </p>
               </motion.div>
 
@@ -101,9 +101,9 @@ function LegalStatus() {
                 className="group p-8 rounded-3xl bg-white/2 border border-white/5 hover:border-primary/50 transition-all"
               >
                 <Info className="w-12 h-12 text-primary mb-6 group-hover:scale-110 transition-transform duration-500" />
-                <h3 className="text-xl font-bold mb-4 tracking-tight uppercase italic">Operational <span className="text-primary">Clarity</span></h3>
+                <h3 className="text-xl font-bold mb-4 tracking-tight uppercase italic">What we <span className="text-primary">do not claim</span></h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  We believe in complete legal clarity. Our terms and conditions are written to be easily understood, defining the rights and responsibilities of both the platform and the elite player.
+                  We do not invent a licence ID, a Curaçao stamp, or a registered company name we cannot show. If someone quotes a regulator number for Fairplay, ask them to point to this page — it is not here.
                 </p>
               </motion.div>
             </div>
@@ -136,7 +136,8 @@ function LegalStatus() {
       <FAQSection 
         title="Legal Status FAQ"
         faqs={[
-          { q: 'Is Fairplay licensed in India?', a: 'Fairplay is run as an offshore sports exchange plus casino. Indian users must follow local law. This page is not a court opinion.' },
+          { q: 'Is Fairplay licensed in India?', a: 'No India licence is published here. Fairplay is run as an offshore sports exchange plus casino. You follow local law. This page is not a court opinion.' },
+          { q: 'What is the operator legal name and licence number?', a: 'This site does not publish a registered company name or a licence number. Brand: Fairplay. Domain: fairplayindia.com. Support: support@fairplayindia.com.' },
           { q: 'Do I need to be 18?', a: 'Yes. Underage IDs are closed. KYC exists so payouts go to the right adult.' },
           { q: 'Does using Fairplay make betting legal in my state?', a: 'No. You are responsible for local rules. If betting is banned where you live, do not use the ID.' },
           { q: 'Where do I read the house rules?', a: 'Terms, betting rules and this legal page. WhatsApp cannot override a published rule.' },

@@ -29,35 +29,66 @@ export const Route = createFileRoute('/fairplay-vs-diamond-exchange')({
   head: () => pageHeadFor('/fairplay-vs-diamond-exchange'),
 })
 
+const playerReviews = [
+  {
+    name: "Manish Agarwal",
+    city: "Ranchi",
+    detail: "Diamond password does not open Fairplay",
+    rating: 5,
+    body: "I tried the Diamond Exchange login on Fairplay. It failed. WhatsApp on this site sent a Fairplay ID, then OTP on my phone. I still have Diamond. I do not share that password with anyone here.",
+  },
+  {
+    name: "Pooja Nambiar",
+    city: "Kozhikode",
+    detail: "Ignored a migrate UPI on a cloned number",
+    rating: 4,
+    body: "A number asked me to pay a personal UPI to migrate Diamond into Fairplay. I ignored it and used the deposit details after I logged into Fairplay. I kept the UTR. A Fairplay UTR will not credit Diamond.",
+  },
+  {
+    name: "Tariq Hussain",
+    city: "Aligarh",
+    detail: "IPL fancy waited on the scorecard",
+    rating: 4,
+    body: "IPL books on this site sit on the Fairplay schedule. A fancy stayed open until the official scorecard, then the payout took about 180 minutes. Diamond markets stayed on that ID. Diamond tickets go to Diamond.",
+  },
+  {
+    name: "Swati Bansal",
+    city: "Jalandhar",
+    detail: "Cricket, football and casino on one Fairplay login",
+    rating: 5,
+    body: "Fairplay cricket, football and casino share one login. I confirm the slip before I send. IPL nights can lag, so I refresh once. I asked WhatsApp for this wallet and left Diamond as its own ID.",
+  },
+]
+
 const comparisonData = [
   {
-    feature: "Liquidity Source",
-    fairplay: "Tier-1 Global Aggregation; guaranteed fills for high-stakes.",
-    diamond: "Network-based sharing; prone to 'voided' winning bets.",
+    feature: "Login",
+    fairplay: "Fairplay ID via WhatsApp. OTP on your phone.",
+    diamond: "Will not open Fairplay. Do not share Diamond passwords here.",
     winner: "fairplay"
   },
   {
-    feature: "Odds Precision",
-    fairplay: "Exchange-grade sharp lines with 1% lower margins.",
-    diamond: "Standard market lines with hidden commission fees.",
+    feature: "Wallet",
+    fairplay: "UPI into Fairplay after you log in. Keep the UTR.",
+    diamond: "Separate cash. Ignore cloned numbers asking to “migrate.”",
     winner: "fairplay"
   },
   {
-    feature: "Payout Reliability",
-    fairplay: "Payouts usually about 180 minutes after settlement.",
-    diamond: "Dependent on 'Master' agent approval (Manual & Slow).",
+    feature: "Withdrawals",
+    fairplay: "Usually about 180 minutes after settlement. Fancy waits on the scorecard.",
+    diamond: "That ID’s desk. We do not invent agent approval times.",
     winner: "fairplay"
   },
   {
-    feature: "Tech Stack",
-    fairplay: "Modern React/TanStack Hub; zero-latency interface.",
-    diamond: "Legacy PHP/Node templates; noticeable lag during Live IPL.",
+    feature: "IPL",
+    fairplay: "Fairplay cricket books are on this schedule and exchange.",
+    diamond: "Diamond markets stay on that ID.",
     winner: "fairplay"
   },
   {
-    feature: "VIP Concierge",
-    fairplay: "Dedicated Human Support on WhatsApp/Telegram.",
-    diamond: "Generic agent-based support with inconsistent quality.",
+    feature: "Support",
+    fairplay: "WhatsApp on this site.",
+    diamond: "Diamond tickets stay with Diamond.",
     winner: "fairplay"
   }
 ]
@@ -76,13 +107,13 @@ function ComparisonPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold tracking-widest uppercase mb-8">
-              <Swords className="w-4 h-4" /> Elite Exchange Battle
+              <Swords className="w-4 h-4" /> Diamond is a separate ID
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter italic mb-8 leading-[0.9]">
               FAIRPLAY <span className="text-white/20 font-light">VS</span> <span className="text-primary not-italic">DIAMOND EXCH</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
-              A high-intensity analysis of market depth, settlement speed, and infrastructure. See why Fairplay remains the undisputed home for elite Indian bettors.
+              Diamond Exchange is a separate ID. Fairplay cricket, football and casino share one login. Do not share Diamond passwords with anyone here.
             </p>
           </motion.div>
 
@@ -109,7 +140,7 @@ function ComparisonPage() {
                 <thead>
                   <tr className="bg-white/5">
                     <th className="p-8 text-sm font-black uppercase tracking-widest text-white/40">Feature</th>
-                    <th className="p-8 text-lg font-black italic uppercase tracking-tight text-primary">Fairplay (Elite)</th>
+                    <th className="p-8 text-lg font-black italic uppercase tracking-tight text-primary">Fairplay</th>
                     <th className="p-8 text-lg font-black italic uppercase tracking-tight text-white/60">Diamond Exch</th>
                   </tr>
                 </thead>
@@ -145,14 +176,14 @@ function ComparisonPage() {
               className="glass-card p-10 rounded-[32px] border-primary/10"
             >
               <h2 className="text-3xl font-black italic uppercase mb-8 flex items-center gap-3">
-                <TrendingUp className="text-primary w-8 h-8" /> Market Liquidity: The Power of Aggregation
+                <TrendingUp className="text-primary w-8 h-8" /> Two IDs
               </h2>
               <div className="grid md:grid-cols-2 gap-8 text-muted-foreground leading-relaxed">
                 <p>
-                  In the betting world, "Market Depth" is the difference between getting your bet matched and getting a "Price Changed" error. Fairplay's engine aggregates liquidity from top-tier global exchanges, ensuring that even during high-intensity IPL matches, massive bets are matched instantly without slippage.
+                  Fairplay cricket and casino sit on the Fairplay ID. Confirm the slip. We do not publish fill guarantees or a 1% margin claim.
                 </p>
                 <p>
-                  Diamond Exchange relies on a fragmented agent-network model. While popular, this often results in limited liquidity for high-stakes players, and win-voidance is a recurring issue when the local pool cannot cover elite-level payouts. For serious bettors, Fairplay's centralized global liquidity is the only viable choice.
+                  Diamond Exchange markets stay on that ID. A UTR from Fairplay will not credit Diamond. Ignore anyone who asks you to pay a personal account to migrate an old ID.
                 </p>
               </div>
             </motion.div>
@@ -165,10 +196,10 @@ function ComparisonPage() {
             >
               <div className="glass-card p-10 rounded-[32px] border-primary/10">
                 <h3 className="text-2xl font-black italic uppercase mb-6 flex items-center gap-3">
-                  <Clock className="text-primary w-6 h-6" /> Instant Payout Infrastructure
+                  <Clock className="text-primary w-6 h-6" /> Withdrawals
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Fairplay has removed the middleman. Our automated payout gateway settles withdrawals 24/7 in minutes. In contrast, Diamond Exchange users are often tethered to the availability of their Master Agent, leading to frustrating delays during weekends or bank holidays. With Fairplay, your money is always your own.
+                  Fairplay payouts usually take about 180 minutes after settlement. Fancy books wait on the official scorecard. Diamond timing is that desk.
                 </p>
               </div>
               
@@ -177,7 +208,7 @@ function ComparisonPage() {
                   <ShieldCheck className="text-primary w-6 h-6" /> Data Privacy & Elite Security
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Diamond Exchange's agent-based model introduces multiple points of failure for your personal data. Fairplay employs military-grade end-to-end encryption and a strict direct-to-customer privacy protocol. We ensure that your betting activity remains confidential and protected by the highest international standards.
+                  Fairplay login is OTP. Use deposit details sent after you log in or given on official WhatsApp. We do not invent Diamond’s agent model.
                 </p>
               </div>
             </motion.div>
@@ -189,16 +220,16 @@ function ComparisonPage() {
               className="glass-card p-10 rounded-[32px] border-primary/10"
             >
               <h3 className="text-2xl font-black italic uppercase mb-6 flex items-center gap-3">
-                <Smartphone className="text-primary w-6 h-6" /> Why Fairplay's Onboarding is Unmatched
+                <Smartphone className="text-primary w-6 h-6" /> Opening Fairplay
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 WhatsApp on this site opens a Fairplay ID. You log in with that number and an OTP, then deposit with UPI. Ignore anyone who asks you to pay a personal account to “migrate” an old ID.
               </p>
               <div className="grid sm:grid-cols-3 gap-6 pt-6 border-t border-white/5">
                 {[
-                  { label: "Activation", value: "60-Sec WhatsApp" },
-                  { label: "Withdrawals", value: "24/7 Instant" },
-                  { label: "Support", value: "Dedicated VIP" }
+                  { label: "Fairplay ID", value: "WhatsApp on this site" },
+                  { label: "Login", value: "Mobile + OTP" },
+                  { label: "Payout", value: "~180 min after settlement" }
                 ].map((stat) => (
                   <div key={stat.label}>
                     <div className="text-[10px] font-black uppercase tracking-widest text-primary/60">{stat.label}</div>
@@ -219,14 +250,52 @@ function ComparisonPage() {
               </h3>
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  Fairplay's platform is engineered for zero-latency performance. Utilizing a modern React/TanStack architecture, we provide a seamless experience even during high-traffic IPL finals. Diamond Exchange continues to rely on legacy web technologies that struggle with concurrent user spikes and real-time odds refreshes.
+                  This site is a React/TanStack hub. IPL nights can still lag. Refresh once. We do not claim odds milliseconds ahead of Diamond.
                 </p>
                 <p>
-                  By investing in superior infrastructure, Fairplay ensures that you never miss a market move. Our proprietary data feeds deliver odds milliseconds ahead of the competition, giving elite players the edge they need to succeed in fast-moving markets.
+                  Diamond Exchange continues as its own login. Request Fairplay on WhatsApp if you want this wallet.
                 </p>
               </div>
             </motion.div>
           </div>
+
+          {/* Player reviews */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-20"
+          >
+            <h2 className="text-3xl font-black italic uppercase mb-4 flex items-center gap-3">
+              <Star className="text-primary w-8 h-8" /> Fairplay vs Diamond Exchange reviews
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-10 max-w-3xl">
+              Four players who already held a Diamond Exchange ID and then opened Fairplay on this site. They mention OTP login, cloned migrate numbers, IPL fancy waiting on the scorecard, and payouts that usually take about 180 minutes after settlement.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8">
+              {playerReviews.map((review) => (
+                <article
+                  key={review.name}
+                  className="glass-card p-8 rounded-[32px] border-primary/10 flex flex-col"
+                >
+                  <div className="flex items-center gap-1 mb-5" aria-label={`${review.rating} out of 5`}>
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`w-4 h-4 ${i < review.rating ? "text-primary fill-primary" : "text-white/15"}`}
+                      />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed flex-1">{review.body}</p>
+                  <footer className="mt-6 pt-6 border-t border-white/5">
+                    <div className="text-white font-bold">{review.name}</div>
+                    <div className="text-sm text-white/50">{review.city}</div>
+                    <div className="text-xs text-primary/70 mt-1">{review.detail}</div>
+                  </footer>
+                </article>
+              ))}
+            </div>
+          </motion.div>
 
           {/* FAQ Section */}
           <motion.div 
@@ -236,29 +305,29 @@ function ComparisonPage() {
             className="glass-card p-10 rounded-[32px] border-primary/10 mb-20"
           >
             <h3 className="text-3xl font-black italic uppercase mb-8 flex items-center gap-3">
-              <HelpCircle className="text-primary w-8 h-8" /> Comparison: Diamond Exchange — FAQ
+              <HelpCircle className="text-primary w-8 h-8" /> Comparison: Diamond Exchange FAQ
             </h3>
             <div className="grid gap-6">
               {[
                 {
-                  q: "Is Fairplay better than Diamond Exchange for cricket betting?",
-                  a: "Absolutely. Fairplay provides higher market liquidity and sharper exchange-grade odds, ensuring your large bets are matched instantly without the risk of 'voidance' often seen on agent-based platforms like Diamond Exchange."
+                  q: "Will my Diamond Exchange ID work on Fairplay?",
+                  a: "No. Request a Fairplay ID on WhatsApp. Do not share Diamond Exchange passwords with anyone here."
                 },
                 {
-                  q: "How fast are withdrawals on Fairplay compared to Diamond Exchange?",
-                  a: "Fairplay offers automated 24/7 withdrawals that settle in minutes. Diamond Exchange often requires agent-level approval, which can lead to significant delays depending on your agent's availability."
+                  q: "How long until a Fairplay withdrawal?",
+                  a: "Usually about 180 minutes after the market is settled. Fancy books wait on the official scorecard."
                 },
                 {
-                  q: "Is it easy to switch from Diamond Exchange to Fairplay?",
-                  a: "Very easy. Simply message our VIP Concierge on WhatsApp and your Fairplay ID will be active in under 60 seconds. We offer a far more streamlined onboarding process than the legacy agent model."
+                  q: "How do I avoid paying the wrong UPI?",
+                  a: "Only use deposit details sent after you log into Fairplay or given on official WhatsApp. Ignore cloned numbers."
                 },
                 {
-                  q: "Are my winnings safer on Fairplay?",
-                  a: "Yes. Fairplay is a centralized elite platform with a direct-to-customer relationship, backed by enterprise-grade security. Diamond Exchange's decentralized agent model creates multiple trust points that can compromise fund safety."
+                  q: "Which platform lists IPL fancy?",
+                  a: "Fairplay cricket books are on the Fairplay schedule and exchange. Diamond Exchange markets stay on that ID."
                 },
                 {
-                  q: "Does Fairplay have a mobile app?",
-                  a: "Yes, Fairplay provides a modern, high-performance mobile experience that is technically superior to the legacy web templates used by Diamond Exchange affiliates."
+                  q: "Does Fairplay have an app?",
+                  a: "Install Fairplay from this site’s app page. Third-party APKs are a common scam."
                 }
               ].map((faq, idx) => (
                 <div key={idx} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all group">
@@ -286,14 +355,14 @@ function ComparisonPage() {
             </div>
             <div className="relative z-10">
               <h2 className="text-4xl md:text-6xl font-black italic uppercase mb-6">
-                THE ELITE VERDICT: <span className="text-primary not-italic">FAIRPLAY WINS</span>
+                GET A <span className="text-primary not-italic">FAIRPLAY ID</span>
               </h2>
               <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto font-medium">
-                Ready to upgrade to the world's most advanced betting ecosystem? Join Fairplay now and experience the elite difference.
+                WhatsApp this site. Diamond credentials will not open Fairplay.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <a 
-                  href={waLink("Hello Fairplay! I've seen the Diamond Exchange comparison and want to get started with an Elite ID.")}
+                  href={waLink("Hello Fairplay! I read the Diamond Exchange page and want a Fairplay ID.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-12 py-5 bg-primary text-primary-foreground rounded-2xl font-black italic uppercase tracking-[0.2em] hover:shadow-[0_0_40px_rgba(255,100,0,0.6)] transition-all flex items-center justify-center gap-3"

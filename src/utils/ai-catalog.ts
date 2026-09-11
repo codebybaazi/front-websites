@@ -68,6 +68,18 @@ const entries = [
     ],
   },
   {
+    identifier: urn("content", "llms-txt"),
+    displayName: "llms.txt",
+    description:
+      "Plain-text map for AI crawlers: AI catalog, markdown Accept header, sitemap and key human pages.",
+    type: "text/plain",
+    url: `${SITE_ORIGIN}/llms.txt`,
+    representativeQueries: [
+      "Where is fairplayindia.com llms.txt?",
+      "How should an LLM read Fairplay India?",
+    ],
+  },
+  {
     identifier: urn("content", "sitemap"),
     displayName: "Fairplay India Sitemap",
     description:

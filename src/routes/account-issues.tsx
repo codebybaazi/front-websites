@@ -4,6 +4,8 @@ import { AlertCircle, Lock, UserX, Shield, PhoneCall, Star, Target, ShieldCheck 
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/account-issues')({
   component: AccountIssues,
@@ -11,8 +13,37 @@ export const Route = createFileRoute('/account-issues')({
 })
 
 function AccountIssues() {
+  const steps = [
+    {
+      title: "Do not register a second Fairplay ID",
+      desc: "A lockout, pending KYC or a security check is fixed on the original ID. A second registration can lock both accounts.",
+    },
+    {
+      title: "Wait out a lock, then retry OTP",
+      desc: "Failed logins can pause the cricket ID for about 15 minutes. Use the registered mobile. Nobody should ask you to read the OTP aloud.",
+    },
+    {
+      title: "Finish KYC if withdrawals are blocked",
+      desc: "Identity checks pause access and payouts. Use the documents the desk asked for — not a random chat that wants a selfie off this site.",
+    },
+    {
+      title: "WhatsApp the Fairplay ID",
+      desc: "Message official WhatsApp with the Fairplay ID, the mobile on the ID, and a screenshot of the lock or KYC screen.",
+    },
+  ]
+
+  const howTo = howToJsonLd({
+    path: "/account-issues",
+    name: "How to recover a locked Fairplay ID",
+    description:
+      "Stay on the original Fairplay ID, wait out a lock, finish KYC if asked, then WhatsApp the ID and a screenshot.",
+    totalTime: "PT20M",
+    steps: steps.map((step) => ({ name: step.title, text: step.desc })),
+  })
+
   return (
     <div className="flex flex-col bg-background text-foreground overflow-hidden">
+      <JsonLd data={howTo} />
       {/* Premium Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,100,0,0.08),transparent_70%)]" />
@@ -56,18 +87,16 @@ function AccountIssues() {
                 REGAINING <br/><span className="text-primary">SECURE ACCESS</span>
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <div className="p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-primary/50 transition-colors">
-                  <h4 className="font-bold text-white italic uppercase mb-2">Account Locked?</h4>
-                  <p className="text-sm">If your account has been locked for security reasons, please contact support with your registered ID and email for immediate verification.</p>
-                </div>
-                <div className="p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-primary/50 transition-colors">
-                  <h4 className="font-bold text-white italic uppercase mb-2">KYC Updates Needed</h4>
-                  <p className="text-sm">Ensure your documents are up-to-date. Our elite standards require verified identification to maintain the highest level of platform integrity.</p>
-                </div>
-                <div className="p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-primary/50 transition-colors">
-                  <h4 className="font-bold text-white italic uppercase mb-2">Credential Reset</h4>
-                  <p className="text-sm">Forgot your password? Use the secure reset protocol or contact our concierge for a manual verification and restoration link.</p>
-                </div>
+                {steps.map((step, i) => (
+                  <div
+                    key={step.title}
+                    id={`step-${i + 1}`}
+                    className="p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-primary/50 transition-colors"
+                  >
+                    <h4 className="font-bold text-white italic uppercase mb-2">{step.title}</h4>
+                    <p className="text-sm">{step.desc}</p>
+                  </div>
+                ))}
               </div>
             </motion.div>
             

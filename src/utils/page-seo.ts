@@ -1,13 +1,99 @@
 /** Origin every canonical, og:url, sitemap <loc> and absolute schema URL is built from. */
 export const SITE_ORIGIN = "https://fairplayindia.com";
 
-/** Shared link-preview image: the homepage hero banner. */
+/** Shared link-preview image: the homepage hero banner (public/og-banner.jpg). */
 export const OG_IMAGE = `${SITE_ORIGIN}/og-banner.jpg`;
+export const OG_IMAGE_WIDTH = "1376";
+export const OG_IMAGE_HEIGHT = "768";
+export const TWITTER_SITE = "@FairplayElite";
+export const TWITTER_PROFILE_URL = "https://twitter.com/FairplayElite";
+/** Square mark used in Organization / publisher JSON-LD (public/logo.png). */
+export const SITE_LOGO = `${SITE_ORIGIN}/logo.png`;
+export const SUPPORT_EMAIL = "support@fairplayindia.com";
+
+export function organizationNode() {
+  return {
+    "@type": "Organization" as const,
+    "@id": `${SITE_ORIGIN}/#organization`,
+    name: "Fairplay",
+    url: SITE_ORIGIN,
+    logo: {
+      "@type": "ImageObject" as const,
+      url: SITE_LOGO,
+    },
+    sameAs: [TWITTER_PROFILE_URL],
+    contactPoint: {
+      "@type": "ContactPoint" as const,
+      contactType: "customer support",
+      email: SUPPORT_EMAIL,
+      url: `${SITE_ORIGIN}/contact-us`,
+      availableLanguage: ["English", "Hindi"],
+    },
+  };
+}
+
+/** Homepage graph: brand entity plus the website that publishes these pages. */
+export function speakableSpecification(cssSelector: string[]) {
+  return {
+    "@type": "SpeakableSpecification" as const,
+    cssSelector,
+  };
+}
+
+export function homeEntityJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationNode(),
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_ORIGIN}/#website`,
+        name: "Fairplay",
+        url: SITE_ORIGIN,
+        inLanguage: "en-IN",
+        publisher: { "@id": `${SITE_ORIGIN}/#organization` },
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${SITE_ORIGIN}/#webpage`,
+        url: SITE_ORIGIN,
+        name: "Fairplay",
+        isPartOf: { "@id": `${SITE_ORIGIN}/#website` },
+        about: { "@id": `${SITE_ORIGIN}/#organization` },
+        speakable: speakableSpecification(["#what-is-fairplay-answer", "#faq-heading"]),
+      },
+    ],
+  };
+}
+
+/** og:image dimensions plus twitter:site for every document head that shares OG_IMAGE. */
+export function socialImageMeta() {
+  return [
+    { property: "og:image", content: OG_IMAGE },
+    { property: "og:image:width", content: OG_IMAGE_WIDTH },
+    { property: "og:image:height", content: OG_IMAGE_HEIGHT },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:site", content: TWITTER_SITE },
+    { name: "twitter:image", content: OG_IMAGE },
+  ];
+}
+
+/** Google snippets truncate around 155–160 characters. */
+export const META_DESCRIPTION_MAX = 160;
+
+export function clipMetaDescription(text: string, max = META_DESCRIPTION_MAX): string {
+  const trimmed = text.replace(/\s+/g, " ").trim();
+  if (trimmed.length <= max) return trimmed;
+  const cut = trimmed.slice(0, max - 1);
+  const space = cut.lastIndexOf(" ");
+  const base = (space > max * 0.6 ? cut.slice(0, space) : cut).replace(/[,:;.–-]+$/u, "").trim();
+  return `${base}…`;
+}
 
 export interface PageSeo {
   title: string;
   description: string;
-  keywords: string;
+  keywords?: string;
 }
 
 export function absolutePageUrl(path?: string) {
@@ -22,19 +108,16 @@ export function pageHead(seo: PageSeo, path?: string) {
     title: seo.title,
     meta: [
       { title: seo.title },
-      { name: "description", content: seo.description },
-      { name: "keywords", content: seo.keywords },
+      { name: "description", content: clipMetaDescription(seo.description) },
       { property: "og:title", content: seo.title },
-      { property: "og:description", content: seo.description },
+      { property: "og:description", content: clipMetaDescription(seo.description) },
       { property: "og:type", content: "website" },
       { property: "og:url", content: url },
-      { property: "og:image", content: OG_IMAGE },
       { property: "og:locale", content: "en_IN" },
       { property: "og:site_name", content: "Fairplay" },
-      { name: "twitter:card", content: "summary_large_image" },
+      ...socialImageMeta(),
       { name: "twitter:title", content: seo.title },
-      { name: "twitter:description", content: seo.description },
-      { name: "twitter:image", content: OG_IMAGE },
+      { name: "twitter:description", content: clipMetaDescription(seo.description) },
       { name: "robots", content: "index, follow" },
     ],
     links: [{ rel: "canonical", href: url }],
@@ -46,7 +129,8 @@ export function pageHeadFor(path: string) {
   if (!seo) {
     return pageHead({
       title: "Fairplay | Cricket ID and sports exchange",
-      description: "Fairplay cricket ID, sports betting exchange and live casino. UPI deposits and WhatsApp help for new players.",
+      description:
+        "Fairplay cricket ID and sports exchange for IPL, football, tennis and live casino. UPI deposits, WhatsApp ID help, and payouts after markets settle.",
       keywords: "Fairplay, cricket ID, sports exchange",
     }, path);
   }
@@ -61,8 +145,14 @@ export const PAGE_SEO: Record<string, PageSeo> = {
       "Fairplay guides written in plain language: Fairplay ID, login, UPI deposits, IPL and cricket betting, football, tennis and live casino.",
     keywords: "Fairplay blog, cricket ID guide, IPL betting guide, Fairplay login, Fairplay deposit",
   },
+  "/authors": {
+    title: "Fairplay writers | Named authors on the desk",
+    description:
+      "Meet the Fairplay India writers: one named person per blog category, with a public profile linked from every post they write.",
+    keywords: "Fairplay authors, Fairplay writers, Fairplay support desk, Fairplay blog writers",
+  },
   "/matches": {
-    title: "All matches 2026–27 | Cricket, football and tennis index | Fairplay",
+    title: "All matches 2026–27 | Cricket, football, tennis",
     description:
       "Every 2026–27 fixture grouped by tournament: cricket series and IPL, FIFA World Cup 2026, ATP and WTA tennis. Filter by sport or search a team, event or venue.",
     keywords:
@@ -75,25 +165,22 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "Fairplay schedule, cricket fixtures 2026, FIFA World Cup 2026, tennis schedule, IPL fixtures",
   },
   "/login-guide": {
-    title: "Fairplay Login | Fairplay ID Sign Up, OTP & Password",
+    title: "Fairplay login | OTP on your cricket ID",
     description:
       "Fairplay login guide: sign in with your mobile number and OTP, recover a Fairplay login password, handle 2FA, and open cricket, football and tennis books.",
-    keywords:
-      "fairplay login, fair play login, fairplay login id sign up, fairplay login password, fairplay login download, fairplay id login",
+    keywords: "Fairplay login, Fairplay OTP, cricket ID login",
   },
   "/login-issues": {
-    title: "Fairplay Login Not Working | OTP & Locked ID Fixes",
+    title: "Fairplay login not working | OTP and locked ID",
     description:
       "Fairplay login not working? Fix OTP delays, a locked Fairplay ID, wrong password errors and login loops. WhatsApp support can reset access.",
-    keywords:
-      "fairplay login not working, fairplay login issues, fairplay login password reset, fairplay id locked, otp not received",
+    keywords: "Fairplay login not working, Fairplay OTP, locked Fairplay ID",
   },
   "/register-guide": {
-    title: "Fairplay Register | Fairplay Login ID Sign Up India",
+    title: "Fairplay register | Get a cricket ID on WhatsApp",
     description:
       "Fairplay register and sign up: create a Fairplay login ID from WhatsApp in minutes, then deposit via UPI and bet cricket, football, tennis or live casino.",
-    keywords:
-      "fairplay register, fairplay login id sign up, fairplay sign up, fairplay registration, get fairplay id",
+    keywords: "Fairplay register, Fairplay ID, cricket ID",
   },
 
   "/deposit-guide": {
@@ -102,8 +189,15 @@ export const PAGE_SEO: Record<string, PageSeo> = {
       "Add money to your Fairplay wallet with UPI, net banking or crypto. Minimums, credit times and what to do if a Fairplay deposit stays pending.",
     keywords: "Fairplay deposit, Fairplay UPI, add money Fairplay wallet, Fairplay wallet top-up",
   },
+  "/fairplay-deposit-number": {
+    title: "Fairplay Deposit number | Official WhatsApp for UPI",
+    description:
+      "Official Fairplay Deposit number on WhatsApp. Open the live deposit number Fairplay uses for UPI wallet help, pending credits and Fairplay ID checks.",
+    keywords:
+      "Fairplay, Fairplay Deposit number, Deposit number Fairplay, Fairplay WhatsApp deposit, Fairplay deposit WhatsApp",
+  },
   "/deposit-issues": {
-    title: "Fairplay deposit issues | Pending UPI and failed credits",
+    title: "Fairplay deposit issues | Pending UPI credits",
     description:
       "Fairplay deposit not showing? Check UTR, pending UPI credits and failed top-ups. Support can match the payment to your Fairplay ID.",
     keywords: "Fairplay deposit pending, Fairplay UPI failed, wallet not credited",
@@ -114,6 +208,13 @@ export const PAGE_SEO: Record<string, PageSeo> = {
       "Withdraw from Fairplay to UPI or bank after the market settles. Typical payout window, limits, and how to track a Fairplay withdrawal.",
     keywords: "Fairplay withdrawal, Fairplay payout, Fairplay UPI withdrawal, withdraw Fairplay winnings",
   },
+  "/fairplay-withdrawal-number": {
+    title: "Fairplay Withdrawal number | Official WhatsApp for payouts",
+    description:
+      "Official Fairplay Withdrawal number on WhatsApp. Open the live withdrawal number Fairplay uses for UPI and bank payout help, pending credits and Fairplay ID checks.",
+    keywords:
+      "Fairplay, Fairplay Withdrawal number, Withdrawal number Fairplay, Fairplay WhatsApp withdrawal, Fairplay payout WhatsApp",
+  },
   "/withdrawal-issues": {
     title: "Fairplay withdrawal issues | Delayed or stuck payouts",
     description:
@@ -121,28 +222,27 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "Fairplay withdrawal pending, Fairplay payout delayed, withdrawal not received",
   },
   "/fairplay-id": {
-    title: "Fairplay ID | Online Cricket ID & Fairplay Club Login",
+    title: "Fairplay ID | Cricket ID and one login",
     description:
       "Get a Fairplay ID — a verified online cricket ID for IPL, football, tennis and Fairplay club live casino. One login, UPI deposits, WhatsApp help.",
-    keywords:
-      "fairplay id, fairplay club, fair play online, online cricket id, cricket betting id, get fairplay id",
+    keywords: "Fairplay ID, cricket ID, Fairplay login",
   },
 
   "/ipl-betting": {
-    title: "IPL 2026 betting | Match winner, fancy and live odds | Fairplay",
+    title: "IPL 2026 betting | Winner, fancy and live odds",
     description:
       "Bet IPL 2026 on Fairplay: match winner, toss, fancy sessions and in-play. Use a Fairplay ID, fund with UPI, and open the fixture from the schedule.",
     keywords: "IPL betting, IPL 2026 betting, Fairplay IPL, cricket fancy betting, IPL live odds",
   },
   "/betting": {
-    title: "Fairplay Bet | Fair Play Exchange & Online Betting India",
+    title: "Fairplay betting | Cricket, football and tennis",
     description:
-      "Fairplay bet on the fair play exchange: cricket, football and tennis with live odds, IPL and FIFA books, fancy markets and one cricket betting ID.",
+      "Bet cricket, football and tennis on Fairplay: live odds, IPL books, fancy markets and one cricket ID. Fund with UPI; payouts usually in about 180 minutes.",
     keywords:
       "fairplay bet, fair play betting, fair play exchange, fairplay online, fair play cricket, cricket betting id, sports exchange India",
   },
   "/casino": {
-    title: "Fairplay Club Casino | Teen Patti, Andar Bahar & HD Tables",
+    title: "Fairplay casino | Teen Patti and live tables",
     description:
       "Fairplay club live casino with HD dealers: Teen Patti, Andar Bahar, roulette, blackjack and slots — same Fairplay login as your cricket wallet.",
     keywords:
@@ -164,13 +264,13 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   "/t20-world-cup": {
     title: "T20 World Cup betting | ICC cricket on Fairplay",
     description:
-      "Bet the ICC T20 World Cup on Fairplay: match winner, top batter, sixes and live books. Same cricket ID you use for IPL.",
+      "Bet the ICC T20 World Cup on Fairplay: match winner, top batter, sixes and live books on the same cricket ID you already use for IPL and domestic T20s.",
     keywords: "T20 World Cup betting, ICC T20 Fairplay, cricket World Cup odds, Fairplay cricket",
   },
   "/wpl-betting": {
     title: "WPL betting | Women's Premier League on Fairplay",
     description:
-      "WPL 2026 markets on Fairplay — match winner, top run-scorer and in-play. Use your existing Fairplay cricket ID.",
+      "WPL 2026 markets on Fairplay: match winner, top run-scorer and in-play women's cricket. Use the same Fairplay cricket ID and UPI wallet as men's IPL.",
     keywords: "WPL betting, Women's Premier League betting, Fairplay WPL, women's cricket betting",
   },
   "/champions-trophy": {
@@ -182,11 +282,11 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   "/kabaddi-betting": {
     title: "Kabaddi betting | PKL match and raid markets | Fairplay",
     description:
-      "Bet Pro Kabaddi on Fairplay: match winner, raid points, tackles and live odds. Same Fairplay ID as cricket.",
+      "Bet Pro Kabaddi on Fairplay: match winner, raid points, tackles and live odds. Same Fairplay ID and UPI wallet you already use for cricket.",
     keywords: "kabaddi betting, PKL betting, Pro Kabaddi Fairplay, raid betting",
   },
   "/horse-racing": {
-    title: "Horse racing betting | Win, place and in-running | Fairplay",
+    title: "Horse racing | Win, place and in-running",
     description:
       "Fairplay horse racing: win, place, each-way and in-running books. Fund the same wallet you use for cricket and football.",
     keywords: "horse racing betting, Fairplay horse racing, win place betting India",
@@ -194,17 +294,17 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   "/basketball-betting": {
     title: "Basketball betting | NBA moneyline and totals | Fairplay",
     description:
-      "Basketball on Fairplay: moneyline, spread, totals and player props. One Fairplay ID alongside cricket and tennis.",
+      "Basketball on Fairplay: moneyline, spread, totals and player props on NBA and other books. One Fairplay ID alongside cricket, football and tennis.",
     keywords: "basketball betting, NBA betting Fairplay, basketball exchange India",
   },
   "/esports-betting": {
     title: "Esports betting | Match and map markets | Fairplay",
     description:
-      "Esports on Fairplay — match winner, maps and live rounds. Use the same Fairplay ID as sports and casino.",
+      "Esports on Fairplay — match winner, maps and live rounds. Same Fairplay ID and UPI wallet as cricket, football, tennis and live casino.",
     keywords: "esports betting, Fairplay esports, CS betting, Dota betting",
   },
   "/support": {
-    title: "Fairplay support | ID, login, deposit and withdrawal help",
+    title: "Fairplay support | ID, login and wallet help",
     description:
       "Fairplay customer care for login, Fairplay ID, UPI deposits and withdrawals. WhatsApp is the fastest desk; this hub lists the usual fixes first.",
     keywords: "Fairplay support, Fairplay customer care, Fairplay help, Fairplay WhatsApp",
@@ -215,14 +315,21 @@ export const PAGE_SEO: Record<string, PageSeo> = {
       "Message Fairplay on WhatsApp for a new ID, OTP login help, deposits and payouts. Have your Fairplay ID and a screenshot ready.",
     keywords: "Fairplay WhatsApp, Fairplay customer care WhatsApp, get Fairplay ID WhatsApp",
   },
-  "/contact-us": {
-    title: "Contact Fairplay | WhatsApp and support",
+  "/fairplay-customer-care-number": {
+    title: "Fairplay Customer Care number | Official WhatsApp support",
     description:
-      "Contact Fairplay for ID verification, wallet questions and betting help. WhatsApp is the usual route; email for formal requests.",
+      "Official Fairplay Customer Care number on WhatsApp. Open the live customer care number Fairplay uses for ID, login OTP, UPI deposits and payouts.",
+    keywords:
+      "Fairplay, Fairplay Customer Care number, Customer Care number Fairplay, Fairplay customer care WhatsApp, Fairplay helpline",
+  },
+  "/contact-us": {
+    title: "Contact Fairplay | WhatsApp, email and issue hubs",
+    description:
+      "Contact Fairplay on official WhatsApp for ID, login and UPI help. Email for a written trail. Open login, deposit or withdrawal issue pages first.",
     keywords: "contact Fairplay, Fairplay support contact, Fairplay WhatsApp number",
   },
   "/app": {
-    title: "Fairplay App Download | Fairplay APK for Android & iOS",
+    title: "Fairplay app | Android APK and iOS",
     description:
       "Fairplay app download for Android and iOS: install the Fairplay APK, log in with your Fairplay ID, and bet live cricket, football, tennis and casino on UPI.",
     keywords:
@@ -236,7 +343,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "about Fairplay, Fairplay exchange, Fairplay India, what is Fairplay",
   },
   "/what-is-fairplay": {
-    title: "What is Fairplay? | Cricket ID and sports exchange explained",
+    title: "What is Fairplay? | Cricket ID and exchange",
     description:
       "Fairplay is an exchange where you bet cricket, football and tennis, plus live casino, on one ID. How odds, deposits and withdrawals work in India.",
     keywords: "what is Fairplay, Fairplay explained, cricket ID exchange, Fairplay betting",
@@ -254,10 +361,10 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "is Fairplay real, Fairplay genuine, Fairplay official, Fairplay scam check",
   },
   "/is-fairplay-legal": {
-    title: "Is Fairplay legal? | Licensing and play-from-India notes",
+    title: "Is Fairplay legal? | Play-from-India notes",
     description:
-      "Fairplay licensing in plain language, plus what Indian players should know about cricket IDs, deposits and local rules. Not legal advice.",
-    keywords: "is Fairplay legal, Fairplay licence, Fairplay India legal, Curaçao Fairplay",
+      "Fairplay is an offshore exchange. We do not publish a licence number or registered operator name. 18+, local law, not legal advice.",
+    keywords: "is Fairplay legal, Fairplay India legal, Fairplay cricket ID rules",
   },
   "/services": {
     title: "Fairplay services | Cricket ID, exchange and live casino",
@@ -274,7 +381,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   "/all-links": {
     title: "Fairplay site index | All pages, guides and betting hubs",
     description:
-      "Full list of Fairplay pages: Fairplay ID, IPL betting, schedule, login, deposits, casino, support and 180+ blog guides.",
+      "Full list of Fairplay pages: Fairplay ID, IPL betting, 2026 schedule, login, deposits, casino, support hubs and 180+ blog guides in one index.",
     keywords: "Fairplay sitemap, Fairplay all links, Fairplay pages, Fairplay guides",
   },
   "/telegram-channel": {
@@ -284,7 +391,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "Fairplay Telegram, Fairplay channel, Fairplay tips Telegram",
   },
   "/privacy-policy": {
-    title: "Fairplay privacy policy | How we handle ID and wallet data",
+    title: "Fairplay privacy | ID and wallet data",
     description:
       "Fairplay privacy policy: what we collect for a Fairplay ID, login and payouts, and how that data is used. Read this before you register.",
     keywords: "Fairplay privacy policy, Fairplay data protection",
@@ -308,10 +415,10 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "Fairplay security, Fairplay 2FA, Fairplay SSL, account protection",
   },
   "/legal-status": {
-    title: "Fairplay legal status | Licence and operator details",
+    title: "Fairplay legal status | What we publish",
     description:
-      "Who operates Fairplay, licensing notes, and where to read terms, privacy and responsible gaming. For players comparing cricket ID platforms.",
-    keywords: "Fairplay legal, Fairplay licence, Fairplay operator",
+      "Brand Fairplay, site fairplayindia.com, support email. No licence number or registered company name is published here. 18+, not legal advice.",
+    keywords: "Fairplay legal, Fairplay operator, Fairplay cricket ID",
   },
   "/kyc-verification-policy": {
     title: "Fairplay KYC policy | What we ask for and why",
@@ -328,13 +435,13 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   "/rules-regulations": {
     title: "Fairplay betting rules | Market settlement and fair play",
     description:
-      "How Fairplay settles cricket, football, tennis and casino markets, including abandoned matches and obvious errors.",
+      "How Fairplay settles cricket, football, tennis and casino markets, including abandoned matches, voids and obvious errors on your Fairplay ID.",
     keywords: "Fairplay betting rules, market settlement, Fairplay fair play",
   },
   "/disclaimer": {
     title: "Fairplay disclaimer | Betting risk and information use",
     description:
-      "Fairplay pages are for information. Betting involves risk. Check local laws before you open a Fairplay ID or deposit.",
+      "Fairplay pages are for information. Betting involves risk of loss. Check local laws before you open a Fairplay ID, deposit with UPI, or play casino.",
     keywords: "Fairplay disclaimer, betting risk, Fairplay information",
   },
   "/account-issues": {
@@ -352,19 +459,19 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   "/11xplay": {
     title: "11xplay and Fairplay | Partner cricket exchange",
     description:
-      "11xplay through Fairplay: one ID, cricket and casino. When players use 11xplay vs the main Fairplay exchange.",
+      "11xplay through Fairplay: cricket and casino on a related ID. When to use 11xplay versus the main Fairplay exchange, and how WhatsApp issues access.",
     keywords: "11xplay Fairplay, 11xplay cricket ID, Fairplay network",
   },
   "/laser247": {
     title: "Laser247 and Fairplay | Live cricket exchange partner",
     description:
-      "Laser247 on the Fairplay network for live cricket and football. Same WhatsApp onboarding as a Fairplay ID.",
+      "Laser247 on the Fairplay network for live cricket and football. Same WhatsApp onboarding as a Fairplay ID, with UPI on the linked wallet.",
     keywords: "Laser247 Fairplay, Laser247 cricket, Fairplay Laser247 ID",
   },
   "/cricbet99": {
     title: "Cricbet99 and Fairplay | Cricket-focused partner book",
     description:
-      "Cricbet99 in the Fairplay partner list. Cricket markets, ID help, and how it sits next to Fairplay IPL books.",
+      "Cricbet99 in the Fairplay partner list. Cricket markets, ID help, and how it sits next to Fairplay IPL books on the same WhatsApp desk.",
     keywords: "Cricbet99 Fairplay, Cricbet99 cricket ID",
   },
   "/fairdeal": {
@@ -376,55 +483,55 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   "/fairplay-vs-lotus365": {
     title: "Fairplay vs Lotus365 | Cricket ID and exchange compared",
     description:
-      "Fairplay vs Lotus365 for Indian players: cricket books, Fairplay ID, UPI, and live casino. A straight comparison, not a slogan.",
-    keywords: "Fairplay vs Lotus365, Lotus365 cricket ID, Fairplay comparison",
+      "Fairplay vs Lotus365 for Indian players: cricket books, Fairplay ID, UPI, live casino, and player reviews on OTP login and withdrawals.",
+    keywords: "Fairplay vs Lotus365, Lotus365 cricket ID, Fairplay comparison, Fairplay vs Lotus365 reviews",
   },
   "/fairplay-vs-reddybook": {
     title: "Fairplay vs Reddybook | Exchange and ID comparison",
     description:
-      "Fairplay compared with Reddybook: cricket ID, deposits, and which books you actually get. Use this before you WhatsApp for an ID.",
-    keywords: "Fairplay vs Reddybook, Reddybook cricket ID",
+      "Fairplay vs Reddybook for cricket ID, UPI deposits, OTP login, and player reviews on withdrawals after settlement.",
+    keywords: "Fairplay vs Reddybook, Reddybook cricket ID, Fairplay vs Reddybook reviews",
   },
   "/fairplay-vs-gold365": {
     title: "Fairplay vs Gold365 | Which cricket ID to use",
     description:
-      "Fairplay and Gold365 side by side — liquidity, IPL markets, and whether you need both on one network ID.",
-    keywords: "Fairplay vs Gold365, Gold365 vs Fairplay",
+      "Fairplay vs Gold365: separate IDs, IPL on Fairplay, UPI UTRs, and player reviews on KYC withdrawals after settlement.",
+    keywords: "Fairplay vs Gold365, Gold365 vs Fairplay, Fairplay vs Gold365 reviews",
   },
   "/fairplay-vs-mahavir-book": {
     title: "Fairplay vs Mahavir Book | Cricket exchange comparison",
     description:
-      "Fairplay vs Mahavir Book for cricket betting, fancy markets and payouts. What changes if you already have a Fairplay ID.",
-    keywords: "Fairplay vs Mahavir Book, Mahavir Book cricket",
+      "Fairplay vs Mahavir Book: exchange login vs a traditional desk, UPI vs agent credit, and player reviews on OTP and payouts after settlement.",
+    keywords: "Fairplay vs Mahavir Book, Mahavir Book cricket, Fairplay vs Mahavir Book reviews",
   },
   "/fairplay-vs-diamond-exchange": {
     title: "Fairplay vs Diamond Exchange | Liquidity and ID",
     description:
-      "Diamond Exchange compared with Fairplay: cricket books, login, and UPI wallet. For players choosing a cricket ID in India.",
-    keywords: "Fairplay vs Diamond Exchange, Diamond Exchange cricket ID",
+      "Fairplay vs Diamond Exchange: separate IDs, IPL on Fairplay, UPI UTRs, and player reviews on migrate scams and payouts after settlement.",
+    keywords: "Fairplay vs Diamond Exchange, Diamond Exchange cricket ID, Fairplay vs Diamond Exchange reviews",
   },
   "/fairplay-vs-laser247": {
     title: "Fairplay vs Laser247 | Live cricket books compared",
     description:
-      "Fairplay and Laser247 both run live cricket. Differences in ID, in-play, and when Fairplay WhatsApp issues a Laser247 account.",
-    keywords: "Fairplay vs Laser247, Laser247 vs Fairplay",
+      "Fairplay vs Laser247: separate IDs, in-play slips, IPL on Fairplay, and player reviews on OTP login and payouts after settlement.",
+    keywords: "Fairplay vs Laser247, Laser247 vs Fairplay, Fairplay vs Laser247 reviews",
   },
   "/fairplay-vs-11xplay": {
     title: "Fairplay vs 11xplay | Cricket ID comparison",
     description:
-      "Fairplay vs 11xplay: markets, app, and whether one Fairplay ID covers both. Useful if you already bet IPL on either book.",
-    keywords: "Fairplay vs 11xplay, 11xplay vs Fairplay",
+      "Fairplay vs 11xplay: partner book vs main Fairplay login, IPL, app installs, and player reviews on wallets, UTRs and payouts after settlement.",
+    keywords: "Fairplay vs 11xplay, 11xplay vs Fairplay, Fairplay vs 11xplay reviews",
   },
   "/fairplay-vs-skyexchange247": {
     title: "Fairplay vs Skyexchange247 | Exchange comparison",
     description:
-      "Fairplay compared with Skyexchange247 for cricket, football and casino. ID, deposits and which desk you message for help.",
-    keywords: "Fairplay vs Skyexchange, Skyexchange247 cricket ID",
+      "Fairplay vs Skyexchange247: separate exchanges, clone UPI warnings, no in-app transfer, and player reviews on OTP login and payouts after settlement.",
+    keywords: "Fairplay vs Skyexchange, Skyexchange247 cricket ID, Fairplay vs Skyexchange247 reviews",
   },
   "/fairplay-vs-fairdeal": {
     title: "Fairplay vs Fairdeal | Partner vs main exchange",
     description:
-      "Fairplay vs Fairdeal: when to use the main Fairplay cricket ID and when a Fairdeal book is offered in the same network.",
-    keywords: "Fairplay vs Fairdeal, Fairdeal cricket ID",
+      "Fairplay vs Fairdeal: partner book vs main Fairplay ID, IPL, second-wallet warnings, and player reviews on OTP login and payouts after settlement.",
+    keywords: "Fairplay vs Fairdeal, Fairdeal cricket ID, Fairplay vs Fairdeal reviews",
   },
 };

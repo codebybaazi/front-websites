@@ -1,19 +1,35 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { motion } from 'framer-motion';
-import { Calendar, User, Tag, ArrowLeft, ShieldCheck, Zap, Info } from 'lucide-react';
+import { Calendar, ArrowLeft, Zap, Info } from 'lucide-react';
 import { Link } from '@tanstack/react-router';
 import { AIOverview } from '@/components/AIOverview';
-import { getBlogArticleBlocks, getBlogSeo } from '@/utils/blog-seo';
+import { getBlogArticleBlocks, getBlogSeo, hasUniqueBlogBody, type BlogBlock } from '@/utils/blog-seo';
 import { InternalLinkGrid } from '@/components/InternalLinkGrid';
 import { JsonLd } from '@/components/JsonLd';
+import { AuthorByline } from '@/components/AuthorByline';
 import { faqPageNode } from '@/utils/faq-schema';
+import { howToJsonLd } from '@/utils/howto-schema';
 import { getHubLinksForSlug, relatedBlogCards } from '@/utils/internal-links';
 import { BLOG_POST_DATES, blogPostIsoDate } from '@/utils/blog-post-dates';
-import { OG_IMAGE, absolutePageUrl } from '@/utils/page-seo';
+import { SITE_LOGO, SITE_ORIGIN, absolutePageUrl, socialImageMeta, speakableSpecification } from '@/utils/page-seo';
+import { articleAuthorNode, authorAbsoluteUrl, authorForPostSlug } from '@/lib/authors';
+import { blogArticles } from '@/lib/blog-data';
 import { waLink } from "@/lib/whatsapp";
 import { POST_BANNERS } from "@/lib/blog-banners";
 
 
+
+function howToStepsFromBlocks(blocks: BlogBlock[]) {
+  const ol = blocks.find((item) => item.t === "ol");
+  const items = (ol?.items || []).filter((li): li is string => typeof li === "string");
+  return items.map((item, index) => {
+    const colon = item.indexOf(": ");
+    if (colon > 2 && colon < 80) {
+      return { name: item.slice(0, colon), text: item.slice(colon + 2) };
+    }
+    return { name: `Step ${index + 1}`, text: item };
+  });
+}
 
 export const Route = createFileRoute('/posts/$slug')({
   loader: ({ params }: { params: { slug: string } }) => {
@@ -23,24 +39,33 @@ export const Route = createFileRoute('/posts/$slug')({
     const slug = loaderData?.slug || '';
     const seo = getBlogSeo(slug);
     const url = absolutePageUrl(`/posts/${slug}`);
+    const author = authorForPostSlug(slug);
+    const isoDate = blogPostIsoDate(slug);
 
     return {
       title: seo.title,
       meta: [
         { title: seo.title },
         { name: "description", content: seo.description },
+        ...(seo.keywords ? [{ name: "keywords", content: seo.keywords }] : []),
+        { name: "author", content: author.name },
         { property: "og:title", content: seo.title },
         { property: "og:description", content: seo.description },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
         { property: "og:locale", content: "en_IN" },
         { property: "og:site_name", content: "Fairplay" },
-        { property: "og:image", content: OG_IMAGE },
-        { name: "twitter:card", content: "summary_large_image" },
+        { property: "article:author", content: authorAbsoluteUrl(author.slug) },
+        ...(isoDate
+          ? [
+              { property: "article:published_time", content: isoDate },
+              { property: "article:modified_time", content: isoDate },
+            ]
+          : []),
+        ...socialImageMeta(),
         { name: "twitter:title", content: seo.title },
         { name: "twitter:description", content: seo.description },
-        { name: "twitter:image", content: OG_IMAGE },
-        { name: "robots", content: "index, follow" }
+        { name: "robots", content: hasUniqueBlogBody(slug) ? "index, follow" : "noindex, follow" }
       ],
       links: [{ rel: "canonical", href: url }],
     }
@@ -56,12 +81,27 @@ function PostDetail() {
   const postDate = BLOG_POST_DATES[slug] || "Jan 2026";
   const isoDate = blogPostIsoDate(slug);
   const url = absolutePageUrl(`/posts/${slug}`);
+  const heroSrc = POST_BANNERS[slug] || "/og-banner.jpg";
+  const heroAlt = `${title} on Fairplay`;
+  const schemaImage = heroSrc.startsWith("http")
+    ? heroSrc
+    : `${SITE_ORIGIN}${heroSrc.startsWith("/") ? heroSrc : `/${heroSrc}`}`;
+  const author = authorForPostSlug(slug);
+  const postMeta = blogArticles.find((article) => article.slug === slug);
+  const postCategory = postMeta?.category || "Guide";
 
   const faqNode = faqPageNode(
     content
       .filter((item) => item.t === "faq")
       .flatMap((item) => (item.items || []) as Array<{ q?: string; a?: string }>),
   );
+  const howTo = howToJsonLd({
+    path: `/posts/${slug}`,
+    name: seo.h1,
+    description: seo.description,
+    totalTime: "PT10M",
+    steps: howToStepsFromBlocks(content),
+  });
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -70,15 +110,20 @@ function PostDetail() {
         headline: seo.h1,
         description: seo.description,
         url,
-        image: OG_IMAGE,
+        image: schemaImage,
+        keywords: seo.keywords,
+        inLanguage: "en-IN",
         ...(isoDate ? { datePublished: isoDate, dateModified: isoDate } : {}),
-        author: { "@type": "Organization", name: "Fairplay", url: absolutePageUrl("/") },
+        author: articleAuthorNode(author),
+        articleSection: postCategory,
         publisher: {
           "@type": "Organization",
           name: "Fairplay",
-          logo: { "@type": "ImageObject", url: OG_IMAGE },
+          url: SITE_ORIGIN,
+          logo: { "@type": "ImageObject", url: SITE_LOGO },
         },
         mainEntityOfPage: { "@type": "WebPage", "@id": url },
+        speakable: speakableSpecification(["#post-summary"]),
       },
       ...(faqNode ? [faqNode] : []),
     ],
@@ -86,17 +131,16 @@ function PostDetail() {
 
   const relatedPosts = relatedBlogCards(slug, 3);
 
-  
   return (
     <div className="min-h-screen bg-background text-foreground">
       <JsonLd data={jsonLd} />
+      {howTo ? <JsonLd data={howTo} /> : null}
       {/* Premium baked-artwork hero for posts that have a dedicated banner */}
-      {POST_BANNERS[slug] ? (
       <section className="relative w-full overflow-hidden bg-[#070708] pt-32 pb-12 md:pt-40 md:pb-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(255,100,0,0.12)_0%,transparent_65%)]" />
         <div className="container relative z-10 max-w-5xl mx-auto px-4">
           <div className="flex flex-wrap items-center gap-3 mb-6 text-[10px] font-black uppercase tracking-[0.25em]">
-            <span className="px-3 py-1 rounded-full bg-primary/15 border border-primary/30 text-primary">Guide</span>
+            <span className="px-3 py-1 rounded-full bg-primary/15 border border-primary/30 text-primary">{postCategory}</span>
             <span className="text-white/30">Published {postDate}</span>
           </div>
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-black italic uppercase tracking-tighter leading-[0.9] text-white mb-5">
@@ -112,8 +156,8 @@ function PostDetail() {
             className="relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_100px_rgba(255,100,0,0.15)]"
           >
             <img
-              src={POST_BANNERS[slug]}
-              alt={title}
+              src={heroSrc}
+              alt={heroAlt}
               width={1600}
               height={900}
               className="w-full h-auto block"
@@ -121,173 +165,6 @@ function PostDetail() {
           </motion.div>
         </div>
       </section>
-      ) : (
-      <section className="relative min-h-[500px] md:h-[65vh] w-full overflow-hidden flex items-center justify-center">
-        {/* Dynamic Background with Cinematic Depth */}
-        <div className="absolute inset-0 bg-[#070708]">
-          <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_30%,rgba(255,100,0,0.15)_0%,transparent_70%)]" />
-          <div className="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(255,100,0,0.1)_0%,transparent_60%)]" />
-          
-          {/* Animated Grid / Tech Pattern */}
-          <div className="absolute inset-0 opacity-[0.05]" 
-            style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)', backgroundSize: '50px 50px' }} 
-          />
-          
-          {/* Cinematic Light Streaks */}
-          <div className="absolute top-1/4 -left-20 w-[600px] h-[2px] bg-gradient-to-r from-transparent via-primary/40 to-transparent rotate-[35deg] blur-xl animate-pulse" />
-          <div className="absolute bottom-1/3 -right-20 w-[800px] h-[2px] bg-gradient-to-r from-transparent via-primary/30 to-transparent -rotate-[25deg] blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }} />
-        </div>
-
-        {/* Specialized Design for Live Casino Post Hero */}
-        {slug === "fairplay-live-casino-features-and-services" ? (
-          <div className="container relative z-10 px-4 flex items-center justify-center">
-             <motion.div 
-               initial={{ opacity: 0, scale: 0.9 }}
-               animate={{ opacity: 1, scale: 1 }}
-               transition={{ duration: 1 }}
-               className="w-full max-w-6xl aspect-[16/9] md:aspect-[21/9] rounded-[2rem] border border-white/10 overflow-hidden relative shadow-[0_0_100px_rgba(255,100,0,0.2)]"
-             >
-                <div 
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: "url('https://images.unsplash.com/photo-1596838132731-dd9fd7305951?auto=format&fit=crop&q=80&w=2000')" }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
-                
-                {/* Content Overlay matching reference style */}
-                <div className="absolute inset-0 p-8 md:p-16 flex flex-col justify-center max-w-2xl">
-                   <div className="flex items-center gap-3 mb-6">
-                      <div className="px-3 py-1 bg-primary text-black text-[10px] font-black uppercase tracking-widest rounded">LIVE CASINO</div>
-                      <div className="w-1 h-1 rounded-full bg-white/30" />
-                      <div className="text-white/60 text-[10px] font-bold uppercase tracking-[0.2em]">Masterclass 2026</div>
-                   </div>
-                   
-                   <h1 className="text-4xl md:text-6xl lg:text-7xl font-black italic uppercase tracking-tighter leading-[0.85] text-white mb-6">
-                     Fairplay <br />
-                     <span className="text-primary not-italic">Live Casino</span> <br />
-                     <span className="text-white/80">Premium Guide</span>
-                   </h1>
-
-                   <p className="text-white/50 text-sm md:text-lg font-medium leading-relaxed mb-8 max-w-md hidden sm:block">
-                     Experience HD streaming, professional dealers, and elite betting markets on India's most trusted live casino platform.
-                   </p>
-
-                   <div className="flex flex-wrap gap-4">
-                      <a 
-                        href={waLink()}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-6 py-3 bg-white text-black font-black uppercase text-xs tracking-widest rounded-full hover:bg-primary transition-colors cursor-pointer"
-                      >
-                        Get Started
-                      </a>
-                      <div className="px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 text-white font-black uppercase text-xs tracking-widest rounded-full hover:bg-white/20 transition-colors cursor-pointer">
-                        Watch Live
-                      </div>
-                   </div>
-                </div>
-
-                {/* Corner Badges */}
-                <div className="absolute top-8 right-8 hidden md:flex flex-col items-end gap-2">
-                   <div className="px-4 py-2 bg-black/60 backdrop-blur-md rounded-xl border border-white/10 flex items-center gap-3">
-                      <Zap className="w-4 h-4 text-primary" />
-                      <div className="text-[9px] font-black text-white uppercase tracking-widest">Low Latency HD</div>
-                   </div>
-                   <div className="px-4 py-2 bg-black/60 backdrop-blur-md rounded-xl border border-white/10 flex items-center gap-3">
-                      <ShieldCheck className="w-4 h-4 text-primary" />
-                      <div className="text-[9px] font-black text-white uppercase tracking-widest">Certified Dealers</div>
-                   </div>
-                </div>
-
-                <div className="absolute bottom-8 right-8 hidden md:block">
-                   <div className="text-right">
-                      <div className="text-[8px] font-bold text-white/30 uppercase tracking-[0.3em] mb-1">Fairplay</div>
-                      <div className="text-xs font-black text-white/60 uppercase">Fairplay Gaming Group</div>
-                   </div>
-                </div>
-             </motion.div>
-          </div>
-        ) : (
-          <div className="container relative z-10 px-4 py-12 flex flex-col md:flex-row items-center gap-10">
-            {/* Text Content Area */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="flex-1 text-center md:text-left"
-            >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
-                <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary">Masterclass Edition</span>
-              </div>
-              
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black italic uppercase tracking-tighter leading-[0.9] text-white mb-6 drop-shadow-2xl">
-                {title}
-              </h1>
-              
-              <p className="text-base md:text-lg text-white/50 max-w-xl font-medium leading-relaxed mb-8">
-                {seo.description}
-              </p>
-              
-              <div className="flex flex-wrap items-center justify-center md:justify-start gap-5 text-[10px] font-bold text-white/40 uppercase tracking-widest border-t border-white/5 pt-6">
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4 text-primary" />
-                  <span>Updated: {postDate}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-primary" />
-                  <span>Verified Content</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-primary" />
-                  <span>Elite Platform</span>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Visual 3D Component / Mockup Effect */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.8, y: 30 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="flex-1 relative hidden lg:block"
-            >
-              <div className="relative aspect-[4/3] w-full max-w-lg mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent backdrop-blur-3xl rounded-3xl border border-white/10 shadow-[0_0_100px_rgba(255,100,0,0.1)] overflow-hidden">
-                  <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1596838132731-dd9fd7305951?auto=format&fit=crop&q=80&w=800')] bg-cover bg-center mix-blend-overlay opacity-30" />
-                  
-                  <div className="absolute inset-0 p-8 flex flex-col justify-between">
-                    <div className="flex justify-between items-start">
-                      <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center border border-primary/30">
-                        <Zap className="w-5 h-5 text-primary" />
-                      </div>
-                      <div className="px-3 py-1 rounded-full bg-primary/20 text-primary text-[9px] font-bold border border-primary/30">
-                        FAIRPLAY ELITE
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-3">
-                      <div className="h-3 w-1/3 bg-white/10 rounded-full overflow-hidden">
-                        <div className="h-full w-2/3 bg-primary animate-[shimmer_2s_infinite]" />
-                      </div>
-                      <div className="h-20 w-full bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center">
-                         <span className="text-[10px] text-white/20 font-black tracking-widest uppercase">Premium Data Stream</span>
-                      </div>
-                      <div className="flex gap-2">
-                        <div className="h-9 flex-1 bg-primary/20 rounded-xl border border-primary/30" />
-                        <div className="h-9 flex-1 bg-white/10 rounded-xl border border-white/10" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        )}
-        
-        {/* Bottom Fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-      </section>
-      )}
 
 
       <article className="container max-w-4xl mx-auto px-4 py-10">
@@ -304,13 +181,11 @@ function PostDetail() {
           </Link>
 
           <div className="flex flex-wrap items-center gap-4 mb-6">
-            <span className="text-[10px] font-black uppercase tracking-[0.2em] px-2 py-1 bg-primary/10 text-primary rounded">INSIGHTS</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.2em] px-2 py-1 bg-primary/10 text-primary rounded">{postCategory}</span>
             <div className="flex items-center gap-2 text-[10px] text-muted-foreground font-bold uppercase">
               <Calendar className="w-3 h-3 text-primary" /> {postDate}
             </div>
-            <div className="flex items-center gap-2 text-[10px] text-muted-foreground font-bold uppercase border-l border-border pl-4">
-              <ShieldCheck className="w-3 h-3 text-primary" /> VERIFIED CONTENT
-            </div>
+            <AuthorByline author={author} />
           </div>
           
           <AIOverview 
@@ -340,15 +215,6 @@ function PostDetail() {
               ),
             )}
           </nav>
-          
-          {!POST_BANNERS[slug] && (
-            <div className="aspect-video bg-card border border-border rounded-[2rem] overflow-hidden mb-12 relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 group-hover:opacity-100 transition-opacity" />
-              <div className="w-full h-full flex items-center justify-center">
-                <Zap className="w-24 h-24 text-primary/20 group-hover:scale-110 transition-transform duration-500" />
-              </div>
-            </div>
-          )}
         </motion.div>
 
         <motion.div 
@@ -365,12 +231,16 @@ function PostDetail() {
                 if (item.t === 'h3') return <h3 key={idx} className="text-xl font-bold italic uppercase tracking-tight text-primary mt-12 mb-4">{item.c}</h3>;
                 if (item.t === 'ul' || item.t === 'ol') {
                   const ListTag = item.t as 'ul' | 'ol';
+                  const numbered = item.t === 'ol';
                   return (
-                    <ListTag key={idx} className="list-disc list-inside space-y-2 text-muted-foreground/90 my-6">
+                    <ListTag
+                      key={idx}
+                      className={`${numbered ? "list-decimal" : "list-disc"} list-inside space-y-2 text-muted-foreground/90 my-6`}
+                    >
                       {(item.c || item.items || [])
                         .filter((li: any) => typeof li === 'string')
                         .map((li: string, liIdx: number) => (
-                          <li key={liIdx}>{li}</li>
+                          <li key={liIdx} id={numbered ? `step-${liIdx + 1}` : undefined}>{li}</li>
                         ))}
                     </ListTag>
                   );
@@ -380,7 +250,7 @@ function PostDetail() {
                     <div key={idx} className="space-y-6 my-12">
                       {(item.items || []).map((faq: any, fIdx: number) => (
                         <div key={fIdx} className="bg-card/30 border border-white/5 p-8 rounded-3xl hover:border-primary/20 transition-colors">
-                          <h3 className="text-white font-black uppercase text-sm tracking-widest mb-3 flex items-center gap-3">
+                          <h3 className="text-white font-semibold text-base tracking-normal mb-3 flex items-center gap-3">
                             <Zap className="w-4 h-4 text-primary" /> {faq.q}
                           </h3>
                           <p className="text-muted-foreground/80 leading-relaxed italic">
@@ -451,6 +321,18 @@ function PostDetail() {
             </Link>
           </div>
         </motion.div>
+
+        <section className="mt-16 rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
+          <AuthorByline author={author} />
+          <p className="mt-4 text-muted-foreground leading-relaxed">{author.shortBio}</p>
+          <Link
+            to="/authors/$slug"
+            params={{ slug: author.slug }}
+            className="inline-flex mt-4 text-[11px] font-black uppercase tracking-widest text-primary hover:underline"
+          >
+            More from {author.firstName}
+          </Link>
+        </section>
 
         <InternalLinkGrid
           title="Related Fairplay pages"

@@ -89,14 +89,14 @@ function PlatformGold365() {
             <div className="max-w-3xl relative z-10">
               <h2 className="text-4xl md:text-5xl font-black italic uppercase mb-8 tracking-tighter">THE <span className="text-primary">365 COMMITMENT</span></h2>
               <p className="text-muted-foreground text-lg mb-12 leading-relaxed">
-                We understand that the world of sports never sleeps. That's why Gold365 provides uninterrupted access to over 50,000 live events annually, backed by the global power and trust of the Fairplay network.
+                Gold365 is a partner book. Cricket, football and tennis sit on the ID the desk issues. We do not publish event counts or user totals. Confirm the wallet on WhatsApp before you deposit.
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
                 {[
-                  { value: "50K+", label: "Events / Year" },
-                  { value: "1M+", label: "Active Users" },
-                  { value: "24/7", label: "Elite Support" },
-                  { value: "100%", label: "Safe & Secure" }
+                  { value: "2017", label: "Brand since" },
+                  { value: "OTP", label: "Login" },
+                  { value: "~180 min", label: "Typical payouts" },
+                  { value: "18+", label: "Adults only" }
                 ].map((stat, i) => (
                   <div key={i}>
                     <div className="text-4xl font-black text-primary italic mb-2">{stat.value}</div>

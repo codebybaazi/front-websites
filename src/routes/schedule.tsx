@@ -6,7 +6,7 @@ import { useState, useMemo, useEffect } from 'react'
 import { AIPoweredOverview } from '@/components/AIPoweredOverview'
 import { FAQSection } from '@/components/FAQSection'
 import { JsonLd } from '@/components/JsonLd'
-import { CRICKET_SCHEDULE_DATA } from '@/lib/cricket-schedule'
+import { CRICKET_DATE_NOTE, CRICKET_SCHEDULE_DATA } from '@/lib/cricket-schedule'
 import { FOOTBALL_SCHEDULE_DATA } from '@/lib/sports-data'
 import { TENNIS_SCHEDULE_DATA } from '@/lib/tennis-schedule'
 import { cricketTeamCode } from '@/utils/cricket-keywords'
@@ -42,7 +42,7 @@ const SPORT_SECTIONS: Array<{
   intro: string;
   series: SportSeries[];
 }> = [
-  { key: 'cricket', title: 'Cricket fixtures 2026', intro: 'IPL, ICC T20, ODIs and bilateral series — open a match for predictions and Fairplay cricket markets.', series: CRICKET_SERIES },
+  { key: 'cricket', title: 'Cricket fixtures 2026', intro: `IPL, ICC T20, ODIs and bilateral series. Dates are a ${CRICKET_DATE_NOTE.toLowerCase()}. Open a match for predictions and Fairplay cricket markets.`, series: CRICKET_SERIES },
   { key: 'football', title: 'Football fixtures 2026', intro: 'FIFA World Cup 2026 and club fixtures — 1X2, BTTS and live books on the same Fairplay ID.', series: FOOTBALL_SERIES },
   { key: 'tennis', title: 'Tennis fixtures 2026', intro: 'ATP and WTA tour matches — set betting, games and live tennis on Fairplay.', series: TENNIS_SERIES },
 ];
@@ -169,10 +169,10 @@ function SchedulePage() {
         <div className="max-w-5xl mx-auto mb-12">
           <AIPoweredOverview
             title="Intelligence overview: 2026 season"
-            summary="The Fairplay schedule lists every 2026 cricket fixture (IPL, ICC T20, ODIs and bilateral tours), the FIFA World Cup 2026 calendar and the ATP/WTA season in date order. Open a fixture for prediction notes, venue context and the markets that usually go up for that format."
+            summary="The Fairplay schedule lists every 2026 cricket fixture (IPL, ICC T20, ODIs and bilateral tours), the FIFA World Cup 2026 calendar and the ATP/WTA season in date order. Cricket days are a series window, not a confirmed XI date. Open a fixture for prediction notes, venue context and the markets that usually go up for that format."
             highlights={[
               'Date-first table for cricket, football and tennis',
-              'Sport tabs plus search by team, series or venue',
+              'Cricket dates: series window, not a confirmed XI date',
               'Times shown in IST unless the match page says otherwise',
               'Every row opens the same match detail page as /matches',
             ]}
@@ -347,6 +347,9 @@ function SchedulePage() {
                                           <span>{match.date || 'TBD'}</span>
                                         )}
                                       </div>
+                                      {sport === 'cricket' && (
+                                        <p className="mt-1 text-[9px] font-bold uppercase tracking-widest text-white/35">{CRICKET_DATE_NOTE}</p>
+                                      )}
                                     </div>
 
                                     <div>

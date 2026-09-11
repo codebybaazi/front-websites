@@ -15,6 +15,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as AccountIssuesRouteImport } from './routes/account-issues'
 import { Route as AllLinksRouteImport } from './routes/all-links'
 import { Route as AppRouteImport } from './routes/app'
+import { Route as AuthorsRouteImport } from './routes/authors'
 import { Route as BasketballBettingRouteImport } from './routes/basketball-betting'
 import { Route as BettingRouteImport } from './routes/betting'
 import { Route as BlogRouteImport } from './routes/blog'
@@ -29,6 +30,8 @@ import { Route as DepositIssuesRouteImport } from './routes/deposit-issues'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as EsportsBettingRouteImport } from './routes/esports-betting'
 import { Route as FairdealRouteImport } from './routes/fairdeal'
+import { Route as FairplayCustomerCareNumberRouteImport } from './routes/fairplay-customer-care-number'
+import { Route as FairplayDepositNumberRouteImport } from './routes/fairplay-deposit-number'
 import { Route as FairplayIdRouteImport } from './routes/fairplay-id'
 import { Route as FairplayVs11xplayRouteImport } from './routes/fairplay-vs-11xplay'
 import { Route as FairplayVsDiamondExchangeRouteImport } from './routes/fairplay-vs-diamond-exchange'
@@ -39,6 +42,7 @@ import { Route as FairplayVsLotus365RouteImport } from './routes/fairplay-vs-lot
 import { Route as FairplayVsMahavirBookRouteImport } from './routes/fairplay-vs-mahavir-book'
 import { Route as FairplayVsReddybookRouteImport } from './routes/fairplay-vs-reddybook'
 import { Route as FairplayVsSkyexchange247RouteImport } from './routes/fairplay-vs-skyexchange247'
+import { Route as FairplayWithdrawalNumberRouteImport } from './routes/fairplay-withdrawal-number'
 import { Route as Gold365RouteImport } from './routes/gold365'
 import { Route as HorseRacingRouteImport } from './routes/horse-racing'
 import { Route as IplBettingRouteImport } from './routes/ipl-betting'
@@ -73,6 +77,8 @@ import { Route as WithdrawalIssuesRouteImport } from './routes/withdrawal-issues
 import { Route as WplBettingRouteImport } from './routes/wpl-betting'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
+import { Route as AuthorsIndexRouteImport } from './routes/authors.index'
+import { Route as AuthorsSlugRouteImport } from './routes/authors.$slug'
 import { Route as MatchSlugRouteImport } from './routes/match.$slug'
 import { Route as PostsSlugRouteImport } from './routes/posts.$slug'
 import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
@@ -105,6 +111,11 @@ const AllLinksRoute = AllLinksRouteImport.update({
 const AppRoute = AppRouteImport.update({
   id: '/app',
   path: '/app',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthorsRoute = AuthorsRouteImport.update({
+  id: '/authors',
+  path: '/authors',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BasketballBettingRoute = BasketballBettingRouteImport.update({
@@ -177,6 +188,17 @@ const FairdealRoute = FairdealRouteImport.update({
   path: '/fairdeal',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FairplayCustomerCareNumberRoute =
+  FairplayCustomerCareNumberRouteImport.update({
+    id: '/fairplay-customer-care-number',
+    path: '/fairplay-customer-care-number',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FairplayDepositNumberRoute = FairplayDepositNumberRouteImport.update({
+  id: '/fairplay-deposit-number',
+  path: '/fairplay-deposit-number',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FairplayIdRoute = FairplayIdRouteImport.update({
   id: '/fairplay-id',
   path: '/fairplay-id',
@@ -227,6 +249,12 @@ const FairplayVsSkyexchange247Route =
   FairplayVsSkyexchange247RouteImport.update({
     id: '/fairplay-vs-skyexchange247',
     path: '/fairplay-vs-skyexchange247',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FairplayWithdrawalNumberRoute =
+  FairplayWithdrawalNumberRouteImport.update({
+    id: '/fairplay-withdrawal-number',
+    path: '/fairplay-withdrawal-number',
     getParentRoute: () => rootRouteImport,
   } as any)
 const Gold365Route = Gold365RouteImport.update({
@@ -401,6 +429,16 @@ const Char91DotwellKnownChar93OauthProtectedResourceRoute =
     path: '/.well-known/oauth-protected-resource',
     getParentRoute: () => rootRouteImport,
   } as any)
+const AuthorsIndexRoute = AuthorsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AuthorsRoute,
+} as any)
+const AuthorsSlugRoute = AuthorsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => AuthorsRoute,
+} as any)
 const MatchSlugRoute = MatchSlugRouteImport.update({
   id: '/match/$slug',
   path: '/match/$slug',
@@ -425,6 +463,7 @@ export interface FileRoutesByFullPath {
   '/account-issues': typeof AccountIssuesRoute
   '/all-links': typeof AllLinksRoute
   '/app': typeof AppRoute
+  '/authors': typeof AuthorsRouteWithChildren
   '/basketball-betting': typeof BasketballBettingRoute
   '/betting': typeof BettingRoute
   '/blog': typeof BlogRoute
@@ -439,6 +478,8 @@ export interface FileRoutesByFullPath {
   '/disclaimer': typeof DisclaimerRoute
   '/esports-betting': typeof EsportsBettingRoute
   '/fairdeal': typeof FairdealRoute
+  '/fairplay-customer-care-number': typeof FairplayCustomerCareNumberRoute
+  '/fairplay-deposit-number': typeof FairplayDepositNumberRoute
   '/fairplay-id': typeof FairplayIdRoute
   '/fairplay-vs-11xplay': typeof FairplayVs11xplayRoute
   '/fairplay-vs-diamond-exchange': typeof FairplayVsDiamondExchangeRoute
@@ -449,6 +490,7 @@ export interface FileRoutesByFullPath {
   '/fairplay-vs-mahavir-book': typeof FairplayVsMahavirBookRoute
   '/fairplay-vs-reddybook': typeof FairplayVsReddybookRoute
   '/fairplay-vs-skyexchange247': typeof FairplayVsSkyexchange247Route
+  '/fairplay-withdrawal-number': typeof FairplayWithdrawalNumberRoute
   '/gold365': typeof Gold365Route
   '/horse-racing': typeof HorseRacingRoute
   '/ipl-betting': typeof IplBettingRoute
@@ -483,8 +525,10 @@ export interface FileRoutesByFullPath {
   '/wpl-betting': typeof WplBettingRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/match/$slug': typeof MatchSlugRoute
   '/posts/$slug': typeof PostsSlugRoute
+  '/authors/': typeof AuthorsIndexRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRoutesByTo {
@@ -508,6 +552,8 @@ export interface FileRoutesByTo {
   '/disclaimer': typeof DisclaimerRoute
   '/esports-betting': typeof EsportsBettingRoute
   '/fairdeal': typeof FairdealRoute
+  '/fairplay-customer-care-number': typeof FairplayCustomerCareNumberRoute
+  '/fairplay-deposit-number': typeof FairplayDepositNumberRoute
   '/fairplay-id': typeof FairplayIdRoute
   '/fairplay-vs-11xplay': typeof FairplayVs11xplayRoute
   '/fairplay-vs-diamond-exchange': typeof FairplayVsDiamondExchangeRoute
@@ -518,6 +564,7 @@ export interface FileRoutesByTo {
   '/fairplay-vs-mahavir-book': typeof FairplayVsMahavirBookRoute
   '/fairplay-vs-reddybook': typeof FairplayVsReddybookRoute
   '/fairplay-vs-skyexchange247': typeof FairplayVsSkyexchange247Route
+  '/fairplay-withdrawal-number': typeof FairplayWithdrawalNumberRoute
   '/gold365': typeof Gold365Route
   '/horse-racing': typeof HorseRacingRoute
   '/ipl-betting': typeof IplBettingRoute
@@ -552,8 +599,10 @@ export interface FileRoutesByTo {
   '/wpl-betting': typeof WplBettingRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/match/$slug': typeof MatchSlugRoute
   '/posts/$slug': typeof PostsSlugRoute
+  '/authors': typeof AuthorsIndexRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRoutesById {
@@ -564,6 +613,7 @@ export interface FileRoutesById {
   '/account-issues': typeof AccountIssuesRoute
   '/all-links': typeof AllLinksRoute
   '/app': typeof AppRoute
+  '/authors': typeof AuthorsRouteWithChildren
   '/basketball-betting': typeof BasketballBettingRoute
   '/betting': typeof BettingRoute
   '/blog': typeof BlogRoute
@@ -578,6 +628,8 @@ export interface FileRoutesById {
   '/disclaimer': typeof DisclaimerRoute
   '/esports-betting': typeof EsportsBettingRoute
   '/fairdeal': typeof FairdealRoute
+  '/fairplay-customer-care-number': typeof FairplayCustomerCareNumberRoute
+  '/fairplay-deposit-number': typeof FairplayDepositNumberRoute
   '/fairplay-id': typeof FairplayIdRoute
   '/fairplay-vs-11xplay': typeof FairplayVs11xplayRoute
   '/fairplay-vs-diamond-exchange': typeof FairplayVsDiamondExchangeRoute
@@ -588,6 +640,7 @@ export interface FileRoutesById {
   '/fairplay-vs-mahavir-book': typeof FairplayVsMahavirBookRoute
   '/fairplay-vs-reddybook': typeof FairplayVsReddybookRoute
   '/fairplay-vs-skyexchange247': typeof FairplayVsSkyexchange247Route
+  '/fairplay-withdrawal-number': typeof FairplayWithdrawalNumberRoute
   '/gold365': typeof Gold365Route
   '/horse-racing': typeof HorseRacingRoute
   '/ipl-betting': typeof IplBettingRoute
@@ -622,8 +675,10 @@ export interface FileRoutesById {
   '/wpl-betting': typeof WplBettingRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/match/$slug': typeof MatchSlugRoute
   '/posts/$slug': typeof PostsSlugRoute
+  '/authors/': typeof AuthorsIndexRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRouteTypes {
@@ -635,6 +690,7 @@ export interface FileRouteTypes {
     | '/account-issues'
     | '/all-links'
     | '/app'
+    | '/authors'
     | '/basketball-betting'
     | '/betting'
     | '/blog'
@@ -649,6 +705,8 @@ export interface FileRouteTypes {
     | '/disclaimer'
     | '/esports-betting'
     | '/fairdeal'
+    | '/fairplay-customer-care-number'
+    | '/fairplay-deposit-number'
     | '/fairplay-id'
     | '/fairplay-vs-11xplay'
     | '/fairplay-vs-diamond-exchange'
@@ -659,6 +717,7 @@ export interface FileRouteTypes {
     | '/fairplay-vs-mahavir-book'
     | '/fairplay-vs-reddybook'
     | '/fairplay-vs-skyexchange247'
+    | '/fairplay-withdrawal-number'
     | '/gold365'
     | '/horse-racing'
     | '/ipl-betting'
@@ -693,8 +752,10 @@ export interface FileRouteTypes {
     | '/wpl-betting'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
+    | '/authors/$slug'
     | '/match/$slug'
     | '/posts/$slug'
+    | '/authors/'
     | '/.mcp/invoke-tool/$tool'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -718,6 +779,8 @@ export interface FileRouteTypes {
     | '/disclaimer'
     | '/esports-betting'
     | '/fairdeal'
+    | '/fairplay-customer-care-number'
+    | '/fairplay-deposit-number'
     | '/fairplay-id'
     | '/fairplay-vs-11xplay'
     | '/fairplay-vs-diamond-exchange'
@@ -728,6 +791,7 @@ export interface FileRouteTypes {
     | '/fairplay-vs-mahavir-book'
     | '/fairplay-vs-reddybook'
     | '/fairplay-vs-skyexchange247'
+    | '/fairplay-withdrawal-number'
     | '/gold365'
     | '/horse-racing'
     | '/ipl-betting'
@@ -762,8 +826,10 @@ export interface FileRouteTypes {
     | '/wpl-betting'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
+    | '/authors/$slug'
     | '/match/$slug'
     | '/posts/$slug'
+    | '/authors'
     | '/.mcp/invoke-tool/$tool'
   id:
     | '__root__'
@@ -773,6 +839,7 @@ export interface FileRouteTypes {
     | '/account-issues'
     | '/all-links'
     | '/app'
+    | '/authors'
     | '/basketball-betting'
     | '/betting'
     | '/blog'
@@ -787,6 +854,8 @@ export interface FileRouteTypes {
     | '/disclaimer'
     | '/esports-betting'
     | '/fairdeal'
+    | '/fairplay-customer-care-number'
+    | '/fairplay-deposit-number'
     | '/fairplay-id'
     | '/fairplay-vs-11xplay'
     | '/fairplay-vs-diamond-exchange'
@@ -797,6 +866,7 @@ export interface FileRouteTypes {
     | '/fairplay-vs-mahavir-book'
     | '/fairplay-vs-reddybook'
     | '/fairplay-vs-skyexchange247'
+    | '/fairplay-withdrawal-number'
     | '/gold365'
     | '/horse-racing'
     | '/ipl-betting'
@@ -831,8 +901,10 @@ export interface FileRouteTypes {
     | '/wpl-betting'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
+    | '/authors/$slug'
     | '/match/$slug'
     | '/posts/$slug'
+    | '/authors/'
     | '/.mcp/invoke-tool/$tool'
   fileRoutesById: FileRoutesById
 }
@@ -843,6 +915,7 @@ export interface RootRouteChildren {
   AccountIssuesRoute: typeof AccountIssuesRoute
   AllLinksRoute: typeof AllLinksRoute
   AppRoute: typeof AppRoute
+  AuthorsRoute: typeof AuthorsRouteWithChildren
   BasketballBettingRoute: typeof BasketballBettingRoute
   BettingRoute: typeof BettingRoute
   BlogRoute: typeof BlogRoute
@@ -857,6 +930,8 @@ export interface RootRouteChildren {
   DisclaimerRoute: typeof DisclaimerRoute
   EsportsBettingRoute: typeof EsportsBettingRoute
   FairdealRoute: typeof FairdealRoute
+  FairplayCustomerCareNumberRoute: typeof FairplayCustomerCareNumberRoute
+  FairplayDepositNumberRoute: typeof FairplayDepositNumberRoute
   FairplayIdRoute: typeof FairplayIdRoute
   FairplayVs11xplayRoute: typeof FairplayVs11xplayRoute
   FairplayVsDiamondExchangeRoute: typeof FairplayVsDiamondExchangeRoute
@@ -867,6 +942,7 @@ export interface RootRouteChildren {
   FairplayVsMahavirBookRoute: typeof FairplayVsMahavirBookRoute
   FairplayVsReddybookRoute: typeof FairplayVsReddybookRoute
   FairplayVsSkyexchange247Route: typeof FairplayVsSkyexchange247Route
+  FairplayWithdrawalNumberRoute: typeof FairplayWithdrawalNumberRoute
   Gold365Route: typeof Gold365Route
   HorseRacingRoute: typeof HorseRacingRoute
   IplBettingRoute: typeof IplBettingRoute
@@ -948,6 +1024,13 @@ declare module '@tanstack/react-router' {
       path: '/app'
       fullPath: '/app'
       preLoaderRoute: typeof AppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/authors': {
+      id: '/authors'
+      path: '/authors'
+      fullPath: '/authors'
+      preLoaderRoute: typeof AuthorsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/basketball-betting': {
@@ -1048,6 +1131,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FairdealRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fairplay-customer-care-number': {
+      id: '/fairplay-customer-care-number'
+      path: '/fairplay-customer-care-number'
+      fullPath: '/fairplay-customer-care-number'
+      preLoaderRoute: typeof FairplayCustomerCareNumberRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fairplay-deposit-number': {
+      id: '/fairplay-deposit-number'
+      path: '/fairplay-deposit-number'
+      fullPath: '/fairplay-deposit-number'
+      preLoaderRoute: typeof FairplayDepositNumberRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/fairplay-id': {
       id: '/fairplay-id'
       path: '/fairplay-id'
@@ -1116,6 +1213,13 @@ declare module '@tanstack/react-router' {
       path: '/fairplay-vs-skyexchange247'
       fullPath: '/fairplay-vs-skyexchange247'
       preLoaderRoute: typeof FairplayVsSkyexchange247RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fairplay-withdrawal-number': {
+      id: '/fairplay-withdrawal-number'
+      path: '/fairplay-withdrawal-number'
+      fullPath: '/fairplay-withdrawal-number'
+      preLoaderRoute: typeof FairplayWithdrawalNumberRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gold365': {
@@ -1356,6 +1460,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/authors/': {
+      id: '/authors/'
+      path: '/'
+      fullPath: '/authors/'
+      preLoaderRoute: typeof AuthorsIndexRouteImport
+      parentRoute: typeof AuthorsRoute
+    }
+    '/authors/$slug': {
+      id: '/authors/$slug'
+      path: '/$slug'
+      fullPath: '/authors/$slug'
+      preLoaderRoute: typeof AuthorsSlugRouteImport
+      parentRoute: typeof AuthorsRoute
+    }
     '/match/$slug': {
       id: '/match/$slug'
       path: '/match/$slug'
@@ -1380,6 +1498,19 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface AuthorsRouteChildren {
+  AuthorsSlugRoute: typeof AuthorsSlugRoute
+  AuthorsIndexRoute: typeof AuthorsIndexRoute
+}
+
+const AuthorsRouteChildren: AuthorsRouteChildren = {
+  AuthorsSlugRoute: AuthorsSlugRoute,
+  AuthorsIndexRoute: AuthorsIndexRoute,
+}
+
+const AuthorsRouteWithChildren =
+  AuthorsRoute._addFileChildren(AuthorsRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   R11xplayRoute: R11xplayRoute,
@@ -1387,6 +1518,7 @@ const rootRouteChildren: RootRouteChildren = {
   AccountIssuesRoute: AccountIssuesRoute,
   AllLinksRoute: AllLinksRoute,
   AppRoute: AppRoute,
+  AuthorsRoute: AuthorsRouteWithChildren,
   BasketballBettingRoute: BasketballBettingRoute,
   BettingRoute: BettingRoute,
   BlogRoute: BlogRoute,
@@ -1401,6 +1533,8 @@ const rootRouteChildren: RootRouteChildren = {
   DisclaimerRoute: DisclaimerRoute,
   EsportsBettingRoute: EsportsBettingRoute,
   FairdealRoute: FairdealRoute,
+  FairplayCustomerCareNumberRoute: FairplayCustomerCareNumberRoute,
+  FairplayDepositNumberRoute: FairplayDepositNumberRoute,
   FairplayIdRoute: FairplayIdRoute,
   FairplayVs11xplayRoute: FairplayVs11xplayRoute,
   FairplayVsDiamondExchangeRoute: FairplayVsDiamondExchangeRoute,
@@ -1411,6 +1545,7 @@ const rootRouteChildren: RootRouteChildren = {
   FairplayVsMahavirBookRoute: FairplayVsMahavirBookRoute,
   FairplayVsReddybookRoute: FairplayVsReddybookRoute,
   FairplayVsSkyexchange247Route: FairplayVsSkyexchange247Route,
+  FairplayWithdrawalNumberRoute: FairplayWithdrawalNumberRoute,
   Gold365Route: Gold365Route,
   HorseRacingRoute: HorseRacingRoute,
   IplBettingRoute: IplBettingRoute,

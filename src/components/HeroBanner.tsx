@@ -20,7 +20,7 @@ export const HeroBanner = () => {
           <Link to="/fairplay-id" className="block group">
             <img
               src={banner}
-              alt="Fairplay — get your cricket ID in just 2 minutes. IPL, casino, football, tennis. 100% secure, 180 minute payouts, 24x7 support."
+              alt="Fairplay — get a cricket ID for IPL, casino, football and tennis. Payouts usually in about 180 minutes."
               width={1600}
               height={1000}
               className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02]"

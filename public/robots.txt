@@ -14,3 +14,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://fairplayindia.com/sitemap.xml
+# AI crawlers: https://fairplayindia.com/llms.txt
+

@@ -5,6 +5,8 @@ import { useMemo } from "react";
 import { parse, compareDesc } from "date-fns";
 import { blogArticles } from "@/lib/blog-data";
 import { POST_BANNERS } from "@/lib/blog-banners";
+import { AuthorByline } from "@/components/AuthorByline";
+import { authorForCategory } from "@/lib/authors";
 
 export function RecentPostsSection() {
   const articles = useMemo(() => {
@@ -95,6 +97,9 @@ export function RecentPostsSection() {
                 <div className="flex items-center gap-4 mb-4 text-[9px] font-black uppercase tracking-widest text-muted-foreground">
                   <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3 text-primary" />{post.date}</span>
                   <span className="flex items-center gap-1.5"><Clock className="w-3 h-3 text-primary" />{Math.max(4, Math.min(12, Math.round(post.desc.length / 40)))} min read</span>
+                </div>
+                <div className="mb-4">
+                  <AuthorByline author={authorForCategory(post.category)} />
                 </div>
                 <h3 className="text-xl font-black italic uppercase tracking-tight leading-tight mb-3 group-hover:text-primary transition-colors line-clamp-2">
                   <Link to="/posts/$slug" params={{ slug: post.slug }}>{post.title}</Link>

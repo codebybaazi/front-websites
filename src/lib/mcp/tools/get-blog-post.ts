@@ -27,6 +27,9 @@ export default defineTool({
       // Content fetch is best-effort; metadata alone is still useful.
     }
 
+    const { authorForPostSlug } = await import("@/lib/authors");
+    const author = authorForPostSlug(post.slug);
+
     const payload = {
       slug: post.slug,
       title: post.title,
@@ -34,6 +37,11 @@ export default defineTool({
       date: post.date,
       summary: post.desc,
       url,
+      author: {
+        name: author.name,
+        role: author.role,
+        url: `${SITE_ORIGIN}/authors/${author.slug}`,
+      },
       markdown: markdown || null,
     };
 
