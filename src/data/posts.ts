@@ -14,6 +14,100 @@ export type BlogPost = {
 
 const allPosts: BlogPost[] = [
   {
+    "slug": "mahadev-book-id-complete-guide-new-existing-users",
+    "title": "Mahadev Book ID: Complete Guide for New and Existing Users",
+    "excerpt": "Mahadev Book ID guide for 2026: how new users request one on WhatsApp, what existing Mahadev ID holders should recheck, plus payment and recovery steps.",
+    "category": "Guides",
+    "date": "2026-09-12",
+    "readTime": "8 min",
+    "updated": "2026-09-12",
+    "content": [
+      {
+        "body": "A Mahadev Book ID is the single login that opens cricket, football, live tables and the rupee wallet behind them. This guide splits into two tracks on purpose: what a first-time user needs to get one safely, and what someone who already holds a Mahadev ID should be rechecking every so often. Read the section that matches where you are.",
+        "heading": ""
+      },
+      {
+        "heading": "What is a Mahadev Book ID?",
+        "body": "It is a WhatsApp-issued login tied to one rupee wallet. Cricket carries the most traffic, with football, live tables and a handful of arcade-style games sharing the same balance. The ID is not something you create on a public signup form. Every genuine Mahadev Book ID starts on the official WhatsApp chat, and the office printed on the site is 1012, South Delhi, India, with support answering in English and Hindi."
+      },
+      {
+        "heading": "How does a new user get a Mahadev Book ID in 2026?",
+        "body": "Message the live WhatsApp number listed on the customer care or contact page directly, never through a forwarded screenshot or a link from a group chat. Send your name and a preferred username. The desk sends back a login URL, a user ID and a password. KYC, when they ask for it, is a photo ID and a selfie on that same chat. A genuine Mahadev ID never arrives through a Google form asking you to type a password into it."
+      },
+      {
+        "heading": "What should a new Mahadev Book ID holder check before the first deposit?",
+        "body": "Match the login URL against the one the WhatsApp chat actually sent, not whatever a search result shows first. Write a monthly ceiling and a per-match unit before you touch the wallet, and step away for the day if the first two units are gone. You need to be 18 or older to hold an ID, and betting rules vary by Indian state, so treat this guide as a walkthrough, not legal advice. For the click-by-click first day, the WhatsApp ID guide on this blog covers that part in more detail."
+      },
+      {
+        "heading": "What changes for someone who already holds a Mahadev ID?",
+        "body": "Existing users skip the request step but inherit a different job: keeping the account current. That means confirming KYC details still match the bank account used for withdrawals, checking that the login URL bookmarked months ago is still the one the desk is issuing today, and updating a password after any device change. A Mahadev Book ID that has sat untouched for a while is also worth a quick support message before a big tournament, just to confirm nothing on the account needs a refresh."
+      },
+      {
+        "heading": "How do existing users keep a Mahadev ID running smoothly?",
+        "body": "Revisit the loss unit before every major tournament rather than relying on a number set months earlier; bankrolls and comfort levels shift. Save the live customer care digits somewhere other than an old chat thread, since numbers occasionally rotate. If referral or loyalty perks have changed, they attach to the same ID rather than requiring a new one. It's the same groundwork a new user does at signup, just repeated as upkeep."
+      },
+      {
+        "heading": "How do payments work for a Mahadev Book ID either way?",
+        "body": "Deposits credit from the official deposit number page once you send UPI to the handle the WhatsApp desk confirmed that day. Withdrawals release after KYC matches the payout account, then move through the withdrawal pages. UPI transfers typically land in minutes; bank rails can take longer and mostly move within working-day hours. A transfer that left your UPI app but never reached the wallet is a support ticket, not something refreshing the board will fix, and that applies whether the ID is new or years old."
+      },
+      {
+        "heading": "What should you do if a Mahadev Book ID stops working?",
+        "body": "Stop trying the same password repeatedly, since repeated failed attempts can lock a genuine account. Message the live WhatsApp number with the registered name or username and describe exactly what happens, whether that is a wrong-password message, a blank screen or a deposit that never credited. The desk resets access from their side rather than sending you to a generic recovery page. For a fuller breakdown of common causes, the login issues page on this blog covers the usual reasons access fails."
+      },
+      {
+        "heading": "What this Mahadev Book ID guide does not cover",
+        "body": "It does not rank Mahadev Book against other platforms or override the house rules on voids, abandoned matches or revised targets, which live in the market help inside the ID itself. For a feature-by-feature look at the platform, the Mahadev Book review on this blog is the wider read. Keep this article as the reference for getting a Mahadev Book ID in 2026 if you are new, and for keeping one working if you already have it."
+      }
+    ],
+    "faq": [
+      {
+        "q": "What exactly is a Mahadev Book ID?",
+        "a": "A Mahadev Book ID is a WhatsApp-issued login connected to one rupee wallet covering cricket, football and live tables. It is opened through the official WhatsApp chat rather than a public signup page."
+      },
+      {
+        "q": "How do I get a Mahadev Book ID for the first time in 2026?",
+        "a": "Message the live WhatsApp number from the customer care or contact page with your name and a preferred username. The desk replies with a login URL, user ID and password, and asks for a photo ID and selfie on the same chat if KYC is needed."
+      },
+      {
+        "q": "I already have a Mahadev ID. What should I recheck periodically?",
+        "a": "Confirm your KYC details still match your withdrawal bank account, verify the login URL against what the desk currently issues, update your password after switching devices, and revisit your loss unit before major tournaments."
+      },
+      {
+        "q": "Is Mahadev Book ID 2026 different from earlier versions of the ID?",
+        "a": "The core setup is the same WhatsApp-issued login and rupee wallet. What typically changes year to year is which sports and tables are active and how support communicates deposit numbers, so always confirm current details with the desk rather than an older guide."
+      },
+      {
+        "q": "What should I do if my Mahadev Book ID login stops working?",
+        "a": "Stop retrying the same password and message the live WhatsApp number with your registered name or username, describing exactly what error you see. Support resets access directly rather than through a generic recovery form."
+      }
+    ],
+    "howto": {
+      "name": "How to get or maintain a Mahadev Book ID",
+      "steps": [
+        {
+          "name": "Confirm the official chat",
+          "text": "Open the live WhatsApp number from the customer care or contact page, never from a forwarded screenshot or group link."
+        },
+        {
+          "name": "Request or confirm the ID",
+          "text": "New users send a name and preferred username; existing users confirm the login URL and KYC details are still current."
+        },
+        {
+          "name": "Complete KYC when asked",
+          "text": "Share a photo ID and a selfie on the same official chat if the desk requests it."
+        },
+        {
+          "name": "Set a loss unit",
+          "text": "Write a monthly ceiling and a per-match unit before funding, and revisit it before major tournaments."
+        },
+        {
+          "name": "Fund through official pages",
+          "text": "Deposit via the confirmed UPI handle and withdraw only after KYC matches the payout account."
+        }
+      ]
+    }
+  },
+  {
     "slug": "mahadev-book-review",
     "title": "Mahadev Book Review: Features, Access, Payments",
     "excerpt": "Mahadev Book review 2026: features after login, WhatsApp ID access, UPI payments, and user checks before you deposit. Read this platform review first.",

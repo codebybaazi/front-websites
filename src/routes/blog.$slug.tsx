@@ -235,7 +235,9 @@ function BlogPost() {
         summary={post.excerpt}
         points={post.content.slice(0, 4).map((b: { heading?: string; body: string }) => b.heading || b.body.slice(0, 90))}
         keywords={
-          post.slug === "mahadev-book-review"
+          post.slug === "mahadev-book-id-complete-guide-new-existing-users"
+            ? [post.category, "Mahadev Book ID", "Mahadev Book ID 2026", "Mahadev ID"]
+            : post.slug === "mahadev-book-review"
             ? [post.category, "Mahadev Book review", "Mahadev Book review 2026", "Mahadev Book platform review"]
             : post.slug === "mahadev-book-india-platform-guide"
             ? [post.category, "Mahadev Book India", "Mahadev Book India 2026", "Mahadev Book India guide"]
