@@ -11474,6 +11474,108 @@ export const POSTS: Post[] = [
       { label: "Responsible gaming", to: "/responsible-gaming" },
     ],
   },
+  {
+    slug: "lotus365-cricket-id-how-it-works",
+    title: `Lotus365 Cricket ID: How It Works and What You Need to Know`,
+    h1: `Lotus365 Cricket ID: How It Works and What You Need to Know`,
+    description: `What a Lotus365 cricket ID is, how registration and KYC work, and what a lotus365 cricket betting id does and doesn't unlock before you fund it.`,
+    excerpt: `A lotus365 cricket id is the same login used across cricket, other sports, and casino. What registration, KYC, and the wallet behind it actually involve.`,
+    date: "2026-09-12",
+    updated: "2026-09-12",
+    category: "Cricket",
+    author: `Ishaan Kapoor`,
+    authorRole: `Cricket Analyst`,
+    readMinutes: 9,
+    sections: [
+      {
+        heading: `What is a Lotus365 cricket ID?`,
+        body: `A Lotus365 cricket ID is not a separate registration built just for cricket. It is the same account that also opens sports and casino on Lotus365. People search for a lotus365 cricket id because cricket is the market they plan to use first, so the name sticks even though the login underneath covers everything else too. Once it exists, it follows you from a T20 match to a casino table without a second sign-up.`,
+      },
+      {
+        heading: `How do you actually register a cricket ID?`,
+        body: `Setting one up is a short sequence, not a technical process. You open the official site, enter a mobile number you control, confirm the OTP sent to that number, and choose a password. The account exists at that point, before you have opened a single match.`,
+        points: [
+          `Go to the official Lotus365 site or the Get ID page linked from it`,
+          `Enter your own mobile number, not a relative's or a friend's`,
+          `Complete the OTP on the same phone within the window given`,
+          `Set a password you have not reused on email or a UPI app`,
+          `Log in once immediately to confirm the ID works before you fund it`,
+        ],
+      },
+      {
+        heading: `What happens right after the first login?`,
+        body: `The dashboard opens onto the same wallet used across the whole platform. There is no cricket-only balance sitting apart from the rest. If you plan to withdraw later, KYC has to clear first, so it is worth uploading documents in that first sitting rather than waiting for a payout to force the issue. Deposits usually move through UPI, and withdrawals stay blocked until verification catches up.`,
+      },
+      {
+        heading: `How does the ID connect to cricket markets specifically?`,
+        body: `From the dashboard, Sports leads to Cricket, and Cricket leads to whatever fixture is live or coming up. The ID itself carries no cricket-specific settings. What changes from match to match is the list of markets on screen, not the login behind them. A T20 league and a Test match sit under the same account, drawn from the same balance.`,
+      },
+      {
+        heading: `Is a cricket betting ID a different thing from a cricket ID?`,
+        body: `Not really. Both phrases describe the same login. "Cricket ID" tends to come up when someone is talking about following matches and reading markets. "Cricket betting ID" comes up when the conversation turns to staking money on those markets. Neither term unlocks something the other does not. If a chat or a site implies you need two separate accounts for that, treat it as a reason to walk away rather than register twice.`,
+      },
+      {
+        heading: `What actually happens at each step, and how long does it take?`,
+        body: `Most of the confusion around a cricket ID comes from not knowing what stage you're at. This is the order it runs in.`,
+        table: {
+          headers: ["Step", "What happens", "Typical time"],
+          rows: [
+            ["Registration", "Mobile number entered and OTP confirmed", "Under two minutes"],
+            ["First login", "Dashboard and wallet become visible", "Immediate"],
+            ["KYC", "Documents uploaded and checked", "Same day in most cases"],
+            ["First deposit", "UPI transfer into the shared wallet", "A few minutes"],
+            ["First cricket stake", "Market opened, stake placed, slip confirmed", "As fast as you read the market"],
+          ],
+        },
+      },
+      {
+        heading: `Which security habits actually matter here?`,
+        body: `Most cricket ID scams lean on urgency: a limited slot, kickoff in an hour, a friend who "already has one." The account itself does not need any of that pressure to work properly.`,
+        points: [
+          `Never read an OTP out loud to anyone claiming to activate or verify the ID`,
+          `Check the domain in the address bar before typing a password, since clones copy the layout exactly`,
+          `Confirm the current deposit details in the live cashier, not an old screenshot`,
+          `Keep the password somewhere private, not in a shared group chat`,
+        ],
+      },
+      {
+        heading: `What mistakes catch out new cricket ID holders?`,
+        body: `Most problems trace back to a handful of habits rather than anything wrong with the account itself.`,
+        points: [
+          `Registering through a link forwarded in a chat instead of the official site`,
+          `Leaving KYC until a withdrawal is already stuck`,
+          `Sending a deposit to a UPI ID saved from months earlier`,
+          `Letting someone else keep the password after "helping" set up the account`,
+        ],
+      },
+      {
+        heading: `Who should hold off on getting one?`,
+        body: `If you are under the legal betting age where you live, do not register at all. If the only way to fund the account would be through someone else's bank details, wait until you have your own. And if the plan is to open a fresh ID to get around a limit you already set on an older one, pause there. The responsible-gaming tools inside the existing account handle that better than a second login ever will.`,
+      },
+      {
+        heading: `Frequently asked questions`,
+        body: `Questions people ask when they search Lotus365 Cricket ID, lotus365 cricket betting id, or cricket id lotus365.`,
+        points: [
+          `What is a Lotus365 cricket ID? It is the same Lotus365 login used across cricket, other sports, and casino, named after the market people plan to use most.`,
+          `Is a cricket id lotus365 different from a regular account? No. There is one account type. The word cricket reflects intent, not a separate registration.`,
+          `Do you redo KYC for cricket markets specifically? No. KYC is tied to the account, not to any one sport.`,
+          `Can two people share one lotus365 cricket betting id? No. Sharing the login also shares the wallet and removes any way to tell who placed a given stake.`,
+          `How soon can you place a cricket bet after registering? As soon as the OTP confirms and a deposit clears, assuming KYC isn't already blocking a withdrawal.`,
+        ],
+      },
+      {
+        heading: `The bottom line`,
+        body: `A Lotus365 cricket ID is not a special product. It is the standard Lotus365 login, registered with your own number, verified with your own documents, and pointed at cricket markets because that is what you came for. Treat the OTP, the password, and the KYC step the same way you would for any account that holds money, and the rest, choosing a match, reading a market, placing a stake, works the way you'd expect.`,
+      },
+    ],
+    sources: [
+      { label: "Get a Lotus365 ID", to: "/lotus365-id" },
+      { label: "Cricket betting on Lotus365", to: "/lotus365-cricket" },
+      { label: "Lotus365 login", to: "/lotus365-login" },
+      { label: "How to get a new Lotus365 ID", to: "/blog/how-to-get-a-new-lotus365-id-complete-guide" },
+      { label: "Lotus365 cricket betting guide", to: "/blog/lotus365-cricket-betting" },
+    ],
+  },
 ];
 
 export const POSTS_BY_SLUG: Record<string, Post> = Object.fromEntries(POSTS.map((p) => [p.slug, p]));
