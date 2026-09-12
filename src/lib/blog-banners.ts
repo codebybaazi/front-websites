@@ -192,6 +192,16 @@ import gamesIdTournamentsBanner from "@/assets/blog/fairplay-games-id-multiple-t
 import cricketIdVsBettingIdBanner from "@/assets/blog/fairplay-cricket-id-vs-betting-id.jpg";
 import indVsNz3rdOdiBanner from "@/assets/blog/fairplay-ind-vs-nz-3rd-odi-prediction.jpg";
 import receiveIdOnWhatsappBanner from "@/assets/blog/fairplay-receive-id-on-whatsapp.jpg";
+import officialLoginPageBanner from "@/assets/blog/fairplay-official-login-page.jpg";
+import accountGuideBanner from "@/assets/blog/fairplay-account-guide.jpg";
+import cricketBettingGuideBanner from "@/assets/blog/fairplay-cricket-betting-guide.jpg";
+import sportsBettingGuideBanner from "@/assets/blog/fairplay-sports-betting-guide.jpg";
+import kabaddiMarketsGuideBanner from "@/assets/blog/fairplay-kabaddi-markets-guide.jpg";
+import exchangeCompleteGuideBanner from "@/assets/blog/fairplay-exchange-complete-guide.jpg";
+import liveGamesCasinoCardGuideBanner from "@/assets/blog/fairplay-live-games-casino-card-guide.jpg";
+import upiDepositGuideBanner from "@/assets/blog/fairplay-upi-deposit-guide.jpg";
+import onlineBettingPlatformBanner from "@/assets/blog/fairplay-online-betting-platform.jpg";
+import betAppMobileGuideBanner from "@/assets/blog/fairplay-bet-app-mobile-guide.jpg";
 
 export const POST_BANNERS: Record<string, string> = {
   "fairplay-india-vs-new-zealand-3rd-odi-prediction": indVsNz3rdOdiBanner,
@@ -248,6 +258,16 @@ export const POST_BANNERS: Record<string, string> = {
   "enjoy-real-casino-gaming-on-fairplay": realCasinoGamingBanner,
   "fifa-world-cup-2026-fairplay-betting-tips": fifaBettingTipsBanner,
   "fairplay-id-security-tips-protect-your-id-login": idSecurityBanner,
+  "how-to-find-the-official-fairplay-login-page": officialLoginPageBanner,
+  "fairplay-account-guide": accountGuideBanner,
+  "cricket-betting-on-fairplay": cricketBettingGuideBanner,
+  "fairplay-sports-betting-guide": sportsBettingGuideBanner,
+  "fairplay-kabaddi-betting-guide": kabaddiMarketsGuideBanner,
+  "fairplay-exchange-guide": exchangeCompleteGuideBanner,
+  "fairplay-live-games-guide": liveGamesCasinoCardGuideBanner,
+  "fairplay-deposit-guide": upiDepositGuideBanner,
+  "fairplay-online-betting-guide": onlineBettingPlatformBanner,
+  "fairplay-bet-app-guide": betAppMobileGuideBanner,
   "common-fairplay-login-id-issues-and-how-to-fix-them-easily": loginIssuesBanner,
   "how-to-add-money-in-fairplay-wallet-complete-beginner-guide": addMoneyBanner,
   "how-to-bet-on-live-ipl-matches-using-fairplay-id": liveIplBanner,
