@@ -4,6 +4,8 @@ import { Scale, ShieldCheck, FileText, Gavel, Info, AlertTriangle, Globe, Zap } 
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 export const Route = createFileRoute('/legal-status')({
   component: LegalStatus,
   head: () => pageHeadFor('/legal-status'),
@@ -31,10 +33,11 @@ function LegalStatus() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Fairplay is an offshore sports exchange plus casino. You must be 18+. Local law still applies where you live.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/legal-status"]} className="mt-5 justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">
-            <AIOverview 
+            <AIOverview
               title="Fairplay legal status"
             />
           </div>

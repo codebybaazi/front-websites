@@ -19,6 +19,8 @@ import { blogArticles } from '@/lib/blog-data'
 import { Link } from '@tanstack/react-router'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/is-fairplay-real')({
   component: IsFairplayRealPage,
@@ -56,6 +58,7 @@ function IsFairplayRealPage() {
             >
               Clones copy the logo and send you a personal UPI. This desk opens a Fairplay ID on WhatsApp, takes deposits on the published handle, and pays out after markets settle.
             </motion.p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/is-fairplay-real"]} className="mt-5 justify-center" />
           </div>
 
           <div className="max-w-5xl mx-auto mb-12">

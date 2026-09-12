@@ -4,6 +4,8 @@ import { Landmark as Trophy, Target, Star, Shield, Zap, Info } from 'lucide-reac
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/champions-trophy')({
   component: ChampionsTrophy,
@@ -32,6 +34,7 @@ function ChampionsTrophy() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Champions Trophy ODIs on the same Fairplay cricket ID as IPL. Fund with UPI, open the fixture from the schedule, cash out after the official result.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/champions-trophy"]} className="mb-12 justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">

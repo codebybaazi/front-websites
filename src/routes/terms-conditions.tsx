@@ -4,6 +4,8 @@ import { FileText, Gavel, UserCheck, AlertTriangle, CreditCard, Ban, Star, Targe
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/terms-conditions')({
   component: TermsConditions,
@@ -32,10 +34,11 @@ function TermsConditions() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Age limits, one Fairplay ID per person, UPI deposits, and how markets settle before a 180-minute payout.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/terms-conditions"]} className="mt-5 justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">
-            <AIOverview 
+            <AIOverview
               title="Fairplay terms"
             />
           </div>

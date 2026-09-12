@@ -3,6 +3,8 @@ import { pageHeadFor } from "@/utils/page-seo"
 import { Mail, Phone, MessageSquare, MapPin, Send, MessageCircle } from 'lucide-react'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/contact-us')({
   component: ContactUs,
@@ -23,6 +25,7 @@ function ContactUs() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               WhatsApp is how Fairplay IDs get opened, UPI deposits get traced, and 180-minute payouts get chased. Have the ID and a screenshot ready.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/contact-us"]} className="justify-center" />
           </div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">

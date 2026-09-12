@@ -4,6 +4,10 @@ import { Wallet, QrCode, CreditCard, Banknote, ShieldCheck, Zap, Star } from 'lu
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/deposit-guide')({
   component: DepositGuide,
@@ -11,11 +15,27 @@ export const Route = createFileRoute('/deposit-guide')({
 })
 
 function DepositGuide() {
+  const howToSteps = [
+    {
+      title: 'Open the Fairplay wallet',
+      desc: 'Log in with your Fairplay ID, then choose UPI, net banking or crypto. UPI (GPay, PhonePe, Paytm) is what most players use.',
+    },
+    {
+      title: 'Pay and keep the UTR',
+      desc: 'Complete the transfer, screenshot the receipt, and note the UTR. Do not send a second payment if the first is still pending.',
+    },
+    {
+      title: 'Confirm on Fairplay',
+      desc: 'Enter the UTR if the screen asks for it. When the wallet credits, you can open IPL, cricket or casino.',
+    },
+  ]
+
   const methods = [
     {
       title: 'UPI',
       desc: 'The usual way to fund a Fairplay wallet — GPay, PhonePe or Paytm. Keep the UTR until the credit shows.',
-      icon: <QrCode className="w-6 h-6" />
+      icon: <QrCode className="w-6 h-6" />,
+      link: { href: 'https://www.npci.org.in/what-we-do/upi/product-overview', label: "How UPI works (NPCI)" },
     },
     {
       title: 'Net banking',
@@ -31,6 +51,14 @@ function DepositGuide() {
 
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-hidden">
+      <JsonLd
+        data={howToJsonLd({
+          name: 'How to deposit on Fairplay',
+          description: 'Add money to a Fairplay wallet with UPI, net banking or crypto, then open cricket or casino.',
+          path: '/deposit-guide',
+          steps: howToSteps.map((step) => ({ name: step.title, text: step.desc })),
+        })}
+      />
       <section className="relative pt-24 pb-20 overflow-hidden border-b border-white/8">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,oklch(0.705_0.198_142_/_0.08),transparent_55%)]" />
         <div className="container max-w-7xl mx-auto px-4 relative z-10">
@@ -49,6 +77,7 @@ function DepositGuide() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
               Add money to a Fairplay wallet with UPI, net banking or crypto. Check the credit, then open cricket or casino.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/deposit-guide"]} className="justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">
@@ -73,6 +102,16 @@ function DepositGuide() {
               </div>
               <h3 className="text-xl font-semibold tracking-tight mb-4">{method.title}</h3>
               <p className="text-sm text-muted-foreground">{method.desc}</p>
+              {method.link ? (
+                <a
+                  href={method.link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-block text-xs font-semibold text-primary hover:underline"
+                >
+                  {method.link.label} ↗
+                </a>
+              ) : null}
             </motion.div>
           ))}
         </div>
@@ -88,27 +127,15 @@ function DepositGuide() {
               <Zap className="w-6 h-6 text-primary" /> How to deposit on Fairplay
             </h2>
             <div className="space-y-8">
-              <div className="flex gap-6">
-                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold shrink-0 text-xs">1</div>
-                <div>
-                  <h3 className="font-semibold tracking-tight mb-2">Open the Fairplay wallet</h3>
-                  <p className="text-sm text-muted-foreground">Log in with your Fairplay ID, then choose UPI, net banking or crypto. UPI (GPay, PhonePe, Paytm) is what most players use.</p>
+              {howToSteps.map((step, i) => (
+                <div key={step.title} className="flex gap-6">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold shrink-0 text-xs">{i + 1}</div>
+                  <div>
+                    <h3 className="font-semibold tracking-tight mb-2">{step.title}</h3>
+                    <p className="text-sm text-muted-foreground">{step.desc}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-6">
-                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold shrink-0 text-xs">2</div>
-                <div>
-                  <h3 className="font-semibold tracking-tight mb-2">Pay and keep the UTR</h3>
-                  <p className="text-sm text-muted-foreground">Complete the transfer, screenshot the receipt, and note the UTR. Do not send a second payment if the first is still pending.</p>
-                </div>
-              </div>
-              <div className="flex gap-6">
-                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold shrink-0 text-xs">3</div>
-                <div>
-                  <h3 className="font-semibold tracking-tight mb-2">Confirm on Fairplay</h3>
-                  <p className="text-sm text-muted-foreground">Enter the UTR if the screen asks for it. When the wallet credits, you can open IPL, cricket or casino.</p>
-                </div>
-              </div>
+              ))}
             </div>
           </motion.section>
 

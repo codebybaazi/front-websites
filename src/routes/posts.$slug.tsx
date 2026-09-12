@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { parse, compareDesc } from "date-fns";
-import { getBlogArticleBlocks, getBlogSeo } from "@/utils/blog-seo";
+import { getBlogArticleBlocks, getBlogSeo, hasUniqueBlogContent } from "@/utils/blog-seo";
 import { JsonLd } from "@/components/JsonLd";
 import { faqPageNode } from "@/utils/faq-schema";
 import { blogArticles } from "@/lib/blog-data";
@@ -12,8 +12,11 @@ import { BlogPost } from "@/components/blog/BlogPost";
 import { BlogPostBody, readMinutesFromBlocks, type BlogBlock } from "@/components/blog/BlogPostBody";
 import { BlogPostList } from "@/components/blog/BlogPostList";
 import { toBlogPostState, type BlogPostState } from "@/components/blog/blog-post-context";
+import { getAuthorForCategory } from "@/lib/authors";
+import { authorRefNode } from "@/utils/author-schema";
+import { AuthorAvatar } from "@/components/AuthorAvatar";
 import { motion } from "framer-motion";
-import { Sparkles, BookOpen, Clock, Shield } from "lucide-react";
+import { Sparkles, BookOpen, Clock, Shield, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/posts/$slug")({
   loader: ({ params }: { params: { slug: string } }) => {
@@ -23,6 +26,10 @@ export const Route = createFileRoute("/posts/$slug")({
     const slug = loaderData?.slug || "";
     const seo = getBlogSeo(slug);
     const url = absolutePageUrl(`/posts/${slug}`);
+    // Templated posts (no entry in blog-post-overrides.ts yet) stay noindex so
+    // thin, near-duplicate bodies don't compete for rankings. Flip to index once
+    // a post gets unique, hand-written content — see BLOG_POST_OVERRIDES.
+    const indexable = hasUniqueBlogContent(slug);
 
     return {
       title: seo.title,
@@ -40,7 +47,7 @@ export const Route = createFileRoute("/posts/$slug")({
         { name: "twitter:title", content: seo.title },
         { name: "twitter:description", content: seo.description },
         { name: "twitter:image", content: OG_IMAGE },
-        { name: "robots", content: "index, follow" },
+        { name: "robots", content: indexable ? "index, follow" : "noindex, follow" },
       ],
       links: [{ rel: "canonical", href: url }],
     };
@@ -196,6 +203,7 @@ function PostDetail() {
       .filter((item) => item.t === "faq")
       .flatMap((item) => (item.items || []) as Array<{ q?: string; a?: string }>),
   );
+  const byline = getAuthorForCategory(category);
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -206,7 +214,7 @@ function PostDetail() {
         url,
         image: OG_IMAGE,
         ...(isoDate ? { datePublished: isoDate, dateModified: isoDate } : {}),
-        author: { "@type": "Organization", name: "Fairplay", url: absolutePageUrl("/") },
+        author: authorRefNode(byline),
         publisher: {
           "@type": "Organization",
           name: "Fairplay",
@@ -296,7 +304,24 @@ function PostDetail() {
 
                 <BlogPostBody blocks={content} />
 
-                <aside className="mt-12 rounded-xl border border-primary/25 bg-card/50 p-7">
+                <Link
+                  to="/authors/$slug"
+                  params={{ slug: byline.slug }}
+                  className="mt-12 flex items-start gap-4 rounded-xl border border-white/8 bg-white/[0.02] p-6 transition-colors hover:border-primary/30"
+                >
+                  <AuthorAvatar name={byline.name} className="size-12 text-sm" />
+                  <div className="min-w-0">
+                    <p className="text-[11px] font-bold uppercase tracking-widest text-white/30">Written by</p>
+                    <p className="mt-1 text-base font-semibold text-white">{byline.name}</p>
+                    <p className="text-sm text-white/40">{byline.role}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-white/60">{byline.shortBio}</p>
+                    <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">
+                      Full bio <ArrowRight className="size-3.5" />
+                    </span>
+                  </div>
+                </Link>
+
+                <aside className="mt-8 rounded-xl border border-primary/25 bg-card/50 p-7">
                   <h2 className="font-display text-xl font-semibold tracking-tight text-white">
                     Need a Fairplay ID?
                   </h2>

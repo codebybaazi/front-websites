@@ -4,6 +4,8 @@ import { Swords, Trophy, Target, Star, Shield, Zap } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/ipl-betting')({
   component: IPLBetting,
@@ -32,6 +34,7 @@ function IPLBetting() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12 font-medium">
               Match winner, toss, fancy sessions and in-play on Fairplay. Use a cricket ID, fund with UPI, and open the fixture from the schedule.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/ipl-betting"]} className="justify-center" />
           </motion.div>
 
           <div className="max-w-5xl mx-auto mb-12 px-4">

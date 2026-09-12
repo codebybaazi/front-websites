@@ -4,6 +4,8 @@ import { Landmark as Horse, Trophy, Target, Star, Shield, Zap, Info } from 'luci
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/horse-racing')({
   component: HorseRacing,
@@ -32,6 +34,7 @@ function HorseRacing() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Win, place and in-running on Indian and overseas cards. Fund the same Fairplay wallet you use for cricket. Payouts after the official result.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/horse-racing"]} className="mb-12 justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">

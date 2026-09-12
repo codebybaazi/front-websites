@@ -4,6 +4,8 @@ import { AlertTriangle, ShieldCheck, Scale, FileText, XCircle, Star, Zap } from 
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 export const Route = createFileRoute('/disclaimer')({
   component: DisclaimerPage,
   head: () => pageHeadFor('/disclaimer'),
@@ -31,10 +33,11 @@ function DisclaimerPage() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Betting can lose money. Fairplay pages are information, not a guarantee of payouts or legality in your state.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/disclaimer"]} className="mt-5 justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">
-            <AIOverview 
+            <AIOverview
               title="Fairplay disclaimer"
             />
           </div>

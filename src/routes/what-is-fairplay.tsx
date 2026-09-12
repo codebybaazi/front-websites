@@ -4,6 +4,8 @@ import { Trophy, Shield, Zap, Globe, Star, ArrowRight, Target, Users, Landmark, 
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/what-is-fairplay')({
   head: () => pageHeadFor('/what-is-fairplay'),
@@ -31,6 +33,7 @@ function WhatIsFairplayPage() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
               A sports exchange and live casino on one Fairplay ID: cricket and IPL, football, tennis, UPI deposits, and a WhatsApp desk if login or a payout sticks.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/what-is-fairplay"]} className="justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">

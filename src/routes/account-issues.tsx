@@ -4,15 +4,46 @@ import { AlertCircle, Lock, UserX, Shield, PhoneCall, Star, Target, ShieldCheck 
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/account-issues')({
   component: AccountIssues,
   head: () => pageHeadFor('/account-issues'),
 })
 
+const accountRecoverySteps = [
+  {
+    title: 'Identify the issue',
+    desc: 'Lockout, pending KYC, or a forgotten registered mobile — the fix differs, so note which one applies before messaging support.',
+  },
+  {
+    title: "Message this site's WhatsApp",
+    desc: 'Only the number published here. Ads and Telegram bios are not the desk. Do not register a second Fairplay ID.',
+  },
+  {
+    title: 'Verify with your Fairplay ID and UTR',
+    desc: 'Have the Fairplay ID and, if the mobile is forgotten, the last deposit UTR ready — that is how the desk finds the account.',
+  },
+  {
+    title: 'Complete KYC if requested',
+    desc: 'Send documents only through the channel the WhatsApp desk names, so access and withdrawals clear.',
+  },
+]
+
 function AccountIssues() {
   return (
     <div className="flex flex-col bg-background text-foreground overflow-hidden">
+      <JsonLd
+        data={howToJsonLd({
+          name: 'How to recover a locked Fairplay account',
+          description: 'Steps to regain access to a locked or KYC-pending Fairplay ID without opening a second account.',
+          path: '/account-issues',
+          steps: accountRecoverySteps.map((step) => ({ name: step.title, text: step.desc })),
+        })}
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(47,185,74,0.08),transparent_70%)]" />
@@ -32,10 +63,11 @@ function AccountIssues() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Locked cricket ID, pending KYC, or a number you forgot. Do not open a second Fairplay ID — that can lock both. WhatsApp the ID from this site.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/account-issues"]} className="mt-5 justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">
-            <AIOverview 
+            <AIOverview
               title="Fairplay account issues"
             />
           </div>

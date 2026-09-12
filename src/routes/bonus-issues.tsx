@@ -4,6 +4,8 @@ import { ShieldAlert, RefreshCw, HelpCircle, Shield, PhoneCall, Info, Star, Targ
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/bonus-issues')({
   component: BonusIssues,
@@ -32,6 +34,7 @@ function BonusIssues() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Bonus not credited, wagering unfinished, or a code that did not apply. Read the bonus page, then WhatsApp Fairplay ID and UTR. Unmet wagering is not a bug.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/bonus-issues"]} className="justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">

@@ -11,6 +11,8 @@ import { useEffect, type ReactNode } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
+import { JsonLd } from "../components/JsonLd";
+import { siteJsonLd } from "../utils/site-schema";
 
 
 import appCss from "../styles.css?url";
@@ -132,8 +134,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  // en-IN matches og:locale below and the site's single-market (India) targeting —
+  // see the hreflang note next to SITE_ORIGIN in utils/page-seo.ts.
   return (
-    <html lang="en" className="dark">
+    <html lang="en-IN" className="dark">
       <head>
         <HeadContent />
       </head>
@@ -162,6 +166,7 @@ function RootComponent() {
           className="fixed top-0 left-0 right-0 z-[60] h-[2px] origin-left brand-rule"
           style={{ scaleX }}
         />
+        <JsonLd data={siteJsonLd()} />
         <SiteHeader />
         <main className="flex-1">
           <PageBreadcrumbs />

@@ -4,14 +4,33 @@ import { Smartphone, Apple, ShieldCheck, Zap, Download, Star, ArrowRight } from 
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 export const Route = createFileRoute('/app')({
   head: () => pageHeadFor('/app'),
   component: AppPage,
 })
 
+const androidInstallSteps = [
+  { name: 'Download the APK', text: 'Tap Download Android APK on this page.' },
+  { name: 'Allow the install', text: 'Allow installation from unknown sources if Android asks.' },
+  { name: 'Install the app', text: 'Open the downloaded file and tap Install.' },
+  { name: 'Log in with OTP', text: 'Launch Fairplay and log in with your Fairplay ID OTP.' },
+]
+
 function AppPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-hidden">
+      <JsonLd
+        data={howToJsonLd({
+          name: 'How to install the Fairplay Android app',
+          description: 'Download and install the Fairplay APK on Android, then log in with the same Fairplay ID used on the website.',
+          path: '/app',
+          steps: androidInstallSteps,
+        })}
+      />
       <section className="relative pt-24 pb-20 overflow-hidden border-b border-white/8">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,oklch(0.705_0.198_142_/_0.08),transparent_55%)]" />
         <div className="container max-w-7xl mx-auto px-4 relative z-10">
@@ -30,6 +49,7 @@ function AppPage() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
               The Fairplay app uses the same cricket ID as the website. Install the Android APK from this page or add iOS to the home screen, then log in with OTP.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/app"]} className="justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">
@@ -141,15 +161,10 @@ function AppPage() {
                   <h3 className="text-2xl font-bold tracking-tight">Android APK</h3>
                 </div>
                 <div className="space-y-6">
-                  {[
-                    "Tap Download Android APK on this page.",
-                    "Allow installation from unknown sources if Android asks.",
-                    "Open the downloaded file and tap Install.",
-                    "Launch Fairplay and log in with your Fairplay ID OTP."
-                  ].map((step, i) => (
-                    <div key={i} className="flex items-center gap-4 font-medium tracking-tight">
+                  {androidInstallSteps.map((step, i) => (
+                    <div key={step.name} className="flex items-center gap-4 font-medium tracking-tight">
                       <div className="w-6 h-6 rounded-full bg-primary/20 text-primary text-xs flex items-center justify-center shrink-0">{i+1}</div>
-                      {step}
+                      {step.text}
                     </div>
                   ))}
                 </div>

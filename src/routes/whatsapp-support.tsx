@@ -4,6 +4,8 @@ import { MessageCircle, Send, ShieldCheck, Zap, Info, PhoneCall, Star, ArrowRigh
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 
 
@@ -34,6 +36,7 @@ function WhatsappSupport() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Get a Fairplay ID, unblock OTP, and chase UPI deposits on official WhatsApp. Have the ID and a screenshot ready. Never send OTP to a stranger.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/whatsapp-support"]} className="mb-12 justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">

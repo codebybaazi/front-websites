@@ -4,6 +4,8 @@ import { Gamepad2, Trophy, Target, Star, Shield, Zap, Info } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/esports-betting')({
   component: EsportsBetting,
@@ -32,6 +34,7 @@ function EsportsBetting() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Match and map books on the same Fairplay ID as cricket — when the desk lists them. Deposit with UPI. If a title is missing, it is not on your ID yet.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/esports-betting"]} className="mb-12 justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">

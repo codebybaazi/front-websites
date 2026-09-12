@@ -4,6 +4,8 @@ import { Crown, Trophy, Target, Star, Shield, Zap, Info } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 export const Route = createFileRoute('/kabaddi-betting')({
   component: KabaddiBetting,
   head: () => pageHeadFor('/kabaddi-betting'),
@@ -31,6 +33,7 @@ function KabaddiBetting() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Pro Kabaddi on the same Fairplay ID as cricket. Match winner, raids and tackles. Deposit once with UPI, then switch sports.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/kabaddi-betting"]} className="mb-12 justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">

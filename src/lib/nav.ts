@@ -128,6 +128,7 @@ export const megaMenu: MegaMenuItem[] = [
           { name: "Talk to us", href: "/contact-us" },
           { name: "Fairplay ID", href: "/fairplay-id" },
           { name: "Guides & match notes", href: "/blog" },
+          { name: "Meet the writers", href: "/authors" },
           { name: "Every page on the site", href: "/all-links", badge: "New" },
         ],
       },
@@ -201,6 +202,7 @@ export const footerColumns: Array<{ title: string; links: Array<{ name: string; 
       { name: "UPI deposit", href: "/deposit-guide" },
       { name: "Contact", href: "/contact-us" },
       { name: "Mobile app", href: "/app" },
+      { name: "Authors", href: "/authors" },
     ],
   },
   {

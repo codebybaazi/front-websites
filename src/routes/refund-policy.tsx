@@ -4,6 +4,8 @@ import { RotateCcw, Shield, AlertCircle, Clock, CheckCircle, CreditCard, Star, Z
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 export const Route = createFileRoute('/refund-policy')({
   component: RefundPolicy,
   head: () => pageHeadFor('/refund-policy'),
@@ -31,10 +33,11 @@ function RefundPolicy() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               When a Fairplay deposit can reverse, when a void returns the stake, and how to raise a ticket with ID and UTR.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/refund-policy"]} className="mt-5 justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">
-            <AIOverview 
+            <AIOverview
               title="Fairplay refunds"
             />
           </div>

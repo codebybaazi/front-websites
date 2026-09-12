@@ -4,6 +4,8 @@ import { Target, Zap, Shield, Smartphone, Globe, MessageSquare, ArrowRight, Dice
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 
 
 export const Route = createFileRoute('/services')({
@@ -76,9 +78,10 @@ function ServicesPage() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 leading-[0.9]">
               Fairplay <span className="text-primary">services</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-6">
               One Fairplay ID for cricket, football, tennis, racing and live tables. WhatsApp to open it, UPI to fund it, about 180 minutes to cash out after settlement.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/services"]} className="mb-12 justify-center" />
           </motion.div>
           
           <div className="container max-w-5xl mx-auto px-4 mb-12">

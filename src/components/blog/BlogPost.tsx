@@ -155,10 +155,14 @@ function BlogPostReadTime({ className }: { className?: string }) {
 function BlogPostAuthor({ className }: { className?: string }) {
   const { state } = useBlogPost();
   return (
-    <span className={cn("inline-flex items-center gap-1.5", className)}>
+    <Link
+      to="/authors/$slug"
+      params={{ slug: state.authorSlug }}
+      className={cn("inline-flex items-center gap-1.5 hover:text-primary", className)}
+    >
       <User className="size-3.5 shrink-0" aria-hidden />
       {state.author}
-    </span>
+    </Link>
   );
 }
 

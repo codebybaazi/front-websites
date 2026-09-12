@@ -4,6 +4,10 @@ import { Smartphone, Shield, Key, ArrowRight, UserCheck, HelpCircle } from 'luci
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 export const Route = createFileRoute('/login-guide')({
   component: LoginGuide,
   head: () => pageHeadFor('/login-guide'),
@@ -30,10 +34,18 @@ function LoginGuide() {
 
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-hidden">
+      <JsonLd
+        data={howToJsonLd({
+          name: 'How to log in to Fairplay',
+          description: 'Sign in with the number on your Fairplay ID, enter the OTP, then open cricket or casino.',
+          path: '/login-guide',
+          steps: steps.map((step) => ({ name: step.title, text: step.desc })),
+        })}
+      />
       <section className="relative pt-24 pb-20 overflow-hidden border-b border-white/8">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,oklch(0.705_0.198_142_/_0.08),transparent_55%)]" />
         <div className="container max-w-7xl mx-auto px-4 relative z-10">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl mx-auto text-center"
@@ -48,6 +60,7 @@ function LoginGuide() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
               Sign in with the number on your Fairplay ID, enter the OTP, then open cricket or casino. 2FA is extra protection, not a second account.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/login-guide"]} className="justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">

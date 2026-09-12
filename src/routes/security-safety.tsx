@@ -3,6 +3,8 @@ import { pageHeadFor } from "@/utils/page-seo"
 import { ShieldCheck, Lock, Eye, Shield, Zap, Globe } from 'lucide-react'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 export const Route = createFileRoute('/security-safety')({
   component: SecuritySafety,
   head: () => pageHeadFor('/security-safety'),
@@ -25,10 +27,11 @@ function SecuritySafety() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               How Fairplay protects logins and wallets: OTP on your phone, no shared passwords, and withdrawals to your own UPI.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/security-safety"]} className="mt-5 justify-center" />
           </div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">
-            <AIOverview 
+            <AIOverview
               title="Fairplay security"
             />
           </div>

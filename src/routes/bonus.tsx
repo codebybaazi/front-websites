@@ -4,6 +4,10 @@ import { Gift, Zap, Trophy, ShieldCheck, ArrowRight, CheckCircle2 } from 'lucide
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 
 
@@ -11,6 +15,13 @@ export const Route = createFileRoute('/bonus')({
   component: BonusPage,
   head: () => pageHeadFor('/bonus')
 })
+
+const bonusClaimSteps = [
+  { title: "Get a Fairplay ID", desc: "WhatsApp official support. You cannot attach a promo without a live cricket ID." },
+  { title: "Share the code", desc: "Send the promo code on WhatsApp, or enter it in Promotions after login." },
+  { title: "Deposit with UPI", desc: "Make the qualifying deposit. Keep the UTR until the wallet credits." },
+  { title: "Meet wagering", desc: "Play through the stated turnover before you withdraw bonus winnings." },
+]
 
 const promotions = [
   {
@@ -55,6 +66,14 @@ const promotions = [
 function BonusPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
+      <JsonLd
+        data={howToJsonLd({
+          name: 'How to claim a Fairplay bonus',
+          description: 'Get a Fairplay ID, share the promo code, deposit with UPI, then meet wagering before withdrawing bonus winnings.',
+          path: '/bonus',
+          steps: bonusClaimSteps.map((step) => ({ name: step.title, text: step.desc })),
+        })}
+      />
       <section className="relative pt-24 pb-20 overflow-hidden border-b border-white/8">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,oklch(0.705_0.198_142_/_0.08),transparent_55%)]" />
         <div className="container max-w-7xl mx-auto px-4 relative z-10">
@@ -73,6 +92,7 @@ function BonusPage() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
               Welcome credit, Wednesday casino reload and Monday cashback attach after a qualifying UPI deposit. Read wagering before you claim.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/bonus"]} className="justify-center" />
           </motion.div>
 
           <div className="max-w-5xl mx-auto mb-12 px-4">
@@ -146,14 +166,9 @@ function BonusPage() {
         <section className="mt-32">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-16">How to claim a Fairplay bonus</h2>
           <div className="grid md:grid-cols-4 gap-6">
-            {[
-              { step: "01", title: "Get a Fairplay ID", desc: "WhatsApp official support. You cannot attach a promo without a live cricket ID." },
-              { step: "02", title: "Share the code", desc: "Send the promo code on WhatsApp, or enter it in Promotions after login." },
-              { step: "03", title: "Deposit with UPI", desc: "Make the qualifying deposit. Keep the UTR until the wallet credits." },
-              { step: "04", title: "Meet wagering", desc: "Play through the stated turnover before you withdraw bonus winnings." }
-            ].map((s, i) => (
-              <div key={i} className="relative p-8 bg-card border border-border rounded-xl group hover:border-primary/50 transition-colors">
-                <span className="text-4xl font-bold text-primary/20 absolute top-4 right-6 group-hover:text-primary/40 transition-colors tabular-nums">{s.step}</span>
+            {bonusClaimSteps.map((s, i) => (
+              <div key={s.title} className="relative p-8 bg-card border border-border rounded-xl group hover:border-primary/50 transition-colors">
+                <span className="text-4xl font-bold text-primary/20 absolute top-4 right-6 group-hover:text-primary/40 transition-colors tabular-nums">{String(i + 1).padStart(2, "0")}</span>
                 <h4 className="text-xl font-semibold tracking-tight mb-4">{s.title}</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
               </div>

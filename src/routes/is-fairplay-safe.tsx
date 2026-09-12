@@ -19,6 +19,8 @@ import {
 import { Link } from '@tanstack/react-router'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/is-fairplay-safe')({
   component: IsFairplaySafePage,
@@ -54,6 +56,7 @@ function IsFairplaySafePage() {
             >
               Use this website and the published WhatsApp. OTP stays on your phone. Deposits go to the UPI the desk sends after login — not a name from Instagram.
             </motion.p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/is-fairplay-safe"]} className="mt-5 justify-center" />
           </div>
 
           <div className="max-w-5xl mx-auto mb-12">

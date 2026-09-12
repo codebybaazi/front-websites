@@ -4,6 +4,8 @@ import { Trophy, Shield, Zap, Globe, ArrowRight, Users, Landmark, ShieldCheck } 
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 
 export const Route = createFileRoute('/about')({
@@ -32,6 +34,7 @@ function AboutPage() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
               An exchange for IPL and internationals, plus football, tennis and live tables — one login, a UPI wallet, and a WhatsApp desk that actually answers.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/about"]} className="mt-5" />
           </motion.div>
 
           <div className="max-w-5xl mt-12">

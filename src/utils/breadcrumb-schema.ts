@@ -2,6 +2,7 @@ import { getBlogSeo } from "@/utils/blog-seo";
 import { PAGE_SEO, SITE_ORIGIN } from "@/utils/page-seo";
 import { parseMatchTeams } from "@/utils/match-projections";
 import { findMatchBySlug } from "@/utils/slugify";
+import { getAuthorBySlug } from "@/lib/authors";
 
 export type BreadcrumbCrumb = {
   name: string;
@@ -79,6 +80,14 @@ export function crumbsForPathname(pathname: string): BreadcrumbCrumb[] {
     const slug = path.slice("/posts/".length);
     trail.push({ name: breadcrumbLabelForPath("/blog"), path: "/blog" });
     trail.push({ name: slug ? getBlogSeo(slug).h1 : "Article", path });
+    return trail;
+  }
+
+  if (path.startsWith("/authors/")) {
+    const slug = path.slice("/authors/".length);
+    trail.push({ name: "Authors", path: "/authors" });
+    const author = getAuthorBySlug(slug);
+    trail.push({ name: author ? author.name : titleCaseSlug(slug), path });
     return trail;
   }
 

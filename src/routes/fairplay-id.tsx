@@ -4,6 +4,8 @@ import { Crown, Trophy, Target, Star, Shield, Zap } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/fairplay-id')({
   component: FairplayID,
@@ -31,6 +33,7 @@ function FairplayID() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
               One login for cricket, IPL, football, tennis and live tables. The desk verifies the number, you deposit with UPI, then you sign in with OTP.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/fairplay-id"]} className="justify-center" />
           </motion.div>
 
           <div className="max-w-5xl mx-auto mb-12 px-4">

@@ -4,14 +4,45 @@ import { UserCheck, Shield, FileSearch, CheckCircle, AlertCircle, Clock, Star, S
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 export const Route = createFileRoute('/kyc-verification-policy')({
   component: KYCVerificationPolicy,
   head: () => pageHeadFor('/kyc-verification-policy'),
 })
 
+const kycSteps = [
+  {
+    title: 'Wait for the KYC request',
+    desc: 'The desk asks before a large withdrawal, if deposit and ID names do not match, or if wallet activity looks unusual.',
+  },
+  {
+    title: 'Prepare the right documents',
+    desc: 'Aadhaar or PAN matching the Fairplay ID, or a passport or driving licence. A recent bill if address is requested.',
+  },
+  {
+    title: 'Send from the registered WhatsApp',
+    desc: 'Share clear photos from the number on your Fairplay ID. Do not email ID cards to random addresses.',
+  },
+  {
+    title: 'Wait for review',
+    desc: 'Clear photos usually clear within a few hours; complex cases can take a day. The withdrawal stays in the wallet until then.',
+  },
+]
+
 function KYCVerificationPolicy() {
   return (
     <div className="flex flex-col bg-background text-foreground overflow-hidden">
+      <JsonLd
+        data={howToJsonLd({
+          name: 'How to complete Fairplay KYC verification',
+          description: 'What triggers a Fairplay KYC check, which documents to send, and how to submit them so a withdrawal clears.',
+          path: '/kyc-verification-policy',
+          steps: kycSteps.map((step) => ({ name: step.title, text: step.desc })),
+        })}
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(47,185,74,0.08),transparent_70%)]" />
@@ -31,10 +62,11 @@ function KYCVerificationPolicy() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               KYC on Fairplay is name, mobile and, when asked, ID proof so withdrawals pay the right person.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/kyc-verification-policy"]} className="mt-5 justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">
-            <AIOverview 
+            <AIOverview
               title="Fairplay KYC"
             />
           </div>
@@ -59,6 +91,18 @@ function KYCVerificationPolicy() {
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 KYC is so a UPI payout after settlement lands with the adult on the Fairplay ID. One person, one ID. Blurry photos get rejected and the 180-minute window waits.
+              </p>
+              <p className="mt-4 text-sm text-muted-foreground/70">
+                Identity checks on Indian payment accounts follow the same direction as the RBI's own{" "}
+                <a
+                  href="https://www.rbi.org.in/Scripts/BS_ViewMasterCirculardetails.aspx?id=12094"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  KYC guidance for prepaid payment instruments
+                </a>{" "}
+                — matching the name on the payment method to the account it funds.
               </p>
             </motion.div>
 

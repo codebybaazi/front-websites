@@ -4,6 +4,8 @@ import { Swords, Zap, Shield, Target, Smartphone, Wallet, Star } from 'lucide-re
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/laser247')({
   component: PlatformLaser247,
@@ -32,6 +34,7 @@ function PlatformLaser247() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Laser247 is a partner-style book. Ask WhatsApp if your Fairplay ID already covers it. Two random deposits is how people lose money to clones.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/laser247"]} className="mb-8 justify-center" />
             <div className="flex flex-wrap justify-center gap-4 mb-16">
               <a 
                 href={waLink("Hi Fairplay, I want to activate a Laser247 ID")}

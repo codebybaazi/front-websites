@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { HelpCircle } from 'lucide-react';
+import { useRouterState } from '@tanstack/react-router';
 import { JsonLd } from '@/components/JsonLd';
-import { faqPageJsonLd, normalizeFaqs } from '@/utils/faq-schema';
+import { faqPageJsonLd, normalizeFaqs, speakableJsonLd } from '@/utils/faq-schema';
+import { absolutePageUrl } from '@/utils/page-seo';
 
 interface FAQItem {
   q: string;
@@ -16,12 +18,14 @@ interface FAQSectionProps {
 
 export function FAQSection({ title = "Questions people actually ask", faqs, className = "" }: FAQSectionProps) {
   const items = normalizeFaqs(faqs);
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
   if (items.length === 0) return null;
   const schema = faqPageJsonLd(items);
 
   return (
     <section className={`py-24 px-4 container max-w-5xl mx-auto ${className}`} aria-labelledby="faq-heading">
       <JsonLd data={schema} />
+      <JsonLd data={speakableJsonLd(absolutePageUrl(pathname))} />
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -51,11 +55,11 @@ export function FAQSection({ title = "Questions people actually ask", faqs, clas
               transition={{ delay: i * 0.05 }}
               className="bg-card/60 border border-white/8 border-l-2 border-l-primary/40 p-7 rounded-lg hover:border-l-primary transition-colors"
             >
-              <h3 className="text-foreground font-semibold text-[15px] mb-3 flex items-start gap-3">
-                <HelpCircle className="w-4 h-4 text-primary shrink-0 mt-0.5" /> 
+              <h3 className="faq-question text-foreground font-semibold text-[15px] mb-3 flex items-start gap-3">
+                <HelpCircle className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                 <span className="leading-snug">{faq.q}</span>
               </h3>
-              <p className="text-muted-foreground leading-relaxed text-sm pl-7">
+              <p className="faq-answer text-muted-foreground leading-relaxed text-sm pl-7">
                 {faq.a}
               </p>
             </motion.div>

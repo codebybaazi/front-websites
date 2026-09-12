@@ -4,6 +4,10 @@ import { UserPlus, Shield, Smartphone, ArrowRight, CheckCircle, Info, Star } fro
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/register-guide')({
   component: RegisterGuide,
@@ -36,10 +40,18 @@ function RegisterGuide() {
 
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-hidden">
+      <JsonLd
+        data={howToJsonLd({
+          name: 'How to get a Fairplay ID',
+          description: 'Get a Fairplay ID on WhatsApp, log in with OTP, deposit with UPI, then bet cricket or play casino.',
+          path: '/register-guide',
+          steps: steps.map((step) => ({ name: step.title, text: step.desc })),
+        })}
+      />
       <section className="relative pt-24 pb-20 overflow-hidden border-b border-white/8">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,oklch(0.705_0.198_142_/_0.08),transparent_55%)]" />
         <div className="container max-w-7xl mx-auto px-4 relative z-10">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl mx-auto text-center"
@@ -54,6 +66,7 @@ function RegisterGuide() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
               Get a Fairplay ID on WhatsApp, log in with OTP, deposit with UPI, then bet cricket or play casino. No second registration for IPL.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/register-guide"]} className="justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">

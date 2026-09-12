@@ -4,6 +4,8 @@ import { Globe, Trophy, Target, Star, Shield, Zap, Info } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/t20-world-cup')({
   component: T20WorldCup,
@@ -32,6 +34,7 @@ function T20WorldCup() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               ICC T20 World Cup on Fairplay: match winner, top batter, sixes and live books. Same cricket ID you use for IPL.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/t20-world-cup"]} className="justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">

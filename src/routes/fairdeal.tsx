@@ -4,6 +4,8 @@ import { Landmark as Trophy, Shield, Zap, Info, Star, ShieldCheck, Target, Users
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/fairdeal')({
   component: Fairdeal,
@@ -32,10 +34,11 @@ function Fairdeal() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Fairdeal is a partner book in the Fairplay network. Confirm with WhatsApp before you fund a second wallet.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/fairdeal"]} className="mt-5 justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">
-            <AIOverview 
+            <AIOverview
               title="AI Overview: Fairdeal"
             />
           </div>

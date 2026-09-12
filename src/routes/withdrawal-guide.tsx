@@ -4,6 +4,10 @@ import { Download, Landmark as Bank, CreditCard, Wallet, Smartphone, ArrowRight,
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 export const Route = createFileRoute('/withdrawal-guide')({
   component: WithdrawalGuide,
   head: () => pageHeadFor('/withdrawal-guide'),
@@ -16,8 +20,31 @@ function WithdrawalGuide() {
     { name: 'Crypto wallet', desc: 'USDT or other coins when the desk has enabled them on your ID.', icon: Wallet },
   ]
 
+  const howToSteps = [
+    {
+      title: 'Request payout',
+      desc: 'Wait until cricket or casino markets settle, then open Withdraw on the Fairplay wallet. WhatsApp only if the button is missing.',
+    },
+    {
+      title: 'Pick UPI or bank',
+      desc: 'Use the same name as the Fairplay ID. Check the on-screen minimum before you confirm. Keep the UTR.',
+    },
+    {
+      title: 'Wait for settlement',
+      desc: 'Typical window is about 180 minutes from the official result, then the UPI or bank credit. KYC can add time.',
+    },
+  ]
+
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-hidden">
+      <JsonLd
+        data={howToJsonLd({
+          name: 'How to withdraw from Fairplay',
+          description: 'Withdraw from Fairplay to UPI or bank after the market settles, typically within about 180 minutes of the official result.',
+          path: '/withdrawal-guide',
+          steps: howToSteps.map((step) => ({ name: step.title, text: step.desc })),
+        })}
+      />
       <section className="relative pt-24 pb-20 overflow-hidden border-b border-white/8">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,oklch(0.705_0.198_142_/_0.08),transparent_55%)]" />
         <div className="container max-w-7xl mx-auto px-4 relative z-10">
@@ -36,6 +63,7 @@ function WithdrawalGuide() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
               Withdraw from Fairplay to UPI or bank after the market settles. Typical window is about 180 minutes from the official result, then the payout.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/withdrawal-guide"]} className="justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">
@@ -73,27 +101,15 @@ function WithdrawalGuide() {
               <Download className="w-6 h-6 text-primary" /> How a payout works
             </h2>
             <div className="space-y-8">
-              <div className="flex gap-6">
-                <div className="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold shrink-0 text-xs">1</div>
-                <div>
-                  <h4 className="font-semibold tracking-tight mb-2">Request payout</h4>
-                  <p className="text-muted-foreground text-sm">Wait until cricket or casino markets settle, then open Withdraw on the Fairplay wallet. WhatsApp only if the button is missing.</p>
+              {howToSteps.map((step, i) => (
+                <div key={step.title} className="flex gap-6">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold shrink-0 text-xs">{i + 1}</div>
+                  <div>
+                    <h4 className="font-semibold tracking-tight mb-2">{step.title}</h4>
+                    <p className="text-muted-foreground text-sm">{step.desc}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-6">
-                <div className="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold shrink-0 text-xs">2</div>
-                <div>
-                  <h4 className="font-semibold tracking-tight mb-2">Pick UPI or bank</h4>
-                  <p className="text-muted-foreground text-sm">Use the same name as the Fairplay ID. Check the on-screen minimum before you confirm. Keep the UTR.</p>
-                </div>
-              </div>
-              <div className="flex gap-6">
-                <div className="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold shrink-0 text-xs">3</div>
-                <div>
-                  <h4 className="font-semibold tracking-tight mb-2">Wait for settlement</h4>
-                  <p className="text-muted-foreground text-sm">Typical window is about 180 minutes from the official result, then the UPI or bank credit. KYC can add time.</p>
-                </div>
-              </div>
+              ))}
             </div>
           </section>
 

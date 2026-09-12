@@ -1,4 +1,7 @@
-import { BLOG_POST_SLUGS } from "@/utils/blog-post-dates";
+import { BLOG_POST_SLUGS, blogPostIsoDate } from "@/utils/blog-post-dates";
+import { hasUniqueBlogContent } from "@/utils/blog-seo";
+import { AUTHORS } from "@/lib/authors";
+import { CONTENT_REVIEWED } from "@/lib/content-review-dates";
 import { CRICKET_SCHEDULE_DATA } from "@/lib/cricket-schedule";
 import { FOOTBALL_SCHEDULE_DATA } from "@/lib/sports-data";
 import { TENNIS_SCHEDULE_DATA } from "@/lib/tennis-schedule";
@@ -228,12 +231,35 @@ export function matchesIndexJsonLd() {
 const FIXTURE_INDEX_PATHS = ["/schedule", "/matches"];
 
 export function buildSitemapXml(): string {
-  const paths = new Set<string>(["/", ...Object.keys(PAGE_SEO), ...FIXTURE_INDEX_PATHS]);
+  const paths = new Set<string>(["/", ...Object.keys(PAGE_SEO), ...FIXTURE_INDEX_PATHS, "/authors"]);
   for (const fixture of listAllScheduleFixtures()) {
     paths.add(`/match/${fixture.slug}`);
   }
+  // Noindexed, still-templated posts are left out: Google's own guidance is not
+  // to list a noindexed URL in the sitemap. See hasUniqueBlogContent.
   for (const slug of BLOG_POST_SLUGS) {
-    paths.add(`/posts/${slug}`);
+    if (hasUniqueBlogContent(slug)) paths.add(`/posts/${slug}`);
+  }
+  for (const author of AUTHORS) {
+    paths.add(`/authors/${author.slug}`);
+  }
+
+  // Fallback for any path with no more specific date (homepage, hub pages,
+  // author profiles): the day the sitemap itself was generated. Better than
+  // omitting lastmod entirely, since Google treats a missing tag as "unknown"
+  // rather than "unchanged".
+  const buildDate = new Date().toISOString().slice(0, 10);
+
+  function lastmodFor(path: string): string {
+    if (path.startsWith("/posts/")) {
+      return blogPostIsoDate(path.slice("/posts/".length)) ?? buildDate;
+    }
+    if (path.startsWith("/match/")) {
+      const slug = decodeURIComponent(path.slice("/match/".length));
+      const fixture = listAllScheduleFixtures().find((row) => row.slug === slug);
+      return (fixture && fixtureStartDate(fixture.date)) ?? buildDate;
+    }
+    return CONTENT_REVIEWED[path] ?? buildDate;
   }
 
   const urls = [...paths]
@@ -245,7 +271,8 @@ export function buildSitemapXml(): string {
       const isFixtureIndex = FIXTURE_INDEX_PATHS.includes(path);
       const changefreq = isFixtureIndex || isMatch ? "daily" : isPost ? "monthly" : "weekly";
       const priority = path === "/" ? "1.0" : isFixtureIndex || isMatch ? "0.8" : "0.6";
-      return `  <url>\n    <loc>${loc.replace(/&/g, "&amp;")}</loc>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+      const lastmod = lastmodFor(path);
+      return `  <url>\n    <loc>${loc.replace(/&/g, "&amp;")}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
     })
     .join("\n");
 

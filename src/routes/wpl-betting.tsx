@@ -4,6 +4,8 @@ import { Trophy, Target, Star, Shield, Zap, TrendingUp } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/wpl-betting')({
   component: WPLBetting,
@@ -32,6 +34,7 @@ function WPLBetting() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               WPL on the same Fairplay cricket ID as IPL. Match winner, top batter and in-play sessions. Fund with UPI, then open the fixture from the schedule.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/wpl-betting"]} className="justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">

@@ -4,6 +4,8 @@ import { Send, Users, Bell, Zap, ArrowRight, MessageCircle } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 export const Route = createFileRoute('/telegram-channel')({
   component: TelegramChannel,
   head: () => pageHeadFor('/telegram-channel'),
@@ -37,6 +39,7 @@ function TelegramChannel() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Fixture notes and support pointers. IDs, UPI deposits and 180-minute payouts still go through WhatsApp and the Fairplay login.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/telegram-channel"]} className="mb-12 justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">

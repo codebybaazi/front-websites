@@ -7,6 +7,8 @@ import { useState, useEffect } from 'react'
 import { z } from 'zod'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 
 
 const searchSchema = z.object({
@@ -79,6 +81,7 @@ function BettingPage() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
               IPL books, live football and set betting share the Fairplay wallet. Odds move in play. Settlement waits for the official result.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/betting"]} className="justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">

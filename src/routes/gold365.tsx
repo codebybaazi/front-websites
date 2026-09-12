@@ -4,6 +4,8 @@ import { Swords, Zap, Shield, Crown, TrendingUp, Cpu, Star } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/gold365')({
   component: PlatformGold365,
@@ -32,6 +34,7 @@ function PlatformGold365() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Gold365 sits in the Fairplay network. Ask WhatsApp before you fund it — it is not the same wallet as a Fairplay cricket ID unless the desk linked them.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/gold365"]} className="mb-8 justify-center" />
             <div className="flex flex-wrap justify-center gap-4 mb-16">
               <a 
                 href={waLink("Hi Fairplay, I want to get a Gold365 ID")}

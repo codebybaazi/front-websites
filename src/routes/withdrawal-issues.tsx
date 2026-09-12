@@ -4,11 +4,21 @@ import { AlertCircle, RefreshCw, HelpCircle, Shield, PhoneCall, Star, ArrowRight
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/withdrawal-issues')({
   component: WithdrawalIssues,
   head: () => pageHeadFor('/withdrawal-issues'),
 })
+
+const withdrawalIssueSteps = [
+  { title: 'Confirm settlement', desc: 'Check that the market or table session has actually settled. An open fancy bet holds the exposure and delays the payout clock.' },
+  { title: 'Wait out the window', desc: 'Payouts usually land about 180 minutes after the official result. Check the app is not still showing the withdrawal as processing.' },
+  { title: 'WhatsApp with details', desc: 'Past that window, message the Fairplay ID, amount, UPI handle and a screenshot rather than requesting the withdrawal again.' },
+]
 
 function WithdrawalIssues() {
   const commonIssues = [
@@ -31,6 +41,14 @@ function WithdrawalIssues() {
 
   return (
     <div className="flex flex-col bg-background text-foreground overflow-hidden">
+      <JsonLd
+        data={howToJsonLd({
+          name: 'How to resolve a Fairplay withdrawal issue',
+          description: 'What to check when a Fairplay payout is running past the usual 180-minute window after settlement.',
+          path: '/withdrawal-issues',
+          steps: withdrawalIssueSteps.map((step) => ({ name: step.title, text: step.desc })),
+        })}
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(47,185,74,0.08),transparent_70%)]" />
@@ -50,6 +68,7 @@ function WithdrawalIssues() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Cashout waits for the official result. Fairplay payouts usually take about 180 minutes. Open fancy bets hold the exposure. WhatsApp ID, amount and UPI if it runs past that.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/withdrawal-issues"]} className="justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">

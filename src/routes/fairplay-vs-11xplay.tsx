@@ -4,6 +4,8 @@ import { Link } from '@tanstack/react-router'
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { 
   Swords, 
   Zap, 
@@ -84,8 +86,12 @@ function ComparisonPage() {
             </p>
           </motion.div>
 
+          <div className="mb-8 flex justify-center">
+            <ReviewedBadge iso={CONTENT_REVIEWED["/fairplay-vs-11xplay"]} />
+          </div>
+
           <div className="container max-w-5xl mx-auto px-4 mb-12">
-            <AIOverview 
+            <AIOverview
               title="Partner comparison"
             />
           </div>

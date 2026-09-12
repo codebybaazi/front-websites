@@ -4,6 +4,8 @@ import { Swords, Zap, Shield, Target, Smartphone, Wallet, Star, ShieldCheck, Use
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/cricbet99')({
   component: PlatformCricbet99,
@@ -32,10 +34,11 @@ function PlatformCricbet99() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Cricbet99 is a cricket-leaning partner name. Ask WhatsApp if your Fairplay ID already covers it. Deposit only to the account shown after you log in.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/cricbet99"]} className="mt-5 justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">
-            <AIOverview 
+            <AIOverview
               title="AI Overview: Cricbet99"
             />
           </div>

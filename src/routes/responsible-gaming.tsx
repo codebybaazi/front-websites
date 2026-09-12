@@ -4,6 +4,8 @@ import { Heart, ShieldCheck, Scale, Clock, AlertCircle, Phone, Star, Target, Awa
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/responsible-gaming')({
   component: ResponsibleGaming,
@@ -32,10 +34,11 @@ function ResponsibleGaming() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Deposit caps, time-outs and self-exclusion on WhatsApp so cricket betting stays a game, not a problem.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/responsible-gaming"]} className="mt-5 justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">
-            <AIOverview 
+            <AIOverview
               title="Fairplay responsible gaming"
             />
           </div>
@@ -133,10 +136,14 @@ function ResponsibleGaming() {
               {
                 icon: Target,
                 title: "OUTSIDE HELP",
-                desc: "Fairplay can lock the wallet. For addiction support, use a local gambling-harm line — we are a cricket desk, not a clinic."
+                desc: "Fairplay can lock the wallet. For addiction support, use a local gambling-harm line — we are a cricket desk, not a clinic.",
+                link: {
+                  href: "https://www.who.int/news-room/questions-and-answers/item/addictive-behaviours-gaming-disorder",
+                  label: "WHO on gaming disorder",
+                },
               }
             ].map((item, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -147,6 +154,16 @@ function ResponsibleGaming() {
                 <item.icon className="w-12 h-12 text-primary mb-6 group-hover:scale-110 transition-transform duration-500" />
                 <h4 className="text-xl font-bold mb-4 tracking-tight">{item.title}</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                {item.link ? (
+                  <a
+                    href={item.link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-block text-sm font-semibold text-primary hover:underline"
+                  >
+                    {item.link.label} ↗
+                  </a>
+                ) : null}
               </motion.div>
             ))}
           </div>

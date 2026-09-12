@@ -1,6 +1,17 @@
 /** Origin every canonical, og:url, sitemap <loc> and absolute schema URL is built from. */
 export const SITE_ORIGIN = "https://mfairplay.com";
 
+/**
+ * Locale decision: this site has exactly one language/regional version — English
+ * for the Indian market (og:locale "en_IN", <html lang="en-IN"> in __root.tsx).
+ * hreflang tags are intentionally omitted: Google's own guidance is that hreflang
+ * is for signalling alternate versions of a page in other languages/regions, and
+ * adding it when only one version exists has no benefit and is a common source of
+ * self-referencing/x-default misconfiguration. If a second locale (e.g. a
+ * dedicated en-GB or regional-language version) ships later, add hreflang pairs
+ * per URL at that point rather than sitewide now.
+ */
+
 /** Shared link-preview image: the homepage hero banner. */
 export const OG_IMAGE = `${SITE_ORIGIN}/og-banner.jpg`;
 
@@ -62,7 +73,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "Fairplay blog, cricket ID guide, IPL betting guide, Fairplay login, Fairplay deposit",
   },
   "/matches": {
-    title: "All matches 2026–27 | Cricket, football and tennis index | Fairplay",
+    title: "All matches 2026–27 | Cricket, football, tennis | Fairplay",
     description:
       "Every 2026–27 fixture grouped by tournament: cricket series and IPL, FIFA World Cup 2026, ATP and WTA tennis. Filter by sport or search a team, event or venue.",
     keywords:
@@ -129,7 +140,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   },
 
   "/ipl-betting": {
-    title: "IPL 2026 betting | Match winner, fancy and live odds | Fairplay",
+    title: "IPL 2026 betting | Match winner, live odds | Fairplay",
     description:
       "Bet IPL 2026 on Fairplay: match winner, toss, fancy sessions and in-play. Use a Fairplay ID, fund with UPI, and open the fixture from the schedule.",
     keywords: "IPL betting, IPL 2026 betting, Fairplay IPL, cricket fancy betting, IPL live odds",
@@ -344,19 +355,19 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "Fairplay account locked, Fairplay ID issues, Fairplay KYC pending",
   },
   "/gold365": {
-    title: "Gold365 via Fairplay | Partner book, separate wallet unless linked",
+    title: "Gold365 via Fairplay | Separate wallet unless linked",
     description:
       "Gold365 is a partner exchange. Ask WhatsApp before you fund it. Fairplay cricket IDs, UPI and 180-minute payouts sit on this site unless the desk linked both.",
     keywords: "Gold365 Fairplay, Gold365 cricket ID, Fairplay vs Gold365",
   },
   "/11xplay": {
-    title: "11xplay via Fairplay | Linked cricket book only if the desk says so",
+    title: "11xplay via Fairplay | Linked only if desk confirms",
     description:
       "11xplay through Fairplay WhatsApp. Do not assume the same password opens 11xplay.com. IPL on this schedule uses the Fairplay cricket ID unless told otherwise.",
     keywords: "11xplay Fairplay, 11xplay cricket ID, Fairplay network",
   },
   "/laser247": {
-    title: "Laser247 via Fairplay | Live cricket partner — confirm the ID",
+    title: "Laser247 via Fairplay | Confirm the ID first",
     description:
       "Laser247 is a partner-style book. Same WhatsApp onboarding as a Fairplay ID. Do not mix UTRs. Fairplay payouts usually take about 180 minutes after settlement.",
     keywords: "Laser247 Fairplay, Laser247 cricket, Fairplay Laser247 ID",
@@ -368,13 +379,13 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "Cricbet99 Fairplay, Cricbet99 cricket ID",
   },
   "/fairdeal": {
-    title: "Fairdeal via Fairplay | Confirm before you fund a second wallet",
+    title: "Fairdeal via Fairplay | Confirm before you fund it",
     description:
       "Fairdeal is a partner book. Most cricket and casino on this site use the main Fairplay ID. WhatsApp before you send UPI to a second login.",
     keywords: "Fairdeal Fairplay, Fairdeal cricket ID",
   },
   "/fairplay-vs-lotus365": {
-    title: "Fairplay vs Lotus365 | Cricket ID, UPI and 180-minute payouts",
+    title: "Fairplay vs Lotus365 | ID, UPI and 180-min payouts",
     description:
       "Lotus365 is a separate login. Open a Fairplay ID on WhatsApp, fund with UPI, and withdraw about 180 minutes after the official result.",
     keywords: "Fairplay vs Lotus365, Lotus365 cricket ID, Fairplay comparison",
@@ -386,7 +397,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     keywords: "Fairplay vs Reddybook, Reddybook cricket ID",
   },
   "/fairplay-vs-gold365": {
-    title: "Fairplay vs Gold365 | Two wallets unless WhatsApp linked them",
+    title: "Fairplay vs Gold365 | Separate wallets unless linked",
     description:
       "Treat Gold365 and Fairplay as separate IDs unless the desk confirms a linked book. IPL on this schedule uses the Fairplay cricket login.",
     keywords: "Fairplay vs Gold365, Gold365 vs Fairplay",

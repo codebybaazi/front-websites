@@ -1763,6 +1763,96 @@ const RAW_BLOG_ARTICLES = [
     "date": "Aug 29, 2026",
     "icon": "ShieldCheck",
     "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "how-to-find-the-official-fairplay-login-page",
+    "title": "How To Find The Official Fairplay Login Page",
+    "category": "Guide",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Sep 01, 2026",
+    "icon": "ShieldCheck",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "fairplay-account-guide",
+    "title": "Fairplay Account Guide: ID, Login, Security and Access",
+    "category": "Guide",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Sep 02, 2026",
+    "icon": "ShieldCheck",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "cricket-betting-on-fairplay",
+    "title": "Cricket Betting on Fairplay: Markets and Match Guide",
+    "category": "Analysis",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Sep 03, 2026",
+    "icon": "TrendingUp",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "fairplay-sports-betting-guide",
+    "title": "Fairplay Sports Betting Guide: Cricket, Football and Tennis",
+    "category": "Guide",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Sep 04, 2026",
+    "icon": "Trophy",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "fairplay-kabaddi-betting-guide",
+    "title": "Fairplay Kabaddi Betting Guide: Markets Explained",
+    "category": "Analysis",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Sep 05, 2026",
+    "icon": "Zap",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "fairplay-exchange-guide",
+    "title": "Fairplay Exchange: Complete Cricket Exchange Guide",
+    "category": "Analysis",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Sep 07, 2026",
+    "icon": "TrendingUp",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "fairplay-live-games-guide",
+    "title": "Fairplay Live Games: Casino and Card Game Guide",
+    "category": "Strategy",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Sep 08, 2026",
+    "icon": "Star",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "fairplay-deposit-guide",
+    "title": "Fairplay Deposit Guide: Understanding UPI Deposits",
+    "category": "Support",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Sep 10, 2026",
+    "icon": "ShieldCheck",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "fairplay-online-betting-guide",
+    "title": "Fairplay Online Betting: How the Platform Works",
+    "category": "Analysis",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Sep 11, 2026",
+    "icon": "TrendingUp",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "slug": "fairplay-bet-app-guide",
+    "title": "Fairplay Bet App: Features, Access and Mobile Betting Guide",
+    "category": "Guide",
+    "desc": "Fairplay guide in plain language: Fairplay ID, UPI wallet, and the exchange.",
+    "date": "Sep 12, 2026",
+    "icon": "Zap",
+    "img": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop"
   }
 ];
 

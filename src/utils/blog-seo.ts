@@ -1,3 +1,5 @@
+import { BLOG_POST_OVERRIDES, hasUniqueBlogContent } from "@/lib/blog-post-overrides";
+
 export interface BlogSeo {
   h1: string;
   title: string;
@@ -11,6 +13,9 @@ export interface BlogBlock {
   c?: string;
   items?: string[] | Array<{ q: string; a: string }>;
 }
+
+/** Re-exported so route modules only need one import for the indexability check. */
+export { hasUniqueBlogContent };
 
 const ACRONYMS: Record<string, string> = {
   fairplay: "Fairplay",
@@ -223,17 +228,20 @@ function topicNoun(h1: string): string {
 }
 
 export function getBlogSeo(slug: string): BlogSeo {
-  const h1 = titleFromSlug(slug);
+  const override = BLOG_POST_OVERRIDES[slug];
+  const h1 = override?.h1 ?? titleFromSlug(slug);
   const cluster = clusterOf(slug);
   const copy = CLUSTER[cluster];
   const opener = OPENERS[hashSeed(slug) % OPENERS.length] ?? OPENERS[0];
   const noun = topicNoun(h1);
-  const title = `${h1} | Fairplay`;
-  const description = clipMeta(
-    `${opener} ${copy.short} on Fairplay: ${copy.what}. Same Fairplay ID and UPI wallet.`,
-  );
+  const title = override?.title ?? `${h1} | Fairplay`;
   const keywords = [h1, copy.short, ...copy.keywords, "Fairplay 2026"].join(", ");
   const intro = `${opener} This page is about ${noun} on Fairplay — ${copy.what}. You will use the same Fairplay ID for cricket, football, tennis and casino. ${copy.slip.charAt(0).toUpperCase() + copy.slip.slice(1)} is where the work happens.`;
+
+  const description = override
+    ? override.description
+    : clipMeta(`${opener} ${copy.short} on Fairplay: ${copy.what}. Same Fairplay ID and UPI wallet.`);
+
   return { h1, title, description, keywords, intro };
 }
 
@@ -247,6 +255,9 @@ export function enrichBlogArticle<T extends { slug: string; title: string; desc:
 }
 
 export function getBlogArticleBlocks(slug: string): BlogBlock[] {
+  const override = BLOG_POST_OVERRIDES[slug];
+  if (override) return override.blocks;
+
   const seo = getBlogSeo(slug);
   const cluster = clusterOf(slug);
   const copy = CLUSTER[cluster];

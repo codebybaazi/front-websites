@@ -4,6 +4,8 @@ import { Swords, Globe, Zap, Users, Shield, Trophy, Star } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/11xplay')({
   component: Platform11xPlay,
@@ -32,6 +34,7 @@ function Platform11xPlay() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               11xplay through Fairplay: one ID only if WhatsApp says they linked it. Do not assume the same password opens 11xplay.com.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/11xplay"]} className="mb-8 justify-center" />
             <div className="flex flex-wrap justify-center gap-4 mb-16">
               <a 
                 href={waLink("Hi Fairplay, I want to get an 11xPlay ID")}

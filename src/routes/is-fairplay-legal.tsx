@@ -14,6 +14,8 @@ import {
 import { Link } from '@tanstack/react-router'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 export const Route = createFileRoute('/is-fairplay-legal')({
   component: IsFairplayLegalPage,
   head: () => pageHeadFor('/is-fairplay-legal'),
@@ -47,6 +49,7 @@ function IsFairplayLegalPage() {
           >
             Fairplay is an offshore cricket exchange. You must be 18+ and follow the law where you live. This page is not legal advice — it explains how the ID, KYC and terms work on this desk.
           </motion.p>
+          <ReviewedBadge iso={CONTENT_REVIEWED["/is-fairplay-legal"]} className="mt-5 justify-center" />
         </header>
 
         {/* AI Overview */}

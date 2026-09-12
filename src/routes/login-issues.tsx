@@ -4,6 +4,8 @@ import { AlertCircle, Lock, Shield, HelpCircle, Zap, RefreshCw, Star, ArrowRight
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/login-issues')({
   component: LoginIssues,
@@ -39,6 +41,7 @@ function LoginIssues() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               OTP delay, a locked Fairplay ID, or a cached session. Try a fresh browser, wait out a lock, then WhatsApp the ID if the code never arrives.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/login-issues"]} className="justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">

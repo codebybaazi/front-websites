@@ -199,6 +199,16 @@ export const BLOG_POST_DATES: Record<string, string> = {
   "fairplay-games-id-explore-multiple-tournaments-with-one-id": "Aug 26, 2026",
   "fairplay-online-cricket-id-vs-cricket-betting-id": "Aug 28, 2026",
   "fairplay-id-security-tips-protect-your-id-login": "Aug 29, 2026",
+  "how-to-find-the-official-fairplay-login-page": "Sep 01, 2026",
+  "fairplay-account-guide": "Sep 02, 2026",
+  "cricket-betting-on-fairplay": "Sep 03, 2026",
+  "fairplay-sports-betting-guide": "Sep 04, 2026",
+  "fairplay-kabaddi-betting-guide": "Sep 05, 2026",
+  "fairplay-exchange-guide": "Sep 07, 2026",
+  "fairplay-live-games-guide": "Sep 08, 2026",
+  "fairplay-deposit-guide": "Sep 10, 2026",
+  "fairplay-online-betting-guide": "Sep 11, 2026",
+  "fairplay-bet-app-guide": "Sep 12, 2026",
 };
 
 export const BLOG_POST_SLUGS: string[] = Object.keys(BLOG_POST_DATES);

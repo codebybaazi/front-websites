@@ -35,7 +35,7 @@ export function AIOverview({ title, content = '', type = 'summary' }: AIOverview
         </div>
         
         <div className="space-y-4">
-          <p className="text-[15px] text-foreground/80 leading-relaxed">
+          <p className="ai-overview-summary text-[15px] text-foreground/80 leading-relaxed">
             {body}
           </p>
           

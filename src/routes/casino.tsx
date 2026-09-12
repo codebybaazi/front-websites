@@ -7,6 +7,8 @@ import { useState, useEffect } from 'react'
 import { z } from 'zod'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from '@/lib/whatsapp'
 
 import teenPattiImg from '@/assets/betting/teen-patti.jpg'
@@ -107,6 +109,7 @@ function CasinoPage() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
               Teen Patti, Andar Bahar, roulette and blackjack use the Fairplay wallet you already fund with UPI.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/casino"]} className="justify-center" />
           </motion.div>
 
           <div className="max-w-5xl mx-auto mb-12 px-4">

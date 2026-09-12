@@ -51,6 +51,25 @@ export function faqPageJsonLd(faqs: Array<{ q?: string; a?: string } | null | un
   };
 }
 
+/**
+ * Marks the on-page FAQ answers and AI-overview summary as voice-friendly via
+ * their stable CSS classes (see FAQSection.tsx and AIOverview.tsx). Rendered
+ * as its own WebPage node per Google's speakable guidance, keyed to the
+ * current page's URL rather than attached to the FAQPage node itself.
+ */
+export function speakableJsonLd(pageUrl: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": pageUrl,
+    url: pageUrl,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".ai-overview-summary", ".faq-question", ".faq-answer"],
+    },
+  };
+}
+
 export function serializeJsonLd(data: unknown): string {
   return JSON.stringify(data).replace(/</g, "\\u003c");
 }

@@ -3,6 +3,8 @@ import { pageHeadFor } from "@/utils/page-seo"
 import { Landmark as Trophy, Target, Star, Shield, Zap, Info, ChevronRight } from 'lucide-react'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 export const Route = createFileRoute('/platforms')({
   component: Platforms,
   head: () => pageHeadFor('/platforms'),
@@ -33,6 +35,7 @@ function Platforms() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               Fairplay can open partner exchanges when the desk issues them. Cricket and casino still sit on the main Fairplay ID unless you are told otherwise.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/platforms"]} className="justify-center" />
           </div>
 
           <div className="max-w-5xl mx-auto mb-12">

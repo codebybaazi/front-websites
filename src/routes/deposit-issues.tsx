@@ -4,11 +4,21 @@ import { AlertCircle, RefreshCw, HelpCircle, Shield, PhoneCall, Star, ArrowRight
 import { motion } from 'framer-motion'
 import { AIOverview } from '@/components/AIOverview'
 import { FAQSection } from '@/components/FAQSection'
+import { JsonLd } from '@/components/JsonLd'
+import { howToJsonLd } from '@/utils/howto-schema'
+import { ReviewedBadge } from '@/components/ReviewedBadge'
+import { CONTENT_REVIEWED } from '@/lib/content-review-dates'
 import { waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute('/deposit-issues')({
   component: DepositIssues,
   head: () => pageHeadFor('/deposit-issues'),
 })
+
+const depositIssueSteps = [
+  { title: 'Find the UTR', desc: 'Open the UPI app the payment was sent from and copy the 12-digit UTR from the transaction receipt.' },
+  { title: 'Give it a short wait', desc: 'UPI can lag a few minutes, especially around a big match. Check the wallet again before assuming it failed.' },
+  { title: 'Message once with proof', desc: 'WhatsApp the Fairplay ID, amount and a screenshot with the UTR. Do not pay again or send repeat tickets.' },
+]
 
 function DepositIssues() {
   const commonIssues = [
@@ -31,6 +41,14 @@ function DepositIssues() {
 
   return (
     <div className="flex flex-col bg-background text-foreground overflow-hidden">
+      <JsonLd
+        data={howToJsonLd({
+          name: 'How to resolve a Fairplay deposit issue',
+          description: 'What to check when a UPI payment went through but the Fairplay wallet has not credited it yet.',
+          path: '/deposit-issues',
+          steps: depositIssueSteps.map((step) => ({ name: step.title, text: step.desc })),
+        })}
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(47,185,74,0.08),transparent_70%)]" />
@@ -50,6 +68,7 @@ function DepositIssues() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
               UPI paid, wallet empty. Wait for the first UTR. Do not pay twice. WhatsApp Fairplay ID, amount and the screenshot.
             </p>
+            <ReviewedBadge iso={CONTENT_REVIEWED["/deposit-issues"]} className="justify-center" />
           </motion.div>
 
           <div className="container max-w-5xl mx-auto px-4 mb-12">
