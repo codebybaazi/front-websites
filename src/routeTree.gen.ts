@@ -15,6 +15,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as AccountIssuesRouteImport } from './routes/account-issues'
 import { Route as AllLinksRouteImport } from './routes/all-links'
 import { Route as AppRouteImport } from './routes/app'
+import { Route as AuthorsRouteImport } from './routes/authors'
 import { Route as BasketballBettingRouteImport } from './routes/basketball-betting'
 import { Route as BettingRouteImport } from './routes/betting'
 import { Route as BlogRouteImport } from './routes/blog'
@@ -70,6 +71,7 @@ import { Route as WhatsappSupportRouteImport } from './routes/whatsapp-support'
 import { Route as WithdrawalGuideRouteImport } from './routes/withdrawal-guide'
 import { Route as WithdrawalIssuesRouteImport } from './routes/withdrawal-issues'
 import { Route as WplBettingRouteImport } from './routes/wpl-betting'
+import { Route as AuthorsSlugRouteImport } from './routes/authors.$slug'
 import { Route as MatchSlugRouteImport } from './routes/match.$slug'
 import { Route as PostsSlugRouteImport } from './routes/posts.$slug'
 
@@ -101,6 +103,11 @@ const AllLinksRoute = AllLinksRouteImport.update({
 const AppRoute = AppRouteImport.update({
   id: '/app',
   path: '/app',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthorsRoute = AuthorsRouteImport.update({
+  id: '/authors',
+  path: '/authors',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BasketballBettingRoute = BasketballBettingRouteImport.update({
@@ -380,6 +387,11 @@ const WplBettingRoute = WplBettingRouteImport.update({
   path: '/wpl-betting',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthorsSlugRoute = AuthorsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => AuthorsRoute,
+} as any)
 const MatchSlugRoute = MatchSlugRouteImport.update({
   id: '/match/$slug',
   path: '/match/$slug',
@@ -398,6 +410,7 @@ export interface FileRoutesByFullPath {
   '/account-issues': typeof AccountIssuesRoute
   '/all-links': typeof AllLinksRoute
   '/app': typeof AppRoute
+  '/authors': typeof AuthorsRouteWithChildren
   '/basketball-betting': typeof BasketballBettingRoute
   '/betting': typeof BettingRoute
   '/blog': typeof BlogRoute
@@ -453,6 +466,7 @@ export interface FileRoutesByFullPath {
   '/withdrawal-guide': typeof WithdrawalGuideRoute
   '/withdrawal-issues': typeof WithdrawalIssuesRoute
   '/wpl-betting': typeof WplBettingRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/match/$slug': typeof MatchSlugRoute
   '/posts/$slug': typeof PostsSlugRoute
 }
@@ -463,6 +477,7 @@ export interface FileRoutesByTo {
   '/account-issues': typeof AccountIssuesRoute
   '/all-links': typeof AllLinksRoute
   '/app': typeof AppRoute
+  '/authors': typeof AuthorsRouteWithChildren
   '/basketball-betting': typeof BasketballBettingRoute
   '/betting': typeof BettingRoute
   '/blog': typeof BlogRoute
@@ -518,6 +533,7 @@ export interface FileRoutesByTo {
   '/withdrawal-guide': typeof WithdrawalGuideRoute
   '/withdrawal-issues': typeof WithdrawalIssuesRoute
   '/wpl-betting': typeof WplBettingRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/match/$slug': typeof MatchSlugRoute
   '/posts/$slug': typeof PostsSlugRoute
 }
@@ -529,6 +545,7 @@ export interface FileRoutesById {
   '/account-issues': typeof AccountIssuesRoute
   '/all-links': typeof AllLinksRoute
   '/app': typeof AppRoute
+  '/authors': typeof AuthorsRouteWithChildren
   '/basketball-betting': typeof BasketballBettingRoute
   '/betting': typeof BettingRoute
   '/blog': typeof BlogRoute
@@ -584,6 +601,7 @@ export interface FileRoutesById {
   '/withdrawal-guide': typeof WithdrawalGuideRoute
   '/withdrawal-issues': typeof WithdrawalIssuesRoute
   '/wpl-betting': typeof WplBettingRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/match/$slug': typeof MatchSlugRoute
   '/posts/$slug': typeof PostsSlugRoute
 }
@@ -596,6 +614,7 @@ export interface FileRouteTypes {
     | '/account-issues'
     | '/all-links'
     | '/app'
+    | '/authors'
     | '/basketball-betting'
     | '/betting'
     | '/blog'
@@ -651,6 +670,7 @@ export interface FileRouteTypes {
     | '/withdrawal-guide'
     | '/withdrawal-issues'
     | '/wpl-betting'
+    | '/authors/$slug'
     | '/match/$slug'
     | '/posts/$slug'
   fileRoutesByTo: FileRoutesByTo
@@ -661,6 +681,7 @@ export interface FileRouteTypes {
     | '/account-issues'
     | '/all-links'
     | '/app'
+    | '/authors'
     | '/basketball-betting'
     | '/betting'
     | '/blog'
@@ -716,6 +737,7 @@ export interface FileRouteTypes {
     | '/withdrawal-guide'
     | '/withdrawal-issues'
     | '/wpl-betting'
+    | '/authors/$slug'
     | '/match/$slug'
     | '/posts/$slug'
   id:
@@ -726,6 +748,7 @@ export interface FileRouteTypes {
     | '/account-issues'
     | '/all-links'
     | '/app'
+    | '/authors'
     | '/basketball-betting'
     | '/betting'
     | '/blog'
@@ -781,6 +804,7 @@ export interface FileRouteTypes {
     | '/withdrawal-guide'
     | '/withdrawal-issues'
     | '/wpl-betting'
+    | '/authors/$slug'
     | '/match/$slug'
     | '/posts/$slug'
   fileRoutesById: FileRoutesById
@@ -792,6 +816,7 @@ export interface RootRouteChildren {
   AccountIssuesRoute: typeof AccountIssuesRoute
   AllLinksRoute: typeof AllLinksRoute
   AppRoute: typeof AppRoute
+  AuthorsRoute: typeof AuthorsRouteWithChildren
   BasketballBettingRoute: typeof BasketballBettingRoute
   BettingRoute: typeof BettingRoute
   BlogRoute: typeof BlogRoute
@@ -893,6 +918,13 @@ declare module '@tanstack/react-router' {
       path: '/app'
       fullPath: '/app'
       preLoaderRoute: typeof AppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/authors': {
+      id: '/authors'
+      path: '/authors'
+      fullPath: '/authors'
+      preLoaderRoute: typeof AuthorsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/basketball-betting': {
@@ -1280,6 +1312,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WplBettingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/authors/$slug': {
+      id: '/authors/$slug'
+      path: '/$slug'
+      fullPath: '/authors/$slug'
+      preLoaderRoute: typeof AuthorsSlugRouteImport
+      parentRoute: typeof AuthorsRoute
+    }
     '/match/$slug': {
       id: '/match/$slug'
       path: '/match/$slug'
@@ -1297,6 +1336,17 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface AuthorsRouteChildren {
+  AuthorsSlugRoute: typeof AuthorsSlugRoute
+}
+
+const AuthorsRouteChildren: AuthorsRouteChildren = {
+  AuthorsSlugRoute: AuthorsSlugRoute,
+}
+
+const AuthorsRouteWithChildren =
+  AuthorsRoute._addFileChildren(AuthorsRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   R11xplayRoute: R11xplayRoute,
@@ -1304,6 +1354,7 @@ const rootRouteChildren: RootRouteChildren = {
   AccountIssuesRoute: AccountIssuesRoute,
   AllLinksRoute: AllLinksRoute,
   AppRoute: AppRoute,
+  AuthorsRoute: AuthorsRouteWithChildren,
   BasketballBettingRoute: BasketballBettingRoute,
   BettingRoute: BettingRoute,
   BlogRoute: BlogRoute,
