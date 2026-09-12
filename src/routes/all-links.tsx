@@ -101,9 +101,12 @@ const sections = [
       { text: "Login Guide", sub: "OTP on the Fairplay ID", href: "/login-guide" },
       { text: "Register Guide", sub: "Open an ID on WhatsApp", href: "/register-guide" },
       { text: "Deposit Guide", sub: "UPI, bank and crypto funding", href: "/deposit-guide" },
+      { text: "Fairplay Deposit Number", sub: "Official WhatsApp number for UPI", href: "/fairplay-deposit-number" },
       { text: "Withdrawal Guide", sub: "About 180-minute payouts", href: "/withdrawal-guide" },
+      { text: "Fairplay Withdrawal Number", sub: "Official WhatsApp number for payouts", href: "/fairplay-withdrawal-number" },
       { text: "Telegram Channel", sub: "Fixture notes — not deposits", href: "/telegram-channel" },
-      { text: "WhatsApp Support", sub: "ID, UPI and payout tickets", href: "/whatsapp-support" }
+      { text: "WhatsApp Support", sub: "ID, UPI and payout tickets", href: "/whatsapp-support" },
+      { text: "Fairplay Customer Care Number", sub: "Official WhatsApp for support", href: "/fairplay-customer-care-number" }
     ]
   },
   {

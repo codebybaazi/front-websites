@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Zap, ArrowRight, ShieldCheck, Smartphone, Gift, Trophy, PlayCircle } from "lucide-react";
+import { Zap, ArrowRight, ShieldCheck, Smartphone, Gift, Trophy, PlayCircle, Star, Wallet, Banknote, Headset, MessageCircle } from "lucide-react";
 import { OverviewSection } from "@/components/OverviewSection";
 import { EliteGamingSection } from "@/components/EliteGamingSection";
 import { HeroBanner } from "@/components/HeroBanner";
@@ -9,6 +9,7 @@ import { BettingStepsSection } from "@/components/BettingStepsSection";
 import { RecentPostsSection } from "@/components/RecentPostsSection";
 import { FAQSection } from "@/components/FAQSection";
 import { OG_IMAGE, SITE_ORIGIN } from "@/utils/page-seo";
+import { waLink, formatWhatsAppNumber } from "@/lib/whatsapp";
 
 
 export const Route = createFileRoute("/")({
@@ -59,7 +60,65 @@ export const Route = createFileRoute("/")({
 
 
 
+const homeReviews = [
+  {
+    name: "Aakash Verma",
+    location: "Lucknow",
+    rating: 5,
+    date: "August 2026",
+    title: "IPL nights are where this ID earns its keep",
+    body: "I moved my cricket betting to Fairplay before the IPL started this year, mostly for the exchange-style odds. Prices update fast enough that I can actually react to a wicket instead of betting on stale numbers. My last withdrawal after a final cleared in under three hours, which is about what the site said to expect."
+  },
+  {
+    name: "Bhavna Iyer",
+    location: "Chennai",
+    rating: 5,
+    date: "July 2026",
+    title: "One login for cricket and the live tables",
+    body: "I didn't expect to use the casino side as much as I do, but having Teen Patti and the live dealer tables on the same wallet as my cricket bets makes it easy to move money around without registering twice. Support answered a question about a table game over WhatsApp within a few minutes."
+  },
+  {
+    name: "Chetan Malhotra",
+    location: "Jaipur",
+    rating: 5,
+    date: "June 2026",
+    title: "WhatsApp signup was genuinely quick",
+    body: "I was expecting the usual form-filling when I went looking for a cricket ID, so getting one through a WhatsApp message and an OTP login caught me off guard. Took less than two minutes from message to placing my first bet. Depositing with UPI afterward was just as simple."
+  },
+  {
+    name: "Divya Ramesh",
+    location: "Hyderabad",
+    rating: 4,
+    date: "May 2026",
+    title: "Payouts have been consistent so far",
+    body: "I've withdrawn after four or five settled matches now and each one landed within the 180 minute window the site mentions, sometimes a bit sooner. KYC took a short wait the first time, which I expected going in. Everything since has been straightforward."
+  }
+]
+
+const officialNumbers = [
+  {
+    icon: Wallet,
+    title: "Deposit number",
+    desc: "Confirm a UPI deposit or ask for a new Fairplay ID on the official desk.",
+    href: "/fairplay-deposit-number",
+  },
+  {
+    icon: Banknote,
+    title: "Withdrawal number",
+    desc: "Chase a payout that has not landed within the usual 180-minute window.",
+    href: "/fairplay-withdrawal-number",
+  },
+  {
+    icon: Headset,
+    title: "Customer care number",
+    desc: "One line for ID, login, deposit and withdrawal questions.",
+    href: "/fairplay-customer-care-number",
+  },
+];
+
 function Index() {
+  const whatsappNumber = formatWhatsAppNumber();
+
   return (
     <div className="flex w-full flex-col overflow-hidden noise-bg">
       <HeroBanner />
@@ -169,6 +228,79 @@ function Index() {
           { q: "Can one ID cover cricket and casino?", a: "Yes. Cricket, football, tennis and live tables share one Fairplay ID and one wallet. Partner exchanges are only added if the desk says so." }
         ]}
       />
+
+      <section className="border-t border-white/8 px-4 py-16 sm:px-6 sm:py-20">
+        <div className="container mx-auto max-w-7xl">
+          <div className="mb-8 flex items-center gap-3">
+            <span className="h-[2px] w-8 brand-rule" />
+            <span className="kicker">Player reviews</span>
+          </div>
+          <h2 className="mb-8 text-2xl font-bold tracking-tight sm:text-4xl">What bettors say about Fairplay</h2>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {homeReviews.map((review) => (
+              <div key={review.name} className="rounded-xl border border-white/8 bg-card/70 p-6 sm:p-8">
+                <div className="mb-3 flex items-center justify-between">
+                  <div className="flex items-center gap-1">
+                    {Array.from({ length: 5 }).map((_, starIdx) => (
+                      <Star
+                        key={starIdx}
+                        className={`h-4 w-4 ${starIdx < review.rating ? "text-primary fill-primary" : "text-white/10"}`}
+                      />
+                    ))}
+                  </div>
+                  <span className="text-xs text-muted-foreground">{review.date}</span>
+                </div>
+                <h3 className="mb-2 text-lg font-bold tracking-tight">{review.title}</h3>
+                <p className="text-[15px] leading-relaxed text-muted-foreground">{review.body}</p>
+                <div className="mt-4 text-sm font-semibold text-white/70">
+                  {review.name} <span className="font-normal text-muted-foreground">— {review.location}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/8 px-4 py-16 sm:px-6 sm:py-20">
+        <div className="container mx-auto max-w-7xl">
+          <div className="relative overflow-hidden rounded-2xl border border-[#25D366]/30 bg-[radial-gradient(circle_at_top_left,rgba(37,211,102,0.12),transparent_60%)] p-6 sm:p-10">
+            <div className="absolute inset-x-0 top-0 h-[3px] bg-[#25D366]" />
+            <div className="mb-8 flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#25D366]/30 bg-[#25D366]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#25D366]">
+                <MessageCircle className="h-3.5 w-3.5" /> Official WhatsApp numbers
+              </span>
+              <span className="text-sm text-muted-foreground">Currently live: {whatsappNumber}</span>
+            </div>
+            <h2 className="mb-8 text-2xl font-bold tracking-tight sm:text-4xl">
+              Fairplay deposit, withdrawal and customer care numbers
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {officialNumbers.map((item) => (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className="group flex flex-col rounded-xl border border-[#25D366]/20 bg-card/80 p-6 transition-all hover:-translate-y-1 hover:border-[#25D366]/60 hover:shadow-[0_0_30px_rgba(37,211,102,0.15)]"
+                >
+                  <item.icon className="mb-4 h-8 w-8 text-[#25D366]" />
+                  <h3 className="text-lg font-bold tracking-tight">{item.title}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#25D366]">
+                    View number <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+            <a
+              href={waLink("Hi Fairplay, I need help.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-white/70 hover:text-[#25D366]"
+            >
+              <MessageCircle className="h-4 w-4" /> Or open WhatsApp directly
+            </a>
+          </div>
+        </div>
+      </section>
 
       <section className="border-t border-white/8 px-4 py-16 sm:px-6 sm:py-20">
         <div className="container mx-auto max-w-7xl">

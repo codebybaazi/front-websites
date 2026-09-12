@@ -96,3 +96,13 @@ export function waLink(text?: string): string {
   const base = `https://wa.me/${currentNumber}`;
   return text ? `${base}?text=${encodeURIComponent(text)}` : base;
 }
+
+/** Formats the active number for display, e.g. "918294924767" -> "+91 82949 24767". */
+export function formatWhatsAppNumber(): string {
+  const digits = currentNumber;
+  if (digits.startsWith(DEFAULT_COUNTRY_CODE) && digits.length === 12) {
+    const local = digits.slice(2);
+    return `+${DEFAULT_COUNTRY_CODE} ${local.slice(0, 5)} ${local.slice(5)}`;
+  }
+  return `+${digits}`;
+}

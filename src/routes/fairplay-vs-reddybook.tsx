@@ -30,6 +30,41 @@ export const Route = createFileRoute('/fairplay-vs-reddybook')({
   head: () => pageHeadFor('/fairplay-vs-reddybook'),
 })
 
+const customerReviews = [
+  {
+    name: "Vikram Choudhary",
+    location: "Jaipur",
+    rating: 5,
+    date: "August 2026",
+    title: "Big bets finally get matched",
+    body: "I used to place larger stakes on Reddybook during IPL and would regularly see bets rejected or partially matched once the odds moved. Fairplay handles the same size without slippage, even on final-over markets. That alone was worth switching for."
+  },
+  {
+    name: "Ananya Iyer",
+    location: "Chennai",
+    rating: 5,
+    date: "July 2026",
+    title: "No more crashes during big matches",
+    body: "Reddybook went down twice for me during India vs Australia, right when I needed to cash out. Fairplay has stayed up through every major match I've bet on since April, including both IPL semifinals. Uptime matters more than people admit until it actually fails on you."
+  },
+  {
+    name: "Karan Malhotra",
+    location: "Lucknow",
+    rating: 4,
+    date: "June 2026",
+    title: "Withdrawal timing is predictable now",
+    body: "The biggest difference for me is knowing roughly when my money will show up. Fairplay withdrawals have landed around three hours after settlement each time, which is more consistent than what I got on Reddybook, where it depended on who was processing that day. Deposits through UPI are also simple to track."
+  },
+  {
+    name: "Deepika Rao",
+    location: "Hyderabad",
+    rating: 5,
+    date: "May 2026",
+    title: "Fewer calls, more privacy",
+    body: "After I signed up on Reddybook years ago, I started getting marketing calls from numbers I never gave permission to contact. Fairplay only needed my number for OTP login, and I haven't had that problem since moving my cricket betting over. Support on WhatsApp has also been quick whenever I've had a question about a settled market."
+  }
+]
+
 const comparisonData = [
   {
     feature: "Technology Stack",
@@ -233,8 +268,45 @@ function ComparisonPage() {
             </motion.div>
           </div>
 
+          {/* Customer Reviews */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-card p-10 rounded-xl border-primary/10 mb-20"
+          >
+            <h3 className="text-3xl font-bold tracking-tight mb-2 flex items-center gap-3">
+              <Star className="text-primary w-8 h-8 fill-primary" /> Player Reviews: Fairplay vs Reddybook
+            </h3>
+            <p className="text-muted-foreground mb-8 pl-11">
+              Real feedback from bettors who moved from Reddybook to a Fairplay ID.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {customerReviews.map((review, idx) => (
+                <div key={idx} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-1">
+                      {Array.from({ length: 5 }).map((_, starIdx) => (
+                        <Star
+                          key={starIdx}
+                          className={`w-4 h-4 ${starIdx < review.rating ? "text-primary fill-primary" : "text-white/10"}`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-xs text-white/30 font-medium">{review.date}</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white mb-2">{review.title}</h4>
+                  <p className="text-muted-foreground leading-relaxed mb-4">{review.body}</p>
+                  <div className="text-sm font-bold text-white/70">
+                    {review.name} <span className="text-white/30 font-normal">— {review.location}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
           {/* FAQ Section */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

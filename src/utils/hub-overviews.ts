@@ -38,6 +38,12 @@ export const HUB_OVERVIEWS: Record<string, string> = {
     "Fairplay withdrawals wait on settled markets and, sometimes, KYC. If a payout is past the usual 180-minute window, message WhatsApp with ID, amount and UTR.",
   "Whatsapp Support":
     "WhatsApp is how most people get a Fairplay ID, unblock login, and chase deposits. Have the ID and a screenshot ready — that is faster than repeating the story.",
+  "Fairplay Deposit Number":
+    "The Fairplay deposit number is the official WhatsApp line that opens an ID and confirms UPI deposits. It changes from time to time, so this page always pulls the current one instead of a number typed into a chat somewhere.",
+  "Fairplay Withdrawal Number":
+    "The Fairplay withdrawal number is the official WhatsApp line for a payout that has not landed within the usual 180 minutes. It changes from time to time, so this page always pulls the current one instead of a number typed into a chat somewhere.",
+  "Fairplay Customer Care Number":
+    "The Fairplay customer care number is the official WhatsApp line for ID, login, deposit and withdrawal questions. It changes from time to time, so this page always pulls the current one instead of a number typed into a chat somewhere.",
   "Telegram Channel":
     "Fairplay Telegram is for updates, not for sending UPI to strangers. IDs and deposits still go through official WhatsApp and the Fairplay login you already use.",
   "Contact Us":

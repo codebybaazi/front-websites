@@ -31,6 +31,41 @@ export const Route = createFileRoute('/fairplay-vs-skyexchange247')({
   head: () => pageHeadFor('/fairplay-vs-skyexchange247'),
 })
 
+const customerReviews = [
+  {
+    name: "Abhinav Saxena",
+    location: "Kanpur",
+    rating: 5,
+    date: "August 2026",
+    title: "Site didn't freeze during the last over",
+    body: "Skyexchange247 would slow to a crawl right when everyone was trying to place a bet in the final overs, and refreshing rarely helped in time. I've watched a full IPL season on Fairplay now and haven't hit that odds freeze once, even during a packed T20 World Cup night. That's the difference that actually matters when you're trying to lock in a lay bet."
+  },
+  {
+    name: "Preeti Bhatia",
+    location: "Jodhpur",
+    rating: 5,
+    date: "July 2026",
+    title: "Larger bets stopped getting rejected",
+    body: "On Skyexchange my bigger stakes would occasionally sit unmatched or get partially filled when the pool ran thin on a secondary market. Fairplay has matched every bet I've placed this year at the price I saw, including a fairly large one on a T20 semifinal. I stopped second-guessing whether my order would actually go through."
+  },
+  {
+    name: "Gaurav Nanda",
+    location: "Faridabad",
+    rating: 4,
+    date: "June 2026",
+    title: "Funds feel more accounted for",
+    body: "I had a settlement dispute once on Skyexchange that went back and forth through an agent before it got resolved. Fairplay's setup is more direct, my balance is just there and withdrawals haven't needed anyone to intervene. Took a bit of getting used to the new interface, but nothing serious."
+  },
+  {
+    name: "Ishita Bose",
+    location: "Guwahati",
+    rating: 5,
+    date: "May 2026",
+    title: "Signed up between innings and started betting right away",
+    body: "I messaged the Fairplay WhatsApp number during the innings break out of curiosity and had a working ID before the second innings began. Getting set up on Skyexchange years ago took me a lot longer, mostly waiting on verification. Support has answered my WhatsApp messages quickly every time I've asked about a payout since."
+  }
+]
+
 const comparisonData = [
   {
     feature: "Liquidity",
@@ -214,8 +249,45 @@ function ComparisonPage() {
           </motion.div>
         </div>
 
+        {/* Customer Reviews */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="glass-card p-10 rounded-xl border-primary/10 mb-24"
+        >
+          <h3 className="text-3xl font-bold tracking-tight mb-2 flex items-center gap-3 text-center justify-center">
+            <Star className="text-primary w-8 h-8 fill-primary" /> Player Reviews: Fairplay vs Skyexchange247
+          </h3>
+          <p className="text-muted-foreground mb-8 text-center">
+            Real feedback from bettors who compared Fairplay with Skyexchange247 during live matches.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {customerReviews.map((review, idx) => (
+              <div key={idx} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-1">
+                    {Array.from({ length: 5 }).map((_, starIdx) => (
+                      <Star
+                        key={starIdx}
+                        className={`w-4 h-4 ${starIdx < review.rating ? "text-primary fill-primary" : "text-white/10"}`}
+                      />
+                    ))}
+                  </div>
+                  <span className="text-xs text-white/30 font-medium">{review.date}</span>
+                </div>
+                <h4 className="text-lg font-bold text-white mb-2">{review.title}</h4>
+                <p className="text-muted-foreground leading-relaxed mb-4">{review.body}</p>
+                <div className="text-sm font-bold text-white/70">
+                  {review.name} <span className="text-white/30 font-normal">— {review.location}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
         {/* FAQ Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

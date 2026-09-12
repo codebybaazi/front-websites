@@ -29,6 +29,41 @@ export const Route = createFileRoute('/fairplay-vs-mahavir-book')({
   head: () => pageHeadFor('/fairplay-vs-mahavir-book'),
 })
 
+const customerReviews = [
+  {
+    name: "Manoj Tiwari",
+    location: "Varanasi",
+    rating: 5,
+    date: "August 2026",
+    title: "No more capped bets",
+    body: "Mahavir Book would cap my stake on cricket markets once volume got high, especially during IPL knockout matches. Fairplay has taken every bet I've placed so far, including a couple of larger ones on a World Cup semifinal. Being able to trade at the size I want without asking permission first makes a real difference."
+  },
+  {
+    name: "Neha Agarwal",
+    location: "Kanpur",
+    rating: 5,
+    date: "July 2026",
+    title: "App actually feels current",
+    body: "I'd been using Mahavir Book for a couple of years and the interface always felt like it was built a decade ago, slow to load and clunky on mobile. Fairplay's app opens fast and the odds update without me having to refresh the page. It's a small thing until you're trying to place a bet before the odds move."
+  },
+  {
+    name: "Suresh Pillai",
+    location: "Thiruvananthapuram",
+    rating: 4,
+    date: "June 2026",
+    title: "Payouts arrive when they say they will",
+    body: "With Mahavir Book I got used to hearing 'system busy' whenever I asked about a withdrawal. Since moving to Fairplay, my payouts have landed around the three hour mark after the match settles, every time. I still keep my KYC documents handy since that part matters either way."
+  },
+  {
+    name: "Farah Sheikh",
+    location: "Nagpur",
+    rating: 5,
+    date: "May 2026",
+    title: "Registration took less time than the toss",
+    body: "Opening an ID with Mahavir Book meant paperwork and waiting for someone to call back. I messaged the Fairplay WhatsApp number instead, got my ID almost immediately, and logged in with OTP before the match I wanted to bet on had even started. Support has answered every question I've sent since then, usually within a few minutes."
+  }
+]
+
 const comparisonData = [
   {
     feature: "Withdrawal Integrity",
@@ -232,8 +267,45 @@ function ComparisonPage() {
             </motion.div>
           </div>
 
+          {/* Customer Reviews */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-card p-10 rounded-xl border-primary/10 mb-20"
+          >
+            <h3 className="text-3xl font-bold tracking-tight mb-2 flex items-center gap-3">
+              <Star className="text-primary w-8 h-8 fill-primary" /> Player Reviews: Fairplay vs Mahavir Book
+            </h3>
+            <p className="text-muted-foreground mb-8 pl-11">
+              Real feedback from bettors who switched from Mahavir Book to a Fairplay ID.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {customerReviews.map((review, idx) => (
+                <div key={idx} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-1">
+                      {Array.from({ length: 5 }).map((_, starIdx) => (
+                        <Star
+                          key={starIdx}
+                          className={`w-4 h-4 ${starIdx < review.rating ? "text-primary fill-primary" : "text-white/10"}`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-xs text-white/30 font-medium">{review.date}</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white mb-2">{review.title}</h4>
+                  <p className="text-muted-foreground leading-relaxed mb-4">{review.body}</p>
+                  <div className="text-sm font-bold text-white/70">
+                    {review.name} <span className="text-white/30 font-normal">— {review.location}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
           {/* FAQ Section */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

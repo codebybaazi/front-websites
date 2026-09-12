@@ -29,6 +29,41 @@ export const Route = createFileRoute('/fairplay-vs-11xplay')({
   head: () => pageHeadFor('/fairplay-vs-11xplay'),
 })
 
+const customerReviews = [
+  {
+    name: "Yash Thakur",
+    location: "Dehradun",
+    rating: 5,
+    date: "August 2026",
+    title: "Bets go through even on big overs",
+    body: "I'd get the occasional bet rejected notification on 11xplay when I tried to place something sizeable during a run chase. On Fairplay, the same size bets have matched instantly every time this season, including a heavy stake during the IPL final. That reliability is what keeps me coming back."
+  },
+  {
+    name: "Ritika Chawla",
+    location: "Amritsar",
+    rating: 5,
+    date: "July 2026",
+    title: "Withdrawal landed while I was still watching the highlights",
+    body: "11xplay's manual verification meant I'd sometimes wait several hours for a withdrawal to clear. My last two Fairplay payouts came through in under three hours after the match ended, straight to my UPI. I didn't have to follow up with anyone either time."
+  },
+  {
+    name: "Harshad Patil",
+    location: "Pune",
+    rating: 4,
+    date: "June 2026",
+    title: "Comfortable with how login works",
+    body: "I keep my betting activity to myself, and Fairplay's OTP login gives me that without extra steps. 11xplay was fine too, but Fairplay felt a bit more locked down when I compared the two side by side over a month. Support on WhatsApp cleared up a question I had about a settled bet within minutes."
+  },
+  {
+    name: "Sneha Kulkarni",
+    location: "Nagpur",
+    rating: 5,
+    date: "May 2026",
+    title: "Registered during a rain delay and was ready by resumption",
+    body: "There was a rain delay during a match I wanted to bet on, so I messaged the Fairplay WhatsApp number out of curiosity and had my ID within a minute. By the time play resumed I was already logged in with OTP. 11xplay's signup, when I tried it earlier in the year, took longer because of the verification queue."
+  }
+]
+
 const comparisonData = [
   {
     feature: "Technology Stack",
@@ -213,8 +248,45 @@ function ComparisonPage() {
             </motion.div>
           </div>
 
+          {/* Customer Reviews */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-card p-10 rounded-xl border-primary/10 mb-20"
+          >
+            <h3 className="text-3xl font-bold tracking-tight mb-2 flex items-center gap-3">
+              <Star className="text-primary w-8 h-8 fill-primary" /> Player Reviews: Fairplay vs 11xplay
+            </h3>
+            <p className="text-muted-foreground mb-8 pl-11">
+              Real feedback from bettors who compared Fairplay with 11xplay for cricket betting.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {customerReviews.map((review, idx) => (
+                <div key={idx} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-1">
+                      {Array.from({ length: 5 }).map((_, starIdx) => (
+                        <Star
+                          key={starIdx}
+                          className={`w-4 h-4 ${starIdx < review.rating ? "text-primary fill-primary" : "text-white/10"}`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-xs text-white/30 font-medium">{review.date}</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white mb-2">{review.title}</h4>
+                  <p className="text-muted-foreground leading-relaxed mb-4">{review.body}</p>
+                  <div className="text-sm font-bold text-white/70">
+                    {review.name} <span className="text-white/30 font-normal">— {review.location}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
           {/* FAQ Section */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

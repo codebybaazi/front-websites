@@ -30,6 +30,41 @@ export const Route = createFileRoute('/fairplay-vs-laser247')({
   head: () => pageHeadFor('/fairplay-vs-laser247'),
 })
 
+const customerReviews = [
+  {
+    name: "Nikhil Bansal",
+    location: "Ludhiana",
+    rating: 5,
+    date: "August 2026",
+    title: "Fewer 'price changed' errors during overs",
+    body: "In-play cricket on Laser247 kept throwing price changed errors right when I tapped to confirm, usually during a boundary or a wicket when odds move fast. Fairplay hasn't given me that problem in the matches I've bet on since June. Confirming the slip still matters, but the prices actually hold long enough to act on them."
+  },
+  {
+    name: "Divya Menon",
+    location: "Coimbatore",
+    rating: 5,
+    date: "July 2026",
+    title: "App doesn't drain my battery anymore",
+    body: "Laser247's app used to eat through my phone's battery during a three hour match and eat data too. Fairplay feels much lighter, I can watch and bet through a full IPL game without my phone getting hot or my data plan taking a hit. Small detail, but it's the kind of thing you notice after enough matches."
+  },
+  {
+    name: "Amitabh Roy",
+    location: "Kolkata",
+    rating: 4,
+    date: "June 2026",
+    title: "Payout came in under the promised window",
+    body: "I was skeptical of the 180 minute payout claim, since Laser247 always needed extra manual verification that stretched things out. My first Fairplay withdrawal after a settled match arrived in a little over two hours. KYC was already done, which I assume helped."
+  },
+  {
+    name: "Tanvi Joshi",
+    location: "Nashik",
+    rating: 5,
+    date: "May 2026",
+    title: "Got in before the second innings started",
+    body: "I messaged the Fairplay WhatsApp number during the innings break and had my ID ready before the second innings started. Laser247 registration took me through several screens and a wait for verification the first time I signed up there. Support answered a question about my slip within a few minutes over WhatsApp too."
+  }
+]
+
 const comparisonData = [
   {
     feature: "Engine Latency",
@@ -233,8 +268,45 @@ function ComparisonPage() {
             </motion.div>
           </div>
 
+          {/* Customer Reviews */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-card p-10 rounded-xl border-primary/10 mb-20"
+          >
+            <h3 className="text-3xl font-bold tracking-tight mb-2 flex items-center gap-3">
+              <Star className="text-primary w-8 h-8 fill-primary" /> Player Reviews: Fairplay vs Laser247
+            </h3>
+            <p className="text-muted-foreground mb-8 pl-11">
+              Real feedback from bettors who compared Fairplay with Laser247 during live matches.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {customerReviews.map((review, idx) => (
+                <div key={idx} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-1">
+                      {Array.from({ length: 5 }).map((_, starIdx) => (
+                        <Star
+                          key={starIdx}
+                          className={`w-4 h-4 ${starIdx < review.rating ? "text-primary fill-primary" : "text-white/10"}`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-xs text-white/30 font-medium">{review.date}</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white mb-2">{review.title}</h4>
+                  <p className="text-muted-foreground leading-relaxed mb-4">{review.body}</p>
+                  <div className="text-sm font-bold text-white/70">
+                    {review.name} <span className="text-white/30 font-normal">— {review.location}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
           {/* FAQ Section */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

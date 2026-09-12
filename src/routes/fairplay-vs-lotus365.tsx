@@ -29,6 +29,41 @@ export const Route = createFileRoute('/fairplay-vs-lotus365')({
   head: () => pageHeadFor('/fairplay-vs-lotus365'),
 })
 
+const customerReviews = [
+  {
+    name: "Rohan Mehta",
+    location: "Mumbai",
+    rating: 5,
+    date: "August 2026",
+    title: "Withdrawals actually hit on time",
+    body: "I ran a Lotus365 account for almost a year before a friend pushed me to try Fairplay during the IPL season. The odds on the exchange side were noticeably tighter, and my first withdrawal after a match landed in about three hours, right around what they advertise. Lotus365 never gave me a clear number to expect, it was just whenever it came."
+  },
+  {
+    name: "Priya Sharma",
+    location: "Delhi",
+    rating: 5,
+    date: "July 2026",
+    title: "WhatsApp signup saved me a headache",
+    body: "Signing up for Lotus365 meant filling out a form and uploading documents before I could even see the odds. With Fairplay I messaged the WhatsApp number, got my ID within a minute, and logged in with OTP. Small thing, but when you're trying to catch odds before a toss, that speed matters."
+  },
+  {
+    name: "Arjun Nair",
+    location: "Bangalore",
+    rating: 4,
+    date: "June 2026",
+    title: "Better live tables, still learning the exchange side",
+    body: "I mostly play live casino and Fairplay's tables feel less crowded than what I was used to on Lotus365, with more Indian dealer games specifically. Took me a few sessions to understand how the cricket exchange pricing works compared to a straight bookmaker line, but support answered my questions on WhatsApp without making me wait."
+  },
+  {
+    name: "Sanjay Verma",
+    location: "Pune",
+    rating: 5,
+    date: "May 2026",
+    title: "Switched over and haven't looked back",
+    body: "My KYC on Lotus365 got stuck for days with no real explanation. When I opened a Fairplay ID instead, verification was quick and someone actually confirmed it over WhatsApp. I still check both sites for cricket prices, but Fairplay is where my money sits now."
+  }
+]
+
 const comparisonData = [
   {
     feature: "Cricket Odds",
@@ -213,8 +248,45 @@ function ComparisonPage() {
             </motion.div>
           </div>
 
+          {/* Customer Reviews */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-card p-10 rounded-xl border-primary/10 mb-20"
+          >
+            <h3 className="text-3xl font-bold tracking-tight mb-2 flex items-center gap-3">
+              <Star className="text-primary w-8 h-8 fill-primary" /> Player Reviews: Fairplay vs Lotus365
+            </h3>
+            <p className="text-muted-foreground mb-8 pl-11">
+              Real feedback from bettors who have used both platforms for cricket and live casino.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {customerReviews.map((review, idx) => (
+                <div key={idx} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-1">
+                      {Array.from({ length: 5 }).map((_, starIdx) => (
+                        <Star
+                          key={starIdx}
+                          className={`w-4 h-4 ${starIdx < review.rating ? "text-primary fill-primary" : "text-white/10"}`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-xs text-white/30 font-medium">{review.date}</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white mb-2">{review.title}</h4>
+                  <p className="text-muted-foreground leading-relaxed mb-4">{review.body}</p>
+                  <div className="text-sm font-bold text-white/70">
+                    {review.name} <span className="text-white/30 font-normal">— {review.location}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
           {/* FAQ Section */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

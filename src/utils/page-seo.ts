@@ -226,6 +226,27 @@ export const PAGE_SEO: Record<string, PageSeo> = {
       "Message Fairplay on WhatsApp for a new ID, OTP login help, deposits and payouts. Have your Fairplay ID and a screenshot ready.",
     keywords: "Fairplay WhatsApp, Fairplay customer care WhatsApp, get Fairplay ID WhatsApp",
   },
+  "/fairplay-deposit-number": {
+    title: "Fairplay Deposit Number | Official WhatsApp Number",
+    description:
+      "The current Fairplay deposit number for UPI deposits, ID activation and payment confirmation on WhatsApp. Pulled live from the official source, not copied from a forwarded chat.",
+    keywords:
+      "Fairplay deposit number, deposit number Fairplay, Fairplay WhatsApp number, Fairplay number, Fairplay deposit WhatsApp number",
+  },
+  "/fairplay-withdrawal-number": {
+    title: "Fairplay Withdrawal Number | Official WhatsApp Number",
+    description:
+      "The current Fairplay withdrawal number for chasing a delayed payout on WhatsApp. Pulled live from the official source, not copied from a forwarded chat.",
+    keywords:
+      "Fairplay withdrawal number, withdrawal number Fairplay, Fairplay WhatsApp number, Fairplay payout number, Fairplay withdrawal WhatsApp number",
+  },
+  "/fairplay-customer-care-number": {
+    title: "Fairplay Customer Care Number | Official WhatsApp Support",
+    description:
+      "The current Fairplay customer care number for ID, login, deposit and withdrawal help on WhatsApp. Pulled live from the official source, not copied from a forwarded chat.",
+    keywords:
+      "Fairplay customer care number, customer care number Fairplay, Fairplay WhatsApp number, Fairplay support number, Fairplay helpline number",
+  },
   "/contact-us": {
     title: "Contact Fairplay | WhatsApp and support",
     description:

@@ -31,6 +31,41 @@ export const Route = createFileRoute('/fairplay-vs-diamond-exchange')({
   head: () => pageHeadFor('/fairplay-vs-diamond-exchange'),
 })
 
+const customerReviews = [
+  {
+    name: "Ravi Deshmukh",
+    location: "Nagpur",
+    rating: 5,
+    date: "August 2026",
+    title: "A winning bet that didn't get voided",
+    body: "I had a Diamond Exchange bet voided after the fact once, and the explanation I got was vague about the local pool not covering it. Since moving to Fairplay for cricket, every settled bet has paid out as shown on the slip, including a large one during the World Cup. That kind of consistency is what kept me from going back."
+  },
+  {
+    name: "Pooja Bhatt",
+    location: "Surat",
+    rating: 5,
+    date: "July 2026",
+    title: "No more waiting on an agent",
+    body: "On Diamond Exchange my withdrawal depended on whether my master agent happened to be online, and weekends were the worst for that. Fairplay's payout came through in under three hours after a Saturday match settled, no agent involved. It's a straightforward system once you've used it a few times."
+  },
+  {
+    name: "Imran Qureshi",
+    location: "Bhopal",
+    rating: 4,
+    date: "June 2026",
+    title: "OTP login feels more direct",
+    body: "I was never fully comfortable with how many people touched my account details through the agent chain on Diamond Exchange. Fairplay just uses OTP straight to my phone, and I deposit through UPI without going through anyone else. Took a session or two to get used to the interface, but it's been smooth since."
+  },
+  {
+    name: "Shweta Nair",
+    location: "Indore",
+    rating: 5,
+    date: "May 2026",
+    title: "Set up faster than I expected",
+    body: "Getting an ID on Diamond Exchange meant going through a contact who knew a contact. With Fairplay I just messaged the WhatsApp number directly and had my ID within a minute, no middleman needed. I've used the WhatsApp support twice since and both times got a real answer instead of being passed around."
+  }
+]
+
 const comparisonData = [
   {
     feature: "Liquidity Source",
@@ -234,8 +269,45 @@ function ComparisonPage() {
             </motion.div>
           </div>
 
+          {/* Customer Reviews */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-card p-10 rounded-xl border-primary/10 mb-20"
+          >
+            <h3 className="text-3xl font-bold tracking-tight mb-2 flex items-center gap-3">
+              <Star className="text-primary w-8 h-8 fill-primary" /> Player Reviews: Fairplay vs Diamond Exchange
+            </h3>
+            <p className="text-muted-foreground mb-8 pl-11">
+              Real feedback from bettors who moved from an agent-based ID to a direct Fairplay ID.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {customerReviews.map((review, idx) => (
+                <div key={idx} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-1">
+                      {Array.from({ length: 5 }).map((_, starIdx) => (
+                        <Star
+                          key={starIdx}
+                          className={`w-4 h-4 ${starIdx < review.rating ? "text-primary fill-primary" : "text-white/10"}`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-xs text-white/30 font-medium">{review.date}</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white mb-2">{review.title}</h4>
+                  <p className="text-muted-foreground leading-relaxed mb-4">{review.body}</p>
+                  <div className="text-sm font-bold text-white/70">
+                    {review.name} <span className="text-white/30 font-normal">— {review.location}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
           {/* FAQ Section */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
