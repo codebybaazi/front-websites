@@ -1994,4 +1994,93 @@ export const UNIQUE_BLOG_POSTS_BATCH_8: Record<string, UniqueBlogPost> = {
       },
     ],
   },
+
+  "fairplay-id-registration-login-account-guide": {
+    h1: "Fairplay ID: registration, login and account guide",
+    title: "Fairplay ID: Registration, Login and Account Guide",
+    description:
+      "A Fairplay ID covers registration, OTP login, and account security: WhatsApp signup, mobile OTP, UPI wallet, and checks before your first cricket bet.",
+    keywords: "fairplay id, fairplay id login, fairplay cricket id, fairplay online id",
+    intro:
+      "A Fairplay ID is the single account used to log in, deposit through UPI, and place cricket or casino bets. Registration happens on WhatsApp with a mobile number and OTP, and the same login works on the app and the website whether the page calls it a Fairplay cricket ID or a Fairplay online ID.",
+    blocks: [
+      { t: "h2", c: "What a Fairplay ID actually is" },
+      {
+        t: "p",
+        c: "One Fairplay ID covers cricket, other sports, and casino under a single wallet. It is not a separate login for each product, and it is not locked to one sport despite the \"cricket ID\" name some pages use for it.",
+      },
+      { t: "h2", c: "How to register a Fairplay ID" },
+      {
+        t: "ol",
+        items: [
+          "Message the official Fairplay WhatsApp number linked from this site.",
+          "Share the mobile number you want tied to the ID. Every OTP will go to this number.",
+          "Enter the OTP sent to that number to confirm it.",
+          "Wait for the desk to confirm the ID is live before you deposit or place a bet.",
+          "Fund the wallet through UPI, net banking, or crypto once the ID shows as active.",
+        ],
+      },
+      {
+        t: "p",
+        c: "Registration takes minutes once the OTP lands. Depositing before the desk confirms the ID is live is the most common way beginners stall on their first bet.",
+      },
+      { t: "h2", c: "Fairplay ID login steps" },
+      {
+        t: "ul",
+        items: [
+          "Open Fairplay from this site or the official app, not a forwarded link or APK.",
+          "Enter the mobile number registered to the Fairplay ID.",
+          "Enter the OTP sent by SMS or WhatsApp.",
+          "Turn on 2FA if you want an extra layer on top of OTP. It sits on the same ID, not a second account.",
+          "If login fails twice, stop. Message the Fairplay ID and a screenshot to WhatsApp support instead of registering again.",
+        ],
+      },
+      { t: "h2", c: "Why login sometimes fails" },
+      {
+        t: "ul",
+        items: [
+          "Wrong number: OTP only reaches the number tied to the ID, not any number you currently hold.",
+          "Old APK: an outdated app build can fail sign-in even when the browser login works fine.",
+          "Clone site: a page asking for a password on an ID that never had one is not the real Fairplay login.",
+          "Two IDs: registering again to fix a stuck login usually complicates support rather than solving it.",
+        ],
+      },
+      { t: "h2", c: "Keeping a Fairplay online ID secure" },
+      {
+        t: "p",
+        c: "The Fairplay ID and its OTP are the only keys to the wallet. Treat both the way you would treat a bank login, not a game password.",
+      },
+      {
+        t: "ul",
+        items: [
+          "Never read an OTP to anyone, including a caller who claims to be Fairplay support.",
+          "Keep the UTR from every UPI deposit until it reflects in the wallet.",
+          "Report a lost or changed phone number to the WhatsApp desk immediately.",
+          "Screenshot bet slips and withdrawal requests for your own record.",
+        ],
+      },
+      { t: "h2", c: "Common questions" },
+      {
+        t: "faq",
+        items: [
+          {
+            q: "Is a Fairplay ID the same as a Fairplay cricket ID?",
+            a: "Yes. One ID covers cricket, other sports, and casino under the same wallet. Cricket ID is just the name some pages use for it.",
+          },
+          {
+            q: "Can I use my Fairplay online ID on both the app and the website?",
+            a: "Yes. Same OTP, same wallet, on either one.",
+          },
+          {
+            q: "What happens if I forget the number linked to my Fairplay ID login?",
+            a: "Contact the WhatsApp desk with proof tied to the original registration. Do not create a new ID.",
+          },
+          {
+            q: "Does Fairplay ID registration need a password?",
+            a: "No. OTP is the login. A page asking you to set a password you never chose may not be the real site.",
+          },
+        ],
+      },
+    ],
+  },
 };

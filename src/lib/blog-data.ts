@@ -1854,6 +1854,15 @@ const RAW_BLOG_ARTICLES = [
     "date": "Sep 11, 2026",
     "icon": "ShieldCheck",
     "img": "/og-banner.jpg"
+  },
+  {
+    "slug": "fairplay-id-registration-login-account-guide",
+    "title": "Fairplay ID: Registration, Login and Account Guide",
+    "category": "Guide",
+    "desc": "Fairplay ID basics: WhatsApp registration, OTP login and account security. Fairplay ID login and Fairplay cricket ID are the same account and wallet.",
+    "date": "Sep 12, 2026",
+    "icon": "ShieldCheck",
+    "img": "/og-banner.jpg"
   }
 ];
 

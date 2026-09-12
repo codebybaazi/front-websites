@@ -209,6 +209,7 @@ export const BLOG_POST_DATES: Record<string, string> = {
   "fairplay-deposit-guide-understanding-upi-deposits": "Sep 09, 2026",
   "fairplay-kyc-guide-account-verification-explained": "Sep 10, 2026",
   "fairplay-login-not-working-common-problems-and-solutions": "Sep 11, 2026",
+  "fairplay-id-registration-login-account-guide": "Sep 12, 2026",
 };
 
 export const BLOG_POST_SLUGS: string[] = Object.keys(BLOG_POST_DATES);
