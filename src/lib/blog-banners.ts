@@ -203,6 +203,7 @@ import accountSecurityOtpBanner from "@/assets/blog/fairplay-account-security-ot
 import depositGuideUpiBanner from "@/assets/blog/fairplay-deposit-guide-upi.jpg";
 import kycGuideVerificationBanner from "@/assets/blog/fairplay-kyc-guide-verification.jpg";
 import loginNotWorkingCommonBanner from "@/assets/blog/fairplay-login-not-working-problems-solutions.jpg";
+import idRegistrationLoginBanner from "@/assets/blog/fairplay-id-registration-login-account-guide.jpg";
 
 export const POST_BANNERS: Record<string, string> = {
   "fairplay-india-vs-new-zealand-3rd-odi-prediction": indVsNz3rdOdiBanner,
@@ -409,4 +410,5 @@ export const POST_BANNERS: Record<string, string> = {
   "fairplay-deposit-guide-understanding-upi-deposits": depositGuideUpiBanner,
   "fairplay-kyc-guide-account-verification-explained": kycGuideVerificationBanner,
   "fairplay-login-not-working-common-problems-and-solutions": loginNotWorkingCommonBanner,
+  "fairplay-id-registration-login-account-guide": idRegistrationLoginBanner,
 };
