@@ -410,4 +410,5 @@ export const POST_BANNERS: Record<string, string> = {
   "fairplay-deposit-guide-understanding-upi-deposits": depositGuideUpiBanner,
   "fairplay-kyc-guide-account-verification-explained": kycGuideVerificationBanner,
   "fairplay-login-not-working-common-problems-and-solutions": loginNotWorkingCommonBanner,
+  "fairplay-id-registration-login-account-guide": idRegistrationLoginBanner,
 };
